@@ -1,0 +1,104 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local uiselect = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local newui = Instance.new("TextButton")
+local Sidebar = Instance.new("TextButton")
+
+--Properties:
+
+uiselect.Name = "ui select"
+uiselect.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = uiselect
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.Position = UDim2.new(0.405080199, 0, 0.392757654, 0)
+main.Size = UDim2.new(0, 376, 0, 358)
+main.Active = true
+main.Draggable = true
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.Size = UDim2.new(0, 376, 0, 50)
+title.Font = Enum.Font.SourceSans
+title.Text = "UI'S"
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextWrapped = true
+
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+close.Position = UDim2.new(0.824468076, 0, 0.860335171, 0)
+close.Size = UDim2.new(0, 66, 0, 50)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+
+newui.Name = "new ui"
+newui.Parent = main
+newui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+newui.Position = UDim2.new(0.0452127643, 0, 0.19273743, 0)
+newui.Size = UDim2.new(0, 342, 0, 50)
+newui.Font = Enum.Font.SourceSans
+newui.Text = "Deeri hub"
+newui.TextColor3 = Color3.fromRGB(0, 0, 0)
+newui.TextScaled = true
+newui.TextSize = 14.000
+newui.TextWrapped = true
+newui.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/eww5Mgai"))()
+end)
+
+Sidebar.Name = "Side bar"
+Sidebar.Parent = main
+Sidebar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sidebar.Position = UDim2.new(0.0452127643, 0, 0.530726254, 0)
+Sidebar.Size = UDim2.new(0, 342, 0, 50)
+Sidebar.Font = Enum.Font.SourceSans
+Sidebar.Text = "Deeri hub Sidebar"
+Sidebar.TextColor3 = Color3.fromRGB(0, 0, 0)
+Sidebar.TextScaled = true
+Sidebar.TextSize = 14.000
+Sidebar.TextWrapped = true
+Sidebar.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/6BjJ7imF"))()
+end)
+
+-- Scripts:
+
+local function FOIQBZ_fake_script() -- close.close script 
+	local script = Instance.new('LocalScript', close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(FOIQBZ_fake_script)()
+local function HFVGS_fake_script() -- newui.closescriptnew 
+	local script = Instance.new('LocalScript', newui)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(HFVGS_fake_script)()
+local function NTOXW_fake_script() -- Sidebar.closescriptsidebar 
+	local script = Instance.new('LocalScript', Sidebar)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(NTOXW_fake_script)()
