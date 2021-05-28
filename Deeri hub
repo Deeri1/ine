@@ -1593,7 +1593,7 @@ Run.MouseButton1Down:Connect(function()
 end)
 Run.MouseButton1Down:Connect(function()
 	if CMD.Text == ".glitcher 1" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/JmTmEfc6"))()
+		loadstring(game:HttpGet("https://pastebin.com/raw/8Z5DcQuD"))()
 	end
 end)
 Run.MouseButton1Down:Connect(function()
