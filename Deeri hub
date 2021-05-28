@@ -24,6 +24,7 @@ local resetcolorbutton = Instance.new("TextButton")
 local darkmodebutton = Instance.new("TextButton")
 local punpkinmode = Instance.new("TextButton")
 local closeforcolorsettings = Instance.new("TextButton")
+local Credit = Instance.new("TextLabel")
 
 --Properties:
 
@@ -258,6 +259,19 @@ closeforcolorsettings.TextSize = 14.000
 closeforcolorsettings.TextWrapped = true
 
 -- Scripts:
+
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:Connect(function(keyCode)
+	if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
+		if Linorix.Enabled == true then
+			Linorix.Enabled = false
+		else
+			Linorix.Enabled = true
+		end
+	end
+end)
+
 
 local function LOKKHQO_fake_script() -- openup.openupbuttons 
 	local script = Instance.new('LocalScript', openup)
