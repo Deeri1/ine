@@ -3744,8 +3744,21 @@ game:GetService("RunService").RenderStepped:Connect(function(dt)
 	c.Anchored = false
 end)
 
+local resetBindable = Instance.new("BindableEvent")
+resetBindable.Event:connect(function()
+    local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+ 
+
+ts:Teleport(game.PlaceId, p)
+
+	
+end)
 
 
+game:GetService("StarterGui"):SetCore("ResetButtonCallback", resetBindable)
 
 
 
