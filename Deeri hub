@@ -1515,11 +1515,6 @@ Run.MouseButton1Down:Connect(function()
 	end
 end)
 Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".credits" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/MXgETdsG"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
 	if CMD.Text == ".favs" then
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/tUJN5ibJ"))()
 	end
