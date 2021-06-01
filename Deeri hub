@@ -1621,6 +1621,11 @@ Run.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/my%20glider%202"))()
 	end
 end)
+Run.MouseButton1Down:Connect(function()
+	if CMD.Text == ".rb king 2" then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/rbing%202"))()
+	end
+end)
 
 
 
