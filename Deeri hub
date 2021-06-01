@@ -1616,6 +1616,11 @@ Run.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet("https://pastebin.com/raw/czq1Ygst"))()
 	end
 end)
+Run.MouseButton1Down:Connect(function()
+	if CMD.Text == ".my glitcher 2" then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/my%20glider%202"))()
+	end
+end)
 
 
 
