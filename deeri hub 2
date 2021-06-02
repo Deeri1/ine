@@ -1095,6 +1095,16 @@ clsoehatless.TextWrapped = true
 
 -- Scripts:
 
+UserInputService.InputBegan:Connect(function(keyCode)
+	if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
+		if deeri.Enabled == true then
+			deeri.Enabled = false
+		else
+			deeri.Enabled = true
+		end
+	end
+end)
+
 local function UPDUAZ_fake_script() -- openup.openupbuttons 
 	local script = Instance.new('LocalScript', openup)
 
