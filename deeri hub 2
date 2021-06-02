@@ -1095,6 +1095,8 @@ clsoehatless.TextWrapped = true
 
 -- Scripts:
 
+local UserInputService = game:GetService("UserInputService")
+
 UserInputService.InputBegan:Connect(function(keyCode)
 	if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
 		if deeri.Enabled == true then
