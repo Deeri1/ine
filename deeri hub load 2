@@ -144,7 +144,7 @@ openui.TextScaled = true
 openui.TextSize = 14.000
 openui.TextWrapped = true
 openui.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/Deeri%20hub'),true))()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/deeri%20hub%202'),true))()
 end)
 
 -- Scripts:
