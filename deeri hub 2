@@ -2562,5 +2562,10 @@ Run.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet("https://pastebin.com/raw/pnW4JY8A"))()
 	end
 end)
+Run.MouseButton1Down:Connect(function()
+	if CMD.Text == ".noob dance" then
+		loadstring(game:HttpGet("https://pastebin.com/raw/fkvPk2Hk"))()
+	end
+end)
 
 
