@@ -98,7 +98,7 @@ local clsoehatless = Instance.new("TextButton")
 --Properties:
 
 deeri.Name = "deeri"
-deeri.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+deeri.Parent = CoreGui
 deeri.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
@@ -106,6 +106,8 @@ Main.Parent = deeri
 Main.BackgroundColor3 = Color3.fromRGB(213, 213, 213)
 Main.Position = UDim2.new(0.0802139044, 0, 0.611420572, 0)
 Main.Size = UDim2.new(0, 373, 0, 135)
+Main.Active = true
+Main.Draggable = true
 
 CMD.Name = "CMD"
 CMD.Parent = Main
