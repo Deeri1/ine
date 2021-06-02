@@ -58,7 +58,7 @@ newui.TextScaled = true
 newui.TextSize = 14.000
 newui.TextWrapped = true
 newui.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/eww5Mgai"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/deeri%20hub%20load%202"))()
 end)
 
 Sidebar.Name = "Side bar"
