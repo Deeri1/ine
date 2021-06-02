@@ -2524,3 +2524,18 @@ Run.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/rbing%202"))()
 	end
 end)
+Run.MouseButton1Down:Connect(function()
+	if CMD.Text == ".staff" then
+		loadstring(game:HttpGet("https://pastebin.com/raw/8EbuNfDE"))()
+	end
+end)
+Run.MouseButton1Down:Connect(function()
+	if CMD.Text == ".voices neptune" then
+		loadstring(game:HttpGet("https://pastebin.com/raw/V7a0ba7s"))()
+	end
+end)
+Run.MouseButton1Down:Connect(function()
+	if CMD.Text == ".keyboard" then
+		loadstring(game:HttpGet("https://pastebin.com/raw/ysyaQVtu"))()
+	end
+end)
