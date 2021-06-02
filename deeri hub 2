@@ -168,6 +168,8 @@ openupitems.Parent = Main
 openupitems.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 openupitems.Position = UDim2.new(0, 0, -0.740740716, 0)
 openupitems.Size = UDim2.new(0, 373, 0, 100)
+openupitems.Visible = false
+
 
 adminbutton.Name = "adminbutton"
 adminbutton.Parent = openupitems
@@ -209,6 +211,7 @@ opendownitems.Parent = Main
 opendownitems.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 opendownitems.Position = UDim2.new(0, 0, 1, 0)
 opendownitems.Size = UDim2.new(0, 373, 0, 100)
+opendownitems.Visible = false
 
 rejoinbutton.Name = "rejoinbutton"
 rejoinbutton.Parent = opendownitems
