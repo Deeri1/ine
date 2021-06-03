@@ -2174,3 +2174,16 @@ Run.MouseButton1Down:Connect(function()
 	loadstring(game:HttpGetAsync("https://pastebin.com/raw/m4jTR6C6"))()
 
 end)
+
+
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:Connect(function(keyCode)
+	if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
+		if deeri.Enabled == true then
+			deeri.Enabled = false
+		else
+			deeri.Enabled = true
+		end
+	end
+end)
