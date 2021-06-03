@@ -2174,6 +2174,20 @@ local function UXJIZ_fake_script() -- clsoehatless.close hatless scipt
 end
 coroutine.wrap(UXJIZ_fake_script)()
 
+
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:Connect(function(keyCode)
+	if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
+		if deeri.Enabled == true then
+			deeri.Enabled = false
+		else
+			deeri.Enabled = true
+		end
+	end
+end)
+
+
 Run.MouseButton1Down:Connect(function()
 	if CMD.Text == ".sniper" then
 		loadstring(game:HttpGet(('https://pastebin.com/raw/dtz7qGBg'),true))()
