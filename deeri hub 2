@@ -26,43 +26,43 @@ local RequiredHats = Instance.new("ScrollingFrame")
 local Requiredhatsscroll = Instance.new("Frame")
 local starglitcherlabel = Instance.new("TextLabel")
 local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local TextLabel_4 = Instance.new("TextLabel")
-local TextLabel_5 = Instance.new("TextLabel")
-local TextLabel_6 = Instance.new("TextLabel")
-local Frame_2 = Instance.new("Frame")
+local frozst = Instance.new("TextLabel")
+local goldst = Instance.new("TextLabel")
+local corrst = Instance.new("TextLabel")
+local demst = Instance.new("TextLabel")
+local shadowst = Instance.new("TextLabel")
+local bladst = Instance.new("TextLabel")
+local endst = Instance.new("Frame")
 local rbkinglabel = Instance.new("TextLabel")
-local Frame_3 = Instance.new("Frame")
-local TextLabel_7 = Instance.new("TextLabel")
-local TextLabel_8 = Instance.new("TextLabel")
-local TextLabel_9 = Instance.new("TextLabel")
-local TextLabel_10 = Instance.new("TextLabel")
-local Frame_4 = Instance.new("Frame")
+local rbkingmain = Instance.new("Frame")
+local evilr = Instance.new("TextLabel")
+local halor = Instance.new("TextLabel")
+local sabr = Instance.new("TextLabel")
+local _37r = Instance.new("TextLabel")
+local endr = Instance.new("Frame")
 local busterswordlabel = Instance.new("TextLabel")
-local TextLabel_11 = Instance.new("TextLabel")
-local TextLabel_12 = Instance.new("TextLabel")
-local TextLabel_13 = Instance.new("TextLabel")
-local TextLabel_14 = Instance.new("TextLabel")
-local Frame_5 = Instance.new("Frame")
+local frozenb = Instance.new("TextLabel")
+local goldb = Instance.new("TextLabel")
+local corrb = Instance.new("TextLabel")
+local regb = Instance.new("TextLabel")
+local endb = Instance.new("Frame")
 local skedsvrlabel = Instance.new("TextLabel")
-local TextLabel_15 = Instance.new("TextLabel")
-local TextLabel_16 = Instance.new("TextLabel")
-local TextLabel_17 = Instance.new("TextLabel")
-local Frame_6 = Instance.new("Frame")
-local TextLabel_18 = Instance.new("TextLabel")
-local TextLabel_19 = Instance.new("TextLabel")
-local TextLabel_20 = Instance.new("TextLabel")
-local TextLabel_21 = Instance.new("TextLabel")
-local TextLabel_22 = Instance.new("TextLabel")
-local TextLabel_23 = Instance.new("TextLabel")
-local TextLabel_24 = Instance.new("TextLabel")
-local TextLabel_25 = Instance.new("TextLabel")
-local TextLabel_26 = Instance.new("TextLabel")
-local TextLabel_27 = Instance.new("TextLabel")
-local TextLabel_28 = Instance.new("TextLabel")
-local Frame_7 = Instance.new("Frame")
+local meds = Instance.new("TextLabel")
+local pals = Instance.new("TextLabel")
+local lavs = Instance.new("TextLabel")
+local ends = Instance.new("Frame")
+local handlable = Instance.new("TextLabel")
+local bedh = Instance.new("TextLabel")
+local nagh = Instance.new("TextLabel")
+local girlh = Instance.new("TextLabel")
+local caph = Instance.new("TextLabel")
+local redcaph = Instance.new("TextLabel")
+local bunh = Instance.new("TextLabel")
+local updoh = Instance.new("TextLabel")
+local palh = Instance.new("TextLabel")
+local brownh = Instance.new("TextLabel")
+local spikeh = Instance.new("TextLabel")
+local endh = Instance.new("Frame")
 local closebutton = Instance.new("TextButton")
 local commandsbutton = Instance.new("TextButton")
 local extrabuttons = Instance.new("Frame")
@@ -80,6 +80,21 @@ local hatlesscommands = Instance.new("TextButton")
 local guicommands = Instance.new("TextButton")
 local closecomands = Instance.new("TextButton")
 local hatcommandsbar = Instance.new("Frame")
+local commandsframehat = Instance.new("ScrollingFrame")
+local areawerecommandshat = Instance.new("Frame")
+local glitchersfolder = Instance.new("Folder")
+local glitchersending = Instance.new("Frame")
+local myglitcher1 = Instance.new("TextButton")
+local myglitcher2 = Instance.new("TextButton")
+local bigglitcher = Instance.new("TextButton")
+local glitcher1 = Instance.new("TextButton")
+local glitcher2 = Instance.new("TextButton")
+local glitcherstitle = Instance.new("TextLabel")
+local rbkingfolder = Instance.new("Folder")
+local rbkingtitle = Instance.new("TextLabel")
+local rbkingbutton = Instance.new("TextButton")
+local rbking2button = Instance.new("TextButton")
+local clsoehat = Instance.new("TextButton")
 local hatlesscommandsbar = Instance.new("Frame")
 local commandsframehatless = Instance.new("ScrollingFrame")
 local areawerecommandshatless = Instance.new("Frame")
@@ -103,7 +118,34 @@ local penguindancebutton = Instance.new("TextButton")
 local sonicbutton = Instance.new("TextButton")
 local enderbutton = Instance.new("TextButton")
 local goopiebutton = Instance.new("TextButton")
+local galebutton = Instance.new("TextButton")
+local xesterbutton = Instance.new("TextButton")
+local krystal = Instance.new("TextButton")
+local catbutton = Instance.new("TextButton")
+local killbot = Instance.new("TextButton")
+local caducusbutton = Instance.new("TextButton")
+local orangejusticebutton = Instance.new("TextButton")
+local defaultdancebutton = Instance.new("TextButton")
+local fabbutton = Instance.new("TextButton")
+local taketheL = Instance.new("TextButton")
+local sidestepbutton = Instance.new("TextButton")
 local clsoehatless = Instance.new("TextButton")
+local guicommandsbar = Instance.new("Frame")
+local commandsframegui = Instance.new("ScrollingFrame")
+local areawerecommandsgui = Instance.new("Frame")
+local deerihubstuff = Instance.new("Folder")
+local sidebar = Instance.new("TextButton")
+local deerihubadminpicker = Instance.new("Folder")
+local adminpicker = Instance.new("TextButton")
+local credits = Instance.new("TextButton")
+local gamesguis = Instance.new("Folder")
+local animationguis = Instance.new("Folder")
+local animationgui = Instance.new("TextButton")
+local adminguis = Instance.new("Folder")
+local dashadminbutton = Instance.new("TextButton")
+local miscguis = Instance.new("Folder")
+local empty = Instance.new("TextButton")
+local clsoegui = Instance.new("TextButton")
 
 --Properties:
 
@@ -336,73 +378,80 @@ Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.Position = UDim2.new(0, 0, 1, 0)
 Frame.Size = UDim2.new(0, 141, 0, 157)
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.Position = UDim2.new(0, 0, -0.000287934206, 0)
-TextLabel.Size = UDim2.new(0, 141, 0, 23)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Frozen Demonic Greatsword"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+frozst.Name = "froz st"
+frozst.Parent = Frame
+frozst.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frozst.Position = UDim2.new(0, 0, -0.000287934206, 0)
+frozst.Size = UDim2.new(0, 141, 0, 23)
+frozst.Font = Enum.Font.SourceSans
+frozst.Text = "Frozen Demonic Greatsword"
+frozst.TextColor3 = Color3.fromRGB(0, 0, 0)
+frozst.TextScaled = true
+frozst.TextSize = 14.000
+frozst.TextWrapped = true
 
-TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.Position = UDim2.new(0, 0, 0.144477904, 0)
-TextLabel_2.Size = UDim2.new(0, 141, 0, 23)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Golden Demonic Greatsword"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
+goldst.Name = "gold st"
+goldst.Parent = Frame
+goldst.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+goldst.Position = UDim2.new(0, 0, 0.144477904, 0)
+goldst.Size = UDim2.new(0, 141, 0, 23)
+goldst.Font = Enum.Font.SourceSans
+goldst.Text = "Golden Demonic Greatsword"
+goldst.TextColor3 = Color3.fromRGB(0, 0, 0)
+goldst.TextScaled = true
+goldst.TextSize = 14.000
+goldst.TextWrapped = true
 
-TextLabel_3.Parent = Frame
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.Position = UDim2.new(0, 0, 0.288418889, 0)
-TextLabel_3.Size = UDim2.new(0, 141, 0, 23)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "Corrupt Demonic Greatsword"
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 14.000
-TextLabel_3.TextWrapped = true
+corrst.Name = "corr st"
+corrst.Parent = Frame
+corrst.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+corrst.Position = UDim2.new(0, 0, 0.288418889, 0)
+corrst.Size = UDim2.new(0, 141, 0, 23)
+corrst.Font = Enum.Font.SourceSans
+corrst.Text = "Corrupt Demonic Greatsword"
+corrst.TextColor3 = Color3.fromRGB(0, 0, 0)
+corrst.TextScaled = true
+corrst.TextSize = 14.000
+corrst.TextWrapped = true
 
-TextLabel_4.Parent = Frame
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.Position = UDim2.new(0, 0, 0.430994809, 0)
-TextLabel_4.Size = UDim2.new(0, 141, 0, 23)
-TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = "Demonic Greatsword"
-TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.TextSize = 14.000
-TextLabel_4.TextWrapped = true
+demst.Name = "dem st"
+demst.Parent = Frame
+demst.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+demst.Position = UDim2.new(0, 0, 0.430994809, 0)
+demst.Size = UDim2.new(0, 141, 0, 23)
+demst.Font = Enum.Font.SourceSans
+demst.Text = "Demonic Greatsword"
+demst.TextColor3 = Color3.fromRGB(0, 0, 0)
+demst.TextSize = 14.000
+demst.TextWrapped = true
 
-TextLabel_5.Parent = Frame
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.Position = UDim2.new(0, 0, 0.57633394, 0)
-TextLabel_5.Size = UDim2.new(0, 141, 0, 38)
-TextLabel_5.Font = Enum.Font.SourceSans
-TextLabel_5.Text = "Shadow Blademaster's Blade"
-TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_5.TextSize = 14.000
-TextLabel_5.TextWrapped = true
+shadowst.Name = "shadow st"
+shadowst.Parent = Frame
+shadowst.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+shadowst.Position = UDim2.new(0, 0, 0.57633394, 0)
+shadowst.Size = UDim2.new(0, 141, 0, 38)
+shadowst.Font = Enum.Font.SourceSans
+shadowst.Text = "Shadow Blademaster's Blade"
+shadowst.TextColor3 = Color3.fromRGB(0, 0, 0)
+shadowst.TextSize = 14.000
+shadowst.TextWrapped = true
 
-TextLabel_6.Parent = Frame
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.Position = UDim2.new(0, 0, 0.813160419, 0)
-TextLabel_6.Size = UDim2.new(0, 141, 0, 23)
-TextLabel_6.Font = Enum.Font.SourceSans
-TextLabel_6.Text = "Blademaster's Blade"
-TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_6.TextSize = 14.000
-TextLabel_6.TextWrapped = true
+bladst.Name = "blad st"
+bladst.Parent = Frame
+bladst.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bladst.Position = UDim2.new(0, 0, 0.813160419, 0)
+bladst.Size = UDim2.new(0, 141, 0, 23)
+bladst.Font = Enum.Font.SourceSans
+bladst.Text = "Blademaster's Blade"
+bladst.TextColor3 = Color3.fromRGB(0, 0, 0)
+bladst.TextSize = 14.000
+bladst.TextWrapped = true
 
-Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_2.Position = UDim2.new(0, 0, 1, 0)
-Frame_2.Size = UDim2.new(0, 141, 0, 0)
+endst.Name = "end st"
+endst.Parent = Frame
+endst.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+endst.Position = UDim2.new(0, 0, 1, 0)
+endst.Size = UDim2.new(0, 141, 0, 0)
 
 rbkinglabel.Name = "rb king label"
 rbkinglabel.Parent = Requiredhatsscroll
@@ -416,51 +465,57 @@ rbkinglabel.TextScaled = true
 rbkinglabel.TextSize = 14.000
 rbkinglabel.TextWrapped = true
 
-Frame_3.Parent = rbkinglabel
-Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_3.Position = UDim2.new(0, 0, 1, 0)
-Frame_3.Size = UDim2.new(0, 141, 0, 86)
+rbkingmain.Name = "rb king main"
+rbkingmain.Parent = rbkinglabel
+rbkingmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rbkingmain.Position = UDim2.new(0, 0, 1, 0)
+rbkingmain.Size = UDim2.new(0, 141, 0, 86)
 
-TextLabel_7.Parent = Frame_3
-TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.Position = UDim2.new(0, 0, 0.0332558155, 0)
-TextLabel_7.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_7.Font = Enum.Font.SourceSans
-TextLabel_7.Text = "Evil Aura"
-TextLabel_7.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_7.TextSize = 14.000
+evilr.Name = "evil r"
+evilr.Parent = rbkingmain
+evilr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+evilr.Position = UDim2.new(0, 0, 0.0332558155, 0)
+evilr.Size = UDim2.new(0, 141, 0, 21)
+evilr.Font = Enum.Font.SourceSans
+evilr.Text = "Evil Aura"
+evilr.TextColor3 = Color3.fromRGB(0, 0, 0)
+evilr.TextSize = 14.000
 
-TextLabel_8.Parent = Frame_3
-TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.Position = UDim2.new(0, 0, 0.266511619, 0)
-TextLabel_8.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_8.Font = Enum.Font.SourceSans
-TextLabel_8.Text = "Sword Halo"
-TextLabel_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_8.TextSize = 14.000
+halor.Name = "halo r"
+halor.Parent = rbkingmain
+halor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+halor.Position = UDim2.new(0, 0, 0.266511619, 0)
+halor.Size = UDim2.new(0, 141, 0, 21)
+halor.Font = Enum.Font.SourceSans
+halor.Text = "Sword Halo"
+halor.TextColor3 = Color3.fromRGB(0, 0, 0)
+halor.TextSize = 14.000
 
-TextLabel_9.Parent = Frame_3
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.Position = UDim2.new(0, 0, 0.511395335, 0)
-TextLabel_9.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_9.Font = Enum.Font.SourceSans
-TextLabel_9.Text = "Sabrina’s Sword"
-TextLabel_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_9.TextSize = 14.000
+sabr.Name = "sab r"
+sabr.Parent = rbkingmain
+sabr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sabr.Position = UDim2.new(0, 0, 0.511395335, 0)
+sabr.Size = UDim2.new(0, 141, 0, 21)
+sabr.Font = Enum.Font.SourceSans
+sabr.Text = "Sabrina’s Sword"
+sabr.TextColor3 = Color3.fromRGB(0, 0, 0)
+sabr.TextSize = 14.000
 
-TextLabel_10.Parent = Frame_3
-TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.Position = UDim2.new(0, 0, 0.756279051, 0)
-TextLabel_10.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_10.Font = Enum.Font.SourceSans
-TextLabel_10.Text = "Type-37 Pulse Rifle"
-TextLabel_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_10.TextSize = 14.000
+_37r.Name = "37 r"
+_37r.Parent = rbkingmain
+_37r.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_37r.Position = UDim2.new(0, 0, 0.756279051, 0)
+_37r.Size = UDim2.new(0, 141, 0, 21)
+_37r.Font = Enum.Font.SourceSans
+_37r.Text = "Type-37 Pulse Rifle"
+_37r.TextColor3 = Color3.fromRGB(0, 0, 0)
+_37r.TextSize = 14.000
 
-Frame_4.Parent = Frame_3
-Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_4.Position = UDim2.new(-0.00709219836, 0, 1.0930233, 0)
-Frame_4.Size = UDim2.new(0, 142, 0, 0)
+endr.Name = "end r"
+endr.Parent = rbkingmain
+endr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+endr.Position = UDim2.new(-0.00709219836, 0, 1.0930233, 0)
+endr.Size = UDim2.new(0, 142, 0, 0)
 
 busterswordlabel.Name = "buster sword label"
 busterswordlabel.Parent = Requiredhatsscroll
@@ -474,53 +529,58 @@ busterswordlabel.TextScaled = true
 busterswordlabel.TextSize = 14.000
 busterswordlabel.TextWrapped = true
 
-TextLabel_11.Parent = busterswordlabel
-TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_11.Position = UDim2.new(0, 0, 3.15834117, 0)
-TextLabel_11.Size = UDim2.new(0, 141, 0, 23)
-TextLabel_11.Font = Enum.Font.SourceSans
-TextLabel_11.Text = "Frozen Demonic Greatsword"
-TextLabel_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_11.TextScaled = true
-TextLabel_11.TextSize = 14.000
-TextLabel_11.TextWrapped = true
+frozenb.Name = "frozen b"
+frozenb.Parent = busterswordlabel
+frozenb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frozenb.Position = UDim2.new(0, 0, 3.15834117, 0)
+frozenb.Size = UDim2.new(0, 141, 0, 23)
+frozenb.Font = Enum.Font.SourceSans
+frozenb.Text = "Frozen Demonic Greatsword"
+frozenb.TextColor3 = Color3.fromRGB(0, 0, 0)
+frozenb.TextScaled = true
+frozenb.TextSize = 14.000
+frozenb.TextWrapped = true
 
-TextLabel_12.Parent = busterswordlabel
-TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_12.Position = UDim2.new(0, 0, 4.20786905, 0)
-TextLabel_12.Size = UDim2.new(0, 141, 0, 23)
-TextLabel_12.Font = Enum.Font.SourceSans
-TextLabel_12.Text = "Golden Demonic Greatsword"
-TextLabel_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_12.TextScaled = true
-TextLabel_12.TextSize = 14.000
-TextLabel_12.TextWrapped = true
+goldb.Name = "gold b"
+goldb.Parent = busterswordlabel
+goldb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+goldb.Position = UDim2.new(0, 0, 4.20786905, 0)
+goldb.Size = UDim2.new(0, 141, 0, 23)
+goldb.Font = Enum.Font.SourceSans
+goldb.Text = "Golden Demonic Greatsword"
+goldb.TextColor3 = Color3.fromRGB(0, 0, 0)
+goldb.TextScaled = true
+goldb.TextSize = 14.000
+goldb.TextWrapped = true
 
-TextLabel_13.Parent = busterswordlabel
-TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.Position = UDim2.new(0, 0, 2.06609559, 0)
-TextLabel_13.Size = UDim2.new(0, 141, 0, 23)
-TextLabel_13.Font = Enum.Font.SourceSans
-TextLabel_13.Text = "Corrupt Demonic Greatsword"
-TextLabel_13.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_13.TextScaled = true
-TextLabel_13.TextSize = 14.000
-TextLabel_13.TextWrapped = true
+corrb.Name = "corr b"
+corrb.Parent = busterswordlabel
+corrb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+corrb.Position = UDim2.new(0, 0, 2.06609559, 0)
+corrb.Size = UDim2.new(0, 141, 0, 23)
+corrb.Font = Enum.Font.SourceSans
+corrb.Text = "Corrupt Demonic Greatsword"
+corrb.TextColor3 = Color3.fromRGB(0, 0, 0)
+corrb.TextScaled = true
+corrb.TextSize = 14.000
+corrb.TextWrapped = true
 
-TextLabel_14.Parent = busterswordlabel
-TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.Position = UDim2.new(0, 0, 1.01819515, 0)
-TextLabel_14.Size = UDim2.new(0, 141, 0, 23)
-TextLabel_14.Font = Enum.Font.SourceSans
-TextLabel_14.Text = "Demonic Greatsword"
-TextLabel_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_14.TextSize = 14.000
-TextLabel_14.TextWrapped = true
+regb.Name = "reg b"
+regb.Parent = busterswordlabel
+regb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+regb.Position = UDim2.new(0, 0, 1.01819515, 0)
+regb.Size = UDim2.new(0, 141, 0, 23)
+regb.Font = Enum.Font.SourceSans
+regb.Text = "Demonic Greatsword"
+regb.TextColor3 = Color3.fromRGB(0, 0, 0)
+regb.TextSize = 14.000
+regb.TextWrapped = true
 
-Frame_5.Parent = busterswordlabel
-Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_5.Position = UDim2.new(0, 0, 5.66666651, 0)
-Frame_5.Size = UDim2.new(0, 141, 0, 0)
+endb.Name = "end b"
+endb.Parent = busterswordlabel
+endb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+endb.Position = UDim2.new(0, 0, 5.66666651, 0)
+endb.Size = UDim2.new(0, 141, 0, 0)
 
 skedsvrlabel.Name = "skeds vr label"
 skedsvrlabel.Parent = Requiredhatsscroll
@@ -534,169 +594,185 @@ skedsvrlabel.TextScaled = true
 skedsvrlabel.TextSize = 14.000
 skedsvrlabel.TextWrapped = true
 
-TextLabel_15.Parent = skedsvrlabel
-TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_15.Position = UDim2.new(0, 0, 1, 0)
-TextLabel_15.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_15.Font = Enum.Font.SourceSans
-TextLabel_15.Text = "MediHood"
-TextLabel_15.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_15.TextScaled = true
-TextLabel_15.TextSize = 14.000
-TextLabel_15.TextWrapped = true
+meds.Name = "med s"
+meds.Parent = skedsvrlabel
+meds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+meds.Position = UDim2.new(0, 0, 1, 0)
+meds.Size = UDim2.new(0, 141, 0, 21)
+meds.Font = Enum.Font.SourceSans
+meds.Text = "MediHood"
+meds.TextColor3 = Color3.fromRGB(0, 0, 0)
+meds.TextScaled = true
+meds.TextSize = 14.000
+meds.TextWrapped = true
 
-TextLabel_16.Parent = skedsvrlabel
-TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_16.Position = UDim2.new(0, 0, 2, 0)
-TextLabel_16.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_16.Font = Enum.Font.SourceSans
-TextLabel_16.Text = "Pal Hair"
-TextLabel_16.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_16.TextScaled = true
-TextLabel_16.TextSize = 14.000
-TextLabel_16.TextWrapped = true
+pals.Name = "pal s"
+pals.Parent = skedsvrlabel
+pals.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pals.Position = UDim2.new(0, 0, 2, 0)
+pals.Size = UDim2.new(0, 141, 0, 21)
+pals.Font = Enum.Font.SourceSans
+pals.Text = "Pal Hair"
+pals.TextColor3 = Color3.fromRGB(0, 0, 0)
+pals.TextScaled = true
+pals.TextSize = 14.000
+pals.TextWrapped = true
 
-TextLabel_17.Parent = skedsvrlabel
-TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_17.Position = UDim2.new(0, 0, 3, 0)
-TextLabel_17.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_17.Font = Enum.Font.SourceSans
-TextLabel_17.Text = "LavanderHair"
-TextLabel_17.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_17.TextScaled = true
-TextLabel_17.TextSize = 14.000
-TextLabel_17.TextWrapped = true
+lavs.Name = "lav s"
+lavs.Parent = skedsvrlabel
+lavs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lavs.Position = UDim2.new(0, 0, 3, 0)
+lavs.Size = UDim2.new(0, 141, 0, 21)
+lavs.Font = Enum.Font.SourceSans
+lavs.Text = "LavanderHair"
+lavs.TextColor3 = Color3.fromRGB(0, 0, 0)
+lavs.TextScaled = true
+lavs.TextSize = 14.000
+lavs.TextWrapped = true
 
-Frame_6.Parent = skedsvrlabel
-Frame_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_6.Position = UDim2.new(0, 0, 4.47619057, 0)
-Frame_6.Size = UDim2.new(0, 142, 0, 0)
+ends.Name = "end s"
+ends.Parent = skedsvrlabel
+ends.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ends.Position = UDim2.new(0, 0, 4.47619057, 0)
+ends.Size = UDim2.new(0, 142, 0, 0)
 
-TextLabel_18.Parent = Requiredhatsscroll
-TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_18.Position = UDim2.new(0.00709219649, 0, 0.595555604, 0)
-TextLabel_18.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_18.Font = Enum.Font.SourceSans
-TextLabel_18.Text = "hand"
-TextLabel_18.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_18.TextScaled = true
-TextLabel_18.TextSize = 14.000
-TextLabel_18.TextWrapped = true
+handlable.Name = "hand lable"
+handlable.Parent = Requiredhatsscroll
+handlable.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+handlable.Position = UDim2.new(0.00709219649, 0, 0.595555604, 0)
+handlable.Size = UDim2.new(0, 141, 0, 21)
+handlable.Font = Enum.Font.SourceSans
+handlable.Text = "hand"
+handlable.TextColor3 = Color3.fromRGB(0, 0, 0)
+handlable.TextScaled = true
+handlable.TextSize = 14.000
+handlable.TextWrapped = true
 
-TextLabel_19.Parent = TextLabel_18
-TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_19.Position = UDim2.new(-1.86264515e-09, 0, 0.999841213, 0)
-TextLabel_19.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_19.Font = Enum.Font.SourceSans
-TextLabel_19.Text = "Bed Hair"
-TextLabel_19.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_19.TextScaled = true
-TextLabel_19.TextSize = 14.000
-TextLabel_19.TextWrapped = true
+bedh.Name = "bed h"
+bedh.Parent = handlable
+bedh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bedh.Position = UDim2.new(-1.86264515e-09, 0, 0.999841213, 0)
+bedh.Size = UDim2.new(0, 141, 0, 21)
+bedh.Font = Enum.Font.SourceSans
+bedh.Text = "Bed Hair"
+bedh.TextColor3 = Color3.fromRGB(0, 0, 0)
+bedh.TextScaled = true
+bedh.TextSize = 14.000
+bedh.TextWrapped = true
 
-TextLabel_20.Parent = TextLabel_18
-TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_20.Position = UDim2.new(-1.86264515e-09, 0, 1.99984121, 0)
-TextLabel_20.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_20.Font = Enum.Font.SourceSans
-TextLabel_20.Text = "Nagamaki"
-TextLabel_20.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_20.TextScaled = true
-TextLabel_20.TextSize = 14.000
-TextLabel_20.TextWrapped = true
+nagh.Name = "nag h"
+nagh.Parent = handlable
+nagh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nagh.Position = UDim2.new(-1.86264515e-09, 0, 1.99984121, 0)
+nagh.Size = UDim2.new(0, 141, 0, 21)
+nagh.Font = Enum.Font.SourceSans
+nagh.Text = "Nagamaki"
+nagh.TextColor3 = Color3.fromRGB(0, 0, 0)
+nagh.TextScaled = true
+nagh.TextSize = 14.000
+nagh.TextWrapped = true
 
-TextLabel_21.Parent = TextLabel_18
-TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_21.Position = UDim2.new(-1.86264515e-09, 0, 2.99984121, 0)
-TextLabel_21.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_21.Font = Enum.Font.SourceSans
-TextLabel_21.Text = "ROBLOX Girl - Hair"
-TextLabel_21.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_21.TextScaled = true
-TextLabel_21.TextSize = 14.000
-TextLabel_21.TextWrapped = true
+girlh.Name = "girl h"
+girlh.Parent = handlable
+girlh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+girlh.Position = UDim2.new(-1.86264515e-09, 0, 2.99984121, 0)
+girlh.Size = UDim2.new(0, 141, 0, 21)
+girlh.Font = Enum.Font.SourceSans
+girlh.Text = "ROBLOX Girl - Hair"
+girlh.TextColor3 = Color3.fromRGB(0, 0, 0)
+girlh.TextScaled = true
+girlh.TextSize = 14.000
+girlh.TextWrapped = true
 
-TextLabel_22.Parent = TextLabel_18
-TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_22.Position = UDim2.new(-1.86264515e-09, 0, 4.04746056, 0)
-TextLabel_22.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_22.Font = Enum.Font.SourceSans
-TextLabel_22.Text = "Blockhead Baseball Cap"
-TextLabel_22.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_22.TextScaled = true
-TextLabel_22.TextSize = 14.000
-TextLabel_22.TextWrapped = true
+caph.Name = "cap h"
+caph.Parent = handlable
+caph.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+caph.Position = UDim2.new(-1.86264515e-09, 0, 4.04746056, 0)
+caph.Size = UDim2.new(0, 141, 0, 21)
+caph.Font = Enum.Font.SourceSans
+caph.Text = "Blockhead Baseball Cap"
+caph.TextColor3 = Color3.fromRGB(0, 0, 0)
+caph.TextScaled = true
+caph.TextSize = 14.000
+caph.TextWrapped = true
 
-TextLabel_23.Parent = TextLabel_18
-TextLabel_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_23.Position = UDim2.new(-1.86264515e-09, 0, 5.04746056, 0)
-TextLabel_23.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_23.Font = Enum.Font.SourceSans
-TextLabel_23.Text = "Red Roblox Cap"
-TextLabel_23.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_23.TextScaled = true
-TextLabel_23.TextSize = 14.000
-TextLabel_23.TextWrapped = true
+redcaph.Name = "red cap h"
+redcaph.Parent = handlable
+redcaph.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+redcaph.Position = UDim2.new(-1.86264515e-09, 0, 5.04746056, 0)
+redcaph.Size = UDim2.new(0, 141, 0, 21)
+redcaph.Font = Enum.Font.SourceSans
+redcaph.Text = "Red Roblox Cap"
+redcaph.TextColor3 = Color3.fromRGB(0, 0, 0)
+redcaph.TextScaled = true
+redcaph.TextSize = 14.000
+redcaph.TextWrapped = true
 
-TextLabel_24.Parent = TextLabel_18
-TextLabel_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_24.Position = UDim2.new(-1.86264515e-09, 0, 6.04746056, 0)
-TextLabel_24.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_24.Font = Enum.Font.SourceSans
-TextLabel_24.Text = "Chestnut Bun"
-TextLabel_24.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_24.TextScaled = true
-TextLabel_24.TextSize = 14.000
-TextLabel_24.TextWrapped = true
+bunh.Name = "bun h"
+bunh.Parent = handlable
+bunh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bunh.Position = UDim2.new(-1.86264515e-09, 0, 6.04746056, 0)
+bunh.Size = UDim2.new(0, 141, 0, 21)
+bunh.Font = Enum.Font.SourceSans
+bunh.Text = "Chestnut Bun"
+bunh.TextColor3 = Color3.fromRGB(0, 0, 0)
+bunh.TextScaled = true
+bunh.TextSize = 14.000
+bunh.TextWrapped = true
 
-TextLabel_25.Parent = TextLabel_18
-TextLabel_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_25.Position = UDim2.new(-1.86264515e-09, 0, 7.04746056, 0)
-TextLabel_25.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_25.Font = Enum.Font.SourceSans
-TextLabel_25.Text = "Lavender Updo"
-TextLabel_25.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_25.TextScaled = true
-TextLabel_25.TextSize = 14.000
-TextLabel_25.TextWrapped = true
+updoh.Name = "updo h"
+updoh.Parent = handlable
+updoh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+updoh.Position = UDim2.new(-1.86264515e-09, 0, 7.04746056, 0)
+updoh.Size = UDim2.new(0, 141, 0, 21)
+updoh.Font = Enum.Font.SourceSans
+updoh.Text = "Lavender Updo"
+updoh.TextColor3 = Color3.fromRGB(0, 0, 0)
+updoh.TextScaled = true
+updoh.TextSize = 14.000
+updoh.TextWrapped = true
 
-TextLabel_26.Parent = TextLabel_18
-TextLabel_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_26.Position = UDim2.new(-1.86264515e-09, 0, 7.99984169, 0)
-TextLabel_26.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_26.Font = Enum.Font.SourceSans
-TextLabel_26.Text = "Pal Hair"
-TextLabel_26.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_26.TextScaled = true
-TextLabel_26.TextSize = 14.000
-TextLabel_26.TextWrapped = true
+palh.Name = "pal h"
+palh.Parent = handlable
+palh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+palh.Position = UDim2.new(-1.86264515e-09, 0, 7.99984169, 0)
+palh.Size = UDim2.new(0, 141, 0, 21)
+palh.Font = Enum.Font.SourceSans
+palh.Text = "Pal Hair"
+palh.TextColor3 = Color3.fromRGB(0, 0, 0)
+palh.TextScaled = true
+palh.TextSize = 14.000
+palh.TextWrapped = true
 
-TextLabel_27.Parent = TextLabel_18
-TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_27.Position = UDim2.new(-1.86264515e-09, 0, 8.99984169, 0)
-TextLabel_27.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_27.Font = Enum.Font.SourceSans
-TextLabel_27.Text = "Brown Hair"
-TextLabel_27.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_27.TextScaled = true
-TextLabel_27.TextSize = 14.000
-TextLabel_27.TextWrapped = true
+brownh.Name = "brown h"
+brownh.Parent = handlable
+brownh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+brownh.Position = UDim2.new(-1.86264515e-09, 0, 8.99984169, 0)
+brownh.Size = UDim2.new(0, 141, 0, 21)
+brownh.Font = Enum.Font.SourceSans
+brownh.Text = "Brown Hair"
+brownh.TextColor3 = Color3.fromRGB(0, 0, 0)
+brownh.TextScaled = true
+brownh.TextSize = 14.000
+brownh.TextWrapped = true
 
-TextLabel_28.Parent = TextLabel_18
-TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_28.Position = UDim2.new(-1.86264515e-09, 0, 9.99984169, 0)
-TextLabel_28.Size = UDim2.new(0, 141, 0, 21)
-TextLabel_28.Font = Enum.Font.SourceSans
-TextLabel_28.Text = "Blonde Spiked Hair"
-TextLabel_28.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_28.TextScaled = true
-TextLabel_28.TextSize = 14.000
-TextLabel_28.TextWrapped = true
+spikeh.Name = "spike h"
+spikeh.Parent = handlable
+spikeh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+spikeh.Position = UDim2.new(-1.86264515e-09, 0, 9.99984169, 0)
+spikeh.Size = UDim2.new(0, 141, 0, 21)
+spikeh.Font = Enum.Font.SourceSans
+spikeh.Text = "Blonde Spiked Hair"
+spikeh.TextColor3 = Color3.fromRGB(0, 0, 0)
+spikeh.TextScaled = true
+spikeh.TextSize = 14.000
+spikeh.TextWrapped = true
 
-Frame_7.Parent = TextLabel_18
-Frame_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_7.Position = UDim2.new(0, 0, 11.1904736, 0)
-Frame_7.Size = UDim2.new(0, 141, 0, 0)
+endh.Name = "end h"
+endh.Parent = handlable
+endh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+endh.Position = UDim2.new(0, 0, 11.1904736, 0)
+endh.Size = UDim2.new(0, 141, 0, 0)
 
 closebutton.Name = "close button"
 closebutton.Parent = requiredhatsframe
@@ -881,6 +957,151 @@ hatcommandsbar.Position = UDim2.new(0.798953772, 0, 0.706352293, 0)
 hatcommandsbar.Size = UDim2.new(0, 268, 0, 277)
 hatcommandsbar.Visible = false
 
+commandsframehat.Name = "commandsframe hat"
+commandsframehat.Parent = hatcommandsbar
+commandsframehat.Active = true
+commandsframehat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+commandsframehat.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
+commandsframehat.Size = UDim2.new(0, 268, 0, 273)
+commandsframehat.CanvasSize = UDim2.new(0, 0, 0, 1500)
+
+areawerecommandshat.Name = "area were commands hat"
+areawerecommandshat.Parent = commandsframehat
+areawerecommandshat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+areawerecommandshat.Position = UDim2.new(0, 0, -0.000107314561, 0)
+areawerecommandshat.Size = UDim2.new(0, 254, 0, 900)
+
+glitchersfolder.Name = "glitchers folder"
+glitchersfolder.Parent = areawerecommandshat
+
+glitchersending.Name = "glitchers ending"
+glitchersending.Parent = glitchersfolder
+glitchersending.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+glitchersending.Position = UDim2.new(0, 0, 0.284444451, 0)
+glitchersending.Size = UDim2.new(0, 254, 0, 12)
+
+myglitcher1.Name = "myglitcher 1"
+myglitcher1.Parent = glitchersfolder
+myglitcher1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+myglitcher1.Position = UDim2.new(0, 0, 0.0500000007, 0)
+myglitcher1.Size = UDim2.new(0, 254, 0, 31)
+myglitcher1.Font = Enum.Font.SourceSans
+myglitcher1.Text = ".my glitcher"
+myglitcher1.TextColor3 = Color3.fromRGB(0, 0, 0)
+myglitcher1.TextScaled = true
+myglitcher1.TextSize = 14.000
+myglitcher1.TextWrapped = true
+
+myglitcher2.Name = "myglitcher 2"
+myglitcher2.Parent = glitchersfolder
+myglitcher2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+myglitcher2.Position = UDim2.new(0, 0, 0.100000001, 0)
+myglitcher2.Size = UDim2.new(0, 254, 0, 31)
+myglitcher2.Font = Enum.Font.SourceSans
+myglitcher2.Text = ".my glitcher 2"
+myglitcher2.TextColor3 = Color3.fromRGB(0, 0, 0)
+myglitcher2.TextScaled = true
+myglitcher2.TextSize = 14.000
+myglitcher2.TextWrapped = true
+
+bigglitcher.Name = "bigglitcher"
+bigglitcher.Parent = glitchersfolder
+bigglitcher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bigglitcher.Position = UDim2.new(0, 0, 0.146666676, 0)
+bigglitcher.Size = UDim2.new(0, 254, 0, 31)
+bigglitcher.Font = Enum.Font.SourceSans
+bigglitcher.Text = ".big glitcher"
+bigglitcher.TextColor3 = Color3.fromRGB(0, 0, 0)
+bigglitcher.TextScaled = true
+bigglitcher.TextSize = 14.000
+bigglitcher.TextWrapped = true
+
+glitcher1.Name = "glitcher1"
+glitcher1.Parent = glitchersfolder
+glitcher1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+glitcher1.Position = UDim2.new(0, 0, 0.193333328, 0)
+glitcher1.Size = UDim2.new(0, 254, 0, 31)
+glitcher1.Font = Enum.Font.SourceSans
+glitcher1.Text = ".glitcher 1"
+glitcher1.TextColor3 = Color3.fromRGB(0, 0, 0)
+glitcher1.TextScaled = true
+glitcher1.TextSize = 14.000
+glitcher1.TextWrapped = true
+
+glitcher2.Name = "glitcher2"
+glitcher2.Parent = glitchersfolder
+glitcher2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+glitcher2.Position = UDim2.new(0, 0, 0.239999995, 0)
+glitcher2.Size = UDim2.new(0, 254, 0, 31)
+glitcher2.Font = Enum.Font.SourceSans
+glitcher2.Text = ".glitcher 2"
+glitcher2.TextColor3 = Color3.fromRGB(0, 0, 0)
+glitcher2.TextScaled = true
+glitcher2.TextSize = 14.000
+glitcher2.TextWrapped = true
+
+glitcherstitle.Name = "glitchers title"
+glitcherstitle.Parent = glitchersfolder
+glitcherstitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+glitcherstitle.Size = UDim2.new(0, 254, 0, 34)
+glitcherstitle.Font = Enum.Font.SourceSans
+glitcherstitle.Text = "glitchers"
+glitcherstitle.TextColor3 = Color3.fromRGB(0, 0, 0)
+glitcherstitle.TextScaled = true
+glitcherstitle.TextSize = 14.000
+glitcherstitle.TextWrapped = true
+
+rbkingfolder.Name = "rb king folder"
+rbkingfolder.Parent = areawerecommandshat
+
+rbkingtitle.Name = "rb king title"
+rbkingtitle.Parent = rbkingfolder
+rbkingtitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rbkingtitle.Position = UDim2.new(0, 0, 0.299999982, 0)
+rbkingtitle.Size = UDim2.new(0, 254, 0, 35)
+rbkingtitle.Font = Enum.Font.SourceSans
+rbkingtitle.Text = "rb king's"
+rbkingtitle.TextColor3 = Color3.fromRGB(0, 0, 0)
+rbkingtitle.TextScaled = true
+rbkingtitle.TextSize = 14.000
+rbkingtitle.TextWrapped = true
+
+rbkingbutton.Name = "rb king button"
+rbkingbutton.Parent = rbkingfolder
+rbkingbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rbkingbutton.Position = UDim2.new(0, 0, 0.353333414, 0)
+rbkingbutton.Size = UDim2.new(0, 254, 0, 32)
+rbkingbutton.Font = Enum.Font.SourceSans
+rbkingbutton.Text = ".rb king"
+rbkingbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+rbkingbutton.TextScaled = true
+rbkingbutton.TextSize = 14.000
+rbkingbutton.TextWrapped = true
+
+rbking2button.Name = "rb king 2 button"
+rbking2button.Parent = rbkingfolder
+rbking2button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rbking2button.Position = UDim2.new(0, 0, 0.402222306, 0)
+rbking2button.Size = UDim2.new(0, 254, 0, 32)
+rbking2button.Font = Enum.Font.SourceSans
+rbking2button.Text = ".rb king 2"
+rbking2button.TextColor3 = Color3.fromRGB(0, 0, 0)
+rbking2button.TextScaled = true
+rbking2button.TextSize = 14.000
+rbking2button.TextWrapped = true
+
+clsoehat.Name = "clsoe hat"
+clsoehat.Parent = hatcommandsbar
+clsoehat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clsoehat.Position = UDim2.new(0.806691408, 0, -0.0834468678, 0)
+clsoehat.Size = UDim2.new(0, 43, 0, 23)
+clsoehat.Font = Enum.Font.SourceSans
+clsoehat.Text = "X"
+clsoehat.TextColor3 = Color3.fromRGB(0, 0, 0)
+clsoehat.TextScaled = true
+clsoehat.TextSize = 14.000
+clsoehat.TextWrapped = true
+
 hatlesscommandsbar.Name = "hatless commands bar"
 hatlesscommandsbar.Parent = deeri
 hatlesscommandsbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -894,7 +1115,8 @@ commandsframehatless.Active = true
 commandsframehatless.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commandsframehatless.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
 commandsframehatless.Size = UDim2.new(0, 268, 0, 273)
-commandsframehatless.CanvasSize = UDim2.new(0, 0, 0, 900)
+commandsframehatless.CanvasPosition = Vector2.new(0, 1050)
+commandsframehatless.CanvasSize = UDim2.new(0, 0, 0, 1500)
 
 areawerecommandshatless.Name = "area were commands hatless"
 areawerecommandshatless.Parent = commandsframehatless
@@ -931,7 +1153,7 @@ chillbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 chillbutton.Position = UDim2.new(0, 0, 0.0833333284, 0)
 chillbutton.Size = UDim2.new(0, 254, 0, 28)
 chillbutton.Font = Enum.Font.SourceSans
-chillbutton.Text = ".chil"
+chillbutton.Text = ".chill"
 chillbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
 chillbutton.TextScaled = true
 chillbutton.TextSize = 14.000
@@ -1135,11 +1357,143 @@ goopiebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 goopiebutton.Position = UDim2.new(0, 0, 0.813333333, 0)
 goopiebutton.Size = UDim2.new(0, 254, 0, 28)
 goopiebutton.Font = Enum.Font.SourceSans
-goopiebutton.Text = ""
+goopiebutton.Text = ".goopie"
 goopiebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
 goopiebutton.TextScaled = true
 goopiebutton.TextSize = 14.000
 goopiebutton.TextWrapped = true
+
+galebutton.Name = "gale button"
+galebutton.Parent = areawerecommandshatless
+galebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+galebutton.Position = UDim2.new(0, 0, 0.862222195, 0)
+galebutton.Size = UDim2.new(0, 254, 0, 28)
+galebutton.Font = Enum.Font.SourceSans
+galebutton.Text = ".gale"
+galebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+galebutton.TextScaled = true
+galebutton.TextSize = 14.000
+galebutton.TextWrapped = true
+
+xesterbutton.Name = "xester button"
+xesterbutton.Parent = areawerecommandshatless
+xesterbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+xesterbutton.Position = UDim2.new(0, 0, 0.906666636, 0)
+xesterbutton.Size = UDim2.new(0, 254, 0, 28)
+xesterbutton.Font = Enum.Font.SourceSans
+xesterbutton.Text = ".xester"
+xesterbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+xesterbutton.TextScaled = true
+xesterbutton.TextSize = 14.000
+xesterbutton.TextWrapped = true
+
+krystal.Name = "krystal"
+krystal.Parent = areawerecommandshatless
+krystal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+krystal.Position = UDim2.new(0, 0, 0.949999988, 0)
+krystal.Size = UDim2.new(0, 254, 0, 28)
+krystal.Font = Enum.Font.SourceSans
+krystal.Text = ".krystal dance"
+krystal.TextColor3 = Color3.fromRGB(0, 0, 0)
+krystal.TextScaled = true
+krystal.TextSize = 14.000
+krystal.TextWrapped = true
+
+catbutton.Name = "cat button"
+catbutton.Parent = areawerecommandshatless
+catbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+catbutton.Position = UDim2.new(0, 0, 1, 0)
+catbutton.Size = UDim2.new(0, 254, 0, 28)
+catbutton.Font = Enum.Font.SourceSans
+catbutton.Text = ".cat v2"
+catbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+catbutton.TextScaled = true
+catbutton.TextSize = 14.000
+catbutton.TextWrapped = true
+
+killbot.Name = "kill bot"
+killbot.Parent = areawerecommandshatless
+killbot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+killbot.Position = UDim2.new(0, 0, 1.04999995, 0)
+killbot.Size = UDim2.new(0, 254, 0, 28)
+killbot.Font = Enum.Font.SourceSans
+killbot.Text = ".killbot v2"
+killbot.TextColor3 = Color3.fromRGB(0, 0, 0)
+killbot.TextScaled = true
+killbot.TextSize = 14.000
+killbot.TextWrapped = true
+
+caducusbutton.Name = "caducus button"
+caducusbutton.Parent = areawerecommandshatless
+caducusbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+caducusbutton.Position = UDim2.new(0, 0, 1.0999999, 0)
+caducusbutton.Size = UDim2.new(0, 254, 0, 28)
+caducusbutton.Font = Enum.Font.SourceSans
+caducusbutton.Text = ".caducus"
+caducusbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+caducusbutton.TextScaled = true
+caducusbutton.TextSize = 14.000
+caducusbutton.TextWrapped = true
+
+orangejusticebutton.Name = "orange justice button"
+orangejusticebutton.Parent = areawerecommandshatless
+orangejusticebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+orangejusticebutton.Position = UDim2.new(0, 0, 1.15666652, 0)
+orangejusticebutton.Size = UDim2.new(0, 254, 0, 28)
+orangejusticebutton.Font = Enum.Font.SourceSans
+orangejusticebutton.Text = ".orange justice"
+orangejusticebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+orangejusticebutton.TextScaled = true
+orangejusticebutton.TextSize = 14.000
+orangejusticebutton.TextWrapped = true
+
+defaultdancebutton.Name = "default dance button"
+defaultdancebutton.Parent = areawerecommandshatless
+defaultdancebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+defaultdancebutton.Position = UDim2.new(0, 0, 1.2099998, 0)
+defaultdancebutton.Size = UDim2.new(0, 254, 0, 28)
+defaultdancebutton.Font = Enum.Font.SourceSans
+defaultdancebutton.Text = ".default dance"
+defaultdancebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+defaultdancebutton.TextScaled = true
+defaultdancebutton.TextSize = 14.000
+defaultdancebutton.TextWrapped = true
+
+fabbutton.Name = "fab button"
+fabbutton.Parent = areawerecommandshatless
+fabbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fabbutton.Position = UDim2.new(0, 0, 1.26222205, 0)
+fabbutton.Size = UDim2.new(0, 254, 0, 28)
+fabbutton.Font = Enum.Font.SourceSans
+fabbutton.Text = ".fab"
+fabbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+fabbutton.TextScaled = true
+fabbutton.TextSize = 14.000
+fabbutton.TextWrapped = true
+
+taketheL.Name = "take the L"
+taketheL.Parent = areawerecommandshatless
+taketheL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+taketheL.Position = UDim2.new(0, 0, 1.32111096, 0)
+taketheL.Size = UDim2.new(0, 254, 0, 28)
+taketheL.Font = Enum.Font.SourceSans
+taketheL.Text = ".take the l"
+taketheL.TextColor3 = Color3.fromRGB(0, 0, 0)
+taketheL.TextScaled = true
+taketheL.TextSize = 14.000
+taketheL.TextWrapped = true
+
+sidestepbutton.Name = "sidestep button"
+sidestepbutton.Parent = areawerecommandshatless
+sidestepbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sidestepbutton.Position = UDim2.new(0, 0, 1.37777758, 0)
+sidestepbutton.Size = UDim2.new(0, 254, 0, 28)
+sidestepbutton.Font = Enum.Font.SourceSans
+sidestepbutton.Text = ".sidestep"
+sidestepbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+sidestepbutton.TextScaled = true
+sidestepbutton.TextSize = 14.000
+sidestepbutton.TextWrapped = true
 
 clsoehatless.Name = "clsoe hatless"
 clsoehatless.Parent = hatlesscommandsbar
@@ -1153,69 +1507,180 @@ clsoehatless.TextScaled = true
 clsoehatless.TextSize = 14.000
 clsoehatless.TextWrapped = true
 
+guicommandsbar.Name = "gui commands bar"
+guicommandsbar.Parent = deeri
+guicommandsbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+guicommandsbar.Position = UDim2.new(0.794380605, 0, 0.707011342, 0)
+guicommandsbar.Size = UDim2.new(0, 269, 0, 279)
+guicommandsbar.Visible = false
+
+commandsframegui.Name = "commandsframe gui"
+commandsframegui.Parent = guicommandsbar
+commandsframegui.Active = true
+commandsframegui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+commandsframegui.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
+commandsframegui.Size = UDim2.new(0, 268, 0, 273)
+commandsframegui.CanvasPosition = Vector2.new(0, 150)
+commandsframegui.CanvasSize = UDim2.new(0, 0, 0, 1500)
+
+areawerecommandsgui.Name = "area were commands gui"
+areawerecommandsgui.Parent = commandsframegui
+areawerecommandsgui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+areawerecommandsgui.Position = UDim2.new(0, 0, -0.000107314561, 0)
+areawerecommandsgui.Size = UDim2.new(0, 254, 0, 900)
+
+deerihubstuff.Name = "deeri hub stuff"
+deerihubstuff.Parent = areawerecommandsgui
+
+sidebar.Name = "sidebar"
+sidebar.Parent = deerihubstuff
+sidebar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sidebar.Size = UDim2.new(0, 254, 0, 34)
+sidebar.Font = Enum.Font.SourceSans
+sidebar.Text = "!sidebar"
+sidebar.TextColor3 = Color3.fromRGB(0, 0, 0)
+sidebar.TextScaled = true
+sidebar.TextSize = 14.000
+sidebar.TextWrapped = true
+
+deerihubadminpicker.Name = "deeri hub admin picker"
+deerihubadminpicker.Parent = deerihubstuff
+
+adminpicker.Name = "admin picker"
+adminpicker.Parent = deerihubadminpicker
+adminpicker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+adminpicker.Position = UDim2.new(0, 0, 0.164444447, 0)
+adminpicker.Size = UDim2.new(0, 254, 0, 39)
+adminpicker.Font = Enum.Font.SourceSans
+adminpicker.Text = ".admin"
+adminpicker.TextColor3 = Color3.fromRGB(0, 0, 0)
+adminpicker.TextScaled = true
+adminpicker.TextSize = 14.000
+adminpicker.TextWrapped = true
+
+credits.Name = "credits"
+credits.Parent = deerihubstuff
+credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+credits.Position = UDim2.new(0, 0, 0.222222224, 0)
+credits.Size = UDim2.new(0, 254, 0, 39)
+credits.Font = Enum.Font.SourceSans
+credits.Text = ".credits"
+credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+credits.TextScaled = true
+credits.TextSize = 14.000
+credits.TextWrapped = true
+
+gamesguis.Name = "games guis"
+gamesguis.Parent = areawerecommandsgui
+
+animationguis.Name = "animation guis"
+animationguis.Parent = areawerecommandsgui
+
+animationgui.Name = "animation gui"
+animationgui.Parent = animationguis
+animationgui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+animationgui.Position = UDim2.new(0, 0, 0.107777774, 0)
+animationgui.Size = UDim2.new(0, 254, 0, 35)
+animationgui.Font = Enum.Font.SourceSans
+animationgui.Text = ".animation"
+animationgui.TextColor3 = Color3.fromRGB(0, 0, 0)
+animationgui.TextScaled = true
+animationgui.TextSize = 14.000
+animationgui.TextWrapped = true
+
+adminguis.Name = "admin guis"
+adminguis.Parent = areawerecommandsgui
+
+dashadminbutton.Name = "dash admin button"
+dashadminbutton.Parent = adminguis
+dashadminbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dashadminbutton.Position = UDim2.new(0, 0, 0.0500000007, 0)
+dashadminbutton.Size = UDim2.new(0, 254, 0, 35)
+dashadminbutton.Font = Enum.Font.SourceSans
+dashadminbutton.Text = ".dash admin"
+dashadminbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+dashadminbutton.TextScaled = true
+dashadminbutton.TextSize = 14.000
+dashadminbutton.TextWrapped = true
+
+miscguis.Name = "misc guis"
+miscguis.Parent = areawerecommandsgui
+
+empty.Name = "empty"
+empty.Parent = areawerecommandsgui
+empty.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+empty.Position = UDim2.new(0, 0, 0.273333341, 0)
+empty.Size = UDim2.new(0, 254, 0, 39)
+empty.Font = Enum.Font.SourceSans
+empty.Text = ".empty"
+empty.TextColor3 = Color3.fromRGB(0, 0, 0)
+empty.TextScaled = true
+empty.TextSize = 14.000
+empty.TextWrapped = true
+
+clsoegui.Name = "clsoe gui"
+clsoegui.Parent = guicommandsbar
+clsoegui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clsoegui.Position = UDim2.new(0.806691408, 0, -0.0834468678, 0)
+clsoegui.Size = UDim2.new(0, 43, 0, 23)
+clsoegui.Font = Enum.Font.SourceSans
+clsoegui.Text = "X"
+clsoegui.TextColor3 = Color3.fromRGB(0, 0, 0)
+clsoegui.TextScaled = true
+clsoegui.TextSize = 14.000
+clsoegui.TextWrapped = true
+
 -- Scripts:
 
-local UserInputService = game:GetService("UserInputService")
-
-UserInputService.InputBegan:Connect(function(keyCode)
-	if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
-		if deeri.Enabled == true then
-			deeri.Enabled = false
-		else
-			deeri.Enabled = true
-		end
-	end
-end)
-
-local function CTTDAJP_fake_script() -- openup.openupbuttons 
+local function FDPYBH_fake_script() -- openup.openupbuttons 
 	local script = Instance.new('LocalScript', openup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.openupitems.Visible = true
 	end)
 end
-coroutine.wrap(CTTDAJP_fake_script)()
-local function PCIOOT_fake_script() -- opendown.opendownbutton 
+coroutine.wrap(FDPYBH_fake_script)()
+local function SLCOFU_fake_script() -- opendown.opendownbutton 
 	local script = Instance.new('LocalScript', opendown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.opendownitems.Visible = true
 	end)
 end
-coroutine.wrap(PCIOOT_fake_script)()
-local function VUSMM_fake_script() -- adminbutton.admin button script 
+coroutine.wrap(SLCOFU_fake_script)()
+local function DLLTCH_fake_script() -- adminbutton.admin button script 
 	local script = Instance.new('LocalScript', adminbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/qsM4xDCX"))()
 	end)
 end
-coroutine.wrap(VUSMM_fake_script)()
-local function OXPLYY_fake_script() -- closeup.closeupitems 
+coroutine.wrap(DLLTCH_fake_script)()
+local function UDAIKV_fake_script() -- closeup.closeupitems 
 	local script = Instance.new('LocalScript', closeup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(OXPLYY_fake_script)()
-local function NJCWR_fake_script() -- colorsettings.opencolorsettings 
+coroutine.wrap(UDAIKV_fake_script)()
+local function WMTKLCZ_fake_script() -- colorsettings.opencolorsettings 
 	local script = Instance.new('LocalScript', colorsettings)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent.colorsettings.Visible = true
 	end)
 end
-coroutine.wrap(NJCWR_fake_script)()
-local function NKEQ_fake_script() -- openextrabuttonsup.open extrtabuttons upscript 
+coroutine.wrap(WMTKLCZ_fake_script)()
+local function YGEIRB_fake_script() -- openextrabuttonsup.open extrtabuttons upscript 
 	local script = Instance.new('LocalScript', openextrabuttonsup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["extra buttons"].Visible = true
 	end)
 end
-coroutine.wrap(NKEQ_fake_script)()
-local function LRRAYEB_fake_script() -- rejoinbutton.rejoin button script 
+coroutine.wrap(YGEIRB_fake_script)()
+local function LBGNE_fake_script() -- rejoinbutton.rejoin button script 
 	local script = Instance.new('LocalScript', rejoinbutton)
 
 	
@@ -1224,16 +1689,16 @@ local function LRRAYEB_fake_script() -- rejoinbutton.rejoin button script
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/QyWmBd9L"))()
 	end)
 end
-coroutine.wrap(LRRAYEB_fake_script)()
-local function UAGDF_fake_script() -- closedown.closedownitems 
+coroutine.wrap(LBGNE_fake_script)()
+local function FOFNH_fake_script() -- closedown.closedownitems 
 	local script = Instance.new('LocalScript', closedown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(UAGDF_fake_script)()
-local function HCYZQ_fake_script() -- clickclear2.clickclear2scriipt 
+coroutine.wrap(FOFNH_fake_script)()
+local function SCJCFZ_fake_script() -- clickclear2.clickclear2scriipt 
 	local script = Instance.new('LocalScript', clickclear2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1256,8 +1721,8 @@ local function HCYZQ_fake_script() -- clickclear2.clickclear2scriipt
 		
 	end)
 end
-coroutine.wrap(HCYZQ_fake_script)()
-local function DAITSUF_fake_script() -- clickclear.clickclear1script 
+coroutine.wrap(SCJCFZ_fake_script)()
+local function SQZHOEM_fake_script() -- clickclear.clickclear1script 
 	local script = Instance.new('LocalScript', clickclear)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1279,56 +1744,56 @@ local function DAITSUF_fake_script() -- clickclear.clickclear1script
 		
 	end)
 end
-coroutine.wrap(DAITSUF_fake_script)()
-local function YJHK_fake_script() -- openextrabuttonsdown.open extra buttons down script 
+coroutine.wrap(SQZHOEM_fake_script)()
+local function MGXDC_fake_script() -- openextrabuttonsdown.open extra buttons down script 
 	local script = Instance.new('LocalScript', openextrabuttonsdown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["extra buttons"].Visible = true
 	end)
 end
-coroutine.wrap(YJHK_fake_script)()
-local function OWZZ_fake_script() -- requiredhatsbutton.open required hats 
+coroutine.wrap(MGXDC_fake_script)()
+local function HELLYM_fake_script() -- requiredhatsbutton.open required hats 
 	local script = Instance.new('LocalScript', requiredhatsbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["required hats frame"].Visible = true
 	end)
 end
-coroutine.wrap(OWZZ_fake_script)()
-local function TZDZLO_fake_script() -- closebutton.close button script 
+coroutine.wrap(HELLYM_fake_script)()
+local function AQOR_fake_script() -- closebutton.close button script 
 	local script = Instance.new('LocalScript', closebutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(TZDZLO_fake_script)()
-local function ITHGQD_fake_script() -- commandsbutton.open commands button 
+coroutine.wrap(AQOR_fake_script)()
+local function SEUL_fake_script() -- commandsbutton.open commands button 
 	local script = Instance.new('LocalScript', commandsbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.commands.Visible = true
 	end)
 end
-coroutine.wrap(ITHGQD_fake_script)()
-local function CRPDWZM_fake_script() -- updatesbutton.updates script 
+coroutine.wrap(SEUL_fake_script)()
+local function CVIHP_fake_script() -- updatesbutton.updates script 
 	local script = Instance.new('LocalScript', updatesbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/7QR0gh1N"))()
 	end)
 end
-coroutine.wrap(CRPDWZM_fake_script)()
-local function JEETEL_fake_script() -- closeextrabuttons.closeextrabuttons script 
+coroutine.wrap(CVIHP_fake_script)()
+local function KMQHNX_fake_script() -- closeextrabuttons.closeextrabuttons script 
 	local script = Instance.new('LocalScript', closeextrabuttons)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(JEETEL_fake_script)()
-local function MYFIEWY_fake_script() -- resetcolorbutton.resetcolorscript 
+coroutine.wrap(KMQHNX_fake_script)()
+local function PRPSKT_fake_script() -- resetcolorbutton.resetcolorscript 
 	local script = Instance.new('LocalScript', resetcolorbutton)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -1428,8 +1893,8 @@ local function MYFIEWY_fake_script() -- resetcolorbutton.resetcolorscript
 	end)
 	
 end
-coroutine.wrap(MYFIEWY_fake_script)()
-local function KQWDO_fake_script() -- darkmodebutton.darkmode script 
+coroutine.wrap(PRPSKT_fake_script)()
+local function RLARIR_fake_script() -- darkmodebutton.darkmode script 
 	local script = Instance.new('LocalScript', darkmodebutton)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -1527,8 +1992,8 @@ local function KQWDO_fake_script() -- darkmodebutton.darkmode script
 	end)
 	
 end
-coroutine.wrap(KQWDO_fake_script)()
-local function IDOXWXH_fake_script() -- punpkinmode.pumpkinmodescript 
+coroutine.wrap(RLARIR_fake_script)()
+local function PGJT_fake_script() -- punpkinmode.pumpkinmodescript 
 	local script = Instance.new('LocalScript', punpkinmode)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -1626,16 +2091,16 @@ local function IDOXWXH_fake_script() -- punpkinmode.pumpkinmodescript
 	end)
 	
 end
-coroutine.wrap(IDOXWXH_fake_script)()
-local function ETDQ_fake_script() -- closeforcolorsettings.closecolorsettings 
+coroutine.wrap(PGJT_fake_script)()
+local function ORTVX_fake_script() -- closeforcolorsettings.closecolorsettings 
 	local script = Instance.new('LocalScript', closeforcolorsettings)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(ETDQ_fake_script)()
-local function LBIOJQ_fake_script() -- hatcommands.open commands 
+coroutine.wrap(ORTVX_fake_script)()
+local function HMPQAE_fake_script() -- hatcommands.open hat 
 	local script = Instance.new('LocalScript', hatcommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1646,23 +2111,60 @@ local function LBIOJQ_fake_script() -- hatcommands.open commands
 		script.Parent.Parent.Parent["hat commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(LBIOJQ_fake_script)()
-local function XFITX_fake_script() -- hatlesscommands.open hatless script 
+coroutine.wrap(HMPQAE_fake_script)()
+local function DYEMH_fake_script() -- hatlesscommands.open hatless script 
 	local script = Instance.new('LocalScript', hatlesscommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["hatless commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(XFITX_fake_script)()
-local function THOTN_fake_script() -- closecomands.close commands button 
+coroutine.wrap(DYEMH_fake_script)()
+local function SYIQMB_fake_script() -- guicommands.open gui 
+	local script = Instance.new('LocalScript', guicommands)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent["gui commands bar"].Visible = true
+	end)
+end
+coroutine.wrap(SYIQMB_fake_script)()
+local function WMGIIV_fake_script() -- closecomands.close commands button 
 	local script = Instance.new('LocalScript', closecomands)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(THOTN_fake_script)()
+coroutine.wrap(WMGIIV_fake_script)()
+local function ILEI_fake_script() -- clsoehat.close hat scipt 
+	local script = Instance.new('LocalScript', clsoehat)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(ILEI_fake_script)()
+local function OZGNQ_fake_script() -- clsoehatless.close hatless scipt 
+	local script = Instance.new('LocalScript', clsoehatless)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(OZGNQ_fake_script)()
+local function QJAQFV_fake_script() -- clsoegui.close gui scipt 
+	local script = Instance.new('LocalScript', clsoegui)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(QJAQFV_fake_script)()
+
 local function UXJIZ_fake_script() -- clsoehatless.close hatless scipt 
 	local script = Instance.new('LocalScript', clsoehatless)
 
