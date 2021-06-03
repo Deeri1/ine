@@ -1634,10 +1634,10 @@ clsoegui.TextWrapped = true
 
 UserInputService.InputBegan:Connect(function(keyCode)
 	if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
-		if deeri.Enabled == true then
-			deeri.Enabled = false
+		if Main.Visible == true then
+			Main.Visible = false
 		else
-			deeri.Enabled = true
+			Main.Visible = true
 		end
 	end
 end)
