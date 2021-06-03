@@ -149,6 +149,18 @@ local clsoegui = Instance.new("TextButton")
 
 --Properties:
 
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:Connect(function(keyCode)
+	if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
+		if deeri.Enabled == true then
+			deeri.Enabled = false
+		else
+			deeri.Enabled = true
+		end
+	end
+end)
+
 deeri.Name = "deeri"
 deeri.Parent = game.CoreGui
 deeri.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -158,8 +170,6 @@ Main.Parent = deeri
 Main.BackgroundColor3 = Color3.fromRGB(213, 213, 213)
 Main.Position = UDim2.new(0.0802139044, 0, 0.611420572, 0)
 Main.Size = UDim2.new(0, 373, 0, 135)
-Main.Active = true
-Main.Draggable = true
 
 CMD.Name = "CMD"
 CMD.Parent = Main
@@ -1632,66 +1642,55 @@ clsoegui.TextWrapped = true
 
 -- Scripts:
 
-UserInputService.InputBegan:Connect(function(keyCode)
-	if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
-		if Main.Visible == true then
-			Main.Visible = false
-		else
-			Main.Visible = true
-		end
-	end
-end)
-
-
-local function FDPYBH_fake_script() -- openup.openupbuttons 
+local function DCIMOW_fake_script() -- openup.openupbuttons 
 	local script = Instance.new('LocalScript', openup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.openupitems.Visible = true
 	end)
 end
-coroutine.wrap(FDPYBH_fake_script)()
-local function SLCOFU_fake_script() -- opendown.opendownbutton 
+coroutine.wrap(DCIMOW_fake_script)()
+local function BXQA_fake_script() -- opendown.opendownbutton 
 	local script = Instance.new('LocalScript', opendown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.opendownitems.Visible = true
 	end)
 end
-coroutine.wrap(SLCOFU_fake_script)()
-local function DLLTCH_fake_script() -- adminbutton.admin button script 
+coroutine.wrap(BXQA_fake_script)()
+local function FKGI_fake_script() -- adminbutton.admin button script 
 	local script = Instance.new('LocalScript', adminbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/qsM4xDCX"))()
 	end)
 end
-coroutine.wrap(DLLTCH_fake_script)()
-local function UDAIKV_fake_script() -- closeup.closeupitems 
+coroutine.wrap(FKGI_fake_script)()
+local function UGHUH_fake_script() -- closeup.closeupitems 
 	local script = Instance.new('LocalScript', closeup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(UDAIKV_fake_script)()
-local function WMTKLCZ_fake_script() -- colorsettings.opencolorsettings 
+coroutine.wrap(UGHUH_fake_script)()
+local function SFYLHFS_fake_script() -- colorsettings.opencolorsettings 
 	local script = Instance.new('LocalScript', colorsettings)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent.colorsettings.Visible = true
 	end)
 end
-coroutine.wrap(WMTKLCZ_fake_script)()
-local function YGEIRB_fake_script() -- openextrabuttonsup.open extrtabuttons upscript 
+coroutine.wrap(SFYLHFS_fake_script)()
+local function GNIAK_fake_script() -- openextrabuttonsup.open extrtabuttons upscript 
 	local script = Instance.new('LocalScript', openextrabuttonsup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["extra buttons"].Visible = true
 	end)
 end
-coroutine.wrap(YGEIRB_fake_script)()
-local function LBGNE_fake_script() -- rejoinbutton.rejoin button script 
+coroutine.wrap(GNIAK_fake_script)()
+local function RMSUVF_fake_script() -- rejoinbutton.rejoin button script 
 	local script = Instance.new('LocalScript', rejoinbutton)
 
 	
@@ -1700,16 +1699,16 @@ local function LBGNE_fake_script() -- rejoinbutton.rejoin button script
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/QyWmBd9L"))()
 	end)
 end
-coroutine.wrap(LBGNE_fake_script)()
-local function FOFNH_fake_script() -- closedown.closedownitems 
+coroutine.wrap(RMSUVF_fake_script)()
+local function URDEFG_fake_script() -- closedown.closedownitems 
 	local script = Instance.new('LocalScript', closedown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(FOFNH_fake_script)()
-local function SCJCFZ_fake_script() -- clickclear2.clickclear2scriipt 
+coroutine.wrap(URDEFG_fake_script)()
+local function RJFDXLC_fake_script() -- clickclear2.clickclear2scriipt 
 	local script = Instance.new('LocalScript', clickclear2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1732,8 +1731,8 @@ local function SCJCFZ_fake_script() -- clickclear2.clickclear2scriipt
 		
 	end)
 end
-coroutine.wrap(SCJCFZ_fake_script)()
-local function SQZHOEM_fake_script() -- clickclear.clickclear1script 
+coroutine.wrap(RJFDXLC_fake_script)()
+local function NFIOXGN_fake_script() -- clickclear.clickclear1script 
 	local script = Instance.new('LocalScript', clickclear)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1755,56 +1754,56 @@ local function SQZHOEM_fake_script() -- clickclear.clickclear1script
 		
 	end)
 end
-coroutine.wrap(SQZHOEM_fake_script)()
-local function MGXDC_fake_script() -- openextrabuttonsdown.open extra buttons down script 
+coroutine.wrap(NFIOXGN_fake_script)()
+local function FAKI_fake_script() -- openextrabuttonsdown.open extra buttons down script 
 	local script = Instance.new('LocalScript', openextrabuttonsdown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["extra buttons"].Visible = true
 	end)
 end
-coroutine.wrap(MGXDC_fake_script)()
-local function HELLYM_fake_script() -- requiredhatsbutton.open required hats 
+coroutine.wrap(FAKI_fake_script)()
+local function LAHDT_fake_script() -- requiredhatsbutton.open required hats 
 	local script = Instance.new('LocalScript', requiredhatsbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["required hats frame"].Visible = true
 	end)
 end
-coroutine.wrap(HELLYM_fake_script)()
-local function AQOR_fake_script() -- closebutton.close button script 
+coroutine.wrap(LAHDT_fake_script)()
+local function VSEQKTO_fake_script() -- closebutton.close button script 
 	local script = Instance.new('LocalScript', closebutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(AQOR_fake_script)()
-local function SEUL_fake_script() -- commandsbutton.open commands button 
+coroutine.wrap(VSEQKTO_fake_script)()
+local function JLWUCN_fake_script() -- commandsbutton.open commands button 
 	local script = Instance.new('LocalScript', commandsbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.commands.Visible = true
 	end)
 end
-coroutine.wrap(SEUL_fake_script)()
-local function CVIHP_fake_script() -- updatesbutton.updates script 
+coroutine.wrap(JLWUCN_fake_script)()
+local function CRZWGQB_fake_script() -- updatesbutton.updates script 
 	local script = Instance.new('LocalScript', updatesbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/7QR0gh1N"))()
 	end)
 end
-coroutine.wrap(CVIHP_fake_script)()
-local function KMQHNX_fake_script() -- closeextrabuttons.closeextrabuttons script 
+coroutine.wrap(CRZWGQB_fake_script)()
+local function EGRVJG_fake_script() -- closeextrabuttons.closeextrabuttons script 
 	local script = Instance.new('LocalScript', closeextrabuttons)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(KMQHNX_fake_script)()
-local function PRPSKT_fake_script() -- resetcolorbutton.resetcolorscript 
+coroutine.wrap(EGRVJG_fake_script)()
+local function IWQRCB_fake_script() -- resetcolorbutton.resetcolorscript 
 	local script = Instance.new('LocalScript', resetcolorbutton)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -1904,8 +1903,8 @@ local function PRPSKT_fake_script() -- resetcolorbutton.resetcolorscript
 	end)
 	
 end
-coroutine.wrap(PRPSKT_fake_script)()
-local function RLARIR_fake_script() -- darkmodebutton.darkmode script 
+coroutine.wrap(IWQRCB_fake_script)()
+local function FHZRNM_fake_script() -- darkmodebutton.darkmode script 
 	local script = Instance.new('LocalScript', darkmodebutton)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -2003,8 +2002,8 @@ local function RLARIR_fake_script() -- darkmodebutton.darkmode script
 	end)
 	
 end
-coroutine.wrap(RLARIR_fake_script)()
-local function PGJT_fake_script() -- punpkinmode.pumpkinmodescript 
+coroutine.wrap(FHZRNM_fake_script)()
+local function XDLD_fake_script() -- punpkinmode.pumpkinmodescript 
 	local script = Instance.new('LocalScript', punpkinmode)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -2102,16 +2101,16 @@ local function PGJT_fake_script() -- punpkinmode.pumpkinmodescript
 	end)
 	
 end
-coroutine.wrap(PGJT_fake_script)()
-local function ORTVX_fake_script() -- closeforcolorsettings.closecolorsettings 
+coroutine.wrap(XDLD_fake_script)()
+local function TQGRVW_fake_script() -- closeforcolorsettings.closecolorsettings 
 	local script = Instance.new('LocalScript', closeforcolorsettings)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(ORTVX_fake_script)()
-local function HMPQAE_fake_script() -- hatcommands.open hat 
+coroutine.wrap(TQGRVW_fake_script)()
+local function XSIUE_fake_script() -- hatcommands.open hat 
 	local script = Instance.new('LocalScript', hatcommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2122,16 +2121,16 @@ local function HMPQAE_fake_script() -- hatcommands.open hat
 		script.Parent.Parent.Parent["hat commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(HMPQAE_fake_script)()
-local function DYEMH_fake_script() -- hatlesscommands.open hatless script 
+coroutine.wrap(XSIUE_fake_script)()
+local function DAERBQM_fake_script() -- hatlesscommands.open hatless script 
 	local script = Instance.new('LocalScript', hatlesscommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["hatless commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(DYEMH_fake_script)()
-local function SYIQMB_fake_script() -- guicommands.open gui 
+coroutine.wrap(DAERBQM_fake_script)()
+local function WSONWS_fake_script() -- guicommands.open gui 
 	local script = Instance.new('LocalScript', guicommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2142,1040 +2141,36 @@ local function SYIQMB_fake_script() -- guicommands.open gui
 		script.Parent.Parent.Parent["gui commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(SYIQMB_fake_script)()
-local function WMGIIV_fake_script() -- closecomands.close commands button 
+coroutine.wrap(WSONWS_fake_script)()
+local function SLWCH_fake_script() -- closecomands.close commands button 
 	local script = Instance.new('LocalScript', closecomands)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(WMGIIV_fake_script)()
-local function ILEI_fake_script() -- clsoehat.close hat scipt 
+coroutine.wrap(SLWCH_fake_script)()
+local function JSTQ_fake_script() -- clsoehat.close hat scipt 
 	local script = Instance.new('LocalScript', clsoehat)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(ILEI_fake_script)()
-local function OZGNQ_fake_script() -- clsoehatless.close hatless scipt 
+coroutine.wrap(JSTQ_fake_script)()
+local function TZQU_fake_script() -- clsoehatless.close hatless scipt 
 	local script = Instance.new('LocalScript', clsoehatless)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(OZGNQ_fake_script)()
-local function QJAQFV_fake_script() -- clsoegui.close gui scipt 
+coroutine.wrap(TZQU_fake_script)()
+local function CWZUEXQ_fake_script() -- clsoegui.close gui scipt 
 	local script = Instance.new('LocalScript', clsoegui)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(QJAQFV_fake_script)()
-
-local function UXJIZ_fake_script() -- clsoehatless.close hatless scipt 
-	local script = Instance.new('LocalScript', clsoehatless)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Visible = false
-	end)
-end
-coroutine.wrap(UXJIZ_fake_script)()
-
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".sniper" then
-		loadstring(game:HttpGet(('https://pastebin.com/raw/dtz7qGBg'),true))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".starglitcher" then
-		loadstring(game:HttpGet(('https://pastebin.com/raw/KqcTFiad'),true))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".gale" then
-		loadstring(game:HttpGet(('https://pastebin.com/raw/yVXFL5QY'),true))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".cop" then
-		loadstring(game:HttpGet(('https://pastebin.com/raw/VAA5Mf60'),true))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".carnage" then
-		loadstring(game:HttpGet(('https://pastebin.com/raw/Ntg4PB33'),true))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".NPC" then
-		loadstring(game:HttpGet(('https://pastebin.com/raw/8U5qGp6Y'),true))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".elio blasio" then
-		loadstring(game:HttpGet(('https://pastebin.com/raw/Uqgjgieq'),true))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".chips" then
-		loadstring(game:HttpGet(('https://pastebin.com/raw/Yj0q2v0U'),true))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".segs doll" then
-		loadstring(game:HttpGet(('https://pastebin.com/raw/dB6DGBB6'),true))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".titan" then
-		loadstring(game:HttpGet(('https://pastebin.com/raw/qSMz7Uiu'),true))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".sonic" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/SyF5t70A"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".neptune v" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/t0Mkc33N"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".gun" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/0Jv3udmi"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".joy" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/0B76TD7N"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".ender" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/hv190Xiq"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".killbot v2" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/G24tcRXA"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".cat v2" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/YLfR8Qx9"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".chill" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/XmHFdTij"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".lutris v2" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/6jeamwQL"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".memeus v2.5" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/cCMJ9C82"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".meme" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/0QfjMKrF"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".krystal dance" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/TELjLdEU"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".pen" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/1qcpeuDm"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".xester" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/RPwyPvEi"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".caducus" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/jfryBKds"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".minigun" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/sK9EUPE6"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".broomstick" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/xyHiNwtg"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".headless" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/mssZBy9j"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".head hold" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/jsZHrVFf"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".goopie" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/fKLm580i"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".spider" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/txsk1LJg4717"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".orange justice" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/Efg0DgkP"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".dumb" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/xLPcieGZ"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".floss" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/JfyvWHLf"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".default dance" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/iXAe7Fub"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".smug" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/NKub3B4R"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".distract dance" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/2tJBN38N"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".russian kick" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/1P37qYeV"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".insanity powers" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/ygWAZh5A"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".zen" then
-		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/o5u3/Zen/main/ZenFlingFE.txt"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".car drift" then
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/MonkoTubeYT/carscript/master/!carscript.lua',true))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".hell robotics" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/cF4yBbWs"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".touch kill" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/KaYHHvh7"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".pillow" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/RbKLMpdt"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".rainbow king" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/Xfxx4qJ0"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".pp" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/MMDGHMq1"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".fab" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/A90r2pqX"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".bread" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/rvWcXEBg"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".genocider" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/fFhLBNPU"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".abyss eye" then
-		loadstring(game:HttpGet("https://paste.ee/r/tUPmo/0"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".rolex" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/qViPAp8g"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".triangle chat" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/ahBKsjJ2"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".take the l" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/VkWkuyzc"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".naruto" then
-		loadstring(game:HttpGetAsync("https://hastebin.com/raw/ohequwikaf"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".sword" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/GhAfTaGk"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".aureate" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/71S0q0XT"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".stand" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/RZ4v0S3M"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".rope" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/6zBqd3M0"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".username sniper" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/a5vi6aUq"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".god mode" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/sc0UNxwj"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".net fix" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/3m6vxja9"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".blackhole" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/4zY4XvvA"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".flaming umbrella" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/g2heqqYe"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".rb sword" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/N8qyz4YH"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".rc tank" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/SeJPALMu"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".sidestep" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/vh56kMXb"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".electro swing" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/S0ekEXPX"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".spellcaster" then
-		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/o5u3/Spellcaster/main/SpellcasterFE.txt"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".neko" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/ZbuaiGg5"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".racer" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/L1Fybs6W"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".pixel car" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/1Nmes8yC"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".fire block" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/r44CJ09c"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".flip" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/crPcd0vq"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".christmas scythe" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/ddudd4kx"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".christmas sniper" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/HS8bDVzW"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".r6" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/gaQZgG61"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".hand" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/YnfdGb0R"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".naruto" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/HZNCX05U"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".strong stand" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/mDPSU903"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".plane" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/gGJtHawV"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".bike" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/gGJtHawV"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".planes ground" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/1Z76vdmv"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".void eye" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/dNbwYjkr"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".scout" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/G8XGN0AE"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".scout" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/G8XGN0AE"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".vapor gun" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/BBWrfQ89"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".bobs" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/8ASG9gWB"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".noob humper" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/WkkG4LRN"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".pumpkin lord" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/Yk67SfRy"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".shooter fighter" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/KAMMdqgh"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".titan" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/PS0J2NEw"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".void duel" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/bt0e5n4j"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".john doe" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/DwhVGxTs"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".boots" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/pfShTUeY"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".penguin dance" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/UtWvDMuD"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".golem" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/bvhQ4vke"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".chair" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/j93bFLzs"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".grappler" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/cG9Z23pB"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".chat spy" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/LWthUDFE"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".rtx graphics" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/Ba5A2mXj"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".skateboard" then
-		loadstring(game:HttpGet("https://hastebin.com/raw/akozareciz"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".eggdog" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/rkAD6D4J"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".stilts" then
-		loadstring(game:HttpGetAsync("https://ghostbin.co/paste/2eoao/raw"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".table" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/9kDrHnUd"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".pyramid" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/47FxhPef"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".wall" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/AY6kA2AV"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".fly" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/XHigk9fK"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".crybaby" then
-		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/specowos/CrybabyV2FE/main/CrybabyV2%20FE"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".reach" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/HkXnGkYU"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".car" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/7diQ0vxD"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".idk" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/taV90BLB"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".mommy" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/Hu9h2Dn6"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".animation" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/EQE58hq3"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".rejoin" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/QyWmBd9L"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".topkek" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/628uyZSE"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".arrowhub" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/Yp4g7eEc"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".mm2" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/7ySvSZMp"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".reanimate" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/fdTkE7Tq"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".Andromeda" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/L7jCXUjb"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".kat" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/yvgDA9nk"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".abj" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/5tzJ89y1"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".Arosia" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/Nwit6ZqP"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".LT2" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/1F9dCVVx"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".Babft" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/RdBpTMFd"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".clovr" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/heQTwiWG"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".skeds vr" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/69qeuvag"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".karma" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/RiXcbCCm"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".Selexity" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/g1KLKyT0"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".fire god" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/F4t9aXct"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".ss executor" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/1d4sf1QY​"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".admin" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/qsM4xDCX"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".sus" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/JXUMavf3"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".blink" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/4pc5Wx9E"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".boogabooga" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/AZPFGAMD"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".jailbreak" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/EsZLSpPM"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".game scripts" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/fJBsXwyZ"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".smile" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/rTk7N8xb"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".astrava" then
-		loadstring(game:GetObjects("rbxassetid://1468845733")[1].Source)()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".sharkbite" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/TfwREsct"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".the streets" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/naT5j4s9"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".dahood" then
-		loadstring(game:GetObjects("rbxassetid://5812737894")[1].Source)()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".babft builder" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/92J1S4B9"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".bad business" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/Hy9yWmui"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".adopt me" then
-		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/BloxiYT/BloxHub-v2/main/Main"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".shindo life" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/Av8NMSSq"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".fnf" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/61VS2xk5"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".tab hub" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/ugDxLMvr"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".cmds" then
-		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Deeri1/Deeri/main/ew"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".favs" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/tUJN5ibJ"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".flicker" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/dG7J7kyZ"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".loomian" then
-		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Introvert1337/Releases/master/LoomianLegacyX.lua"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".sushix" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/2mEv0fKL"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".catix" then
-		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Catix%20Hub"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".show keys" then
-		loadstring(game:HttpGetAsync("https://hastebin.com/raw/rulepanoha"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".Dumb hub" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/xgUkwkg2"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".troll stand" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/pC674EA2"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".sever sided" then
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/2SyL3akT"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".devilhub" then
-		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/DevilScript/-Devil.Hub-/DevilScripth/Scr.txt"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".boo hub" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/PurpleHubs/GhostyHub/master/hubv1.txt"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".big glitcher" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/mine"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".dash admin" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/ky90mwdb"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".buster sword" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/JmTmEfc6"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".glitcher 1" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/8Z5DcQuD"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".glitcher 2" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/4sxT1vXt"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".my glitcher" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/xi5S564h"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".credits" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/DTDNhgEg"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".rb king" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/RB%20king"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".shampoo sim" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/czq1Ygst"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".my glitcher 2" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/my%20glider%202"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".rb king 2" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/rbing%202"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".staff" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/8EbuNfDE"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".voices neptune" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/V7a0ba7s"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".keyboard" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/ysyaQVtu"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".bypass" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/gyJbZrYm"))()
-	end
-end)
-
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".fairy" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/pnW4JY8A"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".noob dance" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/fkvPk2Hk"))()
-	end
-end)
-Run.MouseButton1Down:Connect(function()
-	if CMD.Text == ".hathub pp" then
-		loadstring(game:HttpGet("https://pastebin.com/raw/F6k8kM05"))()
-	end
-end)
+coroutine.wrap(CWZUEXQ_fake_script)()
