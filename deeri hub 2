@@ -1632,6 +1632,17 @@ clsoegui.TextWrapped = true
 
 -- Scripts:
 
+UserInputService.InputBegan:Connect(function(keyCode)
+	if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
+		if deeri.Enabled == true then
+			deeri.Enabled = false
+		else
+			deeri.Enabled = true
+		end
+	end
+end)
+
+
 local function FDPYBH_fake_script() -- openup.openupbuttons 
 	local script = Instance.new('LocalScript', openup)
 
@@ -2173,19 +2184,6 @@ local function UXJIZ_fake_script() -- clsoehatless.close hatless scipt
 	end)
 end
 coroutine.wrap(UXJIZ_fake_script)()
-
-
-local UserInputService = game:GetService("UserInputService")
-
-UserInputService.InputBegan:Connect(function(keyCode)
-	if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
-		if deeri.Enabled == true then
-			deeri.Enabled = false
-		else
-			deeri.Enabled = true
-		end
-	end
-end)
 
 
 Run.MouseButton1Down:Connect(function()
