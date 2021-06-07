@@ -154,7 +154,7 @@ local clsoegui = Instance.new("TextButton")
 --Properties:
 
 deeri.Name = "deeri"
-deeri.Parent = game.Workspace
+deeri.Parent = game.CoreGui
 deeri.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
