@@ -5,6 +5,8 @@
 
 	wait (2.10)
 
+
+
 	local AHB = Instance.new("BindableEvent")
 	
 	local FPS = 30
@@ -798,15 +800,15 @@ function death(MODEL)
 						Boomerang = 35
 					})
 				end
-				CHILD:Destroy()
+				
 			end
 		end
 	end
-	Debris:AddItem(MODEL,6)
+	
 end
 
 function ApplyDamage(Humanoid,Damage)
-	Damage = Damage * DAMAGEMULTIPLIER
+	
 	if Humanoid.Health < 2000 then
 		if Humanoid.Health - Damage > 0 then
 			Humanoid.Health = Humanoid.Health - Damage
@@ -891,13 +893,7 @@ function pistolbelike()
 	GYRO.P = 20000
 	GYRO.MaxTorque = VT(0,40000,0)
 	GYRO.cframe = CF(RootPart.Position,Mouse.Hit.p)
-	for i,v in pairs(Pistol:GetChildren()) do
-		if v.Name == "Main" or v.Name == "shoot" then
-		v.Transparency = 1
-		else
-		v.Transparency = 0	
-		end
-	end
+		
 	WACKYEFFECT2({EffectType = "Box", Size = VT(1,1,1), Size2 = VT(1.2,1.2,1.2), Transparency = 0, Transparency2 = 1, CFrame = RightArm.CFrame * CF(0,-1,0), MoveToPos = nil, RotationX = MRANDOM(-60,60), RotationY = MRANDOM(-60,60), RotationZ = MRANDOM(-60,60), Material = "Neon", Color = Color3.fromRGB(255,0,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil})
 	for i = 0,20 do
 	Swait()
@@ -920,18 +916,6 @@ function pistolbelike()
   	RightHip.C0 = RightHip.C0:lerp(CF(1,-1,0.1)*ANGLES(RAD(0),RAD(66.4),RAD(0)),Alpha)	
 	end
 	CreateSound(2641656639,Hole,4,1,false)
-	local HIT,POS = CastProperRay(Hole.Position,  Mouse.Hit.p, 500, Character)
-			local DISTANCE = (POS - Hole.Position).Magnitude
-			if HIT then
-			if HIT.Parent:FindFirstChildOfClass("Humanoid") then
-				death(HIT.Parent)
-			elseif HIT.Parent.Parent:FindFirstChildOfClass("Humanoid") then
-					death(HIT.Parent)
-				end
-			end
-			WACKYEFFECT2({Time = 30, EffectType = "Block", Size = Vector3.new(0,0,0), Size2 = Vector3.new(1,1,1), Transparency = 0, Transparency2 = 1, CFrame = CF(Hole.Position), MoveToPos = nil, RotationX = MRANDOM(-10,10), RotationY = MRANDOM(-5,5), RotationZ = MRANDOM(-10, 10), Material = "Neon", Color = Color3.new(1,0,0), SoundID = nil, SoundPitch = 1, SoundVolume = 1,Chaos = false})
-			WACKYEFFECT({Time = 20, EffectType = "Ring", Size = Vector3.new(0,0,0), Size2 = Vector3.new(.2,.2,0.1), Transparency = 0.3, Transparency2 = 1, CFrame = Hole.CFrame * ANGLES(RAD(90), RAD(0), RAD(0)) * CF(0,0,0), MoveToPos = nil, RotationX = MRANDOM(-10, 10), RotationY = MRANDOM(-5, 5), RotationZ = MRANDOM(-10, 10), Material = "Neon", Color = Color3.new(1,0,0), SoundID = nil, SoundPitch = 1, SoundVolume = 5})
-			WACKYEFFECT2({Time = 30, EffectType = "Sphere", Size = Vector3.new(0,0,DISTANCE), Size2 = Vector3.new(1,1,DISTANCE), Transparency = 0, Transparency2 = 1, CFrame = CF(Hole.Position,POS)*CF(0,0,-DISTANCE/2), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = Color3.new(1,0,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil, Chaos = false})
 			
 	for i = 0,9 do
 	Swait()
@@ -942,13 +926,6 @@ function pistolbelike()
   	Neck.C0 =Neck.C0:lerp(CF(0,1,0)*ANGLES(RAD(-88.4),RAD(-1),RAD(148.3)),Alpha)
   	LeftHip.C0 = LeftHip.C0:lerp(CF(-1,-1,0)*ANGLES(RAD(0),RAD(-82.5),RAD(0)),Alpha)
   	RightHip.C0 = RightHip.C0:lerp(CF(1,-1,0.1)*ANGLES(RAD(0),RAD(66.4),RAD(0)),Alpha)
-	end
-	for i,v in pairs(Pistol:GetChildren()) do
-		if v.Name == "Main" or v.Name == "shoot" then
-		v.Transparency = 1
-		else
-		v.Transparency = 1	
-		end
 	end
 	WACKYEFFECT2({EffectType = "Box", Size = VT(1,1,1), Size2 = VT(1.2,1.2,1.2), Transparency = 0, Transparency2 = 1, CFrame = RightArm.CFrame * CF(0,-1,0), MoveToPos = nil, RotationX = MRANDOM(-60,60), RotationY = MRANDOM(-60,60), RotationZ = MRANDOM(-60,60), Material = "Neon", Color = Color3.fromRGB(255,0,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil})
 	GYRO:Destroy()
@@ -1183,9 +1160,6 @@ function KeyDown(Key)
 		heab()
 	end
 
-	if Key == "x" and ATTACK == false then
-		lasereye()
-	end
 	
 	if Key == "t" and ATTACK == false then
 		laugh()
@@ -1251,6 +1225,8 @@ Humanoid.Changed:connect(function(Jump)
 		Humanoid.Jump = false
 	end
 end)
+
+
 
 local pbl = sick.PlaybackLoudness
 
@@ -1330,6 +1306,9 @@ while true do
   		RightHip.C0 = RightHip.C0:lerp(CF(1,-1+ 0.1 * SIN(SINE/WALKSPEEDVALUE) + .1 * COS(SINE/WALKSPEEDVALUE),0 + .5 * COS(SINE/WALKSPEEDVALUE))*ANGLES(RAD(0 - 60 * COS(SINE/WALKSPEEDVALUE)+-SIN(SINE/WALKSPEEDVALUE)),RAD(90),RAD(0)),Alpha)
 		end
 	end
+
+
+
 	unanchor()
 	Humanoid.MaxHealth = 1e4
 	Humanoid.Health = 1e4
