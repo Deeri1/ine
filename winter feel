@@ -1,0 +1,1059 @@
+	getgenv().ReanimateVersion = "v5"
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Reanimate", true))()
+
+
+	wait (2.10)
+
+
+--//Holiday Feelings//--
+print("Holiday Feelings")
+print("Made by vlad20020.")
+print("converted by work#0450.")
+warn("This is holiday time!")
+print("Controls below ok")
+warn([[E - Hug
+Q - Throw snowbal
+F - Place a gift
+C - TP
+Z - Sit]])
+local plr = game:GetService("Players").LocalPlayer
+local plrg = plr.PlayerGui
+local mouse = plr:GetMouse()
+local char = plr.Character
+local h = char:FindFirstChild("Head")
+local t = char:FindFirstChild("Torso")
+local ra = char:FindFirstChild("Right Arm")
+local la = char:FindFirstChild("Left Arm")
+local rl = char:FindFirstChild("Right Leg")
+local ll = char:FindFirstChild("Left Leg")
+local rs = t:FindFirstChild("Right Shoulder")
+local ls = t:FindFirstChild("Left Shoulder")
+local rh = t:FindFirstChild("Right Hip")
+local lh = t:FindFirstChild("Left Hip")
+local nec = t.Neck
+local rut = char.HumanoidRootPart
+local rutj = rut.RootJoint
+local hum = char:FindFirstChildOfClass("Humanoid")
+local cf1 = nec.C1
+local cf2 = rutj.C1
+local cf3 = rs.C1
+local cf4 = ls.C1
+local cf5 = rh.C1
+local cf6 = lh.C1
+local cf01 = nec.C0
+local cf02 = rutj.C0
+local cf03 = rs.C0
+local cf04 = ls.C0
+local cf05 = rh.C0
+local cf06 = lh.C0
+local p0,p1 = nec.Part0,nec.Part1
+local rsp0,rsp1 = rs.Part0,rs.Part1
+local lsp0,lsp1 = ls.Part0,ls.Part1
+local rhp0,rhp1 = rh.Part0,rh.Part1
+local lhp0,lhp1 = lh.Part0,lh.Part1
+local aa = 10
+local aaa = aa*3
+local change = 0
+local lchange = 0
+local sine = 1
+local hugtime = 1
+local anim = "idle"
+local animspeed = .005
+local animspeed1 = 1.5
+local walkanimspeed = .1
+local walkspeed = 16
+local sumthin = walkspeed/8
+local idlenum = 0
+local lsvol = 2.5
+local whenbored = math.random(2,6)
+local rad = math.rad
+local huge = math.huge
+local using = false
+local hugging = false
+local lookinaround = false
+local aiming = false
+local sitting = false
+local furmode = false
+local landed = false
+local readytoland = false
+local cangrabthecorner = false
+local grabbedc = false
+local qui = Enum.EasingStyle.Quint
+local io = Enum.EasingDirection.InOut
+local tweens = game:GetService("TweenService")
+local debrs = game:GetService("Debris")
+local gifts = {"rbxassetid://5013502","rbxassetid://1237427","rbxassetid://6109471","rbxassetid://7812400","rbxassetid://19428684"}
+local spart
+local phit
+local cos = math.cos
+local sin = math.sin
+local tan = math.tan
+local ray = Ray.new
+local v3 = Vector3.new
+cff5 = cf5 * CFrame.Angles(rad(2),rad(3),rad(0))
+cff6 = cf6 * CFrame.Angles(rad(2),rad(-3),rad(0))
+if plr.UserId == 90745958 or plr.UserId == 62574108 then
+    furmode = true
+end
+if furmode then
+hugtime = 2.5
+print("owo uwu")
+end
+local effpart = Instance.new("Part") effpart.Size = Vector3.new(2,.1,1) effpart.Massless = true effpart.Transparency = 1 effpart.CanCollide = false effpart.Anchored = false effpart.Parent = char
+local grabpart = Instance.new("Part") grabpart.Size = Vector3.new(.1,.1,.1) grabpart.Massless = true grabpart.Transparency = 1 grabpart.CanCollide = false grabpart.Anchored = false grabpart.Material = "Neon" grabpart.Parent = char
+local pweld = Instance.new("Weld",effpart) pweld.Part0 = t pweld.Part1 = effpart pweld.C0 = CFrame.new(0,-2.2,-.5)
+local gweld = Instance.new("Weld",grabpart) gweld.Part0 = rut gweld.Part1 = grabpart gweld.C0 = CFrame.new(0,3,-1.4)
+local lsound = Instance.new("Sound",effpart) lsound.Volume = lsvol lsound.SoundId = "rbxassetid://1161221108"
+--//ArmJointParts~//--
+local tpr = Instance.new("Part",t) tpr.Size = Vector3.new(.1,.1,.1) tpr.CanCollide = false tpr.Transparency = 1 tpr.Locked = true
+local tpl = Instance.new("Part",t) tpl.Size = Vector3.new(.1,.1,.1) tpl.CanCollide = false tpl.Transparency = 1 tpl.Locked = true
+local tprw = Instance.new("Weld",t) tprw.Part0 = t tprw.Part1 = tpr tprw.C0 = CFrame.new(1,.5,0)
+local tplw = Instance.new("Weld",t) tplw.Part0 = t tplw.Part1 = tpl tplw.C0 = CFrame.new(-1,.5,0)
+--
+local rapr = Instance.new("Part",ra) rapr.Size = Vector3.new(.1,.1,.1) rapr.CanCollide = false rapr.Transparency = 1 rapr.Locked = true
+local lapl = Instance.new("Part",la) lapl.Size = Vector3.new(.1,.1,.1) lapl.CanCollide = false lapl.Transparency = 1 lapl.Locked = true
+local raprw = Instance.new("Weld",ra) raprw.Part0 = ra raprw.Part1 = rapr raprw.C0 = CFrame.new(-.5,.5,0)
+local laplw = Instance.new("Weld",la) laplw.Part0 = la laplw.Part1 = lapl laplw.C0 = CFrame.new(.5,.5,0)
+--/JointsWelds~//--
+local rsw = Instance.new("Weld",ra) rsw.Part0 = tpr rsw.Part1 = nil --Right Shoulder
+local lsw = Instance.new("Weld",la) lsw.Part0 = tpl lsw.Part1 = nil --Left Shoulder
+local bil = Instance.new("BillboardGui",char) bil.Name = "ChatFunc" bil.Adornee = h bil.Size = UDim2.new(1,0,1,0) bil.StudsOffset = Vector3.new(0,2,0)
+local effects = Instance.new("Model",char) effects.Name = "Effects"
+local noanim = true
+if noanim then
+if char:WaitForChild("Animate",1.5) then
+char.Animate:Destroy()
+end
+for i,v in pairs(hum:GetPlayingAnimationTracks()) do
+    v:Stop(0)
+    v:AdjustSpeed(0)
+    v:AdjustWeight(math.huge)
+    v.TimePosition = 0
+    v:Destroy()
+end
+wait()
+if hum:FindFirstChildOfClass("Animator") then
+char.Humanoid.Animator:Destroy()
+end
+end
+function swait(num)
+    game:GetService("RunService").Stepped:Wait()
+end
+function remove(instanc,timee)
+    debrs:AddItem(instanc,timee)
+end
+function dest(hit,type)
+        if hit:IsA("Seat") or hit:IsA("VehicleSeat") then
+            hit.Parent = nil
+        end
+        hit:ClearAllChildren()
+        hit.Anchored = false hit.CanCollide = true
+        if hit:IsA("Part") then
+            hit.FormFactor = "Custom"
+        end
+        hit.Size = v3(hit.Size.x/2,hit.Size.y/2,hit.Size.z/2)
+        hit.CFrame = hit.CFrame * CFrame.new(hit.Size.x/2,hit.Size.y/2,hit.Size.z/2)
+        local clone = hit:Clone() clone.Parent = workspace
+        local clone1 = hit:Clone() clone1.Parent = workspace
+        local clone2 = hit:Clone() clone2.Parent = workspace
+        local clone3 = hit:Clone() clone3.Parent = workspace
+        local clone4 = hit:Clone() clone4.Parent = workspace
+        local clone5 = hit:Clone() clone5.Parent = workspace
+        local clone6 = hit:Clone() clone6.Parent = workspace
+        clone.CFrame = hit.CFrame * CFrame.new(0,-hit.Size.y,0)
+        clone1.CFrame = hit.CFrame * CFrame.new(-hit.Size.x,-hit.Size.y,0)
+        clone2.CFrame = hit.CFrame * CFrame.new(-hit.Size.x,0,0)
+        clone3.CFrame = hit.CFrame * CFrame.new(0,0,-hit.Size.z)
+        clone4.CFrame = clone.CFrame * CFrame.new(0,0,-clone.Size.z)
+        clone5.CFrame = clone1.CFrame * CFrame.new(0,0,-clone1.Size.z)
+        clone6.CFrame = clone2.CFrame * CFrame.new(0,0,-clone2.Size.z)
+        local parts = {hit,clone,clone1,clone2,clone3,clone4,clone5,clone6}
+        return parts
+end
+function rayc(spos,direc,ignore,dist)
+local rai = ray(spos,direc.Unit * dist)
+local rhit,rpos,rrot = workspace:FindPartOnRayWithIgnoreList(rai,ignore,false,false)
+return rhit,rpos,rrot
+end
+local tlerp = function(part,tablee,leinght,easingstyle,easingdirec)
+pcall(function()
+    local info = TweenInfo.new(
+    leinght,
+    easingstyle,
+    easingdirec,
+    0,
+    false,
+    0
+    )
+    local lerp = tweens:Create(part,info,tablee)
+    lerp:Play()
+end)
+end
+function fire(partp,parent,color1,color2,ssize,osize,leinght,material,minr,maxr,shape,spread,st,ot,onlyraise)
+    local part = Instance.new("Part",parent) part.Size = Vector3.new(ssize,ssize,ssize) part.Transparency = st part.CanCollide = false part.Anchored = true part.Shape = shape part.Material = material part.BrickColor = BrickColor.new(color1) part.CFrame = partp.CFrame * CFrame.new(partp.Size.x/math.random(-20,20),partp.Size.y/math.random(-20,20),partp.Size.z/math.random(-20,20))
+    if onlyraise == true then
+        part.CFrame = CFrame.new(part.CFrame.p,Vector3.new(nil,part.CFrame.y,part.CFrame.z))
+    else    
+    end
+    local pcf = part.CFrame
+    tlerp(part,{CFrame = pcf * CFrame.new(math.random(-spread,spread)/math.random(2,4),math.random(minr,maxr),math.random(-spread,spread)/math.random(2,4)) * CFrame.Angles(rad(math.random(-180,180)),rad(math.random(-180,180)),rad(math.random(-180,180))),Size = Vector3.new(osize,osize,osize),Color = BrickColor.new(color2).Color,Transparency = ot},leinght,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut)
+    game:GetService("Debris"):AddItem(part,leinght)
+end
+function removewithfade(part,timebeforefade,randc)
+pcall(function()
+    coroutine.resume(coroutine.create(function()
+        wait(timebeforefade)
+        part:BreakJoints()
+        part.Name = "JustGoingAwayOk?"
+        for i = 1,25 do
+            if randc then
+                part.BrickColor = BrickColor.Random()
+            end
+            part.Transparency = part.Transparency +.04
+            wait()
+        end
+        part:Destroy()
+    end))
+end)
+end
+function fadewithfly(part,color,randc)
+pcall(function()
+    part:ClearAllChildren()
+    part.CanCollide = false
+    part.Anchored = false
+    part.Massless = true
+    part.Locked = false
+    part.Archivable = true
+    part.Material = "Neon"
+    part.BrickColor = BrickColor.new(color)
+    local vel = Instance.new("BodyVelocity")
+    vel.MaxForce = v3(huge,huge,huge)
+    vel.P = 10000
+    vel.Velocity = v3(math.random(-3,3),math.random(1,3),math.random(-3,3))
+    local avel = Instance.new("BodyAngularVelocity")
+    avel.MaxTorque = v3(huge,huge,huge)
+    avel.AngularVelocity = v3(math.random(-2,2),math.random(-2,2),math.random(-2,2))
+    avel.Parent = part
+    vel.Parent = part
+    if randc then
+        removewithfade(part,0,true)
+    else
+        removewithfade(part,0,false)
+    end
+end)
+end
+function throwsb(to,power)
+pcall(function()
+    local sb = Instance.new("Part")
+    sb.Size = v3(1,1,1)
+    sb.BrickColor = BrickColor.new("Institutional white")
+    sb.CFrame = ra.CFrame * CFrame.new(0,-1.5,0)
+    sb.Material = "Sand"
+    sb.Parent = workspace
+    sb.Shape = "Ball"
+    sb:BreakJoints()
+    local vel = Instance.new("BodyVelocity")
+    vel.MaxForce = v3(huge,huge,huge)
+    vel.Velocity = CFrame.new(sb.Position,to).LookVector * power
+    remove(vel,.2)
+    vel.Parent = sb
+    sb.Touched:Connect(function(hit)
+        if hit.Parent ~= char and hit.Parent.Parent ~= char then
+            local shum = hit.Parent:FindFirstChildOfClass("Humanoid") or hit.Parent.Parent:FindFirstChildOfClass("Humanoid")
+            if shum then
+                coroutine.resume(coroutine.create(function()
+                    shum.PlatformStand = true
+                    wait(.5)
+                    shum.PlatformStand = false
+                end))
+            end
+            local cf = sb.CFrame
+            sb:Destroy()
+            for i = 1,math.random(6,12) do
+                local force = 5
+                local debr = Instance.new("Part")
+                debr.Size = v3(.2,.2,.2)
+                debr.BrickColor = BrickColor.new("Institutional white")
+                debr.Material = "Sand"
+                debr.Parent = workspace
+                debr.CFrame = cf * CFrame.new(1/math.random(-5,5),1/math.random(-5,5),1/math.random(-5,5))
+                debr:BreakJoints()
+                debr.Name = "SnowDedree"
+                local mesh = Instance.new("SpecialMesh",debr)
+                mesh.MeshType = "Sphere"
+                mesh.Scale = v3(math.random(10,30)/10,math.random(10,30)/10,math.random(10,30)/10)
+                local fors = Instance.new("BodyForce",debr)
+                fors.Force = v3(math.random(-force,force),math.random(-force,force),math.random(-force,force))
+                remove(debr,math.random(4,7))
+                remove(fors,.05)
+            end
+        end
+    end)
+end)
+end
+function introhat()
+pcall(function()
+    using = true
+    rsw.Part1 = rapr
+    lsw.Part1 = lapl
+    local hpart = Instance.new("Part",char) hpart.Size = Vector3.new(.01,.01,.01) hpart.Transparency = 0 hpart.Name = "Santa Hat"
+    hpart.Locked = true
+    local hmesh = Instance.new("FileMesh",hpart) hmesh.MeshId = "http://www.roblox.com/asset/?id=1090610" hmesh.TextureId = "http://www.roblox.com/asset/?id=66690053"
+    local hweld = Instance.new("Weld",h) hweld.Part0 = ra hweld.Part1 = hpart hweld.C0 = CFrame.new(0,-1.2,0) * CFrame.Angles(rad(-120),rad(30),rad(0))
+    tlerp(rsw,{C0 = CFrame.new(-.3,-.1,-.1) * CFrame.Angles(rad(50),rad(20),rad(-40))},.5,qui,io)
+    tlerp(lsw,{C0 = CFrame.new(.3,-.1,-.1) * CFrame.Angles(rad(50),rad(-20),rad(40))},.5,qui,io)
+    tlerp(hweld,{C0 = CFrame.new(0,-1.2,0) * CFrame.Angles(rad(-120),rad(-65),rad(-30))},.5,qui,io)
+    wait(.65)
+    tlerp(rsw,{C0 = CFrame.new(-.3,.65,-.2) * CFrame.Angles(rad(160),rad(20),rad(-30))},.7,qui,io)
+    tlerp(lsw,{C0 = CFrame.new(.3,.65,-.2) * CFrame.Angles(rad(160),rad(-20),rad(30))},.7,qui,io)
+    tlerp(hweld,{C0 = CFrame.new(-.3,-1.2,-.2) * CFrame.Angles(rad(-180),rad(-65),rad(-100)) * CFrame.Angles(rad(0),rad(0),rad(60))},.7,qui,io)
+    wait(.65)
+    tlerp(rsw,{C0 = CFrame.new(-.3,.15,0) * CFrame.Angles(rad(179),rad(20),rad(-30))},.7,qui,io)
+    tlerp(lsw,{C0 = CFrame.new(.3,.15,0) * CFrame.Angles(rad(179),rad(-20),rad(30))},.7,qui,io)
+    hweld.C0 = CFrame.new(-.3,-1,-.2) * CFrame.Angles(rad(-180),rad(0),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(-30)) * CFrame.Angles(rad(0),rad(-30),rad(0))
+    wait(.6)
+    hweld.Part0 = h
+    hweld.C0 = CFrame.new(0,.5,0) * CFrame.Angles(rad(0),rad(-30),rad(0))
+    tlerp(rsw,{C0 = CFrame.new(0,0,0)},1,qui,io)
+    tlerp(lsw,{C0 = CFrame.new(0,0,0)},1,qui,io)
+    local music = Instance.new("Sound",t) music.Name = "Song" music.SoundId = "rbxassetid://1845187266" music.Volume = 0 music.Looped = true music:Play()
+    coroutine.resume(coroutine.create(function()
+        for i = 1,5 do
+            music.Volume = music.Volume +.125
+            wait(.2)
+        end
+    end))
+    spart = Instance.new("Part",char) spart.Size = Vector3.new(20,1,20) spart.CanCollide = false spart.Anchored = true spart.Massless = true spart.Transparency = 1 spart.CFrame = h.CFrame * CFrame.new(0,15,0) spart.Locked = true
+    local emitter = Instance.new("ParticleEmitter",spart) emitter.Texture = "http://www.roblox.com/asset/?id=137831468" emitter.Size = NumberSequence.new(.2,.01) emitter.Rate = 40 emitter.Color = ColorSequence.new(Color3.new(1,1,1),Color3.new(1,1,1)) emitter.EmissionDirection = "Top" emitter.Lifetime = NumberRange.new(3) emitter.Acceleration = Vector3.new(0,-40,0) emitter.Speed = NumberRange.new(-10,10) emitter.SpreadAngle = Vector2.new(-30,30)
+    wait(1)
+    nec:Destroy()
+    rs:Destroy()
+    ls:Destroy()
+    rh:Destroy()
+    lh:Destroy()
+    nec = Instance.new("Motor6D",t) nec.Part0 = p0 nec.Part1 = p1 nec.C0 = cf01
+    rs = Instance.new("Motor6D",t) rs.Part0 = rsp0 rs.Part1 = rsp1 rs.C0 = cf03
+    ls = Instance.new("Motor6D",t) ls.Part0 = lsp0 ls.Part1 = lsp1 ls.C0 = cf04
+    rh = Instance.new("Motor6D",t) rh.Part0 = rhp0 rh.Part1 = rhp1 rh.C0 = cf05
+    lh = Instance.new("Motor6D",t) lh.Part0 = lhp0 lh.Part1 = lhp1 lh.C0 = cf06
+    rsw.Part1 = nil
+    lsw.Part1 = nil
+    using = false
+end)
+end
+function hug(who)
+pcall(function()
+    if not hugging then
+    local removerut = false
+    hugging = true
+    using = true
+    local tors = who:FindFirstChild("Torso") or who:FindFirstChild("UpperTorso")
+    local hu = who:FindFirstChildOfClass("Humanoid")
+    hu.PlatformStand = true
+    local weld = Instance.new("Weld",t) weld.Part0 = t weld.Part1 = tors weld.C0 = CFrame.new(0,0,-.9) * CFrame.Angles(rad(0),rad(180),rad(0))
+    local deb = Instance.new("Glue",who) deb.Name = "Hugging"
+    tlerp(rsw,{C0 = CFrame.new(-.3,-.2,-.45) * CFrame.Angles(rad(110),rad(0),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(-60))},.4,qui,io)
+    tlerp(lsw,{C0 = CFrame.new(.2,-.2,-.45) * CFrame.Angles(rad(105),rad(0),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(65))},.4,qui,io)
+    tlerp(nec,{C0 = CFrame.new(-.15,1,0) * CFrame.Angles(rad(90),rad(180),rad(0)) * CFrame.Angles(rad(0),rad(15),rad(25))},.4,qui,io)
+    rsw.Part1 = rapr
+    lsw.Part1 = lapl
+    wait(hugtime)
+    tlerp(rsw,{C0 = CFrame.new(0,0,0)},.7,qui,io)
+    tlerp(lsw,{C0 = CFrame.new(0,0,0)},.7,qui,io)
+    tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.7,qui,io)
+    wait(.4)
+    hu.PlatformStand = false
+    weld:Destroy()
+    wait(.4)
+    rsw.Part1 = nil
+    lsw.Part1 = nil
+    deb:Destroy()
+    hugging = false
+    using = false
+    end
+end)
+end
+function detect()
+pcall(function()
+    coroutine.resume(coroutine.create(function()
+    local canhug = true
+    local fakedetect = Instance.new("Part",char) fakedetect.Size = Vector3.new(3.5,5,3.5) fakedetect.CanCollide = false fakedetect.Massless = true fakedetect.Transparency = 1 fakedetect.CFrame = t.CFrame
+    local fdweld = Instance.new("Weld",fakedetect) fdweld.Part0 = t fdweld.Part1 = fakedetect fdweld.C0 = CFrame.new(0,0,-1)
+    local region
+    for i = 1,5 do
+        if canhug then
+        region = Region3.new(fakedetect.Position - fakedetect.Size/2,fakedetect.Position + fakedetect.Size/2)
+        local hit = workspace:FindPartsInRegion3WithIgnoreList(region,{char},200)
+        local characters = {}
+        for i,v in pairs(hit) do
+            if v.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
+                characters[v.Parent.Name] = v.Parent
+            end
+        end
+        for i,v in pairs(characters) do
+        spawn(function()
+            fakedetect:Destroy()
+            hug(v)
+            canhug = false
+        end)
+        end
+        end
+        wait(.1)
+    end
+    if canhug then
+    if fakedetect ~= nil then
+    fakedetect:Destroy()
+    end
+    end
+    end))
+end)   
+end
+function placegift()
+pcall(function()
+    using = true
+    hum.WalkSpeed = 0 hum.JumpPower = 0
+    rsw.Part1 = rapr
+    lsw.Part1 = lapl
+    local giftp = Instance.new("Part",char) giftp.Size = Vector3.new(1.5,1.5,1.5) giftp.Massless = true giftp.CanCollide = false giftp.Name = "Gift"
+    local gmesh = Instance.new("FileMesh",giftp) gmesh.MeshId = "rbxassetid://1237207" gmesh.TextureId = gifts[math.random(1,#gifts)] gmesh.Scale = Vector3.new(1.5,1.5,1.5)
+    local gweld = Instance.new("Weld",giftp) gweld.Part0 = ra gweld.Part1 = giftp gweld.C0 = CFrame.new(-.55,-1.4,0) * CFrame.Angles(rad(-60),rad(-10),rad(10))
+    tlerp(rsw,{C0 = CFrame.new(-.3,-.3,-.3) * CFrame.Angles(rad(80),rad(0),rad(-20))},.7,qui,io)
+    tlerp(lsw,{C0 = CFrame.new(.3,-.3,-.3) * CFrame.Angles(rad(80),rad(0),rad(20))},.7,qui,io)
+    tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(70),rad(180),rad(0))},.7,qui,io)
+    tlerp(rh,{C0 = CFrame.new(1,0,-.7) * CFrame.Angles(rad(0),rad(90),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(20))},.7,qui,io)
+    tlerp(lh,{C0 = CFrame.new(-1,-1.3,-1) * CFrame.Angles(rad(0),rad(-90),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(70))},.7,qui,io)
+    tlerp(rutj,{C0 = CFrame.new(0,-1,0) * CFrame.Angles(rad(70),rad(180),rad(0))},.7,qui,io)
+    wait(.6)
+    local ray = Ray.new(giftp.Position - Vector3.new(0,giftp.Size.y/2,0),-giftp.CFrame.UpVector.unit * 20)
+    local hit,pos,idk = workspace:FindPartOnRayWithIgnoreList(ray,{char,giftp},false,true)
+    if hit ~= nil then
+        local oy = giftp.Orientation.y
+        local oz = giftp.Orientation.z
+        giftp:BreakJoints()
+        giftp.Anchored = true
+        giftp.CanCollide = true
+        giftp.Parent = workspace
+        giftp.CFrame = CFrame.new(pos,pos + idk) * CFrame.Angles(rad(-90),rad(oy),rad(oz)) * CFrame.new(0,.75,0)
+        local cdet = Instance.new("ClickDetector",giftp) cdet.MaxActivationDistance = 10
+        spawn(function()
+            removewithfade(giftp,30)
+            cdet.MouseClick:Connect(function(plr)
+                if script.ClassName == "Script" then
+                local ids = {113328094,16924676,26419811,164207842,212641536}
+                local requireditem = game:GetService("InsertService"):LoadAsset(ids[math.random(1,#ids)])
+                local item = requireditem:FindFirstChildOfClass("Tool")
+                item.Parent = plr.Backpack
+                removewithfade(giftp,0)
+                cdet:Destroy()
+                else
+                    print("oof")
+                    removewithfade(giftp,0)
+                    cdet:Destroy()
+                end
+            end)
+        end)
+    else
+        giftp:Destroy()
+    end
+    tlerp(rsw,{C0 = CFrame.new(0,0,0)},.7,qui,io)
+    tlerp(lsw,{C0 = CFrame.new(0,0,0)},.7,qui,io)
+    tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.7,qui,io)
+    tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(0))},.7,qui,io)
+    tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(0))},.7,qui,io)
+    tlerp(rutj,{C0 = CFrame.new(0,0,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.7,qui,io)
+    wait(.6)
+    hum.WalkSpeed = 16 hum.JumpPower = 50
+    rsw.Part1 = nil
+    lsw.Part1 = nil
+    using = false
+end)
+end
+function huggies()
+pcall(function()
+    using = true
+    rsw.Part1 = rapr
+    lsw.Part1 = lapl
+    tlerp(rsw,{C0 = CFrame.new(0,0,-.5) * CFrame.Angles(rad(90),rad(0),rad(50))},.55,qui,io)
+    tlerp(lsw,{C0 = CFrame.new(0,0,-.5) * CFrame.Angles(rad(90),rad(0),rad(-50))},.65,qui,io)
+    wait(.35)
+    detect()
+    tlerp(rsw,{C0 = CFrame.new(-.3,-.2,-.45) * CFrame.Angles(rad(110),rad(0),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(-60))},.4,qui,io)
+    tlerp(lsw,{C0 = CFrame.new(.2,-.2,-.45) * CFrame.Angles(rad(105),rad(0),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(65))},.4,qui,io)
+    wait(.5)
+    if not hugging then
+    tlerp(rsw,{C0 = CFrame.new(0,0,0)},.4,qui,io)
+    tlerp(lsw,{C0 = CFrame.new(0,0,0)},.4,qui,io)
+    wait(.5)
+    rsw.Part1 = nil
+    lsw.Part1 = nil
+    using = false
+    end
+end)
+end
+function grabsb()
+pcall(function()
+    using = true
+    hum.WalkSpeed = 0
+    hum.JumpPower = 0
+    rsw.Part1 = rapr
+    tlerp(rsw,{C0 = CFrame.new(0,-.4,0) * CFrame.Angles(rad(30),rad(0),rad(20))},.4,qui,io)
+    tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(70),rad(180),rad(0))},.4,qui,io)
+    tlerp(rh,{C0 = CFrame.new(1,.6,-.7) * CFrame.Angles(rad(0),rad(90),rad(0)) * CFrame.Angles(rad(-25),rad(0),rad(20))},.4,qui,io)
+    tlerp(lh,{C0 = CFrame.new(-1,.3,-.7) * CFrame.Angles(rad(0),rad(-90),rad(0)) * CFrame.Angles(rad(15),rad(0),rad(-20))},.4,qui,io)
+    tlerp(rutj,{C0 = CFrame.new(0,-1.2,0) * CFrame.Angles(rad(60),rad(180),rad(30))},.4,qui,io)
+    wait(.3)
+    local hit,pos,rot = rayc(ra.Position -v3(0,1,0),-ra.CFrame.UpVector,{char},.5)
+    if hit ~= nil and pos then
+        local cff = CFrame.new(pos,pos+rot) * CFrame.Angles(0,rad(90),0)
+        local snow = Instance.new("Part",char) snow.Shape = "Cylinder" snow.Transparency = 1 snow.Size = v3(.1,.1,.1) snow.Material = "Sand" snow.BrickColor = BrickColor.new("Institutional white") snow.CanCollide = false snow.Anchored = true
+        tlerp(snow,{Size =v3(.1,2.5,2.5),Transparency = 0},.2,qui,io)
+        snow.CFrame = cff
+        removewithfade(snow,1)
+    else
+        tlerp(rsw,{C0 = CFrame.new(0,0,0)},.5,qui,io)
+        tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+        tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(0))},.5,qui,io)
+        tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(0))},.5,qui,io)
+        tlerp(rutj,{C0 = CFrame.new(0,0,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+        wait(.4)
+        aiming = false
+        hum.WalkSpeed = 16
+        hum.JumpPower = 50
+        rut.Anchored = false
+        rsw.Part1 = nil
+        using = false
+        return warn("Can`t grab a snow ball.")
+    end
+    wait(.15)
+    local fsb = Instance.new("Part",char) fsb.Name = "MustDestroy" fsb.Shape = "Ball" fsb.Size = v3(1,1,1) fsb.CanCollide = false fsb.BrickColor = BrickColor.new("Institutional white") fsb.Material = "Sand"
+    local fweld = Instance.new("Weld",fsb) fweld.Part0 = ra fweld.Part1 = fsb fweld.C0 = CFrame.new(0,-1.2,0)
+    tlerp(rsw,{C0 = CFrame.new(0,0,0) * CFrame.Angles(rad(200),rad(10),rad(-10))},.4,qui,io)
+    tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.4,qui,io)
+    tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(-10))},.4,qui,io)
+    tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(10))},.4,qui,io)
+    tlerp(rutj,{C0 = CFrame.new(0,0,0) * CFrame.Angles(rad(100),rad(180),rad(-10))},.4,qui,io)
+    wait(.3)
+    aiming = true
+    repeat
+        wait(.2)
+    until aiming == false
+    tlerp(rsw,{C0 = CFrame.new(0,0,0)},.5,qui,io)
+    tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+    tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(0))},.5,qui,io)
+    tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(0))},.5,qui,io)
+    tlerp(rutj,{C0 = CFrame.new(0,0,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+    wait(.4)
+    rsw.Part1 = nil
+    using = false
+end)
+end
+function land()
+if phit then
+    readytoland = false
+    landed = true
+    hum.WalkSpeed = 1.5
+    hum.JumpPower = 0
+    lsound:Play()
+    for i = 0,1,.1 do
+    rutj.C0 = rutj.C0:Lerp(CFrame.new(0,-.5,0) * CFrame.Angles(rad(-100),rad(0),rad(180)),i)
+    rh.C0 = rh.C0:Lerp(CFrame.new(1,-.5,-.3) * CFrame.Angles(rad(11),rad(90),rad(0)),i)
+    lh.C0 = lh.C0:Lerp(CFrame.new(-1,-.5,-.25) * CFrame.Angles(rad(9),rad(-90),rad(0)),i)
+    rs.C0 = rs.C0:Lerp(CFrame.new(1,.35,0) * CFrame.Angles(rad(0),rad(90),rad(0)) * CFrame.Angles(rad(-15),rad(0),rad(10)),i)
+    ls.C0 = ls.C0:Lerp(CFrame.new(-1,.35,0) * CFrame.Angles(rad(0),rad(-90),rad(0)) * CFrame.Angles(rad(-15),rad(0),rad(-10)),i)
+    nec.C0 = nec.C0:Lerp(CFrame.new(0,1,0) * CFrame.Angles(rad(-100),rad(0),rad(180)),i)
+    swait()
+    end
+    for i = 1,math.random(6,9) do
+    fire(effpart,workspace,tostring(phit.BrickColor),tostring(phit.BrickColor),math.random(7,13)/10,math.random(3,6)/10,math.random(4,6)/10,phit.Material,0,0,"Block",5,0,1,true)
+    end
+    wait(.3)
+    landed = false
+    hum.WalkSpeed = 16
+    hum.JumpPower = 50
+end
+end
+function tsbanim()
+pcall(function()
+    tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.2,qui,io)
+    tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(-10))},.2,qui,io)
+    tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(10))},.2,qui,io)
+    tlerp(rutj,{C0 = CFrame.new(0,0,0) * CFrame.Angles(rad(100),rad(180),rad(10))},.2,qui,io)
+    coroutine.resume(coroutine.create(function()
+    for i = 0,1,.05 do
+        rsw.C0 = rsw.C0:Lerp(CFrame.new(0,0,0) * CFrame.Angles(rad(170),rad(-10),rad(10)) * CFrame.Angles(-cos(i/aa/1.5)*rad(70),0,0),i)
+        swait()
+    end
+    end))
+    wait(.1)
+    char:WaitForChild("MustDestroy",.5):Destroy()
+    throwsb(mouse.Hit.p,70)
+    aiming = false
+    hum.WalkSpeed = 16
+    hum.JumpPower = 50
+    rut.Anchored = false
+end)
+end
+function sit()
+pcall(function()
+    using = true
+    hum.WalkSpeed = 0
+    hum.JumpPower = 0
+    tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+    tlerp(rutj,{C0 = CFrame.new(0,-1.1,0) * CFrame.Angles(rad(100),rad(180),rad(-20))},.5,qui,io)
+    tlerp(rs,{C0 = CFrame.new(1,.5,0) * CFrame.Angles(rad(-10),rad(90),rad(20))},.5,qui,io)
+    tlerp(ls,{C0 = CFrame.new(-1,.5,0) * CFrame.Angles(rad(-10),rad(-90),rad(20))},.5,qui,io)
+    tlerp(rh,{C0 = CFrame.new(1,.1,-.4) * CFrame.Angles(rad(-20),rad(90),rad(0))},.5,qui,io)
+    tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(70),rad(-90),rad(0))},.5,qui,io)
+    wait(.35)
+    if not furmode then
+        tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(70),rad(180),rad(0))},.5,qui,io)
+        tlerp(rutj,{C0 = CFrame.new(0,-1.7,0) * CFrame.Angles(rad(120),rad(180),rad(0))},.5,qui,io)
+        tlerp(rs,{C0 = CFrame.new(1,.15,.25) * CFrame.Angles(rad(-35),rad(85),rad(0)) * CFrame.Angles(rad(-5),rad(0),rad(0))},.5,qui,io)
+        tlerp(ls,{C0 = CFrame.new(-1,.15,.25) * CFrame.Angles(rad(-35),rad(-65),rad(0)) * CFrame.Angles(rad(-5),rad(0),rad(0))},.5,qui,io)
+        tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(60),rad(90),rad(0)) * CFrame.Angles(rad(-5),rad(0),rad(0))},.5,qui,io)
+        tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(60),rad(-90),rad(0)) * CFrame.Angles(rad(-5),rad(0),rad(0))},.5,qui,io)
+    else
+        tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(-75),rad(0),rad(180))},.5,qui,io)
+        tlerp(rutj,{C0 = CFrame.new(0,-1.6,0) * CFrame.Angles(rad(-105),rad(0),rad(180))},.5,qui,io)
+        tlerp(rs,{C0 = CFrame.new(.5,.2,-.3) * CFrame.Angles(rad(-10),rad(95),rad(30)) * CFrame.Angles(rad(25),rad(20),rad(0))},.5,qui,io)
+        tlerp(ls,{C0 = CFrame.new(-.5,.2,-.3) * CFrame.Angles(rad(-10),rad(-95),rad(-30)) * CFrame.Angles(rad(25),rad(-20),rad(0))},.5,qui,io)
+        tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(15),rad(90),rad(0)) * CFrame.Angles(rad(0),rad(-20),rad(90))},.5,qui,io)
+        tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(15),rad(-90),rad(0)) * CFrame.Angles(rad(0),rad(20),rad(-90))},.5,qui,io)
+    end
+    wait(.35)
+    sitting = true
+end)
+end
+function getup()
+pcall(function()
+    using = true
+    sitting = true
+    hum.WalkSpeed = 0
+    hum.JumpPower = 0
+    tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+    tlerp(rutj,{C0 = CFrame.new(0,-1.1,0) * CFrame.Angles(rad(100),rad(180),rad(-20))},.5,qui,io)
+    tlerp(rs,{C0 = CFrame.new(1,.5,0) * CFrame.Angles(rad(-10),rad(90),rad(20))},.5,qui,io)
+    tlerp(ls,{C0 = CFrame.new(-1,.5,0) * CFrame.Angles(rad(-10),rad(-90),rad(20))},.5,qui,io)
+    tlerp(rh,{C0 = CFrame.new(1,.1,-.4) * CFrame.Angles(rad(-20),rad(90),rad(0))},.5,qui,io)
+    tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(70),rad(-90),rad(0))},.5,qui,io)
+    wait(.35)
+    tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+    tlerp(rutj,{C0 = CFrame.new(0,0,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+    tlerp(rs,{C0 = CFrame.new(1,.5,0) * CFrame.Angles(rad(0),rad(90),rad(0))},.5,qui,io)
+    tlerp(ls,{C0 = CFrame.new(-1,.5,0) * CFrame.Angles(rad(0),rad(-90),rad(0))},.5,qui,io)
+    tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(0))},.5,qui,io)
+    tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(0))},.5,qui,io)
+    wait(.35)
+    using = false
+    sitting = false
+    hum.WalkSpeed = 16
+    hum.JumpPower = 50
+end)
+end
+function tp()
+pcall(function()
+    using = true
+    hum.WalkSpeed = 0
+    hum.JumpPower = 0
+    rut.Anchored = true
+    local hit,pos,rot = rayc(rut.Position -v3(0,1,0),-rut.CFrame.UpVector,{char},30)
+    local hit1,pos1,rot1 = rayc(mouse.Hit.p+v3(0,.7,0),-rut.CFrame.UpVector,{char},10)
+    if hit ~= nil and pos and hit1 then
+        local cff = CFrame.new(pos,pos+rot) * CFrame.Angles(0,rad(90),0)
+        local snow = Instance.new("Part",char) snow.Shape = "Cylinder" snow.Transparency = 1 snow.Size = v3(.1,.1,.1) snow.Material = "Sand" snow.BrickColor = BrickColor.new("Institutional white") snow.CanCollide = false snow.Anchored = true
+        tlerp(snow,{Size =v3(.1,7.5,7.5),Transparency = 0},.2,qui,io)
+        snow.CFrame = cff
+        wait(.1)
+        tlerp(rut,{CFrame = CFrame.new(pos) * CFrame.new(0,-5,0)},.3,qui,io)
+        wait(.2)
+        removewithfade(snow,1)
+    else
+        tlerp(rsw,{C0 = CFrame.new(0,0,0)},.5,qui,io)
+        tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+        tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(0))},.5,qui,io)
+        tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(0))},.5,qui,io)
+        tlerp(rutj,{C0 = CFrame.new(0,0,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+        wait(.4)
+        aiming = false
+        hum.WalkSpeed = 16
+        hum.JumpPower = 50
+        rut.Anchored = false
+        rsw.Part1 = nil
+        using = false
+        return warn("Can`t teleport.")
+    end
+    local sn
+    if hit1 ~= nil and pos1 then
+        local cff = CFrame.new(pos1,pos1+rot1) * CFrame.Angles(0,rad(90),0)
+        local snow = Instance.new("Part",char) snow.Shape = "Cylinder" snow.Transparency = 1 snow.Size = v3(.1,.1,.1) snow.Material = "Sand" snow.BrickColor = BrickColor.new("Institutional white") snow.CanCollide = false snow.Anchored = true
+        tlerp(snow,{Size =v3(.1,7.5,7.5),Transparency = 0},.2,qui,io)
+        snow.CFrame = cff
+        sn = snow
+        removewithfade(snow,1)
+    else
+        tlerp(rsw,{C0 = CFrame.new(0,0,0)},.5,qui,io)
+        tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+        tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(0))},.5,qui,io)
+        tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(0))},.5,qui,io)
+        tlerp(rutj,{C0 = CFrame.new(0,0,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+        wait(.4)
+        aiming = false
+        hum.WalkSpeed = 16
+        hum.JumpPower = 50
+        rut.Anchored = false
+        rsw.Part1 = nil
+        using = false
+        return warn("Can`t teleport.")
+    end
+    if sn.Orientation.z ~= 90 then
+        rut.CFrame = sn.CFrame * CFrame.new(-3,0,0)
+        rut.CFrame = CFrame.new(rut.Position,sn.Position)
+        tlerp(rut,{CFrame = rut.CFrame * CFrame.new(0,0,-5)},.3,qui,io)
+    else
+        rut.CFrame = sn.CFrame * CFrame.new(-3,0,0)
+        rut.CFrame = CFrame.new(rut.Position,v3(nil,sn.CFrame.y,sn.CFrame.z))
+        tlerp(rut,{CFrame = rut.CFrame * CFrame.new(0,5,0)},.3,qui,io)
+    end
+    wait(.2)
+    rut.CFrame = CFrame.new(rut.Position,Vector3.new(nil,rut.CFrame.y,-rut.CFrame.z))
+    rut.Anchored = false
+    hum.WalkSpeed = 16
+    hum.JumpPower = 50
+    using = false
+end)
+end
+function candybag()
+    pcall(function()
+        using = true
+        rsw.Part1 = rapr
+        lsw.Part1 = lapl
+        local bag = Instance.new("Part",char) bag.Locked = true bag.Size = v3(.1,.1,.1) bag.CanCollide = false bag:BreakJoints()
+        local bmesh = Instance.new("FileMesh",bag) bmesh.MeshId = "rbxassetid://25921854" bmesh.Scale = v3(3.5,3.5,3.5) bmesh.TextureId = "rbxassetid://36938238" bmesh.Offset = v3(0,-.6,0)
+        local weld = Instance.new("Weld",bag) weld.Part0 = ra weld.Part1 = bag weld.C0 = CFrame.new(0,-1,0)
+        tlerp(rsw,{C0 = CFrame.new(0,0,0)},.5,qui,io)
+        tlerp(lsw,{C0 = CFrame.new(0,0,0)},.5,qui,io)
+        tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+        tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(0))},.5,qui,io)
+        tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(0))},.5,qui,io)
+        tlerp(rutj,{C0 = CFrame.new(0,0,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+        wait(.4)
+        tlerp(rsw,{C0 = CFrame.new(0,0,0)},.5,qui,io)
+        tlerp(lsw,{C0 = CFrame.new(0,0,0)},.5,qui,io)
+        tlerp(nec,{C0 = CFrame.new(0,1,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+        tlerp(rh,{C0 = CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(0))},.5,qui,io)
+        tlerp(lh,{C0 = CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(0))},.5,qui,io)
+        tlerp(rutj,{C0 = CFrame.new(0,0,0) * CFrame.Angles(rad(90),rad(180),rad(0))},.5,qui,io)
+        wait(.4)
+        rsw.Part1 = nil
+        lsw.Part1 = nil
+        using = false
+    end)
+end
+function saddeath(who)
+    for i,v in pairs(who:GetDescendants()) do
+        coroutine.resume(coroutine.create(function()
+        if v:IsA("Shirt") or v:IsA("Pants") or v:IsA("ForceField") or v:IsA("CharacterMesh") then
+            v:Destroy()
+        end
+        end))
+        if v:IsA("Part") or v:IsA("MeshPart") then
+            fadewithfly(v,"White",false)
+        end
+    end
+end
+ 
+mouse.KeyDown:Connect(function(key)
+pcall(function()
+    if key == "e" and not using then
+        huggies()
+    end
+    if key == "f" and not using then
+        placegift()
+    end
+    if key == "q" and not using then
+        grabsb()
+    end
+    if key == "z" and not using and not sitting then
+        sit()
+    elseif key == "z" and using and sitting then
+        getup()
+    end
+    if key == "c" and not using then
+        tp()
+    end
+    if key == "r"and not using then
+        --candybag()
+    end
+end)
+end)
+mouse.Button1Down:Connect(function()
+    if aiming then
+        tsbanim()
+    end
+end)
+hum.Died:Connect(function()
+    saddeath(char)
+end)
+ 
+local anims = coroutine.wrap(function()
+while hum.Health > .001 do
+    if aiming then
+        rut.Anchored = true
+        rut.CFrame = CFrame.new(rut.Position,v3(mouse.Hit.x,rut.CFrame.y,mouse.Hit.z))
+    end
+    if hum.WalkSpeed >32 then
+        hum.WalkSpeed = 32
+    end
+    if not lsound.Parent then
+        lsound = Instance.new("Sound",effpart) lsound.Volume = lsvol lsound.SoundId = "rbxassetid://1161221108"
+    end
+    local hit,pos,rot = rayc(rut.Position -v3(0,1,0),-rut.CFrame.UpVector,{char},2.7)
+    local grhit,grpos,grrot = rayc(grabpart.Position,-grabpart.CFrame.UpVector,{char},1)
+    phit = hit
+    if not using then
+    if grhit and grhit.Anchored == true then
+    cangrabthecorner = true
+    else
+    cangrabthecorner = false
+    end
+    end
+if cangrabthecorner and not grabbedc then
+    local shit,spos,srot = rayc(rut.Position+Vector3.new(0,2.5,0),rut.CFrame.LookVector,{char},1.5)
+    if shit then
+    grabbedc = true
+    local cf = CFrame.new(spos,spos+srot) * CFrame.Angles(rad(0),rad(180),0) * CFrame.new(0,-2,.7)
+    using = true
+    cangrabthecorner = false
+    rut.Anchored = true
+    local oldws = hum.WalkSpeed
+    hum.WalkSpeed = 0
+    hum.JumpPower = 0
+    rut.CFrame = cf
+    local curcf = rut.CFrame
+    for i = 0,1,.1 do
+        rutj.C0 = rutj.C0:Lerp(CFrame.new(0,0,0) * CFrame.Angles(rad(-90),rad(0),rad(180)),animspeed*50)
+        rh.C0 = rh.C0:Lerp(CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(0)),animspeed*50)
+        lh.C0 = lh.C0:Lerp(CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(0)),animspeed*50)
+        rs.C0 = rs.C0:Lerp(CFrame.new(.85,.8,-.2) * CFrame.Angles(rad(160),rad(90),rad(0)),animspeed*50)
+        ls.C0 = ls.C0:Lerp(CFrame.new(-.85,.8,-.2) * CFrame.Angles(rad(160),rad(-90),rad(0)),animspeed*50)
+        nec.C0 = nec.C0:Lerp(CFrame.new(0,1,0) * CFrame.Angles(rad(-30),rad(0),rad(180)),animspeed*50)
+        swait()
+    end
+    for i = 0,.65,.025 do
+        rut.CFrame = rut.CFrame:Lerp(curcf * CFrame.new(0,4.5,-3),i)
+        rutj.C0 = rutj.C0:Lerp(CFrame.new(0,-.8,0) * CFrame.Angles(rad(-120),rad(0),rad(180)),i)
+        rh.C0 = rh.C0:Lerp(CFrame.new(1,-.7,-.3) * CFrame.Angles(rad(-60),rad(90),rad(0)),i)
+        lh.C0 = lh.C0:Lerp(CFrame.new(-1,-.7,0) * CFrame.Angles(rad(20),rad(-90),rad(0)),i)
+        rs.C0 = rs.C0:Lerp(CFrame.new(.85,.3,0) * CFrame.Angles(rad(0),rad(90),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(10)),i)
+        ls.C0 = ls.C0:Lerp(CFrame.new(-.85,.3,0) * CFrame.Angles(rad(0),rad(-90),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(10)),i)
+        nec.C0 = nec.C0:Lerp(CFrame.new(0,1,0) * CFrame.Angles(rad(-80),rad(0),rad(180)),i)
+        swait()
+    end
+    hum.WalkSpeed = oldws
+    hum.JumpPower = 50
+    rut.Anchored = false
+    t.Anchored = false
+    using = false
+    grabbedc = false
+    end
+    end
+    walkspeed = hum.WalkSpeed
+    sumthin = walkspeed/8
+    animspeed1 = 1.5/sumthin
+    change = change +sine
+    if lookinaround then
+        lchange = lchange +sine
+    else
+        lchange = 0
+    end
+    local vervel = rut.Velocity.y
+    local tvel = (rut.Velocity * v3(1,0,1)).Magnitude
+    local Ccf=rut.CFrame
+    local Walktest1 = hum.MoveDirection*Ccf.LookVector
+    local Walktest2 = hum.MoveDirection*Ccf.RightVector
+    rotfb = Walktest1.X+Walktest1.Z
+    rotrl = Walktest2.X+Walktest2.Z
+    if spart then
+        spart.CFrame = spart.CFrame:Lerp(h.CFrame * CFrame.new(0,15,0),.1)
+    end
+    if not hit and anim == "fall" then
+    readytoland = true
+    end
+    if not landed then
+    if readytoland and hit then
+    land()
+    end
+    if not lookinaround and not sitting then
+    if anim == "idle" and hit then
+    --Neck
+        nec.C1 = nec.C1:Lerp(cf1 * CFrame.new(0,0,cos(change/aa/2.5)/(2.5*10)) * CFrame.Angles(sin(change/aa/2.5)*rad(1),0,-sin(change/aa/2.5)*rad(1)),.1)
+    --Humanoid Root Part
+        rutj.C1 = rutj.C1:Lerp(cf2 * CFrame.new(0,cos(change/aa/2.5)/(2.5*10),cos(change/aa/2.5)/(2.5*10)) * CFrame.Angles(sin(change/aa/2.5)*rad(1),0,0),.1)
+    --Shoulders
+        rs.C1 = rs.C1:Lerp(cf3 * CFrame.new(-cos(change/aa/2.5)/(2.5*10),cos(change/aa/2.5)/(2.5*10),0) * CFrame.Angles(.1,0,0) * CFrame.Angles(sin(change/aa/1.5)*rad(1),sin(change/aa/2.5)*rad(1),sin(change/aa/2.5)*rad(2.5)),.1)
+        ls.C1 = ls.C1:Lerp(cf4 * CFrame.new(cos(change/aa/2.5)/(2.5*10),cos(change/aa/2.5)/(2.5*10),0) * CFrame.Angles(.1,0,0) * CFrame.Angles(sin(change/aa/2.5)*rad(1),sin(change/aa/2.5)*rad(1),-sin(change/aa/2.5)*rad(2.5)),.1)
+    --Hips
+        rh.C1 = rh.C1:Lerp(cff5 * CFrame.new(cos(change/aa/2.5)/(2.5*10),-cos(change/aa/2.5)/(2.5*10),0) * CFrame.Angles(0,0,sin(change/aa/2.5)*rad(1)) * CFrame.Angles(0,0,0),.1)
+        lh.C1 = lh.C1:Lerp(cff6 * CFrame.new(-cos(change/aa/2.5)/(2.5*10),-cos(change/aa/2.5)/(2.5*10),0) * CFrame.Angles(0,0,-sin(change/aa/2.5)*rad(1)) * CFrame.Angles(0,0,0),.1)
+    elseif anim == "sit" then
+        nec.C1 = nec.C1:Lerp(cf1,.1)
+        rutj.C1 = rutj.C1:Lerp(cf2,.1)
+        rs.C1 = rs.C1:Lerp(cf3,.1)
+        ls.C1 = ls.C1:Lerp(cf4,.1)
+        rh.C1 = rh.C1:Lerp(cf5,.1)
+        lh.C1 = lh.C1:Lerp(cf6,.1)
+    elseif anim == "jump" and not hit then
+        nec.C1 = nec.C1:Lerp(cf1,.1)
+        rutj.C1 = rutj.C1:Lerp(cf2,.1)
+        rs.C1 = rs.C1:Lerp(cf3,.1)
+        ls.C1 = ls.C1:Lerp(cf4,.1)
+        rh.C1 = rh.C1:Lerp(cf5,.1)
+        lh.C1 = lh.C1:Lerp(cf6,.1)
+    elseif anim == "fall" and not hit then
+        nec.C1 = nec.C1:Lerp(cf1,.1)
+        rutj.C1 = rutj.C1:Lerp(cf2,.1)
+        rs.C1 = rs.C1:Lerp(cf3,.1)
+        ls.C1 = ls.C1:Lerp(cf4,.1)
+        rh.C1 = rh.C1:Lerp(cf5,.1)
+        lh.C1 = lh.C1:Lerp(cf6,.1)
+    elseif anim == "walk" and hit then
+        --Neck
+            nec.C1 = nec.C1:Lerp(cf1 * CFrame.new(0,0,cos(change/aa/animspeed1)/17.5) * CFrame.Angles(-sin(change/aa/animspeed1)*rad(5),-rut.RotVelocity.y/90,rut.RotVelocity.y/60),walkanimspeed)
+        --Humanoid Root Part
+            rutj.C1 = rutj.C1:Lerp(cf2 * CFrame.new(0,0,cos(change/aa/animspeed1)/15) * CFrame.Angles(sin(change/aa/animspeed1)*rad(2.5*sumthin),-rut.RotVelocity.y/100,sin(change/aa/animspeed1)*rad(5*sumthin) * -rut.RotVelocity.y/100) * CFrame.Angles(-rotfb/5,rotrl/5,0),walkanimspeed)
+        --Shoulders
+            rs.C1 = rs.C1:Lerp(cf3 * CFrame.new(0,0,0) * CFrame.Angles(-sin(change/aa/animspeed1)*rad(3*sumthin)*rotfb,-sin(change/aa/animspeed1)*rad(10)*rotfb,0) * CFrame.Angles(sin(change/aa/animspeed1)*rad(5*sumthin)*rotrl,-sin(change/aa/animspeed1)*rad(5*sumthin)*rotrl,-sin(change/aa/animspeed1)*rad(35*sumthin)*rotfb or rotfl),walkanimspeed)
+            ls.C1 = ls.C1:Lerp(cf4 * CFrame.new(0,0,0) * CFrame.Angles(sin(change/aa/animspeed1)*rad(3*sumthin)*rotfb,-sin(change/aa/animspeed1)*rad(10)*rotfb,0) * CFrame.Angles(sin(change/aa/animspeed1)*rad(5*sumthin)*rotrl,-sin(change/aa/animspeed1)*rad(5*sumthin)*rotrl,-sin(change/aa/animspeed1)*rad(35*sumthin)*rotfb or rotfl),walkanimspeed)
+        --Hips
+            rh.C1 = rh.C1:Lerp(cf5 * CFrame.new((cos(change/aa/animspeed1)/3.5)*rotfb or (cos(change/aa/animspeed1)/3.5)*rotrl,(cos(change/aa/animspeed1)/4),(cos(change/aa/animspeed1)/4)*rotrl) * CFrame.Angles(-sin(change/aa/animspeed1)*rad(15*sumthin)*rotrl,-sin(change/aa/animspeed1)*rad(15*sumthin)*rotrl,sin(change/aa/animspeed1)*rad(30*sumthin)*rotfb),walkanimspeed)
+            lh.C1 = lh.C1:Lerp(cf6 * CFrame.new((cos(change/aa/animspeed1)/3.5)*rotfb or (cos(change/aa/animspeed1)/3.5)*rotrl,(-cos(change/aa/animspeed1)/4),(cos(change/aa/animspeed1)/4)*rotrl) * CFrame.Angles(-sin(change/aa/animspeed1)*rad(15*sumthin)*rotrl,-sin(change/aa/animspeed1)*rad(15*sumthin)*rotrl,sin(change/aa/animspeed1)*rad(30*sumthin)*rotfb),walkanimspeed)
+    end
+    if not grabbedc then
+    if vervel > 1 and hum.Sit == false then
+        anim = "jump"
+        if not using then
+        rutj.C0 = rutj.C0:Lerp(CFrame.new(0,0,0) * CFrame.Angles(rad(-80),rad(0),rad(180)),animspeed*50)
+        rh.C0 = rh.C0:Lerp(CFrame.new(1,-.1,-.4) * CFrame.Angles(rad(-10),rad(85),rad(0)),animspeed*50)
+        lh.C0 = lh.C0:Lerp(CFrame.new(-1,-.4,-.25) * CFrame.Angles(rad(-10),rad(-85),rad(0)),animspeed*50)
+        rs.C0 = rs.C0:Lerp(CFrame.new(1,.25,0) * CFrame.Angles(rad(0),rad(90),rad(0)) * CFrame.Angles(rad(-40),rad(0),rad(0)),animspeed*50)
+        ls.C0 = ls.C0:Lerp(CFrame.new(-1,.25,-0) * CFrame.Angles(rad(0),rad(-90),rad(0)) * CFrame.Angles(rad(-40),rad(0),rad(0)),animspeed*50)
+        nec.C0 = nec.C0:Lerp(CFrame.new(0,1,0) * CFrame.Angles(rad(-100),rad(0),rad(180)),animspeed*50)
+        end
+    elseif vervel < -1 and hum.Sit == false then
+        anim = "fall"
+        if not using then
+        rutj.C0 = rutj.C0:Lerp(CFrame.new(0,0,0) * CFrame.Angles(rad(-80),rad(0),rad(180)),.00025)
+        rh.C0 = rh.C0:Lerp(CFrame.new(1,-.1,-.4) * CFrame.Angles(rad(-10),rad(85),rad(0)),.00025)
+        lh.C0 = lh.C0:Lerp(CFrame.new(-1,-.55,-.25) * CFrame.Angles(rad(-10),rad(-85),rad(0)),.00025)
+        rs.C0 = rs.C0:Lerp(CFrame.new(1,.35,0) * CFrame.Angles(rad(0),rad(90),rad(0)) * CFrame.Angles(rad(-50),rad(0),rad(0)),.00025)
+        ls.C0 = ls.C0:Lerp(CFrame.new(-1,.25,-0) * CFrame.Angles(rad(0),rad(-90),rad(0)) * CFrame.Angles(rad(-50),rad(0),rad(0)),.00025)
+        nec.C0 = nec.C0:Lerp(CFrame.new(0,1,0) * CFrame.Angles(rad(-110),rad(0),rad(180)),.00025)
+        end
+    elseif tvel < 1 and hum.Sit == false then
+        anim = "idle"
+        if not using then
+        rutj.C0 = rutj.C0:Lerp(CFrame.new(0,0,0) * CFrame.Angles(rad(-90),rad(0),rad(180)),animspeed*50)
+        rh.C0 = rh.C0:Lerp(CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(0)),animspeed*50)
+        lh.C0 = lh.C0:Lerp(CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(0)),animspeed*50)
+        rs.C0 = rs.C0:Lerp(CFrame.new(1,.5,0) * CFrame.Angles(rad(0),rad(90),rad(0)),animspeed*50)
+        ls.C0 = ls.C0:Lerp(CFrame.new(-1,.5,0) * CFrame.Angles(rad(0),rad(-90),rad(0)),animspeed*50)
+        nec.C0 = nec.C0:Lerp(CFrame.new(0,1,0) * CFrame.Angles(rad(-90),rad(0),rad(180)),animspeed*50)
+        end
+    elseif tvel > 1 and hum.Sit == false then
+        anim = "walk"
+        if not using then
+        rutj.C0 = rutj.C0:Lerp(CFrame.new(0,0,0) * CFrame.Angles(rad(-90),rad(0),rad(180)) * CFrame.Angles(rad(0*sumthin),rad(0),rad(0)),animspeed*50)
+        rh.C0 = rh.C0:Lerp(CFrame.new(1,-.8+rotrl/4,-.15) * CFrame.Angles(rad(0),rad(90),rad(-10)) * CFrame.Angles(rad(0),rad(0),-sin(change/aa/animspeed1)*rad(10*sumthin)*rotrl) * CFrame.Angles(-rotrl/5,-rotrl/5,rotfb/5),animspeed*50)
+        lh.C0 = lh.C0:Lerp(CFrame.new(-1,-.8-rotrl/4,-.15) * CFrame.Angles(rad(0),rad(-90),rad(10)) * CFrame.Angles(rad(0),rad(0),-sin(change/aa/animspeed1)*rad(10*sumthin)*rotrl) * CFrame.Angles(rotrl/5,-rotrl/5,-rotfb/5),animspeed*50)
+        rs.C0 = rs.C0:Lerp(CFrame.new(1,.5,0) * CFrame.Angles(sin(change/aa/animspeed1)*rad(10*sumthin)*rotrl,rad(90),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(5*sumthin)),animspeed*50)
+        ls.C0 = ls.C0:Lerp(CFrame.new(-1,.5,0) * CFrame.Angles(-sin(change/aa/animspeed1)*rad(10*sumthin)*rotrl,rad(-90),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(-5*sumthin)),animspeed*50)
+        nec.C0 = nec.C0:Lerp(CFrame.new(0,1,0) * CFrame.Angles(rad(-90),rad(0),rad(180)) * CFrame.Angles(rad(-5*sumthin),rad(0),rad(-40*rotrl)),animspeed*50)
+        end
+    elseif hum.Sit == true then
+        anim = "sit"
+        if not using then
+        if not furmode then
+            rutj.C0 = rutj.C0:Lerp(CFrame.new(0,0,0) * CFrame.Angles(rad(-90),rad(0),rad(180)),animspeed*50)
+                rh.C0 = rh.C0:Lerp(CFrame.new(1,-1,0) * CFrame.Angles(rad(0),rad(90),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(90)),animspeed*50)
+                lh.C0 = lh.C0:Lerp(CFrame.new(-1,-1,0) * CFrame.Angles(rad(0),rad(-90),rad(0)) * CFrame.Angles(rad(0),rad(0),rad(-90)),animspeed*50)
+            rs.C0 = rs.C0:Lerp(CFrame.new(1,.5,0) * CFrame.Angles(rad(0),rad(90),rad(30)) * CFrame.Angles(rad(30),rad(0),rad(0)),animspeed*50)
+                ls.C0 = ls.C0:Lerp(CFrame.new(-1,.5,0) * CFrame.Angles(rad(0),rad(-90),rad(-30)) * CFrame.Angles(rad(30),rad(0),rad(0)),animspeed*50)
+            nec.C0 = nec.C0:Lerp(CFrame.new(0,1,0) * CFrame.Angles(rad(-95),rad(0),rad(180)),animspeed*50)
+        else
+            rutj.C0 = rutj.C0:Lerp(CFrame.new(0,0,0) * CFrame.Angles(rad(-105),rad(0),rad(180)),animspeed*50)
+                rh.C0 = rh.C0:Lerp(CFrame.new(1,-1,0) * CFrame.Angles(rad(15),rad(90),rad(0)) * CFrame.Angles(rad(0),rad(-20),rad(90)),animspeed*50)
+                lh.C0 = lh.C0:Lerp(CFrame.new(-1,-1,0) * CFrame.Angles(rad(15),rad(-90),rad(0)) * CFrame.Angles(rad(0),rad(20),rad(-90)),animspeed*50)
+            rs.C0 = rs.C0:Lerp(CFrame.new(.5,.2,-.3) * CFrame.Angles(rad(-10),rad(95),rad(30)) * CFrame.Angles(rad(25),rad(20),rad(0)),animspeed*50)
+                ls.C0 = ls.C0:Lerp(CFrame.new(-.5,.2,-.3) * CFrame.Angles(rad(-10),rad(-95),rad(-30)) * CFrame.Angles(rad(25),rad(-20),rad(0)),animspeed*50)
+            nec.C0 = nec.C0:Lerp(CFrame.new(0,1,0) * CFrame.Angles(rad(-75),rad(0),rad(180)),animspeed*50)
+        end
+        end
+        else
+        nec.C1 = nec.C1:Lerp(cf1,animspeed*50)
+        rutj.C1 = rutj.C1:Lerp(cf2,animspeed*50)
+        rs.C1 = rs.C1:Lerp(cf3,animspeed*50)
+        ls.C1 = ls.C1:Lerp(cf4,animspeed*50)
+        rh.C1 = rh.C1:Lerp(cf5,animspeed*50)
+        lh.C1 = lh.C1:Lerp(cf6,animspeed*50)
+        end
+    end
+    end
+    end
+    if sitting then
+        nec.C1 = nec.C1:Lerp(cf1 * CFrame.new(0,0,cos(change/aa)/(2.5*10)) * CFrame.Angles(sin(change/aa/1.5)*rad(2.5),0,-sin(change/aa/1.5)*rad(2.5)),.1)
+        rutj.C1 = rutj.C1:Lerp(cf2,.1)
+        rs.C1 = rs.C1:Lerp(cf3,.1)
+        ls.C1 = ls.C1:Lerp(cf4,.1)
+        rh.C1 = rh.C1:Lerp(cf5,.1)
+        lh.C1 = lh.C1:Lerp(cf6,.1)
+    end
+    coroutine.resume(coroutine.create(function()
+        if not using and anim == "idle" then
+    if not lookinaround then
+        idlenum = idlenum +.005
+        if idlenum >= whenbored then
+            idlenum = 0
+            local oldws = hum.WalkSpeed
+            local oldjp = hum.JumpPower
+            hum.WalkSpeed = 0
+            hum.JumpPower = 0
+            rut.Anchored = true
+            rh.Part0 = rut
+            lh.Part0 = rut
+            using = true
+            lookinaround = true
+            wait(3)
+            hum.WalkSpeed = oldws
+            hum.JumpPower = oldjp
+            rut.Anchored = false
+            using = false
+            rh.Part0 = t
+            lh.Part0 = t
+            whenbored = math.random(2,6)
+            lookinaround = false
+        end
+    end
+elseif using then
+    idlenum = 0
+elseif anim ~= "idle" then
+    idlenum = 0
+end
+    end))
+    if lookinaround then
+    --Neck
+        nec.C1 = nec.C1:Lerp(cf1 * CFrame.new(0,0,0) * CFrame.Angles(sin(lchange/aa/1.5)*rad(10),cos(lchange/aa/1.5)*rad(5),-sin(lchange/aa/3)*rad(40)),.1)
+    --Humanoid Root Part
+        rutj.C1 = rutj.C1:Lerp(cf2 * CFrame.new(0,0,0) * CFrame.Angles(cos(lchange/aa/1.5)*rad(5),cos(lchange/aa/1.5)*rad(5),-sin(lchange/aa/3)*rad(20)),.1)
+    --Shoulders
+        rs.C1 = rs.C1:Lerp(cf3 * CFrame.new(-cos(lchange/aa/3)/(3*10),cos(lchange/aa/3)/(3*10),0) * CFrame.Angles(.1,0,0) * CFrame.Angles(-sin(lchange/aa/3)*rad(12.5),-sin(lchange/aa/3)*rad(12.5),-sin(lchange/aa/3)*rad(15)),.1)
+        ls.C1 = ls.C1:Lerp(cf4 * CFrame.new(cos(lchange/aa/3)/(3*10),cos(lchange/aa/3)/(3*10),0) * CFrame.Angles(.1,0,0) * CFrame.Angles(sin(lchange/aa/3)*rad(12.5),-sin(lchange/aa/3)*rad(12.5),-sin(lchange/aa/3)*rad(15)),.1)
+    --Hips
+        rh.C1 = rh.C1:Lerp(cff5 * CFrame.new(0,0,0) * CFrame.Angles(0,0,0) * CFrame.Angles(0,0,0),.1)
+        lh.C1 = lh.C1:Lerp(cff6 * CFrame.new(0,0,0) * CFrame.Angles(0,0,0) * CFrame.Angles(0,0,0),.1)
+    end
+    swait()
+end
+end)
+anims()
+introhat()
