@@ -1149,12 +1149,6 @@ function FroZone()
 	
 	local CFrames = {}
 	
-	spawn(function()
-		repeat
-			swait()
-			CFrames[#CFrames + 1] = Head.CFrame * CFrame.new(0,0,-8)		
-		until FreezeParticle.Rate ~= 100
-	end)
 	
 		
 	
