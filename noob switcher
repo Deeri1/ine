@@ -124,7 +124,7 @@ local ROOTC0 = CF(0, 0, 0) * ANGLES(RAD(-90), RAD(0), RAD(180))
 local NECKC0 = CF(0, 1, 0) * ANGLES(RAD(-90), RAD(0), RAD(180))
 local RIGHTSHOULDERC0 = CF(-0.5, 0, 0) * ANGLES(RAD(0), RAD(90), RAD(0))
 local LEFTSHOULDERC0 = CF(0.5, 0, 0) * ANGLES(RAD(0), RAD(-90), RAD(0))
-local DAMAGEMULTIPLIER = 1
+local DAMAGEMULTIPLIER = 0
 local ANIM = "Idle"
 local ATTACK = false
 local EQUIPPED = false
@@ -885,7 +885,7 @@ coroutine.resume(coroutine.create(function()
 				CLOCKLOOP = 0
 				WACKYEFFECT({Time = 15, EffectType = "Sphere", Size = VT(0.45,0.11,0.45)*SIZE, Size2 = VT(3,3,3), Transparency = 0, Transparency2 = 1, CFrame = RING.CFrame, MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Neon orange").Color, SoundID = 743521450, SoundPitch = 1.2, SoundVolume = 4})
 				local HITFLOOR,HITPOS = Raycast(RootPart.Position, (CF(RootPart.Position, RootPart.Position + VT(0, -1, 0))).lookVector, 25*SIZE, Character)
-				ApplyAoE(HITPOS,10,15,45,75,false)
+				ApplyAoE(HITPOS,0,0,0,0,false)
 				WACKYEFFECT({Time = 15, EffectType = "Wave", Size = VT(0.45,0.11,0.45)*SIZE, Size2 = VT(15,2,15), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Neon orange").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 				WACKYEFFECT({Time = 15, EffectType = "Wave", Size = VT(0.45,0.11,0.45)*SIZE, Size2 = VT(12,3,12), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = 15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Neon orange").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 				if CLOCKTARGET ~= nil then
@@ -894,7 +894,7 @@ coroutine.resume(coroutine.create(function()
 						CLOCKTARGET.Torso.CFrame = CLOCKTARGET.Torso.CFrame * ANGLES(RAD(MRANDOM(0,360)), RAD(MRANDOM(0,360)), RAD(MRANDOM(0,360)))
 					end
 					if CLOCKTARGET.Health == 0 then
-						
+
 					end
 				end
 			end
@@ -1471,7 +1471,6 @@ function MasterForm()
 			RightHip.C0 = Clerp(RightHip.C0, CF(1*SIZE, -1*SIZE - 0.05 * COS(SINE / 12), -0.01) * ANGLES(RAD(0), RAD(83), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 1 / Animation_Speed)
 			LeftHip.C0 = Clerp(LeftHip.C0, CF(-1*SIZE, -1*SIZE - 0.05 * COS(SINE / 12), -0.01) * ANGLES(RAD(0), RAD(-83), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 1 / Animation_Speed)
 		end
-		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('ohh... Look The Time..', 'All') 
 		WACKYEFFECT({Time = 40, EffectType = "Block", Size = VT(60,60,60)*SIZE, Size2 = VT(60,60,60), Transparency = 0, Transparency2 = 1, CFrame = Torso.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Neon orange").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 		WACKYEFFECT({Time = 40, EffectType = "Block", Size = VT(60,60,60)*SIZE, Size2 = VT(60,60,60), Transparency = 0, Transparency2 = 1, CFrame = Torso.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Neon orange").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 		WACKYEFFECT({Time = 40, EffectType = "Block", Size = VT(60,60,60)*SIZE, Size2 = VT(60,60,60), Transparency = 0, Transparency2 = 1, CFrame = Torso.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Neon orange").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
@@ -1516,18 +1515,17 @@ function RobotForm()
 		end
 		for i = 0, 3, 0.1 / Animation_Speed do
 			Swait()
-			
+
 			Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0) * ANGLES(RAD(15), RAD(0), RAD(0)), 0.15 / Animation_Speed)
 			RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0, -0.3) * ANGLES(RAD(0), RAD(0), RAD(8)) * RIGHTSHOULDERC0, 1 / Animation_Speed)
 			LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, 0) * ANGLES(RAD(0), RAD(0), RAD(-12)) * LEFTSHOULDERC0, 0.5 / Animation_Speed)
 			RightHip.C0 = Clerp(RightHip.C0, CF(1, 0.5, -0.75) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(-5), RAD(0), RAD(0)), 0.5 / Animation_Speed)
 			LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1, -0.4) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(-5), RAD(0), RAD(90)), 0.5 / Animation_Speed)
 		end
-			
-		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('The Power is my... yes , yes !', 'All') 
+
 		for i = 0, 6, 0.1 / Animation_Speed do
 			Swait()
-			
+
 			RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(0 - 0.04 * SIN(SINE / 24)*SIZE, 0 + 0.04 * SIN(SINE / 12)*SIZE, 0 + 0.05*SIZE * COS(SINE / 12)) * ANGLES(RAD(0 - 2.5 * SIN(SINE / 12)), RAD(0 - 2.5 * SIN(SINE / 24)), RAD(0)), 1 / Animation_Speed)
 			Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0)), 0.15 / Animation_Speed)
 			RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.35*SIZE, 0.65*SIZE, 0*SIZE) * ANGLES(RAD(115), RAD(45), RAD(35)) * RIGHTSHOULDERC0, 1 / Animation_Speed)
@@ -1562,7 +1560,6 @@ function RobotForm()
 			RightHip.C0 = Clerp(RightHip.C0, CF(1, -1, -0.01) * ANGLES(RAD(-35-2.5 * SIN(SINE / 12)), RAD(75), RAD(0)) * ANGLES(RAD(-8 - 2.5 * SIN(SINE / 12)), RAD(0), RAD(0)), 1 / Animation_Speed)
 			LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -0.5, -0.5) * ANGLES(RAD(-35-2.5 * SIN(SINE / 12)), RAD(-90), RAD(0)) * ANGLES(RAD(-8 - 2.5 * SIN(SINE / 12)), RAD(0), RAD(0)), 1 / Animation_Speed)
 		end
-		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Code30493# Actived.', 'All')
 		WACKYEFFECT({Time = 100, EffectType = "Wave", Size = VT(10,1,10)*SIZE, Size2 = VT(600,1,600), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Lime green").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 		WACKYEFFECT({Time = 100, EffectType = "Wave", Size = VT(10,1,10)*SIZE, Size2 = VT(600,1,600), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Lime green").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 		WACKYEFFECT({Time = 40, EffectType = "Block", Size = VT(60,60,60)*SIZE, Size2 = VT(60,60,60), Transparency = 0, Transparency2 = 1, CFrame = Torso.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Lime green").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
@@ -1613,7 +1610,6 @@ function DominusForm()
 			RightHip.C0 = Clerp(RightHip.C0, CF(1, -1, -0.01) * ANGLES(RAD(-2.5 * SIN(SINE / 12)), RAD(75), RAD(0)) * ANGLES(RAD(-8 - 2.5 * SIN(SINE / 12)), RAD(0), RAD(0)), 1 / Animation_Speed)
 			LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -0.5, -0.5) * ANGLES(RAD(-2.5 * SIN(SINE / 12)), RAD(-90), RAD(0)) * ANGLES(RAD(-8 - 2.5 * SIN(SINE / 12)), RAD(0), RAD(0)), 1 / Animation_Speed)
 		end	
-		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('I have the strength my friend', 'All')
 		wait(0.8)
 		WACKYEFFECT({Time = 40, EffectType = "Block", Size = VT(60,60,60)*SIZE, Size2 = VT(60,60,60), Transparency = 0, Transparency2 = 1, CFrame = Torso.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("New Yeller").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 		WACKYEFFECT({Time = 40, EffectType = "Block", Size = VT(60,60,60)*SIZE, Size2 = VT(60,60,60), Transparency = 0, Transparency2 = 1, CFrame = Torso.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("New Yeller").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
@@ -1672,7 +1668,7 @@ function BanishForm()
 			LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, 0) * ANGLES(RAD(0), RAD(0), RAD(-12)) * LEFTSHOULDERC0, 0.5 / Animation_Speed)
 			RightHip.C0 = Clerp(RightHip.C0, CF(1, 0.5, -0.75) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(-5), RAD(0), RAD(0)), 0.5 / Animation_Speed)
 			LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1, -0.4) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(-5), RAD(0), RAD(90)), 0.5 / Animation_Speed)
-		
+
 		end
 		banish.Parent = Character
 		for i = 0, 1, 0.1 / Animation_Speed do
@@ -1684,8 +1680,7 @@ function BanishForm()
 			RightHip.C0 = Clerp(RightHip.C0, CF(1, 0.5, -0.75) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(5), RAD(0), RAD(0)), 0.5 / Animation_Speed)
 			LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1, -0.4) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(5), RAD(0), RAD(90)), 0.5 / Animation_Speed)
 		end
-		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('dont abuse me, if not you will see ...', 'All')
-		
+
 		WACKYEFFECT({Time = 100, EffectType = "Wave", Size = VT(10,1,10)*SIZE, Size2 = VT(600,1,600), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 		WACKYEFFECT({Time = 100, EffectType = "Wave", Size = VT(10,1,10)*SIZE, Size2 = VT(600,1,600), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 		WACKYEFFECT({Time = 40, EffectType = "Block", Size = VT(60,60,60)*SIZE, Size2 = VT(60,60,60), Transparency = 0, Transparency2 = 1, CFrame = Torso.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
@@ -1715,7 +1710,6 @@ function DarkForm()
 	if mode == "noob" then
 		song:Stop()
 		Speed = 0
-		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('the darkness consumes me.', 'All')
 		ATTACK = true
 		local HITFLOOR,HITPOS = Raycast(RootPart.Position, (CF(RootPart.Position, RootPart.Position + VT(0, -1, 0))).lookVector, 25*SIZE, Character)
 		for i=0, 0.5, 0.1 / Animation_Speed do
@@ -1852,40 +1846,23 @@ function Lava()
 		RightHip.C0 = Clerp(RightHip.C0, CF(1, 0.5, -0.75) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(-5), RAD(0), RAD(0)), 0.5 / Animation_Speed)
 		LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1, -0.4) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(-5), RAD(0), RAD(90)), 0.5 / Animation_Speed)
 	end
-	local new = script.Lava:Clone()
-	new.Parent = Effects
-	new.CanCollide = false
-	new.Anchored = true
-	new.Position = Vector3.new(Torso.Position.X , Torso.Position.Y - 11 , Torso.Position.Z)
-	new.Material = "Neon"
-	new.Color = BrickColor.new("Really red").Color
-	local trs = 1
-
-	for i = 1,10 do
-		trs = trs - 0.1
-		new.Transparency = trs
-		wait(0.1)
-	end
 	CreateSound("159882598" , Character , 10 , 1 , false)
-	game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Die!!!', 'All')
-	
+
+
 	wait(1)
 	CreateSound("62339698" , Character , 10 , 0.8 , false)
-	ApplyAoE(new.Position , 900 , 90 , 100 , 0 , true)
+
 	for i = 1,10 do
-		trs = trs + 0.1
-		new.Position = Vector3.new(new.Position.X , new.Position.Y + 2 , new.Position.Z)
-		new.Transparency = trs
+
 		wait(0.08)
 	end
-	new:Destroy()
+
 	ATTACK = false
 	Rooted = false
 	Speed = 20
 end
 
 function TimeStop()
-	game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Now You Are Slow..', 'All')
 	local HITFLOOR,HITPOS = Raycast(RootPart.Position, (CF(RootPart.Position, RootPart.Position + VT(0, -1, 0))).lookVector, 25*SIZE, Character)
 	local p = game.Players:GetChildren()
 	for i = 1,#p do
@@ -1902,7 +1879,6 @@ function BlackRole()
 	ATTACK = true
 	Rooted = false
 	Speed = 0
-	game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('beware of the black hole friend.', 'All')
 	for i = 0, 1, 0.1 / Animation_Speed do
 		Swait()
 		RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(0 - 0.04 * SIN(SINE / 24)*SIZE, 0 + 0.04 * SIN(SINE / 12)*SIZE, 0 + 0.05*SIZE * COS(SINE / 12)) * ANGLES(RAD(0 - 2.5 * SIN(SINE / 12)), RAD(0 - 2.5 * SIN(SINE / 24)), RAD(0)), 1 / Animation_Speed)
@@ -1949,12 +1925,6 @@ function BlackRole()
 	CreateSound("262562442" , Character , 10 , 1 , false)
 	ApplyAoE(ball.Position , 100 , 90 , 100 , 0 , true)
 	ball:Destroy()
-	for i = 1,#p do
-		if p[i].Name == Player.Name then
-		elseif p[i]:FindFirstChildOfClass("Humanoid") and p[i]:FindFirstChildOfClass("Torso") and p[i].Torso:FindFirstChildOfClass("BodyPosition") then
-			p[i].Torso:FindFirstChildOfClass("BodyPosition"):Destroy()
-		end
-	end
 	ATTACK = false
 	Rooted = false
 	Speed = 20
@@ -2049,7 +2019,6 @@ function SuperDominus()
 	ATTACK = true
 	Rooted = false
 	Speed = 0
-	game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('This is...', 'All')
 	local HITFLOOR,HITPOS = Raycast(RootPart.Position, (CF(RootPart.Position, RootPart.Position + VT(0, -1, 0))).lookVector, 25*SIZE, Character)
 	for i=0, 2, 0.1 / Animation_Speed do
 		Swait()
@@ -2070,7 +2039,6 @@ function SuperDominus()
 		RightHip.C0 = Clerp(RightHip.C0, CF(1, -0.9, -0.6) * ANGLES(RAD(35), RAD(90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 1 / Animation_Speed)
 		LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1.1, 0) * ANGLES(RAD(35), RAD(-90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 1 / Animation_Speed)
 	end
-	game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Epic Broooooooo !!!', 'All') 
 
 	WACKYEFFECT({Time = 70, EffectType = "Wave", Size = VT(1,1,1)*SIZE, Size2 = VT(200,100,200), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("New Yeller").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 	WACKYEFFECT({Time = 70, EffectType = "Wave", Size = VT(1,1,1)*SIZE, Size2 = VT(100,200,100), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = BrickColor.new("New Yeller").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
@@ -2108,7 +2076,6 @@ function ClockDestroyer()
 		end
 	end
 	CreateSound("1636723480" , Character , 10 , 1 , false)
-	game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('You dont Can Escape..', 'All') 
 	WACKYEFFECT({Time = 50, EffectType = "Wave", Size = VT(1,1,1)*SIZE, Size2 = VT(10,500,10), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Neon orange").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 	local bom = true
 	coroutine.resume(coroutine.create(function()
@@ -2117,34 +2084,14 @@ function ClockDestroyer()
 			wait(0.06)
 		until bom == false
 	end))
-	for i = 1,20 do
-		local bomb = script.Bomb:Clone()
-		bomb.Parent = Effects
-		local x = math.random(-100,100)
-		local z = math.random(-100,100)
-		bomb.Position = Vector3.new(Torso.Position.X + x, Torso.Position.Y + 70 , Torso.Position.Z + z)
-		coroutine.resume(coroutine.create(function()
-			local ps = bomb.Position.Y
-			for i = 1,48 do
-				ps = ps - 1.5
-				bomb.Position =  Vector3.new(bomb.Position.X, ps , bomb.Position.Z)
-				wait(0.0005)
-			end
-			WACKYEFFECT({Time = 35, EffectType = "Block", Size = VT(1,1,1)*SIZE, Size2 = VT(15,15,15), Transparency = 0, Transparency2 = 1, CFrame = bomb.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Black").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-			WACKYEFFECT({Time = 50, EffectType = "Block", Size = VT(1,1,1)*SIZE, Size2 = VT(25,25,25), Transparency = 0, Transparency2 = 1, CFrame = bomb.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Black").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-			ApplyAoE(bomb.Position , 15 , 30 , 40 , 0 , false)
-			CreateSound("168586621" , bomb , 10 , 0.7 , false)
-			bomb.Transparency = 1
-			wait(1)
-			bomb:Destroy()
-		end))
+
+		end
 		wait(0.5)
-	end
 	bom = false
 	ATTACK = false
 	Rooted = false
 	Speed = 20
-end
+
 
 function BlastShoot()
 	ATTACK = true
@@ -2203,8 +2150,6 @@ function BlastShoot()
 		WACKYEFFECT({Time = 50, EffectType = "Sphere", Size = VT(1,1,1)*SIZE, Size2 = VT(1,400,1), Transparency = 0, Transparency2 = 1, CFrame = Hole.CFrame, MoveToPos = nil, RotationX = -15, RotationY = 0, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 		WACKYEFFECT({Time = 50, EffectType = "Sphere", Size = VT(1,1,1)*SIZE, Size2 = VT(1,400,1), Transparency = 0, Transparency2 = 1, CFrame = Hole.CFrame, MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = -15, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
 		WACKYEFFECT({Time = 50, EffectType = "Sphere", Size = VT(1,1,1)*SIZE, Size2 = VT(1,400,1), Transparency = 0, Transparency2 = 1, CFrame = Hole.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-		ApplyAoE(int.CFrame , 400 , 999 , 999 , false , true)
-		CamShakeAll(400,900,Character)
 		CreateSound("763717897" , workspace , 10 , 1 , false)
 		wait(0.5)
 		int:Destroy()
@@ -2268,36 +2213,36 @@ function LightForm()
 	end
 end
 
-		if mode == "banish" then
-			wait(0.3)
-			local HITFLOOR,HITPOS = Raycast(RootPart.Position, (CF(RootPart.Position, RootPart.Position + VT(0, -1, 0))).lookVector, 25*SIZE, Character)
-			WACKYEFFECT({Time = 45, EffectType = "Block", Size = VT(0.2,0.2,0.2)*SIZE, Size2 = VT(0.8,0.8,0.8), Transparency = 0, Transparency2 = 1, CFrame = Hole.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-			WACKYEFFECT({Time = 37, EffectType = "Wave", Size = VT(45,0.5,45)*SIZE, Size2 = VT(0.5,1,0.5), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-			for i = 1,2 do
-				WACKYEFFECT({Time = 80, EffectType = "Ring", Size = VT(0.1,0.1,0.1)*SIZE, Size2 = VT(0.15,0.14,0.14), Transparency = 0, Transparency2 = 1, CFrame = Hole.CFrame, MoveToPos = nil, RotationX = -15, RotationY = 0, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-				WACKYEFFECT({Time = 65, EffectType = "Ring", Size = VT(0.1,0.1,0.1)*SIZE, Size2 = VT(0.14,0.14,0.15), Transparency = 0, Transparency2 = 1, CFrame = Hole.CFrame, MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = -15, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-				WACKYEFFECT({Time = 45, EffectType = "Ring", Size = VT(0.1,0.1,0.1)*SIZE, Size2 = VT(0.14,0.15,0.14), Transparency = 0, Transparency2 = 1, CFrame = Hole.CFrame, MoveToPos = nil, RotationX = -15, RotationY = 0, RotationZ = -15, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-			end
-		end
-		if mode == "dark" then
-			wait(1)
-			WACKYEFFECT({Time = 100, EffectType = "Block", Size = VT(0.5,0.5,0.5)*SIZE, Size2 = VT(1,1,1), Transparency = 0, Transparency2 = 1, CFrame = clone.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Black").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-			WACKYEFFECT({Time = 100, EffectType = "Block", Size = VT(0.5,0.5,0.5)*SIZE, Size2 = VT(1,1,1), Transparency = 0, Transparency2 = 1, CFrame = clone2.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Black").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-			WACKYEFFECT({Time = 100, EffectType = "Slash", Size = VT(0.1,0.1,0.1)*SIZE, Size2 = VT(0.2,0.2,0.2), Transparency = 0, Transparency2 = 1, CFrame = clone.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("White").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-			WACKYEFFECT({Time = 100, EffectType = "Slash", Size = VT(0.1,0.1,0.1)*SIZE, Size2 = VT(0.2,0.2,0.2), Transparency = 0, Transparency2 = 1, CFrame = clone2.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("White").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-		end
-		if mode == "dominus" then
-			wait(1)
-			local HITFLOOR,HITPOS = Raycast(RootPart.Position, (CF(RootPart.Position, RootPart.Position + VT(0, -1, 0))).lookVector, 25*SIZE, Character)
-			WACKYEFFECT({Time = 100, EffectType = "Wave", Size = VT(1,1,1)*SIZE, Size2 = VT(400,1,400), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("New Yeller").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-		end
-		if mode == "light" then
-			wait(0.6)
-			CamShakeAll(13,25,Character)
-			local HITFLOOR,HITPOS = Raycast(RootPart.Position, (CF(RootPart.Position, RootPart.Position + VT(0, -1, 0))).lookVector, 25*SIZE, Character)
-			WACKYEFFECT({Time = 59, EffectType = "Sphere", Size = VT(1,0.1,1)*SIZE, Size2 = VT(10,0.1,10), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Institutional white").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
-		end
-		wait(0.02)
+if mode == "banish" then
+	wait(0.3)
+	local HITFLOOR,HITPOS = Raycast(RootPart.Position, (CF(RootPart.Position, RootPart.Position + VT(0, -1, 0))).lookVector, 25*SIZE, Character)
+	WACKYEFFECT({Time = 45, EffectType = "Block", Size = VT(0.2,0.2,0.2)*SIZE, Size2 = VT(0.8,0.8,0.8), Transparency = 0, Transparency2 = 1, CFrame = Hole.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
+	WACKYEFFECT({Time = 37, EffectType = "Wave", Size = VT(45,0.5,45)*SIZE, Size2 = VT(0.5,1,0.5), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
+	for i = 1,2 do
+		WACKYEFFECT({Time = 80, EffectType = "Ring", Size = VT(0.1,0.1,0.1)*SIZE, Size2 = VT(0.15,0.14,0.14), Transparency = 0, Transparency2 = 1, CFrame = Hole.CFrame, MoveToPos = nil, RotationX = -15, RotationY = 0, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
+		WACKYEFFECT({Time = 65, EffectType = "Ring", Size = VT(0.1,0.1,0.1)*SIZE, Size2 = VT(0.14,0.14,0.15), Transparency = 0, Transparency2 = 1, CFrame = Hole.CFrame, MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = -15, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
+		WACKYEFFECT({Time = 45, EffectType = "Ring", Size = VT(0.1,0.1,0.1)*SIZE, Size2 = VT(0.14,0.15,0.14), Transparency = 0, Transparency2 = 1, CFrame = Hole.CFrame, MoveToPos = nil, RotationX = -15, RotationY = 0, RotationZ = -15, Material = "Neon", Color = BrickColor.new("Really red").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
+	end
+end
+if mode == "dark" then
+	wait(1)
+	WACKYEFFECT({Time = 100, EffectType = "Block", Size = VT(0.5,0.5,0.5)*SIZE, Size2 = VT(1,1,1), Transparency = 0, Transparency2 = 1, CFrame = clone.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Black").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
+	WACKYEFFECT({Time = 100, EffectType = "Block", Size = VT(0.5,0.5,0.5)*SIZE, Size2 = VT(1,1,1), Transparency = 0, Transparency2 = 1, CFrame = clone2.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Black").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
+	WACKYEFFECT({Time = 100, EffectType = "Slash", Size = VT(0.1,0.1,0.1)*SIZE, Size2 = VT(0.2,0.2,0.2), Transparency = 0, Transparency2 = 1, CFrame = clone.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("White").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
+	WACKYEFFECT({Time = 100, EffectType = "Slash", Size = VT(0.1,0.1,0.1)*SIZE, Size2 = VT(0.2,0.2,0.2), Transparency = 0, Transparency2 = 1, CFrame = clone2.CFrame, MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("White").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
+end
+if mode == "dominus" then
+	wait(1)
+	local HITFLOOR,HITPOS = Raycast(RootPart.Position, (CF(RootPart.Position, RootPart.Position + VT(0, -1, 0))).lookVector, 25*SIZE, Character)
+	WACKYEFFECT({Time = 100, EffectType = "Wave", Size = VT(1,1,1)*SIZE, Size2 = VT(400,1,400), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("New Yeller").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
+end
+if mode == "light" then
+	wait(0.6)
+	CamShakeAll(13,25,Character)
+	local HITFLOOR,HITPOS = Raycast(RootPart.Position, (CF(RootPart.Position, RootPart.Position + VT(0, -1, 0))).lookVector, 25*SIZE, Character)
+	WACKYEFFECT({Time = 59, EffectType = "Sphere", Size = VT(1,0.1,1)*SIZE, Size2 = VT(10,0.1,10), Transparency = 0, Transparency2 = 1, CFrame = CF(HITPOS), MoveToPos = nil, RotationX = 0, RotationY = -15, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Institutional white").Color, SoundID = nil, SoundPitch = 0.5, SoundVolume = 6})
+end
+wait(0.02)
 
 
 
@@ -2314,11 +2259,14 @@ function MouseUp(Mouse)
 	HOLD = false
 end
 
-function KeyDown(Key)
-	KEYHOLD = true
-	---atackks
 
-	if Key == "z" and ATTACK == false then
+	
+local ewe = setmetatable({},{__index = function(s,i) return game:service(i) end})
+local UIS = ewe.UserInputService
+
+	UIS.InputBegan:connect(function(io,gpe)
+
+	if(io.KeyCode == Enum.KeyCode.Z and ATTACK == false) then
 		if mode == "banish" then
 			Shot()
 		end
@@ -2333,7 +2281,7 @@ function KeyDown(Key)
 		end
 	end
 
-	if Key == "x" and ATTACK == false then
+	if(io.KeyCode == Enum.KeyCode.X and ATTACK == false) then
 		if mode == "banish" then
 			Lava()
 		end
@@ -2345,7 +2293,7 @@ function KeyDown(Key)
 		end
 	end
 
-	if Key == "c" and ATTACK == false then
+	if(io.KeyCode == Enum.KeyCode.C and ATTACK == false) then
 		if mode == "master" then
 			ClockDestroyer()
 		end
@@ -2377,26 +2325,13 @@ function KeyDown(Key)
 
 
 
-
-end
-
-
-function KeyUp(Key)
-	KEYHOLD = false
-end
-
-Mouse.Button1Down:connect(function(NEWKEY)
-	MouseDown(NEWKEY)
+	
 end)
-Mouse.Button1Up:connect(function(NEWKEY)
-	MouseUp(NEWKEY)
-end)
-Mouse.KeyDown:connect(function(NEWKEY)
-	KeyDown(NEWKEY)
-end)
-Mouse.KeyUp:connect(function(NEWKEY)
-	KeyUp(NEWKEY)
-end)   
+
+
+
+
+   
 
 
 
@@ -2569,7 +2504,6 @@ while true do
 	Humanoid.Name = MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]..MATHS[MRANDOM(1,#MATHS)]
 	Humanoid.PlatformStand = false
 end
-
 
 
 
