@@ -97,6 +97,7 @@ local rbkingtitle = Instance.new("TextLabel")
 local rbkingbutton = Instance.new("TextButton")
 local rbking2button = Instance.new("TextButton")
 local neptuneswitcherutton = Instance.new("TextButton")
+local fightermode = Instance.new("TextButton")
 local clsoehat = Instance.new("TextButton")
 local hatlesscommandsbar = Instance.new("Frame")
 local commandsframehatless = Instance.new("ScrollingFrame")
@@ -136,6 +137,9 @@ local serveradminbutton = Instance.new("TextButton")
 local noobswitcherbutton = Instance.new("TextButton")
 local helkernsmechbutton = Instance.new("TextButton")
 local ubergodbutton = Instance.new("TextButton")
+local runman = Instance.new("TextButton")
+local popperbor = Instance.new("TextButton")
+local winterfeel = Instance.new("TextButton")
 local empty = Instance.new("TextButton")
 local clsoehatless = Instance.new("TextButton")
 local guicommandsbar = Instance.new("Frame")
@@ -153,6 +157,13 @@ local adminguis = Instance.new("Folder")
 local dashadminbutton = Instance.new("TextButton")
 local homebrewadmibutton = Instance.new("TextButton")
 local miscguis = Instance.new("Folder")
+local astrava = Instance.new("TextButton")
+local Selexity = Instance.new("TextButton")
+local Arosia = Instance.new("TextButton")
+local Andromeda = Instance.new("TextButton")
+local arrowhub = Instance.new("TextButton")
+local topkek = Instance.new("TextButton")
+local crybaby = Instance.new("TextButton")
 local clsoegui = Instance.new("TextButton")
 
 --Properties:
@@ -166,6 +177,8 @@ Main.Parent = deeri
 Main.BackgroundColor3 = Color3.fromRGB(213, 213, 213)
 Main.Position = UDim2.new(0.0802139044, 0, 0.611420572, 0)
 Main.Size = UDim2.new(0, 373, 0, 135)
+Main.Active = true
+Main.Draggable = true
 
 CMD.Name = "CMD"
 CMD.Parent = Main
@@ -993,6 +1006,7 @@ commandsframehat.Active = true
 commandsframehat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commandsframehat.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
 commandsframehat.Size = UDim2.new(0, 268, 0, 273)
+commandsframehat.CanvasPosition = Vector2.new(0, 300)
 commandsframehat.CanvasSize = UDim2.new(0, 0, 0, 1500)
 
 areawerecommandshat.Name = "area were commands hat"
@@ -1132,6 +1146,18 @@ neptuneswitcherutton.TextScaled = true
 neptuneswitcherutton.TextSize = 14.000
 neptuneswitcherutton.TextWrapped = true
 
+fightermode.Name = "fighter mode"
+fightermode.Parent = areawerecommandshat
+fightermode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fightermode.Position = UDim2.new(-0.00249735638, 0, 0.496839136, 0)
+fightermode.Size = UDim2.new(0, 254, 0, 31)
+fightermode.Font = Enum.Font.SourceSans
+fightermode.Text = ".fighter mode"
+fightermode.TextColor3 = Color3.fromRGB(0, 0, 0)
+fightermode.TextScaled = true
+fightermode.TextSize = 14.000
+fightermode.TextWrapped = true
+
 clsoehat.Name = "clsoe hat"
 clsoehat.Parent = hatcommandsbar
 clsoehat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1157,8 +1183,7 @@ commandsframehatless.Active = true
 commandsframehatless.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commandsframehatless.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
 commandsframehatless.Size = UDim2.new(0, 268, 0, 273)
-commandsframehatless.CanvasPosition = Vector2.new(0, 1227)
-commandsframehatless.CanvasSize = UDim2.new(0, 0, 0, 1500)
+commandsframehatless.CanvasSize = UDim2.new(0, 0, 0, 2000)
 
 areawerecommandshatless.Name = "area were commands hatless"
 areawerecommandshatless.Parent = commandsframehatless
@@ -1585,10 +1610,46 @@ ubergodbutton.TextScaled = true
 ubergodbutton.TextSize = 14.000
 ubergodbutton.TextWrapped = true
 
+runman.Name = "run man"
+runman.Parent = areawerecommandshatless
+runman.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+runman.Position = UDim2.new(-0.0196850393, 0, 1.59111094, 0)
+runman.Size = UDim2.new(0, 261, 0, 28)
+runman.Font = Enum.Font.SourceSans
+runman.Text = ".run man"
+runman.TextColor3 = Color3.fromRGB(0, 0, 0)
+runman.TextScaled = true
+runman.TextSize = 14.000
+runman.TextWrapped = true
+
+popperbor.Name = "popper bor"
+popperbor.Parent = areawerecommandshatless
+popperbor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+popperbor.Position = UDim2.new(0, 0, 1.63555539, 0)
+popperbor.Size = UDim2.new(0, 261, 0, 28)
+popperbor.Font = Enum.Font.SourceSans
+popperbor.Text = ".popper bro"
+popperbor.TextColor3 = Color3.fromRGB(0, 0, 0)
+popperbor.TextScaled = true
+popperbor.TextSize = 14.000
+popperbor.TextWrapped = true
+
+winterfeel.Name = "winter feel"
+winterfeel.Parent = areawerecommandshatless
+winterfeel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+winterfeel.Position = UDim2.new(-0.0157480314, 0, 1.67999983, 0)
+winterfeel.Size = UDim2.new(0, 261, 0, 28)
+winterfeel.Font = Enum.Font.SourceSans
+winterfeel.Text = ".winter feel"
+winterfeel.TextColor3 = Color3.fromRGB(0, 0, 0)
+winterfeel.TextScaled = true
+winterfeel.TextSize = 14.000
+winterfeel.TextWrapped = true
+
 empty.Name = "empty"
 empty.Parent = areawerecommandshatless
 empty.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-empty.Position = UDim2.new(-0.0196850393, 0, 1.59111094, 0)
+empty.Position = UDim2.new(-0.0157480314, 0, 1.72555542, 0)
 empty.Size = UDim2.new(0, 261, 0, 28)
 empty.Font = Enum.Font.SourceSans
 empty.Text = "empty"
@@ -1622,6 +1683,7 @@ commandsframegui.Active = true
 commandsframegui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commandsframegui.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
 commandsframegui.Size = UDim2.new(0, 268, 0, 273)
+commandsframegui.CanvasPosition = Vector2.new(0, 450)
 commandsframegui.CanvasSize = UDim2.new(0, 0, 0, 1500)
 
 areawerecommandsgui.Name = "area were commands gui"
@@ -1719,6 +1781,90 @@ homebrewadmibutton.TextWrapped = true
 miscguis.Name = "misc guis"
 miscguis.Parent = areawerecommandsgui
 
+astrava.Name = "astrava"
+astrava.Parent = areawerecommandsgui
+astrava.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+astrava.Position = UDim2.new(0, 0, 0.333333343, 0)
+astrava.Size = UDim2.new(0, 254, 0, 39)
+astrava.Font = Enum.Font.SourceSans
+astrava.Text = ".astrava"
+astrava.TextColor3 = Color3.fromRGB(0, 0, 0)
+astrava.TextScaled = true
+astrava.TextSize = 14.000
+astrava.TextWrapped = true
+
+Selexity.Name = "Selexity"
+Selexity.Parent = areawerecommandsgui
+Selexity.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Selexity.Position = UDim2.new(0, 0, 0.394444466, 0)
+Selexity.Size = UDim2.new(0, 254, 0, 39)
+Selexity.Font = Enum.Font.SourceSans
+Selexity.Text = ".Selexity"
+Selexity.TextColor3 = Color3.fromRGB(0, 0, 0)
+Selexity.TextScaled = true
+Selexity.TextSize = 14.000
+Selexity.TextWrapped = true
+
+Arosia.Name = "Arosia"
+Arosia.Parent = areawerecommandsgui
+Arosia.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Arosia.Position = UDim2.new(0, 0, 0.452222228, 0)
+Arosia.Size = UDim2.new(0, 254, 0, 39)
+Arosia.Font = Enum.Font.SourceSans
+Arosia.Text = ".Arosia"
+Arosia.TextColor3 = Color3.fromRGB(0, 0, 0)
+Arosia.TextScaled = true
+Arosia.TextSize = 14.000
+Arosia.TextWrapped = true
+
+Andromeda.Name = "Andromeda"
+Andromeda.Parent = areawerecommandsgui
+Andromeda.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Andromeda.Position = UDim2.new(0, 0, 0.51111114, 0)
+Andromeda.Size = UDim2.new(0, 254, 0, 39)
+Andromeda.Font = Enum.Font.SourceSans
+Andromeda.Text = ".Andromeda"
+Andromeda.TextColor3 = Color3.fromRGB(0, 0, 0)
+Andromeda.TextScaled = true
+Andromeda.TextSize = 14.000
+Andromeda.TextWrapped = true
+
+arrowhub.Name = "arrowhub"
+arrowhub.Parent = areawerecommandsgui
+arrowhub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+arrowhub.Position = UDim2.new(0, 0, 0.561111152, 0)
+arrowhub.Size = UDim2.new(0, 254, 0, 39)
+arrowhub.Font = Enum.Font.SourceSans
+arrowhub.Text = ".arrowhub"
+arrowhub.TextColor3 = Color3.fromRGB(0, 0, 0)
+arrowhub.TextScaled = true
+arrowhub.TextSize = 14.000
+arrowhub.TextWrapped = true
+
+topkek.Name = "topkek"
+topkek.Parent = areawerecommandsgui
+topkek.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+topkek.Position = UDim2.new(0, 0, 0.621111155, 0)
+topkek.Size = UDim2.new(0, 254, 0, 39)
+topkek.Font = Enum.Font.SourceSans
+topkek.Text = ".topkek"
+topkek.TextColor3 = Color3.fromRGB(0, 0, 0)
+topkek.TextScaled = true
+topkek.TextSize = 14.000
+topkek.TextWrapped = true
+
+crybaby.Name = "crybaby"
+crybaby.Parent = areawerecommandsgui
+crybaby.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+crybaby.Position = UDim2.new(0, 0, 0.680000067, 0)
+crybaby.Size = UDim2.new(0, 254, 0, 39)
+crybaby.Font = Enum.Font.SourceSans
+crybaby.Text = ".crybaby"
+crybaby.TextColor3 = Color3.fromRGB(0, 0, 0)
+crybaby.TextScaled = true
+crybaby.TextSize = 14.000
+crybaby.TextWrapped = true
+
 clsoegui.Name = "clsoe gui"
 clsoegui.Parent = guicommandsbar
 clsoegui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1733,55 +1879,55 @@ clsoegui.TextWrapped = true
 
 -- Scripts:
 
-local function PURIBD_fake_script() -- openup.openupbuttons 
+local function ZGXAZL_fake_script() -- openup.openupbuttons 
 	local script = Instance.new('LocalScript', openup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.openupitems.Visible = true
 	end)
 end
-coroutine.wrap(PURIBD_fake_script)()
-local function JHNXG_fake_script() -- opendown.opendownbutton 
+coroutine.wrap(ZGXAZL_fake_script)()
+local function VLUIZG_fake_script() -- opendown.opendownbutton 
 	local script = Instance.new('LocalScript', opendown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.opendownitems.Visible = true
 	end)
 end
-coroutine.wrap(JHNXG_fake_script)()
-local function JRRKQC_fake_script() -- adminbutton.admin button script 
+coroutine.wrap(VLUIZG_fake_script)()
+local function JRRLKV_fake_script() -- adminbutton.admin button script 
 	local script = Instance.new('LocalScript', adminbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/qsM4xDCX"))()
 	end)
 end
-coroutine.wrap(JRRKQC_fake_script)()
-local function SUVHISB_fake_script() -- closeup.closeupitems 
+coroutine.wrap(JRRLKV_fake_script)()
+local function QSPS_fake_script() -- closeup.closeupitems 
 	local script = Instance.new('LocalScript', closeup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(SUVHISB_fake_script)()
-local function QVMR_fake_script() -- colorsettings.opencolorsettings 
+coroutine.wrap(QSPS_fake_script)()
+local function EDQQR_fake_script() -- colorsettings.opencolorsettings 
 	local script = Instance.new('LocalScript', colorsettings)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent.colorsettings.Visible = true
 	end)
 end
-coroutine.wrap(QVMR_fake_script)()
-local function JGOBAV_fake_script() -- openextrabuttonsup.open extrtabuttons upscript 
+coroutine.wrap(EDQQR_fake_script)()
+local function MGXIZ_fake_script() -- openextrabuttonsup.open extrtabuttons upscript 
 	local script = Instance.new('LocalScript', openextrabuttonsup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["extra buttons"].Visible = true
 	end)
 end
-coroutine.wrap(JGOBAV_fake_script)()
-local function AKIGX_fake_script() -- rejoinbutton.rejoin button script 
+coroutine.wrap(MGXIZ_fake_script)()
+local function BWITEGG_fake_script() -- rejoinbutton.rejoin button script 
 	local script = Instance.new('LocalScript', rejoinbutton)
 
 	
@@ -1790,16 +1936,16 @@ local function AKIGX_fake_script() -- rejoinbutton.rejoin button script
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/QyWmBd9L"))()
 	end)
 end
-coroutine.wrap(AKIGX_fake_script)()
-local function LTKERL_fake_script() -- closedown.closedownitems 
+coroutine.wrap(BWITEGG_fake_script)()
+local function XJVDZL_fake_script() -- closedown.closedownitems 
 	local script = Instance.new('LocalScript', closedown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(LTKERL_fake_script)()
-local function YGMPLF_fake_script() -- clickclear2.clickclear2scriipt 
+coroutine.wrap(XJVDZL_fake_script)()
+local function SAFYCHF_fake_script() -- clickclear2.clickclear2scriipt 
 	local script = Instance.new('LocalScript', clickclear2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1822,8 +1968,8 @@ local function YGMPLF_fake_script() -- clickclear2.clickclear2scriipt
 		
 	end)
 end
-coroutine.wrap(YGMPLF_fake_script)()
-local function HMPR_fake_script() -- clickclear.clickclear1script 
+coroutine.wrap(SAFYCHF_fake_script)()
+local function BXDE_fake_script() -- clickclear.clickclear1script 
 	local script = Instance.new('LocalScript', clickclear)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1845,56 +1991,56 @@ local function HMPR_fake_script() -- clickclear.clickclear1script
 		
 	end)
 end
-coroutine.wrap(HMPR_fake_script)()
-local function FSTNBGJ_fake_script() -- openextrabuttonsdown.open extra buttons down script 
+coroutine.wrap(BXDE_fake_script)()
+local function EIAC_fake_script() -- openextrabuttonsdown.open extra buttons down script 
 	local script = Instance.new('LocalScript', openextrabuttonsdown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["extra buttons"].Visible = true
 	end)
 end
-coroutine.wrap(FSTNBGJ_fake_script)()
-local function WJXLTHA_fake_script() -- requiredhatsbutton.open required hats 
+coroutine.wrap(EIAC_fake_script)()
+local function MHOCVAC_fake_script() -- requiredhatsbutton.open required hats 
 	local script = Instance.new('LocalScript', requiredhatsbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["required hats frame"].Visible = true
 	end)
 end
-coroutine.wrap(WJXLTHA_fake_script)()
-local function GUPVX_fake_script() -- closebutton.close button script 
+coroutine.wrap(MHOCVAC_fake_script)()
+local function GXGNRWW_fake_script() -- closebutton.close button script 
 	local script = Instance.new('LocalScript', closebutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(GUPVX_fake_script)()
-local function STAPZHG_fake_script() -- commandsbutton.open commands button 
+coroutine.wrap(GXGNRWW_fake_script)()
+local function KVAOHHL_fake_script() -- commandsbutton.open commands button 
 	local script = Instance.new('LocalScript', commandsbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.commands.Visible = true
 	end)
 end
-coroutine.wrap(STAPZHG_fake_script)()
-local function MSSJI_fake_script() -- updatesbutton.updates script 
+coroutine.wrap(KVAOHHL_fake_script)()
+local function KJFA_fake_script() -- updatesbutton.updates script 
 	local script = Instance.new('LocalScript', updatesbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/7QR0gh1N"))()
 	end)
 end
-coroutine.wrap(MSSJI_fake_script)()
-local function LERAQQL_fake_script() -- closeextrabuttons.closeextrabuttons script 
+coroutine.wrap(KJFA_fake_script)()
+local function CDPYS_fake_script() -- closeextrabuttons.closeextrabuttons script 
 	local script = Instance.new('LocalScript', closeextrabuttons)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(LERAQQL_fake_script)()
-local function FCNDK_fake_script() -- resetcolorbutton.resetcolorscript 
+coroutine.wrap(CDPYS_fake_script)()
+local function UDASRO_fake_script() -- resetcolorbutton.resetcolorscript 
 	local script = Instance.new('LocalScript', resetcolorbutton)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -1994,8 +2140,8 @@ local function FCNDK_fake_script() -- resetcolorbutton.resetcolorscript
 	end)
 	
 end
-coroutine.wrap(FCNDK_fake_script)()
-local function TDRSWGG_fake_script() -- darkmodebutton.darkmode script 
+coroutine.wrap(UDASRO_fake_script)()
+local function RSRF_fake_script() -- darkmodebutton.darkmode script 
 	local script = Instance.new('LocalScript', darkmodebutton)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -2093,8 +2239,8 @@ local function TDRSWGG_fake_script() -- darkmodebutton.darkmode script
 	end)
 	
 end
-coroutine.wrap(TDRSWGG_fake_script)()
-local function OIJNG_fake_script() -- punpkinmode.pumpkinmodescript 
+coroutine.wrap(RSRF_fake_script)()
+local function KZEJM_fake_script() -- punpkinmode.pumpkinmodescript 
 	local script = Instance.new('LocalScript', punpkinmode)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -2192,16 +2338,16 @@ local function OIJNG_fake_script() -- punpkinmode.pumpkinmodescript
 	end)
 	
 end
-coroutine.wrap(OIJNG_fake_script)()
-local function DBHJTUR_fake_script() -- closeforcolorsettings.closecolorsettings 
+coroutine.wrap(KZEJM_fake_script)()
+local function JKTE_fake_script() -- closeforcolorsettings.closecolorsettings 
 	local script = Instance.new('LocalScript', closeforcolorsettings)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(DBHJTUR_fake_script)()
-local function IGKXK_fake_script() -- hatcommands.open hat 
+coroutine.wrap(JKTE_fake_script)()
+local function BGAIF_fake_script() -- hatcommands.open hat 
 	local script = Instance.new('LocalScript', hatcommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2212,16 +2358,16 @@ local function IGKXK_fake_script() -- hatcommands.open hat
 		script.Parent.Parent.Parent["hat commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(IGKXK_fake_script)()
-local function BINVFHD_fake_script() -- hatlesscommands.open hatless script 
+coroutine.wrap(BGAIF_fake_script)()
+local function VWOX_fake_script() -- hatlesscommands.open hatless script 
 	local script = Instance.new('LocalScript', hatlesscommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["hatless commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(BINVFHD_fake_script)()
-local function ZNDTCH_fake_script() -- guicommands.open gui 
+coroutine.wrap(VWOX_fake_script)()
+local function DHFRDOX_fake_script() -- guicommands.open gui 
 	local script = Instance.new('LocalScript', guicommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2232,39 +2378,40 @@ local function ZNDTCH_fake_script() -- guicommands.open gui
 		script.Parent.Parent.Parent["gui commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(ZNDTCH_fake_script)()
-local function LVRU_fake_script() -- closecomands.close commands button 
+coroutine.wrap(DHFRDOX_fake_script)()
+local function OQHGNEB_fake_script() -- closecomands.close commands button 
 	local script = Instance.new('LocalScript', closecomands)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(LVRU_fake_script)()
-local function SAZGR_fake_script() -- clsoehat.close hat scipt 
+coroutine.wrap(OQHGNEB_fake_script)()
+local function DFDGS_fake_script() -- clsoehat.close hat scipt 
 	local script = Instance.new('LocalScript', clsoehat)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(SAZGR_fake_script)()
-local function YHFYIKY_fake_script() -- clsoehatless.close hatless scipt 
+coroutine.wrap(DFDGS_fake_script)()
+local function KRPMHK_fake_script() -- clsoehatless.close hatless scipt 
 	local script = Instance.new('LocalScript', clsoehatless)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(YHFYIKY_fake_script)()
-local function MMYLG_fake_script() -- clsoegui.close gui scipt 
+coroutine.wrap(KRPMHK_fake_script)()
+local function RUQOT_fake_script() -- clsoegui.close gui scipt 
 	local script = Instance.new('LocalScript', clsoegui)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(MMYLG_fake_script)()
+coroutine.wrap(RUQOT_fake_script)()
+
 
 
 
