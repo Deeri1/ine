@@ -7,14 +7,14 @@ local newuiload = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local title = Instance.new("TextLabel")
 local infotitle = Instance.new("TextLabel")
-local empty1 = Instance.new("TextLabel")
+local cmdsinfo = Instance.new("TextLabel")
 local howtoentercommnds = Instance.new("TextLabel")
-local empty2 = Instance.new("TextLabel")
+local hwotoentercommadns = Instance.new("TextLabel")
 local howtoopenandclose = Instance.new("TextLabel")
-local empty3 = Instance.new("TextLabel")
-local empty4 = Instance.new("TextLabel")
+local hatrequired = Instance.new("TextLabel")
+local clickclear = Instance.new("TextLabel")
 local credits = Instance.new("TextLabel")
-local empty = Instance.new("TextLabel")
+local rejoining = Instance.new("TextLabel")
 local openui = Instance.new("TextButton")
 
 --Properties:
@@ -27,6 +27,8 @@ main.Parent = newuiload
 main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 main.Position = UDim2.new(0.183155075, 0, 0.26462397, 0)
 main.Size = UDim2.new(0, 589, 0, 495)
+main.Active = true
+main.Draggable = true
 
 title.Name = "title"
 title.Parent = main
@@ -51,14 +53,17 @@ infotitle.TextScaled = true
 infotitle.TextSize = 14.000
 infotitle.TextWrapped = true
 
-empty1.Name = "empty1"
-empty1.Parent = main
-empty1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-empty1.Position = UDim2.new(0, 0, 0.315151513, 0)
-empty1.Size = UDim2.new(0, 194, 0, 50)
-empty1.Font = Enum.Font.SourceSans
-empty1.TextColor3 = Color3.fromRGB(0, 0, 0)
-empty1.TextSize = 14.000
+cmdsinfo.Name = "cmds info"
+cmdsinfo.Parent = main
+cmdsinfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cmdsinfo.Position = UDim2.new(0, 0, 0.315151513, 0)
+cmdsinfo.Size = UDim2.new(0, 194, 0, 50)
+cmdsinfo.Font = Enum.Font.SourceSans
+cmdsinfo.Text = "the commands button tells you the commands "
+cmdsinfo.TextColor3 = Color3.fromRGB(0, 0, 0)
+cmdsinfo.TextScaled = true
+cmdsinfo.TextSize = 14.000
+cmdsinfo.TextWrapped = true
 
 howtoentercommnds.Name = "howtoentercommnds"
 howtoentercommnds.Parent = main
@@ -72,14 +77,17 @@ howtoentercommnds.TextScaled = true
 howtoentercommnds.TextSize = 14.000
 howtoentercommnds.TextWrapped = true
 
-empty2.Name = "empty2"
-empty2.Parent = main
-empty2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-empty2.Position = UDim2.new(0.67062819, 0, 0.448484838, 0)
-empty2.Size = UDim2.new(0, 194, 0, 50)
-empty2.Font = Enum.Font.SourceSans
-empty2.TextColor3 = Color3.fromRGB(0, 0, 0)
-empty2.TextSize = 14.000
+hwotoentercommadns.Name = "hwo to enter commadns"
+hwotoentercommadns.Parent = main
+hwotoentercommadns.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hwotoentercommadns.Position = UDim2.new(0.67062819, 0, 0.448484838, 0)
+hwotoentercommadns.Size = UDim2.new(0, 194, 0, 50)
+hwotoentercommadns.Font = Enum.Font.SourceSans
+hwotoentercommadns.Text = "to enter a command type it in the bar that says .welcom"
+hwotoentercommadns.TextColor3 = Color3.fromRGB(0, 0, 0)
+hwotoentercommadns.TextScaled = true
+hwotoentercommadns.TextSize = 14.000
+hwotoentercommadns.TextWrapped = true
 
 howtoopenandclose.Name = "howtoopenandclose"
 howtoopenandclose.Parent = main
@@ -93,23 +101,29 @@ howtoopenandclose.TextScaled = true
 howtoopenandclose.TextSize = 14.000
 howtoopenandclose.TextWrapped = true
 
-empty3.Name = "empty3"
-empty3.Parent = main
-empty3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-empty3.Position = UDim2.new(0, 0, 0.589898944, 0)
-empty3.Size = UDim2.new(0, 194, 0, 50)
-empty3.Font = Enum.Font.SourceSans
-empty3.TextColor3 = Color3.fromRGB(0, 0, 0)
-empty3.TextSize = 14.000
+hatrequired.Name = "hat required"
+hatrequired.Parent = main
+hatrequired.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hatrequired.Position = UDim2.new(0, 0, 0.589898944, 0)
+hatrequired.Size = UDim2.new(0, 194, 0, 50)
+hatrequired.Font = Enum.Font.SourceSans
+hatrequired.Text = "by clicking the Required Hats button you can see the hats needed for scripts"
+hatrequired.TextColor3 = Color3.fromRGB(0, 0, 0)
+hatrequired.TextScaled = true
+hatrequired.TextSize = 14.000
+hatrequired.TextWrapped = true
 
-empty4.Name = "empty4"
-empty4.Parent = main
-empty4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-empty4.Position = UDim2.new(0.668930411, 0, 0.589898944, 0)
-empty4.Size = UDim2.new(0, 194, 0, 50)
-empty4.Font = Enum.Font.SourceSans
-empty4.TextColor3 = Color3.fromRGB(0, 0, 0)
-empty4.TextSize = 14.000
+clickclear.Name = "click clear"
+clickclear.Parent = main
+clickclear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clickclear.Position = UDim2.new(0.668930411, 0, 0.589898944, 0)
+clickclear.Size = UDim2.new(0, 194, 0, 50)
+clickclear.Font = Enum.Font.SourceSans
+clickclear.Text = "to type quicker you can press the down arrow and clickclear it will clear text when you click the bar next time"
+clickclear.TextColor3 = Color3.fromRGB(0, 0, 0)
+clickclear.TextScaled = true
+clickclear.TextSize = 14.000
+clickclear.TextWrapped = true
 
 credits.Name = "credits"
 credits.Parent = main
@@ -123,14 +137,17 @@ credits.TextScaled = true
 credits.TextSize = 14.000
 credits.TextWrapped = true
 
-empty.Name = "empty"
-empty.Parent = main
-empty.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-empty.Position = UDim2.new(0, 0, 0.755555511, 0)
-empty.Size = UDim2.new(0, 194, 0, 50)
-empty.Font = Enum.Font.SourceSans
-empty.TextColor3 = Color3.fromRGB(0, 0, 0)
-empty.TextSize = 14.000
+rejoining.Name = "rejoining"
+rejoining.Parent = main
+rejoining.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rejoining.Position = UDim2.new(0, 0, 0.755555511, 0)
+rejoining.Size = UDim2.new(0, 194, 0, 50)
+rejoining.Font = Enum.Font.SourceSans
+rejoining.Text = "pressing the rejoin buton you will rejoin"
+rejoining.TextColor3 = Color3.fromRGB(0, 0, 0)
+rejoining.TextScaled = true
+rejoining.TextSize = 14.000
+rejoining.TextWrapped = true
 
 openui.Name = "openui"
 openui.Parent = main
@@ -143,17 +160,19 @@ openui.TextColor3 = Color3.fromRGB(0, 0, 0)
 openui.TextScaled = true
 openui.TextSize = 14.000
 openui.TextWrapped = true
-openui.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/deeri%20hub%202'),true))()
-end)
 
 -- Scripts:
 
-local function SJAL_fake_script() -- openui.close scripty 
+local function UMPPLS_fake_script() -- openui.close scripty 
 	local script = Instance.new('LocalScript', openui)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(SJAL_fake_script)()
+coroutine.wrap(UMPPLS_fake_script)()
+
+openui.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/deeri%20hub%202'),true))()
+end)
+
