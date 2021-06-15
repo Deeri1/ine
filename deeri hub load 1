@@ -3,7 +3,7 @@
 
 -- Instances:
 
-wait(1.5)
+wait(.5)
 
 local uiselect = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
