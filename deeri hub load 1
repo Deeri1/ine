@@ -3,6 +3,8 @@
 
 -- Instances:
 
+wait(1.5)
+
 local uiselect = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local title = Instance.new("TextLabel")
