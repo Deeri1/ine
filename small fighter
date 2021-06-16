@@ -1236,11 +1236,7 @@ CreateSound(158037267,RootPart,3,0.6)
 			if game.Workspace:FindFirstChild("HelloDatBurpSavePoint") then
 				game.Workspace:FindFirstChild("HelloDatBurpSavePoint"):remove()
 			end
-		local str = starr:Clone()
-			str:SetPrimaryPartCFrame(RootPart.CFrame * CFrame.new(0,1.2,-4))
-		str.Parent = workspace
-	end
-	
+	end		
 function MouseDown(Mouse)
 	spawn(function()
 if ATTACK == false and gloveuse == true then
