@@ -3,104 +3,407 @@
 
 -- Instances:
 
-wait(.5)
-
-local uiselect = Instance.new("ScreenGui")
+local newload = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local title = Instance.new("TextLabel")
-local close = Instance.new("TextButton")
-local newui = Instance.new("TextButton")
-local Sidebar = Instance.new("TextButton")
+local settings = Instance.new("TextLabel")
+local guis = Instance.new("TextLabel")
+local extras = Instance.new("TextLabel")
+local done = Instance.new("TextButton")
+local mainhubb = Instance.new("TextLabel")
+local sidebar = Instance.new("TextLabel")
+local onoff11 = Instance.new("TextButton")
+local onoff22 = Instance.new("TextButton")
+local howdaa = Instance.new("TextButton")
+local lines = Instance.new("Folder")
+local line1 = Instance.new("Frame")
+local line2 = Instance.new("Frame")
+local line3 = Instance.new("Frame")
+local line4 = Instance.new("Frame")
+local line5 = Instance.new("Frame")
+local line6 = Instance.new("Frame")
+local nada = Instance.new("Frame")
+local extra1 = Instance.new("Frame")
+local extra2 = Instance.new("Frame")
+local extra3 = Instance.new("Frame")
+local clickdabutton = Instance.new("TextLabel")
+local closedaextra = Instance.new("TextButton")
+local ifnotdaWL = Instance.new("TextLabel")
+local extraa = Instance.new("Frame")
+local closeall = Instance.new("TextButton")
 
 --Properties:
 
-uiselect.Name = "ui select"
-uiselect.Parent = game.CoreGui
+newload.Name = "new load"
+newload.Parent = game.CoreGui
 
 main.Name = "main"
-main.Parent = uiselect
+main.Parent = newload
 main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-main.Position = UDim2.new(0.405080199, 0, 0.392757654, 0)
-main.Size = UDim2.new(0, 376, 0, 358)
+main.Position = UDim2.new(0.259463727, 0, 0.208779439, 0)
+main.Size = UDim2.new(0, 617, 0, 679)
 main.Active = true
 main.Draggable = true
 
 title.Name = "title"
 title.Parent = main
 title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-title.Size = UDim2.new(0, 376, 0, 50)
+title.Size = UDim2.new(0, 617, 0, 50)
 title.Font = Enum.Font.SourceSans
-title.Text = "UI'S"
+title.Text = "Welcome to deeri hub"
 title.TextColor3 = Color3.fromRGB(0, 0, 0)
 title.TextScaled = true
 title.TextSize = 14.000
 title.TextWrapped = true
 
-close.Name = "close"
-close.Parent = main
-close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-close.Position = UDim2.new(0.824468076, 0, 0.860335171, 0)
-close.Size = UDim2.new(0, 66, 0, 50)
-close.Font = Enum.Font.SourceSans
-close.Text = "X"
-close.TextColor3 = Color3.fromRGB(0, 0, 0)
-close.TextScaled = true
-close.TextSize = 14.000
-close.TextWrapped = true
+settings.Name = "settings"
+settings.Parent = main
+settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+settings.Position = UDim2.new(0, 0, 0.0736377016, 0)
+settings.Size = UDim2.new(0, 168, 0, 50)
+settings.Font = Enum.Font.SourceSans
+settings.Text = "Settings"
+settings.TextColor3 = Color3.fromRGB(0, 0, 0)
+settings.TextScaled = true
+settings.TextSize = 14.000
+settings.TextWrapped = true
 
-newui.Name = "new ui"
-newui.Parent = main
-newui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-newui.Position = UDim2.new(0.0452127643, 0, 0.19273743, 0)
-newui.Size = UDim2.new(0, 342, 0, 50)
-newui.Font = Enum.Font.SourceSans
-newui.Text = "Deeri hub"
-newui.TextColor3 = Color3.fromRGB(0, 0, 0)
-newui.TextScaled = true
-newui.TextSize = 14.000
-newui.TextWrapped = true
-newui.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/deeri%20hub%20load%202"))()
-end)
+guis.Name = "guis"
+guis.Parent = main
+guis.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+guis.Position = UDim2.new(0.363047004, 0, 0.0736377016, 0)
+guis.Size = UDim2.new(0, 168, 0, 50)
+guis.Font = Enum.Font.SourceSans
+guis.Text = "Guis"
+guis.TextColor3 = Color3.fromRGB(0, 0, 0)
+guis.TextScaled = true
+guis.TextSize = 14.000
+guis.TextWrapped = true
 
-Sidebar.Name = "Side bar"
-Sidebar.Parent = main
-Sidebar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Sidebar.Position = UDim2.new(0.0452127643, 0, 0.530726254, 0)
-Sidebar.Size = UDim2.new(0, 342, 0, 50)
-Sidebar.Font = Enum.Font.SourceSans
-Sidebar.Text = "Deeri hub Sidebar"
-Sidebar.TextColor3 = Color3.fromRGB(0, 0, 0)
-Sidebar.TextScaled = true
-Sidebar.TextSize = 14.000
-Sidebar.TextWrapped = true
-Sidebar.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/6BjJ7imF"))()
-end)
+extras.Name = "extras"
+extras.Parent = main
+extras.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+extras.Position = UDim2.new(0.727714777, 0, 0.0736377016, 0)
+extras.Size = UDim2.new(0, 168, 0, 50)
+extras.Font = Enum.Font.SourceSans
+extras.Text = "Extras"
+extras.TextColor3 = Color3.fromRGB(0, 0, 0)
+extras.TextScaled = true
+extras.TextSize = 14.000
+extras.TextWrapped = true
+
+done.Name = "done"
+done.Parent = main
+done.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+done.Position = UDim2.new(0.272285253, 0, 0.848306358, 0)
+done.Size = UDim2.new(0, 281, 0, 103)
+done.Font = Enum.Font.SourceSans
+done.Text = "Done"
+done.TextColor3 = Color3.fromRGB(0, 0, 0)
+done.TextScaled = true
+done.TextSize = 14.000
+done.TextWrapped = true
+
+mainhubb.Name = "main hubb"
+mainhubb.Parent = main
+mainhubb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mainhubb.Position = UDim2.new(0.363047004, 0, 0.147275403, 0)
+mainhubb.Size = UDim2.new(0, 127, 0, 29)
+mainhubb.Font = Enum.Font.SourceSans
+mainhubb.Text = "Deeri hub"
+mainhubb.TextColor3 = Color3.fromRGB(0, 0, 0)
+mainhubb.TextScaled = true
+mainhubb.TextSize = 14.000
+mainhubb.TextWrapped = true
+
+sidebar.Name = "side bar"
+sidebar.Parent = main
+sidebar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sidebar.Position = UDim2.new(0.363047004, 0, 0.22974962, 0)
+sidebar.Size = UDim2.new(0, 127, 0, 29)
+sidebar.Font = Enum.Font.SourceSans
+sidebar.Text = "Side Bar"
+sidebar.TextColor3 = Color3.fromRGB(0, 0, 0)
+sidebar.TextScaled = true
+sidebar.TextSize = 14.000
+sidebar.TextWrapped = true
+
+onoff11.Name = "onoff11"
+onoff11.Parent = main
+onoff11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+onoff11.Position = UDim2.new(0.568881691, 0, 0.147275403, 0)
+onoff11.Size = UDim2.new(0, 41, 0, 29)
+onoff11.Font = Enum.Font.SourceSans
+onoff11.Text = ""
+onoff11.TextColor3 = Color3.fromRGB(0, 0, 0)
+onoff11.TextSize = 14.000
+
+onoff22.Name = "onoff22"
+onoff22.Parent = main
+onoff22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+onoff22.Position = UDim2.new(0.568881691, 0, 0.22974962, 0)
+onoff22.Size = UDim2.new(0, 41, 0, 29)
+onoff22.Font = Enum.Font.SourceSans
+onoff22.Text = ""
+onoff22.TextColor3 = Color3.fromRGB(0, 0, 0)
+onoff22.TextSize = 14.000
+
+howdaa.Name = "howdaa"
+howdaa.Parent = main
+howdaa.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+howdaa.Position = UDim2.new(0.917341948, 0, 0, 0)
+howdaa.Size = UDim2.new(0, 51, 0, 50)
+howdaa.Font = Enum.Font.SourceSans
+howdaa.Text = "?"
+howdaa.TextColor3 = Color3.fromRGB(0, 0, 0)
+howdaa.TextScaled = true
+howdaa.TextSize = 14.000
+howdaa.TextWrapped = true
+
+lines.Name = "lines"
+lines.Parent = main
+
+line1.Name = "line 1"
+line1.Parent = lines
+line1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+line1.Position = UDim2.new(-2.98023224e-08, 0, 0.0736377016, 0)
+line1.Size = UDim2.new(0, 0, 0, 629)
+
+line2.Name = "line 2"
+line2.Parent = lines
+line2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+line2.Position = UDim2.new(0.272285253, 0, 0.0736377016, 0)
+line2.Size = UDim2.new(0, 0, 0, 526)
+
+line3.Name = "line 3"
+line3.Parent = lines
+line3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+line3.Position = UDim2.new(0.363047004, 0, 0.0736377016, 0)
+line3.Size = UDim2.new(0, 0, 0, 526)
+
+line4.Name = "line 4"
+line4.Parent = lines
+line4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+line4.Position = UDim2.new(0.635332227, 0, 0.0736377016, 0)
+line4.Size = UDim2.new(0, 0, 0, 526)
+
+line5.Name = "line 5"
+line5.Parent = lines
+line5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+line5.Position = UDim2.new(0.727714777, 0, 0.0736377016, 0)
+line5.Size = UDim2.new(0, 0, 0, 526)
+
+line6.Name = "line 6"
+line6.Parent = lines
+line6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+line6.Position = UDim2.new(1, 0, 0.0736377016, 0)
+line6.Size = UDim2.new(0, 0, 0, 629)
+
+nada.Name = "nada"
+nada.Parent = main
+nada.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nada.Position = UDim2.new(0.918962717, 0, -0.147275403, 0)
+nada.Size = UDim2.new(0, 100, 0, 100)
+nada.Visible = false
+
+extra1.Name = "extra1"
+extra1.Parent = nada
+extra1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+extra1.BorderColor3 = Color3.fromRGB(255, 255, 255)
+extra1.Position = UDim2.new(0, 0, -0.00999999978, 0)
+extra1.Size = UDim2.new(0, 100, 0, 100)
+
+extra2.Name = "extra2"
+extra2.Parent = nada
+extra2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+extra2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+extra2.Position = UDim2.new(0.498962641, 0, 0.992724597, 0)
+extra2.Size = UDim2.new(0, 100, 0, 100)
+
+extra3.Name = "extra3"
+extra3.Parent = nada
+extra3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+extra3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+extra3.Position = UDim2.new(0.99103713, 0, -0.00727540255, 0)
+extra3.Size = UDim2.new(0, 50, 0, 100)
+
+clickdabutton.Name = "click da button"
+clickdabutton.Parent = nada
+clickdabutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clickdabutton.Size = UDim2.new(0, 149, 0, 100)
+clickdabutton.Font = Enum.Font.SourceSans
+clickdabutton.Text = "click the button next to the thing you want and press done"
+clickdabutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+clickdabutton.TextScaled = true
+clickdabutton.TextSize = 14.000
+clickdabutton.TextWrapped = true
+
+closedaextra.Name = "close da extra"
+closedaextra.Parent = nada
+closedaextra.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+closedaextra.Position = UDim2.new(1, 0, 1.5, 0)
+closedaextra.Size = UDim2.new(0, 50, 0, 50)
+closedaextra.Font = Enum.Font.SourceSans
+closedaextra.Text = "X"
+closedaextra.TextColor3 = Color3.fromRGB(0, 0, 0)
+closedaextra.TextScaled = true
+closedaextra.TextSize = 14.000
+closedaextra.TextWrapped = true
+
+ifnotdaWL.Name = "if not da WL"
+ifnotdaWL.Parent = nada
+ifnotdaWL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ifnotdaWL.Position = UDim2.new(0.49000001, 0, 1, 0)
+ifnotdaWL.Size = UDim2.new(0, 101, 0, 50)
+ifnotdaWL.Font = Enum.Font.SourceSans
+ifnotdaWL.Text = "If not whitelisted ask the person who gave you it"
+ifnotdaWL.TextColor3 = Color3.fromRGB(0, 0, 0)
+ifnotdaWL.TextScaled = true
+ifnotdaWL.TextSize = 14.000
+ifnotdaWL.TextWrapped = true
+
+extraa.Name = "extraa"
+extraa.Parent = nada
+extraa.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+extraa.Position = UDim2.new(0.49000001, 0, 1.5, 0)
+extraa.Size = UDim2.new(0, 50, 0, 50)
+
+closeall.Name = "close all"
+closeall.Parent = main
+closeall.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+closeall.Position = UDim2.new(0, 0, 0.147275403, 0)
+closeall.Size = UDim2.new(0, 168, 0, 50)
+closeall.Font = Enum.Font.SourceSans
+closeall.Text = "Close"
+closeall.TextColor3 = Color3.fromRGB(0, 0, 0)
+closeall.TextScaled = true
+closeall.TextSize = 14.000
+closeall.TextWrapped = true
 
 -- Scripts:
 
-local function FOIQBZ_fake_script() -- close.close script 
-	local script = Instance.new('LocalScript', close)
+local function ROLRUZ_fake_script() -- done.wl and load 
+	local script = Instance.new('LocalScript', done)
+
+	local function makeLookupTable(table)  
+		for i = 1,#table do
+			table[table[i]] = true
+		end
+		return table
+	end
+	
+	
+	local deerihub = script.Parent.Parent.onoff11
+	local sidebar = script.Parent.Parent.onoff22
+	local whitelistednames = makeLookupTable({"EndlessVoices","Sir_Deeri","Ronderty","Colastee","XJxydenVx","Raaziez","Landin_Rahm","highlywantedd","todoyoho","RobloxDudeGaming77"})
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	for _, player in ipairs(game.Players:GetPlayers()) do
+			if whitelistednames[player.Name] then
+				
+				warn("whitelisted")
+			
+		
+	if deerihub.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
+script.Parent.Parent.Parent.Parent["new load"]:Destroy()
+					loadstring('\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\68\101\101\114\105\49\47\105\110\101\47\109\97\105\110\47\100\101\101\114\105\37\50\48\104\117\98\37\50\48\108\111\97\100\37\50\48\50\34\41\41\40\41')()
+	end
+	
+	
+	if sidebar.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
+					loadstring('\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\66\106\74\55\105\109\70\34\41\41\40\41')()			script.Parent.Parent.Parent.Parent["new load"]:Destroy()
+end
+		end
+	end
+	
+	
+	for _, player in ipairs(game.Players:GetPlayers()) do
+		if whitelistednames[player.Name] == false then
+			script.Parent.Parent.Parent.Parent["new load"]:Destroy()
+				warn("contact the perosn who gave you the hub and ask about whitelist")
+				wait(1)
+				game.Players.LocalPlayer.Character.Humanoid:Destroy()
+				game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Thanks for Using Deeri Hub Contact the perosn who gave you it about Whitelist. Thanks! ', 'All')
+		end
+		end
+	end
+	)
+	
+	
+end
+coroutine.wrap(ROLRUZ_fake_script)()
+local function TIJOOS_fake_script() -- onoff11.main script 
+	local script = Instance.new('LocalScript', onoff11)
+
+	local onoff2 = script.Parent.Parent["onoff11"]
+	
+	local on = false
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	
+		if on == false then
+	
+			script.Parent.Parent.onoff11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			on = true
+		else
+	
+			script.Parent.Parent.onoff11.BackgroundColor3 = Color3.fromRGB(247, 247, 247)
+			on = false
+		end
+	end
+	)
+	
+	
+end
+coroutine.wrap(TIJOOS_fake_script)()
+local function MVWK_fake_script() -- onoff22.sidebar script 
+	local script = Instance.new('LocalScript', onoff22)
+
+	local onoff2 = script.Parent.Parent["onoff22"]
+	
+	local on = false
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	
+	if on == false then
+	
+			script.Parent.Parent.onoff22.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			on = true
+	else
+			
+			script.Parent.Parent.onoff22.BackgroundColor3 = Color3.fromRGB(247, 247, 247)
+			on = false
+		end
+		end
+	)
+	
+	
+end
+coroutine.wrap(MVWK_fake_script)()
+local function JULQ_fake_script() -- howdaa.huHHH 
+	local script = Instance.new('LocalScript', howdaa)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.nada.Visible = true
+	end)
+end
+coroutine.wrap(JULQ_fake_script)()
+local function KALXPD_fake_script() -- closedaextra.close da da 
+	local script = Instance.new('LocalScript', closedaextra)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(FOIQBZ_fake_script)()
-local function HFVGS_fake_script() -- newui.closescriptnew 
-	local script = Instance.new('LocalScript', newui)
+coroutine.wrap(KALXPD_fake_script)()
+local function ACVF_fake_script() -- closeall.LocalScript 
+	local script = Instance.new('LocalScript', closeall)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.Parent["new load"]:Destroy()
 	end)
 end
-coroutine.wrap(HFVGS_fake_script)()
-local function NTOXW_fake_script() -- Sidebar.closescriptsidebar 
-	local script = Instance.new('LocalScript', Sidebar)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Visible = false
-	end)
-end
-coroutine.wrap(NTOXW_fake_script)()
+coroutine.wrap(ACVF_fake_script)()
