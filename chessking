@@ -14,12 +14,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/sel
 
 wait(2.5) 
 
-loadstring(game:HttpGet(('https://pastebinp.com/raw/Cu7bKQWN'),true))()
 
 
 
-
-loadstring(game:HttpGet(('https://pastebin.com/raw/NKKHQ92L'),true))()
 
 
 
