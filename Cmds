@@ -1046,6 +1046,22 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/chessking"))()
 
 elseif
+	CMD.Text == ".golden gun " then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/golden%20gun"))()
+
+elseif
+	CMD.Text == ".serveradmin switcher " then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/server%20admin%20switcher"))()
+
+elseif
+	CMD.Text == ".serveradmin switcher " then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/server%20admin%20switcher"))()
+
+elseif
+	CMD.Text == ".small fighter " then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/small%20fighter"))()
+
+elseif
 	CMD.Text == ".hathub pp" then
 	loadstring(game:HttpGet("https://pastebin.com/raw/F6k8kM05"))()
 
