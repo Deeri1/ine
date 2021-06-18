@@ -295,7 +295,7 @@ local function ROLRUZ_fake_script() -- done.wl and load
 	
 	local deerihub = script.Parent.Parent.onoff11
 	local sidebar = script.Parent.Parent.onoff22
-	local whitelistednames = makeLookupTable({"EndlessVoices","Sir_Deeri","Ronderty","Colastee","XJxydenVx","Raaziez","Landin_Rahm","highlywantedd","todoyoho","jfjfjsjksalasdfjke","RobloxDudeGaming77","Austinjj2008"})
+	local whitelistednames = makeLookupTable({"EndlessVoices","Sir_Deeri","Ronderty","Colastee","XJxydenVx","Raaziez","Landin_Rahm","highlywantedd","todoyoho","jfjfjsjksalasdfjke","DJRAPISGONE","Austinjj2008"})
 	
 	
 	script.Parent.MouseButton1Click:Connect(function()
