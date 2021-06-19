@@ -31,6 +31,8 @@ local closedaextra = Instance.new("TextButton")
 local ifnotdaWL = Instance.new("TextLabel")
 local extraa = Instance.new("Frame")
 local closeall = Instance.new("TextButton")
+local updates = Instance.new("TextButton")
+local credits = Instance.new("TextButton")
 
 --Properties:
 
@@ -40,7 +42,7 @@ newload.Parent = game.CoreGui
 main.Name = "main"
 main.Parent = newload
 main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-main.Position = UDim2.new(0.259463727, 0, 0.208779439, 0)
+main.Position = UDim2.new(0.254989445, 0, 0.0867237672, 0)
 main.Size = UDim2.new(0, 617, 0, 679)
 main.Active = true
 main.Draggable = true
@@ -272,7 +274,7 @@ closeall.Name = "close all"
 closeall.Parent = main
 closeall.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 closeall.Position = UDim2.new(0, 0, 0.147275403, 0)
-closeall.Size = UDim2.new(0, 168, 0, 50)
+closeall.Size = UDim2.new(0, 168, 0, 29)
 closeall.Font = Enum.Font.SourceSans
 closeall.Text = "Close"
 closeall.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -280,9 +282,33 @@ closeall.TextScaled = true
 closeall.TextSize = 14.000
 closeall.TextWrapped = true
 
+updates.Name = "updates"
+updates.Parent = main
+updates.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+updates.Position = UDim2.new(0.727714837, 0, 0.147275403, 0)
+updates.Size = UDim2.new(0, 168, 0, 29)
+updates.Font = Enum.Font.SourceSans
+updates.Text = "Updates"
+updates.TextColor3 = Color3.fromRGB(0, 0, 0)
+updates.TextScaled = true
+updates.TextSize = 14.000
+updates.TextWrapped = true
+
+credits.Name = "credits"
+credits.Parent = main
+credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+credits.Position = UDim2.new(0.727714837, 0, 0.229749635, 0)
+credits.Size = UDim2.new(0, 167, 0, 29)
+credits.Font = Enum.Font.SourceSans
+credits.Text = "Credits"
+credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+credits.TextScaled = true
+credits.TextSize = 14.000
+credits.TextWrapped = true
+
 -- Scripts:
 
-local function ROLRUZ_fake_script() -- done.wl and load 
+local function XKJE_fake_script() -- done.wl and load 
 	local script = Instance.new('LocalScript', done)
 
 	local function makeLookupTable(table)  
@@ -306,34 +332,26 @@ local function ROLRUZ_fake_script() -- done.wl and load
 			
 		
 	if deerihub.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
-script.Parent.Parent.Parent.Parent["new load"]:Destroy()
+					
 					loadstring('\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\68\101\101\114\105\49\47\105\110\101\47\109\97\105\110\47\100\101\101\114\105\37\50\48\104\117\98\37\50\48\108\111\97\100\37\50\48\50\34\41\41\40\41')()
+					script.Parent.Parent.Parent.Parent["new load"]:Destroy()
 	end
 	
 	
-	if sidebar.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
-					loadstring('\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\66\106\74\55\105\109\70\34\41\41\40\41')()			script.Parent.Parent.Parent.Parent["new load"]:Destroy()
-end
+				if sidebar.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
+					loadstring('\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\66\106\74\55\105\109\70\34\41\41\40\41')()			
+					script.Parent.Parent.Parent.Parent["new load"]:Destroy()
+						
+			end
 		end
 	end
 	
-	
-	for _, player in ipairs(game.Players:GetPlayers()) do
-		if whitelistednames[player.Name] == false then
-			script.Parent.Parent.Parent.Parent["new load"]:Destroy()
-				warn("contact the perosn who gave you the hub and ask about whitelist")
-				wait(1)
-				game.Players.LocalPlayer.Character.Humanoid:Destroy()
-				game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Thanks for Using Deeri Hub Contact the perosn who gave you it about Whitelist. Thanks! ', 'All')
-		end
-		end
-	end
-	)
+	end)
 	
 	
 end
-coroutine.wrap(ROLRUZ_fake_script)()
-local function TIJOOS_fake_script() -- onoff11.main script 
+coroutine.wrap(XKJE_fake_script)()
+local function XWIM_fake_script() -- onoff11.main script 
 	local script = Instance.new('LocalScript', onoff11)
 
 	local onoff2 = script.Parent.Parent["onoff11"]
@@ -357,8 +375,8 @@ local function TIJOOS_fake_script() -- onoff11.main script
 	
 	
 end
-coroutine.wrap(TIJOOS_fake_script)()
-local function MVWK_fake_script() -- onoff22.sidebar script 
+coroutine.wrap(XWIM_fake_script)()
+local function HZCHQKK_fake_script() -- onoff22.sidebar script 
 	local script = Instance.new('LocalScript', onoff22)
 
 	local onoff2 = script.Parent.Parent["onoff22"]
@@ -382,28 +400,46 @@ local function MVWK_fake_script() -- onoff22.sidebar script
 	
 	
 end
-coroutine.wrap(MVWK_fake_script)()
-local function JULQ_fake_script() -- howdaa.huHHH 
+coroutine.wrap(HZCHQKK_fake_script)()
+local function MZKDEA_fake_script() -- howdaa.huHHH 
 	local script = Instance.new('LocalScript', howdaa)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.nada.Visible = true
 	end)
 end
-coroutine.wrap(JULQ_fake_script)()
-local function KALXPD_fake_script() -- closedaextra.close da da 
+coroutine.wrap(MZKDEA_fake_script)()
+local function CVFJP_fake_script() -- closedaextra.close da da 
 	local script = Instance.new('LocalScript', closedaextra)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(KALXPD_fake_script)()
-local function ACVF_fake_script() -- closeall.LocalScript 
+coroutine.wrap(CVFJP_fake_script)()
+local function WXDVWRD_fake_script() -- closeall.LocalScript 
 	local script = Instance.new('LocalScript', closeall)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent["new load"]:Destroy()
 	end)
 end
-coroutine.wrap(ACVF_fake_script)()
+coroutine.wrap(WXDVWRD_fake_script)()
+local function MLGPOMQ_fake_script() -- updates.open updates 
+	local script = Instance.new('LocalScript', updates)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGetAsync("https://pastebin.com/raw/7QR0gh1N"))()
+	end)
+	end
+
+coroutine.wrap(MLGPOMQ_fake_script)()
+local function RQMOD_fake_script() -- credits.credits 
+	local script = Instance.new('LocalScript', credits)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/DTDNhgEg"))()
+	end)
+	end
+
+coroutine.wrap(RQMOD_fake_script)()
