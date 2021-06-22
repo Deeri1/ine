@@ -1,0 +1,27 @@
+
+local silentrejoin = Instance.new("ScreenGui")
+local loooolnerd = Instance.new("Frame")
+local ha = Instance.new("TextLabel")
+
+silentrejoin.Name = "silentrejoin"
+silentrejoin.Parent = game.Workspace
+silentrejoin.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+silentrejoin.ResetOnSpawn = false
+
+loooolnerd.Name = "loooolnerd"
+loooolnerd.Parent = silentrejoin
+loooolnerd.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+loooolnerd.Position = UDim2.new(0.064491652, 0, 0.162740901, 0)
+loooolnerd.Size = UDim2.new(0, 1117, 0, 693)
+loooolnerd.Visible = false
+
+ha.Name = "ha"
+ha.Parent = loooolnerd
+ha.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ha.Size = UDim2.new(0, 1117, 0, 693)
+ha.Font = Enum.Font.SourceSans
+ha.Text = "Imagine reading this ;)"
+ha.TextColor3 = Color3.fromRGB(0, 0, 0)
+ha.TextScaled = true
+ha.TextSize = 14.000
+ha.TextWrapped = true
