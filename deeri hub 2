@@ -70,6 +70,8 @@ local commandsbutton = Instance.new("TextButton")
 local extrabuttons = Instance.new("Frame")
 local updatesbutton = Instance.new("TextButton")
 local closeextrabuttons = Instance.new("TextButton")
+local silentrejoinlable = Instance.new("TextLabel")
+local silentrejointoggle = Instance.new("TextButton")
 local colorsettings_2 = Instance.new("Frame")
 local titleofcolorsettings = Instance.new("TextLabel")
 local resetcolorbutton = Instance.new("TextButton")
@@ -177,8 +179,6 @@ Main.Parent = deeri
 Main.BackgroundColor3 = Color3.fromRGB(213, 213, 213)
 Main.Position = UDim2.new(0.0802139044, 0, 0.611420572, 0)
 Main.Size = UDim2.new(0, 373, 0, 135)
-Main.Active = true
-Main.Draggable = true
 
 CMD.Name = "CMD"
 CMD.Parent = Main
@@ -872,6 +872,28 @@ closeextrabuttons.TextScaled = true
 closeextrabuttons.TextSize = 14.000
 closeextrabuttons.TextWrapped = true
 
+silentrejoinlable.Name = "silent rejoin lable"
+silentrejoinlable.Parent = extrabuttons
+silentrejoinlable.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+silentrejoinlable.Position = UDim2.new(0.49061662, 0, 0.00298507465, 0)
+silentrejoinlable.Size = UDim2.new(0, 96, 0, 50)
+silentrejoinlable.Font = Enum.Font.SourceSans
+silentrejoinlable.Text = "Silent rejoin"
+silentrejoinlable.TextColor3 = Color3.fromRGB(0, 0, 0)
+silentrejoinlable.TextScaled = true
+silentrejoinlable.TextSize = 14.000
+silentrejoinlable.TextWrapped = true
+
+silentrejointoggle.Name = "silent rejoin toggle"
+silentrejointoggle.Parent = silentrejoinlable
+silentrejointoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+silentrejointoggle.Position = UDim2.new(0.991175354, 0, 0, 0)
+silentrejointoggle.Size = UDim2.new(0, 47, 0, 50)
+silentrejointoggle.Font = Enum.Font.SourceSans
+silentrejointoggle.Text = " "
+silentrejointoggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+silentrejointoggle.TextSize = 14.000
+
 colorsettings_2.Name = "colorsettings"
 colorsettings_2.Parent = deeri
 colorsettings_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1006,7 +1028,6 @@ commandsframehat.Active = true
 commandsframehat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commandsframehat.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
 commandsframehat.Size = UDim2.new(0, 268, 0, 273)
-commandsframehat.CanvasPosition = Vector2.new(0, 300)
 commandsframehat.CanvasSize = UDim2.new(0, 0, 0, 1500)
 
 areawerecommandshat.Name = "area were commands hat"
@@ -1683,7 +1704,6 @@ commandsframegui.Active = true
 commandsframegui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commandsframegui.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
 commandsframegui.Size = UDim2.new(0, 268, 0, 273)
-commandsframegui.CanvasPosition = Vector2.new(0, 450)
 commandsframegui.CanvasSize = UDim2.new(0, 0, 0, 1500)
 
 areawerecommandsgui.Name = "area were commands gui"
@@ -1879,73 +1899,78 @@ clsoegui.TextWrapped = true
 
 -- Scripts:
 
-local function ZGXAZL_fake_script() -- openup.openupbuttons 
+local function UHWLEKP_fake_script() -- openup.openupbuttons 
 	local script = Instance.new('LocalScript', openup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.openupitems.Visible = true
 	end)
 end
-coroutine.wrap(ZGXAZL_fake_script)()
-local function VLUIZG_fake_script() -- opendown.opendownbutton 
+coroutine.wrap(UHWLEKP_fake_script)()
+local function EMDNH_fake_script() -- opendown.opendownbutton 
 	local script = Instance.new('LocalScript', opendown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.opendownitems.Visible = true
 	end)
 end
-coroutine.wrap(VLUIZG_fake_script)()
-local function JRRLKV_fake_script() -- adminbutton.admin button script 
+coroutine.wrap(EMDNH_fake_script)()
+local function JDPA_fake_script() -- adminbutton.admin button script 
 	local script = Instance.new('LocalScript', adminbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/qsM4xDCX"))()
 	end)
 end
-coroutine.wrap(JRRLKV_fake_script)()
-local function QSPS_fake_script() -- closeup.closeupitems 
+coroutine.wrap(JDPA_fake_script)()
+local function GAKUGGQ_fake_script() -- closeup.closeupitems 
 	local script = Instance.new('LocalScript', closeup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(QSPS_fake_script)()
-local function EDQQR_fake_script() -- colorsettings.opencolorsettings 
+coroutine.wrap(GAKUGGQ_fake_script)()
+local function YBFAYKJ_fake_script() -- colorsettings.opencolorsettings 
 	local script = Instance.new('LocalScript', colorsettings)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent.colorsettings.Visible = true
 	end)
 end
-coroutine.wrap(EDQQR_fake_script)()
-local function MGXIZ_fake_script() -- openextrabuttonsup.open extrtabuttons upscript 
+coroutine.wrap(YBFAYKJ_fake_script)()
+local function FJWJ_fake_script() -- openextrabuttonsup.open extrtabuttons upscript 
 	local script = Instance.new('LocalScript', openextrabuttonsup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["extra buttons"].Visible = true
 	end)
 end
-coroutine.wrap(MGXIZ_fake_script)()
-local function BWITEGG_fake_script() -- rejoinbutton.rejoin button script 
+coroutine.wrap(FJWJ_fake_script)()
+local function TNUN_fake_script() -- rejoinbutton.rejoin button script 
 	local script = Instance.new('LocalScript', rejoinbutton)
 
 	
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGetAsync("https://pastebin.com/raw/QyWmBd9L"))()
+		if script.Parent.Parent.Parent["extra buttons"]["silent rejoin lable"]["silent rejoin toggle"].BackgroundColor3 == Color3.fromHSV(0, 0, 1) then
+			game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Rejoining', 'All')
+		end 
+		local ts = game:GetService("TeleportService")
+		local p = game:GetService("Players").LocalPlayer
+		ts:Teleport(game.PlaceId, p)
 	end)
 end
-coroutine.wrap(BWITEGG_fake_script)()
-local function XJVDZL_fake_script() -- closedown.closedownitems 
+coroutine.wrap(TNUN_fake_script)()
+local function MHBYTC_fake_script() -- closedown.closedownitems 
 	local script = Instance.new('LocalScript', closedown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(XJVDZL_fake_script)()
-local function SAFYCHF_fake_script() -- clickclear2.clickclear2scriipt 
+coroutine.wrap(MHBYTC_fake_script)()
+local function HUAMLW_fake_script() -- clickclear2.clickclear2scriipt 
 	local script = Instance.new('LocalScript', clickclear2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1968,8 +1993,8 @@ local function SAFYCHF_fake_script() -- clickclear2.clickclear2scriipt
 		
 	end)
 end
-coroutine.wrap(SAFYCHF_fake_script)()
-local function BXDE_fake_script() -- clickclear.clickclear1script 
+coroutine.wrap(HUAMLW_fake_script)()
+local function UCEB_fake_script() -- clickclear.clickclear1script 
 	local script = Instance.new('LocalScript', clickclear)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1991,56 +2016,69 @@ local function BXDE_fake_script() -- clickclear.clickclear1script
 		
 	end)
 end
-coroutine.wrap(BXDE_fake_script)()
-local function EIAC_fake_script() -- openextrabuttonsdown.open extra buttons down script 
+coroutine.wrap(UCEB_fake_script)()
+local function DJVH_fake_script() -- openextrabuttonsdown.open extra buttons down script 
 	local script = Instance.new('LocalScript', openextrabuttonsdown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["extra buttons"].Visible = true
 	end)
 end
-coroutine.wrap(EIAC_fake_script)()
-local function MHOCVAC_fake_script() -- requiredhatsbutton.open required hats 
+coroutine.wrap(DJVH_fake_script)()
+local function QDSC_fake_script() -- requiredhatsbutton.open required hats 
 	local script = Instance.new('LocalScript', requiredhatsbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["required hats frame"].Visible = true
 	end)
 end
-coroutine.wrap(MHOCVAC_fake_script)()
-local function GXGNRWW_fake_script() -- closebutton.close button script 
+coroutine.wrap(QDSC_fake_script)()
+local function MQCFF_fake_script() -- closebutton.close button script 
 	local script = Instance.new('LocalScript', closebutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(GXGNRWW_fake_script)()
-local function KVAOHHL_fake_script() -- commandsbutton.open commands button 
+coroutine.wrap(MQCFF_fake_script)()
+local function KQQIOJO_fake_script() -- commandsbutton.open commands button 
 	local script = Instance.new('LocalScript', commandsbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.commands.Visible = true
 	end)
 end
-coroutine.wrap(KVAOHHL_fake_script)()
-local function KJFA_fake_script() -- updatesbutton.updates script 
+coroutine.wrap(KQQIOJO_fake_script)()
+local function KEZAGM_fake_script() -- updatesbutton.updates script 
 	local script = Instance.new('LocalScript', updatesbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/7QR0gh1N"))()
 	end)
 end
-coroutine.wrap(KJFA_fake_script)()
-local function CDPYS_fake_script() -- closeextrabuttons.closeextrabuttons script 
+coroutine.wrap(KEZAGM_fake_script)()
+local function VVDSHT_fake_script() -- closeextrabuttons.closeextrabuttons script 
 	local script = Instance.new('LocalScript', closeextrabuttons)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(CDPYS_fake_script)()
-local function UDASRO_fake_script() -- resetcolorbutton.resetcolorscript 
+coroutine.wrap(VVDSHT_fake_script)()
+local function ZHPUY_fake_script() -- silentrejointoggle.LocalScript 
+	local script = Instance.new('LocalScript', silentrejointoggle)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent["silent rejoin toggle"].BackgroundColor3 == Color3.fromHSV(0, 0, 1)== true then
+			script.Parent.Parent["silent rejoin toggle"].BackgroundColor3 = Color3.fromHSV(0, 0, 0)
+		elseif script.Parent.Parent["silent rejoin toggle"].BackgroundColor3 == Color3.fromHSV(0, 0, 0)== true then
+			script.Parent.Parent["silent rejoin toggle"].BackgroundColor3 = Color3.fromHSV(0, 0, 1)
+			end
+	
+	end)
+end
+coroutine.wrap(ZHPUY_fake_script)()
+local function HBDZUZ_fake_script() -- resetcolorbutton.resetcolorscript 
 	local script = Instance.new('LocalScript', resetcolorbutton)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -2140,8 +2178,8 @@ local function UDASRO_fake_script() -- resetcolorbutton.resetcolorscript
 	end)
 	
 end
-coroutine.wrap(UDASRO_fake_script)()
-local function RSRF_fake_script() -- darkmodebutton.darkmode script 
+coroutine.wrap(HBDZUZ_fake_script)()
+local function HXFEMYA_fake_script() -- darkmodebutton.darkmode script 
 	local script = Instance.new('LocalScript', darkmodebutton)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -2239,8 +2277,8 @@ local function RSRF_fake_script() -- darkmodebutton.darkmode script
 	end)
 	
 end
-coroutine.wrap(RSRF_fake_script)()
-local function KZEJM_fake_script() -- punpkinmode.pumpkinmodescript 
+coroutine.wrap(HXFEMYA_fake_script)()
+local function QVNV_fake_script() -- punpkinmode.pumpkinmodescript 
 	local script = Instance.new('LocalScript', punpkinmode)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -2338,16 +2376,16 @@ local function KZEJM_fake_script() -- punpkinmode.pumpkinmodescript
 	end)
 	
 end
-coroutine.wrap(KZEJM_fake_script)()
-local function JKTE_fake_script() -- closeforcolorsettings.closecolorsettings 
+coroutine.wrap(QVNV_fake_script)()
+local function CGTYRY_fake_script() -- closeforcolorsettings.closecolorsettings 
 	local script = Instance.new('LocalScript', closeforcolorsettings)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(JKTE_fake_script)()
-local function BGAIF_fake_script() -- hatcommands.open hat 
+coroutine.wrap(CGTYRY_fake_script)()
+local function QNUQW_fake_script() -- hatcommands.open hat 
 	local script = Instance.new('LocalScript', hatcommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2358,16 +2396,16 @@ local function BGAIF_fake_script() -- hatcommands.open hat
 		script.Parent.Parent.Parent["hat commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(BGAIF_fake_script)()
-local function VWOX_fake_script() -- hatlesscommands.open hatless script 
+coroutine.wrap(QNUQW_fake_script)()
+local function RKVI_fake_script() -- hatlesscommands.open hatless script 
 	local script = Instance.new('LocalScript', hatlesscommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["hatless commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(VWOX_fake_script)()
-local function DHFRDOX_fake_script() -- guicommands.open gui 
+coroutine.wrap(RKVI_fake_script)()
+local function FUDZ_fake_script() -- guicommands.open gui 
 	local script = Instance.new('LocalScript', guicommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2378,39 +2416,41 @@ local function DHFRDOX_fake_script() -- guicommands.open gui
 		script.Parent.Parent.Parent["gui commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(DHFRDOX_fake_script)()
-local function OQHGNEB_fake_script() -- closecomands.close commands button 
+coroutine.wrap(FUDZ_fake_script)()
+local function NVFKP_fake_script() -- closecomands.close commands button 
 	local script = Instance.new('LocalScript', closecomands)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(OQHGNEB_fake_script)()
-local function DFDGS_fake_script() -- clsoehat.close hat scipt 
+coroutine.wrap(NVFKP_fake_script)()
+local function BKHYI_fake_script() -- clsoehat.close hat scipt 
 	local script = Instance.new('LocalScript', clsoehat)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(DFDGS_fake_script)()
-local function KRPMHK_fake_script() -- clsoehatless.close hatless scipt 
+coroutine.wrap(BKHYI_fake_script)()
+local function GSDRUB_fake_script() -- clsoehatless.close hatless scipt 
 	local script = Instance.new('LocalScript', clsoehatless)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(KRPMHK_fake_script)()
-local function RUQOT_fake_script() -- clsoegui.close gui scipt 
+coroutine.wrap(GSDRUB_fake_script)()
+local function WHCM_fake_script() -- clsoegui.close gui scipt 
 	local script = Instance.new('LocalScript', clsoegui)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(RUQOT_fake_script)()
+coroutine.wrap(WHCM_fake_script)()
+
+
 
 
 
