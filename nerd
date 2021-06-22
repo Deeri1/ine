@@ -4,7 +4,7 @@ local loooolnerd = Instance.new("Frame")
 local ha = Instance.new("TextLabel")
 
 silentrejoin.Name = "silentrejoin"
-silentrejoin.Parent = game.Workspace
+silentrejoin.Parent = game.CoreGui
 silentrejoin.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 silentrejoin.ResetOnSpawn = false
 
