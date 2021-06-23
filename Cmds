@@ -1054,10 +1054,6 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/server%20admin%20switcher"))()
 
 elseif
-	CMD.Text == ".serveradmin switcher" then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/server%20admin%20switcher"))()
-
-elseif
 	CMD.Text == ".small fighter" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/small%20fighter"))()
 
