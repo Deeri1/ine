@@ -1066,6 +1066,14 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/A1sky/Kenta/main/Krnl.lua"))()
 
 elseif
+	CMD.Text == ".uzi" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/nevrers%20uzi"))()
+
+elseif
+	CMD.Text == ".gcbc" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/nevers%20goodcop%20bad%20cop"))()
+
+elseif
 	CMD.Text == ".hathub pp" then
 	loadstring(game:HttpGet("https://pastebin.com/raw/F6k8kM05"))()
 
