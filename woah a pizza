@@ -109,7 +109,7 @@ local clsoegui = Instance.new("TextButton")
 --Properties:
 
 commandsgui.Name = "commands gui"
-commandsgui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+commandsgui.Parent = game.CoreGui
 
 commands.Name = "commands"
 commands.Parent = commandsgui
@@ -1193,7 +1193,7 @@ clsoegui.TextWrapped = true
 
 -- Scripts:
 
-local function MQWYU_fake_script() -- hatcommands.open hat 
+local function JXZBLG_fake_script() -- hatcommands.open hat 
 	local script = Instance.new('LocalScript', hatcommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1202,8 +1202,8 @@ local function MQWYU_fake_script() -- hatcommands.open hat
 	end)
 	
 end
-coroutine.wrap(MQWYU_fake_script)()
-local function WNBJIY_fake_script() -- hatlesscommands.open hatless script 
+coroutine.wrap(JXZBLG_fake_script)()
+local function XVBCWHO_fake_script() -- hatlesscommands.open hatless script 
 	local script = Instance.new('LocalScript', hatlesscommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1212,8 +1212,8 @@ local function WNBJIY_fake_script() -- hatlesscommands.open hatless script
 	end)
 	
 end
-coroutine.wrap(WNBJIY_fake_script)()
-local function LSGKX_fake_script() -- guicommands.open gui 
+coroutine.wrap(XVBCWHO_fake_script)()
+local function GOZR_fake_script() -- guicommands.open gui 
 	local script = Instance.new('LocalScript', guicommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1221,36 +1221,36 @@ local function LSGKX_fake_script() -- guicommands.open gui
 		script.Parent.Parent["gui commands"].Visible = true
 	end)
 end
-coroutine.wrap(LSGKX_fake_script)()
-local function BFOAERS_fake_script() -- closecomands.close commands button 
+coroutine.wrap(GOZR_fake_script)()
+local function CMMA_fake_script() -- closecomands.close commands button 
 	local script = Instance.new('LocalScript', closecomands)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(BFOAERS_fake_script)()
-local function GIPFR_fake_script() -- clsoehat.close hat scipt 
+coroutine.wrap(CMMA_fake_script)()
+local function UYRPQ_fake_script() -- clsoehat.close hat scipt 
 	local script = Instance.new('LocalScript', clsoehat)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(GIPFR_fake_script)()
-local function JRNBFSI_fake_script() -- clsoehatless.close hatless scipt 
+coroutine.wrap(UYRPQ_fake_script)()
+local function BGXLYO_fake_script() -- clsoehatless.close hatless scipt 
 	local script = Instance.new('LocalScript', clsoehatless)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(JRNBFSI_fake_script)()
-local function HEOETEM_fake_script() -- clsoegui.close gui scipt 
+coroutine.wrap(BGXLYO_fake_script)()
+local function XNZG_fake_script() -- clsoegui.close gui scipt 
 	local script = Instance.new('LocalScript', clsoegui)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(HEOETEM_fake_script)()
+coroutine.wrap(XNZG_fake_script)()
