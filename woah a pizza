@@ -1,0 +1,1256 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local commandsgui = Instance.new("ScreenGui")
+local commands = Instance.new("Frame")
+local hatcommands = Instance.new("TextButton")
+local hatlesscommands = Instance.new("TextButton")
+local guicommands = Instance.new("TextButton")
+local closecomands = Instance.new("TextButton")
+local hatcommandsbar = Instance.new("Frame")
+local commandsframehat = Instance.new("ScrollingFrame")
+local areawerecommandshat = Instance.new("Frame")
+local glitchersfolder = Instance.new("Folder")
+local glitchersending = Instance.new("Frame")
+local myglitcher1 = Instance.new("TextButton")
+local myglitcher2 = Instance.new("TextButton")
+local bigglitcher = Instance.new("TextButton")
+local glitcher1 = Instance.new("TextButton")
+local glitcher2 = Instance.new("TextButton")
+local glitcherstitle = Instance.new("TextLabel")
+local rbkingfolder = Instance.new("Folder")
+local rbkingtitle = Instance.new("TextLabel")
+local rbkingbutton = Instance.new("TextButton")
+local rbking2button = Instance.new("TextButton")
+local neptuneswitcherutton = Instance.new("TextButton")
+local fightermode = Instance.new("TextButton")
+local sifisword = Instance.new("TextButton")
+local goldengun = Instance.new("TextButton")
+local chessking = Instance.new("TextButton")
+local voicesneptune = Instance.new("TextButton")
+local keyboard = Instance.new("TextButton")
+local staff = Instance.new("TextButton")
+local uzi = Instance.new("TextButton")
+local goodcopbadcop = Instance.new("TextButton")
+local clsoehat = Instance.new("TextButton")
+local hatlesscommandsbar = Instance.new("Frame")
+local commandsframehatless = Instance.new("ScrollingFrame")
+local areawerecommandshatless = Instance.new("Frame")
+local smugbutton = Instance.new("TextButton")
+local distractionbutton = Instance.new("TextButton")
+local chillbutton = Instance.new("TextButton")
+local susbutton = Instance.new("TextButton")
+local firegodbutton = Instance.new("TextButton")
+local clovrbutton = Instance.new("TextButton")
+local reachbutton = Instance.new("TextButton")
+local flossbutton = Instance.new("TextButton")
+local russiankickbutton = Instance.new("TextButton")
+local zenbutton = Instance.new("TextButton")
+local memebutton = Instance.new("TextButton")
+local memeysv25buttton = Instance.new("TextButton")
+local joybutton = Instance.new("TextButton")
+local electroswingbutton = Instance.new("TextButton")
+local flipbutton = Instance.new("TextButton")
+local scoutbutton = Instance.new("TextButton")
+local penguindancebutton = Instance.new("TextButton")
+local sonicbutton = Instance.new("TextButton")
+local enderbutton = Instance.new("TextButton")
+local goopiebutton = Instance.new("TextButton")
+local galebutton = Instance.new("TextButton")
+local xesterbutton = Instance.new("TextButton")
+local krystal = Instance.new("TextButton")
+local catbutton = Instance.new("TextButton")
+local killbot = Instance.new("TextButton")
+local caducusbutton = Instance.new("TextButton")
+local orangejusticebutton = Instance.new("TextButton")
+local defaultdancebutton = Instance.new("TextButton")
+local fabbutton = Instance.new("TextButton")
+local taketheL = Instance.new("TextButton")
+local sidestepbutton = Instance.new("TextButton")
+local serveradminbutton = Instance.new("TextButton")
+local noobswitcherbutton = Instance.new("TextButton")
+local helkernsmechbutton = Instance.new("TextButton")
+local ubergodbutton = Instance.new("TextButton")
+local runman = Instance.new("TextButton")
+local popperbor = Instance.new("TextButton")
+local winterfeel = Instance.new("TextButton")
+local blink = Instance.new("TextButton")
+local serveradminswitcher = Instance.new("TextButton")
+local smallfighter = Instance.new("TextButton")
+local firegod = Instance.new("TextButton")
+local clsoehatless = Instance.new("TextButton")
+local guicommandsbar = Instance.new("Frame")
+local commandsframegui = Instance.new("ScrollingFrame")
+local areawerecommandsgui = Instance.new("Frame")
+local deerihubstuff = Instance.new("Folder")
+local sidebar = Instance.new("TextButton")
+local deerihubadminpicker = Instance.new("Folder")
+local adminpicker = Instance.new("TextButton")
+local credits = Instance.new("TextButton")
+local gamesguis = Instance.new("Folder")
+local animationguis = Instance.new("Folder")
+local animationgui = Instance.new("TextButton")
+local adminguis = Instance.new("Folder")
+local dashadminbutton = Instance.new("TextButton")
+local homebrewadmibutton = Instance.new("TextButton")
+local miscguis = Instance.new("Folder")
+local astrava = Instance.new("TextButton")
+local Selexity = Instance.new("TextButton")
+local Arosia = Instance.new("TextButton")
+local Andromeda = Instance.new("TextButton")
+local arrowhub = Instance.new("TextButton")
+local topkek = Instance.new("TextButton")
+local crybaby = Instance.new("TextButton")
+local kentahub = Instance.new("TextButton")
+local clsoegui = Instance.new("TextButton")
+
+--Properties:
+
+commandsgui.Name = "commands gui"
+commandsgui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+commands.Name = "commands"
+commands.Parent = commandsgui
+commands.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+commands.Position = UDim2.new(0.785985291, 0, -0.000687358901, 0)
+commands.Size = UDim2.new(0, 291, 0, 422)
+
+hatcommands.Name = "hat commands"
+hatcommands.Parent = commands
+hatcommands.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hatcommands.Position = UDim2.new(0, 0, 0.106635071, 0)
+hatcommands.Size = UDim2.new(0, 291, 0, 50)
+hatcommands.Font = Enum.Font.SourceSans
+hatcommands.Text = "Hat commands"
+hatcommands.TextColor3 = Color3.fromRGB(0, 0, 0)
+hatcommands.TextScaled = true
+hatcommands.TextSize = 14.000
+hatcommands.TextWrapped = true
+
+hatlesscommands.Name = "hatless commands"
+hatlesscommands.Parent = commands
+hatlesscommands.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hatlesscommands.Position = UDim2.new(0, 0, 0.327014238, 0)
+hatlesscommands.Size = UDim2.new(0, 291, 0, 50)
+hatlesscommands.Font = Enum.Font.SourceSans
+hatlesscommands.Text = "Hatless commands"
+hatlesscommands.TextColor3 = Color3.fromRGB(0, 0, 0)
+hatlesscommands.TextScaled = true
+hatlesscommands.TextSize = 14.000
+hatlesscommands.TextWrapped = true
+
+guicommands.Name = "gui commands"
+guicommands.Parent = commands
+guicommands.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+guicommands.Position = UDim2.new(0, 0, 0.552132726, 0)
+guicommands.Size = UDim2.new(0, 291, 0, 50)
+guicommands.Font = Enum.Font.SourceSans
+guicommands.Text = "Gui commands"
+guicommands.TextColor3 = Color3.fromRGB(0, 0, 0)
+guicommands.TextScaled = true
+guicommands.TextSize = 14.000
+guicommands.TextWrapped = true
+
+closecomands.Name = "close comands"
+closecomands.Parent = commands
+closecomands.BackgroundColor3 = Color3.fromRGB(211, 55, 55)
+closecomands.Position = UDim2.new(0.15463917, 0, 0.791469216, 0)
+closecomands.Size = UDim2.new(0, 200, 0, 50)
+closecomands.Font = Enum.Font.SourceSans
+closecomands.Text = "Close"
+closecomands.TextColor3 = Color3.fromRGB(0, 0, 0)
+closecomands.TextScaled = true
+closecomands.TextSize = 14.000
+closecomands.TextWrapped = true
+
+hatcommandsbar.Name = "hat commands bar"
+hatcommandsbar.Parent = commandsgui
+hatcommandsbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hatcommandsbar.Position = UDim2.new(0.798953772, 0, 0.706352293, 0)
+hatcommandsbar.Size = UDim2.new(0, 268, 0, 277)
+hatcommandsbar.Visible = false
+
+commandsframehat.Name = "commandsframe hat"
+commandsframehat.Parent = hatcommandsbar
+commandsframehat.Active = true
+commandsframehat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+commandsframehat.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
+commandsframehat.Size = UDim2.new(0, 268, 0, 273)
+commandsframehat.CanvasSize = UDim2.new(0, 0, 0, 1500)
+
+areawerecommandshat.Name = "area were commands hat"
+areawerecommandshat.Parent = commandsframehat
+areawerecommandshat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+areawerecommandshat.Position = UDim2.new(0, 0, -0.000107314561, 0)
+areawerecommandshat.Size = UDim2.new(0, 254, 0, 900)
+
+glitchersfolder.Name = "glitchers folder"
+glitchersfolder.Parent = areawerecommandshat
+
+glitchersending.Name = "glitchers ending"
+glitchersending.Parent = glitchersfolder
+glitchersending.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+glitchersending.Position = UDim2.new(0, 0, 0.284444451, 0)
+glitchersending.Size = UDim2.new(0, 254, 0, 12)
+
+myglitcher1.Name = "myglitcher 1"
+myglitcher1.Parent = glitchersfolder
+myglitcher1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+myglitcher1.Position = UDim2.new(0, 0, 0.0500000007, 0)
+myglitcher1.Size = UDim2.new(0, 254, 0, 31)
+myglitcher1.Font = Enum.Font.SourceSans
+myglitcher1.Text = ".my glitcher"
+myglitcher1.TextColor3 = Color3.fromRGB(0, 0, 0)
+myglitcher1.TextScaled = true
+myglitcher1.TextSize = 14.000
+myglitcher1.TextWrapped = true
+
+myglitcher2.Name = "myglitcher 2"
+myglitcher2.Parent = glitchersfolder
+myglitcher2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+myglitcher2.Position = UDim2.new(0, 0, 0.100000001, 0)
+myglitcher2.Size = UDim2.new(0, 254, 0, 31)
+myglitcher2.Font = Enum.Font.SourceSans
+myglitcher2.Text = ".my glitcher 2"
+myglitcher2.TextColor3 = Color3.fromRGB(0, 0, 0)
+myglitcher2.TextScaled = true
+myglitcher2.TextSize = 14.000
+myglitcher2.TextWrapped = true
+
+bigglitcher.Name = "bigglitcher"
+bigglitcher.Parent = glitchersfolder
+bigglitcher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bigglitcher.Position = UDim2.new(0, 0, 0.146666676, 0)
+bigglitcher.Size = UDim2.new(0, 254, 0, 31)
+bigglitcher.Font = Enum.Font.SourceSans
+bigglitcher.Text = ".big glitcher"
+bigglitcher.TextColor3 = Color3.fromRGB(0, 0, 0)
+bigglitcher.TextScaled = true
+bigglitcher.TextSize = 14.000
+bigglitcher.TextWrapped = true
+
+glitcher1.Name = "glitcher1"
+glitcher1.Parent = glitchersfolder
+glitcher1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+glitcher1.Position = UDim2.new(0, 0, 0.193333328, 0)
+glitcher1.Size = UDim2.new(0, 254, 0, 31)
+glitcher1.Font = Enum.Font.SourceSans
+glitcher1.Text = ".glitcher 1"
+glitcher1.TextColor3 = Color3.fromRGB(0, 0, 0)
+glitcher1.TextScaled = true
+glitcher1.TextSize = 14.000
+glitcher1.TextWrapped = true
+
+glitcher2.Name = "glitcher2"
+glitcher2.Parent = glitchersfolder
+glitcher2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+glitcher2.Position = UDim2.new(0, 0, 0.239999995, 0)
+glitcher2.Size = UDim2.new(0, 254, 0, 31)
+glitcher2.Font = Enum.Font.SourceSans
+glitcher2.Text = ".glitcher 2"
+glitcher2.TextColor3 = Color3.fromRGB(0, 0, 0)
+glitcher2.TextScaled = true
+glitcher2.TextSize = 14.000
+glitcher2.TextWrapped = true
+
+glitcherstitle.Name = "glitchers title"
+glitcherstitle.Parent = glitchersfolder
+glitcherstitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+glitcherstitle.Size = UDim2.new(0, 254, 0, 34)
+glitcherstitle.Font = Enum.Font.SourceSans
+glitcherstitle.Text = "glitchers"
+glitcherstitle.TextColor3 = Color3.fromRGB(0, 0, 0)
+glitcherstitle.TextScaled = true
+glitcherstitle.TextSize = 14.000
+glitcherstitle.TextWrapped = true
+
+rbkingfolder.Name = "rb king folder"
+rbkingfolder.Parent = areawerecommandshat
+
+rbkingtitle.Name = "rb king title"
+rbkingtitle.Parent = rbkingfolder
+rbkingtitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rbkingtitle.Position = UDim2.new(0, 0, 0.299999982, 0)
+rbkingtitle.Size = UDim2.new(0, 254, 0, 35)
+rbkingtitle.Font = Enum.Font.SourceSans
+rbkingtitle.Text = "rb king's"
+rbkingtitle.TextColor3 = Color3.fromRGB(0, 0, 0)
+rbkingtitle.TextScaled = true
+rbkingtitle.TextSize = 14.000
+rbkingtitle.TextWrapped = true
+
+rbkingbutton.Name = "rb king button"
+rbkingbutton.Parent = rbkingfolder
+rbkingbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rbkingbutton.Position = UDim2.new(0, 0, 0.353333414, 0)
+rbkingbutton.Size = UDim2.new(0, 254, 0, 32)
+rbkingbutton.Font = Enum.Font.SourceSans
+rbkingbutton.Text = ".rb king"
+rbkingbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+rbkingbutton.TextScaled = true
+rbkingbutton.TextSize = 14.000
+rbkingbutton.TextWrapped = true
+
+rbking2button.Name = "rb king 2 button"
+rbking2button.Parent = rbkingfolder
+rbking2button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rbking2button.Position = UDim2.new(0, 0, 0.402222306, 0)
+rbking2button.Size = UDim2.new(0, 254, 0, 32)
+rbking2button.Font = Enum.Font.SourceSans
+rbking2button.Text = ".rb king 2"
+rbking2button.TextColor3 = Color3.fromRGB(0, 0, 0)
+rbking2button.TextScaled = true
+rbking2button.TextSize = 14.000
+rbking2button.TextWrapped = true
+
+neptuneswitcherutton.Name = "neptune switcher utton"
+neptuneswitcherutton.Parent = areawerecommandshat
+neptuneswitcherutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+neptuneswitcherutton.Position = UDim2.new(-0.00249735638, 0, 0.449061364, 0)
+neptuneswitcherutton.Size = UDim2.new(0, 254, 0, 31)
+neptuneswitcherutton.Font = Enum.Font.SourceSans
+neptuneswitcherutton.Text = ".neptune switcher"
+neptuneswitcherutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+neptuneswitcherutton.TextScaled = true
+neptuneswitcherutton.TextSize = 14.000
+neptuneswitcherutton.TextWrapped = true
+
+fightermode.Name = "fighter mode"
+fightermode.Parent = areawerecommandshat
+fightermode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fightermode.Position = UDim2.new(-0.00249735638, 0, 0.496839136, 0)
+fightermode.Size = UDim2.new(0, 254, 0, 31)
+fightermode.Font = Enum.Font.SourceSans
+fightermode.Text = ".fighter mode"
+fightermode.TextColor3 = Color3.fromRGB(0, 0, 0)
+fightermode.TextScaled = true
+fightermode.TextSize = 14.000
+fightermode.TextWrapped = true
+
+sifisword.Name = "sifi sword"
+sifisword.Parent = areawerecommandshat
+sifisword.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sifisword.Position = UDim2.new(-0.00249735638, 0, 0.550172448, 0)
+sifisword.Size = UDim2.new(0, 254, 0, 31)
+sifisword.Font = Enum.Font.SourceSans
+sifisword.Text = ".sifi sword"
+sifisword.TextColor3 = Color3.fromRGB(0, 0, 0)
+sifisword.TextScaled = true
+sifisword.TextSize = 14.000
+sifisword.TextWrapped = true
+
+goldengun.Name = "golden gun"
+goldengun.Parent = areawerecommandshat
+goldengun.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+goldengun.Position = UDim2.new(-0.00249735638, 0, 0.6023947, 0)
+goldengun.Size = UDim2.new(0, 254, 0, 31)
+goldengun.Font = Enum.Font.SourceSans
+goldengun.Text = ".golden gun"
+goldengun.TextColor3 = Color3.fromRGB(0, 0, 0)
+goldengun.TextScaled = true
+goldengun.TextSize = 14.000
+goldengun.TextWrapped = true
+
+chessking.Name = "chess king"
+chessking.Parent = areawerecommandshat
+chessking.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+chessking.Position = UDim2.new(-0.00249735638, 0, 0.657950282, 0)
+chessking.Size = UDim2.new(0, 254, 0, 31)
+chessking.Font = Enum.Font.SourceSans
+chessking.Text = ".chess king"
+chessking.TextColor3 = Color3.fromRGB(0, 0, 0)
+chessking.TextScaled = true
+chessking.TextSize = 14.000
+chessking.TextWrapped = true
+
+voicesneptune.Name = "voices neptune"
+voicesneptune.Parent = areawerecommandshat
+voicesneptune.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+voicesneptune.Position = UDim2.new(-0.00249735638, 0, 0.716839194, 0)
+voicesneptune.Size = UDim2.new(0, 254, 0, 31)
+voicesneptune.Font = Enum.Font.SourceSans
+voicesneptune.Text = ".voices neptune"
+voicesneptune.TextColor3 = Color3.fromRGB(0, 0, 0)
+voicesneptune.TextScaled = true
+voicesneptune.TextSize = 14.000
+voicesneptune.TextWrapped = true
+
+keyboard.Name = "keyboard"
+keyboard.Parent = areawerecommandshat
+keyboard.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+keyboard.Position = UDim2.new(-0.00249735638, 0, 0.767950296, 0)
+keyboard.Size = UDim2.new(0, 254, 0, 31)
+keyboard.Font = Enum.Font.SourceSans
+keyboard.Text = ".keyboard"
+keyboard.TextColor3 = Color3.fromRGB(0, 0, 0)
+keyboard.TextScaled = true
+keyboard.TextSize = 14.000
+keyboard.TextWrapped = true
+
+staff.Name = "staff"
+staff.Parent = areawerecommandshat
+staff.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+staff.Position = UDim2.new(-0.00249735638, 0, 0.824616969, 0)
+staff.Size = UDim2.new(0, 254, 0, 31)
+staff.Font = Enum.Font.SourceSans
+staff.Text = ".staff"
+staff.TextColor3 = Color3.fromRGB(0, 0, 0)
+staff.TextScaled = true
+staff.TextSize = 14.000
+staff.TextWrapped = true
+
+uzi.Name = "uzi"
+uzi.Parent = areawerecommandshat
+uzi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uzi.Position = UDim2.new(-0.00249735638, 0, 0.879061401, 0)
+uzi.Size = UDim2.new(0, 254, 0, 31)
+uzi.Font = Enum.Font.SourceSans
+uzi.Text = ".uzi"
+uzi.TextColor3 = Color3.fromRGB(0, 0, 0)
+uzi.TextScaled = true
+uzi.TextSize = 14.000
+uzi.TextWrapped = true
+
+goodcopbadcop.Name = "goodcopbadcop"
+goodcopbadcop.Parent = areawerecommandshat
+goodcopbadcop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+goodcopbadcop.Position = UDim2.new(-0.00249735638, 0, 0.934616983, 0)
+goodcopbadcop.Size = UDim2.new(0, 254, 0, 31)
+goodcopbadcop.Font = Enum.Font.SourceSans
+goodcopbadcop.Text = ".gcbc"
+goodcopbadcop.TextColor3 = Color3.fromRGB(0, 0, 0)
+goodcopbadcop.TextScaled = true
+goodcopbadcop.TextSize = 14.000
+goodcopbadcop.TextWrapped = true
+
+clsoehat.Name = "clsoe hat"
+clsoehat.Parent = hatcommandsbar
+clsoehat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clsoehat.Position = UDim2.new(0.806691408, 0, -0.0834468678, 0)
+clsoehat.Size = UDim2.new(0, 43, 0, 23)
+clsoehat.Font = Enum.Font.SourceSans
+clsoehat.Text = "X"
+clsoehat.TextColor3 = Color3.fromRGB(0, 0, 0)
+clsoehat.TextScaled = true
+clsoehat.TextSize = 14.000
+clsoehat.TextWrapped = true
+
+hatlesscommandsbar.Name = "hatless commands bar"
+hatlesscommandsbar.Parent = commandsgui
+hatlesscommandsbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hatlesscommandsbar.Position = UDim2.new(0.794380605, 0, 0.707011342, 0)
+hatlesscommandsbar.Size = UDim2.new(0, 269, 0, 279)
+hatlesscommandsbar.Visible = false
+
+commandsframehatless.Name = "commandsframe hatless"
+commandsframehatless.Parent = hatlesscommandsbar
+commandsframehatless.Active = true
+commandsframehatless.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+commandsframehatless.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
+commandsframehatless.Size = UDim2.new(0, 268, 0, 273)
+commandsframehatless.CanvasSize = UDim2.new(0, 0, 0, 2000)
+
+areawerecommandshatless.Name = "area were commands hatless"
+areawerecommandshatless.Parent = commandsframehatless
+areawerecommandshatless.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+areawerecommandshatless.Position = UDim2.new(0, 0, -0.000107314561, 0)
+areawerecommandshatless.Size = UDim2.new(0, 254, 0, 900)
+
+smugbutton.Name = "smug button"
+smugbutton.Parent = areawerecommandshatless
+smugbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+smugbutton.Size = UDim2.new(0, 254, 0, 28)
+smugbutton.Font = Enum.Font.SourceSans
+smugbutton.Text = ".smug"
+smugbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+smugbutton.TextScaled = true
+smugbutton.TextSize = 14.000
+smugbutton.TextWrapped = true
+
+distractionbutton.Name = "distraction button"
+distractionbutton.Parent = areawerecommandshatless
+distractionbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+distractionbutton.Position = UDim2.new(0, 0, 0.0399999991, 0)
+distractionbutton.Size = UDim2.new(0, 254, 0, 28)
+distractionbutton.Font = Enum.Font.SourceSans
+distractionbutton.Text = ".distract dance"
+distractionbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+distractionbutton.TextScaled = true
+distractionbutton.TextSize = 14.000
+distractionbutton.TextWrapped = true
+
+chillbutton.Name = "chill button"
+chillbutton.Parent = areawerecommandshatless
+chillbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+chillbutton.Position = UDim2.new(0, 0, 0.0833333284, 0)
+chillbutton.Size = UDim2.new(0, 254, 0, 28)
+chillbutton.Font = Enum.Font.SourceSans
+chillbutton.Text = ".chill"
+chillbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+chillbutton.TextScaled = true
+chillbutton.TextSize = 14.000
+chillbutton.TextWrapped = true
+
+susbutton.Name = "sus button"
+susbutton.Parent = areawerecommandshatless
+susbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+susbutton.Position = UDim2.new(0, 0, 0.128888875, 0)
+susbutton.Size = UDim2.new(0, 254, 0, 28)
+susbutton.Font = Enum.Font.SourceSans
+susbutton.Text = ".sus"
+susbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+susbutton.TextScaled = true
+susbutton.TextSize = 14.000
+susbutton.TextWrapped = true
+
+firegodbutton.Name = "fire god button"
+firegodbutton.Parent = areawerecommandshatless
+firegodbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+firegodbutton.Position = UDim2.new(0, 0, 0.172222212, 0)
+firegodbutton.Size = UDim2.new(0, 254, 0, 28)
+firegodbutton.Font = Enum.Font.SourceSans
+firegodbutton.Text = ".fire god"
+firegodbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+firegodbutton.TextScaled = true
+firegodbutton.TextSize = 14.000
+firegodbutton.TextWrapped = true
+
+clovrbutton.Name = "clovr button"
+clovrbutton.Parent = areawerecommandshatless
+clovrbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clovrbutton.Position = UDim2.new(0, 0, 0.215555549, 0)
+clovrbutton.Size = UDim2.new(0, 254, 0, 28)
+clovrbutton.Font = Enum.Font.SourceSans
+clovrbutton.Text = ".clovr"
+clovrbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+clovrbutton.TextScaled = true
+clovrbutton.TextSize = 14.000
+clovrbutton.TextWrapped = true
+
+reachbutton.Name = "reachbutton"
+reachbutton.Parent = areawerecommandshatless
+reachbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+reachbutton.Position = UDim2.new(0, 0, 0.25999999, 0)
+reachbutton.Size = UDim2.new(0, 254, 0, 28)
+reachbutton.Font = Enum.Font.SourceSans
+reachbutton.Text = ".reach"
+reachbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+reachbutton.TextScaled = true
+reachbutton.TextSize = 14.000
+reachbutton.TextWrapped = true
+
+flossbutton.Name = "floss button"
+flossbutton.Parent = areawerecommandshatless
+flossbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+flossbutton.Position = UDim2.new(0, 0, 0.302222222, 0)
+flossbutton.Size = UDim2.new(0, 254, 0, 28)
+flossbutton.Font = Enum.Font.SourceSans
+flossbutton.Text = ".floss"
+flossbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+flossbutton.TextScaled = true
+flossbutton.TextSize = 14.000
+flossbutton.TextWrapped = true
+
+russiankickbutton.Name = "russian kick button"
+russiankickbutton.Parent = areawerecommandshatless
+russiankickbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+russiankickbutton.Position = UDim2.new(0, 0, 0.344444454, 0)
+russiankickbutton.Size = UDim2.new(0, 254, 0, 28)
+russiankickbutton.Font = Enum.Font.SourceSans
+russiankickbutton.Text = ".russian kick"
+russiankickbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+russiankickbutton.TextScaled = true
+russiankickbutton.TextSize = 14.000
+russiankickbutton.TextWrapped = true
+
+zenbutton.Name = "zen button"
+zenbutton.Parent = areawerecommandshatless
+zenbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+zenbutton.Position = UDim2.new(0, 0, 0.388888896, 0)
+zenbutton.Size = UDim2.new(0, 254, 0, 28)
+zenbutton.Font = Enum.Font.SourceSans
+zenbutton.Text = ".zen"
+zenbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+zenbutton.TextScaled = true
+zenbutton.TextSize = 14.000
+zenbutton.TextWrapped = true
+
+memebutton.Name = "meme button"
+memebutton.Parent = areawerecommandshatless
+memebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+memebutton.Position = UDim2.new(0, 0, 0.430000007, 0)
+memebutton.Size = UDim2.new(0, 254, 0, 28)
+memebutton.Font = Enum.Font.SourceSans
+memebutton.Text = ".meme"
+memebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+memebutton.TextScaled = true
+memebutton.TextSize = 14.000
+memebutton.TextWrapped = true
+
+memeysv25buttton.Name = "memeys v2.5 buttton"
+memeysv25buttton.Parent = areawerecommandshatless
+memeysv25buttton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+memeysv25buttton.Position = UDim2.new(0, 0, 0.468888909, 0)
+memeysv25buttton.Size = UDim2.new(0, 254, 0, 28)
+memeysv25buttton.Font = Enum.Font.SourceSans
+memeysv25buttton.Text = ".memeus v2.5"
+memeysv25buttton.TextColor3 = Color3.fromRGB(0, 0, 0)
+memeysv25buttton.TextScaled = true
+memeysv25buttton.TextSize = 14.000
+memeysv25buttton.TextWrapped = true
+
+joybutton.Name = "joy button"
+joybutton.Parent = areawerecommandshatless
+joybutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+joybutton.Position = UDim2.new(0, 0, 0.51111114, 0)
+joybutton.Size = UDim2.new(0, 254, 0, 28)
+joybutton.Font = Enum.Font.SourceSans
+joybutton.Text = ".joy"
+joybutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+joybutton.TextScaled = true
+joybutton.TextSize = 14.000
+joybutton.TextWrapped = true
+
+electroswingbutton.Name = "electro swing button"
+electroswingbutton.Parent = areawerecommandshatless
+electroswingbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+electroswingbutton.Position = UDim2.new(0, 0, 0.553333342, 0)
+electroswingbutton.Size = UDim2.new(0, 254, 0, 28)
+electroswingbutton.Font = Enum.Font.SourceSans
+electroswingbutton.Text = ".electro swing"
+electroswingbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+electroswingbutton.TextScaled = true
+electroswingbutton.TextSize = 14.000
+electroswingbutton.TextWrapped = true
+
+flipbutton.Name = "flip button"
+flipbutton.Parent = areawerecommandshatless
+flipbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+flipbutton.Position = UDim2.new(0, 0, 0.594444454, 0)
+flipbutton.Size = UDim2.new(0, 254, 0, 28)
+flipbutton.Font = Enum.Font.SourceSans
+flipbutton.Text = ".flip"
+flipbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+flipbutton.TextScaled = true
+flipbutton.TextSize = 14.000
+flipbutton.TextWrapped = true
+
+scoutbutton.Name = "scout button"
+scoutbutton.Parent = areawerecommandshatless
+scoutbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scoutbutton.Position = UDim2.new(0, 0, 0.635555565, 0)
+scoutbutton.Size = UDim2.new(0, 254, 0, 28)
+scoutbutton.Font = Enum.Font.SourceSans
+scoutbutton.Text = ".scout"
+scoutbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+scoutbutton.TextScaled = true
+scoutbutton.TextSize = 14.000
+scoutbutton.TextWrapped = true
+
+penguindancebutton.Name = "penguin dance button"
+penguindancebutton.Parent = areawerecommandshatless
+penguindancebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+penguindancebutton.Position = UDim2.new(0, 0, 0.676666677, 0)
+penguindancebutton.Size = UDim2.new(0, 254, 0, 28)
+penguindancebutton.Font = Enum.Font.SourceSans
+penguindancebutton.Text = ".penguin dance"
+penguindancebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+penguindancebutton.TextScaled = true
+penguindancebutton.TextSize = 14.000
+penguindancebutton.TextWrapped = true
+
+sonicbutton.Name = "sonic button"
+sonicbutton.Parent = areawerecommandshatless
+sonicbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sonicbutton.Position = UDim2.new(0, 0, 0.716666698, 0)
+sonicbutton.Size = UDim2.new(0, 254, 0, 28)
+sonicbutton.Font = Enum.Font.SourceSans
+sonicbutton.Text = ".sonic"
+sonicbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+sonicbutton.TextScaled = true
+sonicbutton.TextSize = 14.000
+sonicbutton.TextWrapped = true
+
+enderbutton.Name = "ender button"
+enderbutton.Parent = areawerecommandshatless
+enderbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+enderbutton.Position = UDim2.new(0, 0, 0.76444447, 0)
+enderbutton.Size = UDim2.new(0, 254, 0, 28)
+enderbutton.Font = Enum.Font.SourceSans
+enderbutton.Text = ".ender"
+enderbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+enderbutton.TextScaled = true
+enderbutton.TextSize = 14.000
+enderbutton.TextWrapped = true
+
+goopiebutton.Name = "goopie button"
+goopiebutton.Parent = areawerecommandshatless
+goopiebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+goopiebutton.Position = UDim2.new(0, 0, 0.813333333, 0)
+goopiebutton.Size = UDim2.new(0, 254, 0, 28)
+goopiebutton.Font = Enum.Font.SourceSans
+goopiebutton.Text = ".goopie"
+goopiebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+goopiebutton.TextScaled = true
+goopiebutton.TextSize = 14.000
+goopiebutton.TextWrapped = true
+
+galebutton.Name = "gale button"
+galebutton.Parent = areawerecommandshatless
+galebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+galebutton.Position = UDim2.new(0, 0, 0.862222195, 0)
+galebutton.Size = UDim2.new(0, 254, 0, 28)
+galebutton.Font = Enum.Font.SourceSans
+galebutton.Text = ".gale"
+galebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+galebutton.TextScaled = true
+galebutton.TextSize = 14.000
+galebutton.TextWrapped = true
+
+xesterbutton.Name = "xester button"
+xesterbutton.Parent = areawerecommandshatless
+xesterbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+xesterbutton.Position = UDim2.new(0, 0, 0.906666636, 0)
+xesterbutton.Size = UDim2.new(0, 254, 0, 28)
+xesterbutton.Font = Enum.Font.SourceSans
+xesterbutton.Text = ".xester"
+xesterbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+xesterbutton.TextScaled = true
+xesterbutton.TextSize = 14.000
+xesterbutton.TextWrapped = true
+
+krystal.Name = "krystal"
+krystal.Parent = areawerecommandshatless
+krystal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+krystal.Position = UDim2.new(0, 0, 0.949999988, 0)
+krystal.Size = UDim2.new(0, 254, 0, 28)
+krystal.Font = Enum.Font.SourceSans
+krystal.Text = ".krystal dance"
+krystal.TextColor3 = Color3.fromRGB(0, 0, 0)
+krystal.TextScaled = true
+krystal.TextSize = 14.000
+krystal.TextWrapped = true
+
+catbutton.Name = "cat button"
+catbutton.Parent = areawerecommandshatless
+catbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+catbutton.Position = UDim2.new(0, 0, 1, 0)
+catbutton.Size = UDim2.new(0, 254, 0, 28)
+catbutton.Font = Enum.Font.SourceSans
+catbutton.Text = ".cat v2"
+catbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+catbutton.TextScaled = true
+catbutton.TextSize = 14.000
+catbutton.TextWrapped = true
+
+killbot.Name = "kill bot"
+killbot.Parent = areawerecommandshatless
+killbot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+killbot.Position = UDim2.new(0, 0, 1.04999995, 0)
+killbot.Size = UDim2.new(0, 254, 0, 28)
+killbot.Font = Enum.Font.SourceSans
+killbot.Text = ".killbot v2"
+killbot.TextColor3 = Color3.fromRGB(0, 0, 0)
+killbot.TextScaled = true
+killbot.TextSize = 14.000
+killbot.TextWrapped = true
+
+caducusbutton.Name = "caducus button"
+caducusbutton.Parent = areawerecommandshatless
+caducusbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+caducusbutton.Position = UDim2.new(0, 0, 1.0999999, 0)
+caducusbutton.Size = UDim2.new(0, 254, 0, 28)
+caducusbutton.Font = Enum.Font.SourceSans
+caducusbutton.Text = ".caducus"
+caducusbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+caducusbutton.TextScaled = true
+caducusbutton.TextSize = 14.000
+caducusbutton.TextWrapped = true
+
+orangejusticebutton.Name = "orange justice button"
+orangejusticebutton.Parent = areawerecommandshatless
+orangejusticebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+orangejusticebutton.Position = UDim2.new(0, 0, 1.15666652, 0)
+orangejusticebutton.Size = UDim2.new(0, 254, 0, 28)
+orangejusticebutton.Font = Enum.Font.SourceSans
+orangejusticebutton.Text = ".orange justice"
+orangejusticebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+orangejusticebutton.TextScaled = true
+orangejusticebutton.TextSize = 14.000
+orangejusticebutton.TextWrapped = true
+
+defaultdancebutton.Name = "default dance button"
+defaultdancebutton.Parent = areawerecommandshatless
+defaultdancebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+defaultdancebutton.Position = UDim2.new(0, 0, 1.2099998, 0)
+defaultdancebutton.Size = UDim2.new(0, 254, 0, 28)
+defaultdancebutton.Font = Enum.Font.SourceSans
+defaultdancebutton.Text = ".default dance"
+defaultdancebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+defaultdancebutton.TextScaled = true
+defaultdancebutton.TextSize = 14.000
+defaultdancebutton.TextWrapped = true
+
+fabbutton.Name = "fab button"
+fabbutton.Parent = areawerecommandshatless
+fabbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fabbutton.Position = UDim2.new(0, 0, 1.26222205, 0)
+fabbutton.Size = UDim2.new(0, 254, 0, 28)
+fabbutton.Font = Enum.Font.SourceSans
+fabbutton.Text = ".fab"
+fabbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+fabbutton.TextScaled = true
+fabbutton.TextSize = 14.000
+fabbutton.TextWrapped = true
+
+taketheL.Name = "take the L"
+taketheL.Parent = areawerecommandshatless
+taketheL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+taketheL.Position = UDim2.new(0, 0, 1.32111096, 0)
+taketheL.Size = UDim2.new(0, 254, 0, 28)
+taketheL.Font = Enum.Font.SourceSans
+taketheL.Text = ".take the l"
+taketheL.TextColor3 = Color3.fromRGB(0, 0, 0)
+taketheL.TextScaled = true
+taketheL.TextSize = 14.000
+taketheL.TextWrapped = true
+
+sidestepbutton.Name = "sidestep button"
+sidestepbutton.Parent = areawerecommandshatless
+sidestepbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sidestepbutton.Position = UDim2.new(0, 0, 1.37777758, 0)
+sidestepbutton.Size = UDim2.new(0, 254, 0, 28)
+sidestepbutton.Font = Enum.Font.SourceSans
+sidestepbutton.Text = ".sidestep"
+sidestepbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+sidestepbutton.TextScaled = true
+sidestepbutton.TextSize = 14.000
+sidestepbutton.TextWrapped = true
+
+serveradminbutton.Name = "server admin button"
+serveradminbutton.Parent = areawerecommandshatless
+serveradminbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+serveradminbutton.Position = UDim2.new(0, 0, 1.42111087, 0)
+serveradminbutton.Size = UDim2.new(0, 256, 0, 28)
+serveradminbutton.Font = Enum.Font.SourceSans
+serveradminbutton.Text = ".server admin"
+serveradminbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+serveradminbutton.TextScaled = true
+serveradminbutton.TextSize = 14.000
+serveradminbutton.TextWrapped = true
+
+noobswitcherbutton.Name = "noob switcher button"
+noobswitcherbutton.Parent = areawerecommandshatless
+noobswitcherbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+noobswitcherbutton.Position = UDim2.new(0, 0, 1.46111095, 0)
+noobswitcherbutton.Size = UDim2.new(0, 261, 0, 28)
+noobswitcherbutton.Font = Enum.Font.SourceSans
+noobswitcherbutton.Text = ".noob switcher"
+noobswitcherbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+noobswitcherbutton.TextScaled = true
+noobswitcherbutton.TextSize = 14.000
+noobswitcherbutton.TextWrapped = true
+
+helkernsmechbutton.Name = "helkerns mech button"
+helkernsmechbutton.Parent = areawerecommandshatless
+helkernsmechbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+helkernsmechbutton.Position = UDim2.new(0, 0, 1.50111091, 0)
+helkernsmechbutton.Size = UDim2.new(0, 261, 0, 28)
+helkernsmechbutton.Font = Enum.Font.SourceSans
+helkernsmechbutton.Text = ".helkern mech"
+helkernsmechbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+helkernsmechbutton.TextScaled = true
+helkernsmechbutton.TextSize = 14.000
+helkernsmechbutton.TextWrapped = true
+
+ubergodbutton.Name = "ubergod button"
+ubergodbutton.Parent = areawerecommandshatless
+ubergodbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ubergodbutton.Position = UDim2.new(-0.0157480314, 0, 1.5466665, 0)
+ubergodbutton.Size = UDim2.new(0, 261, 0, 28)
+ubergodbutton.Font = Enum.Font.SourceSans
+ubergodbutton.Text = ".ubergod"
+ubergodbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+ubergodbutton.TextScaled = true
+ubergodbutton.TextSize = 14.000
+ubergodbutton.TextWrapped = true
+
+runman.Name = "run man"
+runman.Parent = areawerecommandshatless
+runman.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+runman.Position = UDim2.new(-0.0196850393, 0, 1.59111094, 0)
+runman.Size = UDim2.new(0, 261, 0, 28)
+runman.Font = Enum.Font.SourceSans
+runman.Text = ".run man"
+runman.TextColor3 = Color3.fromRGB(0, 0, 0)
+runman.TextScaled = true
+runman.TextSize = 14.000
+runman.TextWrapped = true
+
+popperbor.Name = "popper bor"
+popperbor.Parent = areawerecommandshatless
+popperbor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+popperbor.Position = UDim2.new(0, 0, 1.63555539, 0)
+popperbor.Size = UDim2.new(0, 261, 0, 28)
+popperbor.Font = Enum.Font.SourceSans
+popperbor.Text = ".popper bro"
+popperbor.TextColor3 = Color3.fromRGB(0, 0, 0)
+popperbor.TextScaled = true
+popperbor.TextSize = 14.000
+popperbor.TextWrapped = true
+
+winterfeel.Name = "winter feel"
+winterfeel.Parent = areawerecommandshatless
+winterfeel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+winterfeel.Position = UDim2.new(-0.0157480314, 0, 1.67999983, 0)
+winterfeel.Size = UDim2.new(0, 261, 0, 28)
+winterfeel.Font = Enum.Font.SourceSans
+winterfeel.Text = ".winter feel"
+winterfeel.TextColor3 = Color3.fromRGB(0, 0, 0)
+winterfeel.TextScaled = true
+winterfeel.TextSize = 14.000
+winterfeel.TextWrapped = true
+
+blink.Name = "blink"
+blink.Parent = areawerecommandshatless
+blink.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+blink.Position = UDim2.new(-0.0157480314, 0, 1.72555542, 0)
+blink.Size = UDim2.new(0, 261, 0, 28)
+blink.Font = Enum.Font.SourceSans
+blink.Text = ".blink"
+blink.TextColor3 = Color3.fromRGB(0, 0, 0)
+blink.TextScaled = true
+blink.TextSize = 14.000
+blink.TextWrapped = true
+
+serveradminswitcher.Name = "serveradmin switcher"
+serveradminswitcher.Parent = areawerecommandshatless
+serveradminswitcher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+serveradminswitcher.Position = UDim2.new(-0.0196850393, 0, 1.7788887, 0)
+serveradminswitcher.Size = UDim2.new(0, 261, 0, 28)
+serveradminswitcher.Font = Enum.Font.SourceSans
+serveradminswitcher.Text = ".serveradmin switcher"
+serveradminswitcher.TextColor3 = Color3.fromRGB(0, 0, 0)
+serveradminswitcher.TextScaled = true
+serveradminswitcher.TextSize = 14.000
+serveradminswitcher.TextWrapped = true
+
+smallfighter.Name = "small fighter"
+smallfighter.Parent = areawerecommandshatless
+smallfighter.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+smallfighter.Position = UDim2.new(-0.0196850393, 0, 1.82888865, 0)
+smallfighter.Size = UDim2.new(0, 261, 0, 28)
+smallfighter.Font = Enum.Font.SourceSans
+smallfighter.Text = ".small fighter"
+smallfighter.TextColor3 = Color3.fromRGB(0, 0, 0)
+smallfighter.TextScaled = true
+smallfighter.TextSize = 14.000
+smallfighter.TextWrapped = true
+
+firegod.Name = "fire god"
+firegod.Parent = areawerecommandshatless
+firegod.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+firegod.Position = UDim2.new(-0.0196850393, 0, 1.88333309, 0)
+firegod.Size = UDim2.new(0, 261, 0, 28)
+firegod.Font = Enum.Font.SourceSans
+firegod.Text = ".fire god"
+firegod.TextColor3 = Color3.fromRGB(0, 0, 0)
+firegod.TextScaled = true
+firegod.TextSize = 14.000
+firegod.TextWrapped = true
+
+clsoehatless.Name = "clsoe hatless"
+clsoehatless.Parent = hatlesscommandsbar
+clsoehatless.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clsoehatless.Position = UDim2.new(0.806691408, 0, -0.0834468678, 0)
+clsoehatless.Size = UDim2.new(0, 43, 0, 23)
+clsoehatless.Font = Enum.Font.SourceSans
+clsoehatless.Text = "X"
+clsoehatless.TextColor3 = Color3.fromRGB(0, 0, 0)
+clsoehatless.TextScaled = true
+clsoehatless.TextSize = 14.000
+clsoehatless.TextWrapped = true
+
+guicommandsbar.Name = "gui commands bar"
+guicommandsbar.Parent = commandsgui
+guicommandsbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+guicommandsbar.Position = UDim2.new(0.794380605, 0, 0.707011342, 0)
+guicommandsbar.Size = UDim2.new(0, 269, 0, 279)
+guicommandsbar.Visible = false
+
+commandsframegui.Name = "commandsframe gui"
+commandsframegui.Parent = guicommandsbar
+commandsframegui.Active = true
+commandsframegui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+commandsframegui.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
+commandsframegui.Size = UDim2.new(0, 268, 0, 273)
+commandsframegui.CanvasSize = UDim2.new(0, 0, 0, 1500)
+
+areawerecommandsgui.Name = "area were commands gui"
+areawerecommandsgui.Parent = commandsframegui
+areawerecommandsgui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+areawerecommandsgui.Position = UDim2.new(0, 0, -0.000107314561, 0)
+areawerecommandsgui.Size = UDim2.new(0, 254, 0, 900)
+
+deerihubstuff.Name = "deeri hub stuff"
+deerihubstuff.Parent = areawerecommandsgui
+
+sidebar.Name = "sidebar"
+sidebar.Parent = deerihubstuff
+sidebar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sidebar.Size = UDim2.new(0, 254, 0, 34)
+sidebar.Font = Enum.Font.SourceSans
+sidebar.Text = "!sidebar"
+sidebar.TextColor3 = Color3.fromRGB(0, 0, 0)
+sidebar.TextScaled = true
+sidebar.TextSize = 14.000
+sidebar.TextWrapped = true
+
+deerihubadminpicker.Name = "deeri hub admin picker"
+deerihubadminpicker.Parent = deerihubstuff
+
+adminpicker.Name = "admin picker"
+adminpicker.Parent = deerihubadminpicker
+adminpicker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+adminpicker.Position = UDim2.new(0, 0, 0.164444447, 0)
+adminpicker.Size = UDim2.new(0, 254, 0, 39)
+adminpicker.Font = Enum.Font.SourceSans
+adminpicker.Text = ".admin"
+adminpicker.TextColor3 = Color3.fromRGB(0, 0, 0)
+adminpicker.TextScaled = true
+adminpicker.TextSize = 14.000
+adminpicker.TextWrapped = true
+
+credits.Name = "credits"
+credits.Parent = deerihubstuff
+credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+credits.Position = UDim2.new(0, 0, 0.222222224, 0)
+credits.Size = UDim2.new(0, 254, 0, 39)
+credits.Font = Enum.Font.SourceSans
+credits.Text = ".credits"
+credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+credits.TextScaled = true
+credits.TextSize = 14.000
+credits.TextWrapped = true
+
+gamesguis.Name = "games guis"
+gamesguis.Parent = areawerecommandsgui
+
+animationguis.Name = "animation guis"
+animationguis.Parent = areawerecommandsgui
+
+animationgui.Name = "animation gui"
+animationgui.Parent = animationguis
+animationgui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+animationgui.Position = UDim2.new(0, 0, 0.107777774, 0)
+animationgui.Size = UDim2.new(0, 254, 0, 35)
+animationgui.Font = Enum.Font.SourceSans
+animationgui.Text = ".animation"
+animationgui.TextColor3 = Color3.fromRGB(0, 0, 0)
+animationgui.TextScaled = true
+animationgui.TextSize = 14.000
+animationgui.TextWrapped = true
+
+adminguis.Name = "admin guis"
+adminguis.Parent = areawerecommandsgui
+
+dashadminbutton.Name = "dash admin button"
+dashadminbutton.Parent = adminguis
+dashadminbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dashadminbutton.Position = UDim2.new(0, 0, 0.0500000007, 0)
+dashadminbutton.Size = UDim2.new(0, 254, 0, 35)
+dashadminbutton.Font = Enum.Font.SourceSans
+dashadminbutton.Text = ".dash admin"
+dashadminbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+dashadminbutton.TextScaled = true
+dashadminbutton.TextSize = 14.000
+dashadminbutton.TextWrapped = true
+
+homebrewadmibutton.Name = "homebrew admi button"
+homebrewadmibutton.Parent = adminguis
+homebrewadmibutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+homebrewadmibutton.Position = UDim2.new(0, 0, 0.273333341, 0)
+homebrewadmibutton.Size = UDim2.new(0, 254, 0, 39)
+homebrewadmibutton.Font = Enum.Font.SourceSans
+homebrewadmibutton.Text = ".homebrew admin"
+homebrewadmibutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+homebrewadmibutton.TextScaled = true
+homebrewadmibutton.TextSize = 14.000
+homebrewadmibutton.TextWrapped = true
+
+miscguis.Name = "misc guis"
+miscguis.Parent = areawerecommandsgui
+
+astrava.Name = "astrava"
+astrava.Parent = areawerecommandsgui
+astrava.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+astrava.Position = UDim2.new(0, 0, 0.333333343, 0)
+astrava.Size = UDim2.new(0, 254, 0, 39)
+astrava.Font = Enum.Font.SourceSans
+astrava.Text = ".astrava"
+astrava.TextColor3 = Color3.fromRGB(0, 0, 0)
+astrava.TextScaled = true
+astrava.TextSize = 14.000
+astrava.TextWrapped = true
+
+Selexity.Name = "Selexity"
+Selexity.Parent = areawerecommandsgui
+Selexity.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Selexity.Position = UDim2.new(0, 0, 0.394444466, 0)
+Selexity.Size = UDim2.new(0, 254, 0, 39)
+Selexity.Font = Enum.Font.SourceSans
+Selexity.Text = ".Selexity"
+Selexity.TextColor3 = Color3.fromRGB(0, 0, 0)
+Selexity.TextScaled = true
+Selexity.TextSize = 14.000
+Selexity.TextWrapped = true
+
+Arosia.Name = "Arosia"
+Arosia.Parent = areawerecommandsgui
+Arosia.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Arosia.Position = UDim2.new(0, 0, 0.452222228, 0)
+Arosia.Size = UDim2.new(0, 254, 0, 39)
+Arosia.Font = Enum.Font.SourceSans
+Arosia.Text = ".Arosia"
+Arosia.TextColor3 = Color3.fromRGB(0, 0, 0)
+Arosia.TextScaled = true
+Arosia.TextSize = 14.000
+Arosia.TextWrapped = true
+
+Andromeda.Name = "Andromeda"
+Andromeda.Parent = areawerecommandsgui
+Andromeda.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Andromeda.Position = UDim2.new(0, 0, 0.51111114, 0)
+Andromeda.Size = UDim2.new(0, 254, 0, 39)
+Andromeda.Font = Enum.Font.SourceSans
+Andromeda.Text = ".Andromeda"
+Andromeda.TextColor3 = Color3.fromRGB(0, 0, 0)
+Andromeda.TextScaled = true
+Andromeda.TextSize = 14.000
+Andromeda.TextWrapped = true
+
+arrowhub.Name = "arrowhub"
+arrowhub.Parent = areawerecommandsgui
+arrowhub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+arrowhub.Position = UDim2.new(0, 0, 0.561111152, 0)
+arrowhub.Size = UDim2.new(0, 254, 0, 39)
+arrowhub.Font = Enum.Font.SourceSans
+arrowhub.Text = ".arrowhub"
+arrowhub.TextColor3 = Color3.fromRGB(0, 0, 0)
+arrowhub.TextScaled = true
+arrowhub.TextSize = 14.000
+arrowhub.TextWrapped = true
+
+topkek.Name = "topkek"
+topkek.Parent = areawerecommandsgui
+topkek.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+topkek.Position = UDim2.new(0, 0, 0.621111155, 0)
+topkek.Size = UDim2.new(0, 254, 0, 39)
+topkek.Font = Enum.Font.SourceSans
+topkek.Text = ".topkek"
+topkek.TextColor3 = Color3.fromRGB(0, 0, 0)
+topkek.TextScaled = true
+topkek.TextSize = 14.000
+topkek.TextWrapped = true
+
+crybaby.Name = "crybaby"
+crybaby.Parent = areawerecommandsgui
+crybaby.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+crybaby.Position = UDim2.new(0, 0, 0.680000067, 0)
+crybaby.Size = UDim2.new(0, 254, 0, 39)
+crybaby.Font = Enum.Font.SourceSans
+crybaby.Text = ".crybaby"
+crybaby.TextColor3 = Color3.fromRGB(0, 0, 0)
+crybaby.TextScaled = true
+crybaby.TextSize = 14.000
+crybaby.TextWrapped = true
+
+kentahub.Name = "kenta hub"
+kentahub.Parent = areawerecommandsgui
+kentahub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+kentahub.Position = UDim2.new(0, 0, 0.740000069, 0)
+kentahub.Size = UDim2.new(0, 254, 0, 39)
+kentahub.Font = Enum.Font.SourceSans
+kentahub.Text = ".kenta hub"
+kentahub.TextColor3 = Color3.fromRGB(0, 0, 0)
+kentahub.TextScaled = true
+kentahub.TextSize = 14.000
+kentahub.TextWrapped = true
+
+clsoegui.Name = "clsoe gui"
+clsoegui.Parent = guicommandsbar
+clsoegui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clsoegui.Position = UDim2.new(0.806691408, 0, -0.0834468678, 0)
+clsoegui.Size = UDim2.new(0, 43, 0, 23)
+clsoegui.Font = Enum.Font.SourceSans
+clsoegui.Text = "X"
+clsoegui.TextColor3 = Color3.fromRGB(0, 0, 0)
+clsoegui.TextScaled = true
+clsoegui.TextSize = 14.000
+clsoegui.TextWrapped = true
+
+-- Scripts:
+
+local function MQWYU_fake_script() -- hatcommands.open hat 
+	local script = Instance.new('LocalScript', hatcommands)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent["hat commands"].Visible = true
+	end)
+	
+end
+coroutine.wrap(MQWYU_fake_script)()
+local function WNBJIY_fake_script() -- hatlesscommands.open hatless script 
+	local script = Instance.new('LocalScript', hatlesscommands)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent["hatless commands"].Visible = true
+	end)
+	
+end
+coroutine.wrap(WNBJIY_fake_script)()
+local function LSGKX_fake_script() -- guicommands.open gui 
+	local script = Instance.new('LocalScript', guicommands)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent["gui commands"].Visible = true
+	end)
+end
+coroutine.wrap(LSGKX_fake_script)()
+local function BFOAERS_fake_script() -- closecomands.close commands button 
+	local script = Instance.new('LocalScript', closecomands)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(BFOAERS_fake_script)()
+local function GIPFR_fake_script() -- clsoehat.close hat scipt 
+	local script = Instance.new('LocalScript', clsoehat)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(GIPFR_fake_script)()
+local function JRNBFSI_fake_script() -- clsoehatless.close hatless scipt 
+	local script = Instance.new('LocalScript', clsoehatless)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(JRNBFSI_fake_script)()
+local function HEOETEM_fake_script() -- clsoegui.close gui scipt 
+	local script = Instance.new('LocalScript', clsoegui)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(HEOETEM_fake_script)()
