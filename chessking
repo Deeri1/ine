@@ -7,14 +7,15 @@ warn([[
 converted by work#0450
 ]])
 
-getgenv().ReanimateVersion = "v5"
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Reanimate", true))()
-
-
-wait(2.5) 
-
-
+getgenv().Nullware_ReanimateConfiguration = {
+	["Netless"] = true,
+	["Anti-Fling"] = true,
+	["Hats To Align"] = {},
+	["Head Movement"] = true,
+	["R15 To R6"] = false,
+	["Godmode"] = false
+}
+loadstring(game:HttpGetAsync("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/8cd532018277ee9982433eea25a6c14f/raw/sewMjTpJvVBLR96L"))()
 
 
 
