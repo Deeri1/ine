@@ -1074,6 +1074,26 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/nevers%20goodcop%20bad%20cop"))()
 
 elseif
+	CMD.Text == ".msg switcher" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/msg%20edit%20convert"))()
+
+elseif
+	CMD.Text == ".flying magic" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/Flying%20magic"))()
+
+elseif
+	CMD.Text == ".wheel chair" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/funni%20wheel%20chair"))()
+
+elseif
+	CMD.Text == ".unknow admin" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/unknow%20admin"))()
+
+elseif
+	CMD.Text == ".marleys admin" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/marleys%20admin"))()
+
+elseif
 	CMD.Text == ".hathub pp" then
 	loadstring(game:HttpGet("https://pastebin.com/raw/F6k8kM05"))()
 
