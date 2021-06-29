@@ -1,0 +1,5 @@
+_G.PowerfulNet = false -- Not Available yet
+_G.NetlessValue = 30
+_G.NetlessPos = "Y" -- "X", "Y", "Z"
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Plebby12/DinoX/main/DinoXPreviewOB.txt", true))()
