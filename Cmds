@@ -1106,7 +1106,7 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/anarchy"))()
 
 elseif
-	CMD.Text == ".deark sister" then
+	CMD.Text == ".dear sister" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/dear%20sister"))()
 
 elseif
