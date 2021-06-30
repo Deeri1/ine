@@ -1094,6 +1094,22 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/marleys%20admin"))()
 
 elseif
+	CMD.Text == ".sakura sword" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/sakaurea%20sword"))()
+
+elseif
+	CMD.Text == ".dino x" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/dino%20x%20preview"))()
+
+elseif
+	CMD.Text == ".anarchy" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/anarchy"))()
+
+elseif
+	CMD.Text == ".deark sister" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/dear%20sister"))()
+
+elseif
 	CMD.Text == ".hathub pp" then
 	loadstring(game:HttpGet("https://pastebin.com/raw/F6k8kM05"))()
 
