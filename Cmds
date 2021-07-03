@@ -446,7 +446,7 @@ elseif
 
 
 	CMD.Text == ".flip" then
-	loadstring(game:HttpGetAsync("https://pastebin.com/raw/crPcd0vq"))()
+	loadstring(game:HttpGet("https://guard.lol/scripts/feflipv8.lua",true))()
 
 elseif
 
