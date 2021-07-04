@@ -1075,7 +1075,7 @@ gui = function(GuiType, parent, text, backtrans, backcol, pos, size)
 	gui.Size = size
 	gui.Font = "SourceSans"
 	gui.FontSize = "Size14"
-	gui.TextWrapped = false
+	
 	gui.TextStrokeTransparency = 0
 	gui.TextColor = BrickColor.new("White")
 	return gui
