@@ -2416,7 +2416,7 @@ function Damagefunc(Part, hit, minim, maxim, knockback, Type, Property, Delay, H
 				for i = 0, 2 do
 					Effects.Sphere.Create(BrickColor.new("Bright red"), hit.Parent.Torso.CFrame * cn(0, 0, 0) * angles(math.random(-50, 50), math.random(-50, 50), math.random(-50, 50)), 1, 15, 1, 0, 5, 0, 0.02)
 				end
-				Humanoid.Health = Humanoid.Health + 10
+				Humanoid.Health .Health + 10
 			end
 		elseif Type == "UpKnock" then
 			local hum = hit.Parent.Humanoid
@@ -9945,7 +9945,7 @@ end
 
 
 
-Humanoid.Animator.Parent = Humanoid
+
 
 
 
