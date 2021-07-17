@@ -607,8 +607,8 @@ elseif
 elseif
 
 
-	CMD.Text == ".rtx graphics" then
-	loadstring(game:HttpGetAsync("https://pastebin.com/raw/Ba5A2mXj"))()
+	CMD.Text == ".rtx" then
+	loadstring(game:HttpGetAsync("https://github.com/Deeri1/ine/blob/main/rtx"))()
 
 elseif
 
