@@ -1,4 +1,6 @@
-
+--e
+--e
+--e
 loadstring(game:HttpGet("https://github.com/Deeri1/ine/blob/main/key"))()
 
 wait(2.5)
