@@ -1,7 +1,7 @@
 --e
 --e
 --e
-loadstring(game:HttpGet("https://github.com/Deeri1/ine/blob/main/key"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/key"))()
 
 wait(2.5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Fadify/RealTX/main/RTX.lua"))()
