@@ -1,0 +1,2 @@
+_G.key = "ROTXIisPrO"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Fadify/RealTX/main/RTX.lua"))()
