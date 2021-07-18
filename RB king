@@ -23,11 +23,7 @@ game.Players.LocalPlayer.Character.Humanoid:WaitForChild("Animator"):Destroy()
 
 
 
---////===============================\\\\--
----/-------------------------------------\---
----|             Made By Auto            |---
----|       Helped Something by XDDAB     |---   
----\-------------------------------------/---
+
 local S = setmetatable({},{__index = function(s,i) return game:service(i) end})
 local CF = {N=CFrame.new,A=CFrame.Angles,fEA=CFrame.fromEulerAnglesXYZ}
 local C3 = {N=Color3.new,RGB=Color3.fromRGB,HSV=Color3.fromHSV,tHSV=Color3.toHSV}
