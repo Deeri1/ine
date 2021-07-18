@@ -1,27 +1,14 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
 
 local newload = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local title = Instance.new("TextLabel")
 local settings = Instance.new("TextLabel")
-local guis = Instance.new("TextLabel")
 local extras = Instance.new("TextLabel")
 local done = Instance.new("TextButton")
-local mainhubb = Instance.new("TextLabel")
-local sidebar = Instance.new("TextLabel")
-local onoff11 = Instance.new("TextButton")
-local onoff22 = Instance.new("TextButton")
 local howdaa = Instance.new("TextButton")
 local lines = Instance.new("Folder")
-local line1 = Instance.new("Frame")
-local line2 = Instance.new("Frame")
-local line3 = Instance.new("Frame")
-local line4 = Instance.new("Frame")
-local line5 = Instance.new("Frame")
-local line6 = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
 local nada = Instance.new("Frame")
 local extra1 = Instance.new("Frame")
 local extra2 = Instance.new("Frame")
@@ -35,6 +22,12 @@ local updates = Instance.new("TextButton")
 local credits = Instance.new("TextButton")
 local silentrejoin = Instance.new("TextButton")
 local onoff33 = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local guis = Instance.new("TextLabel")
+local mainhubb = Instance.new("TextLabel")
+local sidebar = Instance.new("TextLabel")
+local onoff22 = Instance.new("TextButton")
+local onoff11 = Instance.new("TextButton")
 
 --Properties:
 
@@ -44,10 +37,8 @@ newload.Parent = game.CoreGui
 main.Name = "main"
 main.Parent = newload
 main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-main.Position = UDim2.new(0.254989445, 0, 0.0867237672, 0)
-main.Size = UDim2.new(0, 617, 0, 679)
-main.Active = true
-main.Draggable = true
+main.Position = UDim2.new(0.293619186, 0, 0.09943562, 0)
+main.Size = UDim2.new(0, 617, 0, 343)
 
 title.Name = "title"
 title.Parent = main
@@ -63,7 +54,7 @@ title.TextWrapped = true
 settings.Name = "settings"
 settings.Parent = main
 settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-settings.Position = UDim2.new(0, 0, 0.0736377016, 0)
+settings.Position = UDim2.new(0.0210696924, 0, 0.146523997, 0)
 settings.Size = UDim2.new(0, 168, 0, 50)
 settings.Font = Enum.Font.SourceSans
 settings.Text = "Settings"
@@ -72,23 +63,11 @@ settings.TextScaled = true
 settings.TextSize = 14.000
 settings.TextWrapped = true
 
-guis.Name = "guis"
-guis.Parent = main
-guis.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-guis.Position = UDim2.new(0.363047004, 0, 0.0736377016, 0)
-guis.Size = UDim2.new(0, 168, 0, 50)
-guis.Font = Enum.Font.SourceSans
-guis.Text = "Guis"
-guis.TextColor3 = Color3.fromRGB(0, 0, 0)
-guis.TextScaled = true
-guis.TextSize = 14.000
-guis.TextWrapped = true
-
 extras.Name = "extras"
 extras.Parent = main
 extras.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-extras.Position = UDim2.new(0.727714777, 0, 0.0736377016, 0)
-extras.Size = UDim2.new(0, 168, 0, 50)
+extras.Position = UDim2.new(0.716369629, 0, 0.146524012, 0)
+extras.Size = UDim2.new(0, 167, 0, 50)
 extras.Font = Enum.Font.SourceSans
 extras.Text = "Extras"
 extras.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -99,63 +78,19 @@ extras.TextWrapped = true
 done.Name = "done"
 done.Parent = main
 done.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-done.Position = UDim2.new(0.272285253, 0, 0.848306358, 0)
-done.Size = UDim2.new(0, 281, 0, 103)
+done.Position = UDim2.new(0.319286883, 0, 0.910372376, 0)
+done.Size = UDim2.new(0, 223, 0, 30)
 done.Font = Enum.Font.SourceSans
-done.Text = "Done"
+done.Text = "Execute"
 done.TextColor3 = Color3.fromRGB(0, 0, 0)
 done.TextScaled = true
 done.TextSize = 14.000
 done.TextWrapped = true
 
-mainhubb.Name = "main hubb"
-mainhubb.Parent = main
-mainhubb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-mainhubb.Position = UDim2.new(0.363047004, 0, 0.147275403, 0)
-mainhubb.Size = UDim2.new(0, 127, 0, 29)
-mainhubb.Font = Enum.Font.SourceSans
-mainhubb.Text = "Deeri hub"
-mainhubb.TextColor3 = Color3.fromRGB(0, 0, 0)
-mainhubb.TextScaled = true
-mainhubb.TextSize = 14.000
-mainhubb.TextWrapped = true
-
-sidebar.Name = "side bar"
-sidebar.Parent = main
-sidebar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-sidebar.Position = UDim2.new(0.363047004, 0, 0.22974962, 0)
-sidebar.Size = UDim2.new(0, 127, 0, 29)
-sidebar.Font = Enum.Font.SourceSans
-sidebar.Text = "Side Bar"
-sidebar.TextColor3 = Color3.fromRGB(0, 0, 0)
-sidebar.TextScaled = true
-sidebar.TextSize = 14.000
-sidebar.TextWrapped = true
-
-onoff11.Name = "onoff11"
-onoff11.Parent = main
-onoff11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-onoff11.Position = UDim2.new(0.568881691, 0, 0.147275403, 0)
-onoff11.Size = UDim2.new(0, 41, 0, 29)
-onoff11.Font = Enum.Font.SourceSans
-onoff11.Text = ""
-onoff11.TextColor3 = Color3.fromRGB(0, 0, 0)
-onoff11.TextSize = 14.000
-
-onoff22.Name = "onoff22"
-onoff22.Parent = main
-onoff22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-onoff22.Position = UDim2.new(0.568881691, 0, 0.22974962, 0)
-onoff22.Size = UDim2.new(0, 41, 0, 29)
-onoff22.Font = Enum.Font.SourceSans
-onoff22.Text = ""
-onoff22.TextColor3 = Color3.fromRGB(0, 0, 0)
-onoff22.TextSize = 14.000
-
 howdaa.Name = "howdaa"
 howdaa.Parent = main
 howdaa.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-howdaa.Position = UDim2.new(0.917341948, 0, 0, 0)
+howdaa.Position = UDim2.new(0.834683895, 0, 0, 0)
 howdaa.Size = UDim2.new(0, 51, 0, 50)
 howdaa.Font = Enum.Font.SourceSans
 howdaa.Text = "?"
@@ -167,41 +102,15 @@ howdaa.TextWrapped = true
 lines.Name = "lines"
 lines.Parent = main
 
-line1.Name = "line 1"
-line1.Parent = lines
-line1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-line1.Position = UDim2.new(-2.98023224e-08, 0, 0.0736377016, 0)
-line1.Size = UDim2.new(0, 0, 0, 629)
+Frame.Parent = lines
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.680713177, 0, 0.149439424, 0)
+Frame.Size = UDim2.new(0, 4, 0, 291)
 
-line2.Name = "line 2"
-line2.Parent = lines
-line2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-line2.Position = UDim2.new(0.272285253, 0, 0.0736377016, 0)
-line2.Size = UDim2.new(0, 0, 0, 526)
-
-line3.Name = "line 3"
-line3.Parent = lines
-line3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-line3.Position = UDim2.new(0.363047004, 0, 0.0736377016, 0)
-line3.Size = UDim2.new(0, 0, 0, 526)
-
-line4.Name = "line 4"
-line4.Parent = lines
-line4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-line4.Position = UDim2.new(0.635332227, 0, 0.0736377016, 0)
-line4.Size = UDim2.new(0, 0, 0, 526)
-
-line5.Name = "line 5"
-line5.Parent = lines
-line5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-line5.Position = UDim2.new(0.727714777, 0, 0.0736377016, 0)
-line5.Size = UDim2.new(0, 0, 0, 526)
-
-line6.Name = "line 6"
-line6.Parent = lines
-line6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-line6.Position = UDim2.new(1, 0, 0.0736377016, 0)
-line6.Size = UDim2.new(0, 0, 0, 629)
+Frame_2.Parent = lines
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.Position = UDim2.new(0.312803894, 0, 0.146523967, 0)
+Frame_2.Size = UDim2.new(0, 4, 0, 291)
 
 nada.Name = "nada"
 nada.Parent = main
@@ -275,8 +184,8 @@ extraa.Size = UDim2.new(0, 50, 0, 50)
 closeall.Name = "close all"
 closeall.Parent = main
 closeall.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-closeall.Position = UDim2.new(0, 0, 0.147275403, 0)
-closeall.Size = UDim2.new(0, 168, 0, 29)
+closeall.Position = UDim2.new(0.917341888, 0, 0, 0)
+closeall.Size = UDim2.new(0, 51, 0, 50)
 closeall.Font = Enum.Font.SourceSans
 closeall.Text = "Close"
 closeall.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -287,8 +196,8 @@ closeall.TextWrapped = true
 updates.Name = "updates"
 updates.Parent = main
 updates.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-updates.Position = UDim2.new(0.727714837, 0, 0.147275403, 0)
-updates.Size = UDim2.new(0, 168, 0, 29)
+updates.Position = UDim2.new(0.716369629, 0, 0.342610717, 0)
+updates.Size = UDim2.new(0, 167, 0, 29)
 updates.Font = Enum.Font.SourceSans
 updates.Text = "Updates"
 updates.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -299,7 +208,7 @@ updates.TextWrapped = true
 credits.Name = "credits"
 credits.Parent = main
 credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-credits.Position = UDim2.new(0.727714837, 0, 0.229749635, 0)
+credits.Position = UDim2.new(0.716369629, 0, 0.451324016, 0)
 credits.Size = UDim2.new(0, 167, 0, 29)
 credits.Font = Enum.Font.SourceSans
 credits.Text = "Credits"
@@ -311,7 +220,7 @@ credits.TextWrapped = true
 silentrejoin.Name = "silent rejoin"
 silentrejoin.Parent = main
 silentrejoin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-silentrejoin.Position = UDim2.new(0, 0, 0.228276879, 0)
+silentrejoin.Position = UDim2.new(0.0210696924, 0, 0.341979474, 0)
 silentrejoin.Size = UDim2.new(0, 127, 0, 29)
 silentrejoin.Font = Enum.Font.SourceSans
 silentrejoin.Text = "Testing Silent rejoin"
@@ -323,16 +232,78 @@ silentrejoin.TextWrapped = true
 onoff33.Name = "onoff33"
 onoff33.Parent = main
 onoff33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-onoff33.Position = UDim2.new(0.205834687, 0, 0.228276864, 0)
+onoff33.Position = UDim2.new(0.226904377, 0, 0.341979474, 0)
 onoff33.Size = UDim2.new(0, 41, 0, 29)
 onoff33.Font = Enum.Font.SourceSans
 onoff33.Text = ""
 onoff33.TextColor3 = Color3.fromRGB(0, 0, 0)
 onoff33.TextSize = 14.000
 
+ScrollingFrame.Parent = main
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.Position = UDim2.new(0.319286883, 0, 0.14360851, 0)
+ScrollingFrame.Size = UDim2.new(0, 223, 0, 263)
+
+guis.Name = "guis"
+guis.Parent = ScrollingFrame
+guis.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+guis.Position = UDim2.new(0.0917017087, 0, -0.000706329942, 0)
+guis.Size = UDim2.new(0, 168, 0, 50)
+guis.Font = Enum.Font.SourceSans
+guis.Text = "Guis"
+guis.TextColor3 = Color3.fromRGB(0, 0, 0)
+guis.TextScaled = true
+guis.TextSize = 14.000
+guis.TextWrapped = true
+
+mainhubb.Name = "main hubb"
+mainhubb.Parent = ScrollingFrame
+mainhubb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mainhubb.Position = UDim2.new(0.0821565241, 0, 0.10062819, 0)
+mainhubb.Size = UDim2.new(0, 127, 0, 29)
+mainhubb.Font = Enum.Font.SourceSans
+mainhubb.Text = "Deeri hub"
+mainhubb.TextColor3 = Color3.fromRGB(0, 0, 0)
+mainhubb.TextScaled = true
+mainhubb.TextSize = 14.000
+mainhubb.TextWrapped = true
+
+sidebar.Name = "side bar"
+sidebar.Parent = ScrollingFrame
+sidebar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sidebar.Position = UDim2.new(0.0805357918, 0, 0.15394789, 0)
+sidebar.Size = UDim2.new(0, 127, 0, 29)
+sidebar.Font = Enum.Font.SourceSans
+sidebar.Text = "Side Bar"
+sidebar.TextColor3 = Color3.fromRGB(0, 0, 0)
+sidebar.TextScaled = true
+sidebar.TextSize = 14.000
+sidebar.TextWrapped = true
+
+onoff22.Name = "onoff22"
+onoff22.Parent = ScrollingFrame
+onoff22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+onoff22.Position = UDim2.new(0.649599195, 0, 0.15394789, 0)
+onoff22.Size = UDim2.new(0, 41, 0, 29)
+onoff22.Font = Enum.Font.SourceSans
+onoff22.Text = ""
+onoff22.TextColor3 = Color3.fromRGB(0, 0, 0)
+onoff22.TextSize = 14.000
+
+onoff11.Name = "onoff11"
+onoff11.Parent = ScrollingFrame
+onoff11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+onoff11.Position = UDim2.new(0.649599195, 0, 0.100628167, 0)
+onoff11.Size = UDim2.new(0, 41, 0, 29)
+onoff11.Font = Enum.Font.SourceSans
+onoff11.Text = ""
+onoff11.TextColor3 = Color3.fromRGB(0, 0, 0)
+onoff11.TextSize = 14.000
+
 -- Scripts:
 
-local function SQLLO_fake_script() -- done.wl and load 
+local function LGHRUJ_fake_script() -- done.wl and load 
 	local script = Instance.new('LocalScript', done)
 
 	local function makeLookupTable(table)  
@@ -343,8 +314,8 @@ local function SQLLO_fake_script() -- done.wl and load
 	end
 	
 	
-	local deerihub = script.Parent.Parent.onoff11
-	local sidebar = script.Parent.Parent.onoff22
+	local deerihub = script.Parent.Parent.ScrollingFrame.onoff11
+	local sidebar = script.Parent.Parent.ScrollingFrame.onoff22
 	local silentrejoin = script.Parent.Parent.onoff33
 	local whitelistednames = makeLookupTable({"EndlessVoices","Sir_Deeri","Ronderty","Colastee","XJxydenVx","Raaziez","Landin_Rahm","highlywantedd","todoyoho","jfjfjsjksalasdfjke","DJRAPISGONE","Austinjj2008"})
 	
@@ -368,10 +339,13 @@ local function SQLLO_fake_script() -- done.wl and load
 					script.Parent.Parent.Parent.Parent["new load"]:Destroy()
 					end
 				if silentrejoin.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
-					local silentrejoin = Instance.new("ScreenGui")
-                    silentrejoin.Name = "silentrejoin"
-                    silentrejoin.Parent = game.CoreGui
-                    silentrejoin.ZIndexBehavior = Enum.ZIndexBehavior.Sibling	
+					local silentrejoinon = Instance.new("ScreenGui")
+					silentrejoinon.Name = "silent rejoin on"
+					silentrejoinon.Parent = game.CoreGui
+					silentrejoinon.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+					script.Parent.Parent.Parent.Parent["new load"]:Destroy()
+	
+						
 			end
 		end
 	end
@@ -380,116 +354,67 @@ local function SQLLO_fake_script() -- done.wl and load
 	
 	
 end
-coroutine.wrap(SQLLO_fake_script)()
-local function WMWK_fake_script() -- onoff11.main script 
-	local script = Instance.new('LocalScript', onoff11)
-
-	local onoff2 = script.Parent.Parent["onoff11"]
-	
-	local on = false
-	
-	
-	script.Parent.MouseButton1Click:Connect(function()
-	
-		if on == false then
-	
-			script.Parent.Parent.onoff11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-			on = true
-		else
-	
-			script.Parent.Parent.onoff11.BackgroundColor3 = Color3.fromRGB(247, 247, 247)
-			on = false
-		end
-	end
-	)
-	
-	
-end
-coroutine.wrap(WMWK_fake_script)()
-local function YTXMU_fake_script() -- onoff22.sidebar script 
-	local script = Instance.new('LocalScript', onoff22)
-
-	local onoff2 = script.Parent.Parent["onoff22"]
-	
-	local on = false
-	
-	
-	script.Parent.MouseButton1Click:Connect(function()
-	
-	if on == false then
-	
-			script.Parent.Parent.onoff22.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-			on = true
-	else
-			
-			script.Parent.Parent.onoff22.BackgroundColor3 = Color3.fromRGB(247, 247, 247)
-			on = false
-		end
-		end
-	)
-	
-	
-end
-coroutine.wrap(YTXMU_fake_script)()
-local function SUVLSJ_fake_script() -- howdaa.huHHH 
+coroutine.wrap(LGHRUJ_fake_script)()
+local function IOYZTRE_fake_script() -- howdaa.huHHH 
 	local script = Instance.new('LocalScript', howdaa)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.nada.Visible = true
 	end)
 end
-coroutine.wrap(SUVLSJ_fake_script)()
-local function MHOKWVL_fake_script() -- closedaextra.close da da 
+coroutine.wrap(IOYZTRE_fake_script)()
+local function OZKRGGQ_fake_script() -- closedaextra.close da da 
 	local script = Instance.new('LocalScript', closedaextra)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(MHOKWVL_fake_script)()
-local function TXESRUC_fake_script() -- closeall.LocalScript 
+coroutine.wrap(OZKRGGQ_fake_script)()
+local function ZFTV_fake_script() -- closeall.LocalScript 
 	local script = Instance.new('LocalScript', closeall)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent["new load"]:Destroy()
 	end)
 end
-coroutine.wrap(TXESRUC_fake_script)()
-local function XUJLFRA_fake_script() -- updates.open updates 
+coroutine.wrap(ZFTV_fake_script)()
+local function KZHPQPJ_fake_script() -- updates.open updates 
 	local script = Instance.new('LocalScript', updates)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/7QR0gh1N"))()
 	end)
-	end
-
-coroutine.wrap(XUJLFRA_fake_script)()
-local function JJDOTVH_fake_script() -- credits.credits 
+	
+end
+coroutine.wrap(KZHPQPJ_fake_script)()
+local function BSSNUXG_fake_script() -- credits.credits 
 	local script = Instance.new('LocalScript', credits)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://pastebin.com/raw/DTDNhgEg"))()
 	end)
-	end
-
-coroutine.wrap(JJDOTVH_fake_script)()
-local function MLSO_fake_script() -- silentrejoin.LocalScript 
+	
+end
+coroutine.wrap(BSSNUXG_fake_script)()
+local function KHNYE_fake_script() -- silentrejoin.LocalScript 
 	local script = Instance.new('LocalScript', silentrejoin)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent["new load"]:Destroy()
 	end)
 end
-coroutine.wrap(MLSO_fake_script)()
-local function VXRG_fake_script() -- onoff33.main script 
+coroutine.wrap(KHNYE_fake_script)()
+local function ORDAGJ_fake_script() -- onoff33.main script 
 	local script = Instance.new('LocalScript', onoff33)
 
-	local onoff2 = script.Parent.Parent["onoff11"]
+	local onoff2 = script.Parent.Parent["onoff33"]
 	
 	local on = false
 	
 	
-	script.Parent.MouseButton1Click:Connect(function()
+	
+	script.Parent.Parent.onoff33.MouseButton1Click:Connect(function()
 	
 		if on == false then
 	
@@ -497,7 +422,31 @@ local function VXRG_fake_script() -- onoff33.main script
 			on = true
 		else
 	
-			script.Parent.Parent.onoff33.BackgroundColor3 = Color3.fromRGB(247, 247, 247)
+			script.Parent.Parent.onoff33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			on = false
+		end
+	end
+	)
+end
+coroutine.wrap(ORDAGJ_fake_script)()
+local function QJYVM_fake_script() -- onoff22.sidebar script 
+	local script = Instance.new('LocalScript', onoff22)
+
+	local onoff2 = script.Parent.Parent["onoff22"]
+	
+	local on = false
+	
+	
+	
+	script.Parent.Parent.onoff22.MouseButton1Click:Connect(function()
+	
+		if on == false then
+	
+			script.Parent.Parent.onoff22.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			on = true
+		else
+	
+			script.Parent.Parent.onoff22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			on = false
 		end
 	end
@@ -505,4 +454,40 @@ local function VXRG_fake_script() -- onoff33.main script
 	
 	
 end
-coroutine.wrap(VXRG_fake_script)()
+coroutine.wrap(QJYVM_fake_script)()
+local function HWSAA_fake_script() -- onoff11.main script 
+	local script = Instance.new('LocalScript', onoff11)
+
+	local onoff2 = script.Parent.Parent["onoff11"]
+	
+	local on = false
+	
+	
+	
+	script.Parent.Parent.onoff11.MouseButton1Click:Connect(function()
+	
+		if on == false then
+	
+			script.Parent.Parent.onoff11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			on = true
+		else
+	
+			script.Parent.Parent.onoff11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			on = false
+		end
+	end
+	)
+	
+	
+end
+coroutine.wrap(HWSAA_fake_script)()
+local function EVTHGY_fake_script() -- main.dragable 
+	local script = Instance.new('LocalScript', main)
+
+	local main = script.Parent.Parent.main
+	
+	main.Active = true
+	
+	main.Draggable = true
+end
+coroutine.wrap(EVTHGY_fake_script)()
