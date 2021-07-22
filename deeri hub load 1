@@ -1,3 +1,7 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
 
 local newload = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
@@ -28,6 +32,8 @@ local mainhubb = Instance.new("TextLabel")
 local sidebar = Instance.new("TextLabel")
 local onoff22 = Instance.new("TextButton")
 local onoff11 = Instance.new("TextButton")
+local computer = Instance.new("TextLabel")
+local onoff44 = Instance.new("TextButton")
 
 --Properties:
 
@@ -301,9 +307,31 @@ onoff11.Text = ""
 onoff11.TextColor3 = Color3.fromRGB(0, 0, 0)
 onoff11.TextSize = 14.000
 
+computer.Name = "computer"
+computer.Parent = ScrollingFrame
+computer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+computer.Position = UDim2.new(0.0911251307, 0, 0.207042187, 0)
+computer.Size = UDim2.new(0, 127, 0, 29)
+computer.Font = Enum.Font.SourceSans
+computer.Text = "Computer (for fun)"
+computer.TextColor3 = Color3.fromRGB(0, 0, 0)
+computer.TextScaled = true
+computer.TextSize = 14.000
+computer.TextWrapped = true
+
+onoff44.Name = "onoff44"
+onoff44.Parent = ScrollingFrame
+onoff44.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+onoff44.Position = UDim2.new(0.658567786, 0, 0.206426024, 0)
+onoff44.Size = UDim2.new(0, 41, 0, 29)
+onoff44.Font = Enum.Font.SourceSans
+onoff44.Text = ""
+onoff44.TextColor3 = Color3.fromRGB(0, 0, 0)
+onoff44.TextSize = 14.000
+
 -- Scripts:
 
-local function LGHRUJ_fake_script() -- done.wl and load 
+local function HKLTMEA_fake_script() -- done.wl and load 
 	local script = Instance.new('LocalScript', done)
 
 	local function makeLookupTable(table)  
@@ -317,6 +345,7 @@ local function LGHRUJ_fake_script() -- done.wl and load
 	local deerihub = script.Parent.Parent.ScrollingFrame.onoff11
 	local sidebar = script.Parent.Parent.ScrollingFrame.onoff22
 	local silentrejoin = script.Parent.Parent.onoff33
+	local computer = script.Parent.Parent.ScrollingFrame.onoff44
 	local whitelistednames = makeLookupTable({"EndlessVoices","Sir_Deeri","Ronderty","Colastee","XJxydenVx","Raaziez","Landin_Rahm","highlywantedd","todoyoho","jfjfjsjksalasdfjke","DJRAPISGONE","Austinjj2008"})
 	
 	
@@ -325,61 +354,65 @@ local function LGHRUJ_fake_script() -- done.wl and load
 			if whitelistednames[player.Name] then
 				
 				warn("whitelisted")
+script.Parent.Parent.Parent.Parent["new load"]:Destroy()
+
 			
 		
 	if deerihub.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
 					
 					loadstring('\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\68\101\101\114\105\49\47\105\110\101\47\109\97\105\110\47\100\101\101\114\105\37\50\48\104\117\98\37\50\48\108\111\97\100\37\50\48\50\34\41\41\40\41')()
-					script.Parent.Parent.Parent.Parent["new load"]:Destroy()
-	end
+						end
 	
 	
 				if sidebar.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
 					loadstring('\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\66\106\74\55\105\109\70\34\41\41\40\41')()			
-					script.Parent.Parent.Parent.Parent["new load"]:Destroy()
-					end
+										end
 				if silentrejoin.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
 					local silentrejoinon = Instance.new("ScreenGui")
 					silentrejoinon.Name = "silent rejoin on"
 					silentrejoinon.Parent = game.CoreGui
 					silentrejoinon.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-					script.Parent.Parent.Parent.Parent["new load"]:Destroy()
-	
+						
 						
 			end
-		end
+				if computer.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
+	
+					loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Deeri1/ine/main/computer"))()
+										end			
+				
+			end
 	end
 	
 	end)
 	
 	
 end
-coroutine.wrap(LGHRUJ_fake_script)()
-local function IOYZTRE_fake_script() -- howdaa.huHHH 
+coroutine.wrap(HKLTMEA_fake_script)()
+local function YMLK_fake_script() -- howdaa.huHHH 
 	local script = Instance.new('LocalScript', howdaa)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.nada.Visible = true
 	end)
 end
-coroutine.wrap(IOYZTRE_fake_script)()
-local function OZKRGGQ_fake_script() -- closedaextra.close da da 
+coroutine.wrap(YMLK_fake_script)()
+local function ZYJORDV_fake_script() -- closedaextra.close da da 
 	local script = Instance.new('LocalScript', closedaextra)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(OZKRGGQ_fake_script)()
-local function ZFTV_fake_script() -- closeall.LocalScript 
+coroutine.wrap(ZYJORDV_fake_script)()
+local function CFAC_fake_script() -- closeall.LocalScript 
 	local script = Instance.new('LocalScript', closeall)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent["new load"]:Destroy()
 	end)
 end
-coroutine.wrap(ZFTV_fake_script)()
-local function KZHPQPJ_fake_script() -- updates.open updates 
+coroutine.wrap(CFAC_fake_script)()
+local function XZDNTY_fake_script() -- updates.open updates 
 	local script = Instance.new('LocalScript', updates)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -387,8 +420,8 @@ local function KZHPQPJ_fake_script() -- updates.open updates
 	end)
 	
 end
-coroutine.wrap(KZHPQPJ_fake_script)()
-local function BSSNUXG_fake_script() -- credits.credits 
+coroutine.wrap(XZDNTY_fake_script)()
+local function GTPKU_fake_script() -- credits.credits 
 	local script = Instance.new('LocalScript', credits)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -396,16 +429,16 @@ local function BSSNUXG_fake_script() -- credits.credits
 	end)
 	
 end
-coroutine.wrap(BSSNUXG_fake_script)()
-local function KHNYE_fake_script() -- silentrejoin.LocalScript 
+coroutine.wrap(GTPKU_fake_script)()
+local function NLCS_fake_script() -- silentrejoin.LocalScript 
 	local script = Instance.new('LocalScript', silentrejoin)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent["new load"]:Destroy()
 	end)
 end
-coroutine.wrap(KHNYE_fake_script)()
-local function ORDAGJ_fake_script() -- onoff33.main script 
+coroutine.wrap(NLCS_fake_script)()
+local function KMTON_fake_script() -- onoff33.main script 
 	local script = Instance.new('LocalScript', onoff33)
 
 	local onoff2 = script.Parent.Parent["onoff33"]
@@ -428,8 +461,8 @@ local function ORDAGJ_fake_script() -- onoff33.main script
 	end
 	)
 end
-coroutine.wrap(ORDAGJ_fake_script)()
-local function QJYVM_fake_script() -- onoff22.sidebar script 
+coroutine.wrap(KMTON_fake_script)()
+local function QIMIMXE_fake_script() -- onoff22.sidebar script 
 	local script = Instance.new('LocalScript', onoff22)
 
 	local onoff2 = script.Parent.Parent["onoff22"]
@@ -454,8 +487,8 @@ local function QJYVM_fake_script() -- onoff22.sidebar script
 	
 	
 end
-coroutine.wrap(QJYVM_fake_script)()
-local function HWSAA_fake_script() -- onoff11.main script 
+coroutine.wrap(QIMIMXE_fake_script)()
+local function DTHIWC_fake_script() -- onoff11.main script 
 	local script = Instance.new('LocalScript', onoff11)
 
 	local onoff2 = script.Parent.Parent["onoff11"]
@@ -480,8 +513,34 @@ local function HWSAA_fake_script() -- onoff11.main script
 	
 	
 end
-coroutine.wrap(HWSAA_fake_script)()
-local function EVTHGY_fake_script() -- main.dragable 
+coroutine.wrap(DTHIWC_fake_script)()
+local function NIBPGMS_fake_script() -- onoff44.computer script 
+	local script = Instance.new('LocalScript', onoff44)
+
+	local onoff2 = script.Parent.Parent["onoff44"]
+	
+	local on = false
+	
+	
+	
+	script.Parent.Parent.onoff44.MouseButton1Click:Connect(function()
+	
+		if on == false then
+	
+			script.Parent.Parent.onoff44.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			on = true
+		else
+	
+			script.Parent.Parent.onoff44.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			on = false
+		end
+	end
+	)
+	
+	
+end
+coroutine.wrap(NIBPGMS_fake_script)()
+local function PKCDG_fake_script() -- main.dragable 
 	local script = Instance.new('LocalScript', main)
 
 	local main = script.Parent.Parent.main
@@ -490,4 +549,4 @@ local function EVTHGY_fake_script() -- main.dragable
 	
 	main.Draggable = true
 end
-coroutine.wrap(EVTHGY_fake_script)()
+coroutine.wrap(PKCDG_fake_script)()
