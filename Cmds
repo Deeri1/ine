@@ -608,7 +608,7 @@ elseif
 
 
 	CMD.Text == ".rtx" then
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Deeri1/ine/main/rtx"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Fadify/RealTX/main/RealisticRTX.lua"))()
 
 elseif
 
