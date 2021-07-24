@@ -1,0 +1,2221 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local UniversalScript = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local TextButton_3 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local TextButton_4 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local TextButton_5 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_7 = Instance.new("UICorner")
+local TextButton_6 = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local TextButton_7 = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local TextButton_8 = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local TextButton_9 = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+
+--Properties:
+
+UniversalScript.Name = "UniversalScript"
+UniversalScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+UniversalScript.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = UniversalScript
+Frame.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Frame.Position = UDim2.new(0.446900249, 0, 0.239352658, 0)
+Frame.Size = UDim2.new(0, 664, 0, 378)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.265060246, 0, -0.150793642, 0)
+TextLabel.Size = UDim2.new(0, 312, 0, 162)
+TextLabel.Font = Enum.Font.Merriweather
+TextLabel.Text = "Universal Script  Made by IusetobeMr_Goodiie/Quantum"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner.Parent = Frame
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+TextButton.Position = UDim2.new(0.698795199, 0, 0.145502657, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SciFi
+TextButton.Text = "Sit"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner_2.Parent = TextButton
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+TextButton_2.Position = UDim2.new(0.349397629, 0, 0.145502657, 0)
+TextButton_2.Size = UDim2.new(0, 200, 0, 50)
+TextButton_2.Font = Enum.Font.SciFi
+TextButton_2.Text = "Destroy Gui"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+UICorner_3.Parent = TextButton_2
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+TextButton_3.Position = UDim2.new(2.98023224e-08, 0, 0.145502657, 0)
+TextButton_3.Size = UDim2.new(0, 200, 0, 50)
+TextButton_3.Font = Enum.Font.SciFi
+TextButton_3.Text = "Fly: F to toggle"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+
+UICorner_4.Parent = TextButton_3
+
+TextButton_4.Parent = Frame
+TextButton_4.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+TextButton_4.Position = UDim2.new(0.698795199, 0, 0.343915343, 0)
+TextButton_4.Size = UDim2.new(0, 200, 0, 50)
+TextButton_4.Font = Enum.Font.SciFi
+TextButton_4.Text = "Rejoin"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14.000
+TextButton_4.TextWrapped = true
+
+UICorner_5.Parent = TextButton_4
+
+TextButton_5.Parent = Frame
+TextButton_5.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+TextButton_5.Position = UDim2.new(0.3493976, 0, 0.343915343, 0)
+TextButton_5.Size = UDim2.new(0, 200, 0, 50)
+TextButton_5.Font = Enum.Font.SciFi
+TextButton_5.Text = "Teleport"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14.000
+TextButton_5.TextWrapped = true
+
+UICorner_6.Parent = TextButton_5
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+TextBox.Position = UDim2.new(0.240963861, 0, 0.788359702, 0)
+TextBox.Size = UDim2.new(0, 328, 0, 77)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Enter Name"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UICorner_7.Parent = TextBox
+
+TextButton_6.Parent = Frame
+TextButton_6.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+TextButton_6.Position = UDim2.new(2.98023224e-08, 0, 0.343915343, 0)
+TextButton_6.Size = UDim2.new(0, 200, 0, 50)
+TextButton_6.Font = Enum.Font.SciFi
+TextButton_6.Text = "Tp to mouse: G"
+TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.TextScaled = true
+TextButton_6.TextSize = 14.000
+TextButton_6.TextWrapped = true
+
+UICorner_8.Parent = TextButton_6
+
+TextButton_7.Parent = Frame
+TextButton_7.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+TextButton_7.Position = UDim2.new(0, 0, 0.537037015, 0)
+TextButton_7.Size = UDim2.new(0, 200, 0, 50)
+TextButton_7.Font = Enum.Font.SciFi
+TextButton_7.Text = "Hangout Room"
+TextButton_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_7.TextScaled = true
+TextButton_7.TextSize = 14.000
+TextButton_7.TextWrapped = true
+
+UICorner_9.Parent = TextButton_7
+
+TextButton_8.Parent = Frame
+TextButton_8.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+TextButton_8.Position = UDim2.new(0.3493976, 0, 0.547619045, 0)
+TextButton_8.Size = UDim2.new(0, 200, 0, 50)
+TextButton_8.Font = Enum.Font.SciFi
+TextButton_8.Text = "AntiAfk"
+TextButton_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_8.TextScaled = true
+TextButton_8.TextSize = 14.000
+TextButton_8.TextWrapped = true
+
+UICorner_10.Parent = TextButton_8
+
+TextButton_9.Parent = Frame
+TextButton_9.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+TextButton_9.Position = UDim2.new(0.698795199, 0, 0.547619045, 0)
+TextButton_9.Size = UDim2.new(0, 200, 0, 50)
+TextButton_9.Font = Enum.Font.SciFi
+TextButton_9.Text = "Smack"
+TextButton_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_9.TextScaled = true
+TextButton_9.TextSize = 14.000
+TextButton_9.TextWrapped = true
+
+UICorner_11.Parent = TextButton_9
+
+-- Scripts:
+
+local function UCIXP_fake_script() -- Frame.DRAG 
+	local script = Instance.new('LocalScript', Frame)
+
+	local Drag = script.Parent
+	gsCoreGui = game:GetService("CoreGui")
+	gsTween = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	local function update(input)
+		local delta = input.Position - dragStart
+		local dragTime = 0.02
+		local SmoothDrag = {}
+		SmoothDrag.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		local dragSmoothFunction = gsTween:Create(Drag, TweenInfo.new(dragTime, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), SmoothDrag)
+		dragSmoothFunction:Play()
+	end
+	Drag.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = Drag.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	Drag.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging and Drag.Size then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(UCIXP_fake_script)()
+local function XUTP_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.Sit = true
+	end)
+end
+coroutine.wrap(XUTP_fake_script)()
+local function KPTX_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(KPTX_fake_script)()
+local function XUWXF_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		repeat wait()
+		until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+		local mouse = game.Players.LocalPlayer:GetMouse()
+		repeat wait() until mouse
+		local plr = game.Players.LocalPlayer
+		local torso = plr.Character.Torso
+		local flying = true
+		local deb = true
+		local ctrl = {f = 0, b = 0, l = 0, r = 0}
+		local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		local maxspeed = 50
+		local speed = 0
+	
+		function Fly()
+			local bg = Instance.new("BodyGyro", torso)
+			bg.P = 9e4
+			bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+			bg.cframe = torso.CFrame
+			local bv = Instance.new("BodyVelocity", torso)
+			bv.velocity = Vector3.new(0,0.1,0)
+			bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+			repeat wait()
+				plr.Character.Humanoid.PlatformStand = true
+				if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+					speed = speed+.5+(speed/maxspeed)
+					if speed > maxspeed then
+						speed = maxspeed
+					end
+				elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+					speed = speed-1
+					if speed < 0 then
+						speed = 0
+					end
+				end
+				if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+					bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+					lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+				elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+					bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				else
+					bv.velocity = Vector3.new(0,0.1,0)
+				end
+				bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+			until not flying
+			ctrl = {f = 0, b = 0, l = 0, r = 0}
+			lastctrl = {f = 0, b = 0, l = 0, r = 0}
+			speed = 0
+			bg:Destroy()
+			bv:Destroy()
+			plr.Character.Humanoid.PlatformStand = false
+		end
+		mouse.KeyDown:connect(function(key)
+			if key:lower() == "f" then
+				if flying then flying = false
+				else
+					flying = true
+					Fly()
+				end
+			elseif key:lower() == "w" then
+				ctrl.f = 1
+			elseif key:lower() == "s" then
+				ctrl.b = -1
+			elseif key:lower() == "a" then
+				ctrl.l = -1
+			elseif key:lower() == "d" then
+				ctrl.r = 1
+			end
+		end)
+		mouse.KeyUp:connect(function(key)
+			if key:lower() == "w" then
+				ctrl.f = 0
+			elseif key:lower() == "s" then
+				ctrl.b = 0
+			elseif key:lower() == "a" then
+				ctrl.l = 0
+			elseif key:lower() == "d" then
+				ctrl.r = 0
+			end
+		end)
+	end)
+end
+coroutine.wrap(XUWXF_fake_script)()
+local function MTVZHR_fake_script() -- TextButton_4.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_4)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local ts = game:GetService("TeleportService")
+		local p = game:GetService("Players").LocalPlayer
+		ts:Teleport(game.PlaceId, p)
+	end)
+	
+end
+coroutine.wrap(MTVZHR_fake_script)()
+local function QSQB_fake_script() -- TextButton_5.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_5)
+
+	script.Parent.Parent.TextBox.FocusLost:connect(
+		function(enterPressed)
+			if enterPressed then
+				print(script.Parent.Parent.TextBox.Text)
+			end
+		end
+	)
+	
+	local PlayerName = script.Parent.Parent.TextBox
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(game.Workspace:GetChildren()) do
+			if v.Name == PlayerName.Text then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame  * CFrame.new(0,0,2)
+			end
+		end
+		--game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild(PlayerName).HumanoidRootPart.CFrame * CFrame.new(0,0,0)
+	end)
+end
+coroutine.wrap(QSQB_fake_script)()
+local function KIDZMRE_fake_script() -- TextBox.LocalScript 
+	local script = Instance.new('LocalScript', TextBox)
+
+	script.Parent.FocusLost:connect(function()
+		for i,v in pairs(game.Players:GetChildren()) do
+			if (string.sub(string.lower(v.Name),1,string.len(script.Parent.Text))) == string.lower(script.Parent.Text) then
+				script.Parent.Text = v.Name
+			end
+		end
+	end)
+end
+coroutine.wrap(KIDZMRE_fake_script)()
+local function BRJRPOC_fake_script() -- TextButton_6.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_6)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local mouse = game.Players.LocalPlayer:GetMouse()
+		local UIS = game:GetService("UserInputService") -- grabs the input from the keyboard works with any local script
+		local character = game.Players.LocalPlayer.Character
+	
+	
+		UIS.InputBegan:Connect(function(input,isTyping) -- it makes it so it actually grabs the input
+			if isTyping then -- if you are typing in chat and you press the button that its for it doesnt actually make you run
+				return -- the script doesnt execute 
+			else -- if player isnt typing
+				if input.KeyCode == Enum.KeyCode.G then 
+					character:MoveTo(mouse.Hit.p)
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(BRJRPOC_fake_script)()
+local function TLCSY_fake_script() -- TextButton_7.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_7)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local jumbo = Instance.new("Model")
+		jumbo.Name = "jumbo"
+	
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2016.532, -268.63, -1957.25)
+	
+		local Part = Instance.new("Part")
+		Part.Anchored = true
+		Part.BottomSurface = Enum.SurfaceType.Smooth
+		Part.TopSurface = Enum.SurfaceType.Smooth
+		Part.Color = Color3.fromRGB(159, 161, 172)
+		Part.Material = Enum.Material.SmoothPlastic
+		Part.Size = Vector3.new(64.699981689453, 38.399993896484, 1.6999764442444)
+		Part.CFrame = CFrame.new(2015.9919433594, -266.84515380859, -1987.7907714844)
+		Part.Parent = jumbo
+	
+		local Part1 = Instance.new("Part")
+		Part1.Anchored = true
+		Part1.BottomSurface = Enum.SurfaceType.Smooth
+		Part1.TopSurface = Enum.SurfaceType.Smooth
+		Part1.Color = Color3.fromRGB(248, 248, 248)
+		Part1.Material = Enum.Material.SmoothPlastic
+		Part1.Size = Vector3.new(1.1000002622604, 0.09999992698431, 2)
+		Part1.CFrame = CFrame.new(2017.2666015625, -272.57913208008, -1949.8706054688, -0.73994183540344, -0.62088567018509, -0.25881859660149, -0.64278781414032, 0.76604431867599, -7.4276158557041e-07, 0.1982669532299, 0.16636490821838, -0.96592599153519)
+		Part1.Parent = jumbo
+	
+		local Part2 = Instance.new("Part")
+		Part2.Anchored = true
+		Part2.BottomSurface = Enum.SurfaceType.Smooth
+		Part2.TopSurface = Enum.SurfaceType.Smooth
+		Part2.Color = Color3.fromRGB(108, 0, 0)
+		Part2.Material = Enum.Material.SmoothPlastic
+		Part2.Size = Vector3.new(5.0887689590454, 1.9530764818192, 1.7122806310654)
+		Part2.CFrame = CFrame.new(2016.9597167969, -273.24816894531, -1963.7213134766, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+		Part2.Parent = jumbo
+	
+		local Part3 = Instance.new("Part")
+		Part3.Anchored = true
+		Part3.BottomSurface = Enum.SurfaceType.Smooth
+		Part3.TopSurface = Enum.SurfaceType.Smooth
+		Part3.Color = Color3.fromRGB(108, 0, 0)
+		Part3.Material = Enum.Material.SmoothPlastic
+		Part3.Size = Vector3.new(3.5887687206268, 1.8530764579773, 1.7122806310654)
+		Part3.CFrame = CFrame.new(2020.1755371094, -273.19818115234, -1935.9792480469, 0.81915313005447, 0, -0.57357507944107, 0, 1, 0, 0.57357507944107, 0, 0.81915313005447)
+		Part3.Parent = jumbo
+	
+		local Part4 = Instance.new("Part")
+		Part4.Anchored = true
+		Part4.BottomSurface = Enum.SurfaceType.Smooth
+		Part4.TopSurface = Enum.SurfaceType.Smooth
+		Part4.Color = Color3.fromRGB(255, 176, 0)
+		Part4.Material = Enum.Material.SmoothPlastic
+		Part4.Size = Vector3.new(0.69999992847443, 0.19999992847443, 0.39999973773956)
+		Part4.CFrame = CFrame.new(2005.1491699219, -271.70498657227, -1937.7648925781, 0.96592605113983, -8.5326428234112e-07, -0.2588182091713, 8.5326428234112e-07, 1, -1.1233399987987e-07, 0.2588182091713, -1.1233399987987e-07, 0.96592605113983)
+		Part4.Parent = jumbo
+	
+		local Part5 = Instance.new("Part")
+		Part5.Anchored = true
+		Part5.BottomSurface = Enum.SurfaceType.Smooth
+		Part5.TopSurface = Enum.SurfaceType.Smooth
+		Part5.Color = Color3.fromRGB(255, 176, 0)
+		Part5.Material = Enum.Material.SmoothPlastic
+		Part5.Size = Vector3.new(0.49999991059303, 1.2000000476837, 0.79999977350235)
+		Part5.CFrame = CFrame.new(2005.2456054688, -271.3049621582, -1937.7390136719, 0.96592605113983, -8.5326428234112e-07, -0.2588182091713, 8.5326428234112e-07, 1, -1.1233399987987e-07, 0.2588182091713, -1.1233399987987e-07, 0.96592605113983)
+		Part5.Parent = jumbo
+	
+		local Part6 = Instance.new("Part")
+		Part6.Anchored = true
+		Part6.BottomSurface = Enum.SurfaceType.Smooth
+		Part6.TopSurface = Enum.SurfaceType.Smooth
+		Part6.Color = Color3.fromRGB(248, 248, 248)
+		Part6.Material = Enum.Material.SmoothPlastic
+		Part6.Size = Vector3.new(1.1000002622604, 0.09999992698431, 2)
+		Part6.CFrame = CFrame.new(2016.8029785156, -272.47912597656, -1949.7463378906, 0, -0.9659258723259, -0.25881898403168, -1, 0, 0, 0, 0.25881898403168, -0.9659258723259)
+		Part6.Parent = jumbo
+	
+		local Part7 = Instance.new("Part")
+		Part7.Anchored = true
+		Part7.BottomSurface = Enum.SurfaceType.Smooth
+		Part7.TopSurface = Enum.SurfaceType.Smooth
+		Part7.Color = Color3.fromRGB(108, 0, 0)
+		Part7.Material = Enum.Material.SmoothPlastic
+		Part7.Size = Vector3.new(4.3887677192688, 1.8530764579773, 1.7122806310654)
+		Part7.CFrame = CFrame.new(2023.830078125, -273.19818115234, -1940.5009765625, 0.81915313005447, 0, -0.57357507944107, 0, 1, 0, 0.57357507944107, 0, 0.81915313005447)
+		Part7.Parent = jumbo
+	
+		local Part8 = Instance.new("Part")
+		Part8.Anchored = true
+		Part8.BottomSurface = Enum.SurfaceType.Smooth
+		Part8.TopSurface = Enum.SurfaceType.Smooth
+		Part8.Color = Color3.fromRGB(108, 0, 0)
+		Part8.Material = Enum.Material.SmoothPlastic
+		Part8.Size = Vector3.new(5.2887687683105, 1.9530764818192, 1.7122806310654)
+		Part8.CFrame = CFrame.new(1998.6098632813, -273.24816894531, -1950.9716796875, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part8.Parent = jumbo
+	
+		local Union = Instance.new("UnionOperation")
+		Union.Anchored = true
+		Union.Color = Color3.fromRGB(253, 180, 120)
+		Union.Material = Enum.Material.SmoothPlastic
+		Union.Size = Vector3.new(6.4442229270935, 0.5401411652565, 5.984760761261)
+		Union.CFrame = CFrame.new(2032.029296875, -266.89331054688, -1961.6154785156, -0.70710837841034, 0, 0.70710533857346, 0, 1, 0, -0.70710533857346, 0, -0.70710837841034)
+		Union.Parent = jumbo
+	
+		local Part9 = Instance.new("Part")
+		Part9.Anchored = true
+		Part9.BottomSurface = Enum.SurfaceType.Smooth
+		Part9.TopSurface = Enum.SurfaceType.Smooth
+		Part9.Color = Color3.fromRGB(159, 161, 172)
+		Part9.Material = Enum.Material.SmoothPlastic
+		Part9.Size = Vector3.new(64.699981689453, 38.399993896484, 1.6999764442444)
+		Part9.CFrame = CFrame.new(2015.9919433594, -266.84515380859, -1912.8909912109)
+		Part9.Parent = jumbo
+	
+		local Part10 = Instance.new("Part")
+		Part10.Anchored = true
+		Part10.BottomSurface = Enum.SurfaceType.Smooth
+		Part10.TopSurface = Enum.SurfaceType.Smooth
+		Part10.Color = Color3.fromRGB(159, 161, 172)
+		Part10.Material = Enum.Material.SmoothPlastic
+		Part10.Size = Vector3.new(64.699981689453, 1, 76.599990844727)
+		Part10.CFrame = CFrame.new(2015.9919433594, -285.54510498047, -1950.3408203125)
+		Part10.Parent = jumbo
+	
+		local Part11 = Instance.new("Part")
+		Part11.Anchored = true
+		Part11.BottomSurface = Enum.SurfaceType.Smooth
+		Part11.TopSurface = Enum.SurfaceType.Smooth
+		Part11.Color = Color3.fromRGB(255, 176, 0)
+		Part11.Material = Enum.Material.SmoothPlastic
+		Part11.Size = Vector3.new(0.49999991059303, 1.2000000476837, 0.79999977350235)
+		Part11.CFrame = CFrame.new(2005.3422851563, -271.3049621582, -1937.7131347656, 0.96592605113983, -8.5326428234112e-07, -0.2588182091713, 8.5326428234112e-07, 1, -1.1233399987987e-07, 0.2588182091713, -1.1233399987987e-07, 0.96592605113983)
+		Part11.Parent = jumbo
+	
+		local Part12 = Instance.new("Part")
+		Part12.Anchored = true
+		Part12.BottomSurface = Enum.SurfaceType.Smooth
+		Part12.TopSurface = Enum.SurfaceType.Smooth
+		Part12.Color = Color3.fromRGB(106, 57, 9)
+		Part12.Material = Enum.Material.SmoothPlastic
+		Part12.Size = Vector3.new(1.1000002622604, 0.09999992698431, 2)
+		Part12.CFrame = CFrame.new(2017.4790039063, -273.07916259766, -1949.9274902344, -0.9659258723259, 0, -0.25881898403168, 0, 1, 0, 0.25881898403168, 0, -0.9659258723259)
+		Part12.Parent = jumbo
+	
+		local Part13 = Instance.new("Part")
+		Part13.Anchored = true
+		Part13.BottomSurface = Enum.SurfaceType.Smooth
+		Part13.TopSurface = Enum.SurfaceType.Smooth
+		Part13.Color = Color3.fromRGB(198, 181, 161)
+		Part13.Material = Enum.Material.Glass
+		Part13.Size = Vector3.new(2.9134750366211, 0.72836875915527, 1.4567375183105)
+		Part13.CFrame = CFrame.new(2002.6081542969, -265.91461181641, -1967.4848632813, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+		Part13.Parent = jumbo
+	
+		local Mesh = Instance.new("SpecialMesh")
+		Mesh.Scale = Vector3.new(1.5, 0.20000000298023, 2)
+		Mesh.MeshType = Enum.MeshType.Sphere
+		Mesh.Parent = Part13
+	
+		local Part14 = Instance.new("Part")
+		Part14.Anchored = true
+		Part14.BottomSurface = Enum.SurfaceType.Smooth
+		Part14.TopSurface = Enum.SurfaceType.Smooth
+		Part14.Color = Color3.fromRGB(200, 148, 16)
+		Part14.Material = Enum.Material.SmoothPlastic
+		Part14.Size = Vector3.new(0.14567352831364, 4.8072352409363, 0.43702101707458)
+		Part14.CFrame = CFrame.new(1994.6804199219, -267.88116455078, -1948.4812011719)
+		Part14.Parent = jumbo
+	
+		local Part15 = Instance.new("Part")
+		Part15.Anchored = true
+		Part15.BottomSurface = Enum.SurfaceType.Smooth
+		Part15.TopSurface = Enum.SurfaceType.Smooth
+		Part15.Color = Color3.fromRGB(254, 243, 202)
+		Part15.Material = Enum.Material.SmoothPlastic
+		Part15.Size = Vector3.new(2.2506577968597, 16.271759033203, 41.167404174805)
+		Part15.CFrame = CFrame.new(2038.0236816406, -267.75732421875, -1950.0544433594)
+		Part15.Parent = jumbo
+	
+		local Part16 = Instance.new("Part")
+		Part16.Anchored = true
+		Part16.BottomSurface = Enum.SurfaceType.Smooth
+		Part16.TopSurface = Enum.SurfaceType.Smooth
+		Part16.Color = Color3.fromRGB(248, 248, 248)
+		Part16.Material = Enum.Material.SmoothPlastic
+		Part16.Size = Vector3.new(1.1000002622604, 0.09999992698431, 2)
+		Part16.CFrame = CFrame.new(2016.2233886719, -272.97915649414, -1949.5910644531, -0.9659258723259, 0, -0.25881898403168, 0, 1, 0, 0.25881898403168, 0, -0.9659258723259)
+		Part16.Parent = jumbo
+	
+		local Part17 = Instance.new("Part")
+		Part17.Anchored = true
+		Part17.BottomSurface = Enum.SurfaceType.Smooth
+		Part17.TopSurface = Enum.SurfaceType.Smooth
+		Part17.Color = Color3.fromRGB(117, 0, 0)
+		Part17.Material = Enum.Material.SmoothPlastic
+		Part17.Size = Vector3.new(5.389928817749, 1.4567376375198, 6.1183090209961)
+		Part17.CFrame = CFrame.new(2024.0747070313, -271.59365844727, -1936.7316894531, -0.21201202273369, -0.79123997688293, 0.57357674837112, -0.96592611074448, 0.25881808996201, -1.2769174873029e-06, -0.1484510153532, -0.55403298139572, -0.81915193796158)
+		Part17.Parent = jumbo
+	
+		local Part18 = Instance.new("Part")
+		Part18.Anchored = true
+		Part18.BottomSurface = Enum.SurfaceType.Smooth
+		Part18.TopSurface = Enum.SurfaceType.Smooth
+		Part18.Color = Color3.fromRGB(100, 45, 9)
+		Part18.Material = Enum.Material.SmoothPlastic
+		Part18.Size = Vector3.new(46.790420532227, 4.4721817970276, 2.7240993976593)
+		Part18.CFrame = CFrame.new(2015.7521972656, -273.43862915039, -1968.8388671875, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part18.Parent = jumbo
+	
+		local Part19 = Instance.new("Part")
+		Part19.Anchored = true
+		Part19.BottomSurface = Enum.SurfaceType.Smooth
+		Part19.TopSurface = Enum.SurfaceType.Smooth
+		Part19.Color = Color3.fromRGB(254, 243, 202)
+		Part19.Material = Enum.Material.SmoothPlastic
+		Part19.Size = Vector3.new(46.790420532227, 16.271759033203, 2.9426093101501)
+		Part19.CFrame = CFrame.new(2015.7521972656, -267.75732421875, -1969.1667480469, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part19.Parent = jumbo
+	
+		local Part20 = Instance.new("Part")
+		Part20.Anchored = true
+		Part20.BottomSurface = Enum.SurfaceType.Smooth
+		Part20.TopSurface = Enum.SurfaceType.Smooth
+		Part20.Color = Color3.fromRGB(254, 243, 202)
+		Part20.Material = Enum.Material.SmoothPlastic
+		Part20.Size = Vector3.new(2.2506577968597, 16.271759033203, 41.167404174805)
+		Part20.CFrame = CFrame.new(1993.4821777344, -267.75732421875, -1950.0544433594, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part20.Parent = jumbo
+	
+		local Part21 = Instance.new("Part")
+		Part21.Anchored = true
+		Part21.BottomSurface = Enum.SurfaceType.Smooth
+		Part21.TopSurface = Enum.SurfaceType.Smooth
+		Part21.Color = Color3.fromRGB(157, 100, 72)
+		Part21.Material = Enum.Material.SmoothPlastic
+		Part21.Size = Vector3.new(46.848670959473, 0.72836875915527, 41.167404174805)
+		Part21.CFrame = CFrame.new(2015.7229003906, -275.5290222168, -1950.0544433594)
+		Part21.Parent = jumbo
+	
+		local Part22 = Instance.new("Part")
+		Part22.Anchored = true
+		Part22.BottomSurface = Enum.SurfaceType.Smooth
+		Part22.TopSurface = Enum.SurfaceType.Smooth
+		Part22.Color = Color3.fromRGB(248, 248, 248)
+		Part22.Material = Enum.Material.SmoothPlastic
+		Part22.Size = Vector3.new(1.1000002622604, 0.09999992698431, 2)
+		Part22.CFrame = CFrame.new(2017.3825683594, -272.97915649414, -1949.9016113281, -0.9659258723259, 0, -0.25881898403168, 0, 1, 0, 0.25881898403168, 0, -0.9659258723259)
+		Part22.Parent = jumbo
+	
+		local Part23 = Instance.new("Part")
+		Part23.Anchored = true
+		Part23.BottomSurface = Enum.SurfaceType.Smooth
+		Part23.TopSurface = Enum.SurfaceType.Smooth
+		Part23.Color = Color3.fromRGB(100, 45, 9)
+		Part23.Material = Enum.Material.SmoothPlastic
+		Part23.Size = Vector3.new(2.505598783493, 4.4721817970276, 37.758636474609)
+		Part23.CFrame = CFrame.new(2037.8962402344, -273.43862915039, -1948.8449707031, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part23.Parent = jumbo
+	
+		local Part24 = Instance.new("Part")
+		Part24.Anchored = true
+		Part24.BottomSurface = Enum.SurfaceType.Smooth
+		Part24.TopSurface = Enum.SurfaceType.Smooth
+		Part24.Color = Color3.fromRGB(100, 45, 9)
+		Part24.Material = Enum.Material.SmoothPlastic
+		Part24.Size = Vector3.new(2.505598783493, 4.4721817970276, 37.758636474609)
+		Part24.CFrame = CFrame.new(1993.6096191406, -273.43862915039, -1948.8449707031, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part24.Parent = jumbo
+	
+		local Part25 = Instance.new("Part")
+		Part25.Anchored = true
+		Part25.BottomSurface = Enum.SurfaceType.Smooth
+		Part25.TopSurface = Enum.SurfaceType.Smooth
+		Part25.Color = Color3.fromRGB(253, 241, 173)
+		Part25.Material = Enum.Material.SmoothPlastic
+		Part25.Size = Vector3.new(46.848670959473, 0.72836875915527, 41.167404174805)
+		Part25.CFrame = CFrame.new(2015.7229003906, -260.01480102539, -1950.0544433594)
+		Part25.Parent = jumbo
+	
+		local Part26 = Instance.new("Part")
+		Part26.Anchored = true
+		Part26.BottomSurface = Enum.SurfaceType.Smooth
+		Part26.TopSurface = Enum.SurfaceType.Smooth
+		Part26.Color = Color3.fromRGB(223, 223, 222)
+		Part26.Material = Enum.Material.SmoothPlastic
+		Part26.Size = Vector3.new(2.505598783493, 2.4327492713928, 37.758636474609)
+		Part26.CFrame = CFrame.new(1993.6096191406, -260.10955810547, -1948.8449707031, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part26.Parent = jumbo
+	
+		local Part27 = Instance.new("Part")
+		Part27.Anchored = true
+		Part27.BottomSurface = Enum.SurfaceType.Smooth
+		Part27.TopSurface = Enum.SurfaceType.Smooth
+		Part27.Color = Color3.fromRGB(248, 248, 248)
+		Part27.Transparency = 0.6
+		Part27.Material = Enum.Material.Neon
+		Part27.Size = Vector3.new(0.94844496250153, 18.282047271729, 18.282047271729)
+		Part27.CFrame = CFrame.new(2015.0310058594, -259.98556518555, -1950.4428710938, 0, 0, 1, 1, 0, 0, 0, 1, 0)
+		Part27.Shape = Enum.PartType.Cylinder
+		Part27.Parent = jumbo
+	
+		local PointLight = Instance.new("PointLight")
+		PointLight.Color = Color3.fromRGB(255, 247, 179)
+		PointLight.Brightness = 1.2
+		PointLight.Range = 33
+		PointLight.Parent = Part27
+	
+		local Union1 = Instance.new("UnionOperation")
+		Union1.Anchored = true
+		Union1.Color = Color3.fromRGB(126, 141, 99)
+		Union1.Material = Enum.Material.SmoothPlastic
+		Union1.Size = Vector3.new(20.758504867554, 0.072846882045269, 15.441382408142)
+		Union1.CFrame = CFrame.new(2015.3515625, -274.98272705078, -1950.3020019531)
+		Union1.UsePartColor = true
+		Union1.Parent = jumbo
+	
+		local Part28 = Instance.new("Part")
+		Part28.Anchored = true
+		Part28.BottomSurface = Enum.SurfaceType.Smooth
+		Part28.TopSurface = Enum.SurfaceType.Smooth
+		Part28.Color = Color3.fromRGB(223, 223, 222)
+		Part28.Material = Enum.Material.SmoothPlastic
+		Part28.Size = Vector3.new(2.505598783493, 2.4327492713928, 37.758636474609)
+		Part28.CFrame = CFrame.new(2037.8962402344, -260.10955810547, -1948.8449707031, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part28.Parent = jumbo
+	
+		local Part29 = Instance.new("Part")
+		Part29.Anchored = true
+		Part29.BottomSurface = Enum.SurfaceType.Smooth
+		Part29.TopSurface = Enum.SurfaceType.Smooth
+		Part29.Color = Color3.fromRGB(223, 223, 222)
+		Part29.Material = Enum.Material.SmoothPlastic
+		Part29.Size = Vector3.new(46.790420532227, 2.4327492713928, 2.7240993976593)
+		Part29.CFrame = CFrame.new(2015.7521972656, -260.10955810547, -1931.3278808594, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part29.Parent = jumbo
+	
+		local Part30 = Instance.new("Part")
+		Part30.Anchored = true
+		Part30.BottomSurface = Enum.SurfaceType.Smooth
+		Part30.TopSurface = Enum.SurfaceType.Smooth
+		Part30.Color = Color3.fromRGB(128, 187, 219)
+		Part30.Material = Enum.Material.SmoothPlastic
+		Part30.Size = Vector3.new(0.94844496250153, 18.282047271729, 18.282047271729)
+		Part30.CFrame = CFrame.new(2015.0310058594, -259.11151123047, -1950.4428710938, 0, 0, 1, 1, 0, 0, 0, 1, 0)
+		Part30.Shape = Enum.PartType.Cylinder
+		Part30.Parent = jumbo
+	
+		local Part31 = Instance.new("Part")
+		Part31.Anchored = true
+		Part31.BottomSurface = Enum.SurfaceType.Smooth
+		Part31.TopSurface = Enum.SurfaceType.Smooth
+		Part31.Color = Color3.fromRGB(253, 234, 141)
+		Part31.Size = Vector3.new(22.870779037476, 0.072836875915527, 16.60680770874)
+		Part31.CFrame = CFrame.new(2015.3879394531, -275.05557250977, -1950.2290039063)
+		Part31.Parent = jumbo
+	
+		local Union2 = Instance.new("UnionOperation")
+		Union2.Anchored = true
+		Union2.Color = Color3.fromRGB(235, 216, 154)
+		Union2.Material = Enum.Material.SmoothPlastic
+		Union2.Size = Vector3.new(2.1851007938385, 20.030139923096, 20.030185699463)
+		Union2.CFrame = CFrame.new(2015.4970703125, -259.57772827148, -1950.0837402344, 0, 1, -0, -1, 0, 0, 0, 0, 1)
+		Union2.Parent = jumbo
+	
+		local Part32 = Instance.new("Part")
+		Part32.Anchored = true
+		Part32.BottomSurface = Enum.SurfaceType.Smooth
+		Part32.TopSurface = Enum.SurfaceType.Smooth
+		Part32.Color = Color3.fromRGB(223, 223, 222)
+		Part32.Material = Enum.Material.SmoothPlastic
+		Part32.Size = Vector3.new(46.790420532227, 2.4327492713928, 2.7240993976593)
+		Part32.CFrame = CFrame.new(2015.7521972656, -260.10955810547, -1968.8388671875, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part32.Parent = jumbo
+	
+		local Part33 = Instance.new("Part")
+		Part33.Anchored = true
+		Part33.BottomSurface = Enum.SurfaceType.Smooth
+		Part33.TopSurface = Enum.SurfaceType.Smooth
+		Part33.Color = Color3.fromRGB(106, 72, 69)
+		Part33.Material = Enum.Material.SmoothPlastic
+		Part33.Size = Vector3.new(0.58269584178925, 1.6024112701416, 0.58269482851028)
+		Part33.CFrame = CFrame.new(2012.8386230469, -274.12329101563, -1948.1320800781)
+		Part33.Parent = jumbo
+	
+		local Part34 = Instance.new("Part")
+		Part34.Anchored = true
+		Part34.BottomSurface = Enum.SurfaceType.Smooth
+		Part34.TopSurface = Enum.SurfaceType.Smooth
+		Part34.Color = Color3.fromRGB(106, 72, 69)
+		Part34.Material = Enum.Material.SmoothPlastic
+		Part34.Size = Vector3.new(10.342837333679, 0.14567355811596, 5.3170919418335)
+		Part34.CFrame = CFrame.new(2017.7185058594, -273.24926757813, -1950.4992675781)
+		Part34.Parent = jumbo
+	
+		local Part35 = Instance.new("Part")
+		Part35.Anchored = true
+		Part35.BottomSurface = Enum.SurfaceType.Smooth
+		Part35.TopSurface = Enum.SurfaceType.Smooth
+		Part35.Color = Color3.fromRGB(106, 72, 69)
+		Part35.Material = Enum.Material.SmoothPlastic
+		Part35.Size = Vector3.new(0.58269584178925, 1.6024112701416, 0.58269482851028)
+		Part35.CFrame = CFrame.new(2012.8386230469, -274.12329101563, -1952.8666992188)
+		Part35.Parent = jumbo
+	
+		local Part36 = Instance.new("Part")
+		Part36.Anchored = true
+		Part36.BottomSurface = Enum.SurfaceType.Smooth
+		Part36.TopSurface = Enum.SurfaceType.Smooth
+		Part36.Color = Color3.fromRGB(106, 72, 69)
+		Part36.Material = Enum.Material.SmoothPlastic
+		Part36.Size = Vector3.new(0.58269584178925, 1.6024112701416, 0.58269482851028)
+		Part36.CFrame = CFrame.new(2022.5986328125, -274.12329101563, -1952.8664550781)
+		Part36.Parent = jumbo
+	
+		local Part37 = Instance.new("Part")
+		Part37.Anchored = true
+		Part37.BottomSurface = Enum.SurfaceType.Smooth
+		Part37.TopSurface = Enum.SurfaceType.Smooth
+		Part37.Color = Color3.fromRGB(127, 91, 75)
+		Part37.Material = Enum.Material.SmoothPlastic
+		Part37.Size = Vector3.new(10.197164535522, 0.14567355811596, 5.1714186668396)
+		Part37.CFrame = CFrame.new(2017.7185058594, -273.75909423828, -1950.4992675781)
+		Part37.Parent = jumbo
+	
+		local Part38 = Instance.new("Part")
+		Part38.Anchored = true
+		Part38.BottomSurface = Enum.SurfaceType.Smooth
+		Part38.TopSurface = Enum.SurfaceType.Smooth
+		Part38.Color = Color3.fromRGB(106, 72, 69)
+		Part38.Material = Enum.Material.SmoothPlastic
+		Part38.Size = Vector3.new(0.58269584178925, 1.6024112701416, 0.58269482851028)
+		Part38.CFrame = CFrame.new(2022.5986328125, -274.12329101563, -1948.1320800781)
+		Part38.Parent = jumbo
+	
+		local Part39 = Instance.new("Part")
+		Part39.Anchored = true
+		Part39.BottomSurface = Enum.SurfaceType.Smooth
+		Part39.TopSurface = Enum.SurfaceType.Smooth
+		Part39.Color = Color3.fromRGB(240, 179, 55)
+		Part39.Transparency = 0.5
+		Part39.Size = Vector3.new(2.9134750366211, 0.72836875915527, 1.4567375183105)
+		Part39.CFrame = CFrame.new(2002.6018066406, -265.91461181641, -1967.5571289063, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+		Part39.Parent = jumbo
+	
+		local Mesh1 = Instance.new("SpecialMesh")
+		Mesh1.Scale = Vector3.new(2.0999999046326, 0.20000000298023, 3.0999999046326)
+		Mesh1.MeshType = Enum.MeshType.Sphere
+		Mesh1.Parent = Part39
+	
+		local Part40 = Instance.new("Part")
+		Part40.Anchored = true
+		Part40.BottomSurface = Enum.SurfaceType.Smooth
+		Part40.TopSurface = Enum.SurfaceType.Smooth
+		Part40.Color = Color3.fromRGB(102, 0, 0)
+		Part40.Material = Enum.Material.SmoothPlastic
+		Part40.Size = Vector3.new(5.6812734603882, 0.072836868464947, 16.461145401001)
+		Part40.CFrame = CFrame.new(2004.3225097656, -274.69137573242, -1964.0739746094, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+		Part40.Parent = jumbo
+	
+		local Union3 = Instance.new("UnionOperation")
+		Union3.Anchored = true
+		Union3.Color = Color3.fromRGB(253, 180, 120)
+		Union3.Material = Enum.Material.SmoothPlastic
+		Union3.Size = Vector3.new(5.973623752594, 6.5284953117371, 5.547746181488)
+		Union3.CFrame = CFrame.new(2032.0808105469, -269.96533203125, -1961.6669921875, -0.70710837841034, 0, 0.70710533857346, 0, 1, 0, -0.70710533857346, 0, -0.70710837841034)
+		Union3.UsePartColor = true
+		Union3.Parent = jumbo
+	
+		local Part41 = Instance.new("Part")
+		Part41.Anchored = true
+		Part41.BottomSurface = Enum.SurfaceType.Smooth
+		Part41.TopSurface = Enum.SurfaceType.Smooth
+		Part41.Color = Color3.fromRGB(94, 0, 0)
+		Part41.Material = Enum.Material.SmoothPlastic
+		Part41.Size = Vector3.new(1.2382237911224, 1.2382270097733, 1.0925654172897)
+		Part41.CFrame = CFrame.new(2000.2744140625, -274.69140625, -1961.9194335938)
+		Part41.Parent = jumbo
+	
+		local Part42 = Instance.new("Part")
+		Part42.Anchored = true
+		Part42.BottomSurface = Enum.SurfaceType.Smooth
+		Part42.TopSurface = Enum.SurfaceType.Smooth
+		Part42.Color = Color3.fromRGB(102, 0, 0)
+		Part42.Material = Enum.Material.SmoothPlastic
+		Part42.Size = Vector3.new(0.072834230959415, 4.8072333335876, 21.851078033447)
+		Part42.CFrame = CFrame.new(2006.0705566406, -272.30526733398, -1967.0941162109, 0, 0, -1, 0.087155967950821, 0.9961946606636, 0, 0.9961946606636, -0.087155967950821, 0)
+		Part42.Parent = jumbo
+	
+		local Part43 = Instance.new("Part")
+		Part43.Anchored = true
+		Part43.BottomSurface = Enum.SurfaceType.Smooth
+		Part43.TopSurface = Enum.SurfaceType.Smooth
+		Part43.Color = Color3.fromRGB(94, 0, 0)
+		Part43.Material = Enum.Material.SmoothPlastic
+		Part43.Size = Vector3.new(1.2382237911224, 1.2382270097733, 1.0925654172897)
+		Part43.CFrame = CFrame.new(2019.8503417969, -274.69140625, -1936.7180175781, 0.57357507944107, 0, 0.81915313005447, 0, 1, 0, -0.81915313005447, 0, 0.57357507944107)
+		Part43.Parent = jumbo
+	
+		local Part44 = Instance.new("Part")
+		Part44.Anchored = true
+		Part44.BottomSurface = Enum.SurfaceType.Smooth
+		Part44.TopSurface = Enum.SurfaceType.Smooth
+		Part44.Color = Color3.fromRGB(208, 157, 48)
+		Part44.Size = Vector3.new(2.9134750366211, 0.72836875915527, 1.4567375183105)
+		Part44.CFrame = CFrame.new(2002.6018066406, -265.91461181641, -1967.5571289063, 0, 0, -1, -1, 0, 0, 0, 1, 0)
+		Part44.Parent = jumbo
+	
+		local Mesh2 = Instance.new("SpecialMesh")
+		Mesh2.Scale = Vector3.new(2, 0.20000000298023, 3)
+		Mesh2.MeshType = Enum.MeshType.Sphere
+		Mesh2.Parent = Part44
+	
+		local Part45 = Instance.new("Part")
+		Part45.Anchored = true
+		Part45.BottomSurface = Enum.SurfaceType.Smooth
+		Part45.TopSurface = Enum.SurfaceType.Smooth
+		Part45.Color = Color3.fromRGB(117, 0, 0)
+		Part45.Material = Enum.Material.SmoothPlastic
+		Part45.Size = Vector3.new(5.7887682914734, 2.2530763149261, 2.1122806072235)
+		Part45.CFrame = CFrame.new(1998.2524414063, -273.19815063477, -1950.9997558594)
+		Part45.Parent = jumbo
+	
+		local Union4 = Instance.new("UnionOperation")
+		Union4.Anchored = true
+		Union4.Color = Color3.fromRGB(117, 0, 0)
+		Union4.Material = Enum.Material.SmoothPlastic
+		Union4.Size = Vector3.new(21.851079940796, 6.1985807418823, 16.328281402588)
+		Union4.CFrame = CFrame.new(2006.0705566406, -272.28356933594, -1958.8642578125, 1, -2.682228341655e-07, 1.862645149231e-09, 2.6446650736034e-07, 0.99619472026825, 0.087155692279339, -2.4447217583656e-08, -0.087155699729919, 0.9961946606636)
+		Union4.Parent = jumbo
+	
+		local Part46 = Instance.new("Part")
+		Part46.Anchored = true
+		Part46.BottomSurface = Enum.SurfaceType.Smooth
+		Part46.TopSurface = Enum.SurfaceType.Smooth
+		Part46.Color = Color3.fromRGB(117, 0, 0)
+		Part46.Material = Enum.Material.SmoothPlastic
+		Part46.Size = Vector3.new(5.7887659072876, 2.2530763149261, 2.1122806072235)
+		Part46.CFrame = CFrame.new(2016.9597167969, -273.19818115234, -1964.1716308594, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+		Part46.Parent = jumbo
+	
+		local Union5 = Instance.new("UnionOperation")
+		Union5.Anchored = true
+		Union5.Color = Color3.fromRGB(239, 199, 130)
+		Union5.Material = Enum.Material.SmoothPlastic
+		Union5.Size = Vector3.new(10.051490783691, 0.14567708969116, 5.0257620811462)
+		Union5.CFrame = CFrame.new(2017.7185058594, -273.24197387695, -1950.4992675781)
+		Union5.Parent = jumbo
+	
+		local Part47 = Instance.new("Part")
+		Part47.Anchored = true
+		Part47.BottomSurface = Enum.SurfaceType.Smooth
+		Part47.TopSurface = Enum.SurfaceType.Smooth
+		Part47.Color = Color3.fromRGB(91, 93, 105)
+		Part47.Material = Enum.Material.SmoothPlastic
+		Part47.Size = Vector3.new(0.10999999940395, 0.13000014424324, 0.13000014424324)
+		Part47.CFrame = CFrame.new(2018.9873046875, -271.08447265625, -1951.9411621094, 0, 0.34201991558075, 0.939692735672, -1, 0, 0, 0, -0.939692735672, 0.34201988577843)
+		Part47.Shape = Enum.PartType.Cylinder
+		Part47.Parent = jumbo
+	
+		local Part48 = Instance.new("Part")
+		Part48.Anchored = true
+		Part48.BottomSurface = Enum.SurfaceType.Smooth
+		Part48.TopSurface = Enum.SurfaceType.Smooth
+		Part48.Color = Color3.fromRGB(91, 93, 105)
+		Part48.Material = Enum.Material.SmoothPlastic
+		Part48.Size = Vector3.new(0.098099574446678, 0.11593599617481, 0.11593599617481)
+		Part48.CFrame = CFrame.new(2019.2189941406, -271.29370117188, -1951.7607421875, -0.75440698862076, -0.64278733730316, -0.13302132487297, -0.17364700138569, 7.2451129540241e-08, 0.98480796813965, -0.63302201032639, 0.76604473590851, -0.11161813884974)
+		Part48.Shape = Enum.PartType.Cylinder
+		Part48.Parent = jumbo
+	
+		local Part49 = Instance.new("Part")
+		Part49.Anchored = true
+		Part49.BottomSurface = Enum.SurfaceType.Smooth
+		Part49.TopSurface = Enum.SurfaceType.Smooth
+		Part49.Color = Color3.fromRGB(91, 93, 105)
+		Part49.Material = Enum.Material.SmoothPlastic
+		Part49.Size = Vector3.new(0.098099574446678, 0.11593599617481, 0.11593599617481)
+		Part49.CFrame = CFrame.new(2019.0603027344, -271.21838378906, -1951.8937988281, -0.49240306019783, -0.64278620481491, 0.58682638406754, 0.76604610681534, 3.8810915725662e-07, 0.6427857875824, -0.4131740629673, 0.76604562997818, 0.49240365624428)
+		Part49.Shape = Enum.PartType.Cylinder
+		Part49.Parent = jumbo
+	
+		local Union6 = Instance.new("UnionOperation")
+		Union6.Anchored = true
+		Union6.Color = Color3.fromRGB(255, 176, 0)
+		Union6.Material = Enum.Material.SmoothPlastic
+		Union6.Size = Vector3.new(0.26428586244583, 0.34495034813881, 0.35793489217758)
+		Union6.CFrame = CFrame.new(2019.2160644531, -271.82305908203, -1951.7536621094, 0.39050614833832, -0.0011251210235059, 0.92059969902039, 0.0095020039007068, 0.99995100498199, -0.0028085228987038, -0.92055135965347, 0.0098442863672972, 0.39049768447876)
+		Union6.Parent = jumbo
+	
+		local Part50 = Instance.new("Part")
+		Part50.Anchored = true
+		Part50.BottomSurface = Enum.SurfaceType.Smooth
+		Part50.TopSurface = Enum.SurfaceType.Smooth
+		Part50.Color = Color3.fromRGB(91, 93, 105)
+		Part50.Material = Enum.Material.SmoothPlastic
+		Part50.Size = Vector3.new(0.098099574446678, 0.11593599617481, 0.11593599617481)
+		Part50.CFrame = CFrame.new(2019.1052246094, -271.26760864258, -1951.8562011719, -0.66341376304626, -0.64278727769852, 0.38302311301231, 0.50000083446503, 1.9371545079139e-07, 0.86602491140366, -0.55666983127594, 0.7660448551178, 0.32139399647713)
+		Part50.Shape = Enum.PartType.Cylinder
+		Part50.Parent = jumbo
+	
+		local Part51 = Instance.new("Part")
+		Part51.Anchored = true
+		Part51.BottomSurface = Enum.SurfaceType.Smooth
+		Part51.TopSurface = Enum.SurfaceType.Smooth
+		Part51.Color = Color3.fromRGB(91, 93, 105)
+		Part51.Material = Enum.Material.SmoothPlastic
+		Part51.Size = Vector3.new(0.098099574446678, 0.11593599617481, 0.11593599617481)
+		Part51.CFrame = CFrame.new(2019.0209960938, -271.07684326172, -1951.9270019531, 0, -0.6427880525589, 0.76604413986206, 1, 0, 0, 0, 0.76604413986206, 0.6427880525589)
+		Part51.Shape = Enum.PartType.Cylinder
+		Part51.Parent = jumbo
+	
+		local Part52 = Instance.new("Part")
+		Part52.Anchored = true
+		Part52.BottomSurface = Enum.SurfaceType.Smooth
+		Part52.TopSurface = Enum.SurfaceType.Smooth
+		Part52.Color = Color3.fromRGB(91, 93, 105)
+		Part52.Material = Enum.Material.SmoothPlastic
+		Part52.Size = Vector3.new(0.098099574446678, 0.11593599617481, 0.11593599617481)
+		Part52.CFrame = CFrame.new(2019.2739257813, -271.26751708984, -1951.7145996094, -0.66341406106949, -0.64278793334961, -0.3830215036869, -0.49999904632568, -2.3841798224566e-07, 0.86602598428726, -0.55667108297348, 0.76604425907135, -0.32139319181442)
+		Part52.Shape = Enum.PartType.Cylinder
+		Part52.Parent = jumbo
+	
+		local Part53 = Instance.new("Part")
+		Part53.Anchored = true
+		Part53.BottomSurface = Enum.SurfaceType.Smooth
+		Part53.TopSurface = Enum.SurfaceType.Smooth
+		Part53.Color = Color3.fromRGB(255, 176, 0)
+		Part53.Material = Enum.Material.SmoothPlastic
+		Part53.Size = Vector3.new(0.2642859518528, 0.33333331346512, 0.1285717189312)
+		Part53.CFrame = CFrame.new(2019.2883300781, -271.50238037109, -1951.7197265625, 0.39050614833832, -0.017187222838402, 0.92043989896774, 0.0095020039007068, 0.99984776973724, 0.014638668857515, -0.92055135965347, 0.0030295338947326, 0.39060994982719)
+		Part53.Parent = jumbo
+	
+		local Part54 = Instance.new("Part")
+		Part54.Anchored = true
+		Part54.BottomSurface = Enum.SurfaceType.Smooth
+		Part54.TopSurface = Enum.SurfaceType.Smooth
+		Part54.Color = Color3.fromRGB(255, 176, 0)
+		Part54.Material = Enum.Material.SmoothPlastic
+		Part54.Size = Vector3.new(0.050000000745058, 0.097619071602821, 0.2452382594347)
+		Part54.CFrame = CFrame.new(2019.2707519531, -271.27252197266, -1951.8901367188, 0.39050614833832, -0.92043989896774, -0.017186606302857, 0.0095020039007068, -0.014637998305261, 0.99984776973724, -0.92055135965347, -0.39060994982719, 0.0030297951307148)
+		Part54.Parent = jumbo
+	
+		local Part55 = Instance.new("Part")
+		Part55.Anchored = true
+		Part55.BottomSurface = Enum.SurfaceType.Smooth
+		Part55.TopSurface = Enum.SurfaceType.Smooth
+		Part55.Color = Color3.fromRGB(91, 93, 105)
+		Part55.Material = Enum.Material.SmoothPlastic
+		Part55.Size = Vector3.new(0.098099574446678, 0.11593599617481, 0.11593599617481)
+		Part55.CFrame = CFrame.new(2019.03125, -271.15216064453, -1951.9184570313, -0.26200196146965, -0.64278709888458, 0.71984696388245, 0.93969285488129, 4.2007545175693e-07, 0.34201940894127, -0.21984596550465, 0.7660448551178, 0.60402238368988)
+		Part55.Shape = Enum.PartType.Cylinder
+		Part55.Parent = jumbo
+	
+		local Part56 = Instance.new("Part")
+		Part56.Anchored = true
+		Part56.BottomSurface = Enum.SurfaceType.Smooth
+		Part56.TopSurface = Enum.SurfaceType.Smooth
+		Part56.Color = Color3.fromRGB(255, 176, 0)
+		Part56.Material = Enum.Material.SmoothPlastic
+		Part56.Size = Vector3.new(0.3571429848671, 0.097619071602821, 0.066666886210442)
+		Part56.CFrame = CFrame.new(2019.2094726563, -271.18508911133, -1951.7487792969, 0.39050614833832, -0.92043989896774, -0.017186606302857, 0.0095020039007068, -0.014637998305261, 0.99984776973724, -0.92055135965347, -0.39060994982719, 0.0030297951307148)
+		Part56.Parent = jumbo
+	
+		local Part57 = Instance.new("Part")
+		Part57.Anchored = true
+		Part57.BottomSurface = Enum.SurfaceType.Smooth
+		Part57.TopSurface = Enum.SurfaceType.Smooth
+		Part57.Color = Color3.fromRGB(91, 93, 105)
+		Part57.Material = Enum.Material.SmoothPlastic
+		Part57.Size = Vector3.new(0.098099574446678, 0.11593599617481, 0.11593599617481)
+		Part57.CFrame = CFrame.new(2019.1604003906, -271.29370117188, -1951.8100585938, -0.75440698862076, -0.64278733730316, 0.13302132487297, 0.17364700138569, -7.2451129540241e-08, 0.98480796813965, -0.63302201032639, 0.76604473590851, 0.11161813884974)
+		Part57.Shape = Enum.PartType.Cylinder
+		Part57.Parent = jumbo
+	
+		local Part58 = Instance.new("Part")
+		Part58.Anchored = true
+		Part58.BottomSurface = Enum.SurfaceType.Smooth
+		Part58.TopSurface = Enum.SurfaceType.Smooth
+		Part58.Color = Color3.fromRGB(17, 17, 17)
+		Part58.Material = Enum.Material.SmoothPlastic
+		Part58.Size = Vector3.new(0.23809549212456, 0.33333331346512, 0.1285717189312)
+		Part58.CFrame = CFrame.new(2019.2199707031, -271.50250244141, -1951.7475585938, 0.39050614833832, -0.017187222838402, 0.92043989896774, 0.0095020039007068, 0.99984776973724, 0.014638668857515, -0.92055135965347, 0.0030295338947326, 0.39060994982719)
+		Part58.Parent = jumbo
+	
+		local Part59 = Instance.new("Part")
+		Part59.Anchored = true
+		Part59.BottomSurface = Enum.SurfaceType.Smooth
+		Part59.TopSurface = Enum.SurfaceType.Smooth
+		Part59.Color = Color3.fromRGB(17, 17, 17)
+		Part59.Material = Enum.Material.SmoothPlastic
+		Part59.Size = Vector3.new(0.24601738154888, 0.42857125401497, 0.42857125401497)
+		Part59.CFrame = CFrame.new(2019.216796875, -272.12893676758, -1951.7631835938, 0.39050614833832, -0.0011251210235059, 0.92059969902039, 0.0095020039007068, 0.99995100498199, -0.0028085228987038, -0.92055135965347, 0.0098442863672972, 0.39049768447876)
+		Part59.Shape = Enum.PartType.Cylinder
+		Part59.Parent = jumbo
+	
+		local Part60 = Instance.new("Part")
+		Part60.Anchored = true
+		Part60.BottomSurface = Enum.SurfaceType.Smooth
+		Part60.TopSurface = Enum.SurfaceType.Smooth
+		Part60.Color = Color3.fromRGB(17, 17, 17)
+		Part60.Material = Enum.Material.SmoothPlastic
+		Part60.Size = Vector3.new(0.23809549212456, 0.55238085985184, 0.1285717189312)
+		Part60.CFrame = CFrame.new(2019.2216796875, -271.611328125, -1951.7478027344, 0.39050614833832, -0.017187222838402, 0.92043989896774, 0.0095020039007068, 0.99984776973724, 0.014638668857515, -0.92055135965347, 0.0030295338947326, 0.39060994982719)
+		Part60.Parent = jumbo
+	
+		local Part61 = Instance.new("Part")
+		Part61.Anchored = true
+		Part61.BottomSurface = Enum.SurfaceType.Smooth
+		Part61.TopSurface = Enum.SurfaceType.Smooth
+		Part61.Color = Color3.fromRGB(255, 176, 0)
+		Part61.Material = Enum.Material.SmoothPlastic
+		Part61.Size = Vector3.new(0.050000000745058, 0.097619071602821, 0.2404763251543)
+		Part61.CFrame = CFrame.new(2019.1508789063, -271.27307128906, -1951.6076660156, 0.39050614833832, -0.92043989896774, -0.017186606302857, 0.0095020039007068, -0.014637998305261, 0.99984776973724, -0.92055135965347, -0.39060994982719, 0.0030297951307148)
+		Part61.Parent = jumbo
+	
+		local Part62 = Instance.new("Part")
+		Part62.Anchored = true
+		Part62.BottomSurface = Enum.SurfaceType.Smooth
+		Part62.TopSurface = Enum.SurfaceType.Smooth
+		Part62.Color = Color3.fromRGB(255, 176, 0)
+		Part62.Material = Enum.Material.SmoothPlastic
+		Part62.Size = Vector3.new(0.2642859518528, 0.33333331346512, 0.1285717189312)
+		Part62.CFrame = CFrame.new(2019.1389160156, -271.50207519531, -1951.7829589844, 0.39050614833832, -0.017187222838402, 0.92043989896774, 0.0095020039007068, 0.99984776973724, 0.014638668857515, -0.92055135965347, 0.0030295338947326, 0.39060994982719)
+		Part62.Parent = jumbo
+	
+		local Part63 = Instance.new("Part")
+		Part63.Anchored = true
+		Part63.BottomSurface = Enum.SurfaceType.Smooth
+		Part63.TopSurface = Enum.SurfaceType.Smooth
+		Part63.Color = Color3.fromRGB(255, 176, 0)
+		Part63.Material = Enum.Material.SmoothPlastic
+		Part63.Size = Vector3.new(0.2642859518528, 0.30476188659668, 0.066666886210442)
+		Part63.CFrame = CFrame.new(2019.2114257813, -271.36315917969, -1951.7509765625, 0.39050614833832, -0.92043989896774, -0.017186606302857, 0.0095020039007068, -0.014637998305261, 0.99984776973724, -0.92055135965347, -0.39060994982719, 0.0030297951307148)
+		Part63.Parent = jumbo
+	
+		local Union7 = Instance.new("UnionOperation")
+		Union7.Anchored = true
+		Union7.Color = Color3.fromRGB(255, 176, 0)
+		Union7.Material = Enum.Material.SmoothPlastic
+		Union7.Size = Vector3.new(0.26409694552422, 0.56191217899323, 0.56190490722656)
+		Union7.CFrame = CFrame.new(2019.2192382813, -272.12902832031, -1951.7568359375, 0.39050614833832, -0.0011251210235059, 0.92059969902039, 0.0095020039007068, 0.99995100498199, -0.0028085228987038, -0.92055135965347, 0.0098442863672972, 0.39049768447876)
+		Union7.UsePartColor = true
+		Union7.Parent = jumbo
+	
+		local Part64 = Instance.new("Part")
+		Part64.Anchored = true
+		Part64.BottomSurface = Enum.SurfaceType.Smooth
+		Part64.TopSurface = Enum.SurfaceType.Smooth
+		Part64.Color = Color3.fromRGB(9, 137, 207)
+		Part64.Material = Enum.Material.SmoothPlastic
+		Part64.Size = Vector3.new(1.3368247747421, 0.76885551214218, 0.76885551214218)
+		Part64.CFrame = CFrame.new(2014.6442871094, -272.43685913086, -1949.7392578125, 0, 0.939692735672, -0.34201988577843, -1, 0, 0, 0, 0.34201991558075, 0.939692735672)
+		Part64.Shape = Enum.PartType.Cylinder
+		Part64.Parent = jumbo
+	
+		local Part65 = Instance.new("Part")
+		Part65.Anchored = true
+		Part65.BottomSurface = Enum.SurfaceType.Smooth
+		Part65.TopSurface = Enum.SurfaceType.Smooth
+		Part65.Color = Color3.fromRGB(253, 234, 141)
+		Part65.Material = Enum.Material.SmoothPlastic
+		Part65.Size = Vector3.new(1.0315679311752, 0.16536584496498, 0.1102439686656)
+		Part65.CFrame = CFrame.new(2014.8747558594, -271.99530029297, -1949.6667480469, -0.30047500133514, -0.32260298728943, -0.89757573604584, -0.95102101564407, 0.17298743128777, 0.25619208812714, 0.072621002793312, 0.93059265613556, -0.35878065228462)
+		Part65.Shape = Enum.PartType.Cylinder
+		Part65.Parent = jumbo
+	
+		local Union8 = Instance.new("UnionOperation")
+		Union8.Anchored = true
+		Union8.Color = Color3.fromRGB(180, 210, 228)
+		Union8.Transparency = 0.2
+		Union8.Material = Enum.Material.SmoothPlastic
+		Union8.Size = Vector3.new(1.4788382053375, 0.8413861989975, 0.84138065576553)
+		Union8.CFrame = CFrame.new(2014.6442871094, -272.44409179688, -1949.7392578125, 0, 0.939692735672, -0.34201988577843, -1, 0, 0, 0, 0.34201991558075, 0.939692735672)
+		Union8.Parent = jumbo
+	
+		local Radio = Instance.new("Part")
+		Radio.Name = "Radio"
+		Radio.Anchored = true
+		Radio.BottomSurface = Enum.SurfaceType.Smooth
+		Radio.CanCollide = false
+		Radio.TopSurface = Enum.SurfaceType.Smooth
+		Radio.Size = Vector3.new(4.8800010681152, 2.0599994659424, 1.5699995756149)
+		Radio.CFrame = CFrame.new(1996.392578125, -270.10513305664, -1941.4008789063, 0.0032360006589442, -0.17035305500031, -0.9853777885437, -0.029984006658196, 0.98492336273193, -0.17037296295166, 0.99954521656036, 0.030096897855401, -0.001920654438436)
+		Radio.formFactor = Enum.FormFactor.Custom
+		Radio.Parent = jumbo
+	
+		local Mesh3 = Instance.new("SpecialMesh")
+		Mesh3.Scale = Vector3.new(0.10000000149012, 0.10000000149012, 0.10000000149012)
+		Mesh3.MeshId = "http://www.roblox.com/asset/?id=151760030"
+		Mesh3.TextureId = "rbxassetid://151760072"
+		Mesh3.MeshType = Enum.MeshType.FileMesh
+		Mesh3.Parent = Radio
+	
+		local Music = Instance.new("Sound")
+		Music.Name = "Music"
+		Music.RollOffMode = Enum.RollOffMode.Linear
+		Music.RollOffMaxDistance = 100
+		Music.Volume = 1.5
+		Music.MaxDistance = 100
+		Music.SoundId = "rbxassetid://2619399246"
+		Music.Parent = Radio
+	
+		local Script = Instance.new("Script")
+		Script.Parent = Radio
+	
+		local Part66 = Instance.new("Part")
+		Part66.Anchored = true
+		Part66.BottomSurface = Enum.SurfaceType.Smooth
+		Part66.TopSurface = Enum.SurfaceType.Smooth
+		Part66.Color = Color3.fromRGB(253, 234, 141)
+		Part66.Material = Enum.Material.SmoothPlastic
+		Part66.Size = Vector3.new(0.36223110556602, 0.16536584496498, 0.1102439686656)
+		Part66.CFrame = CFrame.new(2015.1955566406, -271.50094604492, -1949.6491699219, 0.94476014375687, -0.32260346412659, -0.057925663888454, -0.0013190001482144, 0.17298695445061, -0.98492330312729, 0.32776004076004, 0.93059259653091, 0.16300567984581)
+		Part66.Shape = Enum.PartType.Cylinder
+		Part66.Parent = jumbo
+	
+		local Part67 = Instance.new("Part")
+		Part67.Anchored = true
+		Part67.BottomSurface = Enum.SurfaceType.Smooth
+		Part67.TopSurface = Enum.SurfaceType.Smooth
+		Part67.Color = Color3.fromRGB(159, 161, 172)
+		Part67.Material = Enum.Material.SmoothPlastic
+		Part67.Size = Vector3.new(0.49997961521149, 38.399993896484, 75.999977111816)
+		Part67.CFrame = CFrame.new(1983.8918457031, -266.84515380859, -1950.0407714844)
+		Part67.Parent = jumbo
+	
+		local Part68 = Instance.new("Part")
+		Part68.Anchored = true
+		Part68.BottomSurface = Enum.SurfaceType.Smooth
+		Part68.TopSurface = Enum.SurfaceType.Smooth
+		Part68.Color = Color3.fromRGB(253, 234, 141)
+		Part68.Material = Enum.Material.SmoothPlastic
+		Part68.Size = Vector3.new(0.10599394887686, 0.10599394887686, 0.10599394887686)
+		Part68.CFrame = CFrame.new(2015.0314941406, -271.49923706055, -1949.7045898438, 0.89757668972015, 0.30047354102135, -0.32260155677795, -0.25619089603424, 0.95102155208588, 0.17298670113087, 0.3587788939476, -0.072621248662472, 0.9305933713913)
+		Part68.Shape = Enum.PartType.Ball
+		Part68.Parent = jumbo
+	
+		local Part69 = Instance.new("Part")
+		Part69.Anchored = true
+		Part69.BottomSurface = Enum.SurfaceType.Smooth
+		Part69.TopSurface = Enum.SurfaceType.Smooth
+		Part69.Color = Color3.fromRGB(200, 148, 16)
+		Part69.Material = Enum.Material.SmoothPlastic
+		Part69.Size = Vector3.new(0.14567352831364, 4.8072352409363, 0.43702101707458)
+		Part69.CFrame = CFrame.new(1994.6804199219, -267.88116455078, -1964.2133789063)
+		Part69.Parent = jumbo
+	
+		local Part70 = Instance.new("Part")
+		Part70.Anchored = true
+		Part70.BottomSurface = Enum.SurfaceType.Smooth
+		Part70.TopSurface = Enum.SurfaceType.Smooth
+		Part70.Color = Color3.fromRGB(200, 148, 16)
+		Part70.Material = Enum.Material.SmoothPlastic
+		Part70.Size = Vector3.new(0.14567352831364, 0.43702265620232, 3.0591480731964)
+		Part70.CFrame = CFrame.new(1994.6804199219, -265.69604492188, -1956.3471679688)
+		Part70.Parent = jumbo
+	
+		local Part71 = Instance.new("Part")
+		Part71.Anchored = true
+		Part71.BottomSurface = Enum.SurfaceType.Smooth
+		Part71.TopSurface = Enum.SurfaceType.Smooth
+		Part71.Color = Color3.fromRGB(231, 231, 236)
+		Part71.Material = Enum.Material.SmoothPlastic
+		Part71.Size = Vector3.new(0.072836652398109, 4.4430508613586, 3.059148311615)
+		Part71.CFrame = CFrame.new(1994.6440429688, -267.77191162109, -1950.2292480469)
+		Part71.Parent = jumbo
+	
+		local Part72 = Instance.new("Part")
+		Part72.Anchored = true
+		Part72.BottomSurface = Enum.SurfaceType.Smooth
+		Part72.TopSurface = Enum.SurfaceType.Smooth
+		Part72.Color = Color3.fromRGB(200, 148, 16)
+		Part72.Material = Enum.Material.SmoothPlastic
+		Part72.Size = Vector3.new(0.14567352831364, 4.8072352409363, 0.43702101707458)
+		Part72.CFrame = CFrame.new(1994.6804199219, -267.88116455078, -1954.5993652344)
+		Part72.Parent = jumbo
+	
+		local Part73 = Instance.new("Part")
+		Part73.Anchored = true
+		Part73.BottomSurface = Enum.SurfaceType.Smooth
+		Part73.TopSurface = Enum.SurfaceType.Smooth
+		Part73.Color = Color3.fromRGB(231, 231, 236)
+		Part73.Material = Enum.Material.SmoothPlastic
+		Part73.Size = Vector3.new(0.072836652398109, 4.4430508613586, 3.059148311615)
+		Part73.CFrame = CFrame.new(1994.6440429688, -267.77191162109, -1962.4658203125)
+		Part73.Parent = jumbo
+	
+		local Part74 = Instance.new("Part")
+		Part74.Anchored = true
+		Part74.BottomSurface = Enum.SurfaceType.Smooth
+		Part74.TopSurface = Enum.SurfaceType.Smooth
+		Part74.Color = Color3.fromRGB(200, 148, 16)
+		Part74.Material = Enum.Material.SmoothPlastic
+		Part74.Size = Vector3.new(0.14567352831364, 0.43702265620232, 3.0591480731964)
+		Part74.CFrame = CFrame.new(1994.6804199219, -270.06625366211, -1962.4655761719)
+		Part74.Parent = jumbo
+	
+		local Part75 = Instance.new("Part")
+		Part75.Anchored = true
+		Part75.BottomSurface = Enum.SurfaceType.Smooth
+		Part75.TopSurface = Enum.SurfaceType.Smooth
+		Part75.Color = Color3.fromRGB(85, 37, 7)
+		Part75.Material = Enum.Material.SmoothPlastic
+		Part75.Size = Vector3.new(2.724109172821, 0.072836875915527, 37.758636474609)
+		Part75.CFrame = CFrame.new(1993.7189941406, -271.16613769531, -1948.8449707031, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part75.Parent = jumbo
+	
+		local Part76 = Instance.new("Part")
+		Part76.Anchored = true
+		Part76.BottomSurface = Enum.SurfaceType.Smooth
+		Part76.TopSurface = Enum.SurfaceType.Smooth
+		Part76.Color = Color3.fromRGB(200, 148, 16)
+		Part76.Material = Enum.Material.SmoothPlastic
+		Part76.Size = Vector3.new(0.14567352831364, 0.43702265620232, 3.0591480731964)
+		Part76.CFrame = CFrame.new(1994.6804199219, -265.69604492188, -1950.2290039063)
+		Part76.Parent = jumbo
+	
+		local Part77 = Instance.new("Part")
+		Part77.Anchored = true
+		Part77.BottomSurface = Enum.SurfaceType.Smooth
+		Part77.TopSurface = Enum.SurfaceType.Smooth
+		Part77.Color = Color3.fromRGB(200, 148, 16)
+		Part77.Material = Enum.Material.SmoothPlastic
+		Part77.Size = Vector3.new(0.14567352831364, 0.43702265620232, 3.0591480731964)
+		Part77.CFrame = CFrame.new(1994.6804199219, -270.06625366211, -1956.3471679688)
+		Part77.Parent = jumbo
+	
+		local Part78 = Instance.new("Part")
+		Part78.Anchored = true
+		Part78.BottomSurface = Enum.SurfaceType.Smooth
+		Part78.TopSurface = Enum.SurfaceType.Smooth
+		Part78.Color = Color3.fromRGB(200, 148, 16)
+		Part78.Material = Enum.Material.SmoothPlastic
+		Part78.Size = Vector3.new(0.14567352831364, 0.43702265620232, 3.0591480731964)
+		Part78.CFrame = CFrame.new(1994.6804199219, -270.06625366211, -1950.2290039063)
+		Part78.Parent = jumbo
+	
+		local Part79 = Instance.new("Part")
+		Part79.Anchored = true
+		Part79.BottomSurface = Enum.SurfaceType.Smooth
+		Part79.TopSurface = Enum.SurfaceType.Smooth
+		Part79.Color = Color3.fromRGB(200, 148, 16)
+		Part79.Material = Enum.Material.SmoothPlastic
+		Part79.Size = Vector3.new(0.14567352831364, 4.8072352409363, 0.43702101707458)
+		Part79.CFrame = CFrame.new(1994.6804199219, -267.88116455078, -1951.9768066406)
+		Part79.Parent = jumbo
+	
+		local Part80 = Instance.new("Part")
+		Part80.Anchored = true
+		Part80.BottomSurface = Enum.SurfaceType.Smooth
+		Part80.TopSurface = Enum.SurfaceType.Smooth
+		Part80.Color = Color3.fromRGB(85, 37, 7)
+		Part80.Material = Enum.Material.SmoothPlastic
+		Part80.Size = Vector3.new(2.6512725353241, 0.072836875915527, 37.758636474609)
+		Part80.CFrame = CFrame.new(2037.8962402344, -271.16613769531, -1948.8449707031, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part80.Parent = jumbo
+	
+		local Part81 = Instance.new("Part")
+		Part81.Anchored = true
+		Part81.BottomSurface = Enum.SurfaceType.Smooth
+		Part81.TopSurface = Enum.SurfaceType.Smooth
+		Part81.Color = Color3.fromRGB(200, 148, 16)
+		Part81.Material = Enum.Material.SmoothPlastic
+		Part81.Size = Vector3.new(0.14567352831364, 4.8072352409363, 0.43702101707458)
+		Part81.CFrame = CFrame.new(1994.6804199219, -267.88116455078, -1958.0949707031)
+		Part81.Parent = jumbo
+	
+		local Part82 = Instance.new("Part")
+		Part82.Anchored = true
+		Part82.BottomSurface = Enum.SurfaceType.Smooth
+		Part82.TopSurface = Enum.SurfaceType.Smooth
+		Part82.Color = Color3.fromRGB(231, 231, 236)
+		Part82.Material = Enum.Material.SmoothPlastic
+		Part82.Size = Vector3.new(0.072836652398109, 4.4430508613586, 3.059148311615)
+		Part82.CFrame = CFrame.new(1994.6440429688, -267.77191162109, -1956.3474121094)
+		Part82.Parent = jumbo
+	
+		local Part83 = Instance.new("Part")
+		Part83.Anchored = true
+		Part83.BottomSurface = Enum.SurfaceType.Smooth
+		Part83.TopSurface = Enum.SurfaceType.Smooth
+		Part83.Color = Color3.fromRGB(200, 148, 16)
+		Part83.Material = Enum.Material.SmoothPlastic
+		Part83.Size = Vector3.new(0.14567352831364, 0.43702265620232, 3.0591480731964)
+		Part83.CFrame = CFrame.new(1994.6804199219, -265.69604492188, -1962.4655761719)
+		Part83.Parent = jumbo
+	
+		local Part84 = Instance.new("Part")
+		Part84.Anchored = true
+		Part84.BottomSurface = Enum.SurfaceType.Smooth
+		Part84.TopSurface = Enum.SurfaceType.Smooth
+		Part84.Color = Color3.fromRGB(200, 148, 16)
+		Part84.Material = Enum.Material.SmoothPlastic
+		Part84.Size = Vector3.new(0.14567352831364, 4.8072352409363, 0.43702101707458)
+		Part84.CFrame = CFrame.new(1994.6804199219, -267.88116455078, -1960.7177734375)
+		Part84.Parent = jumbo
+	
+		local Part85 = Instance.new("Part")
+		Part85.Anchored = true
+		Part85.BottomSurface = Enum.SurfaceType.Smooth
+		Part85.TopSurface = Enum.SurfaceType.Smooth
+		Part85.Color = Color3.fromRGB(85, 37, 7)
+		Part85.Material = Enum.Material.SmoothPlastic
+		Part85.Size = Vector3.new(44.823818206787, 0.072836875915527, 0.50985819101334)
+		Part85.CFrame = CFrame.new(2016.8083496094, -271.16613769531, -1967.4694824219, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Part85.Parent = jumbo
+	
+		local Union9 = Instance.new("UnionOperation")
+		Union9.Anchored = true
+		Union9.Color = Color3.fromRGB(100, 45, 9)
+		Union9.Material = Enum.Material.SmoothPlastic
+		Union9.Size = Vector3.new(46.86323928833, 16.271759033203, 3.3649444580078)
+		Union9.CFrame = CFrame.new(2015.7885742188, -267.75732421875, -1931.1533203125, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Union9.Parent = jumbo
+	
+		local Part86 = Instance.new("Part")
+		Part86.Anchored = true
+		Part86.BottomSurface = Enum.SurfaceType.Smooth
+		Part86.TopSurface = Enum.SurfaceType.Smooth
+		Part86.Color = Color3.fromRGB(253, 180, 120)
+		Part86.Material = Enum.Material.SmoothPlastic
+		Part86.Size = Vector3.new(1.6235740184784, 6.4592471122742, 6.129056930542)
+		Part86.CFrame = CFrame.new(1995.5397949219, -275.71109008789, -1941.3430175781, 0, -1, -0, -1, 0, -0, 0, 0, -1)
+		Part86.Shape = Enum.PartType.Cylinder
+		Part86.Parent = jumbo
+	
+		local Part87 = Instance.new("Part")
+		Part87.Anchored = true
+		Part87.BottomSurface = Enum.SurfaceType.Smooth
+		Part87.TopSurface = Enum.SurfaceType.Smooth
+		Part87.Color = Color3.fromRGB(199, 142, 94)
+		Part87.Material = Enum.Material.SmoothPlastic
+		Part87.Size = Vector3.new(2.622127532959, 0.65553188323975, 0.65553188323975)
+		Part87.CFrame = CFrame.new(1997.0329589844, -272.36065673828, -1942.6105957031)
+		Part87.Shape = Enum.PartType.Cylinder
+		Part87.Parent = jumbo
+	
+		local Part88 = Instance.new("Part")
+		Part88.Anchored = true
+		Part88.BottomSurface = Enum.SurfaceType.Smooth
+		Part88.TopSurface = Enum.SurfaceType.Smooth
+		Part88.Color = Color3.fromRGB(199, 142, 94)
+		Part88.Material = Enum.Material.SmoothPlastic
+		Part88.Size = Vector3.new(2.622127532959, 0.65553188323975, 0.65553188323975)
+		Part88.CFrame = CFrame.new(1997.0329589844, -272.36065673828, -1940.2799072266)
+		Part88.Shape = Enum.PartType.Cylinder
+		Part88.Parent = jumbo
+	
+		local Part89 = Instance.new("Part")
+		Part89.Anchored = true
+		Part89.BottomSurface = Enum.SurfaceType.Smooth
+		Part89.TopSurface = Enum.SurfaceType.Smooth
+		Part89.Color = Color3.fromRGB(199, 142, 94)
+		Part89.Material = Enum.Material.SmoothPlastic
+		Part89.Size = Vector3.new(2.0394287109375, 0.50985717773438, 0.50985717773438)
+		Part89.CFrame = CFrame.new(1997.3972167969, -273.8173828125, -1940.5390625)
+		Part89.Shape = Enum.PartType.Cylinder
+		Part89.Parent = jumbo
+	
+		local Part90 = Instance.new("Part")
+		Part90.Anchored = true
+		Part90.BottomSurface = Enum.SurfaceType.Smooth
+		Part90.TopSurface = Enum.SurfaceType.Smooth
+		Part90.Color = Color3.fromRGB(199, 142, 94)
+		Part90.Material = Enum.Material.SmoothPlastic
+		Part90.Size = Vector3.new(2.0394287109375, 0.50985717773438, 0.50985717773438)
+		Part90.CFrame = CFrame.new(1997.3972167969, -273.8173828125, -1942.3518066406)
+		Part90.Shape = Enum.PartType.Cylinder
+		Part90.Parent = jumbo
+	
+		local Part91 = Instance.new("Part")
+		Part91.Anchored = true
+		Part91.BottomSurface = Enum.SurfaceType.Smooth
+		Part91.TopSurface = Enum.SurfaceType.Smooth
+		Part91.Color = Color3.fromRGB(253, 180, 120)
+		Part91.Material = Enum.Material.SmoothPlastic
+		Part91.Size = Vector3.new(0.294991761446, 6.7505955696106, 6.4055099487305)
+		Part91.CFrame = CFrame.new(1995.685546875, -271.55935668945, -1941.3430175781, 0, -1, -0, -1, 0, -0, 0, 0, -1)
+		Part91.Shape = Enum.PartType.Cylinder
+		Part91.Parent = jumbo
+	
+		local Part92 = Instance.new("Part")
+		Part92.Anchored = true
+		Part92.BottomSurface = Enum.SurfaceType.Smooth
+		Part92.TopSurface = Enum.SurfaceType.Smooth
+		Part92.Color = Color3.fromRGB(253, 180, 120)
+		Part92.Material = Enum.Material.SmoothPlastic
+		Part92.Size = Vector3.new(5.083128452301, 6.313572883606, 5.9908304214478)
+		Part92.CFrame = CFrame.new(1995.4670410156, -273.96301269531, -1941.3430175781, 0, -1, -0, -1, 0, -0, 0, 0, -1)
+		Part92.Shape = Enum.PartType.Cylinder
+		Part92.Parent = jumbo
+	
+		local Part93 = Instance.new("Part")
+		Part93.Anchored = true
+		Part93.BottomSurface = Enum.SurfaceType.Smooth
+		Part93.TopSurface = Enum.SurfaceType.Smooth
+		Part93.Color = Color3.fromRGB(199, 142, 94)
+		Part93.Material = Enum.Material.SmoothPlastic
+		Part93.Size = Vector3.new(0.27907744050026, 6.3864097595215, 6.0599436759949)
+		Part93.CFrame = CFrame.new(1995.5034179688, -272.8703918457, -1941.3430175781, 0, -1, -0, -1, 0, -0, 0, 0, -1)
+		Part93.Shape = Enum.PartType.Cylinder
+		Part93.Parent = jumbo
+	
+		local Part94 = Instance.new("Part")
+		Part94.Anchored = true
+		Part94.BottomSurface = Enum.SurfaceType.Smooth
+		Part94.TopSurface = Enum.SurfaceType.Smooth
+		Part94.Color = Color3.fromRGB(199, 142, 94)
+		Part94.Material = Enum.Material.SmoothPlastic
+		Part94.Size = Vector3.new(0.27907744050026, 6.3864097595215, 6.0599436759949)
+		Part94.CFrame = CFrame.new(1995.5034179688, -271.70501708984, -1941.3430175781, 0, -1, -0, -1, 0, -0, 0, 0, -1)
+		Part94.Shape = Enum.PartType.Cylinder
+		Part94.Parent = jumbo
+	
+		local Part95 = Instance.new("Part")
+		Part95.Anchored = true
+		Part95.BottomSurface = Enum.SurfaceType.Smooth
+		Part95.TopSurface = Enum.SurfaceType.Smooth
+		Part95.Color = Color3.fromRGB(199, 142, 94)
+		Part95.Material = Enum.Material.SmoothPlastic
+		Part95.Size = Vector3.new(0.27907744050026, 6.3864097595215, 6.0599436759949)
+		Part95.CFrame = CFrame.new(1995.5034179688, -274.76416015625, -1941.3430175781, 0, -1, -0, -1, 0, -0, 0, 0, -1)
+		Part95.Shape = Enum.PartType.Cylinder
+		Part95.Parent = jumbo
+	
+		local Part96 = Instance.new("Part")
+		Part96.Anchored = true
+		Part96.BottomSurface = Enum.SurfaceType.Smooth
+		Part96.TopSurface = Enum.SurfaceType.Smooth
+		Part96.Color = Color3.fromRGB(199, 142, 94)
+		Part96.Material = Enum.Material.SmoothPlastic
+		Part96.Size = Vector3.new(2.7678015232086, 0.21850913763046, 3.7146799564362)
+		Part96.CFrame = CFrame.new(2031.0583496094, -274.03588867188, -1960.693359375, 0.70710635185242, 0, 0.70710736513138, 0, 1, 0, -0.70710736513138, 0, 0.70710635185242)
+		Part96.Parent = jumbo
+	
+		local Part97 = Instance.new("Part")
+		Part97.Anchored = true
+		Part97.BottomSurface = Enum.SurfaceType.Smooth
+		Part97.TopSurface = Enum.SurfaceType.Smooth
+		Part97.Color = Color3.fromRGB(199, 142, 94)
+		Part97.Material = Enum.Material.SmoothPlastic
+		Part97.Size = Vector3.new(2.7678015232086, 0.21850913763046, 3.7146799564362)
+		Part97.CFrame = CFrame.new(2031.0583496094, -269.81127929688, -1960.693359375, 0.70710635185242, 0, 0.70710736513138, 0, 1, 0, -0.70710736513138, 0, 0.70710635185242)
+		Part97.Parent = jumbo
+	
+		local Part98 = Instance.new("Part")
+		Part98.Anchored = true
+		Part98.BottomSurface = Enum.SurfaceType.Smooth
+		Part98.TopSurface = Enum.SurfaceType.Smooth
+		Part98.Color = Color3.fromRGB(199, 142, 94)
+		Part98.Material = Enum.Material.SmoothPlastic
+		Part98.Size = Vector3.new(2.7678015232086, 0.50985664129257, 1.893758893013)
+		Part98.CFrame = CFrame.new(2031.6921386719, -270.56719970703, -1960.0593261719, 0.7071248292923, -0.24183896183968, 0.66444599628448, 0, 0.93969249725342, 0.34202063083649, -0.70708882808685, -0.24185128509998, 0.66447979211807)
+		Part98.Parent = jumbo
+	
+		local Part99 = Instance.new("Part")
+		Part99.Anchored = true
+		Part99.BottomSurface = Enum.SurfaceType.Smooth
+		Part99.TopSurface = Enum.SurfaceType.Smooth
+		Part99.Color = Color3.fromRGB(199, 142, 94)
+		Part99.Material = Enum.Material.SmoothPlastic
+		Part99.Size = Vector3.new(0.14567367732525, 3.4961688518524, 0.21851052343845)
+		Part99.CFrame = CFrame.new(1997.8354492188, -273.41668701172, -1939.568359375, 0.81915181875229, 0, -0.57357686758041, 0, 1, 0, 0.57357686758041, 0, 0.81915181875229)
+		Part99.Parent = jumbo
+	
+		local Part100 = Instance.new("Part")
+		Part100.Anchored = true
+		Part100.BottomSurface = Enum.SurfaceType.Smooth
+		Part100.TopSurface = Enum.SurfaceType.Smooth
+		Part100.Color = Color3.fromRGB(199, 142, 94)
+		Part100.Material = Enum.Material.SmoothPlastic
+		Part100.Size = Vector3.new(0.14567367732525, 3.4961688518524, 0.21851052343845)
+		Part100.CFrame = CFrame.new(1997.6340332031, -273.41668701172, -1943.30859375, 0.64278697967529, 0, -0.76604497432709, 0, 1, 0, 0.76604497432709, 0, 0.64278697967529)
+		Part100.Parent = jumbo
+	
+		local Part101 = Instance.new("Part")
+		Part101.Anchored = true
+		Part101.BottomSurface = Enum.SurfaceType.Smooth
+		Part101.TopSurface = Enum.SurfaceType.Smooth
+		Part101.Color = Color3.fromRGB(199, 142, 94)
+		Part101.Material = Enum.Material.SmoothPlastic
+		Part101.Size = Vector3.new(2.7678015232086, 7.9392242431641, 0.43702101707458)
+		Part101.CFrame = CFrame.new(2032.2172851563, -271.04943847656, -1959.5344238281, 0.70710635185242, 0, 0.70710736513138, 0, 1, 0, -0.70710736513138, 0, 0.70710635185242)
+		Part101.Parent = jumbo
+	
+		local Part102 = Instance.new("Part")
+		Part102.Anchored = true
+		Part102.BottomSurface = Enum.SurfaceType.Smooth
+		Part102.TopSurface = Enum.SurfaceType.Smooth
+		Part102.Color = Color3.fromRGB(199, 142, 94)
+		Part102.Material = Enum.Material.SmoothPlastic
+		Part102.Size = Vector3.new(2.7678015232086, 0.50985664129257, 1.893758893013)
+		Part102.CFrame = CFrame.new(2030.439453125, -270.63638305664, -1961.3122558594, 0.70711535215378, 0.18301075696945, 0.68300449848175, 0, 0.96592575311661, -0.25881940126419, -0.70709836483002, 0.183015152812, 0.68302088975906)
+		Part102.Parent = jumbo
+	
+		local Part103 = Instance.new("Part")
+		Part103.Anchored = true
+		Part103.BottomSurface = Enum.SurfaceType.Smooth
+		Part103.TopSurface = Enum.SurfaceType.Smooth
+		Part103.Color = Color3.fromRGB(199, 142, 94)
+		Part103.Material = Enum.Material.SmoothPlastic
+		Part103.Size = Vector3.new(2.7678015232086, 7.9392242431641, 0.43702101707458)
+		Part103.CFrame = CFrame.new(2029.8996582031, -271.04943847656, -1961.8520507813, 0.70710635185242, 0, 0.70710736513138, 0, 1, 0, -0.70710736513138, 0, 0.70710635185242)
+		Part103.Parent = jumbo
+	
+		local Part104 = Instance.new("Part")
+		Part104.Anchored = true
+		Part104.BottomSurface = Enum.SurfaceType.Smooth
+		Part104.TopSurface = Enum.SurfaceType.Smooth
+		Part104.Color = Color3.fromRGB(94, 0, 0)
+		Part104.Material = Enum.Material.SmoothPlastic
+		Part104.Size = Vector3.new(1.2382237911224, 1.2382270097733, 1.0925654172897)
+		Part104.CFrame = CFrame.new(2000.2744140625, -274.69140625, -1965.9982910156)
+		Part104.Parent = jumbo
+	
+		local Part105 = Instance.new("Part")
+		Part105.Anchored = true
+		Part105.BottomSurface = Enum.SurfaceType.Smooth
+		Part105.TopSurface = Enum.SurfaceType.Smooth
+		Part105.Color = Color3.fromRGB(199, 142, 94)
+		Part105.Material = Enum.Material.SmoothPlastic
+		Part105.Size = Vector3.new(2.7678015232086, 3.1913456916809, 0.29134780168533)
+		Part105.CFrame = CFrame.new(2031.0842285156, -272.4631652832, -1960.6674804688, 0.70710635185242, 0, 0.70710736513138, 0, 1, 0, -0.70710736513138, 0, 0.70710635185242)
+		Part105.Parent = jumbo
+	
+		local Part106 = Instance.new("Part")
+		Part106.Anchored = true
+		Part106.BottomSurface = Enum.SurfaceType.Smooth
+		Part106.TopSurface = Enum.SurfaceType.Smooth
+		Part106.Color = Color3.fromRGB(199, 142, 94)
+		Part106.Material = Enum.Material.SmoothPlastic
+		Part106.Size = Vector3.new(2.7678015232086, 0.50985664129257, 1.893758893013)
+		Part106.CFrame = CFrame.new(2030.439453125, -267.43145751953, -1961.3122558594, 0.70711535215378, 0.18301075696945, 0.68300449848175, 0, 0.96592575311661, -0.25881940126419, -0.70709836483002, 0.183015152812, 0.68302088975906)
+		Part106.Parent = jumbo
+	
+		local Part107 = Instance.new("Part")
+		Part107.Anchored = true
+		Part107.BottomSurface = Enum.SurfaceType.Smooth
+		Part107.TopSurface = Enum.SurfaceType.Smooth
+		Part107.Color = Color3.fromRGB(255, 193, 46)
+		Part107.Material = Enum.Material.SmoothPlastic
+		Part107.Size = Vector3.new(2.8406381607056, 1.0197179317474, 0.43702101707458)
+		Part107.CFrame = CFrame.new(2030.7492675781, -268.82788085938, -1960.9506835938, 0.70710635185242, 0, 0.70710736513138, 0, 1, 0, -0.70710736513138, 0, 0.70710635185242)
+		Part107.Parent = jumbo
+	
+		local Part108 = Instance.new("Part")
+		Part108.Anchored = true
+		Part108.BottomSurface = Enum.SurfaceType.Smooth
+		Part108.TopSurface = Enum.SurfaceType.Smooth
+		Part108.Color = Color3.fromRGB(199, 142, 94)
+		Part108.Material = Enum.Material.SmoothPlastic
+		Part108.Size = Vector3.new(2.7678015232086, 0.50985664129257, 1.893758893013)
+		Part108.CFrame = CFrame.new(2031.6921386719, -267.3623046875, -1960.0593261719, 0.7071248292923, -0.24183896183968, 0.66444599628448, 0, 0.93969249725342, 0.34202063083649, -0.70708882808685, -0.24185128509998, 0.66447979211807)
+		Part108.Parent = jumbo
+	
+		local Part109 = Instance.new("Part")
+		Part109.Anchored = true
+		Part109.BottomSurface = Enum.SurfaceType.Smooth
+		Part109.TopSurface = Enum.SurfaceType.Smooth
+		Part109.Color = Color3.fromRGB(94, 0, 0)
+		Part109.Material = Enum.Material.SmoothPlastic
+		Part109.Size = Vector3.new(1.2382237911224, 1.2382270097733, 1.0925654172897)
+		Part109.CFrame = CFrame.new(1996.4138183594, -274.69140625, -1951.8679199219)
+		Part109.Parent = jumbo
+	
+		local Part110 = Instance.new("Part")
+		Part110.Anchored = true
+		Part110.BottomSurface = Enum.SurfaceType.Smooth
+		Part110.TopSurface = Enum.SurfaceType.Smooth
+		Part110.Color = Color3.fromRGB(117, 0, 0)
+		Part110.Material = Enum.Material.SmoothPlastic
+		Part110.Size = Vector3.new(5.6812734603882, 1.1653901338577, 16.461145401001)
+		Part110.CFrame = CFrame.new(1998.3442382813, -274.07223510742, -1959.115234375)
+		Part110.Parent = jumbo
+	
+		local Part111 = Instance.new("Part")
+		Part111.Anchored = true
+		Part111.BottomSurface = Enum.SurfaceType.Smooth
+		Part111.TopSurface = Enum.SurfaceType.Smooth
+		Part111.Color = Color3.fromRGB(199, 142, 94)
+		Part111.Material = Enum.Material.SmoothPlastic
+		Part111.Size = Vector3.new(2.7678015232086, 2.0913462638855, 0.29134780168533)
+		Part111.CFrame = CFrame.new(2031.0842285156, -268.78112792969, -1960.6674804688, 0.70710635185242, 0, 0.70710736513138, 0, 1, 0, -0.70710736513138, 0, 0.70710635185242)
+		Part111.Parent = jumbo
+	
+		local Part112 = Instance.new("Part")
+		Part112.Anchored = true
+		Part112.BottomSurface = Enum.SurfaceType.Smooth
+		Part112.TopSurface = Enum.SurfaceType.Smooth
+		Part112.Color = Color3.fromRGB(255, 193, 46)
+		Part112.Material = Enum.Material.SmoothPlastic
+		Part112.Size = Vector3.new(2.8406381607056, 1.0197179317474, 0.43702101707458)
+		Part112.CFrame = CFrame.new(2031.3674316406, -268.82788085938, -1960.3326416016, 0.70710635185242, 0, 0.70710736513138, 0, 1, 0, -0.70710736513138, 0, 0.70710635185242)
+		Part112.Parent = jumbo
+	
+		local Part113 = Instance.new("Part")
+		Part113.Anchored = true
+		Part113.BottomSurface = Enum.SurfaceType.Smooth
+		Part113.TopSurface = Enum.SurfaceType.Smooth
+		Part113.Color = Color3.fromRGB(94, 0, 0)
+		Part113.Material = Enum.Material.SmoothPlastic
+		Part113.Size = Vector3.new(1.2382237911224, 1.2382270097733, 1.0925654172897)
+		Part113.CFrame = CFrame.new(2000.2744140625, -274.69140625, -1951.8679199219)
+		Part113.Parent = jumbo
+	
+		local Part114 = Instance.new("Part")
+		Part114.Anchored = true
+		Part114.BottomSurface = Enum.SurfaceType.Smooth
+		Part114.TopSurface = Enum.SurfaceType.Smooth
+		Part114.Color = Color3.fromRGB(94, 0, 0)
+		Part114.Material = Enum.Material.SmoothPlastic
+		Part114.Size = Vector3.new(1.2382237911224, 1.2382270097733, 1.0925654172897)
+		Part114.CFrame = CFrame.new(1996.4138183594, -274.69140625, -1965.9982910156)
+		Part114.Parent = jumbo
+	
+		local Part115 = Instance.new("Part")
+		Part115.Anchored = true
+		Part115.BottomSurface = Enum.SurfaceType.Smooth
+		Part115.TopSurface = Enum.SurfaceType.Smooth
+		Part115.Color = Color3.fromRGB(102, 0, 0)
+		Part115.Material = Enum.Material.SmoothPlastic
+		Part115.Size = Vector3.new(0.072834230959415, 4.8072333335876, 16.388307571411)
+		Part115.CFrame = CFrame.new(1995.3237304688, -272.30526733398, -1959.0788574219, 0.9961946606636, -0.087155967950821, 0, 0.087155967950821, 0.9961946606636, 0, 0, 0, 1)
+		Part115.Parent = jumbo
+	
+		local Part116 = Instance.new("Part")
+		Part116.Anchored = true
+		Part116.BottomSurface = Enum.SurfaceType.Smooth
+		Part116.TopSurface = Enum.SurfaceType.Smooth
+		Part116.Color = Color3.fromRGB(255, 193, 46)
+		Part116.Material = Enum.Material.SmoothPlastic
+		Part116.Size = Vector3.new(2.8406381607056, 1.0197179317474, 0.43702101707458)
+		Part116.CFrame = CFrame.new(2030.7492675781, -272.54260253906, -1960.9506835938, 0.70710635185242, 0, 0.70710736513138, 0, 1, 0, -0.70710736513138, 0, 0.70710635185242)
+		Part116.Parent = jumbo
+	
+		local Part117 = Instance.new("Part")
+		Part117.Anchored = true
+		Part117.BottomSurface = Enum.SurfaceType.Smooth
+		Part117.TopSurface = Enum.SurfaceType.Smooth
+		Part117.Color = Color3.fromRGB(255, 193, 46)
+		Part117.Material = Enum.Material.SmoothPlastic
+		Part117.Size = Vector3.new(2.8406381607056, 1.0197179317474, 0.43702101707458)
+		Part117.CFrame = CFrame.new(2031.3674316406, -272.54260253906, -1960.3326416016, 0.70710635185242, 0, 0.70710736513138, 0, 1, 0, -0.70710736513138, 0, 0.70710635185242)
+		Part117.Parent = jumbo
+	
+		local Part118 = Instance.new("Part")
+		Part118.Anchored = true
+		Part118.BottomSurface = Enum.SurfaceType.Smooth
+		Part118.TopSurface = Enum.SurfaceType.Smooth
+		Part118.Color = Color3.fromRGB(94, 0, 0)
+		Part118.Material = Enum.Material.SmoothPlastic
+		Part118.Size = Vector3.new(1.2382237911224, 1.2382270097733, 1.0925654172897)
+		Part118.CFrame = CFrame.new(2015.6428222656, -274.69140625, -1965.9982910156)
+		Part118.Parent = jumbo
+	
+		local Part119 = Instance.new("Part")
+		Part119.Anchored = true
+		Part119.BottomSurface = Enum.SurfaceType.Smooth
+		Part119.TopSurface = Enum.SurfaceType.Smooth
+		Part119.Color = Color3.fromRGB(95, 50, 7)
+		Part119.Material = Enum.Material.SmoothPlastic
+		Part119.Size = Vector3.new(0.30000013113022, 0.09999992698431, 2)
+		Part119.CFrame = CFrame.new(2016.802734375, -273.07916259766, -1949.7463378906, -0.9659258723259, 0, -0.25881898403168, 0, 1, 0, 0.25881898403168, 0, -0.9659258723259)
+		Part119.Parent = jumbo
+	
+		local Part120 = Instance.new("Part")
+		Part120.Anchored = true
+		Part120.BottomSurface = Enum.SurfaceType.Smooth
+		Part120.TopSurface = Enum.SurfaceType.Smooth
+		Part120.Color = Color3.fromRGB(94, 0, 0)
+		Part120.Material = Enum.Material.SmoothPlastic
+		Part120.Size = Vector3.new(1.2382237911224, 1.2382270097733, 1.0925654172897)
+		Part120.CFrame = CFrame.new(2022.6911621094, -274.69140625, -1940.7751464844, 0.57357507944107, 0, 0.81915313005447, 0, 1, 0, -0.81915313005447, 0, 0.57357507944107)
+		Part120.Parent = jumbo
+	
+		local Union10 = Instance.new("UnionOperation")
+		Union10.Anchored = true
+		Union10.Color = Color3.fromRGB(253, 180, 120)
+		Union10.Material = Enum.Material.SmoothPlastic
+		Union10.Size = Vector3.new(6.287365436554, 0.48408249020576, 5.8390974998474)
+		Union10.CFrame = CFrame.new(2032.0808105469, -270.14947509766, -1961.6669921875, -0.70710837841034, 0, 0.70710533857346, 0, 1, 0, -0.70710533857346, 0, -0.70710837841034)
+		Union10.Parent = jumbo
+	
+		local Part121 = Instance.new("Part")
+		Part121.Anchored = true
+		Part121.BottomSurface = Enum.SurfaceType.Smooth
+		Part121.TopSurface = Enum.SurfaceType.Smooth
+		Part121.Color = Color3.fromRGB(84, 44, 6)
+		Part121.Material = Enum.Material.SmoothPlastic
+		Part121.Size = Vector3.new(0.69999957084656, 9.6000032424927, 1.1999998092651)
+		Part121.CFrame = CFrame.new(1997.7487792969, -270.36480712891, -1932.470703125)
+		Part121.Parent = jumbo
+	
+		local Union11 = Instance.new("UnionOperation")
+		Union11.Anchored = true
+		Union11.Color = Color3.fromRGB(253, 180, 120)
+		Union11.Material = Enum.Material.SmoothPlastic
+		Union11.Size = Vector3.new(6.5226211547852, 7.1284894943237, 6.0576047897339)
+		Union11.CFrame = CFrame.new(2032.1066894531, -277.71334838867, -1961.6926269531, -0.70710837841034, 0, 0.70710533857346, 0, 1, 0, -0.70710533857346, 0, -0.70710837841034)
+		Union11.UsePartColor = true
+		Union11.Parent = jumbo
+	
+		local Part122 = Instance.new("Part")
+		Part122.Anchored = true
+		Part122.BottomSurface = Enum.SurfaceType.Smooth
+		Part122.TopSurface = Enum.SurfaceType.Smooth
+		Part122.Color = Color3.fromRGB(117, 0, 0)
+		Part122.Material = Enum.Material.SmoothPlastic
+		Part122.Size = Vector3.new(4.5012474060059, 2.2530763149261, 2.1122806072235)
+		Part122.CFrame = CFrame.new(2023.9899902344, -273.19815063477, -1940.3850097656, -0.81915313005447, 0, 0.57357507944107, 0, 1, 0, -0.57357507944107, 0, -0.81915313005447)
+		Part122.Parent = jumbo
+	
+		local Union12 = Instance.new("UnionOperation")
+		Union12.Anchored = true
+		Union12.Color = Color3.fromRGB(253, 180, 120)
+		Union12.Material = Enum.Material.SmoothPlastic
+		Union12.Size = Vector3.new(5.973623752594, 6.5284953117371, 5.547746181488)
+		Union12.CFrame = CFrame.new(2032.0808105469, -272.03207397461, -1961.6669921875, -0.70710837841034, 0, 0.70710533857346, 0, 1, 0, -0.70710533857346, 0, -0.70710837841034)
+		Union12.UsePartColor = true
+		Union12.Parent = jumbo
+	
+		local Part123 = Instance.new("Part")
+		Part123.Anchored = true
+		Part123.BottomSurface = Enum.SurfaceType.Smooth
+		Part123.TopSurface = Enum.SurfaceType.Smooth
+		Part123.Color = Color3.fromRGB(117, 0, 0)
+		Part123.Material = Enum.Material.SmoothPlastic
+		Part123.Size = Vector3.new(4.5012474060059, 2.2530763149261, 2.1122806072235)
+		Part123.CFrame = CFrame.new(2020.6477050781, -273.19815063477, -1935.6118164063, -0.81915313005447, 0, 0.57357507944107, 0, 1, 0, -0.57357507944107, 0, -0.81915313005447)
+		Part123.Parent = jumbo
+	
+		local Part124 = Instance.new("Part")
+		Part124.Anchored = true
+		Part124.BottomSurface = Enum.SurfaceType.Smooth
+		Part124.TopSurface = Enum.SurfaceType.Smooth
+		Part124.Color = Color3.fromRGB(84, 44, 6)
+		Part124.Material = Enum.Material.SmoothPlastic
+		Part124.Size = Vector3.new(0.69999957084656, 9.6000032424927, 0.69999974966049)
+		Part124.CFrame = CFrame.new(2004.4487304688, -270.36480712891, -1932.720703125)
+		Part124.Parent = jumbo
+	
+		local Part125 = Instance.new("Part")
+		Part125.Anchored = true
+		Part125.BottomSurface = Enum.SurfaceType.Smooth
+		Part125.CanCollide = false
+		Part125.TopSurface = Enum.SurfaceType.Smooth
+		Part125.Color = Color3.fromRGB(159, 161, 172)
+		Part125.Material = Enum.Material.SmoothPlastic
+		Part125.Size = Vector3.new(64.699981689453, 1, 76.599990844727)
+		Part125.CFrame = CFrame.new(2015.9919433594, -247.54510498047, -1950.3408203125)
+		Part125.Parent = jumbo
+	
+		local Part126 = Instance.new("Part")
+		Part126.Anchored = true
+		Part126.BottomSurface = Enum.SurfaceType.Smooth
+		Part126.TopSurface = Enum.SurfaceType.Smooth
+		Part126.Color = Color3.fromRGB(94, 0, 0)
+		Part126.Material = Enum.Material.SmoothPlastic
+		Part126.Size = Vector3.new(1.2382237911224, 1.2382270097733, 1.0925654172897)
+		Part126.CFrame = CFrame.new(2022.1176757813, -274.69140625, -1935.1303710938, 0.57357507944107, 0, 0.81915313005447, 0, 1, 0, -0.81915313005447, 0, 0.57357507944107)
+		Part126.Parent = jumbo
+	
+		local Part127 = Instance.new("Part")
+		Part127.Anchored = true
+		Part127.BottomSurface = Enum.SurfaceType.Smooth
+		Part127.TopSurface = Enum.SurfaceType.Smooth
+		Part127.Color = Color3.fromRGB(117, 0, 0)
+		Part127.Material = Enum.Material.SmoothPlastic
+		Part127.Size = Vector3.new(4.4430480003357, 1.1653901338577, 6.1183090209961)
+		Part127.CFrame = CFrame.new(2022.2465820313, -274.07223510742, -1938.01171875, -0.81915313005447, 0, 0.57357507944107, 0, 1, 0, -0.57357507944107, 0, -0.81915313005447)
+		Part127.Parent = jumbo
+	
+		local Part128 = Instance.new("Part")
+		Part128.Anchored = true
+		Part128.BottomSurface = Enum.SurfaceType.Smooth
+		Part128.TopSurface = Enum.SurfaceType.Smooth
+		Part128.Color = Color3.fromRGB(94, 0, 0)
+		Part128.Material = Enum.Material.SmoothPlastic
+		Part128.Size = Vector3.new(1.2382237911224, 1.2382270097733, 1.0925654172897)
+		Part128.CFrame = CFrame.new(2024.9584960938, -274.69140625, -1939.1875, 0.57357507944107, 0, 0.81915313005447, 0, 1, 0, -0.81915313005447, 0, 0.57357507944107)
+		Part128.Parent = jumbo
+	
+		local Part129 = Instance.new("Part")
+		Part129.Anchored = true
+		Part129.BottomSurface = Enum.SurfaceType.Smooth
+		Part129.TopSurface = Enum.SurfaceType.Smooth
+		Part129.Color = Color3.fromRGB(102, 0, 0)
+		Part129.Material = Enum.Material.SmoothPlastic
+		Part129.Size = Vector3.new(5.6812734603882, 0.072836868464947, 16.461145401001)
+		Part129.CFrame = CFrame.new(1998.3442382813, -274.69137573242, -1959.115234375)
+		Part129.Parent = jumbo
+	
+		local Part130 = Instance.new("Part")
+		Part130.Anchored = true
+		Part130.BottomSurface = Enum.SurfaceType.Smooth
+		Part130.TopSurface = Enum.SurfaceType.Smooth
+		Part130.Color = Color3.fromRGB(255, 176, 0)
+		Part130.Material = Enum.Material.SmoothPlastic
+		Part130.Size = Vector3.new(0.099999941885471, 0.79999995231628, 0.39999973773956)
+		Part130.CFrame = CFrame.new(2004.859375, -271.3049621582, -1937.8426513672, 0.96592605113983, -8.5326428234112e-07, -0.2588182091713, 8.5326428234112e-07, 1, -1.1233399987987e-07, 0.2588182091713, -1.1233399987987e-07, 0.96592605113983)
+		Part130.Parent = jumbo
+	
+		local Part131 = Instance.new("Part")
+		Part131.Anchored = true
+		Part131.BottomSurface = Enum.SurfaceType.Smooth
+		Part131.TopSurface = Enum.SurfaceType.Smooth
+		Part131.Color = Color3.fromRGB(117, 0, 0)
+		Part131.Material = Enum.Material.SmoothPlastic
+		Part131.Size = Vector3.new(5.6812734603882, 1.1653901338577, 20.904195785522)
+		Part131.CFrame = CFrame.new(2006.5439453125, -274.07223510742, -1964.0739746094, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+		Part131.Parent = jumbo
+	
+		local Part132 = Instance.new("Part")
+		Part132.Anchored = true
+		Part132.BottomSurface = Enum.SurfaceType.Smooth
+		Part132.TopSurface = Enum.SurfaceType.Smooth
+		Part132.Color = Color3.fromRGB(94, 0, 0)
+		Part132.Material = Enum.Material.SmoothPlastic
+		Part132.Size = Vector3.new(1.2382237911224, 1.2382270097733, 1.0925654172897)
+		Part132.CFrame = CFrame.new(2015.6428222656, -274.69140625, -1961.9194335938)
+		Part132.Parent = jumbo
+	
+		local Part133 = Instance.new("Part")
+		Part133.Anchored = true
+		Part133.BottomSurface = Enum.SurfaceType.Smooth
+		Part133.TopSurface = Enum.SurfaceType.Smooth
+		Part133.Color = Color3.fromRGB(68, 35, 5)
+		Part133.Material = Enum.Material.SmoothPlastic
+		Part133.Size = Vector3.new(0.50000041723251, 9.4000015258789, 7.8000001907349)
+		Part133.CFrame = CFrame.new(2006.1667480469, -270.73309326172, -1925.630859375)
+		Part133.Parent = jumbo
+	
+		local Part134 = Instance.new("Part")
+		Part134.Anchored = true
+		Part134.BottomSurface = Enum.SurfaceType.Smooth
+		Part134.TopSurface = Enum.SurfaceType.Smooth
+		Part134.Color = Color3.fromRGB(68, 35, 5)
+		Part134.Material = Enum.Material.SmoothPlastic
+		Part134.Size = Vector3.new(0.50000041723251, 9.4000015258789, 7.7999987602234)
+		Part134.CFrame = CFrame.new(1995.966796875, -270.73309326172, -1925.630859375)
+		Part134.Parent = jumbo
+	
+		local Part135 = Instance.new("Part")
+		Part135.Anchored = true
+		Part135.BottomSurface = Enum.SurfaceType.Smooth
+		Part135.TopSurface = Enum.SurfaceType.Smooth
+		Part135.Color = Color3.fromRGB(248, 248, 248)
+		Part135.Material = Enum.Material.SmoothPlastic
+		Part135.Size = Vector3.new(1.1000002622604, 0.09999992698431, 2)
+		Part135.CFrame = CFrame.new(2016.3681640625, -272.54913330078, -1949.6298828125, -0.73994183540344, 0.62088567018509, -0.25881859660149, 0.64278781414032, 0.76604431867599, 7.4276158557041e-07, 0.1982669532299, -0.16636490821838, -0.96592599153519)
+		Part135.Parent = jumbo
+	
+		local ohno = Instance.new("Decal")
+		ohno.Name = "oh no"
+		ohno.Face = Enum.NormalId.Top
+		ohno.Texture = "http://www.roblox.com/asset/?id=4435611044"
+		ohno.Parent = Part135
+	
+		local Part136 = Instance.new("Part")
+		Part136.Anchored = true
+		Part136.BottomSurface = Enum.SurfaceType.Smooth
+		Part136.TopSurface = Enum.SurfaceType.Smooth
+		Part136.Color = Color3.fromRGB(84, 44, 6)
+		Part136.Material = Enum.Material.SmoothPlastic
+		Part136.Size = Vector3.new(6, 0.70000231266022, 1.3999998569489)
+		Part136.CFrame = CFrame.new(2001.0986328125, -265.91479492188, -1932.3706054688)
+		Part136.Parent = jumbo
+	
+		local Part137 = Instance.new("Part")
+		Part137.Anchored = true
+		Part137.BottomSurface = Enum.SurfaceType.Smooth
+		Part137.TopSurface = Enum.SurfaceType.Smooth
+		Part137.Color = Color3.fromRGB(222, 152, 0)
+		Part137.Material = Enum.Material.SmoothPlastic
+		Part137.Size = Vector3.new(0.58000057935715, 0.11000037193298, 0.18999998271465)
+		Part137.CFrame = CFrame.new(2000.626953125, -275.07806396484, -1928.2358398438)
+		Part137.Parent = jumbo
+	
+		local Part138 = Instance.new("Part")
+		Part138.Anchored = true
+		Part138.BottomSurface = Enum.SurfaceType.Smooth
+		Part138.TopSurface = Enum.SurfaceType.Smooth
+		Part138.Color = Color3.fromRGB(68, 35, 5)
+		Part138.Material = Enum.Material.SmoothPlastic
+		Part138.Size = Vector3.new(2.3000004291534, 9.4000015258789, 2.4999978542328)
+		Part138.CFrame = CFrame.new(1996.8669433594, -270.73309326172, -1930.6809082031)
+		Part138.Parent = jumbo
+	
+		local Part139 = Instance.new("Part")
+		Part139.Anchored = true
+		Part139.BottomSurface = Enum.SurfaceType.Smooth
+		Part139.TopSurface = Enum.SurfaceType.Smooth
+		Part139.Color = Color3.fromRGB(68, 35, 5)
+		Part139.Material = Enum.Material.SmoothPlastic
+		Part139.Size = Vector3.new(10.700005531311, 0.10000000149012, 7.7999987602234)
+		Part139.CFrame = CFrame.new(2001.0668945313, -266.08309936523, -1925.630859375)
+		Part139.Parent = jumbo
+	
+		local Part140 = Instance.new("Part")
+		Part140.Anchored = true
+		Part140.BottomSurface = Enum.SurfaceType.Smooth
+		Part140.TopSurface = Enum.SurfaceType.Smooth
+		Part140.Color = Color3.fromRGB(68, 35, 5)
+		Part140.Material = Enum.Material.SmoothPlastic
+		Part140.Size = Vector3.new(8.5600004196167, 0.2700001001358, 2.4999978542328)
+		Part140.CFrame = CFrame.new(2002.1369628906, -266.16821289063, -1930.6809082031)
+		Part140.Parent = jumbo
+	
+		local Part141 = Instance.new("Part")
+		Part141.Anchored = true
+		Part141.BottomSurface = Enum.SurfaceType.Smooth
+		Part141.TopSurface = Enum.SurfaceType.Smooth
+		Part141.Color = Color3.fromRGB(222, 152, 0)
+		Part141.Material = Enum.Material.SmoothPlastic
+		Part141.Size = Vector3.new(0.23000074923038, 0.11000037193298, 0.48000004887581)
+		Part141.CFrame = CFrame.new(2001.0358886719, -275.07806396484, -1924.4509277344, -1, 0, 0, 0, -1, 0, 0, 0, 1)
+		Part141.Parent = jumbo
+	
+		local Part142 = Instance.new("Part")
+		Part142.Anchored = true
+		Part142.BottomSurface = Enum.SurfaceType.Smooth
+		Part142.TopSurface = Enum.SurfaceType.Smooth
+		Part142.Color = Color3.fromRGB(68, 35, 5)
+		Part142.Material = Enum.Material.SmoothPlastic
+		Part142.Size = Vector3.new(10.700000762939, 9.5000019073486, 0.10000000149012)
+		Part142.CFrame = CFrame.new(2001.0668945313, -270.68316650391, -1921.7811279297)
+		Part142.Parent = jumbo
+	
+		local Part143 = Instance.new("Part")
+		Part143.Anchored = true
+		Part143.BottomSurface = Enum.SurfaceType.Smooth
+		Part143.TopSurface = Enum.SurfaceType.Smooth
+		Part143.Color = Color3.fromRGB(68, 35, 5)
+		Part143.Material = Enum.Material.SmoothPlastic
+		Part143.Size = Vector3.new(10.700000762939, 0.30000001192093, 10.400004386902)
+		Part143.CFrame = CFrame.new(2001.0668945313, -275.28314208984, -1926.9307861328)
+		Part143.Parent = jumbo
+	
+		local Part144 = Instance.new("Part")
+		Part144.Anchored = true
+		Part144.BottomSurface = Enum.SurfaceType.Smooth
+		Part144.TopSurface = Enum.SurfaceType.Smooth
+		Part144.Color = Color3.fromRGB(91, 93, 105)
+		Part144.Material = Enum.Material.SmoothPlastic
+		Part144.Size = Vector3.new(11.700004577637, 0.49999991059303, 0.49999991059303)
+		Part144.CFrame = CFrame.new(2001.6486816406, -266.76483154297, -1925.8208007813)
+		Part144.Shape = Enum.PartType.Cylinder
+		Part144.Parent = jumbo
+	
+		local Part145 = Instance.new("Part")
+		Part145.Anchored = true
+		Part145.BottomSurface = Enum.SurfaceType.Smooth
+		Part145.TopSurface = Enum.SurfaceType.Smooth
+		Part145.Color = Color3.fromRGB(106, 57, 9)
+		Part145.Material = Enum.Material.SmoothPlastic
+		Part145.Size = Vector3.new(1.1000002622604, 0.09999992698431, 2)
+		Part145.CFrame = CFrame.new(2016.1265869141, -273.07916259766, -1949.5651855469, -0.9659258723259, 0, -0.25881898403168, 0, 1, 0, 0.25881898403168, 0, -0.9659258723259)
+		Part145.Parent = jumbo
+	
+		local Part146 = Instance.new("Part")
+		Part146.Anchored = true
+		Part146.BottomSurface = Enum.SurfaceType.Smooth
+		Part146.TopSurface = Enum.SurfaceType.Smooth
+		Part146.Color = Color3.fromRGB(222, 152, 0)
+		Part146.Material = Enum.Material.SmoothPlastic
+		Part146.Size = Vector3.new(0.58000057935715, 0.11000037193298, 0.18999998271465)
+		Part146.CFrame = CFrame.new(2000.5368652344, -275.07806396484, -1924.6259765625, 0.64278697967529, 0, 0.76604497432709, 0, 1, 0, -0.76604497432709, 0, 0.64278697967529)
+		Part146.Parent = jumbo
+	
+		local Part147 = Instance.new("Part")
+		Part147.Anchored = true
+		Part147.BottomSurface = Enum.SurfaceType.Smooth
+		Part147.TopSurface = Enum.SurfaceType.Smooth
+		Part147.Color = Color3.fromRGB(222, 152, 0)
+		Part147.Material = Enum.Material.SmoothPlastic
+		Part147.Size = Vector3.new(0.58000057935715, 0.11000037193298, 0.18999998271465)
+		Part147.CFrame = CFrame.new(2001.6867675781, -275.07806396484, -1927.1560058594)
+		Part147.Parent = jumbo
+	
+		local Part148 = Instance.new("Part")
+		Part148.Anchored = true
+		Part148.BottomSurface = Enum.SurfaceType.Smooth
+		Part148.TopSurface = Enum.SurfaceType.Smooth
+		Part148.Color = Color3.fromRGB(222, 152, 0)
+		Part148.Material = Enum.Material.SmoothPlastic
+		Part148.Size = Vector3.new(0.58000057935715, 0.11000037193298, 0.18999998271465)
+		Part148.CFrame = CFrame.new(2001.8969726563, -275.07806396484, -1925.8059082031)
+		Part148.Parent = jumbo
+	
+		local Union13 = Instance.new("UnionOperation")
+		Union13.Anchored = true
+		Union13.Color = Color3.fromRGB(68, 35, 5)
+		Union13.Material = Enum.Material.SmoothPlastic
+		Union13.Size = Vector3.new(2.3000030517578, 9.4000244140625, 3.0000152587891)
+		Union13.CFrame = CFrame.new(2005.2668457031, -270.73309326172, -1930.9307861328)
+		Union13.Parent = jumbo
+	
+		local Part149 = Instance.new("Part")
+		Part149.Anchored = true
+		Part149.BottomSurface = Enum.SurfaceType.Smooth
+		Part149.TopSurface = Enum.SurfaceType.Smooth
+		Part149.Color = Color3.fromRGB(159, 161, 172)
+		Part149.Material = Enum.Material.SmoothPlastic
+		Part149.Size = Vector3.new(0.49997961521149, 38.399993896484, 75.999977111816)
+		Part149.CFrame = CFrame.new(2048.09375, -266.84515380859, -1950.0407714844)
+		Part149.Parent = jumbo
+	
+		local Part150 = Instance.new("Part")
+		Part150.Anchored = true
+		Part150.BottomSurface = Enum.SurfaceType.Smooth
+		Part150.TopSurface = Enum.SurfaceType.Smooth
+		Part150.Color = Color3.fromRGB(222, 152, 0)
+		Part150.Material = Enum.Material.SmoothPlastic
+		Part150.Size = Vector3.new(0.58000057935715, 0.11000037193298, 0.18999998271465)
+		Part150.CFrame = CFrame.new(2000.1469726563, -275.07806396484, -1925.8059082031)
+		Part150.Parent = jumbo
+	
+		local Part151 = Instance.new("Part")
+		Part151.Anchored = true
+		Part151.BottomSurface = Enum.SurfaceType.Smooth
+		Part151.TopSurface = Enum.SurfaceType.Smooth
+		Part151.Color = Color3.fromRGB(222, 152, 0)
+		Part151.Material = Enum.Material.SmoothPlastic
+		Part151.Size = Vector3.new(0.58000057935715, 0.11000037193298, 0.18999998271465)
+		Part151.CFrame = CFrame.new(2001.4868164063, -275.07806396484, -1928.2358398438)
+		Part151.Parent = jumbo
+	
+		local Part152 = Instance.new("Part")
+		Part152.Anchored = true
+		Part152.BottomSurface = Enum.SurfaceType.Smooth
+		Part152.TopSurface = Enum.SurfaceType.Smooth
+		Part152.Color = Color3.fromRGB(222, 152, 0)
+		Part152.Material = Enum.Material.SmoothPlastic
+		Part152.Size = Vector3.new(0.58000057935715, 0.11000037193298, 0.18999998271465)
+		Part152.CFrame = CFrame.new(2001.5368652344, -275.07806396484, -1924.6259765625, -0.50000023841858, 0, 0.86602538824081, 0, 1, 0, -0.86602538824081, 0, -0.50000023841858)
+		Part152.Parent = jumbo
+	
+		local Part153 = Instance.new("Part")
+		Part153.Anchored = true
+		Part153.BottomSurface = Enum.SurfaceType.Smooth
+		Part153.TopSurface = Enum.SurfaceType.Smooth
+		Part153.Color = Color3.fromRGB(222, 152, 0)
+		Part153.Material = Enum.Material.SmoothPlastic
+		Part153.Size = Vector3.new(0.58000057935715, 0.11000037193298, 0.18999998271465)
+		Part153.CFrame = CFrame.new(2001.046875, -275.07806396484, -1929.1560058594)
+		Part153.Parent = jumbo
+	
+		local Part154 = Instance.new("Part")
+		Part154.Anchored = true
+		Part154.BottomSurface = Enum.SurfaceType.Smooth
+		Part154.TopSurface = Enum.SurfaceType.Smooth
+		Part154.Color = Color3.fromRGB(222, 152, 0)
+		Part154.Material = Enum.Material.SmoothPlastic
+		Part154.Size = Vector3.new(0.58000057935715, 0.11000037193298, 0.18999998271465)
+		Part154.CFrame = CFrame.new(2000.3969726563, -275.07806396484, -1927.1560058594)
+		Part154.Parent = jumbo
+	
+		local Part155 = Instance.new("Part")
+		Part155.Anchored = true
+		Part155.BottomSurface = Enum.SurfaceType.Smooth
+		Part155.TopSurface = Enum.SurfaceType.Smooth
+		Part155.Color = Color3.fromRGB(91, 93, 105)
+		Part155.Material = Enum.Material.SmoothPlastic
+		Part155.Size = Vector3.new(2.1593751907349, 0.13000014424324, 0.13000014424324)
+		Part155.CFrame = CFrame.new(2018.865234375, -272.10916137695, -1951.9855957031, -0.11452001333237, 0.34202003479004, 0.93268829584122, -0.99254614114761, 1.0833738315341e-06, -0.12187003344297, -0.041683003306389, -0.93969267606735, 0.33947050571442)
+		Part155.Shape = Enum.PartType.Cylinder
+		Part155.Parent = jumbo
+	
+		jumbo.Parent = workspace
+	end)
+end
+coroutine.wrap(TLCSY_fake_script)()
+local function RUBIB_fake_script() -- TextButton_8.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_8)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		while wait(600) do
+		game.Players.LocalPlayer.Character.Humanoid.Jump = true
+		end
+	end)
+end
+coroutine.wrap(RUBIB_fake_script)()
+local function GPWO_fake_script() -- TextButton_9.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_9)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local HeavyAnim = Instance.new("Animation")
+		HeavyAnim.AnimationId = "rbxassetid://204062532"
+		local Heavy = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(HeavyAnim)
+		Heavy:Play(.1, 1, 2)
+	end)
+	
+end
+coroutine.wrap(GPWO_fake_script)()
+local function SVNHK_fake_script() -- UniversalScript.Protecc 
+	local script = Instance.new('LocalScript', UniversalScript)
+
+	--Randomiser function--
+	local function rand()
+		local array = {}
+		for i = 1,21 do
+			array[i] = string.char(math.random(32,126))
+			if i == 11 then
+				array[i] = "> PYFA V2 <"
+			end
+		end
+		return table.concat(array)
+	end
+	
+	--Action--
+	while true do
+		script.Parent.Name  = rand()
+		wait()
+	end
+end
+coroutine.wrap(SVNHK_fake_script)()
+
+loadstring(game:HttpGet('https://pastebin.com/raw/bXhCvxpc'))()
