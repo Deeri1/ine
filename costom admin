@@ -474,7 +474,7 @@ lplayer.Chatted:Connect(function(msg)
 				})
 			end
 		end
-	end
+		end
 	if string.sub(msg, 1, 7) == (prefix.."bring ") then
 		for i,v in pairs(GetPlayer(string.sub(msg, 8)))do
 			local NOW = lplayer.Character.HumanoidRootPart.CFrame
@@ -657,7 +657,7 @@ lplayer.Chatted:Connect(function(msg)
 	end
 	if string.sub(msg, 1, 7) == (prefix.."fling ") then
 		if string.sub(msg, 8) == "all" or string.sub(msg, 8) == "others" or string.sub(msg, 8) == "me" then
-			
+
 			lplayer.Character.HumanoidRootPart.CFrame = lplayer.Character.HumanoidRootPart.CFrame
 		else
 			for i,v in pairs(GetPlayer(string.sub(msg, 8))) do
@@ -680,7 +680,7 @@ lplayer.Chatted:Connect(function(msg)
 					wait(.5)
 				until lplayer.Character.HumanoidRootPart.Fling == nil 
 				noclip = false
-				
+
 			end
 		end
 	end
@@ -696,13 +696,13 @@ lplayer.Chatted:Connect(function(msg)
 			warn("FE is Enabled (Filtering Enabled)")
 			game:GetService("StarterGui"):SetCore("SendNotification", {
 				Title = "FE is Enabled";
-				Text = "Filtering Enabled. Enjoy using Reviz Admin!";
+				Text = "Filtering Enabled";
 			})
 		else
 			warn("FE is Disabled (Filtering Disabled) Consider using a different admin script.")
 			game:GetService("StarterGui"):SetCore("SendNotification", {
 				Title = "FE is Disabled";
-				Text = "Filtering Disabled. Consider using a different admin script.";
+				Text = "Filtering Disabled";
 			})
 		end
 	end
@@ -747,6 +747,7 @@ lplayer.Chatted:Connect(function(msg)
 			Text = "Type ;noclip to enable";
 		})
 	end
+
 	if string.sub(msg, 1, 7) == (prefix.."speed ") then
 		lplayer.Character.Humanoid.WalkSpeed = (string.sub(msg, 8))
 	end
@@ -1813,6 +1814,35 @@ lplayer.Chatted:Connect(function(msg)
 	if string.sub(msg, 1, 8) == (prefix.."unstate") then
 		changingstate = false
 	end
+	if string.sub(msg, 1, 9) == (prefix.."ncfling ") then
+		for i,v in pairs(GetPlayer(string.sub(msg, 10))) do
+			local y = Instance.new("RocketPropulsion")
+				y.Parent = lplayer.Character.HumanoidRootPart
+				y.CartoonFactor = 1
+				y.MaxThrust = 800000
+				y.MaxSpeed = 1000
+				y.ThrustP = 200000
+				y.Name = "Fling"
+				game:GetService("Workspace").CurrentCamera.CameraSubject = game:GetService("Players")[v.Name].Character.Head
+				y.Target = game:GetService("Players")[v.Name].Character.HumanoidRootPart
+				y:Fire()
+				noclip = false
+				repeat
+					noclip = false
+					wait(5)
+					noclip = true
+					wait(.2)
+				until lplayer.Character.HumanoidRootPart.Fling == nil 
+				noclip = false
+
+			end
+		end
+	if string.sub(msg, 1, 9) == (prefix.."unstare2") then
+		staring = false
+	end
+if string.sub(msg, 1, 8) == (prefix.."unstate") then
+	changingstate = false
+end
 end)
 
 local function tp()
@@ -1859,4 +1889,3 @@ spawn(function()
 		end
 	end
 end)
-
