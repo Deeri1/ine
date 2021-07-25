@@ -257,6 +257,7 @@ CMDSFRAME.Parent = CMDS
 CMDSFRAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CMDSFRAME.Position = UDim2.new(0, 345, 0, 175)
 CMDSFRAME.Size = UDim2.new(0, 497, 0, 367)
+CMDSFRAME.Visible = false
 
 ScrollingFrame.Parent = CMDSFRAME
 ScrollingFrame.Active = true
