@@ -280,6 +280,7 @@ closegui.Text = "X"
 closegui.TextColor3 = Color3.new(1, 1, 1)
 closegui.TextSize = 20
 
+
 closegui.MouseButton1Click:connect(function()
 	CMDSFRAME.Visible = false
 end)
@@ -622,7 +623,7 @@ lplayer.Chatted:Connect(function(msg)
 				game:GetService("Workspace").CurrentCamera.CameraSubject = game:GetService("Players")[v.Name].Character.Head
 				y.Target = game:GetService("Players")[v.Name].Character.HumanoidRootPart
 				y:Fire()
-				noclip = true
+				noclip = false
 			end
 		end
 	end
