@@ -14,7 +14,7 @@ local gamelable = Instance.new("ImageLabel")
 local minbut = Instance.new("ImageButton")
 local bottombar = Instance.new("Frame")
 local windows = Instance.new("ImageButton")
-local ImageButton = Instance.new("ImageButton")
+local cromebottom = Instance.new("ImageButton")
 local robloxbut = Instance.new("ImageButton")
 local funnithingbut = Instance.new("ImageButton")
 local windows_2 = Instance.new("Frame")
@@ -27,7 +27,7 @@ local funnithing = Instance.new("Frame")
 local top = Instance.new("ImageLabel")
 local deerihub = Instance.new("TextButton")
 local admin = Instance.new("TextButton")
-local script1 = Instance.new("TextButton")
+local costomadmin = Instance.new("TextButton")
 local script2 = Instance.new("TextButton")
 local script3 = Instance.new("TextButton")
 local scroll = Instance.new("ScrollingFrame")
@@ -75,6 +75,27 @@ local info11 = Instance.new("TextLabel")
 local info12 = Instance.new("TextLabel")
 local info13 = Instance.new("TextLabel")
 local info14 = Instance.new("TextLabel")
+local crome = Instance.new("Frame")
+local maincrome = Instance.new("Frame")
+local backward = Instance.new("TextButton")
+local forward = Instance.new("TextButton")
+local refresh = Instance.new("ImageButton")
+local Frame = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local ImageButton = Instance.new("ImageButton")
+local plugins = Instance.new("ImageButton")
+local ImageButton_2 = Instance.new("ImageButton")
+local ImageButton_3 = Instance.new("ImageButton")
+local ImageButton_4 = Instance.new("ImageButton")
+local star = Instance.new("TextButton")
+local google1 = Instance.new("ImageLabel")
+local google2 = Instance.new("ImageLabel")
+local Frame_2 = Instance.new("Frame")
+local TextBox_2 = Instance.new("TextBox")
+local ImageButton_5 = Instance.new("ImageButton")
+local ImageButton_6 = Instance.new("ImageButton")
+local ImageButton_7 = Instance.new("ImageButton")
+local closecrome = Instance.new("ImageButton")
 
 --Properties:
 
@@ -133,6 +154,7 @@ ingame.Parent = computer
 ingame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ingame.BackgroundTransparency = 1.000
 ingame.Size = UDim2.new(0, 267, 0, 100)
+ingame.Visible = false
 
 gamelable.Name = "game lable"
 gamelable.Parent = ingame
@@ -163,11 +185,12 @@ windows.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 windows.Size = UDim2.new(0, 42, 0, 32)
 windows.Image = "rbxassetid://7130863389"
 
-ImageButton.Parent = bottombar
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.Position = UDim2.new(0.0565345213, 0, 0, 0)
-ImageButton.Size = UDim2.new(0, 39, 0, 32)
-ImageButton.Image = "rbxassetid://7130869507"
+cromebottom.Name = "cromebottom"
+cromebottom.Parent = bottombar
+cromebottom.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cromebottom.Position = UDim2.new(0.0565345213, 0, 0, 0)
+cromebottom.Size = UDim2.new(0, 39, 0, 32)
+cromebottom.Image = "rbxassetid://7130869507"
 
 robloxbut.Name = "roblox but"
 robloxbut.Parent = bottombar
@@ -252,9 +275,10 @@ info3.TextWrapped = true
 funnithing.Name = "funni thing"
 funnithing.Parent = computer
 funnithing.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-funnithing.Position = UDim2.new(0.262848765, 0, 0.319057822, 0)
+funnithing.Position = UDim2.new(0.461998284, 0, 0.543897212, 0)
 funnithing.Size = UDim2.new(0, 742, 0, 416)
 funnithing.Visible = false
+funnithing.ZIndex = 3
 
 top.Name = "top"
 top.Parent = funnithing
@@ -282,14 +306,16 @@ admin.Text = "Admin"
 admin.TextColor3 = Color3.fromRGB(0, 0, 0)
 admin.TextSize = 14.000
 
-script1.Name = "script1"
-script1.Parent = funnithing
-script1.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
-script1.Position = UDim2.new(0.407008082, 0, 0.0745192319, 0)
-script1.Size = UDim2.new(0, 120, 0, 19)
-script1.Font = Enum.Font.SourceSans
-script1.TextColor3 = Color3.fromRGB(0, 0, 0)
-script1.TextSize = 14.000
+costomadmin.Name = "costom admin"
+costomadmin.Parent = funnithing
+costomadmin.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
+costomadmin.Position = UDim2.new(0.407008082, 0, 0.0745192319, 0)
+costomadmin.Size = UDim2.new(0, 120, 0, 19)
+costomadmin.Font = Enum.Font.SourceSans
+costomadmin.Text = "Deeri admin"
+costomadmin.TextColor3 = Color3.fromRGB(0, 0, 0)
+costomadmin.TextSize = 14.000
+costomadmin.TextWrapped = true
 
 script2.Name = "script 2"
 script2.Parent = funnithing
@@ -399,9 +425,10 @@ command.Size = UDim2.new(0, 597, 0, 5000)
 command.ClearTextOnFocus = false
 command.Font = Enum.Font.SourceSansSemibold
 command.MultiLine = true
-command.Text = " Script Here"
+command.Text = "Script Here"
 command.TextColor3 = Color3.fromRGB(255, 255, 255)
 command.TextSize = 14.000
+command.TextWrapped = true
 command.TextXAlignment = Enum.TextXAlignment.Left
 command.TextYAlignment = Enum.TextYAlignment.Top
 
@@ -837,9 +864,227 @@ info14.TextScaled = true
 info14.TextSize = 14.000
 info14.TextWrapped = true
 
+crome.Name = "crome"
+crome.Parent = computer
+crome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+crome.Position = UDim2.new(0.106607467, 0, 0.0853131786, 0)
+crome.Size = UDim2.new(0, 1011, 0, 32)
+crome.Visible = false
+
+maincrome.Name = "maincrome"
+maincrome.Parent = crome
+maincrome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+maincrome.Position = UDim2.new(0, 0, 1, 0)
+maincrome.Size = UDim2.new(0, 1011, 0, 577)
+
+backward.Name = "backward"
+backward.Parent = maincrome
+backward.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+backward.BackgroundTransparency = 1.000
+backward.BorderSizePixel = 0
+backward.Position = UDim2.new(-0.00614754111, 0, 0, 0)
+backward.Size = UDim2.new(0, 28, 0, 23)
+backward.SizeConstraint = Enum.SizeConstraint.RelativeXX
+backward.Font = Enum.Font.SourceSans
+backward.Text = "←"
+backward.TextColor3 = Color3.fromRGB(0, 0, 0)
+backward.TextScaled = true
+backward.TextSize = 14.000
+backward.TextWrapped = true
+
+forward.Name = "forward"
+forward.Parent = maincrome
+forward.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+forward.BackgroundTransparency = 1.000
+forward.BorderSizePixel = 0
+forward.Position = UDim2.new(0.0133196712, 0, 0, 0)
+forward.Size = UDim2.new(0, 21, 0, 23)
+forward.SizeConstraint = Enum.SizeConstraint.RelativeXX
+forward.Font = Enum.Font.SourceSans
+forward.Text = "→"
+forward.TextColor3 = Color3.fromRGB(0, 0, 0)
+forward.TextScaled = true
+forward.TextSize = 14.000
+forward.TextWrapped = true
+
+refresh.Name = "refresh"
+refresh.Parent = maincrome
+refresh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+refresh.BackgroundTransparency = 1.000
+refresh.BorderSizePixel = 0
+refresh.Position = UDim2.new(0.034836065, 0, 0.0103986133, 0)
+refresh.Size = UDim2.new(0, 19, 0, 17)
+refresh.Image = "rbxassetid://257125640"
+
+Frame.Parent = maincrome
+Frame.BackgroundColor3 = Color3.fromRGB(226, 226, 226)
+Frame.Position = UDim2.new(0.0645491779, 0, 0.0103986133, 0)
+Frame.Size = UDim2.new(0, 827, 0, 17)
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(226, 226, 226)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0319649279, 0, 0.000398524106, 0)
+TextBox.Size = UDim2.new(0, 800, 0, 16)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.fromRGB(95, 95, 95)
+TextBox.PlaceholderText = "Search Google or type a URL"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+ImageButton.Parent = Frame
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(-0.000877223909, 0, 0.0103986114, 0)
+ImageButton.Size = UDim2.new(0, 18, 0, 16)
+ImageButton.Image = "rbxassetid://2394433112"
+
+plugins.Name = "plugins"
+plugins.Parent = maincrome
+plugins.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+plugins.BackgroundTransparency = 1.000
+plugins.BorderSizePixel = 0
+plugins.Position = UDim2.new(0.890113115, 0, 0.0103986133, 0)
+plugins.Size = UDim2.new(0, 19, 0, 17)
+plugins.Image = "http://www.roblox.com/asset/?id=7151755807"
+
+ImageButton_2.Parent = maincrome
+ImageButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_2.BackgroundTransparency = 1.000
+ImageButton_2.BorderSizePixel = 0
+ImageButton_2.Position = UDim2.new(0.90857023, 0, 0.0103986133, 0)
+ImageButton_2.Size = UDim2.new(0, 19, 0, 17)
+ImageButton_2.Image = "http://www.roblox.com/asset/?id=7151763412"
+
+ImageButton_3.Parent = maincrome
+ImageButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_3.BackgroundTransparency = 1.000
+ImageButton_3.BorderSizePixel = 0
+ImageButton_3.Position = UDim2.new(0.926773012, 0, 0.0103986133, 0)
+ImageButton_3.Size = UDim2.new(0, 19, 0, 17)
+ImageButton_3.Image = "http://www.roblox.com/asset/?id=7151777211"
+
+ImageButton_4.Parent = maincrome
+ImageButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_4.BackgroundTransparency = 1.000
+ImageButton_4.BorderSizePixel = 0
+ImageButton_4.Position = UDim2.new(0.945566237, 0, 0.00866551138, 0)
+ImageButton_4.Size = UDim2.new(0, 46, 0, 17)
+ImageButton_4.Image = "http://www.roblox.com/asset/?id=7151826398"
+
+star.Name = "star"
+star.Parent = maincrome
+star.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+star.BackgroundTransparency = 1.000
+star.BorderSizePixel = 0
+star.Position = UDim2.new(0.860995293, 0, 0.00866551138, 0)
+star.Size = UDim2.new(0, 21, 0, 17)
+star.SizeConstraint = Enum.SizeConstraint.RelativeXX
+star.Font = Enum.Font.SourceSans
+star.Text = "☆"
+star.TextColor3 = Color3.fromRGB(0, 0, 0)
+star.TextScaled = true
+star.TextSize = 14.000
+star.TextWrapped = true
+
+google1.Name = "google1"
+google1.Parent = maincrome
+google1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+google1.BorderSizePixel = 0
+google1.Position = UDim2.new(0.357072204, 0, 0.188908145, 0)
+google1.Size = UDim2.new(0, 288, 0, 143)
+google1.Image = "http://www.roblox.com/asset/?id=7151890022"
+
+google2.Name = "google2"
+google2.Parent = maincrome
+google2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+google2.BackgroundTransparency = 1.000
+google2.BorderSizePixel = 0
+google2.Position = UDim2.new(0.356999993, 0, 0.188999996, 0)
+google2.Size = UDim2.new(0, 289, 0, 145)
+google2.Image = "http://www.roblox.com/asset/?id=7151890320"
+google2.ImageTransparency = 1.000
+
+Frame_2.Parent = maincrome
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.Position = UDim2.new(0.294024944, 0, 0.485268623, 0)
+Frame_2.Size = UDim2.new(0, 406, 0, 17)
+
+TextBox_2.Parent = Frame_2
+TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.BorderSizePixel = 0
+TextBox_2.Position = UDim2.new(0.0910782814, 0, 0, 0)
+TextBox_2.Size = UDim2.new(0, 369, 0, 16)
+TextBox_2.Font = Enum.Font.SourceSans
+TextBox_2.PlaceholderColor3 = Color3.fromRGB(95, 95, 95)
+TextBox_2.PlaceholderText = "Search Google or type a URL"
+TextBox_2.Text = ""
+TextBox_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.TextScaled = true
+TextBox_2.TextSize = 14.000
+TextBox_2.TextWrapped = true
+TextBox_2.TextXAlignment = Enum.TextXAlignment.Left
+TextBox_2.TextYAlignment = Enum.TextYAlignment.Top
+
+ImageButton_5.Parent = Frame_2
+ImageButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_5.BackgroundTransparency = 1.000
+ImageButton_5.BorderSizePixel = 0
+ImageButton_5.Position = UDim2.new(0.0262163691, 0, 0.0103986114, 0)
+ImageButton_5.Size = UDim2.new(0, 18, 0, 16)
+ImageButton_5.Image = "http://www.roblox.com/asset/?id=7151997802"
+
+ImageButton_6.Parent = Frame_2
+ImageButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_6.BackgroundTransparency = 1.000
+ImageButton_6.BorderSizePixel = 0
+ImageButton_6.Position = UDim2.new(0.385822326, 0, 1.77510524, 0)
+ImageButton_6.Size = UDim2.new(0, 75, 0, 82)
+ImageButton_6.Image = "http://www.roblox.com/asset/?id=7152017003"
+
+ImageButton_7.Parent = Frame_2
+ImageButton_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_7.BackgroundTransparency = 1.000
+ImageButton_7.BorderSizePixel = 0
+ImageButton_7.Position = UDim2.new(-0.732404351, 0, -18.3529415, 0)
+ImageButton_7.Size = UDim2.new(0, 220, 0, 31)
+ImageButton_7.Image = "http://www.roblox.com/asset/?id=7152024168"
+
+closecrome.Name = "close crome"
+closecrome.Parent = crome
+closecrome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+closecrome.BorderSizePixel = 0
+closecrome.Position = UDim2.new(0.958456933, 0, 0, 0)
+closecrome.Size = UDim2.new(0, 42, 0, 31)
+closecrome.Image = "http://www.roblox.com/asset/?id=7152078427"
+
 -- Scripts:
 
-local function COIT_fake_script() -- robloxmain.open roblox 
+local function LAZQB_fake_script() -- cromemain.open crome 
+	local script = Instance.new('LocalScript', cromemain)
+
+	local crome = 0
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if crome == 0 then
+			script.Parent.Parent.Parent.crome.Visible = true
+			crome = 1
+		elseif crome == 1 then
+			script.Parent.Parent.Parent.crome.Visible = false
+			crome = 0
+		end
+	
+	
+	end)
+end
+coroutine.wrap(LAZQB_fake_script)()
+local function BXUX_fake_script() -- robloxmain.open roblox 
 	local script = Instance.new('LocalScript', robloxmain)
 
 	local roblox = 0
@@ -858,8 +1103,8 @@ local function COIT_fake_script() -- robloxmain.open roblox
 	
 	end)
 end
-coroutine.wrap(COIT_fake_script)()
-local function NHKEYB_fake_script() -- funnithngmain.open funni 
+coroutine.wrap(BXUX_fake_script)()
+local function YJFSVJL_fake_script() -- funnithngmain.open funni 
 	local script = Instance.new('LocalScript', funnithngmain)
 
 	local roblox = 0
@@ -876,8 +1121,8 @@ local function NHKEYB_fake_script() -- funnithngmain.open funni
 	
 	end)
 end
-coroutine.wrap(NHKEYB_fake_script)()
-local function CAFEM_fake_script() -- windows.open windows 
+coroutine.wrap(YJFSVJL_fake_script)()
+local function OMKAYDV_fake_script() -- windows.open windows 
 	local script = Instance.new('LocalScript', windows)
 
 	local roblox = 0
@@ -894,8 +1139,26 @@ local function CAFEM_fake_script() -- windows.open windows
 	
 	end)
 end
-coroutine.wrap(CAFEM_fake_script)()
-local function CASI_fake_script() -- robloxbut.open roblox 
+coroutine.wrap(OMKAYDV_fake_script)()
+local function RXOQQ_fake_script() -- cromebottom.opencrome2 
+	local script = Instance.new('LocalScript', cromebottom)
+
+	local crome = 0
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if crome == 0 then
+			script.Parent.Parent.Parent.crome.Visible = true
+			crome = 1
+		elseif crome == 1 then
+			script.Parent.Parent.Parent.crome.Visible = false
+			crome = 0
+		end
+	
+	
+	end)
+end
+coroutine.wrap(RXOQQ_fake_script)()
+local function FXKPIXH_fake_script() -- robloxbut.open roblox 
 	local script = Instance.new('LocalScript', robloxbut)
 
 	local roblox = 0
@@ -914,8 +1177,8 @@ local function CASI_fake_script() -- robloxbut.open roblox
 		
 	end)
 end
-coroutine.wrap(CASI_fake_script)()
-local function JCJE_fake_script() -- funnithingbut.open funni thing uh 
+coroutine.wrap(FXKPIXH_fake_script)()
+local function TOWMY_fake_script() -- funnithingbut.open funni thing uh 
 	local script = Instance.new('LocalScript', funnithingbut)
 
 	local roblox = 0
@@ -932,8 +1195,8 @@ local function JCJE_fake_script() -- funnithingbut.open funni thing uh
 	
 	end)
 end
-coroutine.wrap(JCJE_fake_script)()
-local function GBCYT_fake_script() -- deerihub.deeri hub text 
+coroutine.wrap(TOWMY_fake_script)()
+local function ZYSX_fake_script() -- deerihub.deeri hub text 
 	local script = Instance.new('LocalScript', deerihub)
 
 	local textmode = "none"
@@ -944,8 +1207,8 @@ local function GBCYT_fake_script() -- deerihub.deeri hub text
 	end)
 	
 end
-coroutine.wrap(GBCYT_fake_script)()
-local function HKHH_fake_script() -- admin.admin hub text 
+coroutine.wrap(ZYSX_fake_script)()
+local function NDAOPHD_fake_script() -- admin.admin hub text 
 	local script = Instance.new('LocalScript', admin)
 
 	local textmode = "none"
@@ -958,8 +1221,20 @@ local function HKHH_fake_script() -- admin.admin hub text
 	
 	
 end
-coroutine.wrap(HKHH_fake_script)()
-local function MILA_fake_script() -- funnithing.dragable 
+coroutine.wrap(NDAOPHD_fake_script)()
+local function BUOK_fake_script() -- costomadmin.deeri admin 
+	local script = Instance.new('LocalScript', costomadmin)
+
+	local textmode = "none"
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.ScrollingFrame.command.Text = "Deeri admin"
+		textmode = "deeriadmin"
+	end)
+	
+end
+coroutine.wrap(BUOK_fake_script)()
+local function YSMG_fake_script() -- funnithing.dragable 
 	local script = Instance.new('LocalScript', funnithing)
 
 	local main  = script.Parent.Parent["funni thing"]
@@ -967,8 +1242,18 @@ local function MILA_fake_script() -- funnithing.dragable
 	main.Active = true
 	main.Draggable = true
 end
-coroutine.wrap(MILA_fake_script)()
-local function RQJBT_fake_script() -- execute.execute script 
+coroutine.wrap(YSMG_fake_script)()
+local function TJKPZJY_fake_script() -- clear.clear text 
+	local script = Instance.new('LocalScript', clear)
+
+	local cmd = script.Parent.Parent.ScrollingFrame.command
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		cmd.Text = "Script Here"
+	end)
+end
+coroutine.wrap(TJKPZJY_fake_script)()
+local function EDQV_fake_script() -- execute.execute script 
 	local script = Instance.new('LocalScript', execute)
 
 	local cmd = script.Parent.Parent.ScrollingFrame.command
@@ -986,10 +1271,44 @@ local function RQJBT_fake_script() -- execute.execute script
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/qsM4xDCX"))()
 		end
 	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if cmd.Text == "Deeri admin" then
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/costom%20admin'),true))()
+			print("admin loaded")
+			print("prefex is ;")
+			print("do ;cmds to get started")
+		end
+	end)
+	
+	
+	
 end
-coroutine.wrap(RQJBT_fake_script)()
+coroutine.wrap(EDQV_fake_script)()
+local function PDIPW_fake_script() -- hidecode.hide code script 
+	local script = Instance.new('LocalScript', hidecode)
+
+	local cmd = script.Parent.Parent.ScrollingFrame.command
+	local hidecode = script.Parent.Parent.hidecode
+	local switch = "on"
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if switch == "off" then
+			cmd.TextTransparency = 1
+			hidecode.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+			switch = "on"
+			
+		elseif switch == "on" then
+			cmd.TextTransparency = 1
+			hidecode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			switch = "off"
+	
+		end
+	end)
+end
+coroutine.wrap(PDIPW_fake_script)()
 -- inject.injecting script is disabled.
-local function AUAX_fake_script() -- inject.inject2.0 
+local function VNOCJP_fake_script() -- inject.inject2.0 
 	local script = Instance.new('LocalScript', inject)
 
 	local player = game.Players.LocalPlayer
@@ -1020,8 +1339,8 @@ local function AUAX_fake_script() -- inject.inject2.0
 		script:Destroy()
 	end)
 end
-coroutine.wrap(AUAX_fake_script)()
-local function HPSPR_fake_script() -- funnithing.execute loadsting 
+coroutine.wrap(VNOCJP_fake_script)()
+local function IURR_fake_script() -- funnithing.execute loadsting 
 	local script = Instance.new('LocalScript', funnithing)
 
 	wait()
@@ -1088,8 +1407,8 @@ local function HPSPR_fake_script() -- funnithing.execute loadsting
 	end)
 	--end]]
 end
-coroutine.wrap(HPSPR_fake_script)()
-local function MTKAZRG_fake_script() -- funnithing.Script 
+coroutine.wrap(IURR_fake_script)()
+local function OEPJI_fake_script() -- funnithing.Script 
 	local script = Instance.new('Script', funnithing)
 
 	local Noob = script.Parent
@@ -1112,8 +1431,50 @@ local function MTKAZRG_fake_script() -- funnithing.Script
 	--	end)
 	--end
 end
-coroutine.wrap(MTKAZRG_fake_script)()
+coroutine.wrap(OEPJI_fake_script)()
+local function NWFMF_fake_script() -- star.LocalScript 
+	local script = Instance.new('LocalScript', star)
 
+	local marked = false
+	local button = script.Parent
+	
+	script.Parent.MouseButton1Click:connect(function()
+		if button.Text == "☆" then
+			marked = true
+			print("marked.")
+			button.Text = "⭐"
+		else
+			if button.Text == "⭐" then
+				marked = false
+				print("unmarked.")
+				button.Text = "☆"
+			end
+		end
+	end)
+end
+coroutine.wrap(NWFMF_fake_script)()
+local function IVTVD_fake_script() -- maincrome.Script 
+	local script = Instance.new('Script', maincrome)
+
+	while true do
+		wait(1)
+		script.Parent.google1.ImageTransparency = 0
+		script.Parent.google2.ImageTransparency = 1
+		wait(1)
+		script.Parent.google1.ImageTransparency = 1
+		script.Parent.google2.ImageTransparency = 0
+	end
+end
+coroutine.wrap(IVTVD_fake_script)()
+local function YXUG_fake_script() -- closecrome.closecrome script 
+	local script = Instance.new('LocalScript', closecrome)
+
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.crome.Visible = false
+	end)
+end
+coroutine.wrap(YXUG_fake_script)()
 
 
 
