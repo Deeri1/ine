@@ -30,10 +30,50 @@ local admin = Instance.new("TextButton")
 local script1 = Instance.new("TextButton")
 local script2 = Instance.new("TextButton")
 local script3 = Instance.new("TextButton")
-local command = Instance.new("TextBox")
-local enject = Instance.new("TextButton")
-local executed = Instance.new("TextButton")
 local scroll = Instance.new("ScrollingFrame")
+local clear = Instance.new("TextButton")
+local execute = Instance.new("TextButton")
+local hidecode = Instance.new("TextButton")
+local inject = Instance.new("TextButton")
+local hiddenlabel = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local command = Instance.new("TextBox")
+local wincmd = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local maincmd = Instance.new("ScrollingFrame")
+local cmd = Instance.new("Frame")
+local version = Instance.new("Frame")
+local info11 = Instance.new("TextLabel")
+local info12 = Instance.new("TextLabel")
+local info13 = Instance.new("TextLabel")
+local info14 = Instance.new("TextLabel")
+local dependdencies = Instance.new("Frame")
+local info21 = Instance.new("TextLabel")
+local info22 = Instance.new("TextLabel")
+local info23 = Instance.new("TextLabel")
+local info24 = Instance.new("TextLabel")
+local scanning = Instance.new("Frame")
+local info31 = Instance.new("TextLabel")
+local info32 = Instance.new("TextLabel")
+local info33 = Instance.new("TextLabel")
+local info34 = Instance.new("TextLabel")
+local key2 = Instance.new("Frame")
+local key21 = Instance.new("TextLabel")
+local key22 = Instance.new("TextLabel")
+local key23 = Instance.new("TextLabel")
+local key24 = Instance.new("TextLabel")
+local key = Instance.new("Frame")
+local key11 = Instance.new("TextLabel")
+local key12 = Instance.new("TextLabel")
+local key13 = Instance.new("TextLabel")
+local key14 = Instance.new("TextLabel")
+local key3 = Instance.new("Frame")
+local key31 = Instance.new("TextLabel")
+local key32 = Instance.new("TextLabel")
+local key33 = Instance.new("TextLabel")
+local key34 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -44,16 +84,16 @@ computer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.Name = "main"
 main.Parent = computer
 main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-main.Position = UDim2.new(-0.000334453594, 0, -0.0192719493, 0)
-main.Size = UDim2.new(0, 1920, 0, 997)
+main.Position = UDim2.new(-0.000334435666, 0, -0.0192719381, 0)
+main.Size = UDim2.new(0, 1920, 0, 1070)
 
 cromemain.Name = "crome main"
 cromemain.Parent = main
 cromemain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 cromemain.BorderColor3 = Color3.fromRGB(27, 42, 53)
 cromemain.BorderSizePixel = 0
-cromemain.Position = UDim2.new(0.0253699794, 0, 0.00702106301, 0)
-cromemain.Size = UDim2.new(0, 91, 0, 100)
+cromemain.Position = UDim2.new(0.0253699776, 0, 0.00702106068, 0)
+cromemain.Size = UDim2.new(0, 91, 0, 101)
 cromemain.ZIndex = 2
 cromemain.Image = "rbxassetid://7131713053"
 
@@ -63,8 +103,8 @@ robloxmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 robloxmain.BorderColor3 = Color3.fromRGB(27, 42, 53)
 robloxmain.BorderSizePixel = 0
 robloxmain.LayoutOrder = 1
-robloxmain.Position = UDim2.new(0.0253699794, 0, 0.116349049, 0)
-robloxmain.Size = UDim2.new(0, 91, 0, 100)
+robloxmain.Position = UDim2.new(0.0253699776, 0, 0.121021949, 0)
+robloxmain.Size = UDim2.new(0, 91, 0, 95)
 robloxmain.ZIndex = 6
 robloxmain.Image = "rbxassetid://7131723641"
 
@@ -74,8 +114,8 @@ funnithngmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 funnithngmain.BorderColor3 = Color3.fromRGB(27, 42, 53)
 funnithngmain.BorderSizePixel = 0
 funnithngmain.LayoutOrder = 1
-funnithngmain.Position = UDim2.new(0.0253699794, 0, 0.20962888, 0)
-funnithngmain.Size = UDim2.new(0, 91, 0, 100)
+funnithngmain.Position = UDim2.new(0.0253699776, 0, 0.222712994, 0)
+funnithngmain.Size = UDim2.new(0, 91, 0, 86)
 funnithngmain.ZIndex = 8
 funnithngmain.Image = "rbxassetid://7130913658"
 
@@ -83,8 +123,8 @@ background.Name = "background?"
 background.Parent = main
 background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 background.LayoutOrder = 4
-background.Position = UDim2.new(-0.0859375, 0, -0.0250180475, 0)
-background.Size = UDim2.new(0, 1920, 0, 1013)
+background.Position = UDim2.new(-0.0854166672, 0, -0.0280270576, 0)
+background.Size = UDim2.new(0, 2084, 0, 1068)
 background.Image = "rbxassetid://7130797563"
 
 ingame.Name = "ingame"
@@ -268,43 +308,6 @@ script3.Font = Enum.Font.SourceSans
 script3.TextColor3 = Color3.fromRGB(0, 0, 0)
 script3.TextSize = 14.000
 
-command.Name = "command"
-command.Parent = funnithing
-command.BackgroundColor3 = Color3.fromRGB(190, 190, 190)
-command.Position = UDim2.new(0, 0, 0.21634616, 0)
-command.Size = UDim2.new(0, 598, 0, 294)
-command.ClearTextOnFocus = false
-command.Font = Enum.Font.SourceSans
-command.Text = ""
-command.TextColor3 = Color3.fromRGB(0, 0, 0)
-command.TextScaled = true
-command.TextSize = 14.000
-command.TextWrapped = true
-
-enject.Name = "enject"
-enject.Parent = funnithing
-enject.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
-enject.Position = UDim2.new(0.7304582, 0, 0.923076928, 0)
-enject.Size = UDim2.new(0, 200, 0, 32)
-enject.Font = Enum.Font.SourceSans
-enject.Text = "enjected"
-enject.TextColor3 = Color3.fromRGB(0, 0, 0)
-enject.TextScaled = true
-enject.TextSize = 14.000
-enject.TextWrapped = true
-
-executed.Name = "executed"
-executed.Parent = funnithing
-executed.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
-executed.Position = UDim2.new(0, 0, 0.923076928, 0)
-executed.Size = UDim2.new(0, 200, 0, 32)
-executed.Font = Enum.Font.SourceSans
-executed.Text = "execute"
-executed.TextColor3 = Color3.fromRGB(0, 0, 0)
-executed.TextScaled = true
-executed.TextSize = 14.000
-executed.TextWrapped = true
-
 scroll.Name = "scroll"
 scroll.Parent = funnithing
 scroll.Active = true
@@ -313,9 +316,523 @@ scroll.Position = UDim2.new(0.805929899, 0, 0.21634616, 0)
 scroll.Size = UDim2.new(0, 144, 0, 294)
 scroll.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 
+clear.Name = "clear"
+clear.Parent = funnithing
+clear.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+clear.BorderSizePixel = 0
+clear.Position = UDim2.new(0.406968892, 0, 0.926357031, 0)
+clear.Size = UDim2.new(0, 62, 0, 27)
+clear.Font = Enum.Font.SourceSansLight
+clear.Text = "Clear"
+clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+clear.TextSize = 20.000
+
+execute.Name = "execute"
+execute.Parent = funnithing
+execute.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+execute.BorderSizePixel = 0
+execute.Position = UDim2.new(-1.61528587e-05, 0, 0.922576964, 0)
+execute.Size = UDim2.new(0, 169, 0, 30)
+execute.Font = Enum.Font.SourceSansLight
+execute.Text = "EXECUTE"
+execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+execute.TextScaled = true
+execute.TextSize = 20.000
+execute.TextWrapped = true
+
+hidecode.Name = "hidecode"
+hidecode.Parent = funnithing
+hidecode.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+hidecode.BorderColor3 = Color3.fromRGB(255, 255, 255)
+hidecode.BorderSizePixel = 0
+hidecode.Position = UDim2.new(0.347060531, 0, 0.929535091, 0)
+hidecode.Size = UDim2.new(0, 25, 0, 24)
+hidecode.Font = Enum.Font.SourceSans
+hidecode.Text = " "
+hidecode.TextColor3 = Color3.fromRGB(0, 0, 0)
+hidecode.TextSize = 14.000
+
+inject.Name = "inject"
+inject.Parent = funnithing
+inject.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+inject.BorderColor3 = Color3.fromRGB(255, 255, 255)
+inject.Position = UDim2.new(0.729238868, 0, 0.922826827, 0)
+inject.Size = UDim2.new(0, 200, 0, 30)
+inject.Font = Enum.Font.SourceSansLight
+inject.Text = "INJECT"
+inject.TextColor3 = Color3.fromRGB(255, 255, 255)
+inject.TextScaled = true
+inject.TextSize = 14.000
+inject.TextWrapped = true
+
+hiddenlabel.Name = "hiddenlabel"
+hiddenlabel.Parent = funnithing
+hiddenlabel.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+hiddenlabel.BackgroundTransparency = 1.000
+hiddenlabel.BorderSizePixel = 0
+hiddenlabel.Position = UDim2.new(0.238215744, 0, 0.925230682, 0)
+hiddenlabel.Size = UDim2.new(0, 58, 0, 28)
+hiddenlabel.Font = Enum.Font.SourceSansLight
+hiddenlabel.Text = "Hide Code:"
+hiddenlabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+hiddenlabel.TextSize = 20.000
+hiddenlabel.TextXAlignment = Enum.TextXAlignment.Left
+
+ScrollingFrame.Parent = funnithing
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0, 0, 0.216346234, 0)
+ScrollingFrame.Size = UDim2.new(0, 598, 0, 293)
+ScrollingFrame.BottomImage = "rbxasset://textures/blackBkg_square.png"
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 5000)
+ScrollingFrame.MidImage = "rbxasset://textures/blackBkg_square.png"
+ScrollingFrame.ScrollBarThickness = 8
+ScrollingFrame.TopImage = "rbxasset://textures/blackBkg_square.png"
+
+command.Name = "command"
+command.Parent = ScrollingFrame
+command.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+command.BorderSizePixel = 0
+command.Size = UDim2.new(0, 597, 0, 5000)
+command.ClearTextOnFocus = false
+command.Font = Enum.Font.SourceSansSemibold
+command.MultiLine = true
+command.Text = " Script Here"
+command.TextColor3 = Color3.fromRGB(255, 255, 255)
+command.TextSize = 14.000
+command.TextXAlignment = Enum.TextXAlignment.Left
+command.TextYAlignment = Enum.TextYAlignment.Top
+
+wincmd.Name = "wincmd"
+wincmd.Parent = computer
+wincmd.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+wincmd.Position = UDim2.new(0.112000003, 0, 0.0939999968, 0)
+wincmd.Size = UDim2.new(0, 551, 0, 19)
+wincmd.Visible = false
+
+TextButton.Parent = wincmd
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.963702381, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 20, 0, 19)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+TextButton_2.Parent = wincmd
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.Position = UDim2.new(0.927404761, 0, 0, 0)
+TextButton_2.Size = UDim2.new(0, 20, 0, 18)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "☐"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 14.000
+
+TextButton_3.Parent = wincmd
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.Position = UDim2.new(0.891107082, 0, 0, 0)
+TextButton_3.Size = UDim2.new(0, 20, 0, 18)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "-"
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+
+maincmd.Name = "maincmd"
+maincmd.Parent = wincmd
+maincmd.Active = true
+maincmd.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+maincmd.Position = UDim2.new(0, 0, 1, 0)
+maincmd.Size = UDim2.new(0, 551, 0, 279)
+maincmd.CanvasSize = UDim2.new(0, 0, 1000, 0)
+
+cmd.Name = "cmd"
+cmd.Parent = maincmd
+cmd.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+cmd.Position = UDim2.new(-0.00176597631, 0, 0, 0)
+cmd.Size = UDim2.new(0, 551, 68.0999985, 0)
+
+version.Name = "version"
+version.Parent = cmd
+version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+version.BackgroundTransparency = 1.000
+version.Size = UDim2.new(0, 531, 0, 20)
+
+info11.Name = "info1.1"
+info11.Parent = version
+info11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info11.BackgroundTransparency = 1.000
+info11.Position = UDim2.new(0.0508166961, 0, 0, 0)
+info11.Size = UDim2.new(0, 17, 0, 16)
+info11.ZIndex = 11
+info11.Font = Enum.Font.Code
+info11.Text = "]"
+info11.TextColor3 = Color3.fromRGB(255, 255, 255)
+info11.TextScaled = true
+info11.TextSize = 14.000
+info11.TextWrapped = true
+
+info12.Name = "info1.2"
+info12.Parent = version
+info12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info12.BackgroundTransparency = 1.000
+info12.Position = UDim2.new(0.0235934667, 0, 2.40929516e-08, 0)
+info12.Size = UDim2.new(0, 22, 0, 16)
+info12.ZIndex = 11
+info12.Font = Enum.Font.Code
+info12.Text = "INFO"
+info12.TextColor3 = Color3.fromRGB(62, 181, 255)
+info12.TextScaled = true
+info12.TextSize = 14.000
+info12.TextWrapped = true
+
+info13.Name = "info1.3"
+info13.Parent = version
+info13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info13.BackgroundTransparency = 1.000
+info13.Size = UDim2.new(0, 19, 0, 16)
+info13.ZIndex = 11
+info13.Font = Enum.Font.Code
+info13.Text = "["
+info13.TextColor3 = Color3.fromRGB(255, 255, 255)
+info13.TextScaled = true
+info13.TextSize = 14.000
+info13.TextWrapped = true
+
+info14.Name = "info1.4"
+info14.Parent = version
+info14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info14.BackgroundTransparency = 1.000
+info14.Position = UDim2.new(0.0816696882, 0, 0, 0)
+info14.Size = UDim2.new(0, 153, 0, 16)
+info14.ZIndex = 11
+info14.Font = Enum.Font.Code
+info14.Text = "Checking version."
+info14.TextColor3 = Color3.fromRGB(255, 255, 255)
+info14.TextScaled = true
+info14.TextSize = 14.000
+info14.TextWrapped = true
+
+dependdencies.Name = "dependdencies"
+dependdencies.Parent = cmd
+dependdencies.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dependdencies.BackgroundTransparency = 1.000
+dependdencies.Size = UDim2.new(0, 531, 0, 20)
+dependdencies.Visible = false
+
+info21.Name = "info2.1"
+info21.Parent = dependdencies
+info21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info21.BackgroundTransparency = 1.000
+info21.Position = UDim2.new(0.0235934667, 0, 0.750842154, 0)
+info21.Size = UDim2.new(0, 22, 0, 16)
+info21.ZIndex = 11
+info21.Font = Enum.Font.Code
+info21.Text = "INFO"
+info21.TextColor3 = Color3.fromRGB(62, 181, 255)
+info21.TextScaled = true
+info21.TextSize = 14.000
+info21.TextWrapped = true
+
+info22.Name = "info2.2"
+info22.Parent = dependdencies
+info22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info22.BackgroundTransparency = 1.000
+info22.Position = UDim2.new(0.0508166961, 0, 0.750842094, 0)
+info22.Size = UDim2.new(0, 17, 0, 16)
+info22.ZIndex = 11
+info22.Font = Enum.Font.Code
+info22.Text = "]"
+info22.TextColor3 = Color3.fromRGB(255, 255, 255)
+info22.TextScaled = true
+info22.TextSize = 14.000
+info22.TextWrapped = true
+
+info23.Name = "info2.3"
+info23.Parent = dependdencies
+info23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info23.BackgroundTransparency = 1.000
+info23.Position = UDim2.new(0, 0, 0.750842094, 0)
+info23.Size = UDim2.new(0, 19, 0, 16)
+info23.ZIndex = 11
+info23.Font = Enum.Font.Code
+info23.Text = "["
+info23.TextColor3 = Color3.fromRGB(255, 255, 255)
+info23.TextScaled = true
+info23.TextSize = 14.000
+info23.TextWrapped = true
+
+info24.Name = "info2.4"
+info24.Parent = dependdencies
+info24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info24.BackgroundTransparency = 1.000
+info24.Position = UDim2.new(0.0816696882, 0, 0.750842094, 0)
+info24.Size = UDim2.new(0, 219, 0, 16)
+info24.ZIndex = 11
+info24.Font = Enum.Font.Code
+info24.Text = "Waiting for dependencies."
+info24.TextColor3 = Color3.fromRGB(255, 255, 255)
+info24.TextScaled = true
+info24.TextSize = 14.000
+info24.TextWrapped = true
+
+scanning.Name = "scanning"
+scanning.Parent = cmd
+scanning.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scanning.BackgroundTransparency = 1.000
+scanning.Size = UDim2.new(0, 531, 0, 20)
+scanning.Visible = false
+
+info31.Name = "info3.1"
+info31.Parent = scanning
+info31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info31.BackgroundTransparency = 1.000
+info31.Position = UDim2.new(0.0508166961, 0, 1.50157893, 0)
+info31.Size = UDim2.new(0, 17, 0, 16)
+info31.ZIndex = 11
+info31.Font = Enum.Font.Code
+info31.Text = "]"
+info31.TextColor3 = Color3.fromRGB(255, 255, 255)
+info31.TextScaled = true
+info31.TextSize = 14.000
+info31.TextWrapped = true
+
+info32.Name = "info3.2"
+info32.Parent = scanning
+info32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info32.BackgroundTransparency = 1.000
+info32.Position = UDim2.new(0, 0, 1.50157893, 0)
+info32.Size = UDim2.new(0, 19, 0, 16)
+info32.ZIndex = 11
+info32.Font = Enum.Font.Code
+info32.Text = "["
+info32.TextColor3 = Color3.fromRGB(255, 255, 255)
+info32.TextScaled = true
+info32.TextSize = 14.000
+info32.TextWrapped = true
+
+info33.Name = "info3.3"
+info33.Parent = scanning
+info33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info33.BackgroundTransparency = 1.000
+info33.Position = UDim2.new(0.0235934667, 0, 1.50157893, 0)
+info33.Size = UDim2.new(0, 22, 0, 16)
+info33.ZIndex = 11
+info33.Font = Enum.Font.Code
+info33.Text = "INFO"
+info33.TextColor3 = Color3.fromRGB(62, 181, 255)
+info33.TextScaled = true
+info33.TextSize = 14.000
+info33.TextWrapped = true
+
+info34.Name = "info3.4"
+info34.Parent = scanning
+info34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info34.BackgroundTransparency = 1.000
+info34.Position = UDim2.new(0.0816696882, 0, 1.50168419, 0)
+info34.Size = UDim2.new(0, 87, 0, 16)
+info34.ZIndex = 11
+info34.Font = Enum.Font.Code
+info34.Text = "Scanning."
+info34.TextColor3 = Color3.fromRGB(255, 255, 255)
+info34.TextScaled = true
+info34.TextSize = 14.000
+info34.TextWrapped = true
+
+key2.Name = "key 2"
+key2.Parent = cmd
+key2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key2.BackgroundTransparency = 1.000
+key2.Size = UDim2.new(0, 531, 0, 20)
+key2.Visible = false
+
+key21.Name = "key2.1"
+key21.Parent = key2
+key21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key21.BackgroundTransparency = 1.000
+key21.Position = UDim2.new(0, 0, 3.00326324, 0)
+key21.Size = UDim2.new(0, 19, 0, 16)
+key21.ZIndex = 11
+key21.Font = Enum.Font.Code
+key21.Text = "["
+key21.TextColor3 = Color3.fromRGB(255, 255, 255)
+key21.TextScaled = true
+key21.TextSize = 14.000
+key21.TextWrapped = true
+
+key22.Name = "key2.2"
+key22.Parent = key2
+key22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key22.BackgroundTransparency = 1.000
+key22.Position = UDim2.new(0.0508166961, 0, 3.00326324, 0)
+key22.Size = UDim2.new(0, 17, 0, 16)
+key22.ZIndex = 11
+key22.Font = Enum.Font.Code
+key22.Text = "]"
+key22.TextColor3 = Color3.fromRGB(255, 255, 255)
+key22.TextScaled = true
+key22.TextSize = 14.000
+key22.TextWrapped = true
+
+key23.Name = "key2.3"
+key23.Parent = key2
+key23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key23.BackgroundTransparency = 1.000
+key23.Position = UDim2.new(0.0235934667, 0, 3.00326324, 0)
+key23.Size = UDim2.new(0, 22, 0, 16)
+key23.ZIndex = 11
+key23.Font = Enum.Font.Code
+key23.Text = "KEY"
+key23.TextColor3 = Color3.fromRGB(0, 159, 0)
+key23.TextScaled = true
+key23.TextSize = 14.000
+key23.TextWrapped = true
+
+key24.Name = "key2.4"
+key24.Parent = key2
+key24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key24.BackgroundTransparency = 1.000
+key24.Position = UDim2.new(0.0816696882, 0, 3.00326324, 0)
+key24.Size = UDim2.new(0, 343, 0, 16)
+key24.ZIndex = 11
+key24.Font = Enum.Font.Code
+key24.Text = "Checking key. (This may take some time..)"
+key24.TextColor3 = Color3.fromRGB(255, 255, 255)
+key24.TextScaled = true
+key24.TextSize = 14.000
+key24.TextWrapped = true
+
+key.Name = "key"
+key.Parent = cmd
+key.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key.BackgroundTransparency = 1.000
+key.Size = UDim2.new(0, 531, 0, 20)
+key.Visible = false
+
+key11.Name = "key1.1"
+key11.Parent = key
+key11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key11.BackgroundTransparency = 1.000
+key11.Position = UDim2.new(0.0235934667, 0, 2.25242114, 0)
+key11.Size = UDim2.new(0, 22, 0, 16)
+key11.ZIndex = 11
+key11.Font = Enum.Font.Code
+key11.Text = "KEY"
+key11.TextColor3 = Color3.fromRGB(0, 159, 0)
+key11.TextScaled = true
+key11.TextSize = 14.000
+key11.TextWrapped = true
+
+key12.Name = "key1.2"
+key12.Parent = key
+key12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key12.BackgroundTransparency = 1.000
+key12.Position = UDim2.new(0.0508166961, 0, 2.25242114, 0)
+key12.Size = UDim2.new(0, 17, 0, 16)
+key12.ZIndex = 11
+key12.Font = Enum.Font.Code
+key12.Text = "]"
+key12.TextColor3 = Color3.fromRGB(255, 255, 255)
+key12.TextScaled = true
+key12.TextSize = 14.000
+key12.TextWrapped = true
+
+key13.Name = "key1.3"
+key13.Parent = key
+key13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key13.BackgroundTransparency = 1.000
+key13.Position = UDim2.new(0, 0, 2.25242114, 0)
+key13.Size = UDim2.new(0, 19, 0, 16)
+key13.ZIndex = 11
+key13.Font = Enum.Font.Code
+key13.Text = "["
+key13.TextColor3 = Color3.fromRGB(255, 255, 255)
+key13.TextScaled = true
+key13.TextSize = 14.000
+key13.TextWrapped = true
+
+key14.Name = "key1.4"
+key14.Parent = key
+key14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key14.BackgroundTransparency = 1.000
+key14.Position = UDim2.new(0.0816696882, 0, 2.25242114, 0)
+key14.Size = UDim2.new(0, 408, 0, 16)
+key14.ZIndex = 11
+key14.Font = Enum.Font.Code
+key14.Text = "Please get a key here: https://cdn.krnl.sucks/getkey.pfp"
+key14.TextColor3 = Color3.fromRGB(255, 255, 255)
+key14.TextScaled = true
+key14.TextSize = 14.000
+key14.TextWrapped = true
+
+key3.Name = "key 3"
+key3.Parent = cmd
+key3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key3.BackgroundTransparency = 1.000
+key3.Size = UDim2.new(0, 531, 0, 20)
+key3.Visible = false
+
+key31.Name = "key3.1"
+key31.Parent = key3
+key31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key31.BackgroundTransparency = 1.000
+key31.Position = UDim2.new(0.0235934667, 0, 3.75410533, 0)
+key31.Size = UDim2.new(0, 22, 0, 16)
+key31.ZIndex = 11
+key31.Font = Enum.Font.Code
+key31.Text = "KEY"
+key31.TextColor3 = Color3.fromRGB(0, 159, 0)
+key31.TextScaled = true
+key31.TextSize = 14.000
+key31.TextWrapped = true
+
+key32.Name = "key3.2"
+key32.Parent = key3
+key32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key32.BackgroundTransparency = 1.000
+key32.Position = UDim2.new(0.0508166961, 0, 3.75410533, 0)
+key32.Size = UDim2.new(0, 17, 0, 16)
+key32.ZIndex = 11
+key32.Font = Enum.Font.Code
+key32.Text = "]"
+key32.TextColor3 = Color3.fromRGB(255, 255, 255)
+key32.TextScaled = true
+key32.TextSize = 14.000
+key32.TextWrapped = true
+
+key33.Name = "key3.3"
+key33.Parent = key3
+key33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key33.BackgroundTransparency = 1.000
+key33.Position = UDim2.new(0, 0, 3.75410533, 0)
+key33.Size = UDim2.new(0, 19, 0, 16)
+key33.ZIndex = 11
+key33.Font = Enum.Font.Code
+key33.Text = "["
+key33.TextColor3 = Color3.fromRGB(255, 255, 255)
+key33.TextScaled = true
+key33.TextSize = 14.000
+key33.TextWrapped = true
+
+key34.Name = "key3.4"
+key34.Parent = key3
+key34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key34.BackgroundTransparency = 1.000
+key34.Position = UDim2.new(0.0816696882, 0, 3.75410533, 0)
+key34.Size = UDim2.new(0, 110, 0, 16)
+key34.ZIndex = 11
+key34.Font = Enum.Font.Code
+key34.Text = "Correct key!"
+key34.TextColor3 = Color3.fromRGB(255, 255, 255)
+key34.TextScaled = true
+key34.TextSize = 14.000
+key34.TextWrapped = true
+
 -- Scripts:
 
-local function ALVGB_fake_script() -- robloxmain.open roblox 
+local function HYKRELM_fake_script() -- robloxmain.open roblox 
 	local script = Instance.new('LocalScript', robloxmain)
 
 	local roblox = 0
@@ -334,8 +851,8 @@ local function ALVGB_fake_script() -- robloxmain.open roblox
 	
 	end)
 end
-coroutine.wrap(ALVGB_fake_script)()
-local function ZFNST_fake_script() -- funnithngmain.open funni 
+coroutine.wrap(HYKRELM_fake_script)()
+local function HULV_fake_script() -- funnithngmain.open funni 
 	local script = Instance.new('LocalScript', funnithngmain)
 
 	local roblox = 0
@@ -352,8 +869,8 @@ local function ZFNST_fake_script() -- funnithngmain.open funni
 	
 	end)
 end
-coroutine.wrap(ZFNST_fake_script)()
-local function JONNEL_fake_script() -- windows.open windows 
+coroutine.wrap(HULV_fake_script)()
+local function BJZUDL_fake_script() -- windows.open windows 
 	local script = Instance.new('LocalScript', windows)
 
 	local roblox = 0
@@ -370,8 +887,8 @@ local function JONNEL_fake_script() -- windows.open windows
 	
 	end)
 end
-coroutine.wrap(JONNEL_fake_script)()
-local function BLVRF_fake_script() -- robloxbut.open roblox 
+coroutine.wrap(BJZUDL_fake_script)()
+local function MUIKZT_fake_script() -- robloxbut.open roblox 
 	local script = Instance.new('LocalScript', robloxbut)
 
 	local roblox = 0
@@ -390,8 +907,8 @@ local function BLVRF_fake_script() -- robloxbut.open roblox
 		
 	end)
 end
-coroutine.wrap(BLVRF_fake_script)()
-local function KSHJQ_fake_script() -- funnithingbut.open funni thing uh 
+coroutine.wrap(MUIKZT_fake_script)()
+local function SWWJ_fake_script() -- funnithingbut.open funni thing uh 
 	local script = Instance.new('LocalScript', funnithingbut)
 
 	local roblox = 0
@@ -408,63 +925,34 @@ local function KSHJQ_fake_script() -- funnithingbut.open funni thing uh
 	
 	end)
 end
-coroutine.wrap(KSHJQ_fake_script)()
-local function IFXMJPV_fake_script() -- deerihub.deeri hub text 
+coroutine.wrap(SWWJ_fake_script)()
+local function CKGRRQ_fake_script() -- deerihub.deeri hub text 
 	local script = Instance.new('LocalScript', deerihub)
 
 	local textmode = "none"
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.command.Text = "Deeri Hub"
+		script.Parent.Parent.ScrollingFrame.command.Text = "Deeri Hub"
 			textmode = "Deeri hub"
 	end)
 	
 end
-coroutine.wrap(IFXMJPV_fake_script)()
-local function FYVAJU_fake_script() -- admin.admin hub text 
+coroutine.wrap(CKGRRQ_fake_script)()
+local function TXFACS_fake_script() -- admin.admin hub text 
 	local script = Instance.new('LocalScript', admin)
 
 	local textmode = "none"
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.command.Text = "admin"
+		script.Parent.Parent.ScrollingFrame.command.Text = "admin"
 		textmode = "admin"
 	end)
 	
 	
 	
 end
-coroutine.wrap(FYVAJU_fake_script)()
-local function DMVI_fake_script() -- executed.execute script 
-	local script = Instance.new('LocalScript', executed)
-
-	
-	
-	
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.command.Text == "Deeri Hub" then
-			loadstring('\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\68\101\101\114\105\49\47\105\110\101\47\109\97\105\110\47\100\101\101\114\105\37\50\48\104\117\98\37\50\48\108\111\97\100\37\50\48\49\34\41\41\40\41')()
-		end
-	end)
-	
-	
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.command.Text == "admin" then
-			loadstring(game:HttpGetAsync("https://pastebin.com/raw/qsM4xDCX"))()
-		end
-	end)
-	
-	
-	
-	
-	
-	
-	
-end
-coroutine.wrap(DMVI_fake_script)()
-local function IZFT_fake_script() -- funnithing.dragable 
+coroutine.wrap(TXFACS_fake_script)()
+local function BZEXQFK_fake_script() -- funnithing.dragable 
 	local script = Instance.new('LocalScript', funnithing)
 
 	local main  = script.Parent.Parent["funni thing"]
@@ -472,4 +960,149 @@ local function IZFT_fake_script() -- funnithing.dragable
 	main.Active = true
 	main.Draggable = true
 end
-coroutine.wrap(IZFT_fake_script)()
+coroutine.wrap(BZEXQFK_fake_script)()
+local function LXEPS_fake_script() -- execute.execute script 
+	local script = Instance.new('LocalScript', execute)
+
+	local cmd = script.Parent.Parent.ScrollingFrame.command
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	
+	if cmd.Text == "Deeri Hub" then
+		loadstring('\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\68\101\101\114\105\49\47\105\110\101\47\109\97\105\110\47\100\101\101\114\105\37\50\48\104\117\98\37\50\48\108\111\97\100\37\50\48\49\34\41\41\40\41')()
+	end
+	end)
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	if cmd.Text == "admin" then
+		loadstring(game:HttpGetAsync("https://pastebin.com/raw/qsM4xDCX"))()
+		end
+	end)
+end
+coroutine.wrap(LXEPS_fake_script)()
+-- inject.injecting script is disabled.
+local function QRGCVDS_fake_script() -- inject.inject2.0 
+	local script = Instance.new('LocalScript', inject)
+
+	local player = game.Players.LocalPlayer
+	local mouse = player:GetMouse()
+	local maincmd = script.Parent.Parent.Parent.wincmd.maincmd.cmd
+	
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Text = "INJECTING"
+		wait(2)
+		script.Parent.Parent.Parent.wincmd.Visible = true
+		wait(0.5)
+		maincmd["dependdencies"].Visible = true
+		print("dep")
+		maincmd["scanning"].Visible = true
+		print("scan")
+		wait(0.6)
+		maincmd["key"].Visible = true
+		print("key1")
+		maincmd["key 2"].Visible = true
+		print("key2")
+		wait(0.3)
+		maincmd["key 3"].Visible = true
+		print("key3")
+		wait(0.1)
+		script.Parent.Parent.Parent.wincmd.Visible = false
+		wait(0.1)
+		script.Parent.Text = "INJECTED"
+		script:Destroy()
+	end)
+end
+coroutine.wrap(QRGCVDS_fake_script)()
+local function YKLHFMI_fake_script() -- funnithing.execute loadsting 
+	local script = Instance.new('LocalScript', funnithing)
+
+	wait()
+	local noob = script.Parent
+	local Mode = "Server"
+	local CodeHidden = false
+	--	local loadstring = require(noob.ServerMain.Loadstring)
+	
+	--	function RunModule(argument)
+	--		script.Parent.Run:FireServer("9472NUV9Q8O4U82VN398AW", argument)
+	--	end
+	
+	Tween = function(Obj, Time, Settings)	
+		game:GetService("TweenService"):Create(Obj, TweenInfo.new(Time), Settings):Play()
+	end
+	
+	--	noob.requireid.FocusLost:Connect(function(enterPressed)
+	--if enterPressed then
+		--			RunModule('require('..script.Parent.requireid.Text..').load("'..game:GetService('Players').LocalPlayer.Name..'")')
+	--end
+	--	end)
+	
+	--	noob.servermode.MouseButton1Click:Connect(function()
+	--		noob.servermode.BorderSizePixel = 1
+	--		noob.clientmode.BorderSizePixel = 0
+	--	end)
+	
+	noob.inject.MouseButton1Click:Connect(function()
+		Mode = "Client"
+		noob.inject.BorderSizePixel = 1
+	--	noob.servermode.BorderSizePixel = 0
+	end)
+	
+	
+	
+	noob.hidecode.MouseButton1Click:Connect(function()
+		if CodeHidden == false then
+			noob.hidecode.BorderSizePixel = 1
+			Tween(noob.ScrollingFrame.command, 1, {TextTransparency = 1})
+			CodeHidden = true
+		elseif CodeHidden == true then
+			noob.hidecode.BorderSizePixel = 0
+			Tween(noob.ScrollingFrame.command, 1, {TextTransparency = 0})
+			CodeHidden = false
+		end
+	end)
+	
+	noob.execute.MouseButton1Click:Connect(function()
+		--		if Mode == "Server" then
+		--			RunModule(noob.ScrollingFrame.input.Text)
+		if Mode == "Client" then
+			loadstring(noob.ScrollingFrame.command.Text)()
+		end
+	end)
+	
+	noob.clear.MouseButton1Click:Connect(function()
+		noob.ScrollingFrame.command.Text = ""
+	end)
+	
+	--[[noob.close.MouseButton1Click:Connect(function()
+		Tween(noob, 1, {Position = UDim2.new(0.168, 0, -1, 0)})
+		wait(1)
+		noob.Parent:Destroy()
+	end)
+	--end]]
+end
+coroutine.wrap(YKLHFMI_fake_script)()
+local function BIMZUJI_fake_script() -- funnithing.Script 
+	local script = Instance.new('Script', funnithing)
+
+	local Noob = script.Parent
+	local Pass = "9472NUV9Q8O4U82VN398AW"
+	Noob.Active = true
+	Noob.Draggable = true
+	Noob.Selectable = true			
+	
+	if script.Parent:FindFirstChild("Run") then
+		script.Parent:FindFirstChild("Run"):Destroy()
+	end
+	
+	local NewRemote = Instance.new("RemoteEvent",script.Parent)
+	NewRemote.Name = "Run"
+	
+	--	NewRemote.OnServerEvent:connect(function(Plr,Key,Code)
+	--if Key == Pass then
+		--	require(script.Loadstring)(Code)()
+	--end
+	--	end)
+	--end
+end
+coroutine.wrap(BIMZUJI_fake_script)()
