@@ -4,6 +4,9 @@ game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "3"
 game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "4"
 game:GetService("Players").LocalPlayer.Character["BladeMasterAccessory"].Name = "1A"
 game:GetService("Players").LocalPlayer.Character["ShadowBladeMasterAccessory"].Name = "2A"
+
+print("loading")
+
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
