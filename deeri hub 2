@@ -1453,12 +1453,7 @@ UserInputService.InputBegan:Connect(function(keyCode)
 		end
 	end
 end)
---load admin
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/costom%20admin'),true))()
-print("admin loaded")
-print("prefex is ;")
-print("do ;cmds to get started")
-		
+	
 
 Main.Active = true
 Main.Draggable = true
