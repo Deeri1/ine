@@ -73,7 +73,7 @@ local function AGTLMRB_fake_script() -- TextLabel.change text
 	local script = Instance.new('LocalScript', TextLabel)
 
 	TextLabel = script.Parent.Parent.TextLabel
-	
+
 	TextLabel.Text = "\n rj -- you rejoin the game,\n[1] kill [plr] -- You need a tool! Will kill the player, use rkill to kill you and player,\n[2] bring [plr] -- You need a tool! Will bring player to you,\n[3] spin [plr] -- You need a tool! Makes you and the player spin crazy,\n[4] unspin -- Use after using spin cmd and dying, so you stop loop teleporting,\n[5] attach [plr] -- You need a tool! Attaches you to player,\n[6] unattach [plr] -- Attempts to unattach you from a player,\n[7] follow [plr] -- Makes you follow behind the player,\n[8] unfollow,\n[9] freefall [plr] -- You need a tool! Teleports you and the player up into the air,\n[10] trail [plr] -- The opposite of follow, you stay infront of player,\n[11] untrail,\n[12] orbit [plr] -- Makes you orbit the player,\n[13] unorbit,\n[14] fling [plr] -- Makes you fling the player,\n[15] unfling,\n[16] fecheck -- Checks if the game is FE or not,\n[17] void [plr] -- Teleports player to the void,\n[18] noclip -- Gives you noclip to walk through walls,\n[19] clip -- Removes noclip,\n[20] speed [num]/ws [num] -- Changes how fast you walk 16 is default,\n[21] jumppower [num]/jp [num] -- Changes how high you jump 50 is default,\n[22] hipheight [num]/hh [num] -- Changes how high you float 0 is default,\n[23] default -- Changes your speed, jumppower and hipheight to default values,\n[24] annoy [plr] -- Loop teleports you to the player,\n[25] unannoy,\n[26] headwalk [plr] -- Loop teleports you to the player head,\n[27] unheadwalk,\n[28] nolimbs -- Removes your arms and legs,\n[29] god -- Gives you FE Godmode,\n[30] drophats -- Drops your accessories,\n[31] droptool -- Drops any tool you have equipped,\n[32] loopdhats -- Loop drops your accessories,\n[33] unloopdhats,\n[34] loopdtool -- Loop drops any tools you have equipped,\n[35] unloopdtool,\n[36] invisible -- Gives you invisibility CREDIT TO TIMELESS,\n[37] view [plr] -- Changes your camera to the player character,\n[38] unview,\n[39] goto [plr] -- Teleports you to player,\n[40] fly -- Allows you to fly,\n[41] unfly,\n[42] chat [msg] -- Makes you chat a message,\n[43] spam [msg] -- Spams a message,\n[44] unspam,\n[45] spamwait [num] -- Changes delay of chatting a message for the spam command in seconds default is 1 second,\n[46] pmspam [plr] -- Spams a player in private message,\n[47] unpmspam,\n[48] cfreeze [plr] -- Freezes a player on your client, they will only be frozen for you,\n[49] uncfreeze [plr],\n[50] unlockws -- Unlocks the workspace,\n[51] lockws -- Locks the workspace,\n[52] btools -- Gives you btools that will only show to you useful for deleting certain blocks only for you,\n[53] pstand -- Enables platform stand,\n[54] unpstand -- Disables platform stand,\n[55] blockhead -- Removes your head mesh,\n[56] sit,\n[57] bringobj [obj] -- Only shows on client, brings an object/part to you constantly, can be used to bring healing parts, weapons, money etc, type in exact name,\n[58] wsvis [num] -- Changes visibility of workspace parts, num should be between 0 and 1, only shows client sided,\n[59] hypertotal -- Loads in FE GUI Hypertotal,\n[60] cmds -- Prints all commands,\n[61] rmeshhats/blockhats -- Removes the meshes of all your accessories aka block hats,\n[62] rmeshtool/blocktool -- Removes the mesh of the tool you have equipped aka block tool,\n[63] spinner -- Makes you spin,\n[64] nospinner,\n[65] reach [num] -- Gives you reach, mostly used for swords, say ;reachd for default and enter number after for custom,\n[66] noreach -- Removes reach, must have tool equipped,\n[67] rkill [plr] -- Kills you and the player, use kill to just kill the player without dying,\n[68] tp me [plr] -- Alternative to goto,\n[69] cbring [plr] -- Brings player infront of you, shows only on client, allows you to do damage to player,\n[70] uncbring,\n[71] swap [plr] -- You need a tool! Swaps players position with yours and your position with players,\n[72] givetool [plr] -- Gives the tool you have equipped to the player,\n[73] glitch [plr] -- Glitches you and the player, looks very cool,\n[74] unglitch -- Unglitches you,\n[75] grespawn -- Alternative to normal respawn and usually works best for when you want to reset with FE Godmode,\n[76] explorer -- Loads up DEX,\n[77] reset -- Resets your character.,\n[78] anim [id] -- Applies an animation on you, must be created by ROBLOX,\n[79] animgui -- Loads up Energize animations GUI,\n[80] savepos -- Saves your current position,\n[81] loadpos -- Teleports you to your saved position,\n[82] bang [plr] -- 18+,\n[83] unbang,\n[84] delcmdbar -- Removes the command bar completely,\n[85] bringmod [obj] -- Brings all the parts in a model, client only, comes from ;bringobj enter exact name of model,\n[86] shutdown -- Uses harkinians script to shutdown server,\n[87] respawn -- If grespawn doesnt work you can use respawn,\n[88] delobj [obj] -- Deletes a certain brick in workspace, client sided,\n[89] getplrs -- Prints all players in game,\n[90] deldecal -- Deletes all decals client sided,\n[91] opfinality -- Loads in FE GUI Opfinality,\n[92] remotes -- Prints all remotes in the game in the console when added,\n[93] noremotes -- Stops printing remotes,\n[94] tpdefault -- Stops all loop teleports to a player,\n[95] stopsit -- Will not allow you to sit,\n[96] gosit -- Allows you to sit,\n[97] clicktp -- Enables click tp,\n[98] noclicktp -- Disables click tp,\n[99] toolson -- If any tools are dropped in the workspace you will automatically get them,\n[100] toolsoff -- Stops ;toolson,\n ncfling -- noclip fling,"
 end
 coroutine.wrap(AGTLMRB_fake_script)()
@@ -82,7 +82,7 @@ local function CQOV_fake_script() -- closegui.LocalScript
 
 	closegui = script.Parent.Parent.closegui
 	CMDSFRAME= script.Parent.Parent.Parent.CMDSFRAME
-	
+
 	closegui.MouseButton1Click:connect(function()
 		CMDSFRAME.Visible = false
 	end)
@@ -94,7 +94,7 @@ local function KLTS_fake_script() -- CMDSFRAME.draggable
 	main = script.Parent.Parent.CMDSFRAME
 	main.Active = true
 	main.Draggable = true
-	
+
 end
 coroutine.wrap(KLTS_fake_script)()
 
@@ -243,6 +243,7 @@ lplayer.CharacterAdded:Connect(function(character)
 	flying = false
 	staring = false
 	banpl = false
+	toolkill = true
 end)
 
 function change()
@@ -480,7 +481,7 @@ lplayer.Chatted:Connect(function(msg)
 				noclip = true
 			end
 		end
-		end
+	end
 	if string.sub(msg, 1, 7) == (prefix.."bring ") then
 		for i,v in pairs(GetPlayer(string.sub(msg, 8)))do
 			noclip = false
@@ -707,6 +708,30 @@ lplayer.Chatted:Connect(function(msg)
 		game:GetService("Workspace").CurrentCamera.CameraSubject = lplayer.Character.Head
 		wait(0.4)
 		lplayer.Character.HumanoidRootPart.Fling:Destroy()
+	end
+	if string.sub(msg, 1, 13) == (prefix.."toolkilloff") then
+		toolkill = false
+		lplayer.Character.Torso["Right Shoulder"].Enabled = false 
+		lplayer.Character.Torso["Right Shoulder"].Parent = workspace
+		lplayer.Character["Right Arm"].Anchored = true
+	repeat 	
+			print("waiting")
+			if game.Workspace.Humanoid == true then
+				lplayer.Character["Right Arm"].Anchored= true
+				print("waiting")
+			elseif game.Workspace.Humanoid == nil then
+				print "(nil)"
+			
+		end
+until toolkill == true
+	end
+	if string.sub(msg, 1, 12) == (prefix.."toolkillon") then
+		toolkill = true
+		noclip = false
+		workspace["Right Shoulder"].Enabled = true 
+		lplayer.Character["Right Arm"].Anchored = false
+		workspace["Right Shoulder"].Parent = lplayer.Character.Torso
+
 	end
 	if string.sub(msg, 1, 8) == (prefix.."fecheck") then
 		if game:GetService("Workspace").FilteringEnabled == true then
@@ -1846,32 +1871,32 @@ lplayer.Chatted:Connect(function(msg)
 	if string.sub(msg, 1, 9) == (prefix.."ncfling ") then
 		for i,v in pairs(GetPlayer(string.sub(msg, 10))) do
 			local y = Instance.new("RocketPropulsion")
-				y.Parent = lplayer.Character.HumanoidRootPart
-				y.CartoonFactor = 1
-				y.MaxThrust = 800000
-				y.MaxSpeed = 1000
-				y.ThrustP = 200000
-				y.Name = "Fling"
-				game:GetService("Workspace").CurrentCamera.CameraSubject = game:GetService("Players")[v.Name].Character.Head
-				y.Target = game:GetService("Players")[v.Name].Character.HumanoidRootPart
-				y:Fire()
+			y.Parent = lplayer.Character.HumanoidRootPart
+			y.CartoonFactor = 1
+			y.MaxThrust = 800000
+			y.MaxSpeed = 1000
+			y.ThrustP = 200000
+			y.Name = "Fling"
+			game:GetService("Workspace").CurrentCamera.CameraSubject = game:GetService("Players")[v.Name].Character.Head
+			y.Target = game:GetService("Players")[v.Name].Character.HumanoidRootPart
+			y:Fire()
+			noclip = false
+			repeat
 				noclip = false
-				repeat
-					noclip = false
-					wait(5)
-					noclip = true
-					wait(.2)
-				until lplayer.Character.HumanoidRootPart.Fling == nil 
-				noclip = false
+				wait(5)
+				noclip = true
+				wait(.2)
+			until lplayer.Character.HumanoidRootPart.Fling == nil 
+			noclip = false
 
-			end
 		end
+	end
 	if string.sub(msg, 1, 9) == (prefix.."unstare2") then
 		staring = false
 	end
-if string.sub(msg, 1, 8) == (prefix.."unstate") then
-	changingstate = false
-end
+	if string.sub(msg, 1, 8) == (prefix.."unstate") then
+		changingstate = false
+	end
 end)
 
 local function tp()
