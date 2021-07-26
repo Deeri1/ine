@@ -354,7 +354,7 @@ print("admin loaded")
 print("prefex is ;")
 print("do ;cmds to get started")
 --done
-end
+end)
 	script.Parent.MouseButton1Click:Connect(function()
 	for _, player in ipairs(game.Players:GetPlayers()) do
 			if whitelistednames[player.Name] then
