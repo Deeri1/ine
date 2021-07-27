@@ -75,27 +75,80 @@ local info11 = Instance.new("TextLabel")
 local info12 = Instance.new("TextLabel")
 local info13 = Instance.new("TextLabel")
 local info14 = Instance.new("TextLabel")
+local key25 = Instance.new("Frame")
+local key52 = Instance.new("TextLabel")
+local key53 = Instance.new("TextLabel")
+local key51 = Instance.new("TextLabel")
+local info54 = Instance.new("TextLabel")
+local enterkey = Instance.new("TextBox")
+local key29 = Instance.new("Frame")
+local key52_2 = Instance.new("TextLabel")
+local key53_2 = Instance.new("TextLabel")
+local key51_2 = Instance.new("TextLabel")
+local info54_2 = Instance.new("TextLabel")
 local crome = Instance.new("Frame")
 local maincrome = Instance.new("Frame")
+local searchbox = Instance.new("Frame")
+local ImageButton = Instance.new("ImageButton")
+local search = Instance.new("TextBox")
+local update = Instance.new("ImageButton")
+local profile = Instance.new("ImageButton")
+local song = Instance.new("ImageButton")
+local plugins = Instance.new("ImageButton")
+local refresh = Instance.new("ImageButton")
 local backward = Instance.new("TextButton")
 local forward = Instance.new("TextButton")
-local refresh = Instance.new("ImageButton")
-local Frame = Instance.new("Frame")
-local TextBox = Instance.new("TextBox")
-local ImageButton = Instance.new("ImageButton")
-local plugins = Instance.new("ImageButton")
-local ImageButton_2 = Instance.new("ImageButton")
-local ImageButton_3 = Instance.new("ImageButton")
-local ImageButton_4 = Instance.new("ImageButton")
 local star = Instance.new("TextButton")
 local google1 = Instance.new("ImageLabel")
 local google2 = Instance.new("ImageLabel")
-local Frame_2 = Instance.new("Frame")
-local TextBox_2 = Instance.new("TextBox")
-local ImageButton_5 = Instance.new("ImageButton")
-local ImageButton_6 = Instance.new("ImageButton")
-local ImageButton_7 = Instance.new("ImageButton")
+local Frame = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local ImageButton_2 = Instance.new("ImageButton")
+local ImageButton_3 = Instance.new("ImageButton")
+local ImageButton_4 = Instance.new("ImageButton")
+local krnlkey = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
 local closecrome = Instance.new("ImageButton")
+local linkvertese = Instance.new("Frame")
+local checkpointone = Instance.new("Frame")
+local titlecheckpoint = Instance.new("TextLabel")
+local title2 = Instance.new("TextLabel")
+local krnlstinks = Instance.new("TextLabel")
+local title3 = Instance.new("TextLabel")
+local lines = Instance.new("Folder")
+local l6 = Instance.new("Frame")
+local l5 = Instance.new("Frame")
+local l4 = Instance.new("Frame")
+local l3 = Instance.new("Frame")
+local l2 = Instance.new("Frame")
+local directacces = Instance.new("TextButton")
+local adacces = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local badads = Instance.new("TextButton")
+local Frame_3 = Instance.new("Frame")
+local badads_2 = Instance.new("TextButton")
+local Frame_4 = Instance.new("Frame")
+local badads_3 = Instance.new("TextButton")
+local Frame_5 = Instance.new("Frame")
+local badadskey = Instance.new("TextButton")
+local Frame_6 = Instance.new("Frame")
+local bypassadonthead = Instance.new("TextLabel")
+local fakeaddlol = Instance.new("TextLabel")
+local badlol = Instance.new("TextLabel")
+local info = Instance.new("TextLabel")
+local searchbox_2 = Instance.new("Frame")
+local ImageButton_5 = Instance.new("ImageButton")
+local search_2 = Instance.new("TextBox")
+local update_2 = Instance.new("ImageButton")
+local profile_2 = Instance.new("ImageButton")
+local song_2 = Instance.new("ImageButton")
+local plugins_2 = Instance.new("ImageButton")
+local refresh_2 = Instance.new("ImageButton")
+local backward_2 = Instance.new("TextButton")
+local forward_2 = Instance.new("TextButton")
+local star_2 = Instance.new("TextButton")
+local key_2 = Instance.new("Frame")
+local key_3 = Instance.new("TextBox")
 
 --Properties:
 
@@ -145,7 +198,7 @@ background.Name = "background?"
 background.Parent = main
 background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 background.LayoutOrder = 4
-background.Position = UDim2.new(-0.0854166672, 0, -0.0280270576, 0)
+background.Position = UDim2.new(-0.0854166672, 0, -0.02428874, 0)
 background.Size = UDim2.new(0, 2084, 0, 1068)
 background.Image = "rbxassetid://7130797563"
 
@@ -688,7 +741,7 @@ key31.Name = "key3.1"
 key31.Parent = key3
 key31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 key31.BackgroundTransparency = 1.000
-key31.Position = UDim2.new(0.0235934667, 0, 3.75410533, 0)
+key31.Position = UDim2.new(0.0235934667, 0, 5.354105, 0)
 key31.Size = UDim2.new(0, 22, 0, 16)
 key31.ZIndex = 11
 key31.Font = Enum.Font.Code
@@ -702,7 +755,7 @@ key32.Name = "key3.2"
 key32.Parent = key3
 key32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 key32.BackgroundTransparency = 1.000
-key32.Position = UDim2.new(0.0508166961, 0, 3.75410533, 0)
+key32.Position = UDim2.new(0.0508166961, 0, 5.354105, 0)
 key32.Size = UDim2.new(0, 17, 0, 16)
 key32.ZIndex = 11
 key32.Font = Enum.Font.Code
@@ -716,7 +769,7 @@ key33.Name = "key3.3"
 key33.Parent = key3
 key33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 key33.BackgroundTransparency = 1.000
-key33.Position = UDim2.new(0, 0, 3.75410533, 0)
+key33.Position = UDim2.new(0, 0, 5.354105, 0)
 key33.Size = UDim2.new(0, 19, 0, 16)
 key33.ZIndex = 11
 key33.Font = Enum.Font.Code
@@ -730,7 +783,7 @@ key34.Name = "key3.4"
 key34.Parent = key3
 key34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 key34.BackgroundTransparency = 1.000
-key34.Position = UDim2.new(0.0816696882, 0, 3.75410533, 0)
+key34.Position = UDim2.new(0.0816696882, 0, 5.354105, 0)
 key34.Size = UDim2.new(0, 110, 0, 16)
 key34.ZIndex = 11
 key34.Font = Enum.Font.Code
@@ -864,6 +917,150 @@ info14.TextScaled = true
 info14.TextSize = 14.000
 info14.TextWrapped = true
 
+key25.Name = "key2.5"
+key25.Parent = cmdo
+key25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key25.BackgroundTransparency = 1.000
+key25.BorderSizePixel = 0
+key25.Size = UDim2.new(0, 100, 0, 100)
+key25.Visible = false
+
+key52.Name = "key5.2"
+key52.Parent = key25
+key52.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key52.BackgroundTransparency = 1.000
+key52.Position = UDim2.new(0.260816693, 0, 0.913263142, 0)
+key52.Size = UDim2.new(0, 17, 0, 16)
+key52.ZIndex = 11
+key52.Font = Enum.Font.Code
+key52.Text = "]"
+key52.TextColor3 = Color3.fromRGB(255, 255, 255)
+key52.TextScaled = true
+key52.TextSize = 14.000
+key52.TextWrapped = true
+
+key53.Name = "key5.3"
+key53.Parent = key25
+key53.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key53.BackgroundTransparency = 1.000
+key53.Position = UDim2.new(0.12359345, 0, 0.913263142, 0)
+key53.Size = UDim2.new(0, 22, 0, 16)
+key53.ZIndex = 11
+key53.Font = Enum.Font.Code
+key53.Text = "KEY"
+key53.TextColor3 = Color3.fromRGB(0, 159, 0)
+key53.TextScaled = true
+key53.TextSize = 14.000
+key53.TextWrapped = true
+
+key51.Name = "key5.1"
+key51.Parent = key25
+key51.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key51.BackgroundTransparency = 1.000
+key51.Position = UDim2.new(0, 0, 0.913263142, 0)
+key51.Size = UDim2.new(0, 19, 0, 16)
+key51.ZIndex = 11
+key51.Font = Enum.Font.Code
+key51.Text = "["
+key51.TextColor3 = Color3.fromRGB(255, 255, 255)
+key51.TextScaled = true
+key51.TextSize = 14.000
+key51.TextWrapped = true
+
+info54.Name = "info5.4"
+info54.Parent = key25
+info54.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info54.BackgroundTransparency = 1.000
+info54.Position = UDim2.new(-0.158330381, 0, 0.910842121, 0)
+info54.Size = UDim2.new(0, 212, 0, 16)
+info54.ZIndex = 11
+info54.Font = Enum.Font.Code
+info54.Text = "Enter Key:"
+info54.TextColor3 = Color3.fromRGB(255, 255, 255)
+info54.TextScaled = true
+info54.TextSize = 14.000
+info54.TextWrapped = true
+
+enterkey.Name = "enter key"
+enterkey.Parent = info54
+enterkey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+enterkey.BackgroundTransparency = 1.000
+enterkey.BorderSizePixel = 0
+enterkey.Position = UDim2.new(0.740566015, 0, 0, 0)
+enterkey.Size = UDim2.new(0, 401, 0, 16)
+enterkey.Font = Enum.Font.SourceSans
+enterkey.PlaceholderText = "Add Key Here"
+enterkey.Text = ""
+enterkey.TextColor3 = Color3.fromRGB(255, 255, 255)
+enterkey.TextScaled = true
+enterkey.TextSize = 14.000
+enterkey.TextWrapped = true
+enterkey.TextXAlignment = Enum.TextXAlignment.Left
+
+key29.Name = "key2.9"
+key29.Parent = cmdo
+key29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key29.BackgroundTransparency = 1.000
+key29.BorderSizePixel = 0
+key29.Size = UDim2.new(0, 100, 0, 100)
+key29.Visible = false
+
+key52_2.Name = "key5.2"
+key52_2.Parent = key29
+key52_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key52_2.BackgroundTransparency = 1.000
+key52_2.Position = UDim2.new(0.260816693, 0, 0.753263175, 0)
+key52_2.Size = UDim2.new(0, 17, 0, 16)
+key52_2.ZIndex = 11
+key52_2.Font = Enum.Font.Code
+key52_2.Text = "]"
+key52_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+key52_2.TextScaled = true
+key52_2.TextSize = 14.000
+key52_2.TextWrapped = true
+
+key53_2.Name = "key5.3"
+key53_2.Parent = key29
+key53_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key53_2.BackgroundTransparency = 1.000
+key53_2.Position = UDim2.new(0.12359345, 0, 0.753263175, 0)
+key53_2.Size = UDim2.new(0, 22, 0, 16)
+key53_2.ZIndex = 11
+key53_2.Font = Enum.Font.Code
+key53_2.Text = "ERR"
+key53_2.TextColor3 = Color3.fromRGB(159, 0, 0)
+key53_2.TextScaled = true
+key53_2.TextSize = 14.000
+key53_2.TextWrapped = true
+
+key51_2.Name = "key5.1"
+key51_2.Parent = key29
+key51_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key51_2.BackgroundTransparency = 1.000
+key51_2.Position = UDim2.new(0, 0, 0.753263175, 0)
+key51_2.Size = UDim2.new(0, 19, 0, 16)
+key51_2.ZIndex = 11
+key51_2.Font = Enum.Font.Code
+key51_2.Text = "["
+key51_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+key51_2.TextScaled = true
+key51_2.TextSize = 14.000
+key51_2.TextWrapped = true
+
+info54_2.Name = "info5.4"
+info54_2.Parent = key29
+info54_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info54_2.BackgroundTransparency = 1.000
+info54_2.Position = UDim2.new(0.501669645, 0, 0.750842154, 0)
+info54_2.Size = UDim2.new(0, 212, 0, 16)
+info54_2.ZIndex = 11
+info54_2.Font = Enum.Font.Code
+info54_2.Text = "Wrong Key Get Frome Google"
+info54_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+info54_2.TextScaled = true
+info54_2.TextSize = 14.000
+info54_2.TextWrapped = true
+
 crome.Name = "crome"
 crome.Parent = computer
 crome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -877,13 +1074,90 @@ maincrome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 maincrome.Position = UDim2.new(0, 0, 1, 0)
 maincrome.Size = UDim2.new(0, 1011, 0, 577)
 
+searchbox.Name = "searchbox"
+searchbox.Parent = maincrome
+searchbox.BackgroundColor3 = Color3.fromRGB(226, 226, 226)
+searchbox.Position = UDim2.new(0.0645491779, 0, 0.0103986133, 0)
+searchbox.Size = UDim2.new(0, 827, 0, 17)
+
+ImageButton.Parent = searchbox
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(-0.000877223909, 0, 0.0103986114, 0)
+ImageButton.Size = UDim2.new(0, 18, 0, 16)
+ImageButton.Image = "rbxassetid://2394433112"
+
+search.Name = "search"
+search.Parent = searchbox
+search.BackgroundColor3 = Color3.fromRGB(226, 226, 226)
+search.BorderSizePixel = 0
+search.Position = UDim2.new(0.0319649279, 0, 0.000398524106, 0)
+search.Size = UDim2.new(0, 800, 0, 16)
+search.Font = Enum.Font.SourceSans
+search.PlaceholderColor3 = Color3.fromRGB(95, 95, 95)
+search.PlaceholderText = "Search Google or type a URL"
+search.ShowNativeInput = false
+search.Text = ""
+search.TextColor3 = Color3.fromRGB(0, 0, 0)
+search.TextScaled = true
+search.TextSize = 14.000
+search.TextWrapped = true
+search.TextXAlignment = Enum.TextXAlignment.Left
+search.TextYAlignment = Enum.TextYAlignment.Top
+
+update.Name = "update"
+update.Parent = searchbox
+update.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+update.BackgroundTransparency = 1.000
+update.BorderSizePixel = 0
+update.Position = UDim2.new(1.07611334, 0, 0.0086656455, 0)
+update.Size = UDim2.new(0, 55, 0, 17)
+update.Image = "http://www.roblox.com/asset/?id=7151826398"
+
+profile.Name = "profile"
+profile.Parent = searchbox
+profile.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+profile.BackgroundTransparency = 1.000
+profile.BorderSizePixel = 0
+profile.Position = UDim2.new(1.05330527, 0, 0.0103984158, 0)
+profile.Size = UDim2.new(0, 22, 0, 17)
+profile.Image = "http://www.roblox.com/asset/?id=7151777211"
+
+song.Name = "song"
+song.Parent = searchbox
+song.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+song.BackgroundTransparency = 1.000
+song.BorderSizePixel = 0
+song.Position = UDim2.new(1.03121388, 0, 0.0103984158, 0)
+song.Size = UDim2.new(0, 22, 0, 17)
+song.Image = "http://www.roblox.com/asset/?id=7151763412"
+
+plugins.Name = "plugins"
+plugins.Parent = searchbox
+plugins.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+plugins.BackgroundTransparency = 1.000
+plugins.BorderSizePixel = 0
+plugins.Position = UDim2.new(1.0088141, 0, 0.0103984158, 0)
+plugins.Size = UDim2.new(0, 22, 0, 17)
+plugins.Image = "http://www.roblox.com/asset/?id=7151755807"
+
+refresh.Name = "refresh"
+refresh.Parent = searchbox
+refresh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+refresh.BackgroundTransparency = 1.000
+refresh.BorderSizePixel = 0
+refresh.Position = UDim2.new(-0.0291720368, 0, 0.0103984158, 0)
+refresh.Size = UDim2.new(0, 22, 0, 17)
+refresh.Image = "rbxassetid://257125640"
+
 backward.Name = "backward"
-backward.Parent = maincrome
+backward.Parent = searchbox
 backward.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 backward.BackgroundTransparency = 1.000
 backward.BorderSizePixel = 0
-backward.Position = UDim2.new(-0.00614754111, 0, 0, 0)
-backward.Size = UDim2.new(0, 28, 0, 23)
+backward.Position = UDim2.new(-0.0789107829, 0, -0.352941185, 0)
+backward.Size = UDim2.new(0, 32, 0, 23)
 backward.SizeConstraint = Enum.SizeConstraint.RelativeXX
 backward.Font = Enum.Font.SourceSans
 backward.Text = "←"
@@ -893,12 +1167,12 @@ backward.TextSize = 14.000
 backward.TextWrapped = true
 
 forward.Name = "forward"
-forward.Parent = maincrome
+forward.Parent = searchbox
 forward.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 forward.BackgroundTransparency = 1.000
 forward.BorderSizePixel = 0
-forward.Position = UDim2.new(0.0133196712, 0, 0, 0)
-forward.Size = UDim2.new(0, 21, 0, 23)
+forward.Position = UDim2.new(-0.0480297431, 0, -0.352941185, 0)
+forward.Size = UDim2.new(0, 24, 0, 23)
 forward.SizeConstraint = Enum.SizeConstraint.RelativeXX
 forward.Font = Enum.Font.SourceSans
 forward.Text = "→"
@@ -907,84 +1181,13 @@ forward.TextScaled = true
 forward.TextSize = 14.000
 forward.TextWrapped = true
 
-refresh.Name = "refresh"
-refresh.Parent = maincrome
-refresh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-refresh.BackgroundTransparency = 1.000
-refresh.BorderSizePixel = 0
-refresh.Position = UDim2.new(0.034836065, 0, 0.0103986133, 0)
-refresh.Size = UDim2.new(0, 19, 0, 17)
-refresh.Image = "rbxassetid://257125640"
-
-Frame.Parent = maincrome
-Frame.BackgroundColor3 = Color3.fromRGB(226, 226, 226)
-Frame.Position = UDim2.new(0.0645491779, 0, 0.0103986133, 0)
-Frame.Size = UDim2.new(0, 827, 0, 17)
-
-TextBox.Parent = Frame
-TextBox.BackgroundColor3 = Color3.fromRGB(226, 226, 226)
-TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.0319649279, 0, 0.000398524106, 0)
-TextBox.Size = UDim2.new(0, 800, 0, 16)
-TextBox.Font = Enum.Font.SourceSans
-TextBox.PlaceholderColor3 = Color3.fromRGB(95, 95, 95)
-TextBox.PlaceholderText = "Search Google or type a URL"
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.TextScaled = true
-TextBox.TextSize = 14.000
-TextBox.TextWrapped = true
-TextBox.TextXAlignment = Enum.TextXAlignment.Left
-TextBox.TextYAlignment = Enum.TextYAlignment.Top
-
-ImageButton.Parent = Frame
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.BackgroundTransparency = 1.000
-ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(-0.000877223909, 0, 0.0103986114, 0)
-ImageButton.Size = UDim2.new(0, 18, 0, 16)
-ImageButton.Image = "rbxassetid://2394433112"
-
-plugins.Name = "plugins"
-plugins.Parent = maincrome
-plugins.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-plugins.BackgroundTransparency = 1.000
-plugins.BorderSizePixel = 0
-plugins.Position = UDim2.new(0.890113115, 0, 0.0103986133, 0)
-plugins.Size = UDim2.new(0, 19, 0, 17)
-plugins.Image = "http://www.roblox.com/asset/?id=7151755807"
-
-ImageButton_2.Parent = maincrome
-ImageButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton_2.BackgroundTransparency = 1.000
-ImageButton_2.BorderSizePixel = 0
-ImageButton_2.Position = UDim2.new(0.90857023, 0, 0.0103986133, 0)
-ImageButton_2.Size = UDim2.new(0, 19, 0, 17)
-ImageButton_2.Image = "http://www.roblox.com/asset/?id=7151763412"
-
-ImageButton_3.Parent = maincrome
-ImageButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton_3.BackgroundTransparency = 1.000
-ImageButton_3.BorderSizePixel = 0
-ImageButton_3.Position = UDim2.new(0.926773012, 0, 0.0103986133, 0)
-ImageButton_3.Size = UDim2.new(0, 19, 0, 17)
-ImageButton_3.Image = "http://www.roblox.com/asset/?id=7151777211"
-
-ImageButton_4.Parent = maincrome
-ImageButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton_4.BackgroundTransparency = 1.000
-ImageButton_4.BorderSizePixel = 0
-ImageButton_4.Position = UDim2.new(0.945566237, 0, 0.00866551138, 0)
-ImageButton_4.Size = UDim2.new(0, 46, 0, 17)
-ImageButton_4.Image = "http://www.roblox.com/asset/?id=7151826398"
-
 star.Name = "star"
-star.Parent = maincrome
+star.Parent = searchbox
 star.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 star.BackgroundTransparency = 1.000
 star.BorderSizePixel = 0
-star.Position = UDim2.new(0.860995293, 0, 0.00866551138, 0)
-star.Size = UDim2.new(0, 21, 0, 17)
+star.Position = UDim2.new(0.973475814, 0, 0.0086656455, 0)
+star.Size = UDim2.new(0, 24, 0, 17)
 star.SizeConstraint = Enum.SizeConstraint.RelativeXX
 star.Font = Enum.Font.SourceSans
 star.Text = "☆"
@@ -1011,50 +1214,71 @@ google2.Size = UDim2.new(0, 289, 0, 145)
 google2.Image = "http://www.roblox.com/asset/?id=7151890320"
 google2.ImageTransparency = 1.000
 
-Frame_2.Parent = maincrome
-Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_2.Position = UDim2.new(0.294024944, 0, 0.485268623, 0)
-Frame_2.Size = UDim2.new(0, 406, 0, 17)
+Frame.Parent = maincrome
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.294024944, 0, 0.485268623, 0)
+Frame.Size = UDim2.new(0, 406, 0, 17)
 
-TextBox_2.Parent = Frame_2
-TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextBox_2.BorderSizePixel = 0
-TextBox_2.Position = UDim2.new(0.0910782814, 0, 0, 0)
-TextBox_2.Size = UDim2.new(0, 369, 0, 16)
-TextBox_2.Font = Enum.Font.SourceSans
-TextBox_2.PlaceholderColor3 = Color3.fromRGB(95, 95, 95)
-TextBox_2.PlaceholderText = "Search Google or type a URL"
-TextBox_2.Text = ""
-TextBox_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextBox_2.TextScaled = true
-TextBox_2.TextSize = 14.000
-TextBox_2.TextWrapped = true
-TextBox_2.TextXAlignment = Enum.TextXAlignment.Left
-TextBox_2.TextYAlignment = Enum.TextYAlignment.Top
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0910782814, 0, 0, 0)
+TextBox.Size = UDim2.new(0, 369, 0, 16)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.fromRGB(95, 95, 95)
+TextBox.PlaceholderText = "Search Google or type a URL"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
-ImageButton_5.Parent = Frame_2
-ImageButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton_5.BackgroundTransparency = 1.000
-ImageButton_5.BorderSizePixel = 0
-ImageButton_5.Position = UDim2.new(0.0262163691, 0, 0.0103986114, 0)
-ImageButton_5.Size = UDim2.new(0, 18, 0, 16)
-ImageButton_5.Image = "http://www.roblox.com/asset/?id=7151997802"
+ImageButton_2.Parent = Frame
+ImageButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_2.BackgroundTransparency = 1.000
+ImageButton_2.BorderSizePixel = 0
+ImageButton_2.Position = UDim2.new(0.0262163691, 0, 0.0103986114, 0)
+ImageButton_2.Size = UDim2.new(0, 18, 0, 16)
+ImageButton_2.Image = "http://www.roblox.com/asset/?id=7151997802"
 
-ImageButton_6.Parent = Frame_2
-ImageButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton_6.BackgroundTransparency = 1.000
-ImageButton_6.BorderSizePixel = 0
-ImageButton_6.Position = UDim2.new(0.385822326, 0, 1.77510524, 0)
-ImageButton_6.Size = UDim2.new(0, 75, 0, 82)
-ImageButton_6.Image = "http://www.roblox.com/asset/?id=7152017003"
+ImageButton_3.Parent = Frame
+ImageButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_3.BackgroundTransparency = 1.000
+ImageButton_3.BorderSizePixel = 0
+ImageButton_3.Position = UDim2.new(0.627201617, 0, 2.01039934, 0)
+ImageButton_3.Size = UDim2.new(0, 75, 0, 82)
+ImageButton_3.Image = "http://www.roblox.com/asset/?id=7152017003"
 
-ImageButton_7.Parent = Frame_2
-ImageButton_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton_7.BackgroundTransparency = 1.000
-ImageButton_7.BorderSizePixel = 0
-ImageButton_7.Position = UDim2.new(-0.732404351, 0, -18.3529415, 0)
-ImageButton_7.Size = UDim2.new(0, 220, 0, 31)
-ImageButton_7.Image = "http://www.roblox.com/asset/?id=7152024168"
+ImageButton_4.Parent = Frame
+ImageButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_4.BackgroundTransparency = 1.000
+ImageButton_4.BorderSizePixel = 0
+ImageButton_4.Position = UDim2.new(-0.732404351, 0, -18.3529415, 0)
+ImageButton_4.Size = UDim2.new(0, 220, 0, 31)
+ImageButton_4.Image = "http://www.roblox.com/asset/?id=7152024168"
+
+krnlkey.Name = "krnl key"
+krnlkey.Parent = Frame
+krnlkey.BackgroundColor3 = Color3.fromRGB(218, 218, 218)
+krnlkey.BorderSizePixel = 0
+krnlkey.Position = UDim2.new(0.0886699483, 0, 2.41176462, 0)
+krnlkey.Size = UDim2.new(0, 75, 0, 57)
+krnlkey.Font = Enum.Font.SourceSans
+krnlkey.Text = "KRNL"
+krnlkey.TextColor3 = Color3.fromRGB(0, 0, 0)
+krnlkey.TextSize = 14.000
+
+TextLabel.Parent = krnlkey
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0, 0, 1.0350877, 0)
+TextLabel.Size = UDim2.new(0, 75, 0, 16)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "krnl key"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
 
 closecrome.Name = "close crome"
 closecrome.Parent = crome
@@ -1064,9 +1288,381 @@ closecrome.Position = UDim2.new(0.958456933, 0, 0, 0)
 closecrome.Size = UDim2.new(0, 42, 0, 31)
 closecrome.Image = "http://www.roblox.com/asset/?id=7152078427"
 
+linkvertese.Name = "linkvertese"
+linkvertese.Parent = crome
+linkvertese.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+linkvertese.Position = UDim2.new(-0.000989109278, 0, 1, 0)
+linkvertese.Size = UDim2.new(0, 1011, 0, 583)
+linkvertese.Visible = false
+
+checkpointone.Name = "checkpoint one"
+checkpointone.Parent = linkvertese
+checkpointone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+checkpointone.BackgroundTransparency = 1.000
+checkpointone.Size = UDim2.new(0, 100, 0, 100)
+
+titlecheckpoint.Name = "title checkpoint "
+titlecheckpoint.Parent = checkpointone
+titlecheckpoint.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+titlecheckpoint.BorderSizePixel = 0
+titlecheckpoint.Position = UDim2.new(3.65631366, 0, 0.508610547, 0)
+titlecheckpoint.Size = UDim2.new(0, 278, 0, 39)
+titlecheckpoint.Font = Enum.Font.SourceSans
+titlecheckpoint.Text = "Go to krnlKey"
+titlecheckpoint.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlecheckpoint.TextScaled = true
+titlecheckpoint.TextSize = 12.000
+titlecheckpoint.TextWrapped = true
+
+title2.Name = "title 2"
+title2.Parent = checkpointone
+title2.BackgroundColor3 = Color3.fromRGB(41, 58, 170)
+title2.BorderSizePixel = 0
+title2.Position = UDim2.new(0.430000007, 0, 3.28999996, 0)
+title2.Size = UDim2.new(0, 210, 0, 96)
+title2.ZIndex = 2
+title2.Font = Enum.Font.SourceSans
+title2.Text = "krnlkey"
+title2.TextColor3 = Color3.fromRGB(255, 255, 255)
+title2.TextScaled = true
+title2.TextSize = 14.000
+title2.TextWrapped = true
+
+krnlstinks.Name = "krnl.stinks"
+krnlstinks.Parent = checkpointone
+krnlstinks.BackgroundColor3 = Color3.fromRGB(41, 58, 170)
+krnlstinks.BorderSizePixel = 0
+krnlstinks.Position = UDim2.new(0.800000012, 0, 4.92999983, 0)
+krnlstinks.Size = UDim2.new(0, 279, 0, 52)
+krnlstinks.ZIndex = 2
+krnlstinks.Font = Enum.Font.SourceSans
+krnlstinks.Text = "https://cdn.krnl.sucks/getkey"
+krnlstinks.TextColor3 = Color3.fromRGB(255, 255, 255)
+krnlstinks.TextScaled = true
+krnlstinks.TextSize = 14.000
+krnlstinks.TextWrapped = true
+
+title3.Name = "title 3"
+title3.Parent = checkpointone
+title3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title3.BorderSizePixel = 0
+title3.Position = UDim2.new(5.22000027, 0, 1.8499999, 0)
+title3.Size = UDim2.new(0, 200, 0, 50)
+title3.Font = Enum.Font.SourceSans
+title3.Text = "krnlkey"
+title3.TextColor3 = Color3.fromRGB(0, 0, 0)
+title3.TextSize = 40.000
+
+lines.Name = "lines"
+lines.Parent = checkpointone
+
+l6.Name = "l6"
+l6.Parent = lines
+l6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+l6.BorderSizePixel = 2
+l6.Position = UDim2.new(0, 0, 1.91999996, 0)
+l6.Size = UDim2.new(0, 555, 0, 0)
+l6.ZIndex = 3
+
+l5.Name = "l5"
+l5.Parent = lines
+l5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+l5.BorderSizePixel = 2
+l5.Position = UDim2.new(5.55000019, 0, 1.91999996, 0)
+l5.Size = UDim2.new(0, 0, 3.91000056, 0)
+l5.ZIndex = 3
+
+l4.Name = "l4"
+l4.Parent = lines
+l4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+l4.Position = UDim2.new(5.82000017, 0, 2.6099999, 0)
+l4.Size = UDim2.new(0, 429, 0, 0)
+l4.ZIndex = 3
+
+l3.Name = "l3"
+l3.Parent = lines
+l3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+l3.Position = UDim2.new(5.82000017, 0, 3.28999996, 0)
+l3.Size = UDim2.new(0, 429, 0, 0)
+l3.ZIndex = 3
+
+l2.Name = "l2"
+l2.Parent = lines
+l2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+l2.BorderSizePixel = 2
+l2.Position = UDim2.new(5.55000019, 0, 1.91999996, 0)
+l2.Size = UDim2.new(0, 0, 3.91000056, 0)
+l2.ZIndex = 7
+
+directacces.Name = "direct acces"
+directacces.Parent = checkpointone
+directacces.BackgroundColor3 = Color3.fromRGB(230, 101, 49)
+directacces.Position = UDim2.new(5.86000013, 0, 4.82000017, 0)
+directacces.Size = UDim2.new(0, 398, 0, 38)
+directacces.Font = Enum.Font.SourceSans
+directacces.Text = "Direct Access with Premium"
+directacces.TextColor3 = Color3.fromRGB(255, 255, 255)
+directacces.TextSize = 30.000
+
+adacces.Name = "ad acces"
+adacces.Parent = checkpointone
+adacces.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+adacces.Position = UDim2.new(5.86000013, 0, 5.28999996, 0)
+adacces.Size = UDim2.new(0, 398, 0, 38)
+adacces.Font = Enum.Font.SourceSans
+adacces.Text = "Free Access with Ads"
+adacces.TextColor3 = Color3.fromRGB(209, 209, 209)
+adacces.TextSize = 30.000
+
+Frame_2.Parent = checkpointone
+Frame_2.BackgroundColor3 = Color3.fromRGB(41, 58, 170)
+Frame_2.Position = UDim2.new(0.00371612539, 0, 1.91999996, 0)
+Frame_2.Size = UDim2.new(0, 556, 0, 391)
+
+badads.Name = "bad ads"
+badads.Parent = checkpointone
+badads.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+badads.Position = UDim2.new(0.649999976, 0, 1.28999996, 0)
+badads.Size = UDim2.new(0, 210, 0, 37)
+badads.Font = Enum.Font.SourceSans
+badads.Text = "krnlkey generator"
+badads.TextColor3 = Color3.fromRGB(0, 0, 0)
+badads.TextSize = 20.000
+
+Frame_3.Parent = badads
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 142, 62)
+Frame_3.Size = UDim2.new(0, 8, 0, 37)
+
+badads_2.Name = "bad ads"
+badads_2.Parent = checkpointone
+badads_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+badads_2.Position = UDim2.new(2.87013054, 0, 1.28999996, 0)
+badads_2.Size = UDim2.new(0, 210, 0, 37)
+badads_2.Font = Enum.Font.SourceSans
+badads_2.Text = "krnl key bypass"
+badads_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+badads_2.TextSize = 20.000
+
+Frame_4.Parent = badads_2
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 142, 62)
+Frame_4.Size = UDim2.new(0, 8, 0, 37)
+
+badads_3.Name = "bad ads"
+badads_3.Parent = checkpointone
+badads_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+badads_3.Position = UDim2.new(5.19547939, 0, 1.28999996, 0)
+badads_3.Size = UDim2.new(0, 210, 0, 37)
+badads_3.Font = Enum.Font.SourceSans
+badads_3.Text = "krnl key code"
+badads_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+badads_3.TextSize = 20.000
+badads_3.TextWrapped = true
+
+Frame_5.Parent = badads_3
+Frame_5.BackgroundColor3 = Color3.fromRGB(255, 142, 62)
+Frame_5.Size = UDim2.new(0, 8, 0, 37)
+
+badadskey.Name = "bad adskey"
+badadskey.Parent = checkpointone
+badadskey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+badadskey.Position = UDim2.new(7.41560888, 0, 1.28999996, 0)
+badadskey.Size = UDim2.new(0, 210, 0, 37)
+badadskey.Font = Enum.Font.SourceSans
+badadskey.Text = "krnlkey linkvertese"
+badadskey.TextColor3 = Color3.fromRGB(0, 0, 0)
+badadskey.TextSize = 20.000
+
+Frame_6.Parent = badadskey
+Frame_6.BackgroundColor3 = Color3.fromRGB(255, 142, 62)
+Frame_6.Size = UDim2.new(0, 8, 0, 37)
+
+bypassadonthead.Name = "bypassadonthead"
+bypassadonthead.Parent = checkpointone
+bypassadonthead.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bypassadonthead.BorderSizePixel = 0
+bypassadonthead.Position = UDim2.new(5.86000013, 0, 2.3499999, 0)
+bypassadonthead.Size = UDim2.new(0, 125, 0, 25)
+bypassadonthead.Font = Enum.Font.SourceSans
+bypassadonthead.Text = "bypasskrnlkeysystem"
+bypassadonthead.TextColor3 = Color3.fromRGB(0, 0, 0)
+bypassadonthead.TextSize = 14.000
+
+fakeaddlol.Name = "fake add lol"
+fakeaddlol.Parent = checkpointone
+fakeaddlol.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fakeaddlol.BorderSizePixel = 0
+fakeaddlol.Position = UDim2.new(7.47000027, 0, 2.3499999, 0)
+fakeaddlol.Size = UDim2.new(0, 125, 0, 25)
+fakeaddlol.Font = Enum.Font.SourceSans
+fakeaddlol.Text = "KRNL KEY"
+fakeaddlol.TextColor3 = Color3.fromRGB(0, 0, 0)
+fakeaddlol.TextSize = 14.000
+
+badlol.Name = "badlol"
+badlol.Parent = checkpointone
+badlol.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+badlol.BorderSizePixel = 0
+badlol.Position = UDim2.new(8.86000061, 0, 2.3499999, 0)
+badlol.Size = UDim2.new(0, 125, 0, 25)
+badlol.Font = Enum.Font.SourceSans
+badlol.Text = "Jailbreak auto rob script"
+badlol.TextColor3 = Color3.fromRGB(0, 0, 0)
+badlol.TextSize = 14.000
+
+info.Name = "info"
+info.Parent = checkpointone
+info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info.BorderSizePixel = 0
+info.Position = UDim2.new(5.85000134, 0, 2.72000003, 0)
+info.Size = UDim2.new(0, 416, 0, 37)
+info.Font = Enum.Font.SourceSans
+info.Text = "Get access to krnlkey and enjoy content provided by the website  cdn.krnl.sucks"
+info.TextColor3 = Color3.fromRGB(0, 0, 0)
+info.TextSize = 14.000
+
+searchbox_2.Name = "searchbox"
+searchbox_2.Parent = linkvertese
+searchbox_2.BackgroundColor3 = Color3.fromRGB(226, 226, 226)
+searchbox_2.Position = UDim2.new(0.0645491779, 0, 0.0103986133, 0)
+searchbox_2.Size = UDim2.new(0, 827, 0, 17)
+
+ImageButton_5.Parent = searchbox_2
+ImageButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_5.BackgroundTransparency = 1.000
+ImageButton_5.BorderSizePixel = 0
+ImageButton_5.Position = UDim2.new(-0.000877223909, 0, 0.0103986114, 0)
+ImageButton_5.Size = UDim2.new(0, 18, 0, 16)
+ImageButton_5.Image = "rbxassetid://2394433112"
+
+search_2.Name = "search"
+search_2.Parent = searchbox_2
+search_2.BackgroundColor3 = Color3.fromRGB(226, 226, 226)
+search_2.BorderSizePixel = 0
+search_2.Position = UDim2.new(0.0319649279, 0, 0.000398524106, 0)
+search_2.Size = UDim2.new(0, 800, 0, 16)
+search_2.Font = Enum.Font.SourceSans
+search_2.PlaceholderColor3 = Color3.fromRGB(95, 95, 95)
+search_2.PlaceholderText = "Search Google or type a URL"
+search_2.ShowNativeInput = false
+search_2.Text = ""
+search_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+search_2.TextScaled = true
+search_2.TextSize = 14.000
+search_2.TextWrapped = true
+search_2.TextXAlignment = Enum.TextXAlignment.Left
+search_2.TextYAlignment = Enum.TextYAlignment.Top
+
+update_2.Name = "update"
+update_2.Parent = searchbox_2
+update_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+update_2.BackgroundTransparency = 1.000
+update_2.BorderSizePixel = 0
+update_2.Position = UDim2.new(1.07611334, 0, 0.0086656455, 0)
+update_2.Size = UDim2.new(0, 55, 0, 17)
+update_2.Image = "http://www.roblox.com/asset/?id=7151826398"
+
+profile_2.Name = "profile"
+profile_2.Parent = searchbox_2
+profile_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+profile_2.BackgroundTransparency = 1.000
+profile_2.BorderSizePixel = 0
+profile_2.Position = UDim2.new(1.05330527, 0, 0.0103984158, 0)
+profile_2.Size = UDim2.new(0, 22, 0, 17)
+profile_2.Image = "http://www.roblox.com/asset/?id=7151777211"
+
+song_2.Name = "song"
+song_2.Parent = searchbox_2
+song_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+song_2.BackgroundTransparency = 1.000
+song_2.BorderSizePixel = 0
+song_2.Position = UDim2.new(1.03121388, 0, 0.0103984158, 0)
+song_2.Size = UDim2.new(0, 22, 0, 17)
+song_2.Image = "http://www.roblox.com/asset/?id=7151763412"
+
+plugins_2.Name = "plugins"
+plugins_2.Parent = searchbox_2
+plugins_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+plugins_2.BackgroundTransparency = 1.000
+plugins_2.BorderSizePixel = 0
+plugins_2.Position = UDim2.new(1.0088141, 0, 0.0103984158, 0)
+plugins_2.Size = UDim2.new(0, 22, 0, 17)
+plugins_2.Image = "http://www.roblox.com/asset/?id=7151755807"
+
+refresh_2.Name = "refresh"
+refresh_2.Parent = searchbox_2
+refresh_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+refresh_2.BackgroundTransparency = 1.000
+refresh_2.BorderSizePixel = 0
+refresh_2.Position = UDim2.new(-0.0291720368, 0, 0.0103984158, 0)
+refresh_2.Size = UDim2.new(0, 22, 0, 17)
+refresh_2.Image = "rbxassetid://257125640"
+
+backward_2.Name = "backward"
+backward_2.Parent = searchbox_2
+backward_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+backward_2.BackgroundTransparency = 1.000
+backward_2.BorderSizePixel = 0
+backward_2.Position = UDim2.new(-0.0789107829, 0, -0.352941185, 0)
+backward_2.Size = UDim2.new(0, 32, 0, 23)
+backward_2.SizeConstraint = Enum.SizeConstraint.RelativeXX
+backward_2.Font = Enum.Font.SourceSans
+backward_2.Text = "←"
+backward_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+backward_2.TextScaled = true
+backward_2.TextSize = 14.000
+backward_2.TextWrapped = true
+
+forward_2.Name = "forward"
+forward_2.Parent = searchbox_2
+forward_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+forward_2.BackgroundTransparency = 1.000
+forward_2.BorderSizePixel = 0
+forward_2.Position = UDim2.new(-0.0480297431, 0, -0.352941185, 0)
+forward_2.Size = UDim2.new(0, 24, 0, 23)
+forward_2.SizeConstraint = Enum.SizeConstraint.RelativeXX
+forward_2.Font = Enum.Font.SourceSans
+forward_2.Text = "→"
+forward_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+forward_2.TextScaled = true
+forward_2.TextSize = 14.000
+forward_2.TextWrapped = true
+
+star_2.Name = "star"
+star_2.Parent = searchbox_2
+star_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+star_2.BackgroundTransparency = 1.000
+star_2.BorderSizePixel = 0
+star_2.Position = UDim2.new(0.973475814, 0, 0.0086656455, 0)
+star_2.Size = UDim2.new(0, 24, 0, 17)
+star_2.SizeConstraint = Enum.SizeConstraint.RelativeXX
+star_2.Font = Enum.Font.SourceSans
+star_2.Text = "☆"
+star_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+star_2.TextScaled = true
+star_2.TextSize = 14.000
+star_2.TextWrapped = true
+
+key_2.Name = "key"
+key_2.Parent = linkvertese
+key_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key_2.BackgroundTransparency = 1.000
+key_2.Position = UDim2.new(0.00890207756, 0, 0.121783875, 0)
+key_2.Size = UDim2.new(0, 100, 0, 100)
+key_2.Visible = false
+
+key_3.Name = "key"
+key_3.Parent = key_2
+key_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+key_3.Position = UDim2.new(2.73000002, 0, 0.599999964, 0)
+key_3.Size = UDim2.new(0, 419, 0, 41)
+key_3.Font = Enum.Font.SourceSans
+key_3.Text = "_G.kreey"
+key_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+key_3.TextSize = 14.000
+
 -- Scripts:
 
-local function LAZQB_fake_script() -- cromemain.open crome 
+local function VBBY_fake_script() -- cromemain.open crome 
 	local script = Instance.new('LocalScript', cromemain)
 
 	local crome = 0
@@ -1083,8 +1679,8 @@ local function LAZQB_fake_script() -- cromemain.open crome
 	
 	end)
 end
-coroutine.wrap(LAZQB_fake_script)()
-local function BXUX_fake_script() -- robloxmain.open roblox 
+coroutine.wrap(VBBY_fake_script)()
+local function XELXQCL_fake_script() -- robloxmain.open roblox 
 	local script = Instance.new('LocalScript', robloxmain)
 
 	local roblox = 0
@@ -1103,8 +1699,8 @@ local function BXUX_fake_script() -- robloxmain.open roblox
 	
 	end)
 end
-coroutine.wrap(BXUX_fake_script)()
-local function YJFSVJL_fake_script() -- funnithngmain.open funni 
+coroutine.wrap(XELXQCL_fake_script)()
+local function OWVQR_fake_script() -- funnithngmain.open funni 
 	local script = Instance.new('LocalScript', funnithngmain)
 
 	local roblox = 0
@@ -1121,8 +1717,8 @@ local function YJFSVJL_fake_script() -- funnithngmain.open funni
 	
 	end)
 end
-coroutine.wrap(YJFSVJL_fake_script)()
-local function OMKAYDV_fake_script() -- windows.open windows 
+coroutine.wrap(OWVQR_fake_script)()
+local function NOQGCM_fake_script() -- windows.open windows 
 	local script = Instance.new('LocalScript', windows)
 
 	local roblox = 0
@@ -1139,8 +1735,8 @@ local function OMKAYDV_fake_script() -- windows.open windows
 	
 	end)
 end
-coroutine.wrap(OMKAYDV_fake_script)()
-local function RXOQQ_fake_script() -- cromebottom.opencrome2 
+coroutine.wrap(NOQGCM_fake_script)()
+local function SROELRN_fake_script() -- cromebottom.opencrome2 
 	local script = Instance.new('LocalScript', cromebottom)
 
 	local crome = 0
@@ -1157,8 +1753,8 @@ local function RXOQQ_fake_script() -- cromebottom.opencrome2
 	
 	end)
 end
-coroutine.wrap(RXOQQ_fake_script)()
-local function FXKPIXH_fake_script() -- robloxbut.open roblox 
+coroutine.wrap(SROELRN_fake_script)()
+local function AUYOTDZ_fake_script() -- robloxbut.open roblox 
 	local script = Instance.new('LocalScript', robloxbut)
 
 	local roblox = 0
@@ -1177,8 +1773,8 @@ local function FXKPIXH_fake_script() -- robloxbut.open roblox
 		
 	end)
 end
-coroutine.wrap(FXKPIXH_fake_script)()
-local function TOWMY_fake_script() -- funnithingbut.open funni thing uh 
+coroutine.wrap(AUYOTDZ_fake_script)()
+local function UYZYWY_fake_script() -- funnithingbut.open funni thing uh 
 	local script = Instance.new('LocalScript', funnithingbut)
 
 	local roblox = 0
@@ -1195,8 +1791,8 @@ local function TOWMY_fake_script() -- funnithingbut.open funni thing uh
 	
 	end)
 end
-coroutine.wrap(TOWMY_fake_script)()
-local function ZYSX_fake_script() -- deerihub.deeri hub text 
+coroutine.wrap(UYZYWY_fake_script)()
+local function MFXMTJ_fake_script() -- deerihub.deeri hub text 
 	local script = Instance.new('LocalScript', deerihub)
 
 	local textmode = "none"
@@ -1207,8 +1803,8 @@ local function ZYSX_fake_script() -- deerihub.deeri hub text
 	end)
 	
 end
-coroutine.wrap(ZYSX_fake_script)()
-local function NDAOPHD_fake_script() -- admin.admin hub text 
+coroutine.wrap(MFXMTJ_fake_script)()
+local function SPPM_fake_script() -- admin.admin hub text 
 	local script = Instance.new('LocalScript', admin)
 
 	local textmode = "none"
@@ -1221,8 +1817,8 @@ local function NDAOPHD_fake_script() -- admin.admin hub text
 	
 	
 end
-coroutine.wrap(NDAOPHD_fake_script)()
-local function BUOK_fake_script() -- costomadmin.deeri admin 
+coroutine.wrap(SPPM_fake_script)()
+local function GMAOF_fake_script() -- costomadmin.deeri admin 
 	local script = Instance.new('LocalScript', costomadmin)
 
 	local textmode = "none"
@@ -1233,8 +1829,8 @@ local function BUOK_fake_script() -- costomadmin.deeri admin
 	end)
 	
 end
-coroutine.wrap(BUOK_fake_script)()
-local function YSMG_fake_script() -- funnithing.dragable 
+coroutine.wrap(GMAOF_fake_script)()
+local function CFDUROS_fake_script() -- funnithing.dragable 
 	local script = Instance.new('LocalScript', funnithing)
 
 	local main  = script.Parent.Parent["funni thing"]
@@ -1242,8 +1838,8 @@ local function YSMG_fake_script() -- funnithing.dragable
 	main.Active = true
 	main.Draggable = true
 end
-coroutine.wrap(YSMG_fake_script)()
-local function TJKPZJY_fake_script() -- clear.clear text 
+coroutine.wrap(CFDUROS_fake_script)()
+local function YHOP_fake_script() -- clear.clear text 
 	local script = Instance.new('LocalScript', clear)
 
 	local cmd = script.Parent.Parent.ScrollingFrame.command
@@ -1252,8 +1848,8 @@ local function TJKPZJY_fake_script() -- clear.clear text
 		cmd.Text = "Script Here"
 	end)
 end
-coroutine.wrap(TJKPZJY_fake_script)()
-local function EDQV_fake_script() -- execute.execute script 
+coroutine.wrap(YHOP_fake_script)()
+local function HGDGRPE_fake_script() -- execute.execute script 
 	local script = Instance.new('LocalScript', execute)
 
 	local cmd = script.Parent.Parent.ScrollingFrame.command
@@ -1284,8 +1880,8 @@ local function EDQV_fake_script() -- execute.execute script
 	
 	
 end
-coroutine.wrap(EDQV_fake_script)()
-local function PDIPW_fake_script() -- hidecode.hide code script 
+coroutine.wrap(HGDGRPE_fake_script)()
+local function FQLDR_fake_script() -- hidecode.hide code script 
 	local script = Instance.new('LocalScript', hidecode)
 
 	local cmd = script.Parent.Parent.ScrollingFrame.command
@@ -1306,15 +1902,15 @@ local function PDIPW_fake_script() -- hidecode.hide code script
 		end
 	end)
 end
-coroutine.wrap(PDIPW_fake_script)()
+coroutine.wrap(FQLDR_fake_script)()
 -- inject.injecting script is disabled.
-local function VNOCJP_fake_script() -- inject.inject2.0 
+local function HDXMVI_fake_script() -- inject.inject2.0 
 	local script = Instance.new('LocalScript', inject)
 
 	local player = game.Players.LocalPlayer
 	local mouse = player:GetMouse()
 	local maincmd = script.Parent.Parent.Parent.wincmd.maincmd.cmd.cmdo
-	
+	--[[
 	script.Parent.MouseButton1Click:connect(function()
 		script.Parent.Text = "INJECTING"
 		wait(2)
@@ -1338,9 +1934,45 @@ local function VNOCJP_fake_script() -- inject.inject2.0
 		script.Parent.Text = "INJECTED"
 		script:Destroy()
 	end)
+	]]--
+	
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Text = "INJECTING"
+		wait(2)
+		script.Parent.Parent.Parent.wincmd.Visible = true
+		wait(0.5)
+		maincmd["dependdencies"].Visible = true
+		print("dep")
+		maincmd["scanning"].Visible = true
+		print("scan")
+		wait(0.6)
+		maincmd["key"].Visible = true
+		print("key1")
+		maincmd["key 2"].Visible = true
+		print("key2")
+		wait(0.3)
+		maincmd["key2.9"].Visible = true
+		print("ERR")
+		wait(.2)
+		maincmd["key2.5"].Visible = true
+		print("key2.5")
+		repeat	wait() until _G.key == true 
+		print("keydone")
+		wait(0.1)
+		maincmd["key 3"].Visible = true
+		wait(.5)
+		script.Parent.Parent.Parent.wincmd.Visible = false
+		wait(0.1)
+		script.Parent.Text = "INJECTED"
+		script:Destroy()
+	end
+	)
+	
+	
 end
-coroutine.wrap(VNOCJP_fake_script)()
-local function IURR_fake_script() -- funnithing.execute loadsting 
+coroutine.wrap(HDXMVI_fake_script)()
+-- inject.inject 3.0 is disabled.
+local function UAOCN_fake_script() -- funnithing.execute loadsting 
 	local script = Instance.new('LocalScript', funnithing)
 
 	wait()
@@ -1407,8 +2039,8 @@ local function IURR_fake_script() -- funnithing.execute loadsting
 	end)
 	--end]]
 end
-coroutine.wrap(IURR_fake_script)()
-local function OEPJI_fake_script() -- funnithing.Script 
+coroutine.wrap(UAOCN_fake_script)()
+local function SRCOH_fake_script() -- funnithing.Script 
 	local script = Instance.new('Script', funnithing)
 
 	local Noob = script.Parent
@@ -1431,8 +2063,55 @@ local function OEPJI_fake_script() -- funnithing.Script
 	--	end)
 	--end
 end
-coroutine.wrap(OEPJI_fake_script)()
-local function NWFMF_fake_script() -- star.LocalScript 
+coroutine.wrap(SRCOH_fake_script)()
+-- enterkey.find key and chang to key true is disabled.
+local function WIUIFHT_fake_script() -- enterkey.lol 
+	local script = Instance.new('LocalScript', enterkey)
+
+	dumb = false
+	_G.key = false
+	wait(2)
+	
+	local linkvertesetext = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.crome.linkvertese.key.key.PlaceholderText
+	
+	
+	while true do
+		if dumb == false then
+		if script.Parent.Text == linkvertesetext == true then
+			print ("key true")
+				dumb = true
+				_G.key = true
+		
+			end
+			wait()
+			end
+		wait()
+	end
+	
+	
+end
+coroutine.wrap(WIUIFHT_fake_script)()
+local function RQOLGOR_fake_script() -- wincmd.dragable 
+	local script = Instance.new('LocalScript', wincmd)
+
+	local main  = script.Parent.Parent.wincmd
+	
+	main.Active = true
+	main.Draggable = true
+end
+coroutine.wrap(RQOLGOR_fake_script)()
+local function HZBJYLH_fake_script() -- search.Script 
+	local script = Instance.new('Script', search)
+
+	repeat
+		wait()
+	until script.Parent.Text == "test"
+	if script.Parent.Text == "test" then
+		print("test")
+	end
+end
+coroutine.wrap(HZBJYLH_fake_script)()
+local function GKXF_fake_script() -- star.LocalScript 
 	local script = Instance.new('LocalScript', star)
 
 	local marked = false
@@ -1452,8 +2131,8 @@ local function NWFMF_fake_script() -- star.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NWFMF_fake_script)()
-local function IVTVD_fake_script() -- maincrome.Script 
+coroutine.wrap(GKXF_fake_script)()
+local function VBNE_fake_script() -- maincrome.Script 
 	local script = Instance.new('Script', maincrome)
 
 	while true do
@@ -1465,8 +2144,20 @@ local function IVTVD_fake_script() -- maincrome.Script
 		script.Parent.google2.ImageTransparency = 0
 	end
 end
-coroutine.wrap(IVTVD_fake_script)()
-local function YXUG_fake_script() -- closecrome.closecrome script 
+coroutine.wrap(VBNE_fake_script)()
+local function OVKMUL_fake_script() -- krnlkey.open krnl/hide maincrome 
+	local script = Instance.new('LocalScript', krnlkey)
+
+	mainccrome = script.Parent.Parent.Parent.Parent.maincrome
+	krnlkey1 = script.Parent.Parent.Parent.Parent.linkvertese
+	script.Parent.MouseButton1Click:Connect(function()
+		mainccrome.Visible = false
+		krnlkey1.Visible = true	
+		
+	end)
+end
+coroutine.wrap(OVKMUL_fake_script)()
+local function OMEW_fake_script() -- closecrome.closecrome script 
 	local script = Instance.new('LocalScript', closecrome)
 
 	
@@ -1474,13 +2165,118 @@ local function YXUG_fake_script() -- closecrome.closecrome script
 		script.Parent.Parent.Parent.crome.Visible = false
 	end)
 end
-coroutine.wrap(YXUG_fake_script)()
+coroutine.wrap(OMEW_fake_script)()
+local function HEJBXKM_fake_script() -- adacces.enter key 
+	local script = Instance.new('LocalScript', adacces)
 
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.key.Visible = true
+	end)
+end
+coroutine.wrap(HEJBXKM_fake_script)()
+local function AEWJIJI_fake_script() -- search_2.Script 
+	local script = Instance.new('Script', search_2)
 
+	repeat
+		wait()
+	until script.Parent.Text == "test"
+	if script.Parent.Text == "test" then
+		print("test")
+	end
+end
+coroutine.wrap(AEWJIJI_fake_script)()
+local function DQQJOAA_fake_script() -- backward_2.LocalScript 
+	local script = Instance.new('LocalScript', backward_2)
 
+	krnlkey = script.Parent.Parent.Parent.Parent.linkvertese
+	linkver = script.Parent.Parent.Parent.Parent.linkvertese["checkpoint one"]
+	maincrome = script.Parent.Parent.Parent.Parent.maincrome
+	key = script.Parent.Parent.Parent.Parent.linkvertese.key
+	
+	
+	
+		script.Parent.MouseButton1Click:Connect(function()
+		if krnlkey.Visible == true then
+		krnlkey.Visible = false
+		maincrome.Visible = true
+		
+		end
+	end
+	)
+	
+	
+		script.Parent.MouseButton1Click:Connect(function()
+			if key.Visible == true then
+			key.Visible = false
+			linkver.Visible = true
+	
+		end
+	end
+	)
+end
+coroutine.wrap(DQQJOAA_fake_script)()
+local function QZJBAX_fake_script() -- star_2.LocalScript 
+	local script = Instance.new('LocalScript', star_2)
 
+	local marked = false
+	local button = script.Parent
+	
+	script.Parent.MouseButton1Click:connect(function()
+		if button.Text == "☆" then
+			marked = true
+			print("marked.")
+			button.Text = "⭐"
+		else
+			if button.Text == "⭐" then
+				marked = false
+				print("unmarked.")
+				button.Text = "☆"
+			end
+		end
+	end)
+end
+coroutine.wrap(QZJBAX_fake_script)()
+-- key_3.show key is disabled.
+local function XUPWJL_fake_script() -- key_3.LocalScript 
+	local script = Instance.new('LocalScript', key_3)
 
+	wait(1)
+	
+	local key = _G.kreey
+	
+	
+	
+	local keything = script.Parent.Parent.key
+	
+	keything.PlaceholderText = _G.kreey
+	
+	keything.TextScaled = true
+	keything.Text = key
+	keything.ClearTextOnFocus = false
+	
+end
+coroutine.wrap(XUPWJL_fake_script)()
+local function YGZIW_fake_script() -- computer.key 
+	local script = Instance.new('LocalScript', computer)
 
+	_G.kreey = math.random(1000,9999) -- key
+	
+	
+	
+	
+	
+	
+	
+	
+end
+coroutine.wrap(YGZIW_fake_script)()
+local function XYHSR_fake_script() -- computer.womaking key work 
+	local script = Instance.new('LocalScript', computer)
 
-
-
+	
+	
+	
+	
+end
+coroutine.wrap(XYHSR_fake_script)()
