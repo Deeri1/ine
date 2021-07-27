@@ -529,6 +529,53 @@ lplayer.Chatted:Connect(function(msg)
 			noclip = true
 		end
 	end
+	if string.sub(msg, 1, 5) == (prefix.."ftp ") then
+		for i,v in pairs(GetPlayer(string.sub(msg, 6)))do
+			noclip = false
+			local NOW = lplayer.Character.HumanoidRootPart.CFrame
+			lplayer.Character.Humanoid.Name = 1
+			local l = lplayer.Character["1"]:Clone()
+			l.Parent = lplayer.Character
+			l.Name = "Humanoid"
+			wait(0.1)
+			lplayer.Character["1"]:Destroy()
+			game:GetService("Workspace").CurrentCamera.CameraSubject = lplayer.Character
+			lplayer.Character.Animate.Disabled = true
+			wait(0.1)
+			lplayer.Character.Animate.Disabled = false
+			lplayer.Character.Humanoid.DisplayDistanceType = "None"
+			for i,v in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
+				lplayer.Character.Humanoid:EquipTool(v)
+			end
+			local function tp(player,player2)
+				local char1,char2=player.Character,player2.Character
+				if char1 and char2 then
+					char1.HumanoidRootPart.CFrame = char2.HumanoidRootPart.CFrame
+				end
+			end
+			local function getout(player,player2)
+				local char1,char2=player.Character,player2.Character
+				if char1 and char2 then
+					char1:MoveTo(char2.Head.Position)
+				end
+			end
+			tp(game:GetService("Players")[v.Name], lplayer)
+			wait(0.2)
+			tp(game:GetService("Players")[v.Name], lplayer)
+			wait(0.5)
+			lplayer.Character.HumanoidRootPart.CFrame = NOW
+			wait(0.5)
+			getout(lplayer, game:GetService("Players")[v.Name])
+			wait(0.3)
+			lplayer.Character.HumanoidRootPart.CFrame = NOW
+			game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = "Tools needed!";
+				Text = "You need a tool in your backpack for this command!";
+			})
+			wait(5)
+			noclip = true
+		end
+	end
 	if string.sub(msg, 1, 6) == (prefix.."spin ") then
 		for i,v in pairs(GetPlayer(string.sub(msg, 7))) do
 			noclip = false
@@ -955,6 +1002,11 @@ end
 	end
 	if string.sub(msg, 1, 6) == (prefix.."goto ") then
 		for i,v in pairs(GetPlayer(string.sub(msg, 7))) do
+			lplayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame
+		end
+	end
+	if string.sub(msg, 1, 4) == (prefix.."tp ") then
+		for i,v in pairs(GetPlayer(string.sub(msg, 5))) do
 			lplayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame
 		end
 	end
@@ -1687,6 +1739,12 @@ end
 	end
 	if string.sub(msg, 1, 6) == (prefix.."reset") then
 		lplayer.Character.Head:Destroy()
+	end
+	if string.sub(msg, 1, 8) == (prefix.."openhub") then
+		loadstring('\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\68\101\101\114\105\49\47\105\110\101\47\109\97\105\110\47\100\101\101\114\105\37\50\48\104\117\98\37\50\48\108\111\97\100\37\50\48\49\34\41\41\40\41')()
+	end
+	if string.sub(msg, 1, 8) == (prefix.."paragon") then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/paragon%20glitcher"))()
 	end
 	if string.sub(msg, 1, 8) == (prefix.."chatspy") then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/chat%20spy"))()
