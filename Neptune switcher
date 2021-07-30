@@ -1,4 +1,146 @@
 --amogus
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local DeerisNeptuneSwitcher = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local Regular = Instance.new("TextButton")
+local Regular_2 = Instance.new("TextButton")
+local title = Instance.new("TextLabel")
+local titlereg = Instance.new("TextLabel")
+local titlereg_2 = Instance.new("TextLabel")
+local inforeg = Instance.new("TextLabel")
+local inforeg_2 = Instance.new("TextLabel")
+
+--Properties:
+
+DeerisNeptuneSwitcher.Name = "Deeri's Neptune Switcher"
+DeerisNeptuneSwitcher.Parent = game.CoreGui
+DeerisNeptuneSwitcher.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = DeerisNeptuneSwitcher
+main.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
+main.Position = UDim2.new(0.283370614, 0, 0.406852245, 0)
+main.Size = UDim2.new(0, 546, 0, 344)
+
+Regular.Name = "Regular"
+Regular.Parent = main
+Regular.BackgroundColor3 = Color3.fromRGB(194, 194, 194)
+Regular.Position = UDim2.new(0, 0, 0.604651153, 0)
+Regular.Size = UDim2.new(0, 220, 0, 136)
+Regular.Font = Enum.Font.SourceSans
+Regular.Text = ""
+Regular.TextColor3 = Color3.fromRGB(0, 0, 0)
+Regular.TextSize = 14.000
+
+Regular_2.Name = "Regular+"
+Regular_2.Parent = main
+Regular_2.BackgroundColor3 = Color3.fromRGB(194, 194, 194)
+Regular_2.Position = UDim2.new(0.597069621, 0, 0.604651153, 0)
+Regular_2.Size = UDim2.new(0, 220, 0, 136)
+Regular_2.Font = Enum.Font.SourceSans
+Regular_2.Text = ""
+Regular_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Regular_2.TextSize = 14.000
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.fromRGB(194, 194, 194)
+title.Size = UDim2.new(0, 546, 0, 75)
+title.Font = Enum.Font.SourceSans
+title.Text = "Deeri's Neptune Switcher"
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextSize = 58.000
+title.TextWrapped = true
+
+titlereg.Name = "titlereg"
+titlereg.Parent = main
+titlereg.BackgroundColor3 = Color3.fromRGB(194, 194, 194)
+titlereg.Position = UDim2.new(0, 0, 0.372093022, 0)
+titlereg.Size = UDim2.new(0, 220, 0, 50)
+titlereg.Font = Enum.Font.SourceSans
+titlereg.Text = "Regular"
+titlereg.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlereg.TextScaled = true
+titlereg.TextSize = 47.000
+titlereg.TextWrapped = true
+
+titlereg_2.Name = "titlereg+"
+titlereg_2.Parent = main
+titlereg_2.BackgroundColor3 = Color3.fromRGB(194, 194, 194)
+titlereg_2.Position = UDim2.new(0.597069621, 0, 0.372093022, 0)
+titlereg_2.Size = UDim2.new(0, 220, 0, 50)
+titlereg_2.Font = Enum.Font.SourceSans
+titlereg_2.Text = "Regular+"
+titlereg_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlereg_2.TextScaled = true
+titlereg_2.TextSize = 47.000
+titlereg_2.TextWrapped = true
+
+inforeg.Name = "inforeg"
+inforeg.Parent = main
+inforeg.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
+inforeg.Position = UDim2.new(0, 0, 0.517441869, 0)
+inforeg.Size = UDim2.new(0, 220, 0, 30)
+inforeg.Font = Enum.Font.SourceSans
+inforeg.Text = "Needs any Greatsword"
+inforeg.TextColor3 = Color3.fromRGB(0, 0, 0)
+inforeg.TextScaled = true
+inforeg.TextSize = 14.000
+inforeg.TextWrapped = true
+
+inforeg_2.Name = "inforeg+"
+inforeg_2.Parent = main
+inforeg_2.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
+inforeg_2.Position = UDim2.new(0.597069621, 0, 0.517441869, 0)
+inforeg_2.Size = UDim2.new(0, 220, 0, 30)
+inforeg_2.Font = Enum.Font.SourceSans
+inforeg_2.Text = "Greatsword and Will the Wise Costume - Staff"
+inforeg_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+inforeg_2.TextScaled = true
+inforeg_2.TextSize = 14.000
+inforeg_2.TextWrapped = true
+
+-- Scripts:
+
+local function PFYRX_fake_script() -- Regular.LocalScript 
+	local script = Instance.new('LocalScript', Regular)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		_G.waiting = false
+		_G.regplus = false
+		script.Parent.Parent.Parent.Parent["Deeri's Neptune Switcher"]:Destroy()
+	end)
+end
+coroutine.wrap(PFYRX_fake_script)()
+local function CLAPL_fake_script() -- Regular_2.regplus 
+	local script = Instance.new('LocalScript', Regular_2)
+
+	_G.regplus = "wating"
+	script.Parent.MouseButton1Click:Connect(function()
+		_G.waiting = false
+		_G.regplus = true
+		script.Parent.Parent.Parent.Parent["Deeri's Neptune Switcher"]:Destroy()
+	end)
+end
+coroutine.wrap(CLAPL_fake_script)()
+local function RGOO_fake_script() -- main.LocalScript 
+	local script = Instance.new('LocalScript', main)
+
+	_G.waiting = true
+end
+coroutine.wrap(RGOO_fake_script)()
+
+
+repeat	wait() until _G.waiting == false 
+
+wait(2)
+
+regplus = _G.regplus
 warn("Deeri's Neptune Switcher")
 local Sine = 0;
 local RightShoulder = RW
@@ -69,6 +211,16 @@ Bypass = "death"
 loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
 -----OPTIONS
 local ToolName = "MeshPartAccessory" ----- the hats name on explorer/dex (not name in catalog)
+if regplus == true then
+	ToolName2 = "StaffAccessory"----- the hats name on explorer/dex (not name in catalog)
+	print("toolfound")
+else
+	regplus = false
+	print("toolnotfound")
+end
+if _G.regplus == false then
+	print("Regular")
+end
 local NoSound = false ----- sound or no sound (Background Music)
 local OldModel = false ----- Use Old Model or your accessory
 
@@ -77,6 +229,11 @@ local StateMover = true
 
 local playerss = workspace.non
 local maybe = playerss[ToolName].Handle
+if regplus == true then
+	maybe2 = playerss[ToolName2].Handle
+	maybe2:FindFirstChildOfClass("AlignPosition").Name = "AlignPosition22"
+	maybe2:FindFirstChildOfClass("AlignOrientation").Name = "AlignOrientation22"
+end
 local bbv,bullet
 if Bypass == "death" then
 	bullet = game.Players.LocalPlayer.Character["HumanoidRootPart"]
@@ -97,6 +254,7 @@ end
 
 maybe:FindFirstChildOfClass("AlignPosition").Name = "AlignPosition2"
 maybe:FindFirstChildOfClass("AlignOrientation").Name = "AlignOrientation2"
+
 
 playerss.Torso.WaistBackAttachment.Position = Vector3.new(-0, 2, 0.6)
 playerss.Torso.WaistBackAttachment.Orientation = Vector3.new(-4.16, -190, 99.8)
@@ -5619,6 +5777,25 @@ tl1.Color = ColorSequence.new(BrickColor.new('Royal purple').Color)
 tl1.Lifetime = 0.8
 tl1.Enabled = false
 
+if regplus == true then
+	rarmor2 = CreateParta(m,1,0,"SmoothPlastic",BrickColor.Random())
+	weaponweld2 = CreateWeld(rarmor2,tors,rarmor2,-3,0,-0.5,math.rad(0),math.rad(0),math.rad(-40),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+	MainWeldS2 = CreateWeld(Part475,rarmor2,Part475,0,0,0,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+	A02 = Instance.new("Attachment",rarmor2)
+	A02.Position = Vector3.new(-2.5,0.25,0)
+	A12 = Instance.new("Attachment",rarmor2)
+	A12.Position = Vector3.new(-4.7,0.19,0)
+	tl12 = Instance.new('Trail',rarmor2)
+	tl12.Attachment0 = A02
+	tl12.Attachment1 = A12
+	tl12.Texture = "http://www.roblox.com/asset/?id=1978704853"
+	tl12.LightEmission = 1
+	tl12.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0),NumberSequenceKeypoint.new(1, 1)})
+	tl12.Color = ColorSequence.new(BrickColor.new('Royal purple').Color)
+	tl12.Lifetime = 0.8
+	tl12.Enabled = false
+end
+
 
 
 
@@ -6728,6 +6905,27 @@ function FindNearestTorso(Position, Distance, SinglePlayer)
 	return List
 end
 
+if regplus == true then
+	rarmor2.Attachment.Name = "Attachment22"
+	function FindNearestTorso2(Position, Distance, SinglePlayer)
+		if SinglePlayer then
+			return (SinglePlayer.Torso.CFrame.p - Position).magnitude < Distance
+		end
+		local List = {}
+		for i, v in pairs(workspace:GetChildren()) do
+			if v:IsA("Model") then
+				if v:findFirstChild("Torso") or v:findFirstChild("UpperTorso") then
+					if v ~= Character then
+						if (v.Head.Position - Position).magnitude <= Distance then
+							table.insert(List, v)
+						end 
+					end 
+				end 
+			end 
+		end
+		return List
+	end
+end
 
 local dashing = false
 local floatmode = false
@@ -7776,13 +7974,24 @@ mouse.KeyDown:connect(function(k)
 	if k == "f" and attack == false and equipped == false then
 		maybe:FindFirstChildOfClass("AlignOrientation").Attachment1 = rarmor.Attachment
 		maybe:FindFirstChildOfClass("AlignPosition").Attachment1 = rarmor.Attachment2
-
+		if regplus == true then
+			maybe2:FindFirstChildOfClass("AlignOrientation").Attachment1 = rarmor2.Attachment
+			maybe2:FindFirstChildOfClass("AlignPosition").Attachment1 = rarmor2.Attachment22
+			rarmor2.Attachment22.Position = Vector3.new(-2.5, -1, -0)
+			rarmor2.Attachment.Rotation = Vector3.new(-0, -105, 120)	
+		end
 		rarmor.Attachment2.Position = Vector3.new(-1.25, 0.4, -0)
 		rarmor.Attachment.Rotation = Vector3.new(-0, -0, 290)
 		equip()
 	elseif k == "f" and attack == false and equipped == true then
 		maybe:FindFirstChildOfClass("AlignOrientation").Attachment1 = playerss.Torso.WaistBackAttachment
 		maybe:FindFirstChildOfClass("AlignPosition").Attachment1 = playerss.Torso.WaistBackAttachment
+		if regplus == true then
+			maybe2:FindFirstChildOfClass("AlignOrientation").Attachment1 = rarmor2.Attachment
+			maybe2:FindFirstChildOfClass("AlignPosition").Attachment1 = rarmor2.Attachment22
+			rarmor2.Attachment22.Position = Vector3.new(-2.5, -1, -0)
+			rarmor2.Attachment.Rotation = Vector3.new(-0, -105, 120)	
+		end
 
 		playerss.Torso.WaistBackAttachment.Position = Vector3.new(-0, 0.26, 0.6)
 		playerss.Torso.WaistBackAttachment.Orientation = Vector3.new(-4.16, -179.28, 160.7)
@@ -7807,6 +8016,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.92
 		kan.SoundId = "rbxassetid://183142252"
 		BanishMode = 2
+
 	end
 
 
@@ -7816,6 +8026,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.92
 		kan.SoundId = "rbxassetid://4927536914"
 		BanishMode = "8 mode"
+
 	end
 
 	if k == "7" and attack == false then
@@ -7824,6 +8035,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.92
 		kan.SoundId = "rbxassetid://4927536914"
 		BanishMode = "death"
+
 	end
 
 	if k == "1" and attack == false then
@@ -7832,6 +8044,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.91
 		kan.SoundId = "rbxassetid://5801326053"
 		BanishMode = 1
+
 	end
 
 	if k == "3" and attack == false then
@@ -7840,6 +8053,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.8
 		kan.SoundId = "rbxassetid://4565857495"
 		BanishMode = 4
+
 	end
 
 	if k == "4" and attack == false then
@@ -7848,6 +8062,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.9
 		kan.SoundId = "rbxassetid://4466439348"
 		BanishMode = 5
+
 	end
 
 	if k == "5" and attack == false then
@@ -7856,6 +8071,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 1
 		kan.SoundId = "rbxassetid://264721135"
 		BanishMode = 7
+
 	end
 	if k == "8" and attack == false then
 		hum.WalkSpeed = 35
@@ -7863,6 +8079,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 1
 		kan.SoundId = "rbxassetid://1645956559"
 		BanishMode = 10993
+
 	end
 	if k == "m" and BanishMode == 1 and attack == false then
 		hum.WalkSpeed = 24
@@ -7870,6 +8087,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 1
 		kan.SoundId = "rbxassetid://2641135385"
 		BanishMode = 10990
+
 	end
 
 	if k == "t" and attack == false then
@@ -7878,6 +8096,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 1
 		kan.SoundId = "rbxassetid://5395449444"
 		BanishMode = 10991
+
 	end
 	if k == "m" and BanishMode == 10991 and attack == false then
 		hum.WalkSpeed = 24
@@ -7885,11 +8104,14 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 1
 		kan.SoundId = "rbxassetid://749979117"
 		BanishMode = 10992
+
 	end
 	if k == "r" and attack == false then
 		superjump()
+
 	end
 	if k == "v" and attack == false then
+
 		g1 = Instance.new("BodyGyro", Root)
 		g1.D = 175
 		g1.P = 20000
@@ -8105,10 +8327,18 @@ while true do
 					RW.C0=clerp(RW.C0,cf(1.4,0 ,0.05 )*angles(math.rad(110 + 5 * math.cos(sine / 26)),math.rad(-20 - 2 * math.cos(sine / 24)),math.rad(10 - 5 * math.cos(sine / 34))),.1)
 					LW.C0=clerp(LW.C0,cf(-1.4,0 , 0.05 )*angles(math.rad(110 + 5 * math.cos(sine / 25)),math.rad(20 + 2 * math.cos(sine / 24)),math.rad(10 + 2 * math.cos(sine / 34))),.1)
 					weaponweld.C1=clerp(weaponweld.C1,cf(5 * math.cos(sine / 60),5,5)*angles(math.rad(60),math.rad(0),math.rad(190 + -600 * math.sin(sine / 60))),.3)
+					if regplus == true then
+						weaponweld2.C1=clerp(weaponweld2.C1,cf(1 * math.cos(sine / 60),5,5)*angles(math.rad(60),math.rad(0),math.rad(190 + -600 * math.sin(sine / 60))),.3)
+
+					end
 				end
 			end
 			if attack==false and BanishMode == 10990 then
 				if equipped == false then
+					if regplus == true then
+						weaponweld2.C1=clerp(weaponweld2.C1,cf(-0, -1, -0)*angles(math.rad(0),math.rad(-105),math.rad(60)),.5)
+						weaponweld2.Part0 = tors
+					end
 					RH.C0=clerp(RH.C0,cf(1,-1 + 0.05 * math.cos(sine / 20)  - 0.02 * math.cos(sine / 40),0)*angles(math.rad(0),math.rad(90),math.rad(0))*angles(math.rad(-3 + 2 * math.cos(sine / 40)),math.rad(-15),math.rad(0 + 2 * math.cos(sine / 20))),.1)
 					LH.C0=clerp(LH.C0,cf(-1,-1 + 0.05 * math.cos(sine / 20) - 0.02 * math.cos(sine / 40),0)*angles(math.rad(0),math.rad(-90),math.rad(0))*angles(math.rad(-3 - 2 * math.cos(sine / 40)),math.rad(1),math.rad(0 - 2 * math.cos(sine / 20))),.1)
 					RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(0 + 0.02 * math.cos(sine / 40),0 - 0.02 * math.cos(sine / 40),-0.05 - 0.05 * math.cos(sine / 20))*angles(math.rad(0 + 0 * math.cos(sine / 20)),math.rad(0 + 0 * math.cos(sine / 40)),math.rad(30 + 0 * math.cos(sine / 40))),.1)
@@ -8124,6 +8354,7 @@ while true do
 					RW.C0=clerp(RW.C0,cf(1.45,0.5 + 0.05 * math.cos(sine / 28),0.1)*angles(math.rad(60 + 5 * math.cos(sine / 26)),math.rad(-10 - 6 * math.cos(sine / 24)),math.rad(13 - 5 * math.cos(sine / 34))),.1)
 					LW.C0=clerp(LW.C0,cf(-1.4,0.5 + 0.05 * math.cos(sine / 28),0.1)*angles(math.rad(-13 - 1 * math.cos(sine / 25)),math.rad(10 + 2 * math.cos(sine / 24)),math.rad(10 + 2 * math.cos(sine / 34))),.1)
 					weaponweld.C1=clerp(weaponweld.C1,cf(1,0,-1)*angles(math.rad(5),math.rad(-75),math.rad(60)),.3)
+
 				end
 			end
 			if attack==false and BanishMode == "8 mode" then
@@ -8388,6 +8619,10 @@ while true do
 					RW.C0=clerp(RW.C0,cf(1.4,0 ,0.05 )*angles(math.rad(110 + 5 * math.cos(sine / 26)),math.rad(-20 - 2 * math.cos(sine / 24)),math.rad(10 - 5 * math.cos(sine / 34))),.1)
 					LW.C0=clerp(LW.C0,cf(-1.4,0 , 0.05 )*angles(math.rad(110 + 5 * math.cos(sine / 25)),math.rad(20 + 2 * math.cos(sine / 24)),math.rad(10 + 2 * math.cos(sine / 34))),.1)
 					weaponweld.C1=clerp(weaponweld.C1,cf(5 * math.cos(sine / 60),5,5)*angles(math.rad(60),math.rad(0),math.rad(190 + -600 * math.sin(sine / 60))),.3)
+					if regplus == true then
+						weaponweld2.C1=clerp(weaponweld2.C1,cf(1 * math.cos(sine / 60),5,5)*angles(math.rad(60),math.rad(0),math.rad(190 + -1000 * math.sin(sine / 60))),.3)
+
+					end	
 				end
 			end
 			if attack==false and BanishMode == "8 mode" then
