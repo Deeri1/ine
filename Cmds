@@ -1122,6 +1122,10 @@ elseif
 	loadstring(game:HttpGet('https://pastebin.com/raw/XXAWmifh'))()
 
 elseif
+	CMD.Text == ".tradetower" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fireztron/Trade-Tower/main/testgui.lua"))()
+
+elseif
 	CMD.Text == ".hathub pp" then
 	loadstring(game:HttpGet("https://pastebin.com/raw/F6k8kM05"))()
 
