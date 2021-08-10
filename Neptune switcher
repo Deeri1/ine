@@ -5,6 +5,7 @@
 
 -- Instances:
 
+
 local DeerisNeptuneSwitcher = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local Regular = Instance.new("TextButton")
@@ -140,6 +141,7 @@ repeat	wait() until _G.waiting == false
 
 wait(2)
 
+
 regplus = _G.regplus
 warn("Deeri's Neptune Switcher")
 local Sine = 0;
@@ -209,6 +211,66 @@ end
 
 Bypass = "death"
 loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local titleforneptuneswitcher = Instance.new("ScreenGui")
+local Title = Instance.new("Frame")
+local nameofthing = Instance.new("TextLabel")
+Titlething = nameofthing
+
+--Properties:
+
+titleforneptuneswitcher.Name = "titlefor neptune switcher"
+titleforneptuneswitcher.Parent = game.CoreGui
+titleforneptuneswitcher.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Title.Name = "Title"
+Title.Parent = titleforneptuneswitcher
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.772557795, 0, 0, 0)
+Title.Size = UDim2.new(0, 305, 0, 163)
+
+nameofthing.Name = "nameofthing"
+nameofthing.Parent = Title
+nameofthing.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nameofthing.BackgroundTransparency = 1.000
+nameofthing.Position = UDim2.new(0, 0, 0.181999996, 0)
+nameofthing.Rotation = -20.000
+nameofthing.Size = UDim2.new(0, 305, 0, 65)
+nameofthing.Font = Enum.Font.SourceSans
+nameofthing.TextColor3 = Color3.fromRGB(0, 0, 0)
+nameofthing.TextScaled = true
+nameofthing.TextSize = 14.000
+nameofthing.TextWrapped = true
+
+-- Scripts:
+
+local function VRKP_fake_script() -- nameofthing.rotation thing 
+	local script = Instance.new('LocalScript', nameofthing)
+
+	local TweenService = game:GetService("TweenService")
+	local Object = script.Parent -- The object you want to tween.
+
+	local tweenInfo = TweenInfo.new(
+		3, -- The time the tween takes to complete
+		Enum.EasingStyle.Linear, -- The tween style.
+		Enum.EasingDirection.Out, -- EasingDirection
+		-1, -- How many times you want the tween to repeat. If you make it less than 0 it will repeat forever.
+		true, -- Reverse?
+		0 -- Delay
+	)
+
+	local Tween = TweenService:Create(Object, tweenInfo, {Rotation = 40}) -- Creates the tween with the TweenInfo and what properties you want to change
+	Tween:Play()
+
+	_G.titlething = script.Parent
+end
+coroutine.wrap(VRKP_fake_script)()
+
 -----OPTIONS
 local ToolName = "MeshPartAccessory" ----- the hats name on explorer/dex (not name in catalog)
 if regplus == true then
@@ -5400,6 +5462,9 @@ if not OldModel then
 	Model0:Destroy()
 end
 
+
+
+
 plr = game:GetService("Players").LocalPlayer
 char = playerss
 hum = char.Humanoid
@@ -5424,6 +5489,14 @@ br = BrickColor.random
 it = Instance.new
 cf = CFrame.new
 ceuler = CFrame.fromEulerAnglesXYZ
+local resetBindable = Instance.new("BindableEvent")
+resetBindable.Event:connect(function()
+	Titlething:Destroy()
+	tors:Destroy()
+	h:Remove()
+
+end)
+game:GetService("StarterGui"):SetCore("ResetButtonCallback", resetBindable)
 
 local muter = false
 local ORGID = 5801326053
@@ -5443,6 +5516,11 @@ kan.Looped = true
 kan:Play()
 
 local BanishMode = 1
+Titlething.Text = "Neptune V Edit"
+wait(1)
+Titlething.Text = "Made by Deeri"
+wait(1)
+Titlething.Text = "Neptune V Edit"
 
 function CameraShake(Times, Power)
 	coroutine.resume(coroutine.create(function()
@@ -8010,12 +8088,14 @@ mouse.KeyDown:connect(function(k)
 		playerss.Torso.WaistBackAttachment.Position = Vector3.new(-0, 0.26, 0.6)
 		playerss.Torso.WaistBackAttachment.Orientation = Vector3.new(-4.16, -179.28, 125.7)
 	end
+	
 	if k == "2" and attack == false then
 		hum.WalkSpeed = 40
 		Speed = 40
 		kan.Pitch = 0.92
 		kan.SoundId = "rbxassetid://183142252"
 		BanishMode = 2
+		Titlething.Text = "Big Black V1"
 
 	end
 	if k == "m" and BanishMode == 2 and attack == false then
@@ -8024,6 +8104,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.92
 		kan.SoundId = "rbxassetid://183142252"
 		BanishMode = 10994
+		Titlething.Text = "Big Black V2"
 
 	end
 
@@ -8034,6 +8115,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.92
 		kan.SoundId = "rbxassetid://4927536914"
 		BanishMode = "8 mode"
+		Titlething.Text = "Murder"
 
 	end
 
@@ -8043,6 +8125,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.92
 		kan.SoundId = "rbxassetid://4927536914"
 		BanishMode = "death"
+		Titlething.Text = "handstand"
 
 	end
 
@@ -8052,6 +8135,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.91
 		kan.SoundId = "rbxassetid://5801326053"
 		BanishMode = 1
+		Titlething.Text = "Neptune V Edit"
 
 	end
 
@@ -8061,6 +8145,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.8
 		kan.SoundId = "rbxassetid://4565857495"
 		BanishMode = 4
+		Titlething.Text = "Nameless"
 
 	end
 
@@ -8070,6 +8155,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 0.9
 		kan.SoundId = "rbxassetid://4466439348"
 		BanishMode = 5
+		Titlething.Text = "Fight"
 
 	end
 
@@ -8079,6 +8165,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 1
 		kan.SoundId = "rbxassetid://264721135"
 		BanishMode = 7
+		Titlething.Text = "nonameyet"
 
 	end
 	if k == "8" and attack == false then
@@ -8087,6 +8174,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 1
 		kan.SoundId = "rbxassetid://1645956559"
 		BanishMode = 10993
+		Titlething.Text = "nonameyet"
 
 	end
 	if k == "m" and BanishMode == 1 and attack == false then
@@ -8095,6 +8183,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 1
 		kan.SoundId = "rbxassetid://2641135385"
 		BanishMode = 10990
+		Titlething.Text = "Overthinker"
 
 	end
 
@@ -8104,6 +8193,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 1
 		kan.SoundId = "rbxassetid://5395449444"
 		BanishMode = 10991
+		Titlething.Text = "nonameyet"
 
 	end
 	if k == "m" and BanishMode == 10991 and attack == false then
@@ -8112,6 +8202,7 @@ mouse.KeyDown:connect(function(k)
 		kan.Pitch = 1
 		kan.SoundId = "rbxassetid://749979117"
 		BanishMode = 10992
+		Titlething.Text = "Balance"
 
 	end
 	if k == "r" and attack == false then
@@ -8133,6 +8224,7 @@ mouse.KeyDown:connect(function(k)
 			Speed = 0
 			hum.WalkSpeed = 0
 			BanishMode = 2000
+			Titlething.Text = "Sit"
 		end
 
 		if message == "/glitch" and attack == false and BanishMode == 5 then
@@ -8145,6 +8237,7 @@ mouse.KeyDown:connect(function(k)
 			kan.Pitch = 0.5
 			wait(0.02)
 			kan.Pitch = 0.467
+			Titlething.Text = "GlItCh"
 		end
 
 		if message:sub(1,3) == "id/" then
