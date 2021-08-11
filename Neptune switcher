@@ -1,10 +1,8 @@
 --amogus
-
 -- Gui to Lua
 -- Version: 3.2
 
 -- Instances:
-
 
 local DeerisNeptuneSwitcher = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
@@ -15,6 +13,9 @@ local titlereg = Instance.new("TextLabel")
 local titlereg_2 = Instance.new("TextLabel")
 local inforeg = Instance.new("TextLabel")
 local inforeg_2 = Instance.new("TextLabel")
+local costomswordsbutton = Instance.new("TextButton")
+local costomswordsframe = Instance.new("Frame")
+local blackdemontrident = Instance.new("TextButton")
 
 --Properties:
 
@@ -106,36 +107,91 @@ inforeg_2.TextScaled = true
 inforeg_2.TextSize = 14.000
 inforeg_2.TextWrapped = true
 
+costomswordsbutton.Name = "costom swords button"
+costomswordsbutton.Parent = main
+costomswordsbutton.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
+costomswordsbutton.Position = UDim2.new(0, 0, 0.218023255, 0)
+costomswordsbutton.Size = UDim2.new(0, 69, 0, 53)
+costomswordsbutton.Font = Enum.Font.SourceSans
+costomswordsbutton.Text = "costom sword"
+costomswordsbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+costomswordsbutton.TextScaled = true
+costomswordsbutton.TextSize = 14.000
+costomswordsbutton.TextWrapped = true
+
+costomswordsframe.Name = "costom swords frame"
+costomswordsframe.Parent = main
+costomswordsframe.BackgroundColor3 = Color3.fromRGB(194, 194, 194)
+costomswordsframe.Position = UDim2.new(-0.155677661, 0, 0, 0)
+costomswordsframe.Size = UDim2.new(0, 85, 0, 344)
+costomswordsframe.Visible = false
+
+blackdemontrident.Name = "blackdemon trident"
+blackdemontrident.Parent = costomswordsframe
+blackdemontrident.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
+blackdemontrident.Size = UDim2.new(0, 85, 0, 28)
+blackdemontrident.Font = Enum.Font.SourceSans
+blackdemontrident.Text = "Black Demon Trident"
+blackdemontrident.TextColor3 = Color3.fromRGB(0, 0, 0)
+blackdemontrident.TextScaled = true
+blackdemontrident.TextSize = 14.000
+blackdemontrident.TextWrapped = true
+
 -- Scripts:
 
-local function PFYRX_fake_script() -- Regular.LocalScript 
+local function IMFPH_fake_script() -- Regular.LocalScript 
 	local script = Instance.new('LocalScript', Regular)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		_G.waiting = false
 		_G.regplus = false
+		_G.regsword = true
 		script.Parent.Parent.Parent.Parent["Deeri's Neptune Switcher"]:Destroy()
 	end)
 end
-coroutine.wrap(PFYRX_fake_script)()
-local function CLAPL_fake_script() -- Regular_2.regplus 
+coroutine.wrap(IMFPH_fake_script)()
+local function FTOYD_fake_script() -- Regular_2.regplus 
 	local script = Instance.new('LocalScript', Regular_2)
+
+
 
 	_G.regplus = "wating"
 	script.Parent.MouseButton1Click:Connect(function()
 		_G.waiting = false
 		_G.regplus = true
+		_G.regsword = true
 		script.Parent.Parent.Parent.Parent["Deeri's Neptune Switcher"]:Destroy()
 	end)
 end
-coroutine.wrap(CLAPL_fake_script)()
-local function RGOO_fake_script() -- main.LocalScript 
+coroutine.wrap(FTOYD_fake_script)()
+local function XDHYXS_fake_script() -- main.LocalScript 
 	local script = Instance.new('LocalScript', main)
 
 	_G.waiting = true
 end
-coroutine.wrap(RGOO_fake_script)()
+coroutine.wrap(XDHYXS_fake_script)()
+local function GUYASYJ_fake_script() -- costomswordsbutton.open sword thing 
+	local script = Instance.new('LocalScript', costomswordsbutton)
 
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent["costom swords frame"].Visible = true
+	end)
+end
+coroutine.wrap(GUYASYJ_fake_script)()
+local function JLCWL_fake_script() -- blackdemontrident.do sword thing 
+	local script = Instance.new('LocalScript', blackdemontrident)
+
+
+	_G.regplus = "wating"
+	script.Parent.MouseButton1Click:Connect(function()
+		_G.waiting = false
+		_G.regplus = false
+		_G.regsword = false
+		_G.trident = true
+		script.Parent.Parent.Parent.Parent.Parent["Deeri's Neptune Switcher"]:Destroy()
+	end)
+end
+coroutine.wrap(JLCWL_fake_script)()
 
 repeat	wait() until _G.waiting == false 
 
@@ -272,7 +328,13 @@ end
 coroutine.wrap(VRKP_fake_script)()
 
 -----OPTIONS
-local ToolName = "MeshPartAccessory" ----- the hats name on explorer/dex (not name in catalog)
+regsword = _G.regsword
+if regsword == true then
+ ToolName = "MeshPartAccessory" ----- the hats name on explorer/dex (not name in catalog)
+end
+if regsword == false then
+	 ToolName = "Black Demon Trident" ----- the hats name on explorer/dex (not name in catalog)
+end
 if regplus == true then
 	ToolName2 = "StaffAccessory"----- the hats name on explorer/dex (not name in catalog)
 	print("toolfound")
@@ -317,6 +379,8 @@ end
 maybe:FindFirstChildOfClass("AlignPosition").Name = "AlignPosition2"
 maybe:FindFirstChildOfClass("AlignOrientation").Name = "AlignOrientation2"
 
+
+--gh 4623728953
 
 playerss.Torso.WaistBackAttachment.Position = Vector3.new(-0, 2, 0.6)
 playerss.Torso.WaistBackAttachment.Orientation = Vector3.new(-4.16, -190, 99.8)
@@ -5839,7 +5903,12 @@ end
 
 ---- WEAPON OR STUFF
 local rarmor = CreateParta(m,1,0,"SmoothPlastic",BrickColor.Random())
-local weaponweld = CreateWeld(rarmor,tors,rarmor,-3,0,-0.5,math.rad(0),math.rad(0),math.rad(-40),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+if regsword == true then
+	weaponweld = CreateWeld(rarmor,tors,rarmor,-3,0,-0.5,math.rad(0),math.rad(0),math.rad(-40),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+end	
+if regsword == false then
+	weaponweld = CreateWeld(rarmor,tors,rarmor,-0,0,-0,math.rad(0),math.rad(0),math.rad(-40),-0,-0,0,math.rad(0),math.rad(90),math.rad(240))
+end
 local MainWeldS = CreateWeld(Part475,rarmor,Part475,0,0,0,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
 local A0 = Instance.new("Attachment",rarmor)
 A0.Position = Vector3.new(-2.5,0.25,0)
