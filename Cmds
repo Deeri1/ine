@@ -1134,6 +1134,10 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/guest%20glitcher"))()
 
 elseif
+	CMD.Text == ".micheal glitcher" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/Micheal%20Glitcher"))()
+
+elseif
 	CMD.Text == ".hathub pp" then
 	loadstring(game:HttpGet("https://pastebin.com/raw/F6k8kM05"))()
 
