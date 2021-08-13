@@ -1150,6 +1150,10 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/naruto"))()
 
 elseif
+	CMD.Text == ".sythenizer glitcher" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/Sythenizer%20Glitcher"))()
+
+elseif
 	CMD.Text == ".hathub pp" then
 	loadstring(game:HttpGet("https://pastebin.com/raw/F6k8kM05"))()
 
