@@ -826,7 +826,7 @@ function slasheff(par)
 end
 
 function gunreload()
-	local bolting = false
+	local bolting = true
 	if shots < 1 then
 		bolting = true
 	end
