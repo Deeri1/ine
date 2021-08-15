@@ -77,7 +77,7 @@ Y - Overpowered
 -- pls just dont --
 -- s k i d --
 -- loadstring(game:HttpGet("https://pastebin.com/raw/cN9VXh5U", true))()
--- just grass codes -gh 5030789687,4855525473,4773932088,4820152700,4623728953,4315489767,4506945409,4458601937,4524991457,4794315940
+-- just grass codes -gh 4773883146,6203923527,5030789687,4855525473,4773932088,4820152700,4623728953,4315489767,4506945409,4458601937,4524991457,4794315940
 
 
 
@@ -1547,235 +1547,144 @@ UIS.InputBegan:connect(function(io,gpe)
 		changeMode'HELLSCAPE'
 	elseif(io.KeyCode == Enum.KeyCode.H and Mode=='HELLSCAPE')then 
 		changeMode'+MONSTRONIX+'
-local args = {
-    [1] = "[ + MONSTRONIX + ] AhaHhaHAHhaahAHAhaAHhaA...",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-wait(2)
-local args = {
-    [1] = "[ + MONSTRONIX + ] ERADICATE YOURSELF!",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+
+
         elseif(io.KeyCode == Enum.KeyCode.U and Mode== 'HELLSCAPE') then
                 changeMode'L O S T  S O U L'
-local args = {
-    [1] = "[ LOST SOUL ] I   A M   T H E   U N D Y I N G   S O U L",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 	elseif(io.KeyCode == Enum.KeyCode.H and Mode=='+MONSTRONIX+')then 
 		changeMode'VORTEX'
-local args = {
-    [1] = "[ VORTEX ] NOTHING CAN STOP ME!",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.Two and Mode~='=_-CalmNess-_=')then 
 		changeMode'=_-CalmNess-_='
 	elseif(io.KeyCode == Enum.KeyCode.Three and Mode~='DESTINY')then
 		changeMode'DESTINY'
 	elseif(io.KeyCode ==Enum.KeyCode.N and Mode~='SANS')then 
 		changeMode'SANS'
-local args = {
-    [1] = "[ Sans ] You're gonna have a BAD TIME...",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.Zero and Mode=='DEATH')then
                 changeMode'???'
-local args = {
-    [1] = "[ ??? ] sAnIty..",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(1.5)
-local args = {
-    [1] = "[ ??? ] Light is peeking through the darkness.",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(2)
-local args = {
-    [1] = "[ ??? ] pUrIty...",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(2)
-local args = {
-    [1] = "[ ??? ] Can't feel anymore of the stress.",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(1.5)
-local args = {
-    [1] = "[ ??? ] sAnIty..",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(2)
-local args = {
-    [1] = "[ ??? ] It's already fading away...",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(1.5)
-local args = {
-    [1] = "[ ??? ] crUElty..",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(4)
 local args = {
     [1] = "[ ??? ] Instincts controlling me...",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 		changeMode'...iNSaNiTY...'
 	elseif(io.KeyCode == Enum.KeyCode.B and Mode=='HORROR')then
 		changeMode'HATE'
-local args = {
-    [1] = "[HATE] AhAHhaHAHahHAHhHAhahAH!",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.P and Mode~='ENERGY')then 
 		changeMode'ENERGY'
-local args = {
-    [1] = "[ Energy ] Weak.",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.G and Mode~='GL^%£ITCH')then
 		changeMode'GL^%£ITCH'
-local args = {
-    [1] = "[ GL^%?I~TC`H ] jA.'/;V'a.s';CR'.;i/.pT;..ex/E; u'.;/'.N/;'.kn';/.;'O./;'.w/;'.N",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.Minus and Mode=='HELLSCAPE')then
 		changeMode'???'
-local args = {
-    [1] = "[ ?!!?!? ] We'll never get free.",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(2)
-local args = {
-    [1] = "[ eRoREoR ] Lamb to the slaughter..",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+
 wait(2.5)
-local args = {
-    [1] = "[ -[;/*^ ] What you gon' do when there's blood in the water...",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+
 wait(2)
-local args = {
-    [1] = "[ -_.-._- ] The price of your greed is your son and your daughter.",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(2.5)
-local args = {
-    [1] = "[ _.-/=` ] What you gon' do when there's blood in the water..",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+
 wait(3)
-local args = {
-    [1] = "[ %@%@% ] Look me in my eyes, Tell me everything's not fine...",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+
 wait(2)
-local args = {
-    [1] = "[ :.[].: ] Oh, The people ain't happy and the river has run dry...",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+
 wait(3)
-local args = {
-    [1] = "[ =-=-= ] You thought you could go free, But the system is done for.",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+
 wait(2)
-local args = {
-    [1] = "[ -+_[]_+- ] If you listen closely. There's a knock at your front door.",
-    [2] = "All"   
-}
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+
 wait(2)
 local args = {
     [1] = "[ C[]O/R/R/U/P[]T ] We'll never get free.",
     [2] = "All"
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(2.5)
 local args = {
     [1] = "[ /G/L/I/T/C/H/ ] Lamb to the slaughter...",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(3)
 local args = {
     [1] = "[ ^<>^<>^ ] What you gon' do when there's blood in the water...",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(2)
 local args = {
     [1] = "[ -/-/- ] The price of your greed is your son and your daughter.",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(2.5)
 local args = {
     [1] = "[ (=)()(=) ] What you gon' do when there's blood in the water....",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(3.5)
 local args = {
-    [1] = "[ BLOOD WATER ] WHEN THERE'S BLOOD IN THE WATER!!!",
+    [1] = "[ BLOOD WATER ]",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 		changeMode'BLOOD WATER'
 	elseif(io.KeyCode == Enum.KeyCode.Four and Mode~='BEYOND')then
 		changeMode'BEYOND'
@@ -1784,7 +1693,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.Five and Mode~='TROLLGE')then
 		changeMode'TROLLGE'
 	elseif(io.KeyCode == Enum.KeyCode.Six and Mode~='+DANGEROUS+')then
@@ -1794,7 +1703,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.Seven and Mode~='THE ESCHATON')then
 		changeMode'THE ESCHATON'
 	elseif(io.KeyCode == Enum.KeyCode.Eight and Mode~='BROKEN MACHINERY')then 
@@ -1808,7 +1717,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 		elseif(io.KeyCode == Enum.KeyCode.J and Mode~='GOD')then 
 		changeMode'GOD'
 	elseif(io.KeyCode == Enum.KeyCode.Y and Mode~='+OVERPOWERED+')then 
@@ -1818,7 +1727,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.Z and Mode~='=-XESTER-=')then 
 		changeMode'=-XESTER-='
 	elseif(io.KeyCode == Enum.KeyCode.L and Mode~='LEGMAN')then
@@ -1830,7 +1739,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.Nine and Mode~='HORROR')then
 		changeMode'HORROR'
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='Dark Matter')then 
@@ -1840,7 +1749,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='DESTINY')then 
 		changeMode'ATLANTIS'
 local args = {
@@ -1848,7 +1757,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='GL^%£ITCH')then 
 		changeMode'AFTERLIFE'
 local args = {
@@ -1856,7 +1765,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.Q and Mode=='Dark Matter')then 
 		changeMode'ARCHANGEL'
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='=-XESTER-=')then
@@ -1866,7 +1775,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='=_-CalmNess-_=')then 
 		changeMode'=_-ANGRYNESS-_='
 local args = {
@@ -1874,7 +1783,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='VORTEX')then 
 		changeMode'GALACTIC ABOMINATION'
 	elseif(io.KeyCode == Enum.KeyCode.H and Mode=='ARCHANGEL')then 
@@ -1886,7 +1795,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.B and Mode=='=_-CalmNess-_=')then 
 		changeMode'Illusion'
 local args = {
@@ -1894,14 +1803,14 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 wait(1.5)
 local args = {
     [1] = "[ Illusion ] Just give up.",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='BROKEN MACHINERY')then
 		changeMode'ETERNAL DARKNESS'
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='ETERNAL DARKNESS')then
@@ -1916,7 +1825,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.R and Mode=='UNHOLY')then
 		changeMode'HOLY'
 local args = {
@@ -1924,7 +1833,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.R and Mode=='HOLY')then
 		changeMode'UNHOLY'
 local args = {
@@ -1932,7 +1841,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.C and Mode=='Dark Matter')then
 		changeMode'Mayhem'
 local args = {
@@ -1940,7 +1849,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 	elseif(io.KeyCode == Enum.KeyCode.V and Mode=='Dark Matter')then
 		changeMode'N U C L E A R - WASTE'
 	elseif(io.KeyCode == Enum.KeyCode.E and Mode=='Dark Matter')then 
@@ -1967,7 +1876,6 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='+DANGEROUS+')then 
 		changeMode'INFERNO'
 local args = {
@@ -1975,7 +1883,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='LEGMAN')then 
 		changeMode'THE LAST MAN ALIVE'
 	elseif(io.KeyCode == Enum.KeyCode.R and Mode=='BETRAYAL')then 
@@ -1987,7 +1895,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.H and Mode=='Dark Matter')then
 		changeMode'B O U N C E ;)'
 	elseif(io.KeyCode == Enum.KeyCode.R and Mode=='DESTINY')then
@@ -1997,7 +1905,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.H and Mode=='DESTINY')then
 		changeMode'CALAMITY'
 local args = {
@@ -2005,35 +1913,35 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.H and Mode=='CALAMITY')then
 local args = {
     [1] = "[ ??? ] I have been waiting for so long..",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 wait(3)
 local args = {
     [1] = "[ ??? ] This won't be more easier now.",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 wait(1.5)
 local args = {
     [1] = "[ ??? ] Evenly with your rejection.",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 wait(2.8)
 local args = {
     [1] = "[ CATASTROPHE ] THE TRUE CATASTROPHE APPEARED!",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 		changeMode'CATASTROPHE'
 	elseif(io.KeyCode == Enum.KeyCode.H and Mode=='CATASTROPHE')then
 		changeMode'CATACALYSM'
@@ -2044,7 +1952,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.V and Mode=='RIDDLER')then 
 		changeMode'THE WHEEL'
 	elseif(io.KeyCode == Enum.KeyCode.Minus and Mode=='Dark Matter')then
@@ -2054,7 +1962,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.Minus and Mode=='OMEGA')then
 		changeMode'OMEGA-X'
 local args = {
@@ -2062,7 +1970,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.Minus and Mode=='OMEGA-X')then
 		changeMode'OMEGA'
 local args = {
@@ -2070,7 +1978,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 			elseif(io.KeyCode == Enum.KeyCode.H and Mode=='SANS')then 
 		changeMode'GASTER'
 local args = {
@@ -2078,7 +1986,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='HORROR')then
 		changeMode'SUPERNATURAL'
@@ -2093,7 +2001,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.Zero and Mode=='UNIVERSAL')then 
 		changeMode'MULTIVERSAL'
 local args = {
@@ -2101,7 +2009,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.Zero and Mode=='MULTIVERSAL')then 
 		changeMode'OMNIVERSAL'
 local args = {
@@ -2109,35 +2017,35 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.X and Mode=='JEVIL')then
 local args = {
     [1] = "[ JEVIL ] OH!",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.C and Mode=='JEVIL')then 
 local args = {
     [1] = "[ JEVIL ] I CAN DO ANYTHING!",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.V and Mode=='JEVIL')then 
 local args = {
     [1] = "[ JEVIL ] BYE BYE!",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.B and Mode=='JEVIL')then 
 local args = {
     [1] = "[ JEVIL ] CHAOS, CHAOS!",
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.H and Mode=='=-XESTER-=')then 
 		changeMode'JEVIL'
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='RIDDLER')then 
@@ -2147,7 +2055,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.R and Mode=='EUCLIDEAN')then 
 		changeMode'S P A C E T I M E'
 local args = {
@@ -2155,7 +2063,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	elseif(io.KeyCode == Enum.KeyCode.U and Mode=='N U C L E A R - WASTE')then 
 		changeMode'THE PLAGUEBRINGER'
 local args = {
@@ -2163,7 +2071,7 @@ local args = {
     [2] = "All"   
 }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+ 
 	--TOGGLE MUSIC
 	elseif(io.KeyCode == Enum.KeyCode.M and getMode(Mode))then 
 		MusicMode=MusicMode+1
@@ -2194,6 +2102,9 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 	end
 end)
 
+
+player = game.Players.LocalPlayer
+player.Character.Humanoid.Animator.Parent = nil
 WingAnims.StarG=function()
 	LWP1W.C0 = LWP1W.C0:lerp(CF.N(-8,2,-1)*CF.A(M.R(5+20*M.C(WingSine/32)),0,M.R(-35-9*M.C(WingSine/32))),.2)
 	LWP2W.C0 = LWP2W.C0:lerp(CF.N(-10.60,1,-1+.05*M.S(WingSine/35))*CF.A(M.R(10+25*M.C(WingSine/32)),0,M.R(-40-9*M.C(WingSine/32))),.2)
