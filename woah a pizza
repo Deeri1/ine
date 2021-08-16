@@ -35,6 +35,13 @@ local staff = Instance.new("TextButton")
 local uzi = Instance.new("TextButton")
 local goodcopbadcop = Instance.new("TextButton")
 local wheelchair = Instance.new("TextButton")
+local paragonglitcher = Instance.new("TextButton")
+local guestglitcher = Instance.new("TextButton")
+local cyrusglitcher = Instance.new("TextButton")
+local paradoxicalglitcher = Instance.new("TextButton")
+local sythenizerglitcher = Instance.new("TextButton")
+local concealedglitcher = Instance.new("TextButton")
+local sakurasword = Instance.new("TextButton")
 local clsoehat = Instance.new("TextButton")
 local hatlesscommandsbar = Instance.new("Frame")
 local commandsframehatless = Instance.new("ScrollingFrame")
@@ -83,6 +90,7 @@ local smallfighter = Instance.new("TextButton")
 local firegod = Instance.new("TextButton")
 local msgswitcher = Instance.new("TextButton")
 local flyingmagic = Instance.new("TextButton")
+local pulse = Instance.new("TextButton")
 local clsoehatless = Instance.new("TextButton")
 local guicommandsbar = Instance.new("Frame")
 local commandsframegui = Instance.new("ScrollingFrame")
@@ -183,7 +191,7 @@ commandsframehat.Active = true
 commandsframehat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commandsframehat.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
 commandsframehat.Size = UDim2.new(0, 268, 0, 273)
-commandsframehat.CanvasPosition = Vector2.new(0, 750)
+commandsframehat.CanvasPosition = Vector2.new(0, 1077)
 commandsframehat.CanvasSize = UDim2.new(0, 0, 0, 1500)
 
 areawerecommandshat.Name = "area were commands hat"
@@ -443,6 +451,90 @@ wheelchair.TextScaled = true
 wheelchair.TextSize = 14.000
 wheelchair.TextWrapped = true
 
+paragonglitcher.Name = "paragon glitcher"
+paragonglitcher.Parent = areawerecommandshat
+paragonglitcher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+paragonglitcher.Position = UDim2.new(-0.00249735638, 0, 1.03461695, 0)
+paragonglitcher.Size = UDim2.new(0, 254, 0, 31)
+paragonglitcher.Font = Enum.Font.SourceSans
+paragonglitcher.Text = ".paragon glitcher"
+paragonglitcher.TextColor3 = Color3.fromRGB(0, 0, 0)
+paragonglitcher.TextScaled = true
+paragonglitcher.TextSize = 14.000
+paragonglitcher.TextWrapped = true
+
+guestglitcher.Name = "guest glitcher"
+guestglitcher.Parent = areawerecommandshat
+guestglitcher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+guestglitcher.Position = UDim2.new(-0.0221823957, 0, 1.0846169, 0)
+guestglitcher.Size = UDim2.new(0, 254, 0, 31)
+guestglitcher.Font = Enum.Font.SourceSans
+guestglitcher.Text = ".guest glitcher"
+guestglitcher.TextColor3 = Color3.fromRGB(0, 0, 0)
+guestglitcher.TextScaled = true
+guestglitcher.TextSize = 14.000
+guestglitcher.TextWrapped = true
+
+cyrusglitcher.Name = "cyrus  glitcher"
+cyrusglitcher.Parent = areawerecommandshat
+cyrusglitcher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cyrusglitcher.Position = UDim2.new(-0.0221823957, 0, 1.13350582, 0)
+cyrusglitcher.Size = UDim2.new(0, 254, 0, 31)
+cyrusglitcher.Font = Enum.Font.SourceSans
+cyrusglitcher.Text = ".cyrus glitcher"
+cyrusglitcher.TextColor3 = Color3.fromRGB(0, 0, 0)
+cyrusglitcher.TextScaled = true
+cyrusglitcher.TextSize = 14.000
+cyrusglitcher.TextWrapped = true
+
+paradoxicalglitcher.Name = "paradoxical   glitcher"
+paradoxicalglitcher.Parent = areawerecommandshat
+paradoxicalglitcher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+paradoxicalglitcher.Position = UDim2.new(-0.0221823957, 0, 1.18017244, 0)
+paradoxicalglitcher.Size = UDim2.new(0, 254, 0, 31)
+paradoxicalglitcher.Font = Enum.Font.SourceSans
+paradoxicalglitcher.Text = ".paradoxical glitcher"
+paradoxicalglitcher.TextColor3 = Color3.fromRGB(0, 0, 0)
+paradoxicalglitcher.TextScaled = true
+paradoxicalglitcher.TextSize = 14.000
+paradoxicalglitcher.TextWrapped = true
+
+sythenizerglitcher.Name = "sythenizer    glitcher"
+sythenizerglitcher.Parent = areawerecommandshat
+sythenizerglitcher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sythenizerglitcher.Position = UDim2.new(-0.0221823957, 0, 1.22572803, 0)
+sythenizerglitcher.Size = UDim2.new(0, 254, 0, 31)
+sythenizerglitcher.Font = Enum.Font.SourceSans
+sythenizerglitcher.Text = ".sythenizer glitcher"
+sythenizerglitcher.TextColor3 = Color3.fromRGB(0, 0, 0)
+sythenizerglitcher.TextScaled = true
+sythenizerglitcher.TextSize = 14.000
+sythenizerglitcher.TextWrapped = true
+
+concealedglitcher.Name = "concealed  glitcher"
+concealedglitcher.Parent = areawerecommandshat
+concealedglitcher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+concealedglitcher.Position = UDim2.new(-0.0221823957, 0, 1.27461696, 0)
+concealedglitcher.Size = UDim2.new(0, 254, 0, 31)
+concealedglitcher.Font = Enum.Font.SourceSans
+concealedglitcher.Text = ".concealed glitcher"
+concealedglitcher.TextColor3 = Color3.fromRGB(0, 0, 0)
+concealedglitcher.TextScaled = true
+concealedglitcher.TextSize = 14.000
+concealedglitcher.TextWrapped = true
+
+sakurasword.Name = "sakura sword"
+sakurasword.Parent = areawerecommandshat
+sakurasword.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sakurasword.Position = UDim2.new(-0.0221823957, 0, 1.32017255, 0)
+sakurasword.Size = UDim2.new(0, 254, 0, 31)
+sakurasword.Font = Enum.Font.SourceSans
+sakurasword.Text = ".sakura sword"
+sakurasword.TextColor3 = Color3.fromRGB(0, 0, 0)
+sakurasword.TextScaled = true
+sakurasword.TextSize = 14.000
+sakurasword.TextWrapped = true
+
 clsoehat.Name = "clsoe hat"
 clsoehat.Parent = hatcommandsbar
 clsoehat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -468,7 +560,7 @@ commandsframehatless.Active = true
 commandsframehatless.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commandsframehatless.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
 commandsframehatless.Size = UDim2.new(0, 268, 0, 273)
-commandsframehatless.CanvasPosition = Vector2.new(0, 1577)
+commandsframehatless.CanvasPosition = Vector2.new(0, 1727)
 commandsframehatless.CanvasSize = UDim2.new(0, 0, 0, 2000)
 
 areawerecommandshatless.Name = "area were commands hatless"
@@ -1004,6 +1096,18 @@ flyingmagic.TextScaled = true
 flyingmagic.TextSize = 14.000
 flyingmagic.TextWrapped = true
 
+pulse.Name = "pulse"
+pulse.Parent = areawerecommandshatless
+pulse.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pulse.Position = UDim2.new(-0.0157480314, 0, 2.02333307, 0)
+pulse.Size = UDim2.new(0, 261, 0, 28)
+pulse.Font = Enum.Font.SourceSans
+pulse.Text = ".pulse"
+pulse.TextColor3 = Color3.fromRGB(0, 0, 0)
+pulse.TextScaled = true
+pulse.TextSize = 14.000
+pulse.TextWrapped = true
+
 clsoehatless.Name = "clsoe hatless"
 clsoehatless.Parent = hatlesscommandsbar
 clsoehatless.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1029,7 +1133,6 @@ commandsframegui.Active = true
 commandsframegui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commandsframegui.Position = UDim2.new(-0.0261194035, 0, 0.00222216453, 0)
 commandsframegui.Size = UDim2.new(0, 268, 0, 273)
-commandsframegui.CanvasPosition = Vector2.new(0, 600)
 commandsframegui.CanvasSize = UDim2.new(0, 0, 0, 1500)
 
 areawerecommandsgui.Name = "area were commands gui"
@@ -1261,7 +1364,7 @@ clsoegui.TextWrapped = true
 
 -- Scripts:
 
-local function CYJKP_fake_script() -- hatcommands.open hat 
+local function WDAJZW_fake_script() -- hatcommands.open hat 
 	local script = Instance.new('LocalScript', hatcommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1269,8 +1372,8 @@ local function CYJKP_fake_script() -- hatcommands.open hat
 		script.Parent.Parent.Parent["hat commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(CYJKP_fake_script)()
-local function KUCN_fake_script() -- hatlesscommands.open hatless script 
+coroutine.wrap(WDAJZW_fake_script)()
+local function LRJUQ_fake_script() -- hatlesscommands.open hatless script 
 	local script = Instance.new('LocalScript', hatlesscommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1278,8 +1381,8 @@ local function KUCN_fake_script() -- hatlesscommands.open hatless script
 		script.Parent.Parent.Parent["hatless commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(KUCN_fake_script)()
-local function AUMHF_fake_script() -- guicommands.open gui 
+coroutine.wrap(LRJUQ_fake_script)()
+local function OIOQ_fake_script() -- guicommands.open gui 
 	local script = Instance.new('LocalScript', guicommands)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1287,36 +1390,36 @@ local function AUMHF_fake_script() -- guicommands.open gui
 		script.Parent.Parent.Parent["gui commands bar"].Visible = true
 	end)
 end
-coroutine.wrap(AUMHF_fake_script)()
-local function FTDO_fake_script() -- closecomands.close commands button 
+coroutine.wrap(OIOQ_fake_script)()
+local function YHBUB_fake_script() -- closecomands.close commands button 
 	local script = Instance.new('LocalScript', closecomands)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(FTDO_fake_script)()
-local function BNQVUDR_fake_script() -- clsoehat.close hat scipt 
+coroutine.wrap(YHBUB_fake_script)()
+local function RTXXXFK_fake_script() -- clsoehat.close hat scipt 
 	local script = Instance.new('LocalScript', clsoehat)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(BNQVUDR_fake_script)()
-local function EWEZLYC_fake_script() -- clsoehatless.close hatless scipt 
+coroutine.wrap(RTXXXFK_fake_script)()
+local function QWTF_fake_script() -- clsoehatless.close hatless scipt 
 	local script = Instance.new('LocalScript', clsoehatless)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(EWEZLYC_fake_script)()
-local function IMSLVD_fake_script() -- clsoegui.close gui scipt 
+coroutine.wrap(QWTF_fake_script)()
+local function BSWW_fake_script() -- clsoegui.close gui scipt 
 	local script = Instance.new('LocalScript', clsoegui)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(IMSLVD_fake_script)()
+coroutine.wrap(BSWW_fake_script)()
