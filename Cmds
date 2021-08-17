@@ -1170,6 +1170,10 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/bad%20karma"))()
 
 elseif
+	CMD.Text == ".interstellar glitcher" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/4275896bbe2ee63d2b8d4a965b3a5b5350f098e8/thingabob%20to%20convert"))()
+
+elseif
 	CMD.Text == ".hathub pp" then
 	loadstring(game:HttpGet("https://pastebin.com/raw/F6k8kM05"))()
 
