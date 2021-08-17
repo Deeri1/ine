@@ -1158,6 +1158,18 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/concealed%20glitcher"))()
 
 elseif
+	CMD.Text == ".inferno" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/inferno"))()
+
+elseif
+	CMD.Text == ".pico" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/pico"))()
+
+elseif
+	CMD.Text == ".bad karma" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/bad%20karma"))()
+
+elseif
 	CMD.Text == ".hathub pp" then
 	loadstring(game:HttpGet("https://pastebin.com/raw/F6k8kM05"))()
 
