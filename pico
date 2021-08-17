@@ -1,0 +1,328 @@
+local hat = false
+local net = true
+if hat == true then
+	game:GetService("Players").LocalPlayer.Character["ShadowBladeMasterAccessory"].Name = "gamer1"
+	game:GetService("Players").LocalPlayer.Character["BladeMasterAccessory"].Name = "gamer2"
+end
+if net == true then
+	for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+		if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+			game:GetService("RunService").Heartbeat:connect(function()
+				v.Velocity = Vector3.new(60,0,0)
+			end)
+		end
+	end
+
+	getgenv().ReanimateVersion = "v5"
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Reanimate", true))()
+	wait(2.5)
+
+end
+
+local Player = game.Players.LocalPlayer
+local RealPlayer = Player
+do
+	print("FE Compatibility code V2 by Mokiros")
+	local RealPlayer = RealPlayer
+	script.Parent = RealPlayer.Character
+
+	--Fake event to make stuff like Mouse.KeyDown work
+	local Disconnect_Function = function(this)
+		this[1].Functions[this[2]] = nil
+	end
+	local Disconnect_Metatable = {__index={disconnect=Disconnect_Function,Disconnect=Disconnect_Function}}
+	local FakeEvent_Metatable = {__index={
+		Connect = function(this,f)
+			local i = tostring(math.random(0,10000))
+			while this.Functions[i] do
+				i = tostring(math.random(0,10000))
+			end
+			this.Functions[i] = f
+			return setmetatable({this,i},Disconnect_Metatable)
+		end
+	}}
+	FakeEvent_Metatable.__index.connect = FakeEvent_Metatable.__index.Connect
+	local function fakeEvent()
+		return setmetatable({Functions={}},FakeEvent_Metatable)
+	end
+
+
+
+	--Creating fake input objects with fake variables
+	local FakeMouse = {Hit=CFrame.new(),KeyUp=fakeEvent(),KeyDown=fakeEvent(),Button1Up=fakeEvent(),Button1Down=fakeEvent(),Button2Up=fakeEvent(),Button2Down=fakeEvent()}
+	FakeMouse.keyUp = FakeMouse.KeyUp
+	FakeMouse.keyDown = FakeMouse.KeyDown
+	local UIS = {InputBegan=fakeEvent(),InputEnded=fakeEvent()}
+	local CAS = {Actions={},BindAction=function(self,name,fun,touch,...)
+		CAS.Actions[name] = fun and {Name=name,Function=fun,Keys={...}} or nil
+	end}
+	--Merged 2 functions into one by checking amount of arguments
+	CAS.UnbindAction = CAS.BindAction
+
+	--This function will trigger the events that have been :Connect()'ed
+	local function TriggerEvent(self,ev,...)
+		for _,f in pairs(self[ev].Functions) do
+			f(...)
+		end
+	end
+	FakeMouse.TriggerEvent = TriggerEvent
+	UIS.TriggerEvent = TriggerEvent
+
+	--Client communication
+	local Event = Instance.new("RemoteEvent")
+	Event.Name = "UserInput_Event"
+	Event.OnServerEvent:Connect(function(plr,io)
+		if plr~=RealPlayer then return end
+		FakeMouse.Target = io.Target
+		FakeMouse.Hit = io.Hit
+		if not io.isMouse then
+			local b = io.UserInputState == Enum.UserInputState.Begin
+			if io.UserInputType == Enum.UserInputType.MouseButton1 then
+				return FakeMouse:TriggerEvent(b and "Button1Down" or "Button1Up")
+			end
+			if io.UserInputType == Enum.UserInputType.MouseButton2 then
+				return FakeMouse:TriggerEvent(b and "Button2Down" or "Button2Up")
+			end
+			for _,t in pairs(CAS.Actions) do
+				for _,k in pairs(t.Keys) do
+					if k==io.KeyCode then
+						t.Function(t.Name,io.UserInputState,io)
+					end
+				end
+			end
+			FakeMouse:TriggerEvent(b and "KeyDown" or "KeyUp",io.KeyCode.Name:lower())
+			UIS:TriggerEvent(b and "InputBegan" or "InputEnded",io,false)
+		end
+	end)
+	
+	----Sandboxed game object that allows the usage of client-side methods and services
+	--Real game object
+	local RqealGame = game
+
+	--Metatable for fake service
+	local FakeService_Metatable = {
+		__index = function(self,k)
+			local s = rawget(self,"_RealService")
+			if s then
+				return typeof(s[k])=="function"
+					and function(_,...)return s[k](s,...)end or s[k]
+			end
+		end,
+		__newindex = function(self,k,v)
+			local s = rawget(self,"_RealService")
+			if s then s[k]=v end
+		end
+	}
+
+
+	--Fake game object
+	
+end
+
+local Player = game.Players.LocalPlayer
+Character = Player.Character
+local Char = Player.Character
+Character.Humanoid:ClearAllChildren()
+Character.Animate:Remove()
+local Camera = workspace.CurrentCamera
+Camera.CameraType = "Custom"
+local hmr = Char:WaitForChild("HumanoidRootPart")
+Camera.CameraType = Enum.CameraType.Scriptable
+Camera.CFrame = hmr.CFrame + hmr.CFrame.RightVector * 13
+Camera.CFrame = CFrame.lookAt(Camera.CFrame.Position, hmr.Position)
+
+
+
+Mouse = Player:GetMouse()
+
+UghSong = "rbxassetid://6674669788"
+Vocals = "rbxassetid://6449706620"
+
+Songs1 = Instance.new("Sound",Character.Head)
+Songs1.SoundId = UghSong
+Songs1.Volume = 2
+Songs1.Looped = true
+Songs1:Play()
+
+Songs = Instance.new("Sound",Character.Head)
+Songs.SoundId = Vocals
+Songs.Volume = 2
+Songs.Looped = true
+Songs:Play()
+
+REFTHANDKNIFE = Instance.new("Part")
+REFTHANDKNIFE.Parent = Character["Left Arm"]
+REFTHANDKNIFE.Size = Vector3.new(0.5,0.5 ,0.5)
+REFTHANDKNIFE.Material = "SmoothPlastic"
+REFTHANDKNIFE.BrickColor = BrickColor.new("Really black")
+
+local REFTHANDKNIFEM = Instance.new("SpecialMesh")
+REFTHANDKNIFEM.Parent = REFTHANDKNIFE
+REFTHANDKNIFEM.Scale = Vector3.new(0.25,0.25,0.25)
+REFTHANDKNIFEM.MeshId = "rbxassetid://6591522321"
+REFTHANDKNIFEM.TextureId = "rbxassetid://6591524111"
+
+local REFTHANDKNIFEW = Instance.new("Weld")
+REFTHANDKNIFEW.Parent = Character["Left Arm"]
+REFTHANDKNIFEW.Part0 = REFTHANDKNIFE
+REFTHANDKNIFEW.Part1 = Character["Right Arm"]
+REFTHANDKNIFEW.C0 = CFrame.new(1.15, -0.6, 0) * CFrame.Angles(math.rad(-90), math.rad(180), math.rad(90))
+
+
+LEFTHANDKNIFE = Instance.new("Part")
+LEFTHANDKNIFE.Parent = Character["Left Arm"]
+LEFTHANDKNIFE.Size = Vector3.new(0.5,0.5 ,0.5)
+LEFTHANDKNIFE.Material = "SmoothPlastic"
+
+local LEFTHANDKNIFEM = Instance.new("SpecialMesh")
+LEFTHANDKNIFEM.Parent = LEFTHANDKNIFE
+LEFTHANDKNIFEM.Scale = Vector3.new(0.3,0.3,0.3)
+LEFTHANDKNIFEM.MeshId = "http://www.roblox.com/asset/?id=43996479"
+LEFTHANDKNIFEM.TextureId = "http://www.roblox.com/asset/?id=43997070"
+LEFTHANDKNIFE.BrickColor = BrickColor.new("Institutional white")
+
+local LEFTHANDKNIFEW = Instance.new("Weld")
+LEFTHANDKNIFEW.Parent = Character["Left Arm"]
+LEFTHANDKNIFEW.Part0 = LEFTHANDKNIFE
+LEFTHANDKNIFEW.Part1 = Character["Left Arm"]
+LEFTHANDKNIFEW.C0 = CFrame.new(0, -1, -0.35) * CFrame.Angles(math.rad(0), math.rad(180), math.rad(180))
+
+
+so=Songs
+timer = 0
+inc=1
+dec=.1
+
+uis=game:GetService("UserInputService")
+
+uis.InputBegan:Connect(function(k,g)
+	if k.KeyCode==Enum.KeyCode.W then
+		timer=inc
+		local function Tween(name,style,dirc,time1,cf)
+			game.TweenService:Create(name,TweenInfo.new(time1,Enum.EasingStyle[style],Enum.EasingDirection[dirc]),{C1 = cf}):Play()
+		end
+owner = game.Players.LocalPlayer
+		local RA = owner.Character.Torso["Right Shoulder"]
+		local LA = owner.Character.Torso["Left Shoulder"]
+		local RL = owner.Character.Torso["Right Hip"]
+		local LL= owner.Character.Torso["Left Hip"]
+		local NE = owner.Character.Torso.Neck
+		local RJ= owner.Character.HumanoidRootPart["RootJoint"]
+
+		Tween(RA,"Sine","Out",0.1,CFrame.new(-0.533842921, 0.82541585, 0.229720265, -0.593132913, -0.139820725, 0.792870402, -0.758649945, 0.426747084, -0.492277473, -0.269524574, -0.893497109, -0.359192729))
+		Tween(LA,"Sine","Out",0.1,CFrame.new(0.805863142, 0.213302791, -0.55452323, 0.546033621, -0.397700638, -0.737347603, 0.766326606, -0.118526697, 0.631422997, -0.338512659, -0.909827292, 0.240048975))
+		Tween(RL,"Sine","Out",0.1,CFrame.new(0.473697484, 1.0130198, 0.032573387, -0.740645051, 0.322550833, 0.589411497, 0.0730115026, 0.910677195, -0.406615913, -0.667917907, -0.258124173, -0.69803834))
+		Tween(LL,"Sine","Out",0.1,CFrame.new(-0.494354069, 1.15082943, 0.713371634, -0.161869943, 0.0752352923, -0.983939946, -0.0832778066, 0.992491007, 0.089589417, 0.983291864, 0.0964421779, -0.154389128))
+		Tween(NE,"Sine","Out",0.1,CFrame.new(0.00312584639, -0.500375032, 0.000260397792, -0.970439672, -0.178595468, 0.162328422, 0.130435616, 0.177792042, 0.975385308, -0.203060105, 0.967725992, -0.149241239))
+		Tween(RJ,"Sine","Out",0.1,CFrame.new( 0.297956884, 0.0697615519, 0.448626727, -0.90405643, 0.406988323, -0.13054654, -0.134434253, 0.0191679671, 0.990737081, 0.40572077, 0.913232207, 0.0373842493))
+		wait(0.1)
+		Tween(RA,"Sine","Out",0.1,CFrame.new( -0.438350379, 0.72154361, 0.241221964, -0.703323722, -0.368009567, 0.608197749, -0.670058548, 0.628919244, -0.394312263, -0.237396628, -0.68485707, -0.688921928))
+		Tween(LA,"Sine","Out",0.1,CFrame.new(0.762732744, 0.213302821, -0.61092031, 0.504989982, -0.496438682, -0.70606935, 0.766326547, -0.11852672, 0.631422997, -0.397150815, -0.859942079, 0.32057929))
+		Tween(RL,"Sine","Out",0.1,CFrame.new(0.473697484, 1.0130198, 0.032573387, -0.740645051, 0.322550833, 0.589411497, 0.0730115026, 0.910677195, -0.406615913, -0.667917907, -0.258124173, -0.69803834))
+		Tween(LL,"Sine","Out",0.1,CFrame.new(-0.494354069, 1.15082943, 0.713371634, -0.161869943, 0.0752352923, -0.983939946, -0.0832778066, 0.992491007, 0.089589417, 0.983291864, 0.0964421779, -0.154389128))
+		Tween(NE,"Sine","Out",0.1,CFrame.new( 2.98023224e-08, -0.5, 7.4505806e-09, -0.974146605, -0.17428875, 0.14374283, 0.113746658, 0.171347991, 0.978622317, -0.195192918, 0.969671726, -0.147093281))
+		Tween(RJ,"Sine","Out",0.1,CFrame.new(0.296299934, 0.0627427921, 0.453506649, -0.910810232, 0.398374796, -0.108269259, -0.0874979347, 0.0700176209, 0.993701041, 0.403446227, 0.914546371, -0.0289157927))
+	end
+end)
+
+uis.InputBegan:Connect(function(k,g)
+	if k.KeyCode==Enum.KeyCode.A then
+		timer=inc
+		local function Tween(name,style,dirc,time1,cf)
+			game.TweenService:Create(name,TweenInfo.new(time1,Enum.EasingStyle[style],Enum.EasingDirection[dirc]),{C1 = cf}):Play()
+		end
+		local RA = owner.Character.Torso["Right Shoulder"]
+		local LA = owner.Character.Torso["Left Shoulder"]
+		local RL = owner.Character.Torso["Right Hip"]
+		local LL= owner.Character.Torso["Left Hip"]
+		local NE = owner.Character.Torso.Neck
+		local RJ= owner.Character.HumanoidRootPart["RootJoint"]
+
+		Tween(RA,"Sine","Out",0.1,CFrame.new(-0.824012637, 0.542407274, 0.0654783994, 0.591668427, 0.061331138, 0.803845108, -0.677119851, 0.57895875, 0.454219639, -0.437535346, -0.813046932, 0.384080172))
+		Tween(LA,"Sine","Out",0.1,CFrame.new(0.497550368, 0.213335395, -0.738759637, 0.165718824, -0.92081368, -0.353043437, 0.764224529, -0.106353998, 0.636121035, -0.623296618, -0.375221729, 0.686083436))
+		Tween(RL,"Sine","Out",0.1,CFrame.new(0.459429026, 0.861745954, 0.0155078359, -0.695570648, 0.417650849, 0.584593415, 0.217017636, 0.897807121, -0.38320455, -0.68489778, -0.139678702, -0.715125859))
+		Tween(LL,"Sine","Out",0.1,CFrame.new(-0.460108221, 1.01472151, 0.420404106, -0.174289092, -0.188892424, -0.966407239, -0.0616474599, 0.981596351, -0.180743307, 0.982762873, 0.0280749667, -0.182726279))
+		Tween(NE,"Sine","Out",0.1,CFrame.new(1.86264515e-09, -0.49999994, -1.49011612e-08, -0.990165889, -0.130535841, -0.0503174327, -0.0189350806, -0.231313065, 0.972695053, -0.138610661, 0.964082241, 0.226566598))
+		Tween(RJ,"Sine","Out",0.1,CFrame.new(0.00036817044, 0.287314862, 0.145408213, -0.956834376, 0.2625826, -0.124572314, -0.0990095064, 0.108482793, 0.989155471, 0.273248971, 0.958791852, -0.0778018981))
+		wait(0.1)
+		Tween(RA,"Sine","Out",0.15,CFrame.new(-0.833271384, 0.499999821, -5.96046448e-08, 0.747354388, 0.145698145, 0.648254216, -0.581329346, 0.615840971, 0.531785488, -0.321741343, -0.774281442, 0.544950128))
+		Tween(LA,"Sine","Out",0.15,CFrame.new( 0.457002282, 0.213302821, -0.75733608, 0.0907947272, -0.952988982, -0.289082021, 0.766326547, -0.11852672, 0.631422997, -0.636003077, -0.278861135, 0.719539106))
+		Tween(RL,"Sine","Out",0.15,CFrame.new(0.473697484, 1.0130198, 0.032573387, -0.740645051, 0.322550833, 0.589411497, 0.0730115026, 0.910677195, -0.406615913, -0.667917907, -0.258124173, -0.69803834))
+		Tween(LL,"Sine","Out",0.15,CFrame.new(-0.494354069, 1.15082943, 0.713371634, -0.161869943, 0.0752352923, -0.983939946, -0.0832778066, 0.992491007, 0.089589417, 0.983291864, 0.0964421779, -0.154389128))
+		Tween(NE,"Sine","Out",0.15,CFrame.new(0, -0.5, 0, -0.989614189, -0.114399411, -0.0870436952, -0.0503934324, -0.29100588, 0.955393136, -0.134626642, 0.949856997, 0.282218575))
+		Tween(RJ,"Sine","Out",0.15,CFrame.new(0.0389713719, 0.30424571, -0.0296276789, -0.960916162, 0.24686709, -0.125286758, -0.0776643008, 0.19399862, 0.977922738, 0.265722394, 0.949431956, -0.167243659))
+	end
+end)
+
+
+uis.InputBegan:Connect(function(k,g)
+	if k.KeyCode==Enum.KeyCode.S then
+		timer=inc
+		local function Tween(name,style,dirc,time1,cf)
+			game.TweenService:Create(name,TweenInfo.new(time1,Enum.EasingStyle[style],Enum.EasingDirection[dirc]),{C1 = cf}):Play()
+		end
+		local RA = owner.Character.Torso["Right Shoulder"]
+		local LA = owner.Character.Torso["Left Shoulder"]
+		local RL = owner.Character.Torso["Right Hip"]
+		local LL= owner.Character.Torso["Left Hip"]
+		local NE = owner.Character.Torso.Neck
+		local RJ= owner.Character.HumanoidRootPart["RootJoint"]
+
+
+		Tween(RA,"Sine","Out",0.1,CFrame.new(-0.213421106, 0.697096944, -0.761785507, -0.355317205, 0.894541204, -0.271193326, -0.855687737, -0.194501877, 0.479549378, 0.376229137, 0.402448714, 0.834557772))
+		Tween(LA,"Sine","Out",0.1,CFrame.new(0.934707403, 0.213302523, -0.211275309, 0.636288941, 0.275826126, -0.720455766, 0.766326547, -0.11852672, 0.631422997, 0.0887697563, -0.953871965, -0.286790133))
+		Tween(RL,"Sine","Out",0.1,CFrame.new(0.3795757, 0.809513688, 0.0761713684, -0.645094514, 0.668517351, 0.370050699, 0.215730846, 0.623939097, -0.751105964, -0.73301661, -0.404702961, -0.546719432))
+		Tween(LL,"Sine","Out",0.1,CFrame.new(-0.612729073, 1.12388361, 0.445346653, -0.142061293, 0.297121167, -0.944212675, 0.462904334, 0.863096595, 0.201949745, 0.874950349, -0.408390969, -0.260151416))
+		Tween(NE,"Sine","Out",0.1,CFrame.new(0.0220217109, -0.505031288, 0.00320264697, -0.939407349, -0.202391282, 0.276680171, 0.223087013, 0.251881301, 0.94169426, -0.260281324, 0.946357906, -0.191468254))
+		Tween(RJ,"Sine","Out",0.1,CFrame.new(0.264791727, 0.158893853, 0.553653002, -0.839873791, 0.48339653, -0.246859819, -0.414943218, -0.278623939, 0.866135657, 0.349905908, 0.829877377, 0.434591115 ))
+		wait(0.1)
+		Tween(RA,"Sine","Out",0.15,CFrame.new(-0.274428785, 0.697097003, -0.761785448, -0.355317205, 0.894541204, -0.271193326, -0.855687737, -0.194501877, 0.479549378, 0.376229137, 0.402448714, 0.834557772))
+		Tween(LA,"Sine","Out",0.15,CFrame.new(0.885713696, 0.213302493, -0.211275309, 0.636288941, 0.275826126, -0.720455766, 0.766326547, -0.11852672, 0.631422997, 0.0887697563, -0.953871965, -0.286790133))
+		Tween(RL,"Sine","Out",0.15,CFrame.new(0.232720271, 0.809513688, 0.0761713684, -0.645094514, 0.668517351, 0.370050699, 0.215730846, 0.623939097, -0.751105964, -0.73301661, -0.404702961, -0.546719432))
+		Tween(LL,"Sine","Out",0.15,CFrame.new(-0.612729192, 0.988822699, 0.445346683, -0.142061293, 0.297121167, -0.944212675, 0.462904334, 0.863096595, 0.201949745, 0.874950349, -0.408390969, -0.260151416 ))
+		Tween(NE,"Sine","Out",0.15,CFrame.new(0.0220217109, -0.50513804, 0.00302851945, -0.939407349, -0.202391282, 0.276680171, 0.231865838, 0.219339371, 0.947696447, -0.252492398, 0.954425335, -0.159121364))
+		Tween(RJ,"Sine","Out",0.15,CFrame.new( 0.264791727, 0.293339849, 0.553653002, -0.839873791, 0.48339653, -0.246859819, -0.414943218, -0.278623939, 0.866135657, 0.349905908, 0.829877377, 0.434591115))
+	end
+end)
+
+uis.InputBegan:Connect(function(k,g)
+	if k.KeyCode==Enum.KeyCode.D then
+		timer=inc
+		local function Tween(name,style,dirc,time1,cf)
+			game.TweenService:Create(name,TweenInfo.new(time1,Enum.EasingStyle[style],Enum.EasingDirection[dirc]),{C1 = cf}):Play()
+		end
+		local RA = owner.Character.Torso["Right Shoulder"]
+		local LA = owner.Character.Torso["Left Shoulder"]
+		local RL = owner.Character.Torso["Right Hip"]
+		local LL= owner.Character.Torso["Left Hip"]
+		local NE = owner.Character.Torso.Neck
+		local RJ= owner.Character.HumanoidRootPart["RootJoint"]
+
+		Tween(RA,"Sine","Out",0.1,CFrame.new(-0.526861668, 0.720515549, 0.248437986, -0.483539939, -0.409232497, 0.773768663, -0.807331145, 0.55009073, -0.21358043, -0.338238925, -0.727962196, -0.596377015 ))
+		Tween(LA,"Sine","Out",0.1,CFrame.new(0.698243737, 0.213303119, -0.634785175, 0.461280107, -0.582583666, -0.669191301, 0.766326666, -0.118526995, 0.631423116, -0.447174042, -0.804082096, 0.39177531 ))
+		Tween(RL,"Sine","Out",0.1,CFrame.new(0.473551005, 0.861252427, 0.0324060693, -0.74026674, 0.323533237, 0.589348435, 0.0744606033, 0.910658836, -0.406394064, -0.668177307, -0.256956697, -0.698220909))
+		Tween(LL,"Sine","Out",0.1,CFrame.new(-0.493869662, 0.905970216, 0.710488617, -0.161965266, 0.0725850612, -0.98412329, -0.0830464214, 0.992750525, 0.0868889987, 0.983295739, 0.0958009213, -0.154763177))
+		Tween(NE,"Sine","Out",0.1,CFrame.new(1.49011612e-08, -0.499999881, 1.11758709e-08, -0.974146545, -0.174288779, 0.143742859, 0.129829526, 0.0888198391, 0.987550139, -0.184886128, 0.980680645, -0.0638957173 ))
+		Tween(RJ,"Sine","Out",0.1,CFrame.new(0.275295079, -0.0214605555, 0.811617315, -0.931273222, 0.348724037, -0.105460055, -0.156491876, -0.121491492, 0.980178595, 0.328999311, 0.929317713, 0.167714238))
+		wait(0.1)
+		Tween(RA,"Sine","Out",0.15,CFrame.new(-0.552342057, 0.716128767, 0.248231351, -0.404588491, -0.432294786, 0.805871725, -0.842844188, 0.518208385, -0.145167544, -0.354854375, -0.737957239, -0.574018478))
+		Tween(LA,"Sine","Out",0.15,CFrame.new( 0.671349764, 0.213302791, -0.642566204, 0.442049682, -0.615911245, -0.65210849, 0.766326547, -0.11852672, 0.631422997, -0.466192782, -0.778848469, 0.419594407))
+		Tween(RL,"Sine","Out",0.15,CFrame.new(0.473697454, 0.861263752, 0.0325733945, -0.740645051, 0.322550833, 0.589411497, 0.0730115026, 0.910677195, -0.406615913, -0.667917907, -0.258124173, -0.69803834))
+		Tween(LL,"Sine","Out",0.15,CFrame.new(-0.494354069, 0.904783368, 0.713371634, -0.161869943, 0.0752352923, -0.983939946, -0.0832778066, 0.992491007, 0.089589417, 0.983291864, 0.0964421779, -0.154389128))
+		Tween(NE,"Sine","Out",0.15,CFrame.new(2.98023224e-08, -0.49999997, 3.7252903e-09, -0.974146605, -0.17428875, 0.14374283, 0.129546776, 0.0903186426, 0.987451375, -0.185084343, 0.980543733, -0.065405041))
+		Tween(RJ,"Sine","Out",0.15,CFrame.new(0.266318768, -0.0517564192, 0.883143187, -0.935018301, 0.338332236, -0.106170155, -0.16704838, -0.156167194, 0.973502278, 0.312786937, 0.92797792, 0.20253706))
+	end
+end)
+game:GetService("RunService").RenderStepped:Connect(function()
+	if timer>0 then 
+		so.Volume=1.25
+	else
+		so.Volume=0
+	end
+	timer=math.clamp(timer-dec,0,inc)
+end)
+
+
+
+Character.HumanoidRootPart.Anchored = true
