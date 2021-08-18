@@ -1,0 +1,621 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local missinghat = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local tite = Instance.new("TextLabel")
+local line = Instance.new("Frame")
+local e = Instance.new("TextButton")
+local e_2 = Instance.new("TextButton")
+local e_3 = Instance.new("TextButton")
+local common = Instance.new("Frame")
+local dxxcsdf = Instance.new("TextLabel")
+local dwsdv = Instance.new("TextLabel")
+local vxddsdvc = Instance.new("TextLabel")
+local vcxdg = Instance.new("TextLabel")
+local vsdf = Instance.new("TextLabel")
+local esdw = Instance.new("TextLabel")
+local ewsdw = Instance.new("TextLabel")
+local bdxc = Instance.new("TextLabel")
+local xca = Instance.new("TextLabel")
+local rare = Instance.new("Frame")
+local gghf = Instance.new("TextLabel")
+local uiui = Instance.new("TextLabel")
+local u = Instance.new("TextLabel")
+local lol = Instance.new("TextLabel")
+local fnf = Instance.new("TextLabel")
+local gfdf = Instance.new("TextLabel")
+local jut = Instance.new("TextLabel")
+local sdf = Instance.new("TextLabel")
+local fgbf = Instance.new("TextLabel")
+local fgb = Instance.new("TextLabel")
+local cvxvd = Instance.new("TextLabel")
+local bgf = Instance.new("TextLabel")
+local fhjn = Instance.new("TextLabel")
+local bvc = Instance.new("TextLabel")
+local bgfb = Instance.new("TextLabel")
+local uncommon = Instance.new("Frame")
+local howdoes = Instance.new("TextButton")
+local howdesframe = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local pressf9 = Instance.new("TextLabel")
+local pressf9_2 = Instance.new("TextLabel")
+local pressf9_3 = Instance.new("TextLabel")
+local pressf9_4 = Instance.new("TextLabel")
+local pressf9_5 = Instance.new("TextLabel")
+local pressf9_6 = Instance.new("TextLabel")
+local pressf9_7 = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local close_2 = Instance.new("TextButton")
+
+--Properties:
+
+missinghat.Name = "missing hat"
+missinghat.Parent = game.CoreGui
+missinghat.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = missinghat
+main.BackgroundColor3 = Color3.fromRGB(190, 190, 190)
+main.Position = UDim2.new(0.318649054, 0, 0.353846133, 0)
+main.Size = UDim2.new(0, 638, 0, 468)
+
+tite.Name = "tite"
+tite.Parent = main
+tite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tite.Size = UDim2.new(0, 638, 0, 40)
+tite.Font = Enum.Font.SourceSans
+tite.Text = "Missing Hats Gui"
+tite.TextColor3 = Color3.fromRGB(0, 0, 0)
+tite.TextScaled = true
+tite.TextSize = 14.000
+tite.TextWrapped = true
+
+line.Name = "line"
+line.Parent = main
+line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+line.Position = UDim2.new(0, 0, 0.136752144, 0)
+line.Size = UDim2.new(0, 638, 0, 0)
+
+e.Name = "e"
+e.Parent = main
+e.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+e.Position = UDim2.new(0, 0, 0.0854700878, 0)
+e.Size = UDim2.new(0, 200, 0, 24)
+e.Font = Enum.Font.SourceSans
+e.Text = "Common hats"
+e.TextColor3 = Color3.fromRGB(0, 0, 0)
+e.TextScaled = true
+e.TextSize = 14.000
+e.TextWrapped = true
+
+e_2.Name = "e"
+e_2.Parent = main
+e_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+e_2.Position = UDim2.new(0.343260199, 0, 0.0854700878, 0)
+e_2.Size = UDim2.new(0, 200, 0, 24)
+e_2.Font = Enum.Font.SourceSans
+e_2.Text = "Uncommon hats"
+e_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+e_2.TextSize = 14.000
+
+e_3.Name = "e"
+e_3.Parent = main
+e_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+e_3.Position = UDim2.new(0.686520338, 0, 0.0854700878, 0)
+e_3.Size = UDim2.new(0, 200, 0, 24)
+e_3.Font = Enum.Font.SourceSans
+e_3.Text = "Rare hats"
+e_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+e_3.TextScaled = true
+e_3.TextSize = 14.000
+e_3.TextWrapped = true
+
+common.Name = "common"
+common.Parent = main
+common.BackgroundColor3 = Color3.fromRGB(218, 218, 218)
+common.Position = UDim2.new(0, 0, 0.136752144, 0)
+common.Size = UDim2.new(0, 638, 0, 404)
+
+dxxcsdf.Name = "dxxcsdf"
+dxxcsdf.Parent = common
+dxxcsdf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dxxcsdf.Size = UDim2.new(0, 200, 0, 24)
+dxxcsdf.Font = Enum.Font.SourceSans
+dxxcsdf.Text = "MeshPartAccessory"
+dxxcsdf.TextColor3 = Color3.fromRGB(0, 0, 0)
+dxxcsdf.TextScaled = true
+dxxcsdf.TextSize = 14.000
+dxxcsdf.TextWrapped = true
+
+dwsdv.Name = "dwsdv"
+dwsdv.Parent = common
+dwsdv.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dwsdv.Position = UDim2.new(0, 0, 0.0594059452, 0)
+dwsdv.Size = UDim2.new(0, 200, 0, 24)
+dwsdv.Font = Enum.Font.SourceSans
+dwsdv.Text = "="
+dwsdv.TextColor3 = Color3.fromRGB(0, 0, 0)
+dwsdv.TextScaled = true
+dwsdv.TextSize = 14.000
+dwsdv.TextWrapped = true
+
+vxddsdvc.Name = "vxddsdvc"
+vxddsdvc.Parent = common
+vxddsdvc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+vxddsdvc.Position = UDim2.new(0, 0, 0.118811883, 0)
+vxddsdvc.Size = UDim2.new(0, 200, 0, 24)
+vxddsdvc.Font = Enum.Font.SourceSans
+vxddsdvc.Text = "any greatsword"
+vxddsdvc.TextColor3 = Color3.fromRGB(0, 0, 0)
+vxddsdvc.TextScaled = true
+vxddsdvc.TextSize = 14.000
+vxddsdvc.TextWrapped = true
+
+vcxdg.Name = "vcxdg"
+vcxdg.Parent = common
+vcxdg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+vcxdg.Position = UDim2.new(0.343260199, 0, 0.118811905, 0)
+vcxdg.Size = UDim2.new(0, 200, 0, 24)
+vcxdg.Font = Enum.Font.SourceSans
+vcxdg.Text = "Shadow Blademaster's Blade"
+vcxdg.TextColor3 = Color3.fromRGB(0, 0, 0)
+vcxdg.TextScaled = true
+vcxdg.TextSize = 14.000
+vcxdg.TextWrapped = true
+
+vsdf.Name = "vsdf"
+vsdf.Parent = common
+vsdf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+vsdf.Position = UDim2.new(0.343260199, 0, 0, 0)
+vsdf.Size = UDim2.new(0, 200, 0, 24)
+vsdf.Font = Enum.Font.SourceSans
+vsdf.Text = "ShadowBladeMasterAccessory"
+vsdf.TextColor3 = Color3.fromRGB(0, 0, 0)
+vsdf.TextScaled = true
+vsdf.TextSize = 14.000
+vsdf.TextWrapped = true
+
+esdw.Name = "esdw"
+esdw.Parent = common
+esdw.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+esdw.Position = UDim2.new(0.343260199, 0, 0.0594059527, 0)
+esdw.Size = UDim2.new(0, 200, 0, 24)
+esdw.Font = Enum.Font.SourceSans
+esdw.Text = "="
+esdw.TextColor3 = Color3.fromRGB(0, 0, 0)
+esdw.TextScaled = true
+esdw.TextSize = 14.000
+esdw.TextWrapped = true
+
+ewsdw.Name = "ewsdw"
+ewsdw.Parent = common
+ewsdw.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ewsdw.Position = UDim2.new(0.684952974, 0, 0.0594059527, 0)
+ewsdw.Size = UDim2.new(0, 200, 0, 24)
+ewsdw.Font = Enum.Font.SourceSans
+ewsdw.Text = "="
+ewsdw.TextColor3 = Color3.fromRGB(0, 0, 0)
+ewsdw.TextScaled = true
+ewsdw.TextSize = 14.000
+ewsdw.TextWrapped = true
+
+bdxc.Name = "bdxc"
+bdxc.Parent = common
+bdxc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bdxc.Position = UDim2.new(0.684952974, 0, 0, 0)
+bdxc.Size = UDim2.new(0, 200, 0, 24)
+bdxc.Font = Enum.Font.SourceSans
+bdxc.Text = "BladeMasterAccessory"
+bdxc.TextColor3 = Color3.fromRGB(0, 0, 0)
+bdxc.TextScaled = true
+bdxc.TextSize = 14.000
+bdxc.TextWrapped = true
+
+xca.Name = "xca"
+xca.Parent = common
+xca.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+xca.Position = UDim2.new(0.684952974, 0, 0.118811935, 0)
+xca.Size = UDim2.new(0, 200, 0, 24)
+xca.Font = Enum.Font.SourceSans
+xca.Text = "Blademaster's Blade"
+xca.TextColor3 = Color3.fromRGB(0, 0, 0)
+xca.TextScaled = true
+xca.TextSize = 14.000
+xca.TextWrapped = true
+
+rare.Name = "rare"
+rare.Parent = main
+rare.BackgroundColor3 = Color3.fromRGB(218, 218, 218)
+rare.Position = UDim2.new(0, 0, 0.136752144, 0)
+rare.Size = UDim2.new(0, 638, 0, 404)
+rare.Visible = false
+
+gghf.Name = "gghf"
+gghf.Parent = rare
+gghf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gghf.Position = UDim2.new(0, 0, 0.0594059527, 0)
+gghf.Size = UDim2.new(0, 200, 0, 24)
+gghf.Font = Enum.Font.SourceSans
+gghf.Text = "="
+gghf.TextColor3 = Color3.fromRGB(0, 0, 0)
+gghf.TextScaled = true
+gghf.TextSize = 14.000
+gghf.TextWrapped = true
+
+uiui.Name = "uiui"
+uiui.Parent = rare
+uiui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiui.Position = UDim2.new(0, 0, 0.118811883, 0)
+uiui.Size = UDim2.new(0, 200, 0, 24)
+uiui.Font = Enum.Font.SourceSans
+uiui.Text = "Dev Deck"
+uiui.TextColor3 = Color3.fromRGB(0, 0, 0)
+uiui.TextScaled = true
+uiui.TextSize = 14.000
+uiui.TextWrapped = true
+
+u.Name = "u"
+u.Parent = rare
+u.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+u.Size = UDim2.new(0, 200, 0, 24)
+u.Font = Enum.Font.SourceSans
+u.Text = "Keyboard"
+u.TextColor3 = Color3.fromRGB(0, 0, 0)
+u.TextScaled = true
+u.TextSize = 14.000
+u.TextWrapped = true
+
+lol.Name = "lol"
+lol.Parent = rare
+lol.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lol.Position = UDim2.new(0.343260199, 0, 0, 0)
+lol.Size = UDim2.new(0, 200, 0, 24)
+lol.Font = Enum.Font.SourceSans
+lol.Text = "Wheel ChairAccessory"
+lol.TextColor3 = Color3.fromRGB(0, 0, 0)
+lol.TextScaled = true
+lol.TextSize = 14.000
+lol.TextWrapped = true
+
+fnf.Name = "fnf"
+fnf.Parent = rare
+fnf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fnf.Position = UDim2.new(0.343260199, 0, 0.0594059527, 0)
+fnf.Size = UDim2.new(0, 200, 0, 24)
+fnf.Font = Enum.Font.SourceSans
+fnf.Text = "="
+fnf.TextColor3 = Color3.fromRGB(0, 0, 0)
+fnf.TextScaled = true
+fnf.TextSize = 14.000
+fnf.TextWrapped = true
+
+gfdf.Name = "gfdf"
+gfdf.Parent = rare
+gfdf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gfdf.Position = UDim2.new(0.343260199, 0, 0.118811883, 0)
+gfdf.Size = UDim2.new(0, 200, 0, 24)
+gfdf.Font = Enum.Font.SourceSans
+gfdf.Text = "Ordinary Wheelchair"
+gfdf.TextColor3 = Color3.fromRGB(0, 0, 0)
+gfdf.TextScaled = true
+gfdf.TextSize = 14.000
+gfdf.TextWrapped = true
+
+jut.Name = "jut"
+jut.Parent = rare
+jut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+jut.Position = UDim2.new(0.684952974, 0, 0.118811883, 0)
+jut.Size = UDim2.new(0, 200, 0, 24)
+jut.Font = Enum.Font.SourceSans
+jut.Text = "Atomic Prussian Bike"
+jut.TextColor3 = Color3.fromRGB(0, 0, 0)
+jut.TextScaled = true
+jut.TextSize = 14.000
+jut.TextWrapped = true
+
+sdf.Name = "sdf"
+sdf.Parent = rare
+sdf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sdf.Position = UDim2.new(0.684952974, 0, 0.0594059527, 0)
+sdf.Size = UDim2.new(0, 200, 0, 24)
+sdf.Font = Enum.Font.SourceSans
+sdf.Text = "="
+sdf.TextColor3 = Color3.fromRGB(0, 0, 0)
+sdf.TextScaled = true
+sdf.TextSize = 14.000
+sdf.TextWrapped = true
+
+fgbf.Name = "fgbf"
+fgbf.Parent = rare
+fgbf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fgbf.Position = UDim2.new(0.684952974, 0, 0, 0)
+fgbf.Size = UDim2.new(0, 200, 0, 24)
+fgbf.Font = Enum.Font.SourceSans
+fgbf.Text = "Bike"
+fgbf.TextColor3 = Color3.fromRGB(0, 0, 0)
+fgbf.TextScaled = true
+fgbf.TextSize = 14.000
+fgbf.TextWrapped = true
+
+fgb.Name = "fgb"
+fgb.Parent = rare
+fgb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fgb.Position = UDim2.new(0, 0, 0.329207927, 0)
+fgb.Size = UDim2.new(0, 200, 0, 24)
+fgb.Font = Enum.Font.SourceSans
+fgb.Text = "Sabrina’s Sword of Healing"
+fgb.TextColor3 = Color3.fromRGB(0, 0, 0)
+fgb.TextScaled = true
+fgb.TextSize = 14.000
+fgb.TextWrapped = true
+
+cvxvd.Name = "cvxvd"
+cvxvd.Parent = rare
+cvxvd.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cvxvd.Position = UDim2.new(0, 0, 0.269801974, 0)
+cvxvd.Size = UDim2.new(0, 200, 0, 24)
+cvxvd.Font = Enum.Font.SourceSans
+cvxvd.Text = "="
+cvxvd.TextColor3 = Color3.fromRGB(0, 0, 0)
+cvxvd.TextScaled = true
+cvxvd.TextSize = 14.000
+cvxvd.TextWrapped = true
+
+bgf.Name = "bgf"
+bgf.Parent = rare
+bgf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bgf.Position = UDim2.new(0, 0, 0.210396037, 0)
+bgf.Size = UDim2.new(0, 200, 0, 24)
+bgf.Font = Enum.Font.SourceSans
+bgf.Text = "Sabrina's Sword"
+bgf.TextColor3 = Color3.fromRGB(0, 0, 0)
+bgf.TextScaled = true
+bgf.TextSize = 14.000
+bgf.TextWrapped = true
+
+fhjn.Name = "fhjn"
+fhjn.Parent = rare
+fhjn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fhjn.Position = UDim2.new(0.343260199, 0, 0.329207927, 0)
+fhjn.Size = UDim2.new(0, 200, 0, 24)
+fhjn.Font = Enum.Font.SourceSans
+fhjn.Text = "Russo’s Sword of Truth"
+fhjn.TextColor3 = Color3.fromRGB(0, 0, 0)
+fhjn.TextScaled = true
+fhjn.TextSize = 14.000
+fhjn.TextWrapped = true
+
+bvc.Name = "bvc"
+bvc.Parent = rare
+bvc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bvc.Position = UDim2.new(0.343260199, 0, 0.269801974, 0)
+bvc.Size = UDim2.new(0, 200, 0, 24)
+bvc.Font = Enum.Font.SourceSans
+bvc.Text = "="
+bvc.TextColor3 = Color3.fromRGB(0, 0, 0)
+bvc.TextScaled = true
+bvc.TextSize = 14.000
+bvc.TextWrapped = true
+
+bgfb.Name = "bgfb"
+bgfb.Parent = rare
+bgfb.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bgfb.Position = UDim2.new(0.343260199, 0, 0.210396037, 0)
+bgfb.Size = UDim2.new(0, 200, 0, 24)
+bgfb.Font = Enum.Font.SourceSans
+bgfb.Text = "Russo's Sword"
+bgfb.TextColor3 = Color3.fromRGB(0, 0, 0)
+bgfb.TextScaled = true
+bgfb.TextSize = 14.000
+bgfb.TextWrapped = true
+
+uncommon.Name = "uncommon"
+uncommon.Parent = main
+uncommon.BackgroundColor3 = Color3.fromRGB(218, 218, 218)
+uncommon.Position = UDim2.new(0, 0, 0.136752144, 0)
+uncommon.Size = UDim2.new(0, 638, 0, 404)
+uncommon.Visible = false
+
+howdoes.Name = "how does"
+howdoes.Parent = main
+howdoes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+howdoes.Size = UDim2.new(0, 138, 0, 40)
+howdoes.Font = Enum.Font.SourceSans
+howdoes.Text = "how does this work?"
+howdoes.TextColor3 = Color3.fromRGB(0, 0, 0)
+howdoes.TextScaled = true
+howdoes.TextSize = 14.000
+howdoes.TextWrapped = true
+
+howdesframe.Name = "howdes frame"
+howdesframe.Parent = main
+howdesframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+howdesframe.Position = UDim2.new(-0.498432606, 0, -0.00641025649, 0)
+howdesframe.Size = UDim2.new(0, 318, 0, 471)
+howdesframe.Visible = false
+
+TextLabel.Parent = howdesframe
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Size = UDim2.new(0, 318, 0, 32)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "How does this work"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+pressf9.Name = "press f9"
+pressf9.Parent = howdesframe
+pressf9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pressf9.Position = UDim2.new(0, 0, 0.0912951156, 0)
+pressf9.Size = UDim2.new(0, 318, 0, 24)
+pressf9.Font = Enum.Font.SourceSans
+pressf9.Text = "Press f9"
+pressf9.TextColor3 = Color3.fromRGB(0, 0, 0)
+pressf9.TextScaled = true
+pressf9.TextSize = 14.000
+pressf9.TextWrapped = true
+
+pressf9_2.Name = "press f9"
+pressf9_2.Parent = howdesframe
+pressf9_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pressf9_2.Position = UDim2.new(0, 0, 0.176220804, 0)
+pressf9_2.Size = UDim2.new(0, 318, 0, 24)
+pressf9_2.Font = Enum.Font.SourceSans
+pressf9_2.Text = "scroll all the way down"
+pressf9_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+pressf9_2.TextScaled = true
+pressf9_2.TextSize = 14.000
+pressf9_2.TextWrapped = true
+
+pressf9_3.Name = "press f9"
+pressf9_3.Parent = howdesframe
+pressf9_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pressf9_3.Position = UDim2.new(0, 0, 0.263269633, 0)
+pressf9_3.Size = UDim2.new(0, 318, 0, 24)
+pressf9_3.Font = Enum.Font.SourceSans
+pressf9_3.Text = "look for \"name\" is not a valid member"
+pressf9_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+pressf9_3.TextScaled = true
+pressf9_3.TextSize = 14.000
+pressf9_3.TextWrapped = true
+
+pressf9_4.Name = "press f9"
+pressf9_4.Parent = howdesframe
+pressf9_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pressf9_4.Position = UDim2.new(0, 0, 0.350318462, 0)
+pressf9_4.Size = UDim2.new(0, 318, 0, 24)
+pressf9_4.Font = Enum.Font.SourceSans
+pressf9_4.Text = "\"name\" could be anything"
+pressf9_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+pressf9_4.TextScaled = true
+pressf9_4.TextSize = 14.000
+pressf9_4.TextWrapped = true
+
+pressf9_5.Name = "press f9"
+pressf9_5.Parent = howdesframe
+pressf9_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pressf9_5.Position = UDim2.new(0, 0, 0.424628437, 0)
+pressf9_5.Size = UDim2.new(0, 318, 0, 24)
+pressf9_5.Font = Enum.Font.SourceSans
+pressf9_5.Text = "\"name\" is the hat you are missing"
+pressf9_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+pressf9_5.TextScaled = true
+pressf9_5.TextSize = 14.000
+pressf9_5.TextWrapped = true
+
+pressf9_6.Name = "press f9"
+pressf9_6.Parent = howdesframe
+pressf9_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pressf9_6.Position = UDim2.new(0, 0, 0.494692147, 0)
+pressf9_6.Size = UDim2.new(0, 318, 0, 24)
+pressf9_6.Font = Enum.Font.SourceSans
+pressf9_6.Text = "\"name\" is the name of the hat in workspace"
+pressf9_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+pressf9_6.TextScaled = true
+pressf9_6.TextSize = 14.000
+pressf9_6.TextWrapped = true
+
+pressf9_7.Name = "press f9"
+pressf9_7.Parent = howdesframe
+pressf9_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pressf9_7.Position = UDim2.new(0, 0, 0.566878974, 0)
+pressf9_7.Size = UDim2.new(0, 318, 0, 24)
+pressf9_7.Font = Enum.Font.SourceSans
+pressf9_7.Text = "this just helps you find \"name\"s real name"
+pressf9_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+pressf9_7.TextScaled = true
+pressf9_7.TextSize = 14.000
+pressf9_7.TextWrapped = true
+
+close.Name = "close"
+close.Parent = howdesframe
+close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+close.Position = UDim2.new(0.871069193, 0, -0.00424628472, 0)
+close.Size = UDim2.new(0, 41, 0, 34)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+
+close_2.Name = "close"
+close_2.Parent = main
+close_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+close_2.Position = UDim2.new(0.935332596, 0, -0.00210956018, 0)
+close_2.Size = UDim2.new(0, 41, 0, 40)
+close_2.Font = Enum.Font.SourceSans
+close_2.Text = "X"
+close_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+close_2.TextScaled = true
+close_2.TextSize = 14.000
+close_2.TextWrapped = true
+
+-- Scripts:
+
+local function RZBHQ_fake_script() -- e.open 
+	local script = Instance.new('LocalScript', e)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.uncommon.Visible = false
+		script.Parent.Parent.common.Visible = true
+		script.Parent.Parent.rare.Visible = false
+	end)
+end
+coroutine.wrap(RZBHQ_fake_script)()
+local function XLAHE_fake_script() -- e_2.open 
+	local script = Instance.new('LocalScript', e_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.uncommon.Visible = true
+		script.Parent.Parent.common.Visible = false
+		script.Parent.Parent.rare.Visible = false
+	end)
+end
+coroutine.wrap(XLAHE_fake_script)()
+local function VCCITPW_fake_script() -- e_3.open 
+	local script = Instance.new('LocalScript', e_3)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.uncommon.Visible = false
+		script.Parent.Parent.common.Visible = false
+		script.Parent.Parent.rare.Visible = true
+	end)
+end
+coroutine.wrap(VCCITPW_fake_script)()
+local function KWUJI_fake_script() -- howdoes.LocalScript 
+	local script = Instance.new('LocalScript', howdoes)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent["howdes frame"].Visible = true
+	end)
+end
+coroutine.wrap(KWUJI_fake_script)()
+local function KIOAB_fake_script() -- close.LocalScript 
+	local script = Instance.new('LocalScript', close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(KIOAB_fake_script)()
+local function XADYHM_fake_script() -- close_2.LocalScript 
+	local script = Instance.new('LocalScript', close_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(XADYHM_fake_script)()
+local function ZTCB_fake_script() -- main.drag 
+	local script = Instance.new('LocalScript', main)
+
+	main = script.Parent.Parent.main
+	main.Active = true
+	main.Draggable = true
+end
+coroutine.wrap(ZTCB_fake_script)()
