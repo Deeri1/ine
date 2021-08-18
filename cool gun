@@ -55,9 +55,9 @@ cooldown of 30 seconds.
 
 wait(1/60)
 Effects = { }
-local Player = game:service'Players'.localPlayer
+local Player = game.Players.LocalPlayer
 local chara = Player.Character
-local Humanoid = chara:FindFirstChildOfClass("Humanoid")
+local Humanoid = chara.Humanoid
 local Mouse = Player:GetMouse()
 local LeftArm = chara["Left Arm"]
 local RightArm = chara["Right Arm"]
@@ -79,7 +79,6 @@ local velocity = RootPart.Velocity.y
 local sine = 0
 local change = 1
 local doe = 0
-local Create = LoadLibrary("RbxUtility").Create
 local debby = game:GetService("Debris")
 Humanoid.WalkSpeed = 16
 
