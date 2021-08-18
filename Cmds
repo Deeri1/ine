@@ -764,7 +764,7 @@ elseif
 elseif
 
 	CMD.Text == ".ss executor" then
-	loadstring(game:HttpGetAsync("https://pastebin.com/raw/1d4sf1QY​"))()
+	loadstring(game:HttpGetAsync("https://pastebin.com/raw/1d4sf1QY"))()
 
 elseif
 
@@ -1172,6 +1172,26 @@ elseif
 elseif
 	CMD.Text == ".interstellar glitcher" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/4275896bbe2ee63d2b8d4a965b3a5b5350f098e8/thingabob%20to%20convert"))()
+
+elseif
+	CMD.Text == ".sapphire hub" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/sapphire%20gui"))()
+
+elseif
+	CMD.Text == ".ninja sword" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/sword%201%20thing"))()
+
+elseif
+	CMD.Text == ".zenith battle rifle" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/cool%20gun"))()
+
+elseif
+	CMD.Text == ".exies hub" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/exies%20hub"))()
+
+elseif
+	CMD.Text == ".relm hub" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/relm%20hub"))()
 
 elseif
 	CMD.Text == ".hathub pp" then
