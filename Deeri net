@@ -485,11 +485,14 @@ wait(0.5)
 
 end
 if _G.WeakNet == true then
+
+print("thing ran")
+if _G.Net == true then
 print("running net")
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
-v.Velocity = Vector3.new(6,0,0)
+v.Velocity = Vector3.new(10,.5,.5)
 end)
 end
 end
@@ -794,4 +797,6 @@ end
 
 wait(0.2)
 print("ran net")
+end
+
 end
