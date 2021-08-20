@@ -1,3 +1,5 @@
+_G.Net = true
+
 print("thing ran")
 if _G.Net == true then
 print("running net")
@@ -5,7 +7,7 @@ for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
 v.Velocity = Vector3.new(19.55,0,19.25)
-end)ss
+end)
 end
 end
  
@@ -488,7 +490,7 @@ for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
 v.Velocity = Vector3.new(6,0,0)
-end)ss
+end)
 end
 end
  
