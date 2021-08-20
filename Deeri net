@@ -1,4 +1,4 @@
-
+print("thing ran")
 if _G.Net == true then
 print("running net")
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
