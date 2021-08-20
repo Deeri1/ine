@@ -1,4 +1,4 @@
-
+_G.WeakNet = true
 print("thing ran")
 if _G.Net == true then
 print("running net")
@@ -484,9 +484,6 @@ wait(0.5)
 
 end
 if _G.WeakNet == true then
-
-print("thing ran")
-if _G.Net == true then
 print("running net")
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
@@ -798,4 +795,3 @@ wait(0.2)
 print("ran net")
 end
 
-end
