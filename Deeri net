@@ -1,4 +1,3 @@
-_G.Net = true
 
 print("thing ran")
 if _G.Net == true then
