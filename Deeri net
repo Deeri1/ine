@@ -1,5 +1,14 @@
-
 print("thing ran")
+if _G.SelexityNet == true then
+print("running Selexity net")
+	getgenv().ReanimateVersion = "v5"
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Reanimate", true))()
+
+
+	wait(2.5) 
+print("ran Selexity net")
+end
 if _G.Net == true then
 print("running regular net")
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
