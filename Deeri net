@@ -14,7 +14,7 @@ print("running regular net")
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
-v.Velocity = Vector3.new(19.55,0,19.25)
+v.Velocity = Vector3.new(19.55,10,19.25)
 end)
 end
 end
@@ -325,7 +325,7 @@ print("running StrongerNet")
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 	if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 		game:GetService("RunService").Heartbeat:connect(function()
-			v.Velocity = Vector3.new(45,0,0)
+			v.Velocity = Vector3.new(45,10,45)
 		end)
 	end
 end
