@@ -1,4 +1,4 @@
-_G.WeakNet = true
+
 print("thing ran")
 if _G.Net == true then
 print("running net")
