@@ -325,7 +325,7 @@ print("running StrongerNet")
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 	if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 		game:GetService("RunService").Heartbeat:connect(function()
-			v.Velocity = Vector3.new(45,10,45)
+			v.Velocity = Vector3.new(45,35,45)
 		end)
 	end
 end
