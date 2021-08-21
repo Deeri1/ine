@@ -1,0 +1,1188 @@
+
+game:GetService("Players").LocalPlayer.Character["Roblox14thBday"].Handle.SpecialMesh:Destroy()	
+game:GetService("Players").LocalPlayer.Character["Crystal Staff"].Handle.SpecialMesh:Destroy()	
+game:GetService("Players").LocalPlayer.Character["BackBalloons"].Handle.SpecialMesh:Destroy()	
+game:GetService("Players").LocalPlayer.Character["Hawkins_Backpack"].Handle.Mesh:Destroy()	
+game:GetService("Players").LocalPlayer.Character["Meshes/CrateAccessory"].Handle.SpecialMesh:Destroy()	
+game:GetService("Players").LocalPlayer.Character["BoomBox"].Handle.SpecialMesh:Destroy()	
+local net = true
+local hats = true
+if hats == true then
+--[[put hats here like
+game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "gamer2"
+]]--
+	game:GetService("Players").LocalPlayer.Character["Meshes/CrateAccessory"].Name = "gamer1"
+	game:GetService("Players").LocalPlayer.Character["Hawkins_Backpack"].Name = "gamer2"
+	game:GetService("Players").LocalPlayer.Character["BackBalloons"].Name = "gamer3"
+	game:GetService("Players").LocalPlayer.Character["Crystal Staff"].Name = "gamer4"
+	game:GetService("Players").LocalPlayer.Character["Roblox14thBday"].Name = "gamer5"
+	game:GetService("Players").LocalPlayer.Character["BoomBox"].Name = "gamer6"
+end
+if net == true then
+	_G.SelexityNet = true
+	_G.StrongerNet = false-- you hats will not lag other that if your moving super fast.
+	_G.Net = false -- your regular net. hats may lag behind if moving fast.
+	_G.Bot = false -- bot reanimate
+	_G.WeakNet = false --a weak net with little jitter
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/DeeriHub/Deeri-Hub/main/Deeri%20net"))()
+	wait(2.5)
+end
+-- nebula's ezconvert
+--[[
+PUT YOUR SCRIPTS BELOW HERE VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV	
+]]--
+
+repeat wait() until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild('Head') and game.Players.LocalPlayer:GetMouse()
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+local head = char.Head
+local mouse = plr:GetMouse()
+local Hum = char.Humanoid
+local p = game.Players.LocalPlayer
+
+local HealthBarParts = Instance.new("Folder", char)
+HealthBarParts.Name = "BlockdomHealthBar"
+
+local Effects = Instance.new("Folder", char)
+Effects.Name = "BlockdomEffects"
+
+local BodyParts = Instance.new("Folder", char)
+BodyParts.Name = "BlockdomBodyParts"
+
+
+local BlockSpeed = 0.2 -- Lower = Slower, Higher = Faster [0.0001 - 1]
+
+
+local EM = Enum.Material
+local CF = CFrame
+local V3 = Vector3
+local Ins = Instance
+local Col = Color3
+local UD = UDim
+local UD2 = UDim2
+local mr = math.rad
+local mra = math.random
+local mh = math.huge
+
+
+-------------------------------------
+local Head = char.Head
+local RArm = char["Right Arm"]
+local LArm = char["Left Arm"]
+local Torso = char.Torso
+local LLeg = char["Left Leg"]
+local RLeg = char["Right Leg"]
+-------------------------------------
+
+
+local clerp = function(a, b, t)
+	return a:lerp(b, t)
+end
+human = char.Humanoid
+hrp = char.HumanoidRootPart
+anim = human.Animator
+RSC0 = CFrame.new(1, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+RSC1 = CFrame.new(-0.5, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+LSC0 = CFrame.new(-1, 0.5, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+LSC1 = CFrame.new(0.5, 0.5, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+RHC0 = CFrame.new(1, -1, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+RHC1 = CFrame.new(0.5, 1, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+LHC0 = CFrame.new(-1, -1, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+LHC1 = CFrame.new(-0.5, 1, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+NC0 = CFrame.new(0, 1, 0, -1, 0, 0, 0, 0, 1, 0, 1, 0)
+NC1 = CFrame.new(0, -0.5, 0, -1, 0, 0, 0, 0, 1, 0, 1, 0)
+RJC0 = CFrame.new(0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 1, 0)
+RJC1 = CFrame.new(0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 1, 0)
+RS = Torso:FindFirstChild("Right Shoulder")
+LS = Torso:FindFirstChild("Left Shoulder")
+RH = Torso:FindFirstChild("Right Hip")
+LH = Torso:FindFirstChild("Left Hip")
+RJ = hrp:FindFirstChild("RootJoint")
+NK = Torso:FindFirstChild("Neck")
+local RunS = game:GetService("RunService")
+local Mouse = p:GetMouse()
+local animen = true
+local Player = game.Players.localPlayer
+local Character = Player.Character
+local Humanoid = Character.Humanoid
+local Mouse = Player:GetMouse()
+local LeftArm = Character["Left Arm"]
+local RightArm = Character["Right Arm"]
+local LeftLeg = Character["Left Leg"]
+local RightLeg = Character["Right Leg"]
+local Head = Character.Head
+local Torso = Character.Torso
+local Camera = game.Workspace.CurrentCamera
+local RootPart = Character.HumanoidRootPart
+local RootJoint = RootPart.RootJoint
+local Pause = false
+local attack = false
+local LOL = false
+local Anim = 'Idle'
+local attacktype = 1
+local delays = false
+local play = true
+local targetted = nil
+local Torsovelocity = (RootPart.Velocity * Vector3.new(1, 0, 1)).magnitude 
+local velocity = RootPart.Velocity.y
+local sine = 0
+local change = 1
+local doe = 0
+FELOADLIBRARY = {}
+loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
+local Create = FELOADLIBRARY.Create
+
+
+
+
+
+local HealthBase = Instance.new("Part", HealthBarParts)
+HealthBase.Material = "Neon"
+HealthBase.Color = Color3.fromRGB(0, 0, 0)
+HealthBase.Size = Vector3.new(10, 2, 2)
+HealthBase.CanCollide = false
+HealthBase.Anchored = true
+HealthBase.Name = "HealthMain"
+
+
+local Health = Instance.new("Part", HealthBarParts)
+Health.Material = "Neon"
+Health.Color = Color3.fromRGB(3, 236, 0)
+Health.Size = Vector3.new(10.1, 2.1, 2.1)
+Health.CanCollide = false
+Health.Anchored = true
+Health.Name = "Health"
+
+
+local RS = game:GetService("RunService")
+
+
+for _, i in pairs(char:GetChildren()) do
+	if i:IsA("Part") then
+		i.Transparency = 1
+	end
+	if i.Name == "Health" then
+		i:Destroy()
+	end
+end
+char.Head.face:Destroy()
+Hum.HipHeight = 0.4
+
+
+
+
+
+
+local RoarS = Instance.new("Sound", char.Head)
+RoarS.SoundId = "rbxassetid://889016272"
+RoarS.Volume = 1
+
+local Punch = Instance.new("Sound", char.Head)
+Punch.SoundId = "rbxassetid://386946017"
+Punch.Volume = 1
+
+local Theme = Instance.new("Sound", char.Head)
+Theme.SoundId = "rbxassetid://145556530"
+Theme.Volume = 1
+Theme.Looped = true
+Theme.MaxDistance = 90
+Theme:Play()
+
+
+
+
+
+
+local TouchSensor = Instance.new("Part", char)
+TouchSensor.Size = Vector3.new(0.5,0.5,0.5)
+TouchSensor.Material = "Neon"
+TouchSensor.Transparency = 1
+TouchSensor.CanCollide = false
+
+local TouchSensorWeld = Instance.new("Weld", TouchSensor)
+TouchSensorWeld.Part0 = char.HumanoidRootPart
+TouchSensorWeld.Part1 = TouchSensor
+TouchSensorWeld.C0 = CFrame.new(0,-4,0)
+
+local LastMaterial = "Grass"
+local LastColor = Color3.fromRGB(0,0,0)
+local LastTrans = 0
+
+TouchSensor.Touched:Connect(function(hit)
+	if hit.Parent:FindFirstChildOfClass("Humanoid") == nil and hit:IsA("Part") and hit.Parent ~= Effects and hit.Parent ~= BodyParts and hit.Parent ~= HealthBarParts then
+		LastMaterial = hit.Material
+		LastColor = hit.Color
+		LastTrans = hit.Transparency
+	end
+end)
+
+local BlockHead = Instance.new("Part", BodyParts)
+BlockHead.Size = Vector3.new(0,0,0)
+BlockHead.Material = "Grass"
+BlockHead.Transparency = 1
+local hat = game:GetService("Players").LocalPlayer.Character["gamer6"]
+
+local function align(part0, part1)
+
+	part0.AccessoryWeld:Destroy()
+	local attachment0 = Instance.new("Attachment", part0)
+	attachment0.Position = Vector3.new(0, -0, 0) --Custom Positioning Values Here
+	attachment0.Orientation = Vector3.new(0, 0, 0) --Custom Rotationing Values here
+	local attachment1 = Instance.new("Attachment", part1)
+	local weldpos = Instance.new("AlignPosition", part0)
+	weldpos.Attachment0 = attachment0
+	weldpos.Attachment1 = attachment1
+	weldpos.RigidityEnabled = true
+	weldpos.ReactionForceEnabled = false
+	weldpos.ApplyAtCenterOfMass = false
+	weldpos.MaxForce = 20000
+	weldpos.MaxVelocity = math.huge
+	weldpos.Responsiveness = 200000000000000
+	local weldrot = Instance.new("AlignOrientation", part0)
+	weldrot.Attachment0 = attachment0
+	weldrot.Attachment1 = attachment1
+	weldrot.ReactionTorqueEnabled = false
+	weldrot.PrimaryAxisOnly = false
+	weldrot.MaxTorque = 200000000
+	weldrot.MaxAngularVelocity = math.huge
+	weldrot.Responsiveness = 200000000000000
+end
+align(hat.Handle, BlockHead)
+
+local HeadWeld = Instance.new("Weld", BlockHead)
+HeadWeld.Part0 = char.Head
+HeadWeld.Part1 = BlockHead
+
+local BlockTorso = Instance.new("Part", BodyParts)
+BlockTorso.Size = Vector3.new(0,0,0)
+BlockTorso.Material = "Grass"
+local hat = game:GetService("Players").LocalPlayer.Character["gamer1"]
+
+local function align(part0, part1)
+
+	part0.AccessoryWeld:Destroy()
+	local attachment0 = Instance.new("Attachment", part0)
+	attachment0.Position = Vector3.new(0, -0, .25) --Custom Positioning Values Here
+	attachment0.Orientation = Vector3.new(0, 0, 0) --Custom Rotationing Values here
+	local attachment1 = Instance.new("Attachment", part1)
+	local weldpos = Instance.new("AlignPosition", part0)
+	weldpos.Attachment0 = attachment0
+	weldpos.Attachment1 = attachment1
+	weldpos.RigidityEnabled = true
+	weldpos.ReactionForceEnabled = false
+	weldpos.ApplyAtCenterOfMass = false
+	weldpos.MaxForce = 20000
+	weldpos.MaxVelocity = math.huge
+	weldpos.Responsiveness = 200000000000000
+	local weldrot = Instance.new("AlignOrientation", part0)
+	weldrot.Attachment0 = attachment0
+	weldrot.Attachment1 = attachment1
+	weldrot.ReactionTorqueEnabled = false
+	weldrot.PrimaryAxisOnly = false
+	weldrot.MaxTorque = 200000000
+	weldrot.MaxAngularVelocity = math.huge
+	weldrot.Responsiveness = 200000000000000
+end
+align(hat.Handle, BlockTorso)
+
+local TorsoWeld = Instance.new("Weld", BlockTorso)
+TorsoWeld.Part0 = char.Torso
+TorsoWeld.Part1 = BlockTorso
+TorsoWeld.C0 = CFrame.new(0, -1, 0)
+
+local BlockLeftArm = Instance.new("Part", BodyParts)
+BlockLeftArm.Size = Vector3.new(1,1,1)
+BlockLeftArm.Material = "Grass"
+local hat = game:GetService("Players").LocalPlayer.Character["gamer2"]
+
+local function align(part0, part1)
+
+	part0.AccessoryWeld:Destroy()
+	local attachment0 = Instance.new("Attachment", part0)
+	attachment0.Position = Vector3.new(0, -0, 0) --Custom Positioning Values Here
+	attachment0.Orientation = Vector3.new(0, 0, 0) --Custom Rotationing Values here
+	local attachment1 = Instance.new("Attachment", part1)
+	local weldpos = Instance.new("AlignPosition", part0)
+	weldpos.Attachment0 = attachment0
+	weldpos.Attachment1 = attachment1
+	weldpos.RigidityEnabled = true
+	weldpos.ReactionForceEnabled = false
+	weldpos.ApplyAtCenterOfMass = false
+	weldpos.MaxForce = 20000
+	weldpos.MaxVelocity = math.huge
+	weldpos.Responsiveness = 200000000000000
+	local weldrot = Instance.new("AlignOrientation", part0)
+	weldrot.Attachment0 = attachment0
+	weldrot.Attachment1 = attachment1
+	weldrot.ReactionTorqueEnabled = false
+	weldrot.PrimaryAxisOnly = false
+	weldrot.MaxTorque = 200000000
+	weldrot.MaxAngularVelocity = math.huge
+	weldrot.Responsiveness = 200000000000000
+end
+align(hat.Handle, BlockLeftArm)
+
+local LAWeld = Instance.new("Weld", BlockLeftArm)
+LAWeld.Part0 = char["Left Arm"]
+LAWeld.Part1 = BlockLeftArm
+LAWeld.C0 = CFrame.new(0, -1, 0)
+
+local BlockRightArm = Instance.new("Part", BodyParts)
+BlockRightArm.Size = Vector3.new(0,0,0)
+BlockRightArm.Material = "Grass"
+BlockRightArm.Transparency = 1
+local hat = game:GetService("Players").LocalPlayer.Character["gamer3"]
+
+local function align(part0, part1)
+
+	part0.AccessoryWeld:Destroy()
+	local attachment0 = Instance.new("Attachment", part0)
+	attachment0.Position = Vector3.new(0, -0, 0) --Custom Positioning Values Here
+	attachment0.Orientation = Vector3.new(0, 0, 0) --Custom Rotationing Values here
+	local attachment1 = Instance.new("Attachment", part1)
+	local weldpos = Instance.new("AlignPosition", part0)
+	weldpos.Attachment0 = attachment0
+	weldpos.Attachment1 = attachment1
+	weldpos.RigidityEnabled = true
+	weldpos.ReactionForceEnabled = false
+	weldpos.ApplyAtCenterOfMass = false
+	weldpos.MaxForce = 20000
+	weldpos.MaxVelocity = math.huge
+	weldpos.Responsiveness = 200000000000000
+	local weldrot = Instance.new("AlignOrientation", part0)
+	weldrot.Attachment0 = attachment0
+	weldrot.Attachment1 = attachment1
+	weldrot.ReactionTorqueEnabled = false
+	weldrot.PrimaryAxisOnly = false
+	weldrot.MaxTorque = 200000000
+	weldrot.MaxAngularVelocity = math.huge
+	weldrot.Responsiveness = 200000000000000
+end
+align(hat.Handle, BlockRightArm)
+
+local RAWeld = Instance.new("Weld", BlockRightArm)
+RAWeld.Part0 = char["Right Arm"]
+RAWeld.Part1 = BlockRightArm
+RAWeld.C0 = CFrame.new(0, -1, 0)
+
+
+local BlockLeftLeg = Instance.new("Part", BodyParts)
+BlockLeftLeg.Size = Vector3.new(0,0,0)
+BlockLeftLeg.Material = "Grass"
+local hat = game:GetService("Players").LocalPlayer.Character["gamer4"]
+
+local function align(part0, part1)
+
+	part0.AccessoryWeld:Destroy()
+	local attachment0 = Instance.new("Attachment", part0)
+	attachment0.Position = Vector3.new(0, -0, 0) --Custom Positioning Values Here
+	attachment0.Orientation = Vector3.new(0, 0, 0) --Custom Rotationing Values here
+	local attachment1 = Instance.new("Attachment", part1)
+	local weldpos = Instance.new("AlignPosition", part0)
+	weldpos.Attachment0 = attachment0
+	weldpos.Attachment1 = attachment1
+	weldpos.RigidityEnabled = true
+	weldpos.ReactionForceEnabled = false
+	weldpos.ApplyAtCenterOfMass = false
+	weldpos.MaxForce = 20000
+	weldpos.MaxVelocity = math.huge
+	weldpos.Responsiveness = 200000000000000
+	local weldrot = Instance.new("AlignOrientation", part0)
+	weldrot.Attachment0 = attachment0
+	weldrot.Attachment1 = attachment1
+	weldrot.ReactionTorqueEnabled = false
+	weldrot.PrimaryAxisOnly = false
+	weldrot.MaxTorque = 200000000
+	weldrot.MaxAngularVelocity = math.huge
+	weldrot.Responsiveness = 200000000000000
+end
+align(hat.Handle, BlockLeftLeg)
+
+local LLWeld = Instance.new("Weld", BlockLeftLeg)
+LLWeld.Part0 = char["Left Leg"]
+LLWeld.Part1 = BlockLeftLeg
+LLWeld.C0 = CFrame.new(0, -1, 0)
+
+local BlockRightLeg = Instance.new("Part", BodyParts)
+BlockRightLeg.Size = Vector3.new(1,1,1)
+BlockRightLeg.Material = "Grass"
+BlockRightLeg.Transparency = 1
+local hat = game:GetService("Players").LocalPlayer.Character["gamer5"]
+
+local function align(part0, part1)
+
+	part0.AccessoryWeld:Destroy()
+	local attachment0 = Instance.new("Attachment", part0)
+	attachment0.Position = Vector3.new(0, -0, 0) --Custom Positioning Values Here
+	attachment0.Orientation = Vector3.new(0, 0, 0) --Custom Rotationing Values here
+	local attachment1 = Instance.new("Attachment", part1)
+	local weldpos = Instance.new("AlignPosition", part0)
+	weldpos.Attachment0 = attachment0
+	weldpos.Attachment1 = attachment1
+	weldpos.RigidityEnabled = true
+	weldpos.ReactionForceEnabled = false
+	weldpos.ApplyAtCenterOfMass = false
+	weldpos.MaxForce = 20000
+	weldpos.MaxVelocity = math.huge
+	weldpos.Responsiveness = 200000000000000
+	local weldrot = Instance.new("AlignOrientation", part0)
+	weldrot.Attachment0 = attachment0
+	weldrot.Attachment1 = attachment1
+	weldrot.ReactionTorqueEnabled = false
+	weldrot.PrimaryAxisOnly = false
+	weldrot.MaxTorque = 200000000
+	weldrot.MaxAngularVelocity = math.huge
+	weldrot.Responsiveness = 200000000000000
+end
+align(hat.Handle, BlockRightLeg)
+
+local RLWeld = Instance.new("Weld", BlockRightLeg)
+RLWeld.Part0 = char["Right Leg"]
+RLWeld.Part1 = BlockRightLeg
+RLWeld.C0 = CFrame.new(0, -1, 0)
+
+
+local LEye = Instance.new("Part", BlockHead)
+LEye.Color = Color3.new(1,1,1)
+LEye.Material = "Neon"
+LEye.Size = Vector3.new(0.2,0.2,0.2)
+local LEyeMesh = Instance.new("SpecialMesh", LEye)
+LEyeMesh.MeshType = "Brick"
+LEyeMesh.Scale = Vector3.new(1,1,1)
+local LEyeWeld = Instance.new("Weld", LEye)
+LEyeWeld.Part0 = BlockHead
+LEyeWeld.Part1 = LEye
+LEyeWeld.C0 = CFrame.new(-0.5,0,-1)
+
+local REye = Instance.new("Part", BlockHead)
+REye.Color = Color3.new(1,1,1)
+REye.Material = "Neon"
+REye.Size = Vector3.new(0.2,0.2,0.2)
+local REyeMesh = Instance.new("SpecialMesh", REye)
+REyeMesh.MeshType = "Brick"
+REyeMesh.Scale = Vector3.new(1,1,1)
+local REyeWeld = Instance.new("Weld", REye)
+REyeWeld.Part0 = BlockHead
+REyeWeld.Part1 = REye
+REyeWeld.C0 = CFrame.new(0.5,0,-1)
+
+
+-- EYE MANAGER
+
+coroutine.resume(coroutine.create(function()
+	while wait() do
+		for i = 1, 50 do
+			RS.RenderStepped:wait()
+			LEyeMesh.Scale = LEyeMesh.Scale:lerp(Vector3.new(1,0,1), 0.1)
+			REyeMesh.Scale = REyeMesh.Scale:lerp(Vector3.new(1,0,1), 0.1)
+		end
+		for i = 1, 50 do
+			RS.RenderStepped:wait()
+			LEyeMesh.Scale = LEyeMesh.Scale:lerp(Vector3.new(1,1,1), 0.1)
+			REyeMesh.Scale = REyeMesh.Scale:lerp(Vector3.new(1,1,1), 0.1)
+		end
+		wait(2)
+	end
+end))
+
+local BarrageS = false
+
+coroutine.resume(coroutine.create(function()
+	while wait() do
+		for _, o in pairs(BodyParts:GetChildren()) do
+			if o == RArm or o == LArm then
+				if BarrageS == false then
+					o.Material = LastMaterial
+					o.Color = o.Color:lerp(LastColor, 0.1)
+					o.Transparency = LastTrans
+				end
+			else
+
+				o.Material = LastMaterial
+				o.Color = o.Color:lerp(LastColor, 0.1)
+				o.Transparency = LastTrans
+			end
+		end
+	end
+end))
+
+coroutine.resume(coroutine.create(function()
+	while wait() do	
+		HealthBase.CFrame = HealthBase.CFrame:lerp(char.HumanoidRootPart.CFrame * CFrame.new(0, 9, 0), BlockSpeed)
+		Health.CFrame = Health.CFrame:lerp(HealthBase.CFrame, BlockSpeed*5)
+		Health.Size = Health.Size:lerp(Vector3.new(Hum.Health/Hum.MaxHealth*10.1, 2.1, 2.1), 0.1)
+	end
+end))
+
+
+-- REGEN
+coroutine.resume(coroutine.create(function()
+	while Hum.Health < Hum.MaxHealth do
+		Hum.Health = Hum.Health + 1
+		local r1 = math.random(-5, 5)
+		local r2 = math.random(-5, 5)
+		local r3 = math.random(-5, 5)
+		local c = math.random(1, 5)
+		local Parto = Instance.new("Part", Effects)
+		Parto.Material = "Neon"
+		Parto.Size = Vector3.new(0.2, 0.2, 0.2)
+		Parto.Shape = "Ball"
+		Parto.Anchored = true
+		Parto.CanCollide = false
+
+		if c == 1 then
+			Parto.Color = Color3.fromRGB(94, 255, 229)
+		elseif c == 2 then
+			Parto.Color = Color3.fromRGB(48, 255, 62)
+		elseif c == 3 then
+			Parto.Color = Color3.fromRGB(81, 255, 0)
+		elseif c == 4 then
+			Parto.Color = Color3.fromRGB(44, 252, 255)
+		elseif c == 5 then
+			Parto.Color = Color3.fromRGB(58, 180, 255)
+		end
+
+		Parto.CFrame = Torso.CFrame * CFrame.new(r1, r2, r3)
+		coroutine.resume(coroutine.create(function()
+			for i = 1, 50 do
+				wait()
+				Parto.CFrame = Parto.CFrame:lerp(Torso.CFrame, 0.1)
+				Parto.Transparency = Parto.Transparency + 0.05
+				if Parto.Transparency >= 1 then
+					Parto:Destroy()
+				end
+			end
+		end))
+		wait()
+	end
+end))
+
+local RoarPower = 0
+local RoarCharge = false
+
+
+
+local ChargeKame = false
+local KamePower = 0
+local KameCool = false
+local beamgo = 6
+
+
+function FireKame()
+	for i = 1,50 do
+		RS.RenderStepped:wait()
+		PlayAnimationFromTable({
+			CFrame.new(0,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(0), mr(0), mr(0)), -- Torso, 
+			CFrame.new(0,1.5,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(0), mr(0), 0), ----- Head
+			CFrame.new(1,0.4,-1.2) * CFrame.new(0, 0, 0.2) * CFrame.Angles(mr(90), mr(0), mr(-20)),  --- RightArm
+			CFrame.new(-1,0.4,-1.2) * CFrame.new(0, 0, 0.2) * CFrame.Angles(mr(90), mr(0), mr(20)),--LeftArm 
+			CFrame.new(0.6,-2,0.2) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(-5), mr(-5), mr(5)), --RightLeg
+			CFrame.new(-0.6,-2,0.2) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(-5), mr(5), mr(-5)), --LeftLeg
+		}, .3, false)			
+	end	
+
+	local Base1 = Instance.new("Part", char)
+	Base1.Anchored = true
+	Base1.Material = "Neon"
+	Base1.Size = V3.new(KamePower + 1, KamePower + 1, KamePower + 1)
+	Base1.Shape = "Block"
+	Base1.Color = Color3.fromRGB(255, 81, 0)
+	Base1.CFrame = char.HumanoidRootPart.CFrame * CF.new(0, 0.5, -1.8)
+	Base1.CanCollide = false
+	local Mesh = Instance.new("SpecialMesh", Base1)
+	Mesh.MeshType = "Sphere"
+
+	local Beam = Instance.new("Part", char)
+	Beam.Anchored = true
+	Beam.Material = "Neon"
+	Beam.Size = V3.new(0, KamePower- 0.8, KamePower- 0.8)
+	Beam.Shape = "Block"
+	Beam.Color = Color3.fromRGB(255, 157, 0)
+	Beam.CFrame = Base1.CFrame * CFrame.Angles(0,mr(180),0)
+	Beam.CanCollide = false
+	local Mesh = Instance.new("SpecialMesh", Beam)
+	Mesh.MeshType = "Cylinder"
+	coroutine.resume(coroutine.create(function()
+		for i = 1,100 do
+			wait()
+			beamgo = beamgo + 10
+			Beam.CFrame = Base1.CFrame * CFrame.Angles(0,mr(90),0) * CFrame.new(beamgo,0,0) 
+			Beam.Size = V3.new(beamgo * 2, KamePower + 0.5, KamePower + 0.5)
+
+
+		end
+	end))
+
+
+
+
+	wait(5)
+
+	for i = 1,200 do
+		RS.RenderStepped:wait()
+		beamgo = beamgo - 1
+		Beam.Size = Beam.Size - V3.new(0,0.01,0.01)
+		Base1.Size = Base1.Size - V3.new(0.01,0.01,0.01)
+		Beam.Transparency = Beam.Transparency + 0.01
+		Base1.Transparency = Base1.Transparency + 0.01
+		if Base1.Transparency >= 1 then
+			Base1:Destroy()
+			Beam:Destroy()
+		end
+	end
+	Hum.WalkSpeed = 16
+	Hum.JumpPower = 50
+	KamePower = 0
+	beamgo = 6
+	Pause = false
+end
+
+
+function Kamehameha()
+	if not KameCool then
+		KameCool = true
+		Hum.WalkSpeed = 0
+		Hum.JumpPower = 0
+
+		for i = 1,50 do
+			RS.RenderStepped:wait()
+			PlayAnimationFromTable({
+				CFrame.new(0,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(-5), mr(-60), mr(-5)), -- Torso, 
+				CFrame.new(0,1.5,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(5), mr(60), 0), ----- Head
+				CFrame.new(1.5,0,-0.3) * CFrame.new(0, 0, 0.2) * CFrame.Angles(mr(60), mr(15), mr(40)),  --- RightArm
+				CFrame.new(-0.5,0.1,-1.2) * CFrame.new(0, 0, 0.2) * CFrame.Angles(mr(140), mr(-35), mr(90)),--LeftArm 
+				CFrame.new(0.6,-2,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(5), mr(-5), mr(5)), --RightLeg
+				CFrame.new(-0.6,-2,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(5), mr(60), mr(-5)), --LeftLeg
+			}, .3, false)			
+		end
+		Base = Instance.new("Part", char)
+		Base.CanCollide = false
+		Base.Anchored = true
+		Base.Material = "Neon"
+		Base.Size = V3.new(0, 0, 0)
+		Base.Shape = "Ball"
+		Base.Color = Color3.fromRGB(255, 157, 0)
+		Base.CFrame = char.HumanoidRootPart.CFrame * CF.new(2.3, -0.1, 0)	
+		coroutine.resume(coroutine.create(function()
+			while wait() and ChargeKame == true do
+				if KamePower >= 1.180 then
+					FireKame()
+					ChargeKame = false
+				else
+					KamePower = KamePower + 0.002
+					Base.Size = V3.new(KamePower, KamePower, KamePower)
+				end
+			end
+		end))
+		wait(2)
+		KameCool = false
+	end
+end
+
+
+
+
+
+function ChargeRoar()
+	Hum.WalkSpeed = 0
+	Hum.JumpPower = 0
+	Pause = true
+
+	local Ball = Instance.new("Part", Effects)
+	Ball.Name = "RoarCharge"
+	Ball.Material = LastMaterial
+	Ball.Color = LastColor
+	Ball.Size = Vector3.new(0,0,0)
+	Ball.Shape = "Ball"
+	Ball.CanCollide = false
+	Ball.Anchored = true
+	Ball.CFrame = Head.CFrame * CFrame.new(0,2,-1)
+
+	coroutine.resume(coroutine.create(function()
+		while wait() and RoarCharge == true do
+
+			PlayAnimationFromTable({
+				CFrame.new(0,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(0), mr(0), 0), -- Torso, 
+				CFrame.new(0,1.5,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(70), mr(0), 0), ----- Head
+				CFrame.new(1.5,0,0) * CFrame.new(0.3, 0-.1*math.sin(tick()*1), 0) * CFrame.Angles(mr(0),mr(0),mr(10)),  --- RightArm
+				CFrame.new(-1.5,0,0) * CFrame.new(-0.3, 0-.1*math.sin(tick()*1), 0) * CFrame.Angles(mr(0), mr(0), mr(-10)),--LeftArm 
+				CFrame.new(0.5,-2,0) * CFrame.new(0, 0, 0) * CFrame.Angles(0, mr(20), 0), --RightLeg
+				CFrame.new(-0.5,-2,0) * CFrame.new(-0.4, 0, -0.4) * CFrame.Angles(0, mr(20), mr(-10)), --LeftLeg
+			}, .3, false)
+
+			RoarPower = RoarPower + 0.01
+			Ball.Size = Vector3.new(RoarPower, RoarPower, RoarPower)
+			Ball.CFrame = Ball.CFrame * CFrame.new(0,0.005,0)
+		end
+	end))
+end
+
+
+function FireRoar()
+	local Ball = Effects.RoarCharge
+	for i = 1, 50 do
+		RS.RenderStepped:wait()
+		Ball.CFrame = Ball.CFrame:lerp(Head.CFrame, 0.1)
+		Ball.Size = Ball.Size:lerp(Vector3.new(0,0,0), 0.1)
+	end
+
+	for i = 1, 10 do
+		RS.RenderStepped:wait()
+		PlayAnimationFromTable({
+			CFrame.new(0,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(0), mr(0), 0), -- Torso, 
+			CFrame.new(0,1.5,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(0), mr(0), 0), ----- Head
+			CFrame.new(1.5,0,0) * CFrame.new(0.3, 0-.1*math.sin(tick()*1), 0) * CFrame.Angles(mr(0),mr(0),mr(10)),  --- RightArm
+			CFrame.new(-1.5,0,0) * CFrame.new(-0.3, 0-.1*math.sin(tick()*1), 0) * CFrame.Angles(mr(0), mr(0), mr(-10)),--LeftArm 
+			CFrame.new(0.5,-2,0) * CFrame.new(0, 0, 0) * CFrame.Angles(0, mr(20), 0), --RightLeg
+			CFrame.new(-0.5,-2,0) * CFrame.new(-0.4, 0, -0.4) * CFrame.Angles(0, mr(20), mr(-10)), --LeftLeg
+		}, .3, false)
+	end
+	RoarS:Play()
+	Ball:Destroy()
+
+	for i = 1, 100 do
+		wait(0.1)
+		local rad1 = math.random(-1, 1)
+		local rad2 = math.random(-1, 1)
+		local rad3 = math.random(-1, 1)
+
+		local color = math.random(1, 2)
+
+		local Roar = Instance.new("Part", Effects)
+		Roar.Name = "Roar"
+		Roar.Material = "Neon"
+		if RoarPower <= 2 then
+			Roar.Shape = "Ball"
+			Roar.CFrame = Head.CFrame
+			if color == 1 then
+				Roar.Color = Color3.fromRGB(255, 81, 0)
+			elseif color == 2 then
+				Roar.Color = Color3.fromRGB(255, 157, 0)
+			end
+
+		elseif RoarPower >= 2 then
+			Roar.Shape = "Ball"
+			Roar.CFrame = Head.CFrame
+			if color == 1 then
+				Roar.Color = Color3.fromRGB(255, 0, 0)
+			elseif color == 2 then
+				Roar.Color = Color3.fromRGB(77, 0, 0)
+			end
+		end
+		Roar.Size = Vector3.new(0,0,0)
+		Roar.CanCollide = false
+		Roar.Anchored = true
+
+		coroutine.resume(coroutine.create(function()
+			for i = 1, 500 do
+				local Touchy = false
+
+				coroutine.resume(coroutine.create(function()
+					Roar.Touched:Connect(function(hit)
+						if Touchy == false then
+							Touchy = true
+							if hit.Parent:FindFirstChildOfClass("Humanoid") and not hit:IsDescendantOf(char) then
+								
+							end
+							wait(0.5)
+							Touchy = false
+						end
+					end)
+				end))				
+
+				RS.RenderStepped:wait()
+				Roar.CFrame = Roar.CFrame * CFrame.new(rad1/5,rad2/5,-1)
+				Roar.Size = Roar.Size + Vector3.new(0.5, 0.5, 0.5)
+				Roar.Transparency = Roar.Transparency + 0.007
+				if Roar.Transparency >= 1 then
+					Roar:Destroy()
+				end
+			end
+		end))
+	end
+	Hum.WalkSpeed = 16
+	Hum.JumpPower = 50
+	Pause = false
+	RoarPower = 0
+end
+
+
+
+
+function GroundWave2(origin, color, color2)
+	if origin ~= nil then
+		local part = Instance.new("Part", origin)
+		part.Anchored = true
+		part.CanCollide = false
+		part.Color = color
+		part.Size = Vector3.new(1,1,1)
+		part.Transparency = 0.4
+		part.Material = "Neon"
+		part.CFrame = origin.CFrame
+		local Mesh = Instance.new("SpecialMesh", part)
+		Mesh.MeshType = "Sphere"
+		Mesh.Scale = Vector3.new(1,1,1)
+
+		local part2 = Instance.new("Part", origin)
+		part2.Anchored = true
+		part2.CanCollide = false
+		part2.Color = color2
+		part2.Size = Vector3.new(1,1,1)
+		part2.Material = "Neon"
+		part2.CFrame = origin.CFrame
+		local Mesh2 = Instance.new("SpecialMesh", part2)
+		Mesh2.MeshType = "Sphere"
+		Mesh2.Scale = Vector3.new(0.8,0.8,0.8)
+
+		local Ring = Instance.new("Part", char)
+		Ring.Anchored = true
+		Ring.CanCollide = false
+		Ring.CFrame = part.CFrame
+		local RingMesh = Instance.new("SpecialMesh", Ring)
+		RingMesh.MeshId = "rbxassetid://471124075"
+		RingMesh.Scale = Vector3.new(0,0,0)	
+
+		local Ring2 = Instance.new("Part", char)
+		Ring2.Anchored = true
+		Ring2.CanCollide = false
+		Ring2.CFrame = part.CFrame * CFrame.Angles(0,0,mr(90))
+		local RingMesh2 = Instance.new("SpecialMesh", Ring2)
+		RingMesh2.MeshId = "rbxassetid://471124075"
+		RingMesh2.Scale = Vector3.new(0.02,0,0.02)	
+
+		coroutine.resume(coroutine.create(function()
+			for i = 1, 120 do
+				RS.RenderStepped:wait()
+				Mesh.Scale = Mesh.Scale + Vector3.new(1, 0.3, 1)
+				part.Transparency = part.Transparency + 0.01
+
+				Mesh2.Scale = Mesh2.Scale + Vector3.new(0.8, 0.1, 0.8)
+				part2.Transparency = part2.Transparency + 0.01
+				if part.Transparency >= 1 then
+					part:Destroy()
+				end
+
+				if part2.Transparency >= 1 then
+					part2:Destroy()
+				end
+				RingMesh.Scale = RingMesh.Scale + Vector3.new(0.02,0,0.02)
+				Ring.Transparency = Ring.Transparency + 0.02
+
+				RingMesh2.Scale = RingMesh2.Scale + Vector3.new(0.02,0,0.02)
+				Ring2.Transparency = Ring2.Transparency + 0.02
+				if Ring.Transparency >= 1 then
+					Ring:Destroy()
+					Ring2:Destroy()
+				end
+			end
+		end))
+
+	end
+end
+
+
+
+
+local BarrCool = false
+
+function Barrage()
+	coroutine.resume(coroutine.create(function()
+		while wait() and BarrageS == true do
+
+			for i = 1, 2 do -- Right Punch
+				RS.RenderStepped:wait()
+				BlockRightArm.Material = "Neon"
+				local color = math.random(1, 2)
+				if color == 1 then
+					BlockRightArm.Color = BlockRightArm.Color:lerp(Color3.fromRGB(255, 81, 0), 0.5)
+				elseif color == 2 then
+					BlockRightArm.Color = BlockRightArm.Color:lerp(Color3.fromRGB(255, 157, 0), 0.5)
+				end
+
+				BlockRightArm.Touched:Connect(function(hit)
+					if hit.Parent:FindFirstChildOfClass("Humanoid") and not hit:IsDescendantOf(char) then
+						if BarrCool == false and BarrageS == true then
+							BarrCool = true
+							GroundWave2(hit, Color3.fromRGB(255, 81, 0), Color3.fromRGB(255, 157, 0))
+							local Punchy = Punch:Clone()
+							Punchy.Parent = hit
+							Punchy:Play()
+							wait()
+							BarrCool = false
+						end
+					end
+				end)
+
+				PlayAnimationFromTable({
+					CFrame.new(0,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(0), mr(0), 0), -- Torso, 
+					CFrame.new(0,1.5,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(0), mr(0), 0), ----- Head
+					CFrame.new(1.5,0,0) * CFrame.new(0.3, 0, -3) * CFrame.Angles(mr(90),mr(0),mr(-20)),  --- RightArm
+					CFrame.new(-1.5,0,0) * CFrame.new(-0.3, 0, 2) * CFrame.Angles(mr(90), mr(0), mr(20)),--LeftArm 
+					CFrame.new(0.5,-2,0) * CFrame.new(0, 0, 0) * CFrame.Angles(0, mr(20), 0), --RightLeg
+					CFrame.new(-0.5,-2,0) * CFrame.new(-0.4, 0, -0.4) * CFrame.Angles(0, mr(20), mr(-10)), --LeftLeg
+				}, .5, false)			
+			end
+
+			for i = 1, 2 do -- Left Punch
+				RS.RenderStepped:wait()
+
+				BlockLeftArm.Material = "Neon"
+				local color = math.random(1, 2)
+				if color == 1 then
+					BlockLeftArm.Color = BlockLeftArm.Color:lerp(Color3.fromRGB(255, 81, 0), 0.5)
+				elseif color == 2 then
+					BlockLeftArm.Color = BlockLeftArm.Color:lerp(Color3.fromRGB(255, 157, 0), 0.5)
+				end
+
+				BlockLeftArm.Touched:Connect(function(hit)
+					if hit.Parent:FindFirstChildOfClass("Humanoid") and not hit:IsDescendantOf(char) then
+						if BarrCool == false and BarrageS == true then
+							BarrCool = true
+							
+							local Punchy = Punch:Clone()
+							Punchy.Parent = hit
+							Punchy:Play()
+							wait()
+							BarrCool = false
+						end
+					end
+				end)
+
+				PlayAnimationFromTable({
+					CFrame.new(0,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(0), mr(0), 0), -- Torso, 
+					CFrame.new(0,1.5,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(0), mr(0), 0), ----- Head
+					CFrame.new(1.5,0,0) * CFrame.new(0.3, 0, 2) * CFrame.Angles(mr(90),mr(0),mr(-20)),  --- RightArm
+					CFrame.new(-1.5,0,0) * CFrame.new(-0.3, 0, -3) * CFrame.Angles(mr(90), mr(0), mr(20)),--LeftArm 
+					CFrame.new(0.5,-2,0) * CFrame.new(0, 0, 0) * CFrame.Angles(0, mr(20), 0), --RightLeg
+					CFrame.new(-0.5,-2,0) * CFrame.new(-0.4, 0, -0.4) * CFrame.Angles(0, mr(20), mr(-10)), --LeftLeg
+				}, .5, false)			
+			end
+
+		end
+	end))
+end
+
+
+mouse.KeyDown:Connect(function(k)
+	if k == "e" then
+		RoarCharge = true
+		ChargeRoar()
+	end
+	if k == "r" then
+		Pause = true
+		ChargeKame = true
+		Kamehameha()
+	end
+	if k == "q" then
+		Pause = true
+		BarrageS = true
+		Barrage()
+	end
+end)
+
+mouse.KeyUp:Connect(function(k)
+	if k == "e" then
+		RoarCharge = false
+		FireRoar()
+	end
+	if k == "r" then
+		ChargeKame = false
+		FireKame()
+	end
+	if k == "q" then
+		Pause = false
+		BarrageS = false
+	end
+end)
+
+
+
+Humanoid.Animator.Parent = nil
+Character.Animate.Parent = nil
+
+local newMotor = function(part0, part1, c0, c1)
+	local w = Create('Motor'){
+		Parent = part0,
+		Part0 = part0,
+		Part1 = part1,
+		C0 = c0,
+		C1 = c1,
+	}
+	return w
+end
+function clerp(a, b, t)
+	return a:lerp(b, t)
+end
+
+RootCF = CFrame.fromEulerAnglesXYZ(-1.57, 0, 3.14)
+NeckCF = CFrame.new(0, 1, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+
+local RW = newMotor(Torso, RightArm, CFrame.new(1.5, 0, 0), CFrame.new(0, 0, 0)) 
+local LW = newMotor(Torso, LeftArm, CFrame.new(-1.5, 0, 0), CFrame.new(0, 0, 0))
+local RH = newMotor(Torso, RightLeg, CFrame.new(.5, -2, 0), CFrame.new(0, 0, 0))
+local LH = newMotor(Torso, LeftLeg, CFrame.new(-.5, -2, 0), CFrame.new(0, 0, 0))
+RootJoint.C1 = CFrame.new(0, 0, 0)
+RootJoint.C0 = CFrame.new(0, 0, 0)
+Torso.Neck.C1 = CFrame.new(0, 0, 0)
+Torso.Neck.C0 = CFrame.new(0, 1.5, 0)
+
+local rarmc1 = RW.C1
+local larmc1 = LW.C1
+local rlegc1 = RH.C1
+local llegc1 = LH.C1
+
+local resetc1 = false
+
+function PlayAnimationFromTable(table, speed, bool)
+	RootJoint.C0 = clerp(RootJoint.C0, table[1], speed) 
+	Torso.Neck.C0 = clerp(Torso.Neck.C0, table[2], speed) 
+	RW.C0 = clerp(RW.C0, table[3], speed) 
+	LW.C0 = clerp(LW.C0, table[4], speed) 
+	RH.C0 = clerp(RH.C0, table[5], speed) 
+	LH.C0 = clerp(LH.C0, table[6], speed) 
+	if bool == true then
+		if resetc1 == false then
+			resetc1 = true
+			RootJoint.C1 = RootJoint.C1
+			Torso.Neck.C1 = Torso.Neck.C1
+			RW.C1 = rarmc1
+			LW.C1 = larmc1
+			RH.C1 = rlegc1
+			LH.C1 = llegc1
+		end
+	end
+end
+
+ArtificialHB = Create("BindableEvent", script){
+	Parent = script,
+	Name = "Heartbeat",
+}
+
+script:WaitForChild("Heartbeat")
+
+frame = 1 / 30
+tf = 0
+allowframeloss = false
+tossremainder = false
+lastframe = tick()
+script.Heartbeat:Fire()
+
+game:GetService("RunService").Heartbeat:connect(function(s, p)
+	tf = tf + s
+	if tf >= frame then
+		if allowframeloss then
+			script.Heartbeat:Fire()
+			lastframe = tick()
+		else
+			for i = 1, math.floor(tf / frame) do
+				script.Heartbeat:Fire()
+			end
+			lastframe = tick()
+		end
+		if tossremainder then
+			tf = 0
+		else
+			tf = tf - frame * math.floor(tf / frame)
+		end
+	end
+end)
+
+function swait(num)
+	if num == 0 or num == nil then
+		ArtificialHB.Event:wait()
+	else
+		for i = 0, num do
+			ArtificialHB.Event:wait()
+		end
+	end
+end
+
+
+
+
+
+New = function(Object, Parent, Name, Data)
+	local Object = Instance.new(Object)
+	for Index, Value in pairs(Data or {}) do
+		Object[Index] = Value
+	end
+	Object.Parent = Parent
+	Object.Name = Name
+	return Object
+end
+function rayCast(Position, Direction, Range, Ignore)
+	return game:service("Workspace"):FindPartOnRay(Ray.new(Position, Direction.unit * (Range or 999.999)), Ignore) 
+end 
+
+
+
+
+coroutine.wrap(function()
+	while 1 do
+		swait()
+		if doe <= 360 then
+			doe = doe + 2
+		else
+			doe = 0
+		end
+	end
+end)()
+while true and (animen == true) do
+	swait()
+
+	Torsovelocity = (RootPart.Velocity * Vector3.new(1, 0, 1)).magnitude 
+	velocity = RootPart.Velocity.y
+	sine = sine + change
+	local hit, pos = rayCast(RootPart.Position, (CFrame.new(RootPart.Position, RootPart.Position - Vector3.new(0, 1, 0))).lookVector, 4, Character)
+	if RootPart.Velocity.y > 1 and hit == nil then
+		Anim = "Jump"
+		if Pause == false then
+			PlayAnimationFromTable({
+				CFrame.new(0,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(-10), 0, 0), -- Torso, 
+				CFrame.new(0,1.5,0) * CFrame.new(0, 0, 0.3) * CFrame.Angles(mr(50), mr(0), mr(0)), ----- Head
+				CFrame.new(1.5,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(50),0,mr(10)),  --- RightArm
+				CFrame.new(-1.5,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(50), 0, mr(-10)),--LeftArm 
+				CFrame.new(0.5,-2,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(-50), 0, mr(-15)), --RightLeg
+				CFrame.new(-0.5,-2,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(-50), 0, mr(15)), --LeftLeg
+			}, .3, false)
+		end
+	elseif RootPart.Velocity.y < -1 and hit == nil then 
+		Anim = "Fall"
+		if Pause == false then
+			PlayAnimationFromTable({
+				CFrame.new(0,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(-20), mr(0), 0), -- Torso, 
+				CFrame.new(0,1.5,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(-20), mr(0), 0), ----- Head
+				CFrame.new(1.5,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(0,0,mr(50)),  --- RightArm
+				CFrame.new(-1.5,0,0) * CFrame.new(0, 0, 0.5) * CFrame.Angles(mr(0), 0, mr(-50)),--LeftArm 
+				CFrame.new(0.5,-2,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(-10), 0, mr(-15)), --RightLeg
+				CFrame.new(-0.5,-2,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(10), 0, mr(15)), --LeftLeg
+			}, .3, false)
+		end
+	elseif Torsovelocity < 1 and hit ~= nil then
+		Anim = "Idle"
+		if Pause == false then
+			change = 1
+			PlayAnimationFromTable({
+				CFrame.new(0,0,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(0), mr(0), 0), -- Torso, 
+				CFrame.new(0,1.5,0) * CFrame.new(0, 0, 0) * CFrame.Angles(mr(0), mr(0), 0), ----- Head
+				CFrame.new(1.5,0,0) * CFrame.new(0.3, 0-.1*math.sin(tick()*1), 0) * CFrame.Angles(mr(0),mr(0),mr(10)),  --- RightArm
+				CFrame.new(-1.5,0,0) * CFrame.new(-0.3, 0-.1*math.sin(tick()*1), 0) * CFrame.Angles(mr(0), mr(0), mr(-10)),--LeftArm 
+				CFrame.new(0.5,-2,0) * CFrame.new(0, 0, 0) * CFrame.Angles(0, mr(20), 0), --RightLeg
+				CFrame.new(-0.5,-2,0) * CFrame.new(-0.4, 0, -0.4) * CFrame.Angles(0, mr(20), mr(-10)), --LeftLeg
+			}, .3, false)
+		end
+
+	elseif Torsovelocity > 2 and hit ~= nil then
+		Anim = "Walk"
+		if Pause == false then
+			PlayAnimationFromTable({		
+				CFrame.new(0,0,0) * CFrame.new(0, 0-.1*math.sin(tick()*19), 0) * CFrame.Angles(-0.3, 0, 0+RootPart.RotVelocity.Y/30), -- Torso
+				CFrame.new(0,1.5,0) * CFrame.new(0, 0, 0) * CFrame.Angles(0.2, 0+RootPart.RotVelocity.Y/20, 0),  -- Head
+				CFrame.new(1.3,0.4,0) * CFrame.new(0, 0.2-.1*math.sin(tick()*17), 0.5) * CFrame.Angles(mr(-70),mr(-5),mr(10)),  --- RightArm
+				CFrame.new(-1.3,0.4, 0) * CFrame.new(0, 0.2-.1*math.sin(tick()*17), 0.5) * CFrame.Angles(mr(-70), mr(5), mr(-10)),--LeftArm 
+				CFrame.new(0.5,-2,0) * CFrame.new(0, 0, 0+ 1 * math.cos((sine) / 3)) * CFrame.Angles(math.rad(0 - 80 * math.cos((sine) / 3)), 0, 0-RootPart.RotVelocity.Y/33), 
+				CFrame.new(-0.5,-2,0) * CFrame.new(0, 0, 0- 1 * math.cos((sine) / 3)) * CFrame.Angles(math.rad(0 + 80 * math.cos((sine) / 3)), 0, 0-RootPart.RotVelocity.Y/33), 
+			}, .3, false)
+		end
+	end
+end
