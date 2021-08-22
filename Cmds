@@ -1214,7 +1214,7 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/sgsr"))()
 
 elseif
-	CMD.Text == ".sgsr" then
+	CMD.Text == ".grass man" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/grass%20man"))()
 
 elseif
