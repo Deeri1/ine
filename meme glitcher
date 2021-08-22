@@ -1,0 +1,1857 @@
+game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "gamer4"
+game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "gamer5"
+game:GetService("Players").LocalPlayer.Character["ShadowBladeMasterAccessory"].Name = "gamer6"
+
+_G.SelexityNet = true
+_G.StrongerNet = false-- you hats will not lag other that if your moving super fast.
+_G.Net = false -- your regular net. hats may lag behind if moving fast.
+_G.Bot = false -- bot reanimate
+_G.WeakNet = false --a weak net with little jitter
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DeeriHub/Deeri-Hub/main/Deeri%20net"))()
+wait(2.5)
+
+-----------------------------------------------------------------------
+--By Rufus14 (oh god) and edited by youngmacka123
+--owner = game:GetService("Players"):GetPlayerFromCharacter(script.Parent)
+owner = game.Players.LocalPlayer
+character = owner.Character
+character = character
+mode = 1
+mouse = game.Players.LocalPlayer:GetMouse()
+
+humanoid = character:findFirstChildOfClass("Humanoid")
+step = game:GetService("RunService").Stepped
+local remote = Instance.new("RemoteEvent", character)
+remote.Name = "remotenigga"
+local billboard = Instance.new("BillboardGui", character.Head)
+billboard.Adornee = character.Head
+billboard.StudsOffset = Vector3.new(-5.5, 4, 0)
+billboard.Size = UDim2.new(4,0,2,0)
+local text = Instance.new("TextLabel", billboard)
+text.Text = "😳Purity😳"
+local music = Instance.new("Sound", character.Head)
+music.SoundId = "rbxassetid://1076825525"
+music.Looped = true
+music.Name = "musicc"
+music.Volume = 5
+music:Play()
+mouse.KeyDown:connect(function(k)
+	if k == "1" then
+		mode = 1
+		text.Text = "😳Purity😳"
+		music.SoundId = "rbxassetid://1076825525"
+		music.Looped = true
+		music.Name = "musicc"
+		music.Volume = 5
+		music:Play()
+	end
+	if k == "2" then
+		mode = 2
+		text.Text = "mayhem?????😳😳"
+		music.SoundId = "rbxassetid://614032233"
+		music.Volume = 5
+		music.PlaybackSpeed = 1.2
+	end
+	if k == "3" then
+		mode = 3
+		text.Text = "The Big Black"
+		music.SoundId = "rbxassetid://1420353940"
+		music.Volume = 7
+		music.PlaybackSpeed = 1
+		music:Play()
+	end
+	if k == "4" then
+		mode = 4
+		text.Text = "inSANITY!😡😡😡😡😡"
+		music.SoundId = "rbxassetid://435019840"
+		music.Volume = 5
+		music.PlaybackSpeed = 1
+		music:Play()
+	end
+	if k == "5" then
+		mode = 5
+		text.Text = "CRAZY EPIC SHAKING FUNN Y!!!"
+		music.SoundId = "rbxassetid://1916505674"
+		music.Volume = 5
+		music.PlaybackSpeed = 1
+	end
+	if k == "6" then
+		seizure2 = false
+		mode = 7
+		text.Text = "RaiNBoW"
+		music.SoundId = "rbxassetid://4477802422"
+		music.Volume = 5
+		music.PlaybackSpeed =1+.3*SIN(sine/12)
+
+	end
+	if k == "7" then
+		errored = true
+		mode = 7
+		text.Text = "error"
+		music.SoundId = "rbxassetid://285685019"
+		music.Volume = 6
+		music.TimePosition = 0
+		music.Looped = false
+		music.PlaybackSpeed = 1
+	end
+end)
+text.BackgroundTransparency = 1
+text.TextScaled = true
+text.TextStrokeTransparency = 0
+text.TextStrokeColor3 = Color3.fromRGB(0,255,255)
+text.Size = billboard.Size
+text.Font = "Arcade"
+text.TextColor3 = Color3.fromRGB(255,255,255)
+char = owner.Character
+t = char.Torso
+h = char.Head
+ra = char["Right Arm"]
+la = char["Left Arm"]
+rl = char["Right Leg"]
+ll = char["Left Leg"]
+tors = char.Torso
+lleg = char["Left Leg"]
+root = char.HumanoidRootPart
+hed = char.Head
+rleg = char["Right Leg"]
+rarm = char["Right Arm"]
+larm = char["Left Arm"]
+radian = math.rad
+random = math.random
+Vec3 = Vector3.new
+Inst = Instance.new
+cFrame = CFrame.new
+angles = CFrame.Angles
+Euler = CFrame.fromEulerAnglesXYZ
+vt = Vector3.new
+bc = BrickColor.new
+br = BrickColor.random
+it = Instance.new
+cf = CFrame.new
+local flange = Instance.new("FlangeSoundEffect", music)
+flange.Depth = 1
+flange.Mix = 1
+flange.Rate = 2.4
+local rightarm = Instance.new("Weld", owner.Character.Torso)
+rightarm.Part0 = owner.Character.Torso
+rightarm.Part1 = owner.Character["Right Arm"]
+rightarm.C0 = CFrame.new(1.5,0,0)
+rightarm.Name = "RightArmWeld"
+local rightleg = Instance.new("Weld", owner.Character.Torso)
+rightleg.Part0 = owner.Character.Torso
+rightleg.Part1 = owner.Character["Right Leg"]
+rightleg.C0 = CFrame.new(0.5,-2,0)
+rightleg.Name = "RightLegWeld"
+local leftarm = Instance.new("Weld", owner.Character.Torso)
+leftarm.Part0 = owner.Character.Torso
+leftarm.Part1 = owner.Character["Left Arm"]
+leftarm.C0 = CFrame.new(-1.5,0,0)
+leftarm.Name = "LeftArmWeld"
+local leftleg = Instance.new("Weld", owner.Character.Torso)
+leftleg.Part0 = owner.Character.Torso
+leftleg.Part1 = owner.Character["Left Leg"]
+leftleg.C0 = CFrame.new(-0.5,-2,0)
+leftleg.Name = "LeftLegWeld"
+local head = Instance.new("Weld", owner.Character.Torso)
+head.Part0 = owner.Character.Torso
+head.Part1 = owner.Character.Head
+head.C0 = CFrame.new(0,1.5,0)
+head.Name = "HeadWeld"
+local humanoidrootpart = Instance.new("Weld", owner.Character.HumanoidRootPart)
+humanoidrootpart.Part0 = owner.Character.HumanoidRootPart
+humanoidrootpart.Part1 = owner.Character.Torso
+humanoidrootpart.Name = "HumanoidRootPartWeld"
+cananimate = true
+running = false
+sine = 0
+local SINE = 1
+SIN = math.sin
+rootpart = character.HumanoidRootPart
+seizure2 = false
+errored = false
+loudness = 0
+
+local ArtificialHB = Instance.new("BindableEvent", script)
+ArtificialHB.Name = "Heartbeat"
+
+script:WaitForChild("Heartbeat")
+
+local tf = 0
+local allowframeloss = false
+local tossremainder = false
+local lastframe = tick()
+local frame = 1/60
+ArtificialHB:Fire()
+function run(speed)
+	if speed > 5 and cananimate then
+		running = true
+	else
+		running = false
+	end
+end
+humanoid.Running:connect(run)
+spawn(run)
+game:GetService("RunService").Heartbeat:connect(function(s, p)
+	tf = tf + s
+	if tf >= frame then
+		if allowframeloss then
+			script.Heartbeat:Fire()
+			lastframe = tick()
+		else
+			for i = 1, math.floor(tf / frame) do
+				ArtificialHB:Fire()
+			end
+			lastframe = tick()
+		end
+		if tossremainder then
+			tf = 0
+		else
+			tf = tf - frame * math.floor(tf / frame)
+		end
+	end
+end)
+
+function swait(num)
+	if num == 0 or num == nil then
+		ArtificialHB.Event:wait()
+	else
+		for i = 0, num do
+			ArtificialHB.Event:wait()
+		end
+	end
+end
+function thread(f)
+	coroutine.resume(coroutine.create(f))
+end
+function clerp(a,b,t) 
+	local qa = {QuaternionFromCFrame(a)}
+	local qb = {QuaternionFromCFrame(b)} 
+	local ax, ay, az = a.x, a.y, a.z 
+	local bx, by, bz = b.x, b.y, b.z
+	local _t = 1-t
+	return QuaternionToCFrame(_t*ax + t*bx, _t*ay + t*by, _t*az + t*bz,QuaternionSlerp(qa, qb, t)) 
+end 
+function QuaternionFromCFrame(cf)
+	local mx, my, mz, m00, m01, m02, m10, m11, m12, m20, m21, m22 = cf:components()
+	local trace = m00 + m11 + m22
+	if trace > 0 then
+		local s = math.sqrt(1 + trace)
+		local recip = 0.5 / s
+		return (m21 - m12) * recip, (m02 - m20) * recip, (m10 - m01) * recip, s * 0.5
+	else
+		local i = 0
+		if m00 < m11 then
+			i = 1
+		end
+		if m22 > (i == 0 and m00 or m11) then
+			i = 2
+		end
+		if i == 0 then
+			local s = math.sqrt(m00 - m11 - m22 + 1)
+			local recip = 0.5 / s
+			return 0.5 * s, (m10 + m01) * recip, (m20 + m02) * recip, (m21 - m12) * recip
+		elseif i == 1 then
+			local s = math.sqrt(m11 - m22 - m00 + 1)
+			local recip = 0.5 / s
+			return (m01 + m10) * recip, 0.5 * s, (m21 + m12) * recip, (m02 - m20) * recip
+		elseif i == 2 then
+			local s = math.sqrt(m22 - m00 - m11 + 1)
+			local recip = 0.5 / s
+			return (m02 + m20) * recip, (m12 + m21) * recip, 0.5 * s, (m10 - m01) * recip
+		end
+	end
+end
+function QuaternionToCFrame(px, py, pz, x, y, z, w)
+	local xs, ys, zs = x + x, y + y, z + z
+	local wx, wy, wz = w * xs, w * ys, w * zs
+	local xx = x * xs
+	local xy = x * ys
+	local xz = x * zs
+	local yy = y * ys
+	local yz = y * zs
+	local zz = z * zs
+	return CFrame.new(px, py, pz, 1 - (yy + zz), xy - wz, xz + wy, xy + wz, 1 - (xx + zz), yz - wx, xz - wy, yz + wx, 1 - (xx + yy))
+end
+function QuaternionSlerp(a, b, t)
+	local cosTheta = a[1] * b[1] + a[2] * b[2] + a[3] * b[3] + a[4] * b[4]
+	local startInterp, finishInterp
+	if cosTheta >= 1.0E-4 then
+		if 1 - cosTheta > 1.0E-4 then
+			local theta = math.acos(cosTheta)
+			local invSinTheta = 1 / SIN(theta)
+			startInterp = SIN((1 - t) * theta) * invSinTheta
+			finishInterp = SIN(t * theta) * invSinTheta
+		else
+			startInterp = 1 - t
+			finishInterp = t
+		end
+	elseif 1 + cosTheta > 1.0E-4 then
+		local theta = math.acos(-cosTheta)
+		local invSinTheta = 1 / SIN(theta)
+		startInterp = SIN((t - 1) * theta) * invSinTheta
+		finishInterp = SIN(t * theta) * invSinTheta
+	else
+		startInterp = t - 1
+		finishInterp = t
+	end
+	return a[1] * startInterp + b[1] * finishInterp, a[2] * startInterp + b[2] * finishInterp, a[3] * startInterp + b[3] * finishInterp, a[4] * startInterp + b[4] * finishInterp
+end
+function rayCast(Position, Direction, Range, Ignore)
+	return game:service("Workspace"):FindPartOnRay(Ray.new(Position, Direction.unit * (Range or 999.999)), Ignore)
+end
+New = function(Object, Parent, Name, Data)
+	local Object = Instance.new(Object)
+	for Index, Value in pairs(Data or {}) do
+		Object[Index] = Value
+	end
+	Object.Parent = Parent
+	Object.Name = Name
+	return Object
+end
+local halocolor = BrickColor.new("Pastel light blue")
+local halocolor2 = BrickColor.new("Cool yellow")
+local starcolor = BrickColor.new("Bright yellow")
+local lunacolor = BrickColor.new("Navy blue")
+local lunacolor2 = BrickColor.new("Bright blue")
+local wepcolor = BrickColor.new("Really black")
+local maincolor = BrickColor.new("Really black")
+local m = Instance.new("Model",char)
+local m2 = Instance.new("Model",char)
+local m3 = Instance.new("Model",char)
+local mw1 = Instance.new("Model",char)
+local mw2 = Instance.new("Model",char)
+
+local extrawingmod1 = Instance.new("Model",char)
+local extrawingmod2 = Instance.new("Model",char)
+
+function CreateParta(parent,transparency,reflectance,material,brickcolor)
+	local p = Instance.new("Part")
+	p.TopSurface = 0
+	p.BottomSurface = 0
+	p.Parent = parent
+	p.Size = Vector3.new(0.1,0.1,0.1)
+	p.Transparency = transparency
+	p.Reflectance = reflectance
+	p.CanCollide = false
+	p.Locked = true
+	p.BrickColor = brickcolor
+	p.Material = material
+	return p
+end
+
+function CreateMesh(parent,meshtype,x1,y1,z1)
+	local mesh = Instance.new("SpecialMesh",parent)
+	mesh.MeshType = meshtype
+	mesh.Scale = Vector3.new(x1*10,y1*10,z1*10)
+	return mesh
+end
+
+function CreateSpecialMesh(parent,meshid,x1,y1,z1)
+	local mesh = Instance.new("SpecialMesh",parent)
+	mesh.MeshType = "FileMesh"
+	mesh.MeshId = meshid
+	mesh.Scale = Vector3.new(x1,y1,z1)
+	return mesh
+end
+
+
+function CreateSpecialGlowMesh(parent,meshid,x1,y1,z1)
+	local mesh = Instance.new("SpecialMesh",parent)
+	mesh.MeshType = "FileMesh"
+	mesh.MeshId = meshid
+	mesh.TextureId = "http://www.roblox.com/asset/?id=269748808"
+	mesh.Scale = Vector3.new(x1,y1,z1)
+	mesh.VertexColor = Vector3.new(parent.BrickColor.r, parent.BrickColor.g, parent.BrickColor.b)
+	return mesh
+end
+
+function CreateWeld(parent,part0,part1,C1X,C1Y,C1Z,C1Xa,C1Ya,C1Za,C0X,C0Y,C0Z,C0Xa,C0Ya,C0Za)
+	local weld = Instance.new("Weld")
+	weld.Parent = parent
+	weld.Part0 = part0
+	weld.Part1 = part1
+	weld.C1 = CFrame.new(C1X,C1Y,C1Z)*CFrame.Angles(C1Xa,C1Ya,C1Za)
+	weld.C0 = CFrame.new(C0X,C0Y,C0Z)*CFrame.Angles(C0Xa,C0Ya,C0Za)
+	return weld
+end
+
+
+--------------
+local secondchar = Instance.new("Model",char)
+local GhostCol = BrickColor.new("Really red")
+local sectors = CreateParta(secondchar,1,0,"Neon",GhostCol)
+CreateMesh(sectors,"Brick",2*8,2*8,1*8)
+local torsweld = CreateWeld(sectors,root,sectors,1,-1,-2,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+local seclarm = CreateParta(secondchar,1,0,"Neon",GhostCol)
+CreateMesh(seclarm,"Brick",1*8,2*8,1*8)
+local larmsweld = CreateWeld(seclarm,sectors,seclarm,1.5,0,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+local secrarm = CreateParta(secondchar,1,0,"Neon",GhostCol)
+CreateMesh(secrarm,"Brick",1*8,2*8,1*8)
+local rarmsweld = CreateWeld(secrarm,sectors,secrarm,-1.5,0,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+local seclleg = CreateParta(secondchar,1,0,"Neon",GhostCol)
+CreateMesh(seclleg,"Brick",1*8,2*8,1*8)
+local llegsweld = CreateWeld(seclleg,sectors,seclleg,0.5,2,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+local secrleg = CreateParta(secondchar,1,0,"Neon",GhostCol)
+CreateMesh(secrleg,"Brick",1*8,2*8,1*8)
+local rlegsweld = CreateWeld(secrleg,sectors,secrleg,-0.5,2,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+local seched = CreateParta(secondchar,1,0,"Neon",GhostCol)
+CreateMesh(seched,"Brick",1*8,1*8,1*8)
+local hedsweld = CreateWeld(seched,sectors,seched,0,-1.5,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+--------------
+local sorb = CreateParta(m,1,1,"SmoothPlastic",BrickColor.random())
+CreateWeld(sorb,rarm,sorb,0,1,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+local sorb2 = CreateParta(m,1,1,"SmoothPlastic",BrickColor.random())
+CreateWeld(sorb2,larm,sorb2,0,1,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+local handlex = CreateParta(mw2,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0,0,0)
+local handlexweld = CreateWeld(handlex,tors,handlex,0,-1.5,-1.05,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+local valuaring = 10
+for i = 0, 49 do
+	valuaring = valuaring + 10
+	rn = CreateParta(mw2,0,0,"Neon",halocolor)
+	CreateMesh(rn,"Brick",0.25,0.1,0.1)
+	CreateWeld(rn,handlex,rn,0,1,0,math.rad(0),math.rad(0),math.rad(valuaring),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+end
+
+handlex = CreateParta(mw2,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0,0,0)
+CreateWeld(handlex,tors,handlex,0,-3,-2.1,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+local valuaring = 10
+for i = 0, 49 do
+	valuaring = valuaring + 10
+	rn = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+	CreateMesh(rn,"Brick",0.5,0.2,0.2)
+	CreateWeld(rn,handlex,rn,0,2,0,math.rad(0),math.rad(0),math.rad(valuaring),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+end
+
+
+local handle = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local handleweld = CreateWeld(handle,tors,handle,0,-1.5,-1.05,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+--- Left wing.
+
+local lwing1 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local lwing1weld = CreateWeld(lwing1,handle,lwing1,3,0,0,math.rad(5),math.rad(0),math.rad(12.5),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing1,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing1,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,lwing1,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,lwing1,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+
+
+
+local lwing2 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local lwing2weld = CreateWeld(lwing2,handle,lwing2,4,1,0,math.rad(10),math.rad(0),math.rad(25),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing2,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing2,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,lwing2,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,lwing2,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+
+
+local lwing3 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local lwing3weld = CreateWeld(lwing3,handle,lwing3,4.75,2,0,math.rad(15),math.rad(0),math.rad(37.5),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing3,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing3,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,lwing3,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+wed = CreateParta(mw1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,lwing3,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+
+local lwing4 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local lwing4weld = CreateWeld(lwing4,handle,lwing4,5.75,3,0,math.rad(20),math.rad(0),math.rad(50),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing4,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing4,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,lwing4,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,lwing4,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+
+local lwing5 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local lwing5weld = CreateWeld(lwing5,handle,lwing5,6.75,4,0,math.rad(25),math.rad(0),math.rad(62.5),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing5,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing5,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,lwing5,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,lwing5,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+
+
+
+local lwing6 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local lwing6weld = CreateWeld(lwing6,handle,lwing6,7.75,5,0,math.rad(30),math.rad(0),math.rad(75),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing6,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,lwing6,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,lwing6,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(extrawingmod1,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,lwing6,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+
+
+-- Right wing.
+
+local rwing1 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local rwing1weld = CreateWeld(rwing1,handle,rwing1,-3,0,0,math.rad(5),math.rad(0),math.rad(-12.5),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+local hat = game:GetService("Players").LocalPlayer.Character["gamer4"]
+
+local function align(part0, part1)
+
+	part0.AccessoryWeld:Destroy()
+	local attachment0 = Instance.new("Attachment", part0)
+	attachment0.Position = Vector3.new(0, -0, 0) --Custom Positioning Values Here
+	attachment0.Orientation = Vector3.new(0, 0, -40) --Custom Rotationing Values here
+	local attachment1 = Instance.new("Attachment", part1)
+	local weldpos = Instance.new("AlignPosition", part0)
+	weldpos.Attachment0 = attachment0
+	weldpos.Attachment1 = attachment1
+	weldpos.RigidityEnabled = true
+	weldpos.ReactionForceEnabled = false
+	weldpos.ApplyAtCenterOfMass = false
+	weldpos.MaxForce = 20000
+	weldpos.MaxVelocity = math.huge
+	weldpos.Responsiveness = 200000000000000
+	local weldrot = Instance.new("AlignOrientation", part0)
+	weldrot.Attachment0 = attachment0
+	weldrot.Attachment1 = attachment1
+	weldrot.ReactionTorqueEnabled = false
+	weldrot.PrimaryAxisOnly = false
+	weldrot.MaxTorque = 200000000
+	weldrot.MaxAngularVelocity = math.huge
+	weldrot.Responsiveness = 200000000000000
+end
+align(hat.Handle, rwing1)
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing1,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing1,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,rwing1,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,rwing1,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+
+
+
+local rwing2 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local rwing2weld = CreateWeld(rwing2,handle,rwing2,-4,1,0,math.rad(10),math.rad(0),math.rad(-25),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+local hat = game:GetService("Players").LocalPlayer.Character["gamer5"]
+
+local function align(part0, part1)
+
+	part0.AccessoryWeld:Destroy()
+	local attachment0 = Instance.new("Attachment", part0)
+	attachment0.Position = Vector3.new(0, -0, 0) --Custom Positioning Values Here
+	attachment0.Orientation = Vector3.new(0, 0, -40) --Custom Rotationing Values here
+	local attachment1 = Instance.new("Attachment", part1)
+	local weldpos = Instance.new("AlignPosition", part0)
+	weldpos.Attachment0 = attachment0
+	weldpos.Attachment1 = attachment1
+	weldpos.RigidityEnabled = true
+	weldpos.ReactionForceEnabled = false
+	weldpos.ApplyAtCenterOfMass = false
+	weldpos.MaxForce = 20000
+	weldpos.MaxVelocity = math.huge
+	weldpos.Responsiveness = 200000000000000
+	local weldrot = Instance.new("AlignOrientation", part0)
+	weldrot.Attachment0 = attachment0
+	weldrot.Attachment1 = attachment1
+	weldrot.ReactionTorqueEnabled = false
+	weldrot.PrimaryAxisOnly = false
+	weldrot.MaxTorque = 200000000
+	weldrot.MaxAngularVelocity = math.huge
+	weldrot.Responsiveness = 200000000000000
+end
+align(hat.Handle, rwing2)
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing2,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing2,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,rwing2,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,rwing2,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+
+
+local rwing3 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local rwing3weld = CreateWeld(rwing3,handle,rwing3,-4.75,2,0,math.rad(15),math.rad(0),math.rad(-37.5),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+local hat = game:GetService("Players").LocalPlayer.Character["gamer6"]
+
+local function align(part0, part1)
+
+	part0.AccessoryWeld:Destroy()
+	local attachment0 = Instance.new("Attachment", part0)
+	attachment0.Position = Vector3.new(0, -0, 0) --Custom Positioning Values Here
+	attachment0.Orientation = Vector3.new(0, 0, -40) --Custom Rotationing Values here
+	local attachment1 = Instance.new("Attachment", part1)
+	local weldpos = Instance.new("AlignPosition", part0)
+	weldpos.Attachment0 = attachment0
+	weldpos.Attachment1 = attachment1
+	weldpos.RigidityEnabled = true
+	weldpos.ReactionForceEnabled = false
+	weldpos.ApplyAtCenterOfMass = false
+	weldpos.MaxForce = 20000
+	weldpos.MaxVelocity = math.huge
+	weldpos.Responsiveness = 200000000000000
+	local weldrot = Instance.new("AlignOrientation", part0)
+	weldrot.Attachment0 = attachment0
+	weldrot.Attachment1 = attachment1
+	weldrot.ReactionTorqueEnabled = false
+	weldrot.PrimaryAxisOnly = false
+	weldrot.MaxTorque = 200000000
+	weldrot.MaxAngularVelocity = math.huge
+	weldrot.Responsiveness = 200000000000000
+end
+align(hat.Handle, rwing3)
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing3,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing3,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,rwing3,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(mw2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,rwing3,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+
+
+
+
+local rwing4 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local rwing4weld = CreateWeld(rwing4,handle,rwing4,-5.75,3,0,math.rad(20),math.rad(0),math.rad(-50),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing4,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing4,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,rwing4,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,rwing4,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+
+
+
+local rwing5 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local rwing5weld = CreateWeld(rwing5,handle,rwing5,-6.75,4,0,math.rad(25),math.rad(0),math.rad(-62.5),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing5,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing5,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,rwing5,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,rwing5,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+
+
+
+local rwing6 = CreateParta(m,1,1,"Neon",maincolor)
+CreateMesh(handle,"Brick",0.5,0.5,0.5)
+local rwing6weld = CreateWeld(rwing6,handle,rwing6,-7.75,3,0,math.rad(30),math.rad(0),math.rad(-75),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing6,wed,0,0,0.25,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A0 = Instance.new('Attachment',wed)
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,0.5)
+CreateWeld(wed,rwing6,wed,0,0,0.25,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,0.5,3)
+CreateWeld(wed,rwing6,wed,0,-0.25,1.75,math.rad(0),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+wed = CreateParta(extrawingmod2,0,0,"Neon",halocolor)
+CreateMesh(wed,"Wedge",0.05,3,0.5)
+CreateWeld(wed,rwing6,wed,0,-1.75,0.25,math.rad(90),math.rad(90),math.rad(90),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+A1 = Instance.new('Attachment',wed)
+
+
+---- HERES THE RING
+
+
+--[[ran = CreateParta(m2,0,0,"SmoothPlastic",wepcolor)
+CreateMesh(ran,"Wedge",1.02,1.02,1.02)
+CreateWeld(ran,larm,ran,0,0.15,0,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+ran = CreateParta(m,0,0,"SmoothPlastic",wepcolor)
+CreateMesh(ran,"Wedge",0.9,0.9,1.025)
+CreateWeld(ran,larm,ran,0,0.155,0,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+ran = CreateParta(m,0,0,"SmoothPlastic",wepcolor)
+CreateMesh(ran,"Wedge",1.025,0.9,0.9)
+CreateWeld(ran,larm,ran,0,0.155,-0.025,math.rad(0),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+
+gan = CreateParta(m,0,0,"SmoothPlastic",wepcolor)
+CreateMesh(gan,"Brick",1.075,0.1,1.075)
+CreateWeld(gan,larm,gan,0,0.5,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+gan = CreateParta(m,0,0,"SmoothPlastic",wepcolor)
+CreateMesh(gan,"Brick",1.075,0.1,1.075)
+CreateWeld(gan,larm,gan,0,0.75,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+
+
+gan = CreateParta(m2,0,0,"Neon",halocolor2)
+CreateMesh(gan,"Brick",1.095,0.035,1.095)
+CreateWeld(gan,larm,gan,0,0.5,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+gan = CreateParta(m2,0,0,"Neon",halocolor2)
+CreateMesh(gan,"Brick",1.095,0.035,1.095)
+CreateWeld(gan,larm,gan,0,0.75,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+gane = CreateParta(m3,0,0,"SmoothPlastic",lunacolor2)
+CreateMesh(gane,"Brick",1.0625,0.2,1.0625)
+CreateWeld(gane,larm,gane,0,0.6,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+star = CreateParta(m,0,0,"SmoothPlastic",wepcolor)
+CreateSpecialMesh(star,"http://www.roblox.com/asset/?id=45428961",2.5,2.5,2.5)
+CreateWeld(star,larm,star,0,0.475,0.6,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+starl = CreateParta(m3,0,0,"SmoothPlastic",starcolor)
+CreateSpecialMesh(starl,"http://www.roblox.com/asset/?id=45428961",1.95,2.55,1.95)
+CreateWeld(starl,larm,starl,0,0.475,0.6,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+--- second ring
+
+ran = CreateParta(m2,0,0,"SmoothPlastic",wepcolor)
+CreateMesh(ran,"Wedge",1.02,1.02,1.02)
+CreateWeld(ran,rarm,ran,0,0.15,0,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+ran = CreateParta(m,0,0,"SmoothPlastic",wepcolor)
+CreateMesh(ran,"Wedge",0.9,0.9,1.025)
+CreateWeld(ran,rarm,ran,0,0.155,0,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+ran = CreateParta(m,0,0,"SmoothPlastic",wepcolor)
+CreateMesh(ran,"Wedge",1.025,0.9,0.9)
+CreateWeld(ran,rarm,ran,0,0.155,-0.025,math.rad(0),math.rad(-90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+gan = CreateParta(m,0,0,"SmoothPlastic",wepcolor)
+CreateMesh(gan,"Brick",1.075,0.1,1.075)
+CreateWeld(gan,rarm,gan,0,0.5,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+gan = CreateParta(m,0,0,"SmoothPlastic",wepcolor)
+CreateMesh(gan,"Brick",1.075,0.1,1.075)
+CreateWeld(gan,rarm,gan,0,0.75,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+
+
+gan = CreateParta(m2,0,0,"Neon",halocolor2)
+CreateMesh(gan,"Brick",1.095,0.035,1.095)
+CreateWeld(gan,rarm,gan,0,0.5,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+gan = CreateParta(m2,0,0,"Neon",halocolor2)
+CreateMesh(gan,"Brick",1.095,0.035,1.095)
+CreateWeld(gan,rarm,gan,0,0.75,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+gane = CreateParta(m3,0,0,"SmoothPlastic",lunacolor2)
+CreateMesh(gane,"Brick",1.0625,0.2,1.0625)
+CreateWeld(gane,rarm,gane,0,0.6,0,math.rad(0),math.rad(0),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+
+star = CreateParta(m,0,0,"SmoothPlastic",wepcolor)
+CreateSpecialMesh(star,"http://www.roblox.com/asset/?id=45428961",2.5,2.5,2.5)
+CreateWeld(star,rarm,star,0,-0.475,0.6,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+starl = CreateParta(m3,0,0,"SmoothPlastic",starcolor)
+CreateSpecialMesh(starl,"http://www.roblox.com/asset/?id=45428961",1.95,2.55,1.95)
+CreateWeld(starl,rarm,starl,0,-0.475,0.6,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))]]--
+
+
+
+local MAINRUINCOLOR = BrickColor.new("Toothpaste")
+for i, v in pairs(mw2:GetChildren()) do
+	if v:IsA("Part") then
+		v.BrickColor = MAINRUINCOLOR
+		v.Material = "Neon"
+	end
+end
+for i, v in pairs(mw1:GetChildren()) do
+	if v:IsA("Part") then
+		v.Transparency = 1
+		v.BrickColor = MAINRUINCOLOR
+		v.Material = "Neon"
+	end
+end
+for i, v in pairs(m:GetChildren()) do
+	if v:IsA("Part") then
+		v.BrickColor = BrickColor.new("White")
+		v.Material = "Ice"
+	end
+end
+for i, v in pairs(m2:GetChildren()) do
+	if v:IsA("Part") then
+		v.BrickColor = BrickColor.new("Pastel light blue")
+		v.Material = "Glass"
+	end
+end
+for i, v in pairs(m3:GetChildren()) do
+	if v:IsA("Part") then
+		v.BrickColor = BrickColor.new("Toothpaste")
+		v.Material = "Neon"
+	end
+end
+for i, v in pairs(extrawingmod1:GetChildren()) do
+	if v:IsA("Part") then
+		v.Transparency = 1
+		v.BrickColor = BrickColor.new("White")
+		v.Material = "Neon"
+	end
+end
+for i, v in pairs(extrawingmod2:GetChildren()) do
+	if v:IsA("Part") then
+		v.Transparency = 1
+		v.BrickColor = BrickColor.new("White")
+		v.Material = "Neon"
+	end
+end
+------
+
+local r = 255
+local g = 0
+local b = 0
+coroutine.resume(coroutine.create(function()
+	while wait() do
+		for i = 0, 254/5 do
+			swait()
+			g = g + 5
+		end
+		for i = 0, 254/5 do
+			swait()
+			r = r - 5
+		end
+		for i = 0, 254/5 do
+			swait()
+			b = b + 5
+		end
+		for i = 0, 254/5 do
+			swait()
+			g = g - 5
+		end
+		for i = 0, 254/5 do
+			swait()
+			r = r + 5
+		end
+		for i = 0, 254/5 do
+			swait()
+			b = b - 5
+		end
+	end
+end))
+
+if who == owner then
+	if what == "changemode" and not errored then
+		mode = mode + 1
+		if mode > 6 then
+			mode = 1
+		end
+		if mode == 1 then
+			text.Text = "😳Purity😳"
+			text.TextStrokeColor3 = Color3.fromRGB(0,255,255)
+			text.TextColor3 = Color3.fromRGB(255,255,255)
+			MAINRUINCOLOR = BrickColor.new("Toothpaste")
+			for i, v in pairs(mw2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = MAINRUINCOLOR
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(mw1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 1
+					v.BrickColor = MAINRUINCOLOR
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(m:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Ice"
+				end
+			end
+			for i, v in pairs(m2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Pastel light blue")
+					v.Material = "Glass"
+				end
+			end
+			for i, v in pairs(m3:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Toothpaste")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(extrawingmod1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 1
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(extrawingmod2:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 1
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Neon"
+				end
+			end
+			music.SoundId = "rbxassetid://1076825525"
+			music.Volume = 5
+			music.PlaybackSpeed = 1
+			flange.Depth = 1
+			flange.Mix = 1
+			flange.Rate = 2.4
+		elseif mode == 2 then
+			text.Text = "mayhem?????😳😳"
+			text.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+			text.TextColor3 = Color3.fromRGB(255,0,0)
+			for i, v in pairs(m:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Really black")
+					v.Material = "Glass"
+				end
+			end
+			for i, v in pairs(m2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Crimson")
+					v.Material = "Granite"
+				end
+			end
+			for i, v in pairs(m3:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Really red")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(mw2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Really red")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(mw1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 1
+					v.BrickColor = BrickColor.new("Really red")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(extrawingmod1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 1
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(extrawingmod2:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 1
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Neon"
+				end
+			end
+			MAINRUINCOLOR = BrickColor.new("Really red")
+			music.SoundId = "rbxassetid://614032233"
+			music.Volume = 5
+			music.PlaybackSpeed = 1.2
+			flange.Depth = 1
+			flange.Mix = 1
+			flange.Rate = 2.4
+		elseif mode == 3 then
+			music.SoundId = "rbxassetid://1420353940"
+			music.Volume = 7
+			music.PlaybackSpeed = 1
+			music:Play()
+			flange.Depth = 1
+			flange.Mix = 1
+			flange.Rate = 2.4
+			text.Text = "The Big Black"
+			text.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+			text.TextColor3 = Color3.fromRGB(0,0,0)
+			for i, v in pairs(mw2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Really black")
+					v.Material = "Glass"
+				end
+			end
+			for i, v in pairs(mw1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 0
+					v.BrickColor = BrickColor.new("Really black")
+					v.Material = "Glass"
+				end
+			end
+			for i, v in pairs(m:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Really black")
+					v.Material = "Glass"
+				end
+			end
+			for i, v in pairs(m2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Dark stone grey")
+					v.Material = "Granite"
+				end
+			end
+			for i, v in pairs(m3:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Really black")
+					v.Material = "Glass"
+				end
+			end
+			for i, v in pairs(extrawingmod1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 0
+					v.BrickColor = BrickColor.new("Dark stone grey")
+					v.Material = "Glass"
+				end
+			end
+			for i, v in pairs(extrawingmod2:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 0
+					v.BrickColor = BrickColor.new("Dark stone grey")
+					v.Material = "Glass"
+				end
+			end
+			local MAINRUINCOLOR = BrickColor.new("Really black")
+		elseif mode == 4 then
+			text.Text = "INSANITY! 😡😡"
+			text.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+			text.TextColor3 = Color3.fromRGB(0,0,0)
+			MAINRUINCOLOR = BrickColor.new("Black")
+			for i, v in pairs(mw2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = MAINRUINCOLOR
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(mw1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 0.75
+					v.BrickColor = BrickColor.random()
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(m:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Black")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(m2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.random()
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(m3:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Black")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(extrawingmod1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = .75
+					v.BrickColor = BrickColor.Random()
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(extrawingmod2:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 0
+					v.BrickColor = BrickColor.new("Black")
+					v.Material = "Neon"
+				end
+			end
+			music.SoundId = "rbxassetid://435019840"
+			music.Volume = 5
+			music.PlaybackSpeed = 1
+			music:Play()
+			flange.Depth = 1
+			flange.Mix = 1
+			flange.Rate = 1
+			coroutine.wrap(function()
+				while mode == 4 do
+					if mode == 4 then
+						text.Text = "INSanity! 😡😡"
+						MAINRUINCOLOR = BrickColor.new("Black")
+						for i, v in pairs(mw2:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = MAINRUINCOLOR
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(mw1:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = 0.75
+								v.BrickColor = BrickColor.random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m2:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m3:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(extrawingmod1:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = .75
+								v.BrickColor = BrickColor.Random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(extrawingmod2:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = 0
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						text.TextColor3 = Color3.fromRGB(math.random(1,255),math.random(1,255),math.random(1,255))
+						wait()
+					end
+					if mode == 4 then
+						text.Text = "insAINTY!😡😡😡"
+						MAINRUINCOLOR = BrickColor.new("Black")
+						for i, v in pairs(mw2:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = MAINRUINCOLOR
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(mw1:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = 0.75
+								v.BrickColor = BrickColor.random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m2:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m3:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(extrawingmod1:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = .75
+								v.BrickColor = BrickColor.Random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(extrawingmod2:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = 0
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						text.TextColor3 = Color3.fromRGB(math.random(1,255),math.random(1,255),math.random(1,255))
+						wait()
+					end
+					if mode == 4 then
+						text.Text = "insanity!😡"
+						MAINRUINCOLOR = BrickColor.new("Black")
+						for i, v in pairs(mw2:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = MAINRUINCOLOR
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(mw1:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = 0.75
+								v.BrickColor = BrickColor.random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m2:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m3:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(extrawingmod1:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = .75
+								v.BrickColor = BrickColor.Random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(extrawingmod2:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = 0
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						text.TextColor3 = Color3.fromRGB(math.random(1,255),math.random(1,255),math.random(1,255))
+						wait()
+					end
+					if mode == 4 then
+						text.Text = "INSANity!😡😡😡😡"
+						MAINRUINCOLOR = BrickColor.new("Black")
+						for i, v in pairs(mw2:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = MAINRUINCOLOR
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(mw1:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = 0.75
+								v.BrickColor = BrickColor.random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m2:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m3:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(extrawingmod1:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = .75
+								v.BrickColor = BrickColor.Random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(extrawingmod2:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = 0
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						text.TextColor3 = Color3.fromRGB(math.random(1,255),math.random(1,255),math.random(1,255))
+						wait()
+					end
+					if mode == 4 then
+						text.Text = "inSANITY!😡😡😡😡😡"
+						MAINRUINCOLOR = BrickColor.new("Black")
+						for i, v in pairs(mw2:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = MAINRUINCOLOR
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(mw1:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = 0.75
+								v.BrickColor = BrickColor.random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m2:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(m3:GetChildren()) do
+							if v:IsA("Part") then
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(extrawingmod1:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = .75
+								v.BrickColor = BrickColor.Random()
+								v.Material = "Neon"
+							end
+						end
+						for i, v in pairs(extrawingmod2:GetChildren()) do
+							if v:IsA("Part") then
+								v.Transparency = 0
+								v.BrickColor = BrickColor.new("Black")
+								v.Material = "Neon"
+							end
+						end
+						text.TextColor3 = Color3.fromRGB(math.random(1,255),math.random(1,255),math.random(1,255))
+						wait()
+					end
+				end
+			end)()
+		elseif mode == 5 then
+			text.Text = "CRAZY EPIC SHAKING FUNN Y!!!"
+			text.TextStrokeColor3 = Color3.fromRGB(255, 255, 0)
+			text.TextColor3 = Color3.fromRGB(0, 255, 0)
+			MAINRUINCOLOR = BrickColor.new("Bright green")
+			for i, v in pairs(mw2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = MAINRUINCOLOR
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(mw1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 0
+					v.BrickColor = MAINRUINCOLOR
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(m:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Bright green")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(m2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Bright green")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(m3:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("Bright green")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(extrawingmod1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 1
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(extrawingmod2:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 1
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Neon"
+				end
+			end
+			music.SoundId = "rbxassetid://1916505674"
+			music.Volume = 5
+			music.PlaybackSpeed = 1
+			flange.Depth = 1
+			flange.Mix = 1
+			flange.Rate = 1
+			seizure2 = false
+			coroutine.wrap(function()
+				while wait(1.225) and mode == 5 do
+					if seizure2 then
+						seizure2 = false
+					else
+						seizure2 = true
+					end
+				end
+			end)()
+		elseif mode == 6 then
+			text.Text = "RaiNBoW"
+			text.TextColor3 = Color3.new(1, 1, 1)
+			text.TextStrokeColor3 = Color3.new(r/255, g/255, b/255)
+			MAINRUINCOLOR = BrickColor.new("White")
+			for i, v in pairs(mw2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = MAINRUINCOLOR
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(mw1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 0
+					v.BrickColor = MAINRUINCOLOR
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(m:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(m2:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(m3:GetChildren()) do
+				if v:IsA("Part") then
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(extrawingmod1:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 1
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Neon"
+				end
+			end
+			for i, v in pairs(extrawingmod2:GetChildren()) do
+				if v:IsA("Part") then
+					v.Transparency = 1
+					v.BrickColor = BrickColor.new("White")
+					v.Material = "Neon"
+				end
+			end
+			music.SoundId = "rbxassetid://4477802422"
+			music.Volume = 5
+			music.PlaybackSpeed =1+.3*SIN(sine/12)
+			seizure2 = false
+			coroutine.wrap(function()
+				while mode == 6 do
+					wait()
+					text.TextStrokeColor3 = Color3.new(r/255, g/255, b/255)
+
+					if mode == 6 then
+						text.Text = "😳^*rAINBow%😳"
+						text.TextStrokeColor3 = Color3.fromRGB(math.random(1,255),math.random(1,255),math.random(1,255))
+						music.PlaybackSpeed =1+.3*SIN(sine/12)
+						wait()
+					end
+					if mode == 6 then
+						text.Text = "&^RaINBOw$😳😳😳"
+						text.TextStrokeColor3 = Color3.fromRGB(math.random(1,255),math.random(1,255),math.random(1,255))
+						music.PlaybackSpeed =1+.3*SIN(sine/12)
+						wait()
+					end
+					if mode == 6 then
+						text.Text = "*)-%^😳RainboW!😳😳😳😳😳😳😳%"
+						text.TextStrokeColor3 = Color3.fromRGB(math.random(1,255),math.random(1,255),math.random(1,255))
+						music.PlaybackSpeed =1+.3*SIN(sine/12)
+						wait()
+					end
+					if mode == 6 then
+						text.Text = "*>YeS F😳😳😳%"
+						text.TextStrokeColor3 = Color3.fromRGB(math.random(1,255),math.random(1,255),math.random(1,255))
+						music.PlaybackSpeed =1+.3*SIN(sine/12)
+						wait()
+					end
+					if mode == 6 then
+						text.Text = "RaiNBow!😳😳😳😳😳😳😳😳😳😳😳😳"
+						text.TextStrokeColor3 = Color3.fromRGB(math.random(1,255),math.random(1,255),math.random(1,255))
+						music.PlaybackSpeed =1+.3*SIN(sine/12)
+						wait()
+					end
+				end
+			end)()
+			music:Play()
+		end
+	elseif what == "error" and not errored then
+		cananimate = false
+		errored = true
+		mode = 7
+		text.Text = "error"
+		text.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+		text.TextColor3 = Color3.fromRGB(255, 0, 0)
+		music.SoundId = "rbxassetid://285685019"
+		music.Volume = 6
+		music.TimePosition = 0
+		music.Looped = false
+		music.PlaybackSpeed = 1
+		flange:destroy()
+		music.Ended:connect(function()
+			character:BreakJoints()
+			local ex = Instance.new("Explosion", workspace)
+			ex.Position = character.Head.Position
+			local boom = Instance.new("Sound", character.Head)
+			boom.SoundId = "rbxassetid://147722910"
+			boom.Volume = 5
+			boom.PlayOnRemove = true
+			boom:destroy()
+		end)
+		coroutine.wrap(function()
+			while step:wait() do
+				if loudness > 200 then
+					humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(math.sin(tick()*2)/1.5,math.cos(tick()*4)/3,0) * CFrame.Angles((math.random(-30,30)*loudness/2),(math.random(-30,30)*loudness/2),rootpart.RotVelocity.y/50+(math.random(-30,30)*loudness/2)+math.cos(tick()*2)),0.3)
+					head.C0 = head.C0:lerp(CFrame.new(0,1.5,0) * CFrame.Angles(0,0,0),0.6)
+					leftarm.C0 = leftarm.C0:lerp(CFrame.new(-2,0.5,0) * CFrame.Angles(0,0,-math.pi/2),0.6)
+					rightarm.C0 = rightarm.C0:lerp(CFrame.new(2,0.5,0) * CFrame.Angles(0,0,math.pi/2),0.6)
+					leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-1,0) * CFrame.Angles(0,0,math.rad(-20)) * CFrame.new(0,-1,0),0.6)
+					rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-1,0) * CFrame.Angles(0,0,math.rad(20)) * CFrame.new(0,-1,0),0.6)
+				else
+					humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(math.sin(tick()*2)/1.5,math.cos(tick()*4)/1.5,0) * CFrame.Angles(0,0,rootpart.RotVelocity.y/50+math.cos(tick()*2)),0.2)
+					head.C0 = head.C0:lerp(CFrame.new(0,1.5,0) * CFrame.Angles(0,0,0),0.3)
+					leftarm.C0 = leftarm.C0:lerp(CFrame.new(-1.5,0,0),0.2)
+					rightarm.C0 = rightarm.C0:lerp(CFrame.new(1.5,0,0),0.2)
+					leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-2,0),0.2)
+					rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-2,0),0.2)
+				end
+			end
+		end)()
+	elseif what == "loudness" then
+		loudness = message
+	elseif what == "SHARTER!!!!!!!!!!!!!!!!!!" and not errored then
+		local sharter = Instance.new("Sound", character.Head)
+		sharter.SoundId = "rbxassetid://1718412034"
+		sharter.Volume = 10
+		sharter:Play()
+		local echonigga = Instance.new("EchoSoundEffect", sharter)
+		echonigga.Delay = 0.1
+		echonigga.Feedback = 0.2
+		game.Debris:AddItem(sharter, sharter.TimeLength)
+		wait(sharter.TimeLength+0.1)
+		local sphere = Instance.new("Part", character.Head)
+		sphere.Material = "Neon"
+		sphere.Anchored = true
+		sphere.Shape = "Ball"
+		sphere.CFrame = message
+		sphere.Color = text.TextColor3
+		sphere.CanCollide = false
+		local ex = Instance.new("Explosion", workspace)
+		ex.Position = sphere.Position
+		ex.BlastPressure = math.huge
+		ex.BlastRadius = 20
+		local boom = Instance.new("Sound", sphere)
+		boom.SoundId = "rbxassetid://3140843322"
+		boom.Volume = 10
+		boom:Play()
+		game.Debris:AddItem(boom, 0.4)
+		coroutine.wrap(function()
+			for i = 1,25 do
+				sphere.Size = sphere.Size + Vector3.new(1.25,1.25,1.25)
+				sphere.Transparency = sphere.Transparency + 0.035
+				step:wait()
+			end
+			sphere:destroy()
+		end)()
+	end
+end
+
+animhype2 = false
+seizure = false
+coroutine.wrap(function()
+	while wait(5) do
+		if seizure then
+			seizure = false
+		else
+			seizure = true
+		end
+	end
+end)()
+coroutine.wrap(function()
+	while wait(0.5) do
+		if animhype2 then
+			animhype2 = false
+		else
+			animhype2 = true
+		end
+	end
+end)()
+
+while step:wait() do
+	if cananimate then
+		swait()
+		lwing1weld.C1 = clerp(lwing1weld.C1, cf(2, 0, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(5 + 10 * math.cos(sine / 32)), math.rad(0), math.rad(12.5 + 5 * math.cos(sine / 32))), 0.3)
+		lwing2weld.C1 = clerp(lwing2weld.C1, cf(3, 1, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(10 + 15 * math.cos(sine / 32)), math.rad(0), math.rad(25 + 7.5 * math.cos(sine / 32))), 0.3)
+		lwing3weld.C1 = clerp(lwing3weld.C1, cf(3.75, 2, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(15 + 20 * math.cos(sine / 32)), math.rad(0), math.rad(37.5 + 10 * math.cos(sine / 32))), 0.3)
+		lwing4weld.C1 = clerp(lwing4weld.C1, cf(4.75, 3, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(20 + 25 * math.cos(sine / 32)), math.rad(0), math.rad(50 + 12.5 * math.cos(sine / 32))), 0.3)
+		lwing5weld.C1 = clerp(lwing5weld.C1, cf(5.75, 4, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(25 + 30 * math.cos(sine / 32)), math.rad(0), math.rad(62.5 + 15 * math.cos(sine / 32))), 0.3)
+		lwing6weld.C1 = clerp(lwing6weld.C1, cf(6.75, 5, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(30 + 35 * math.cos(sine / 32)), math.rad(0), math.rad(75 + 17.5 * math.cos(sine / 32))), 0.3)
+		rwing1weld.C1 = clerp(rwing1weld.C1, cf(-2, 0, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(5 + 10 * math.cos(sine / 32)), math.rad(0), math.rad(-12.5 - 5 * math.cos(sine / 32))), 0.3)
+		rwing2weld.C1 = clerp(rwing2weld.C1, cf(-3, 1, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(10 + 15 * math.cos(sine / 32)), math.rad(0), math.rad(-25 - 7.5 * math.cos(sine / 32))), 0.3)
+		rwing3weld.C1 = clerp(rwing3weld.C1, cf(-3.75, 2, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(15 + 20 * math.cos(sine / 32)), math.rad(0), math.rad(-37.5 - 10 * math.cos(sine / 32))), 0.3)
+		rwing4weld.C1 = clerp(rwing4weld.C1, cf(-4.75, 3, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(20 + 25 * math.cos(sine / 32)), math.rad(0), math.rad(-50 - 12.5 * math.cos(sine / 32))), 0.3)
+		rwing5weld.C1 = clerp(rwing5weld.C1, cf(-5.75, 4, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(25 + 30 * math.cos(sine / 32)), math.rad(0), math.rad(-62.5 - 15 * math.cos(sine / 32))), 0.3)
+		rwing6weld.C1 = clerp(rwing6weld.C1, cf(-6.75, 5, 0) * angles(math.rad(0), math.rad(0), math.rad(0)) * angles(math.rad(30 + 35 * math.cos(sine / 32)), math.rad(0), math.rad(-75 - 17.5 * math.cos(sine / 32))), 0.3)
+		sine = sine + 1
+		if running and cananimate then
+			local rarmc0 = rightarm.C0
+			local larmc0 = leftarm.C0
+			local llegc0 = leftleg.C0
+			local rlegc0 = rightleg.C0
+			local humrootc0 = humanoidrootpart.C0
+			local headc0 = head.C0
+			for i = 0,1 , 0.16 do
+				if running and cananimate then
+					rightarm.C0 = rarmc0:lerp(CFrame.new(1.68157005, 0.0485486984, 0.884954453, 0.98480773, -0.171010077, 0.0301536564, 0.0593911707, 0.494882554, 0.866927743, -0.163175955, -0.851966381, 0.497520655),i)
+					leftarm.C0 = larmc0:lerp(CFrame.new(-1.5, 0.671010017, -0.469846725, 1, 0, 0, 0, -0.342020094, -0.939692557, 0, 0.939692616, -0.342020124),i)
+					leftleg.C0 = llegc0:lerp(CFrame.new(-0.5, -1.34202051, 0.939691544, 1, 3.55271368e-15, 0, -7.10542736e-15, 0.342020154, 0.939692616, 1.77635705e-15, -0.939692616, 0.342020154),i)
+					rightleg.C0 = rlegc0:lerp(CFrame.new(0.5, -1.04278755, -1.56604576, 1, 0, 0, 0, 0.642787635, -0.766044319, 0, 0.766044378, 0.642787755),i)
+					humanoidrootpart.C0 = humrootc0:lerp(CFrame.new(0, 0.18793869, -0.068403244, 1, 0, 0, 0, 0.939692497, 0.342020482, 0, -0.342020482, 0.939692497) * CFrame.new(0,-0.4,0),i)
+					head.C0 = headc0:lerp(CFrame.new(0, 1.46984625, 0.171009064, 1, 0, 0, 0, 0.939692497, -0.342020482, 0, 0.342020482, 0.939692497),i)
+					game:GetService("RunService").Heartbeat:wait()
+				end
+			end
+			local rarmc0 = rightarm.C0
+			local larmc0 = leftarm.C0
+			local llegc0 = leftleg.C0
+			local rlegc0 = rightleg.C0
+			local humrootc0 = humanoidrootpart.C0
+			local headc0 = head.C0
+			for i = 0,1 , 0.16 do
+				if running and cananimate then
+					rightarm.C0 = rarmc0:lerp(CFrame.new(1.56195927, -0.0699324608, 0.119949341, 0.98480773, -0.0868241489, 0.1503838, 0.0593911782, 0.982209623, 0.17814827, -0.163175985, -0.166510344, 0.972444296),i)
+					leftarm.C0 = larmc0:lerp(CFrame.new(-1.51513863, -0.129981518, -0.155303955, 0.998369873, 0.0540187061, 0.0184263606, -0.0462776423, 0.955111921, -0.292607933, -0.0334055424, 0.291278243, 0.956054926),i)
+					leftleg.C0 = llegc0:lerp(CFrame.new(-0.5, -0.863191605, -0.37587738, 1, 3.55271368e-15, 0, -7.10542736e-15, 0.342020154, 0.939692616, 1.77635705e-15, -0.939692616, 0.342020154),i)
+					rightleg.C0 = rlegc0:lerp(CFrame.new(0.5, -2.06334591, 0.204090118, 1, 8.8817842e-16, 0, -8.8817842e-16, 0.98480767, 0.173648238, 0, -0.173648268, 0.98480773),i)
+					humanoidrootpart.C0 = humrootc0:lerp(CFrame.new(0, 0, 0, 1, 0, 0, 0, 0.939692497, 0.342020482, 0, -0.342020482, 0.939692497) * CFrame.new(0,-0.4,0),i)
+					head.C0 = headc0:lerp(CFrame.new(0, 1.46984673, 0.171010971, 1, 0, 0, 0, 0.939692497, -0.342020482, 0, 0.342020482, 0.939692497),i)
+					game:GetService("RunService").Heartbeat:wait()
+				end
+			end
+			local rarmc0 = rightarm.C0
+			local larmc0 = leftarm.C0
+			local llegc0 = leftleg.C0
+			local rlegc0 = rightleg.C0
+			local humrootc0 = humanoidrootpart.C0
+			local headc0 = head.C0
+			for i = 0,1 , 0.16 do
+				if running and cananimate then
+					rightarm.C0 = rarmc0:lerp(CFrame.new(1.5, 0.671010017, -0.469846725, 1, 0, 0, 0, -0.342020035, -0.939692616, 0, 0.939692676, -0.342020065),i)
+					leftarm.C0 = larmc0:lerp(CFrame.new(-1.48023987, -0.0610394478, 0.792190552, 0.998369932, -0.0087661799, 0.0563976094, -0.0462775454, 0.454015464, 0.889791071, -0.033405453, -0.890950739, 0.452869713),i)
+					leftleg.C0 = llegc0:lerp(CFrame.new(-0.5, -1.26786566, -1.64663887, 1, 0, 0, 0, 0.642787933, -0.76604414, 0, 0.76604414, 0.642787993),i)
+					rightleg.C0 = rlegc0:lerp(CFrame.new(0.5, -1.42055845, 0.970134735, 1, 0, 0, 3.55271368e-15, 0.342020154, 0.939692616, 0, -0.939692616, 0.342020154),i)
+					humanoidrootpart.C0 = humrootc0:lerp(CFrame.new(0, 0.18793869, -0.068403244, 1, 0, 0, 0, 0.939692497, 0.342020482, 0, -0.342020482, 0.939692497) * CFrame.new(0,-0.4,0),i)
+					head.C0 = headc0:lerp(CFrame.new(0, 1.46984673, 0.171010971, 1, 0, 0, 0, 0.939692497, -0.342020482, 0, 0.342020482, 0.939692497),i)
+					game:GetService("RunService").Heartbeat:wait()
+				end
+			end
+			local rarmc0 = rightarm.C0
+			local larmc0 = leftarm.C0
+			local llegc0 = leftleg.C0
+			local rlegc0 = rightleg.C0
+			local humrootc0 = humanoidrootpart.C0
+			local headc0 = head.C0
+			for i = 0,1 , 0.16 do
+				if running and cananimate then
+					rightarm.C0 = rarmc0:lerp(CFrame.new(1.54040813, 0.09547472, 0.0500869751, 0.984807611, -0.0593915023, 0.163176641, 0.059391439, 0.998222768, 0.00488311052, -0.163176671, 0.00488239527, 0.986584723),i)
+					leftarm.C0 = larmc0:lerp(CFrame.new(-1.49622726, 0.0558686256, 0.152441025, 0.998369813, 0.0444596186, 0.03579133, -0.0462785624, 0.99758935, 0.0517075658, -0.0334061533, -0.0532796681, 0.998020709),i)
+					leftleg.C0 = llegc0:lerp(CFrame.new(-0.5, -1.93537951, 0.411506653, 1, 0, 0, 0, 0.939692199, 0.342021108, 0, -0.342021137, 0.939692259),i)
+					rightleg.C0 = rlegc0:lerp(CFrame.new(0.5, -0.941730499, -0.345434189, 1, 0, 0, 3.55271368e-15, 0.342020154, 0.939692616, 0, -0.939692616, 0.342020154),i)
+					humanoidrootpart.C0 = humrootc0:lerp(CFrame.new(0, 0, 0, 1, 0, 0, 0, 0.939692497, 0.342020482, 0, -0.342020482, 0.939692497) * CFrame.new(0,-0.4,0),i)
+					head.C0 = headc0:lerp(CFrame.new(0, 1.46984625, 0.171010971, 1, 0, 0, 0, 0.939692497, -0.342020482, 0, 0.342020482, 0.939692497),i)
+					game:GetService("RunService").Heartbeat:wait()
+				end
+			end
+		end
+		if mode == 1 then
+			humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(rootpart.RotVelocity.y/5,3+math.sin(sine/5)*3.5,-math.sin(sine/10)*2) * CFrame.fromEulerAnglesXYZ(-math.cos(sine/10),0,rootpart.RotVelocity.y/10),0.15)
+			head.C0 = head.C0:lerp(CFrame.new(0,1,0) * CFrame.Angles(-math.cos(sine/5) + math.rad(-20),0,0) * CFrame.new(0,0.5,0),0.15)
+			leftarm.C0 = leftarm.C0:lerp(CFrame.new(-1.5,0.5,0) * CFrame.Angles(0,0,math.rad(-40)+math.cos(sine/5)*2) * CFrame.new(0,-0.9,0),0.15)
+			rightarm.C0 = rightarm.C0:lerp(CFrame.new(1.5,0.5,0) * CFrame.Angles(0,0,math.rad(40)-math.cos(sine/5)*2) * CFrame.new(0,-0.9,0),0.15)
+			leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-1,0) * CFrame.Angles(-math.cos(sine/10),0,0) * CFrame.new(0,-1,0),0.15)
+			rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-1,0) * CFrame.Angles(-math.cos(sine/10),0,0) * CFrame.new(0,-1,0),0.15)
+		elseif mode == 2 then
+			humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(math.sin(sine/2)/3,0,0) * CFrame.Angles(0,0,math.sin(sine/2)/4+rootpart.RotVelocity.y/50),0.6)
+			head.C0 = head.C0:lerp(CFrame.new(0,1,0) * CFrame.Angles(0,0,0) * CFrame.new(0,0.5,0),0.6)
+			leftarm.C0 = leftarm.C0:lerp(CFrame.new(-1.5,0.5,0) * CFrame.Angles(math.rad(90)+math.cos(sine/1)/1.5,math.rad(20)+math.sin(sine/2)/1.5,-math.sin(sine/2)) * CFrame.new(0,-1+math.sin(sine/2)/2,0),0.6)
+			rightarm.C0 = rightarm.C0:lerp(CFrame.new(1.5,0.5,0) * CFrame.Angles(math.rad(90)+math.cos(sine/1)/1.5,math.rad(-20)-math.sin(sine/2)/1.5,math.sin(sine/2)) * CFrame.new(0,-1+math.sin(sine/2)/2,0),0.6)
+			leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-1,0) * CFrame.Angles(0,0,-math.sin(sine/2)/3) * CFrame.new(0,-1,0),0.6)
+			rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-1,0) * CFrame.Angles(0,0,-math.sin(sine/2)/3) * CFrame.new(0,-1,0),0.6)
+		elseif mode == 3 then
+			if animhype2 then
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,-math.cos(sine/1)/3,0) * CFrame.Angles(0,math.pi/2,rootpart.RotVelocity.y/50),0.6)
+				head.C0 = head.C0:lerp(CFrame.new(0,1,0) * CFrame.Angles(math.cos(sine/1)/4,-(math.pi/2)+math.rad(20),0) * CFrame.new(0,0.5,0),0.6)
+				leftarm.C0 = leftarm.C0:lerp(CFrame.new(-1.5,0.5,0) * CFrame.Angles(0,0,0) * CFrame.new(0,-0.5,0),0.6)
+				rightarm.C0 = rightarm.C0:lerp(CFrame.new(1.5,0.5,0) * CFrame.Angles(-math.sin(sine/1)/1.5,0,0) * CFrame.new(0,-0.5,0),0.6)
+				leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-1+math.sin(sine/1)/3,0) * CFrame.Angles(0,0,0) * CFrame.new(0,-1,0),0.6)
+				rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-0.5,-1) * CFrame.Angles(-math.sin(sine/1)/1.5,0,0) * CFrame.new(0,-1,0),0.6)
+			else
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,-math.cos(sine/1)/3,0) * CFrame.Angles(0,math.pi/2,rootpart.RotVelocity.y/50),0.6)
+				head.C0 = head.C0:lerp(CFrame.new(0,1,0) * CFrame.Angles(math.cos(sine/1)/4,-(math.pi/2)+math.rad(20),0) * CFrame.new(0,0.5,0),0.6)
+				leftarm.C0 = leftarm.C0:lerp(CFrame.new(-1.5,0.5,0) * CFrame.Angles(0,0,0) * CFrame.new(0,-0.5,0),0.6)
+				rightarm.C0 = rightarm.C0:lerp(CFrame.new(1.5,0.5,0) * CFrame.Angles(math.pi-math.rad(10)+math.sin(sine/1)/1.5,0,0) * CFrame.new(0,-0.5,0),0.6)
+				leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-1+math.sin(sine/1)/3,0) * CFrame.Angles(0,0,0) * CFrame.new(0,-1,0),0.6)
+				rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-0.5,-1) * CFrame.Angles(-math.sin(sine/1)/1.5,0,0) * CFrame.new(0,-1,0),0.6)
+			end
+		elseif mode == 4 then
+			if seizure then
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,-1.5+math.sin(sine/2),0) * CFrame.Angles((-math.pi/2)+math.sin(sine/2)/2,0,rootpart.RotVelocity.y/50),0.6)
+				head.C0 = head.C0:lerp(CFrame.new(0,1,0) * CFrame.Angles(math.cos(sine/2)/2,0,0) * CFrame.new(0,0.5,0),0.6)
+				leftarm.C0 = leftarm.C0:lerp(CFrame.new(-1.5,0.5,0) * CFrame.Angles(-math.cos(sine/2)*1.5,0,math.rad(-50)) * CFrame.new(0,-0.5,0),0.6)
+				rightarm.C0 = rightarm.C0:lerp(CFrame.new(1.5,0.5,0) * CFrame.Angles(-math.cos(sine/2)*1.5,0,math.rad(50)) * CFrame.new(0,-0.5,0),0.6)
+				leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-1,0) * CFrame.Angles(math.cos(sine/2)*1.5,0,0) * CFrame.new(0,-1,0),0.6)
+				rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-1,0) * CFrame.Angles(math.cos(sine/2)*1.5,0,0) * CFrame.new(0,-1,0),0.6)
+			else
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,math.sin(sine/2)/1.5,0) * CFrame.Angles(math.sin(sine/2)/2,0,rootpart.RotVelocity.y/50),0.6)
+				head.C0 = head.C0:lerp(CFrame.new(0,1,0) * CFrame.Angles(math.cos(sine/2)/2,0,0) * CFrame.new(0,0.5,0),0.6)
+				leftarm.C0 = leftarm.C0:lerp(CFrame.new(-1.5,0.5,0) * CFrame.Angles(-math.cos(sine/2)*1.5,0,0) * CFrame.new(0,-0.5,0),0.6)
+				rightarm.C0 = rightarm.C0:lerp(CFrame.new(1.5,0.5,0) * CFrame.Angles(-math.cos(sine/2)*1.5,0,0) * CFrame.new(0,-0.5,0),0.6)
+				leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-1,0) * CFrame.Angles(-math.cos(sine/2)*1.5,0,0) * CFrame.new(0,-1,0),0.6)
+				rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-1,0) * CFrame.Angles(-math.cos(sine/2)*1.5,0,0) * CFrame.new(0,-1,0),0.6)
+			end
+		elseif mode == 5 then
+			if seizure2 then
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,math.sin(sine/2),0) * CFrame.Angles(math.cos(sine)*3,math.sin(sine*1.1)*3,math.sin(sine*1.1)*3),0.6)
+				head.C0 = head.C0:lerp(CFrame.new(0,1,0) * CFrame.Angles(math.cos(sine)*3,math.sin(sine*1.1)*3,math.sin(sine*1.1)*3) * CFrame.new(0,0.5,0),0.6)
+				leftarm.C0 = leftarm.C0:lerp(CFrame.new(-1.5,0.5,0) * CFrame.Angles(math.cos(sine)*3,math.sin(sine*1.1)*3,math.sin(sine*1.1)*3) * CFrame.new(0,-0.5,0),0.6)
+				rightarm.C0 = rightarm.C0:lerp(CFrame.new(1.5,0.5,0) * CFrame.Angles(math.cos(sine)*3,math.sin(sine*1.1)*3,math.sin(sine*1.1)*3) * CFrame.new(0,-0.5,0),0.6)
+				leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-1,0) * CFrame.Angles(math.cos(sine)*3,math.sin(sine*1.1)*3,math.sin(sine*1.1)*3) * CFrame.new(0,-1,0),0.6)
+				rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-1,0) * CFrame.Angles(math.cos(sine)*3,math.sin(sine*1.1)*3,math.sin(sine*1.1)*3) * CFrame.new(0,-1,0),0.6)
+			else
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,0.5+math.sin(sine/2),math.cos(sine/4)) * CFrame.Angles(math.cos(sine/2)/2,0,rootpart.RotVelocity.y/50),0.6)
+				head.C0 = head.C0:lerp(CFrame.new(0,1,0) * CFrame.Angles(0,0,0) * CFrame.new(0,0.5,0),0.6)
+				leftarm.C0 = leftarm.C0:lerp(CFrame.new(-1.5,0.5,0) * CFrame.Angles(0,0,0) * CFrame.new(0,-0.5,0),0.6)
+				rightarm.C0 = rightarm.C0:lerp(CFrame.new(1.5,0.5,0) * CFrame.Angles(0,0,0) * CFrame.new(0,-0.5,0),0.6)
+				leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-1,0) * CFrame.Angles(0,0,0) * CFrame.new(0,-1,0),0.6)
+				rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-1,0) * CFrame.Angles(0,0,0) * CFrame.new(0,-1,0),0.6)
+			end
+		elseif mode == 6 then
+			local owmineck = math.rad(math.random(-10, 50))
+			if seizure2 then
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,math.sin(sine/2),0) * CFrame.Angles(owmineck,owmineck,owmineck),0.6)
+				head.C0 = head.C0:lerp(CFrame.new(0,1,0) * CFrame.Angles(owmineck,owmineck,owmineck) * CFrame.new(0,0.5,0),0.6)
+				leftarm.C0 = leftarm.C0:lerp(CFrame.new(-1.5,0.5,0) * CFrame.Angles(owmineck,owmineck,owmineck) * CFrame.new(0,-0.5,0),0.6)
+				rightarm.C0 = rightarm.C0:lerp(CFrame.new(1.5,0.5,0) * CFrame.Angles(owmineck,owmineck,owmineck) * CFrame.new(0,-0.5,0),0.6)
+				leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-1,0) * CFrame.Angles(owmineck,owmineck,owmineck) * CFrame.new(0,-1,0),0.6)
+				rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-1,0) * CFrame.Angles(owmineck,owmineck,owmineck) * CFrame.new(0,-1,0),0.6)
+			else
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,math.sin(sine/2),0) * CFrame.Angles(owmineck,owmineck,owmineck),0.6)
+				head.C0 = head.C0:lerp(CFrame.new(0,1,0) * CFrame.Angles(owmineck,owmineck,owmineck) * CFrame.new(0,0.5,0),0.6)
+				leftarm.C0 = leftarm.C0:lerp(CFrame.new(-1.5,0.5,0) * CFrame.Angles(owmineck,owmineck,owmineck) * CFrame.new(0,-0.5,0),0.6)
+				rightarm.C0 = rightarm.C0:lerp(CFrame.new(1.5,0.5,0) * CFrame.Angles(owmineck,owmineck,owmineck) * CFrame.new(0,-0.5,0),0.6)
+				leftleg.C0 = leftleg.C0:lerp(CFrame.new(-0.5,-1,0) * CFrame.Angles(owmineck,owmineck,owmineck) * CFrame.new(0,-1,0),0.6)
+				rightleg.C0 = rightleg.C0:lerp(CFrame.new(0.5,-1,0) * CFrame.Angles(owmineck,owmineck,owmineck) * CFrame.new(0,-1,0),0.6)
+			end
+		end
+	end
+end
