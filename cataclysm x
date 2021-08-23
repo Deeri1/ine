@@ -845,7 +845,7 @@ end
 
 function CamShakeAll(times,intense,origin)
 	for _,v in next, lplr:players() do
-		CamShake(v:FindFirstChildOfClass'PlayerGui' or v:FindFirstChildOfClass'Backpack' or v.Character,times,intense,origin)
+		
 	end
 end
 
@@ -1318,7 +1318,6 @@ function calamity()
 			FIREBALL.Size = FIREBALL.Size - VT(1, 1, 1) / 120
 		end
 		Swait(5)
-		ApplyAoE(FIREBALL.Position, 435, 65, 65, 600, true)
 		for i = 1, 10 do
 			WACKYEFFECT({
 				Time = 85 + 5 * i,
@@ -1414,7 +1413,7 @@ function calamity()
 		})
 		for i = 1, 15 do
 			Swait()
-			ApplyAoE(FIREBALL.Position, 435 + 85 * i, 3, 3, 100, true)
+
 			WACKYEFFECT({
 				Time = 85,
 				EffectType = "Sphere",
@@ -2469,45 +2468,11 @@ Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false)
 --\\=================================//
 
 function Kill(MODEL)
-	local HUM = MODEL:FindFirstChildOfClass("Humanoid")
-	MODEL:BreakJoints()
-	if HUM then
-		for index, CHILD in pairs(MODEL:GetChildren()) do
-			if CHILD:IsA("BasePart") then
-				if CHILD.Name == "Head" then
-					WACKYEFFECT2({Time = MRANDOM(10,30)*5, EffectType = "Box", Size = VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/3, Size2 = (VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/3)*MRANDOM(7,14)/10, Transparency = 0.5, Transparency2 = 1, CFrame = CHILD.CFrame, MoveToPos = CHILD.Position+VT(0,MRANDOM(5,8)/1.5,0), RotationX = MRANDOM(-25,25)/35, RotationY = MRANDOM(-25,25)/35, RotationZ = MRANDOM(-25,25)/35, Material = "Granite", Color = C3(.75,0,0), SoundID = nil, SoundPitch = .8, SoundVolume = 4, UseBoomerangMath = true, Boomerang = 100, SizeBoomerang = 3})
-					WACKYEFFECT2({Time = MRANDOM(10,30)*5, EffectType = "Box", Size = VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/2, Size2 = (VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/2)*MRANDOM(7,14)/10, Transparency = 0.5, Transparency2 = 1, CFrame = CHILD.CFrame, MoveToPos = CHILD.Position+VT(0,MRANDOM(5,8)/1.5,0), RotationX = MRANDOM(-25,25)/35, RotationY = MRANDOM(-25,25)/35, RotationZ = MRANDOM(-25,25)/35, Material = "Granite", Color = C3(.5,0,0), SoundID = nil, SoundPitch = .7, SoundVolume = 6, UseBoomerangMath = true, Boomerang = 100, SizeBoomerang = 3})
-					WACKYEFFECT2({Time = MRANDOM(10,30)*12, EffectType = "Box", Size = VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z), Size2 = VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z), Transparency = CHILD.Transparency, Transparency2 = 1, CFrame = CHILD.CFrame, MoveToPos = CHILD.Position+VT(MRANDOM(-360,360)/1.5,MRANDOM(-360,360)/1.5,0), MRANDOM(-360,360)/35, RotationX = MRANDOM(-360,360)/35, RotationY = MRANDOM(-360,360)/35, RotationZ = MRANDOM(-360,360)/35, Material = "Granite", Color = C3(.35,0,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil, UseBoomerangMath = true, SizeBoomerang = 0, Boomerang = 50})
-				elseif CHILD.Name ~= "HumanoidRootPart" then
-					WACKYEFFECT2({Time = MRANDOM(10,30)*5, EffectType = "Box", Size = VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/3, Size2 = (VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/3)*MRANDOM(7,14)/10, Transparency = 0.5, Transparency2 = 1, CFrame = CHILD.CFrame, MoveToPos = CHILD.Position+VT(0,MRANDOM(5,8)/1.5,0), RotationX = MRANDOM(-25,25)/35, RotationY = MRANDOM(-25,25)/35, RotationZ = MRANDOM(-25,25)/35, Material = "Granite", Color = C3(.75,0,0), SoundID = nil, SoundPitch = .8, SoundVolume = 4, UseBoomerangMath = true, Boomerang = 100, SizeBoomerang = 3})
-					WACKYEFFECT2({Time = MRANDOM(10,30)*5, EffectType = "Box", Size = VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/2, Size2 = (VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/2)*MRANDOM(7,14)/10, Transparency = 0.5, Transparency2 = 1, CFrame = CHILD.CFrame, MoveToPos = CHILD.Position+VT(0,MRANDOM(5,8)/1.5,0), RotationX = MRANDOM(-25,25)/35, RotationY = MRANDOM(-25,25)/35, RotationZ = MRANDOM(-25,25)/35, Material = "Granite", Color = C3(.5,0,0), SoundID = nil, SoundPitch = .7, SoundVolume = 6, UseBoomerangMath = true, Boomerang = 100, SizeBoomerang = 3})
-					WACKYEFFECT2({Time = MRANDOM(10,30)*6, EffectType = "Box", Size = CHILD.Size, Size2 = CHILD.Size, Transparency = CHILD.Transparency, Transparency2 = 1, CFrame = CHILD.CFrame, MoveToPos = CHILD.Position+VT(MRANDOM(-50,100)/1.5,MRANDOM(-50,100)/35,MRANDOM(-50,100)/35), MRANDOM(-50,100)/35, RotationX = MRANDOM(-50,100)/35, RotationY = MRANDOM(-50,100)/35, RotationZ = MRANDOM(-50,100)/35, Material = "Granite", Color = C3(.35,0,0), SoundID = nil, SoundPitch = .7, SoundVolume = 6, UseBoomerangMath = true, SizeBoomerang = 100, Boomerang = 35})
-				end
-				if CHILD.Name == "Torso" or CHILD.Name == "UpperTorso" then
-					WACKYEFFECT2({Time = MRANDOM(10,30)*5, EffectType = "Box", Size = VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/3, Size2 = (VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/3)*MRANDOM(7,14)/10, Transparency = 0.5, Transparency2 = 1, CFrame = CHILD.CFrame, MoveToPos = CHILD.Position+VT(0,MRANDOM(5,8)/1.5,0), RotationX = MRANDOM(-25,25)/35, RotationY = MRANDOM(-25,25)/35, RotationZ = MRANDOM(-25,25)/35, Material = "Granite", Color = C3(.75,0,0), SoundID = 130113415, SoundPitch = MRANDOM(0.9,1.1), SoundVolume = 10, UseBoomerangMath = true, Boomerang = 100, SizeBoomerang = 3})
-					WACKYEFFECT2({Time = MRANDOM(10,30)*5, EffectType = "Box", Size = VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/2, Size2 = (VT(CHILD.Size.Z,CHILD.Size.Y,CHILD.Size.Z)/2)*MRANDOM(7,14)/10, Transparency = 0.5, Transparency2 = 1, CFrame = CHILD.CFrame, MoveToPos = CHILD.Position+VT(0,MRANDOM(5,8)/1.5,0), RotationX = MRANDOM(-25,25)/35, RotationY = MRANDOM(-25,25)/35, RotationZ = MRANDOM(-25,25)/35, Material = "Granite", Color = C3(.5,0,0), SoundID = nil, SoundPitch = .7, SoundVolume = 6, UseBoomerangMath = true, Boomerang = 100, SizeBoomerang = 3})
-				end
-				CHILD:Destroy()
-				CHILD:Destroy()
-				CHILD:Destroy()
-			end
-		end
-		HUM.Health = 0
-	end
-	MODEL:remove()
-	MODEL:remove()
-	MODEL:remove()
-	MODEL:remove()
-	MODEL:remove()
-	MODEL:Destroy()
-	MODEL:Destroy()
-	MODEL:Destroy()
-	MODEL:Destroy()
-	MODEL:Destroy()
+
 end
 
 function ApplyAoE(POSITION,RANGE)
-	
+
 end
 
 --//=================================\\
@@ -2557,7 +2522,7 @@ end
 
 
 function Refit2()
-	
+
 end
 
 local BODY2 = {}
@@ -2582,7 +2547,7 @@ for e = 1, #BODY2 do
 	end
 end
 function Refit3()
-	
+
 end
 
 local BODY3 = {}
@@ -2605,7 +2570,7 @@ for e = 1, #BODY3 do
 	end
 end
 function Refit4()
-	
+
 end
 
 local BODY4 = {}
@@ -2626,20 +2591,20 @@ for e = 1, #BODY4 do
 	end
 end
 function Refit5()
-	
+
 end
 
 local BODY5 = {}
 local EXTRATRANS = 0
 
 function Refit6()
-	
+
 end
 
 local BODY6 = {}
 
 function Refit7()
-	
+
 end
 local BODY7 = {}
 
@@ -2665,7 +2630,7 @@ for e = 1, #BODY7 do
 end
 
 function Refit8()
-	
+
 end
 local BODY8 = {}
 
@@ -2689,7 +2654,7 @@ for e = 1, #BODY8 do
 end
 
 function Refit9()
-	
+
 end
 local EXTRATRANS = 0
 local BODY9 = {}
@@ -2713,29 +2678,29 @@ for e = 1, #BODY9 do
 end
 
 function Refit10()
-	
+
 end
 
 local BODY10 = {}
 function Refit11()
-	
+
 end
 
 local BODY11 = {}
 
 function Refit12()
-	
+
 end
 
 local BODY12 = {}
 function Refit13()
-	
+
 end
 
 Humanoid.HealthChanged:Connect(function()
 	if Humanoid.Health <= 1 then
 		Humanoid.Health = math.huge
-		
+
 	end
 end)
 
@@ -3360,7 +3325,6 @@ function Nightmare_Is_ALIVE()
 	for i=0, 11.5, 0.1 / Animation_Speed do
 		Swait()
 		Humanoid.CameraOffset = VT(MRANDOM(-500,500)/2.5,MRANDOM(-50,50)/2.5,MRANDOM(-500,500)/2.5)/30
-		ApplyAoE(RootPart.Position,1e9)
 		WACKYEFFECT({
 			Time = 12,
 			EffectType = "Sphere",
@@ -3651,8 +3615,8 @@ function spawnwave(POS)
 	local EMITPOS = HITPOS
 	if HITFLOOR ~= nil then
 		if HITFLOOR.Parent:FindFirstChildOfClass("Humanoid") then
-			elseif HITFLOOR.Parent.Parent:FindFirstChildOfClass("Humanoid") then
-			end
+		elseif HITFLOOR.Parent.Parent:FindFirstChildOfClass("Humanoid") then
+		end
 	end
 
 	function KillChildren(v)
@@ -3703,7 +3667,7 @@ function Death(POSITION,RANGE)
 				local TORSO = CHILD:FindFirstChild("Torso") or CHILD:FindFirstChild("UpperTorso")
 				if TORSO then
 					if (TORSO.Position - POSITION).Magnitude <= RANGE+TORSO.Size.Magnitude then
-						
+
 					end
 				end
 			end
@@ -5288,19 +5252,7 @@ while true do
 		end
 		SIU.Parent = Character
 		SIU2.Parent = nil
-		lwing1.Parent = nil
-		lwing2.Parent = nil
-		lwing3.Parent = nil
-		lwing4.Parent = nil
-		lwing5.Parent = nil
-		lwing6.Parent = nil
-		rwing1.Parent = nil
-		rwing2.Parent = nil
-		rwing3.Parent = nil
-		rwing4.Parent = nil
-		rwing5.Parent = nil
-		rwing6.Parent = nil
-	end
+		end
 	if MODE == "B L O O D W A T E R" then
 		MODECOLOR = Color3.new(sick.PlaybackLoudness/500,0,0)
 		MODESONG = 2808524036
