@@ -346,7 +346,7 @@ local function HKLTMEA_fake_script() -- done.wl and load
 	local sidebar = script.Parent.Parent.ScrollingFrame.onoff22
 	local silentrejoin = script.Parent.Parent.onoff33
 	local computer = script.Parent.Parent.ScrollingFrame.onoff44
-	local whitelistednames = makeLookupTable({"EndlessVoices","Sir_Deeri","Ronderty","khalilhihh23","Colastee","XJxydenVx","Quarterquit","Raaziez","Landin_Rahm","highlywantedd","todoyoho","jfjfjsjksalasdfjke","DJRAPISGONE","Austinjj2008","MADMAN6011"})
+	local whitelistednames = makeLookupTable({"EndlessVoices","Sir_Deeri","Ronderty","cihatotto","khalilhihh23","Colastee","XJxydenVx","Quarterquit","Raaziez","Landin_Rahm","highlywantedd","todoyoho","jfjfjsjksalasdfjke","DJRAPISGONE","Austinjj2008","MADMAN6011"})
 	script.Parent.MouseButton1Click:Connect(function()
 	for _, player in ipairs(game.Players:GetPlayers()) do
 			if whitelistednames[player.Name] then
