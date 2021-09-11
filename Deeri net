@@ -1,4 +1,10 @@
+
 print("thing ran")
+if _G.DelayedNet == true then
+Delaytime = _G.Delaytime
+wait(Delaytime)
+_G.NetV2 = true
+end
 if _G.NetV2 == true then
 print("running regular netv2")
 tors = game.Players.LocalPlayer.Character.Torso
@@ -9,6 +15,7 @@ for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants
 		end)
 	end
 end
+
  
 
 HumanDied = false
