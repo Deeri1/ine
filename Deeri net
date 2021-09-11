@@ -1,54 +1,6 @@
-FELOADLIBRARY = {}
-loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
-local Create = FELOADLIBRARY.Create
-
-ArtificialHB = Create("BindableEvent", script){
-	Parent = script,
-	Name = "Heartbeat",
-}
-script:WaitForChild("Heartbeat")
-
-frame = 1 / 30
-tf = 0
-allowframeloss = false
-tossremainder = false
-lastframe = tick()
-script.Heartbeat:Fire()
-
-game:GetService("RunService").Heartbeat:connect(function(s, p)
-	tf = tf + s
-	if tf >= frame then
-		if allowframeloss then
-			script.Heartbeat:Fire()
-			lastframe = tick()
-		else
-			for i = 1, math.floor(tf / frame) do
-				script.Heartbeat:Fire()
-			end
-			lastframe = tick()
-		end
-		if tossremainder then
-			tf = 0
-		else
-			tf = tf - frame * math.floor(tf / frame)
-		end
-	end
-end)
-function swait(num)
-	if num == 0 or num == nil then
-		ArtificialHB.Event:wait()
-	else
-		for i = 0, num do
-			ArtificialHB.Event:wait()
-		end
-	end
-end
-print("thing ran")
-if _G.DelayedNet == true then
-Delaytime = _G.Delaytime
-swait(Delaytime)
 _G.NetV2 = true
-end
+print("thing ran")
+
 if _G.NetV2 == true then
 print("running regular netv2")
 tors = game.Players.LocalPlayer.Character.Torso
