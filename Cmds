@@ -1226,6 +1226,10 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/chill%20but%20skidded"))()
 
 elseif
+	CMD.Text == ".test1234" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/test2"))()
+
+elseif
 	CMD.Text == ".prism" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/PRISM"))()
 else
