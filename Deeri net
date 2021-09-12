@@ -1,4 +1,4 @@
-_G.NetV2 = true
+
 print("thing ran")
 
 if _G.NetV2 == true then
