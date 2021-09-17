@@ -1233,5 +1233,8 @@ elseif
 	CMD.Text == ".prism" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/PRISM"))()
 else
+	CMD.Text == ".stands" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/stands"))()
+else
 	warn("not a real command")
 end
