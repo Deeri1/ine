@@ -1,0 +1,524 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local standgui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local hat = Instance.new("TextLabel")
+local head = Instance.new("TextLabel")
+local hattextbox = Instance.new("TextBox")
+local headtexbox = Instance.new("TextBox")
+local theworld = Instance.new("TextButton")
+local theworld_2 = Instance.new("TextButton")
+local theworldbut = Instance.new("TextButton")
+local goldenexpreqbut = Instance.new("TextButton")
+local execute = Instance.new("TextButton")
+
+--Properties:
+
+standgui.Name = "stand gui"
+standgui.Parent = game.CoreGui
+standgui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = standgui
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.Position = UDim2.new(0.438695967, 0, 0.512087941, 0)
+main.Size = UDim2.new(0, 652, 0, 444)
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.Size = UDim2.new(0, 652, 0, 50)
+title.Font = Enum.Font.SourceSans
+title.Text = "Fe stands"
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextWrapped = true
+
+hat.Name = "hat"
+hat.Parent = main
+hat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hat.Position = UDim2.new(0.69325155, 0, 0.112612613, 0)
+hat.Size = UDim2.new(0, 200, 0, 22)
+hat.Font = Enum.Font.SourceSans
+hat.Text = "Hat"
+hat.TextColor3 = Color3.fromRGB(0, 0, 0)
+hat.TextScaled = true
+hat.TextSize = 14.000
+hat.TextWrapped = true
+
+head.Name = "head"
+head.Parent = main
+head.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+head.Position = UDim2.new(0.69325155, 0, 0.227477476, 0)
+head.Size = UDim2.new(0, 200, 0, 22)
+head.Font = Enum.Font.SourceSans
+head.Text = "Head"
+head.TextColor3 = Color3.fromRGB(0, 0, 0)
+head.TextScaled = true
+head.TextSize = 14.000
+head.TextWrapped = true
+
+hattextbox.Name = "hat text box"
+hattextbox.Parent = main
+hattextbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hattextbox.Position = UDim2.new(0.69325155, 0, 0.164414421, 0)
+hattextbox.Size = UDim2.new(0, 200, 0, 28)
+hattextbox.Font = Enum.Font.SourceSans
+hattextbox.Text = "MoonWizardHat"
+hattextbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+hattextbox.TextScaled = true
+hattextbox.TextSize = 14.000
+hattextbox.TextWrapped = true
+
+headtexbox.Name = "head tex box"
+headtexbox.Parent = main
+headtexbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+headtexbox.Position = UDim2.new(0.69325155, 0, 0.277027041, 0)
+headtexbox.Size = UDim2.new(0, 200, 0, 28)
+headtexbox.Font = Enum.Font.SourceSans
+headtexbox.Text = "Hollow"
+headtexbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+headtexbox.TextScaled = true
+headtexbox.TextSize = 14.000
+headtexbox.TextWrapped = true
+
+theworld.Name = "theworld"
+theworld.Parent = main
+theworld.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+theworld.Position = UDim2.new(0, 0, 0.139639646, 0)
+theworld.Size = UDim2.new(0, 200, 0, 18)
+theworld.Font = Enum.Font.SourceSans
+theworld.Text = "The World"
+theworld.TextColor3 = Color3.fromRGB(0, 0, 0)
+theworld.TextScaled = true
+theworld.TextSize = 14.000
+theworld.TextWrapped = true
+
+theworld_2.Name = "theworld"
+theworld_2.Parent = main
+theworld_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+theworld_2.Position = UDim2.new(0, 0, 0.231981993, 0)
+theworld_2.Size = UDim2.new(0, 200, 0, 18)
+theworld_2.Font = Enum.Font.SourceSans
+theworld_2.Text = "Golden Eexperience Requiem"
+theworld_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+theworld_2.TextScaled = true
+theworld_2.TextSize = 14.000
+theworld_2.TextWrapped = true
+
+theworldbut.Name = "theworldbut"
+theworldbut.Parent = main
+theworldbut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+theworldbut.Position = UDim2.new(0.30674848, 0, 0.139639646, 0)
+theworldbut.Size = UDim2.new(0, 32, 0, 18)
+theworldbut.Font = Enum.Font.SourceSans
+theworldbut.Text = ""
+theworldbut.TextColor3 = Color3.fromRGB(0, 0, 0)
+theworldbut.TextSize = 14.000
+
+goldenexpreqbut.Name = "goldenexpreqbut"
+goldenexpreqbut.Parent = main
+goldenexpreqbut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+goldenexpreqbut.Position = UDim2.new(0.30674848, 0, 0.231981978, 0)
+goldenexpreqbut.Size = UDim2.new(0, 32, 0, 18)
+goldenexpreqbut.Font = Enum.Font.SourceSans
+goldenexpreqbut.Text = ""
+goldenexpreqbut.TextColor3 = Color3.fromRGB(0, 0, 0)
+goldenexpreqbut.TextSize = 14.000
+
+execute.Name = "execute"
+execute.Parent = main
+execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+execute.Position = UDim2.new(0.280674845, 0, 0.936936915, 0)
+execute.Size = UDim2.new(0, 281, 0, 28)
+execute.Font = Enum.Font.SourceSans
+execute.Text = "Execute"
+execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+execute.TextScaled = true
+execute.TextSize = 14.000
+execute.TextWrapped = true
+
+-- Scripts:
+
+local function NNCV_fake_script() -- theworldbut.wrld 
+	local script = Instance.new('Script', theworldbut)
+
+	local on = false
+	
+	
+	
+	script.Parent.Parent.theworldbut.MouseButton1Click:Connect(function()
+	
+		if on == false then
+	
+			script.Parent.Parent.theworldbut.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			on = true
+		else
+	
+			script.Parent.Parent.theworldbut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			on = false
+		end
+	end
+	)
+	
+	
+	
+end
+coroutine.wrap(NNCV_fake_script)()
+local function BXUFGFA_fake_script() -- goldenexpreqbut.gold 
+	local script = Instance.new('Script', goldenexpreqbut)
+
+	local on = false
+	
+	
+	
+	script.Parent.Parent.goldenexpreqbut.MouseButton1Click:Connect(function()
+	
+		if on == false then
+	
+			script.Parent.Parent.goldenexpreqbut.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			on = true
+		else
+	
+			script.Parent.Parent.goldenexpreqbut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			on = false
+		end
+	end
+	)
+	
+	
+	
+end
+coroutine.wrap(BXUFGFA_fake_script)()
+local function ADGDCR_fake_script() -- execute.execute 
+	local script = Instance.new('Script', execute)
+
+	main = script.Parent.Parent.Parent.main
+	main.Active = true
+	main.Draggable =  true
+	local world = script.Parent.Parent.theworldbut
+	local gold = script.Parent.Parent.goldenexpreqbut
+	script.Parent.Parent.execute.MouseButton1Click:Connect(function()
+		_G.hat = script.Parent.Parent["hat text box"].Text
+		_G.head = script.Parent.Parent["head tex box"].Text
+		local head = _G.head
+		local hat = _G.hat
+		head = _G.head
+		hat = _G.hat
+		print("hat",hat)
+		print("head",head)
+	
+		local hats = true
+		if hats == true then
+			
+			game:GetService("Players").LocalPlayer.Character[_G.head].Name = "gamer8"
+			game:GetService("Players").LocalPlayer.Character[_G.hat].Name = "gamer7"
+			game:GetService("Players").LocalPlayer.Character["Robloxclassicred"].Name = "gamer3"
+			game:GetService("Players").LocalPlayer.Character["Hat1"].Name = "gamer5"
+			game:GetService("Players").LocalPlayer.Character["Pal Hair"].Name = "gamer4"
+			game:GetService("Players").LocalPlayer.Character["LavanderHair"].Name = "gamer6"
+			game:GetService("Players").LocalPlayer.Character["Pink Hair"].Name = "gamer1"
+			game:GetService("Players").LocalPlayer.Character["Kate Hair"].Name = "gamer2"
+			
+	
+			--put hats here--    
+		end
+	
+	
+	
+	if world.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/the%20world", true))()
+	
+	end
+	
+	
+		if gold.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/test2323", true))()
+		
+		end
+	end
+	)
+	
+	
+	
+	
+	
+end
+coroutine.wrap(ADGDCR_fake_script)()
+local function ZBDNSAK_fake_script() -- main.LocalScript 
+	local script = Instance.new('LocalScript', main)
+
+	game:GetService("Players").LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
+	game:GetService("Players").LocalPlayer.Character["Hat1"].Handle.Mesh:Destroy()
+	game:GetService("Players").LocalPlayer.Character["Pal Hair"].Handle.Mesh:Destroy()
+	game:GetService("Players").LocalPlayer.Character["Robloxclassicred"].Handle.Mesh:Destroy()
+	game:GetService("Players").LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
+	game:GetService("Players").LocalPlayer.Character["Kate Hair"].Handle.Mesh:Destroy()
+	
+	for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+		if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+			game:GetService("RunService").Heartbeat:connect(function()
+				v.Velocity = Vector3.new(27,0,0)
+			end)
+		end
+	end
+	
+	
+	HumanDied = false
+	local CountSCIFIMOVIELOL = 1
+	function SCIFIMOVIELOL(Part0,Part1,Position,Angle)
+		local AlignPos = Instance.new('AlignPosition', Part1); AlignPos.Name = "AliP_"..CountSCIFIMOVIELOL
+		AlignPos.ApplyAtCenterOfMass = true;
+		AlignPos.MaxForce = 5772000--67752;
+		AlignPos.MaxVelocity = math.huge/9e110;
+		AlignPos.ReactionForceEnabled = false;
+		AlignPos.Responsiveness = 200;
+		AlignPos.RigidityEnabled = false;
+		local AlignOri = Instance.new('AlignOrientation', Part1); AlignOri.Name = "AliO_"..CountSCIFIMOVIELOL
+		AlignOri.MaxAngularVelocity = math.huge/9e110;
+		AlignOri.MaxTorque = 5772000
+		AlignOri.PrimaryAxisOnly = false;
+		AlignOri.ReactionTorqueEnabled = false;
+		AlignOri.Responsiveness = 200;
+		AlignOri.RigidityEnabled = false;
+		local AttachmentA=Instance.new('Attachment',Part1); AttachmentA.Name = "Ath_"..CountSCIFIMOVIELOL
+		local AttachmentB=Instance.new('Attachment',Part0); AttachmentB.Name = "Ath_"..CountSCIFIMOVIELOL
+		AttachmentA.Orientation = Angle or Vector3.new(0,0,0)
+		AttachmentA.Position = Position or Vector3.new(0,0,0)
+		AlignPos.Attachment1 = AttachmentA;
+		AlignPos.Attachment0 = AttachmentB;
+		AlignOri.Attachment1 = AttachmentA;
+		AlignOri.Attachment0 = AttachmentB;
+		CountSCIFIMOVIELOL = CountSCIFIMOVIELOL + 1
+		return {AlignPos,AlignOri,AttachmentA,AttachmentB}
+	end
+	
+	if _G.netted ~= true then
+		_G.netted = true
+		coroutine.wrap(function()
+			settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
+			settings().Physics.AllowSleep = false
+			game:GetService("RunService").RenderStepped:Connect(function()
+				game:FindFirstChildOfClass("Players").LocalPlayer.MaximumSimulationRadius=math.pow(math.huge,math.huge)
+				sethiddenproperty(game:FindFirstChildOfClass("Players").LocalPlayer,"SimulationRadius",math.huge*math.huge)
+			end)
+		end)()
+	end
+	
+	game:FindFirstChildOfClass("Players").LocalPlayer["Character"].Archivable = true
+	local hatnameclone = {}
+	for _,v in next, game:FindFirstChildOfClass("Players").LocalPlayer["Character"]:GetChildren() do
+		if v:IsA("Accessory") then
+			if hatnameclone[v.Name] then
+				if hatnameclone[v.Name] == "s" then
+					hatnameclone[v.Name] = {}
+				end
+				table.insert(hatnameclone[v.Name],v)
+			else
+				hatnameclone[v.Name] = "s"
+			end
+		end
+	end
+	for _,v in pairs(hatnameclone) do
+		if type(v) == "table" then
+			local num = 1
+			for _,w in pairs(v) do
+				w.Name = w.Name..num
+				num = num + 1
+			end
+		end
+	end
+	hatnameclone = nil
+	
+	local DeadChar = game:FindFirstChildOfClass("Players").LocalPlayer.Character
+	
+	local fldr = Instance.new("Folder",game:FindFirstChildOfClass("Players").LocalPlayer["Character"])
+	fldr.Name = "DMYF"
+	local CloneChar = DeadChar:Clone()
+	local ANIMATIONHERE
+	if CloneChar:FindFirstChild("Animate") then
+		ANIMATIONHERE = CloneChar:FindFirstChild("Animate"):Clone()
+		CloneChar:FindFirstChild("Animate"):Destroy()
+	end
+	if CloneChar:FindFirstChildOfClass("Folder") then CloneChar:FindFirstChildOfClass("Folder"):Destroy() end
+	if CloneChar.Torso:FindFirstChild("Neck") then
+		local Clonessss = CloneChar.Torso:FindFirstChild("Neck"):Clone()
+		Clonessss.Part0 = nil
+		Clonessss.Part1 = DeadChar.Head
+		Clonessss.Parent = DeadChar.Torso
+	end
+	CloneChar.Parent = fldr
+	CloneChar.HumanoidRootPart.CFrame = DeadChar.HumanoidRootPart.CFrame
+	CloneChar.Humanoid.BreakJointsOnDeath = false
+	CloneChar.Name = "non"
+	CloneChar.Humanoid.DisplayDistanceType = "None"
+	
+	for _,v in next, DeadChar:GetChildren() do
+		if v:IsA("Accessory") then
+			local topacc = false
+			if v.Handle:FindFirstChildOfClass("Weld") then v.Handle:FindFirstChildOfClass("Weld"):Destroy() end
+			v.Handle.Massless = true
+			v.Handle.CanCollide = false
+	
+			local bv = Instance.new("BodyVelocity",v.Handle)
+			bv.Velocity = Vector3.new(0,0,0)
+			coroutine.wrap(function()
+				if topacc then
+					local allthings = SCIFIMOVIELOL(v.Handle,DeadChar.Torso,Vector3.new(0,1.5,0)+ (DeadChar.Head[topacc].Position + (v.Handle[topacc].Position*-1)),Vector3.new(0,0,0))
+					local normaltop = allthings[1].Attachment1
+					local alipos = allthings[1]
+					local alirot = allthings[2]
+					local p0 = v.Handle
+					local p1 = DeadChar.Head
+					alipos.Parent = CloneChar:FindFirstChild(v.Name).Handle
+					alirot.Parent = CloneChar:FindFirstChild(v.Name).Handle
+					while true do
+						game:GetService("RunService").RenderStepped:wait()
+						if HumanDied then break end
+						coroutine.wrap(function()
+							if alipos.Attachment1 == normaltop then
+								p0.CFrame = p0.CFrame:lerp((((DeadChar.Torso.CFrame * CFrame.new(0,1.5,0)) * p1[topacc].CFrame) * p0[topacc].CFrame:inverse()),1)
+							else
+								v.Handle.CFrame = v.Handle.CFrame:lerp(alipos.Attachment1.Parent.CFrame * CFrame.new(alipos.Attachment1.Position) * CFrame.Angles(math.rad(alipos.Attachment1.Rotation.X),math.rad(alipos.Attachment1.Rotation.Y),math.rad(alipos.Attachment1.Rotation.Z)),1)
+							end
+						end)()
+					end
+				else
+					SCIFIMOVIELOL(v.Handle,CloneChar[v.Name].Handle,Vector3.new(0,0,0),Vector3.new(0,0,0))
+				end
+			end)()
+		end
+	end
+	
+	local a = DeadChar.Torso
+	local b = DeadChar.HumanoidRootPart
+	local c = DeadChar.Humanoid
+	a.Parent = game:FindFirstChildOfClass("Workspace")
+	c.Parent = game:FindFirstChildOfClass("Workspace")
+	local told = a:Clone()
+	local told1 = c:Clone()
+	b["RootJoint"].Part0 = told
+	b["RootJoint"].Part1 = DeadChar.Head
+	a.Name = "torso"
+	a.Neck:Destroy()
+	c.Name = "Mizt Hub Best"
+	told.Parent = DeadChar
+	told1.Parent = DeadChar
+	DeadChar.PrimaryPart = told
+	told1.Health = 0
+	b:Destroy()
+	a.Parent = DeadChar
+	c.Parent = DeadChar
+	told:Destroy()
+	told1:Destroy()
+	a.Name = "Torso"
+	
+	if CloneChar.Head:FindFirstChildOfClass("Decal") then CloneChar.Head:FindFirstChildOfClass("Decal").Transparency = 1 end
+	if DeadChar:FindFirstChild("Animate") then DeadChar:FindFirstChild("Animate"):Destroy() end
+	
+	local Collider
+	function UnCollide()
+		if HumanDied then Collider:Disconnect(); return end
+	    --[[for _,Parts in next, CloneChar:GetChildren() do
+	        if Parts:IsA("BasePart") then
+	            Parts.CanCollide = false 
+	        end 
+	    end]]
+		for _,Parts in next, DeadChar:GetChildren() do
+			if Parts:IsA("BasePart") then
+				Parts.CanCollide = false
+			end 
+		end 
+	end
+	Collider = game:GetService("RunService").Stepped:Connect(UnCollide)
+	
+	local resetBindable = Instance.new("BindableEvent")
+	resetBindable.Event:connect(function()
+		game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
+		resetBindable:Destroy()
+		HumanDied = true
+		pcall(function()
+			game:FindFirstChildOfClass("Players").LocalPlayer.Character = DeadChar
+			DeadChar.Head:Destroy()
+			DeadChar:FindFirstChildOfClass("Humanoid"):Destroy()
+			game:FindFirstChildOfClass("Players").LocalPlayer.Character = CloneChar
+			if DeadChar:FindFirstChildOfClass("Folder") then DeadChar:FindFirstChildOfClass("Folder"):Destroy() end
+		end)
+	end)
+	game:GetService("StarterGui"):SetCore("ResetButtonCallback", resetBindable)
+	
+	coroutine.wrap(function()
+		while true do
+			game:GetService("RunService").RenderStepped:wait()
+			if not CloneChar or not CloneChar:FindFirstChild("Head") or not CloneChar:FindFirstChildOfClass("Humanoid") or CloneChar:FindFirstChildOfClass("Humanoid").Health <= 0 and not DeadChar or not DeadChar:FindFirstChild("Head") or not DeadChar:FindFirstChildOfClass("Humanoid") or DeadChar:FindFirstChildOfClass("Humanoid").Health <= 0 then 
+				HumanDied = true
+				pcall(function()
+					game:FindFirstChildOfClass("Players").LocalPlayer.Character = DeadChar
+					DeadChar.Head:Destroy()
+					DeadChar:FindFirstChildOfClass("Humanoid"):Destroy()
+					game:FindFirstChildOfClass("Players").LocalPlayer.Character = CloneChar
+					if DeadChar:FindFirstChildOfClass("Folder") then DeadChar:FindFirstChildOfClass("Folder"):Destroy() end
+				end)
+				if resetBindable then
+					game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
+					resetBindable:Destroy()
+				end
+				break
+			end		
+		end
+	end)()
+	
+	
+	SCIFIMOVIELOL(DeadChar["Head"],CloneChar["Head"])
+	SCIFIMOVIELOL(DeadChar["Torso"],CloneChar["Torso"])
+	SCIFIMOVIELOL(DeadChar["Left Arm"],CloneChar["Left Arm"])
+	SCIFIMOVIELOL(DeadChar["Right Arm"],CloneChar["Right Arm"])
+	SCIFIMOVIELOL(DeadChar["Left Leg"],CloneChar["Left Leg"])
+	SCIFIMOVIELOL(DeadChar["Right Leg"],CloneChar["Right Leg"])
+	
+	for _,v in pairs(DeadChar:GetChildren()) do
+		if v:IsA("BasePart") and v.Name ~= "Head" then
+			--[[local bv = Instance.new("BodyVelocity",v)
+			bv.Velocity = Vector3.new(0,0,0)
+			coroutine.wrap(function()
+				while true do
+					game:GetService("RunService").RenderStepped:wait()
+					if HumanDied then break end
+					v.CFrame = CloneChar[v.Name].CFrame
+				end
+			end)()]]
+		elseif v:IsA("BasePart") and v.Name == "Head" then
+			local bv = Instance.new("BodyVelocity",v)
+			bv.Velocity = Vector3.new(0,0,0)
+			coroutine.wrap(function()
+				while true do
+					game:GetService("RunService").RenderStepped:wait()
+					if HumanDied then break end
+					v.CFrame = DeadChar.Torso.CFrame * CFrame.new(0,1.5,0)
+				end
+			end)()
+		end
+	end
+	
+	for _,BodyParts in next, CloneChar:GetDescendants() do
+		if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") then
+			BodyParts.Transparency = 1 end end
+	game:GetService("RunService").RenderStepped:wait()
+	game:FindFirstChildOfClass("Players").LocalPlayer.Character = CloneChar
+	game:FindFirstChildOfClass("Workspace"):FindFirstChildOfClass("Camera").CameraSubject = CloneChar.Humanoid
+	
+	for _,v in next, DeadChar:GetChildren() do
+		if v:IsA("Accessory") then
+			if v.Handle:FindFirstChildOfClass("Weld") then v.Handle:FindFirstChildOfClass("Weld"):Destroy() end
+		end
+	end
+	
+	if ANIMATIONHERE then ANIMATIONHERE.Parent = CloneChar end
+	
+end
+coroutine.wrap(ZBDNSAK_fake_script)()
