@@ -11,10 +11,12 @@ local head = Instance.new("TextLabel")
 local hattextbox = Instance.new("TextBox")
 local headtexbox = Instance.new("TextBox")
 local theworld = Instance.new("TextButton")
-local theworld_2 = Instance.new("TextButton")
+local goldexp = Instance.new("TextButton")
 local theworldbut = Instance.new("TextButton")
 local goldenexpreqbut = Instance.new("TextButton")
 local execute = Instance.new("TextButton")
+local noobstand = Instance.new("TextButton")
+local noobstand_2 = Instance.new("TextButton")
 
 --Properties:
 
@@ -99,17 +101,17 @@ theworld.TextScaled = true
 theworld.TextSize = 14.000
 theworld.TextWrapped = true
 
-theworld_2.Name = "theworld"
-theworld_2.Parent = main
-theworld_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-theworld_2.Position = UDim2.new(0, 0, 0.231981993, 0)
-theworld_2.Size = UDim2.new(0, 200, 0, 18)
-theworld_2.Font = Enum.Font.SourceSans
-theworld_2.Text = "Golden Eexperience Requiem"
-theworld_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-theworld_2.TextScaled = true
-theworld_2.TextSize = 14.000
-theworld_2.TextWrapped = true
+goldexp.Name = "goldexp"
+goldexp.Parent = main
+goldexp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+goldexp.Position = UDim2.new(0, 0, 0.231981993, 0)
+goldexp.Size = UDim2.new(0, 200, 0, 18)
+goldexp.Font = Enum.Font.SourceSans
+goldexp.Text = "Golden Eexperience Requiem"
+goldexp.TextColor3 = Color3.fromRGB(0, 0, 0)
+goldexp.TextScaled = true
+goldexp.TextSize = 14.000
+goldexp.TextWrapped = true
 
 theworldbut.Name = "theworldbut"
 theworldbut.Parent = main
@@ -143,9 +145,31 @@ execute.TextScaled = true
 execute.TextSize = 14.000
 execute.TextWrapped = true
 
+noobstand.Name = "noob stand"
+noobstand.Parent = main
+noobstand.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+noobstand.Position = UDim2.new(0, 0, 0.317567587, 0)
+noobstand.Size = UDim2.new(0, 200, 0, 18)
+noobstand.Font = Enum.Font.SourceSans
+noobstand.Text = "Noob stand"
+noobstand.TextColor3 = Color3.fromRGB(0, 0, 0)
+noobstand.TextScaled = true
+noobstand.TextSize = 14.000
+noobstand.TextWrapped = true
+
+noobstand_2.Name = "noobstand"
+noobstand_2.Parent = main
+noobstand_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+noobstand_2.Position = UDim2.new(0.30674848, 0, 0.317567557, 0)
+noobstand_2.Size = UDim2.new(0, 32, 0, 18)
+noobstand_2.Font = Enum.Font.SourceSans
+noobstand_2.Text = ""
+noobstand_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+noobstand_2.TextSize = 14.000
+
 -- Scripts:
 
-local function NNCV_fake_script() -- theworldbut.wrld 
+local function PDLRPJT_fake_script() -- theworldbut.wrld 
 	local script = Instance.new('Script', theworldbut)
 
 	local on = false
@@ -169,8 +193,8 @@ local function NNCV_fake_script() -- theworldbut.wrld
 	
 	
 end
-coroutine.wrap(NNCV_fake_script)()
-local function BXUFGFA_fake_script() -- goldenexpreqbut.gold 
+coroutine.wrap(PDLRPJT_fake_script)()
+local function ZLCK_fake_script() -- goldenexpreqbut.gold 
 	local script = Instance.new('Script', goldenexpreqbut)
 
 	local on = false
@@ -194,8 +218,8 @@ local function BXUFGFA_fake_script() -- goldenexpreqbut.gold
 	
 	
 end
-coroutine.wrap(BXUFGFA_fake_script)()
-local function ADGDCR_fake_script() -- execute.execute 
+coroutine.wrap(ZLCK_fake_script)()
+local function KJSKSVQ_fake_script() -- execute.execute 
 	local script = Instance.new('Script', execute)
 
 	main = script.Parent.Parent.Parent.main
@@ -203,6 +227,7 @@ local function ADGDCR_fake_script() -- execute.execute
 	main.Draggable =  true
 	local world = script.Parent.Parent.theworldbut
 	local gold = script.Parent.Parent.goldenexpreqbut
+	local noob = script.Parent.Parent.noobstand
 	script.Parent.Parent.execute.MouseButton1Click:Connect(function()
 		_G.hat = script.Parent.Parent["hat text box"].Text
 		_G.head = script.Parent.Parent["head tex box"].Text
@@ -234,7 +259,11 @@ local function ADGDCR_fake_script() -- execute.execute
 	if world.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/the%20world", true))()
 	
-	end
+		end
+		if noob.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/noob%20stand", true))()
+	
+		end
 	
 	
 		if gold.BackgroundColor3 == Color3.fromHSV(0, 0, 0) then
@@ -249,8 +278,8 @@ local function ADGDCR_fake_script() -- execute.execute
 	
 	
 end
-coroutine.wrap(ADGDCR_fake_script)()
-local function ZBDNSAK_fake_script() -- main.LocalScript 
+coroutine.wrap(KJSKSVQ_fake_script)()
+local function HIXF_fake_script() -- main.LocalScript 
 	local script = Instance.new('LocalScript', main)
 
 	game:GetService("Players").LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
@@ -521,4 +550,29 @@ local function ZBDNSAK_fake_script() -- main.LocalScript
 	if ANIMATIONHERE then ANIMATIONHERE.Parent = CloneChar end
 	
 end
-coroutine.wrap(ZBDNSAK_fake_script)()
+coroutine.wrap(HIXF_fake_script)()
+local function GDGAWYL_fake_script() -- noobstand_2.noob 
+	local script = Instance.new('Script', noobstand_2)
+
+	local on = false
+	
+	
+	
+	script.Parent.Parent.noobstand.MouseButton1Click:Connect(function()
+	
+		if on == false then
+	
+			script.Parent.Parent.noobstand.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			on = true
+		else
+	
+			script.Parent.Parent.noobstand.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			on = false
+		end
+	end
+	)
+	
+	
+	
+end
+coroutine.wrap(GDGAWYL_fake_script)()
