@@ -1497,7 +1497,7 @@ function Stand()
 			for i,v in pairs(mas:children()) do
 				if v:IsA("Part") then
 					coroutine.resume(coroutine.create(function()
-						v.Transparency = v.Transparency - 0.1
+						v.Transparency = v.Transparency - 1
 						game:GetService("RunService").RenderStepped:wait() 
 					end))
 					v.Transparency = 1
@@ -1508,8 +1508,8 @@ function Stand()
 			if v:IsA("Part") then
 				coroutine.resume(coroutine.create(function()
 					for i = 1,11 do
-						v.Transparency = v.Transparency - 0.1
-						Face.Transparency = Face.Transparency - 0.1
+						v.Transparency = v.Transparency - 1
+						Face.Transparency = Face.Transparency - 1
 						game:GetService("RunService").RenderStepped:wait()
 					end
 				end))
