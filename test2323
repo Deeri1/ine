@@ -1,4 +1,4 @@
-
+--e
 
 print"Edit by v4mp13r2On1c and BuiIderbot. Original script by trollmon123 and tyefoodmania(Crow_Kiyoamsa)"
 owner = game.Players.LocalPlayer
@@ -1497,7 +1497,7 @@ function Stand()
 			for i,v in pairs(mas:children()) do
 				if v:IsA("Part") then
 					coroutine.resume(coroutine.create(function()
-						v.Transparency = v.Transparency - 1
+						v.Transparency = v.Transparency - 0.1
 						game:GetService("RunService").RenderStepped:wait() 
 					end))
 					v.Transparency = 1
@@ -1508,8 +1508,8 @@ function Stand()
 			if v:IsA("Part") then
 				coroutine.resume(coroutine.create(function()
 					for i = 1,11 do
-						v.Transparency = v.Transparency - 1
-						Face.Transparency = Face.Transparency - 1
+						v.Transparency = v.Transparency - 0.1
+						Face.Transparency = Face.Transparency - 0.1
 						game:GetService("RunService").RenderStepped:wait()
 					end
 				end))
@@ -2310,8 +2310,8 @@ function UnStand()
 			if v:IsA("Part") then
 				coroutine.resume(coroutine.create(function()
 					for i = 1,11 do
-						v.Transparency = v.Transparency + 0.1
-						Face.Transparency = Face.Transparency + 0.1
+						v.Transparency = v.Transparency + 1
+						Face.Transparency = Face.Transparency + 1
 						game:GetService("RunService").RenderStepped:wait()
 					end
 				end))
