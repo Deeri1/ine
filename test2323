@@ -1799,8 +1799,7 @@ function Scorpion()
 				S.Looped = false
 				S:play()
 
-				hit.Parent.Humanoid:TakeDamage(40)
-				hit.Parent.Humanoid.WalkSpeed = 18
+
 				local random = math.random(-3,3)
 				local random2 = math.random(-3,3)
 				local random3 = math.random(-3,3)
@@ -1915,7 +1914,7 @@ function RTZ()
 		HB.Touched:connect(function(hit)
 			DDZ = true
 			if hit.Parent:FindFirstChild("Torso") and hit.Parent ~= nil and hit.Parent.Name ~= Character.Name then
-				end
+			end
 		end)
 		DDZ = false
 		wait(5)
@@ -1937,9 +1936,7 @@ function LifeForceMuda()
 		HB.Touched:connect(function(hit)
 			if hit.Parent:FindFirstChild("Torso") or hit.Parent:FindFirstChild("UpperTorso") and hit.Parent ~= nil and hit.Parent.Name ~= Character.Name then
 				HB:remove()
-				hit.Parent.Humanoid:TakeDamage(40)
-				hit.Parent.Humanoid.WalkSpeed = 2
-				hit.Parent.Humanoid.PlatformStand = true
+
 				local Ef = Instance.new("Part",workspace)
 				Ef.Size = Vector3.new(0.1,0.1,0.1)
 				Ef.CanCollide = false
@@ -2058,9 +2055,7 @@ function Heal()
 		HB.Touched:connect(function(hit)
 			if hit.Parent:FindFirstChild("Torso") or hit.Parent:FindFirstChild("UpperTorso") and hit.Parent ~= nil and hit.Parent.Name ~= Character.Name then
 				HB:remove()
-				hit.Parent.Humanoid:TakeDamage(-40)
-				hit.Parent.Humanoid.WalkSpeed = 18
-				hit.Parent.Humanoid.PlatformStand = true
+
 				local Ef = Instance.new("Part",workspace)
 				Ef.Size = Vector3.new(0.1,0.1,0.1)
 				Ef.CanCollide = false
@@ -2208,8 +2203,7 @@ function GERmuda()
 			HB2.C0 = CFrame.new(0,-1.1,0)
 			HB.Touched:connect(function(hit)
 				if hit.Parent:FindFirstChild("Humanoid") and hit.Parent ~= nil and hit.Parent.Name ~= Character.Name then
-					hit.Parent.Humanoid:TakeDamage(0.9)
-					hit.Parent.Humanoid.WalkSpeed = 18
+
 					local random = math.random(-3,3)
 					local random2 = math.random(-3,3)
 					local random3 = math.random(-3,3)
@@ -2247,8 +2241,7 @@ function GERmuda()
 				if hit.Parent:FindFirstChild("Humanoid") and hit.Parent ~= nil and hit.Parent.Name ~= Character.Name then
 					CCB:remove()
 
-					hit.Parent.Humanoid:TakeDamage(1)
-					hit.Parent.Humanoid.WalkSpeed = 18
+
 					local random = math.random(3,3)
 					local random2 = math.random(3,3)
 					local random3 = math.random(3,3)
