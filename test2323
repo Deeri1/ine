@@ -1,4 +1,4 @@
---ee
+--e
 
 print"Edit by v4mp13r2On1c and BuiIderbot. Original script by trollmon123 and tyefoodmania(Crow_Kiyoamsa)"
 owner = game.Players.LocalPlayer
@@ -186,20 +186,6 @@ local ST = Instance.new("Part",Stand)
 ST.Size = Vector3.new(2,2,1)
 ST.BrickColor = BrickColor.new("Light brick yellow")
 ST.CanCollide = false
-bullet = game.Players.LocalPlayer.Character["HumanoidRootPart"]
-bullet.Transparency = .25
-bullet.Massless = true
-if bullet:FindFirstChildOfClass("Attachment") then
-	for _,v in pairs(bullet:GetChildren()) do
-		if v:IsA("Attachment") then
-			v:Destroy()
-		end
-	end
-end
-
-bbv = Instance.new("BodyPosition",bullet)
-bbv.Position = ST.CFrame.p
-
 local ST2 = Instance.new("SpecialMesh",ST)
 ST2.MeshId = "rbxasset://fonts/torso.mesh"
 ST2.Scale = Vector3.new(1,1,1)
