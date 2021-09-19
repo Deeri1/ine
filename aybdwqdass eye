@@ -36,6 +36,7 @@ thdodod = "MeshPartAccessory"
 
 
 
+ToolName = lol
 
 
 
@@ -49,18 +50,26 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
+Too2lNa2me = ToolName
 
+Too2lNa2me = ToolName
 
 
+Too2lNa2me = ToolName
 
 
 
+Too2lNa2me = ToolName
 
 
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -85,11 +94,15 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
 
 
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -99,11 +112,13 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -115,12 +130,15 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
+Too2lNa2me = ToolName
 
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -139,19 +157,28 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
+Too2lNa2me = ToolName
 
+Too2lNa2me = ToolName
 
 
 
 
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
 
 
 
+Too2lNa2me = ToolName
 
+Too2lNa2me = ToolName
 
+Too2lNa2me = ToolName
 
 
 
@@ -162,6 +189,7 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -175,6 +203,7 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -199,27 +228,51 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
+Too2lNa2me = ToolName
 
+Too2lNa2me = ToolName
 
 
 
+Too2lNa2me = ToolName
 
 
 
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
 
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
 
 
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
 
 
 
 
 
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
 
 
 
 
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
+Too2lNa2me = ToolName
 
 
 
@@ -229,23 +282,29 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
+Too2lNa2me = ToolName
 
 
 
+Too2lNa2me = ToolName
 
 
+Too2lNa2me = ToolName
 
 
 
 
 
+Too2lNa2me = ToolName
 
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -256,6 +315,7 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -269,6 +329,7 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -279,6 +340,7 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -294,6 +356,7 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -310,6 +373,7 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -325,6 +389,7 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -335,6 +400,7 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -345,6 +411,7 @@ thdodod = "MeshPartAccessory"
 
 
 
+Too2lNa2me = ToolName
 
 
 
@@ -367,53 +434,7 @@ thdodod = "MeshPartAccessory"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Too2lNa2me = ToolName
 
 
 
@@ -441,7 +462,7 @@ thdodod = "MeshPartAccessory"
 
 
 
-
+Too2lNa2me = ToolName
 
 
 
@@ -465,11 +486,12 @@ thdodod = "MeshPartAccessory"
 
 
 local ToolName = thdodod
-
+Too2lNa2me = ToolName
 Player = game:GetService("Players").LocalPlayer
 PlayerGui = Player.PlayerGui
 Cam = workspace.CurrentCamera
 Backpack = Player.Backpack
+Too2lNa2me = ToolName
 Character = Workspace.GelatekReanimation
 Humanoid = Character.Humanoid
 Mouse = Player:GetMouse()
@@ -532,6 +554,7 @@ local CHANGE = 2 / Animation_Speed
 local WALKINGANIM = false
 local VALUE1 = false
 local VALUE2 = false
+
 local ROBLOXIDLEANIMATION = IT("Animation")
 ROBLOXIDLEANIMATION.Name = "Roblox Idle Animation"
 ROBLOXIDLEANIMATION.AnimationId = "http://www.roblox.com/asset/?id=180435571"
