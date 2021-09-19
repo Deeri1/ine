@@ -8,8 +8,8 @@ end)
 --||               ONLY 90s KIDS REMEMBER
 --||              ABYSS EYE BY SHACKLUSTER
 --\\====================================================//--
-
-local ToolName = "MeshPartAccessory"
+thdodod = "MeshPartAccessory"
+local ToolName = "thdodod"
 
 Player = game:GetService("Players").LocalPlayer
 PlayerGui = Player.PlayerGui
