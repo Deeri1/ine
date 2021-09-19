@@ -1233,6 +1233,9 @@ elseif
 	CMD.Text == ".prism" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/PRISM"))()
 elseif
+	CMD.Text == ".abyss eye" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/aybdwqdass%20eye"))()
+elseif
 	CMD.Text == ".stands" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/stands"))()
 else
