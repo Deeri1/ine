@@ -9,7 +9,7 @@ end)
 --||              ABYSS EYE BY SHACKLUSTER
 --\\====================================================//--
 thdodod = "MeshPartAccessory"
-local ToolName = "thdodod"
+local ToolName = thdodod
 
 Player = game:GetService("Players").LocalPlayer
 PlayerGui = Player.PlayerGui
