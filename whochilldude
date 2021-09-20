@@ -59,7 +59,9 @@ rhxt.Parent = rightleg
 rhxt.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 rhxt.Position = UDim2.new(0.945314765, 0, 0.578748345, 0)
 rhxt.Size = UDim2.new(0, 45, 0, 50)
+rhxt.ClearTextOnFocus = false
 rhxt.Font = Enum.Font.SourceSans
+rhxt.PlaceholderText = "0"
 rhxt.Text = "0"
 rhxt.TextColor3 = Color3.fromRGB(0, 0, 0)
 rhxt.TextSize = 14.000
@@ -69,7 +71,9 @@ rhyt.Parent = rightleg
 rhyt.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 rhyt.Position = UDim2.new(0.965314746, 0, 1.57518518, 0)
 rhyt.Size = UDim2.new(0, 45, 0, 50)
+rhyt.ClearTextOnFocus = false
 rhyt.Font = Enum.Font.SourceSans
+rhyt.PlaceholderText = "0"
 rhyt.Text = "0"
 rhyt.TextColor3 = Color3.fromRGB(0, 0, 0)
 rhyt.TextSize = 14.000
@@ -79,7 +83,9 @@ rhzt.Parent = rightleg
 rhzt.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 rhzt.Position = UDim2.new(0.935314775, 0, 2.59779048, 0)
 rhzt.Size = UDim2.new(0, 45, 0, 50)
+rhzt.ClearTextOnFocus = false
 rhzt.Font = Enum.Font.SourceSans
+rhzt.PlaceholderText = "0"
 rhzt.Text = "0"
 rhzt.TextColor3 = Color3.fromRGB(0, 0, 0)
 rhzt.TextSize = 14.000
@@ -185,7 +191,9 @@ rrhzt.Parent = rightleg
 rrhzt.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 rrhzt.Position = UDim2.new(0.935314775, 0, 5.38779068, 0)
 rrhzt.Size = UDim2.new(0, 45, 0, 50)
+rrhzt.ClearTextOnFocus = false
 rrhzt.Font = Enum.Font.SourceSans
+rrhzt.PlaceholderText = "0"
 rrhzt.Text = "0"
 rrhzt.TextColor3 = Color3.fromRGB(0, 0, 0)
 rrhzt.TextSize = 14.000
@@ -195,7 +203,9 @@ rrhyt.Parent = rightleg
 rrhyt.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 rrhyt.Position = UDim2.new(0.965314746, 0, 4.36518526, 0)
 rrhyt.Size = UDim2.new(0, 45, 0, 50)
+rrhyt.ClearTextOnFocus = false
 rrhyt.Font = Enum.Font.SourceSans
+rrhyt.PlaceholderText = "0"
 rrhyt.Text = "0"
 rrhyt.TextColor3 = Color3.fromRGB(0, 0, 0)
 rrhyt.TextSize = 14.000
@@ -205,7 +215,9 @@ rrhxt.Parent = rightleg
 rrhxt.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 rrhxt.Position = UDim2.new(0.945314765, 0, 3.36874843, 0)
 rrhxt.Size = UDim2.new(0, 45, 0, 50)
+rrhxt.ClearTextOnFocus = false
 rrhxt.Font = Enum.Font.SourceSans
+rrhxt.PlaceholderText = "0"
 rrhxt.Text = "0"
 rrhxt.TextColor3 = Color3.fromRGB(0, 0, 0)
 rrhxt.TextSize = 14.000
@@ -236,7 +248,7 @@ closepage.TextWrapped = true
 
 -- Scripts:
 
-local function IQLT_fake_script() -- convert.convert script 
+local function BEBXM_fake_script() -- convert.convert script 
 	local script = Instance.new('Script', convert)
 
 	
@@ -390,21 +402,22 @@ local function IQLT_fake_script() -- convert.convert script
 	rhz = script.Parent.Parent.rightleg.rhzt.Text
 	rrhx = script.Parent.Parent.rightleg.rrhxt.Text
 	rrhy = script.Parent.Parent.rightleg.rrhyt.Text
-	rrhz = script.Parent.Parent.rightleg.rrhzt.Text
+		rrhz = script.Parent.Parent.rightleg.rrhzt.Text
+	wait()
 	RH.C0=clerp(RH.C0,cf(rhx,rhy,rhz)*angles(math.rad(rrhx),math.rad(rrhy),math.rad(rrhz)),.2)
-	LH.C0=clerp(LH.C0,cf(-0,-0,0)*angles(math.rad(0),math.rad(-90),math.rad(0)),.2)
+	LH.C0=clerp(LH.C0,cf(-0,-0,0)*angles(math.rad(0),math.rad(-0),math.rad(0)),.2)
 	RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(0.0,-0.0,0)*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
 	Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(-0)),.3)
 	RW.C0=clerp(RW.C0,cf(0.0,0.0,0.0)*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
 	LW.C0=clerp(LW.C0,cf(0,0,0.1)*angles(math.rad(0),math.rad(0),math.rad(-0)),.3)
 	end
 end
-coroutine.wrap(IQLT_fake_script)()
-local function XCBGZJ_fake_script() -- closepage.Script 
+coroutine.wrap(BEBXM_fake_script)()
+local function OZKVN_fake_script() -- closepage.Script 
 	local script = Instance.new('Script', closepage)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(XCBGZJ_fake_script)()
+coroutine.wrap(OZKVN_fake_script)()
