@@ -23,6 +23,77 @@ local rrhyt = Instance.new("TextBox")
 local rrhxt = Instance.new("TextBox")
 local position = Instance.new("TextLabel")
 local closepage = Instance.new("TextButton")
+local torso = Instance.new("Frame")
+local rhxt_2 = Instance.new("TextBox")
+local rhyt_2 = Instance.new("TextBox")
+local rhzt_2 = Instance.new("TextBox")
+local x_2 = Instance.new("TextLabel")
+local y_2 = Instance.new("TextLabel")
+local z_2 = Instance.new("TextLabel")
+local titlehr_2 = Instance.new("TextLabel")
+local rotation_2 = Instance.new("TextLabel")
+local rx_2 = Instance.new("TextLabel")
+local rz_2 = Instance.new("TextLabel")
+local ry_2 = Instance.new("TextLabel")
+local rrhzt_2 = Instance.new("TextBox")
+local rrhyt_2 = Instance.new("TextBox")
+local rrhxt_2 = Instance.new("TextBox")
+local position_2 = Instance.new("TextLabel")
+local leftleg = Instance.new("Frame")
+local rhxt_3 = Instance.new("TextBox")
+local rhyt_3 = Instance.new("TextBox")
+local rhzt_3 = Instance.new("TextBox")
+local x_3 = Instance.new("TextLabel")
+local y_3 = Instance.new("TextLabel")
+local z_3 = Instance.new("TextLabel")
+local titlehr_3 = Instance.new("TextLabel")
+local rotation_3 = Instance.new("TextLabel")
+local rx_3 = Instance.new("TextLabel")
+local rz_3 = Instance.new("TextLabel")
+local ry_3 = Instance.new("TextLabel")
+local rrhzt_3 = Instance.new("TextBox")
+local rrhyt_3 = Instance.new("TextBox")
+local rrhxt_3 = Instance.new("TextBox")
+local position_3 = Instance.new("TextLabel")
+local rightarm = Instance.new("Frame")
+local rhxt_4 = Instance.new("TextBox")
+local rhyt_4 = Instance.new("TextBox")
+local rhzt_4 = Instance.new("TextBox")
+local x_4 = Instance.new("TextLabel")
+local y_4 = Instance.new("TextLabel")
+local z_4 = Instance.new("TextLabel")
+local titlehr_4 = Instance.new("TextLabel")
+local rotation_4 = Instance.new("TextLabel")
+local rx_4 = Instance.new("TextLabel")
+local rz_4 = Instance.new("TextLabel")
+local ry_4 = Instance.new("TextLabel")
+local rrhzt_4 = Instance.new("TextBox")
+local rrhyt_4 = Instance.new("TextBox")
+local rrhxt_4 = Instance.new("TextBox")
+local position_4 = Instance.new("TextLabel")
+local leftarm = Instance.new("Frame")
+local rhxt_5 = Instance.new("TextBox")
+local rhyt_5 = Instance.new("TextBox")
+local rhzt_5 = Instance.new("TextBox")
+local x_5 = Instance.new("TextLabel")
+local y_5 = Instance.new("TextLabel")
+local z_5 = Instance.new("TextLabel")
+local titlehr_5 = Instance.new("TextLabel")
+local rotation_5 = Instance.new("TextLabel")
+local rx_5 = Instance.new("TextLabel")
+local rz_5 = Instance.new("TextLabel")
+local ry_5 = Instance.new("TextLabel")
+local rrhzt_5 = Instance.new("TextBox")
+local rrhyt_5 = Instance.new("TextBox")
+local rrhxt_5 = Instance.new("TextBox")
+local position_5 = Instance.new("TextLabel")
+local mainmian = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local leftkeg = Instance.new("TextButton")
+local rightleg_2 = Instance.new("TextButton")
+local torso_2 = Instance.new("TextButton")
+local rightarm_2 = Instance.new("TextButton")
+local leftarm_2 = Instance.new("TextButton")
 
 --Properties:
 
@@ -53,6 +124,7 @@ rightleg.Parent = main
 rightleg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 rightleg.BackgroundTransparency = 1.000
 rightleg.Size = UDim2.new(0, 100, 0, 100)
+rightleg.Visible = false
 
 rhxt.Name = "rhxt"
 rhxt.Parent = rightleg
@@ -246,9 +318,834 @@ closepage.TextScaled = true
 closepage.TextSize = 14.000
 closepage.TextWrapped = true
 
+torso.Name = "torso"
+torso.Parent = main
+torso.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+torso.BackgroundTransparency = 1.000
+torso.Size = UDim2.new(0, 100, 0, 100)
+torso.Visible = false
+
+rhxt_2.Name = "rhxt"
+rhxt_2.Parent = torso
+rhxt_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhxt_2.Position = UDim2.new(0.945314765, 0, 0.578748345, 0)
+rhxt_2.Size = UDim2.new(0, 45, 0, 50)
+rhxt_2.ClearTextOnFocus = false
+rhxt_2.Font = Enum.Font.SourceSans
+rhxt_2.PlaceholderText = "0"
+rhxt_2.Text = "0"
+rhxt_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhxt_2.TextSize = 14.000
+
+rhyt_2.Name = "rhyt"
+rhyt_2.Parent = torso
+rhyt_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhyt_2.Position = UDim2.new(0.965314746, 0, 1.57518518, 0)
+rhyt_2.Size = UDim2.new(0, 45, 0, 50)
+rhyt_2.ClearTextOnFocus = false
+rhyt_2.Font = Enum.Font.SourceSans
+rhyt_2.PlaceholderText = "0"
+rhyt_2.Text = "0"
+rhyt_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhyt_2.TextSize = 14.000
+
+rhzt_2.Name = "rhzt"
+rhzt_2.Parent = torso
+rhzt_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhzt_2.Position = UDim2.new(0.935314775, 0, 2.59779048, 0)
+rhzt_2.Size = UDim2.new(0, 45, 0, 50)
+rhzt_2.ClearTextOnFocus = false
+rhzt_2.Font = Enum.Font.SourceSans
+rhzt_2.PlaceholderText = "0"
+rhzt_2.Text = "0"
+rhzt_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhzt_2.TextSize = 14.000
+
+x_2.Name = "x"
+x_2.Parent = torso
+x_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+x_2.Position = UDim2.new(-0.00999999978, 0, 0.578748345, 0)
+x_2.Size = UDim2.new(0, 98, 0, 50)
+x_2.Font = Enum.Font.SourceSans
+x_2.Text = "X"
+x_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+x_2.TextScaled = true
+x_2.TextSize = 14.000
+x_2.TextWrapped = true
+
+y_2.Name = "y"
+y_2.Parent = torso
+y_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+y_2.Position = UDim2.new(-0.00999999978, 0, 1.57518518, 0)
+y_2.Size = UDim2.new(0, 98, 0, 50)
+y_2.Font = Enum.Font.SourceSans
+y_2.Text = "y"
+y_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+y_2.TextScaled = true
+y_2.TextSize = 14.000
+y_2.TextWrapped = true
+
+z_2.Name = "z"
+z_2.Parent = torso
+z_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+z_2.Position = UDim2.new(-0.0399999991, 0, 2.59779048, 0)
+z_2.Size = UDim2.new(0, 98, 0, 50)
+z_2.Font = Enum.Font.SourceSans
+z_2.Text = "z"
+z_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+z_2.TextScaled = true
+z_2.TextSize = 14.000
+z_2.TextWrapped = true
+
+titlehr_2.Name = "titlehr"
+titlehr_2.Parent = torso
+titlehr_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+titlehr_2.Position = UDim2.new(2.98023224e-08, 0, -0.00999999791, 0)
+titlehr_2.Size = UDim2.new(0, 97, 0, 31)
+titlehr_2.Font = Enum.Font.SourceSans
+titlehr_2.Text = "Right Leg"
+titlehr_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlehr_2.TextScaled = true
+titlehr_2.TextSize = 14.000
+titlehr_2.TextWrapped = true
+
+rotation_2.Name = "rotation"
+rotation_2.Parent = torso
+rotation_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rotation_2.Position = UDim2.new(-0.0299999993, 0, 3.0999999, 0)
+rotation_2.Size = UDim2.new(0, 145, 0, 27)
+rotation_2.Font = Enum.Font.SourceSans
+rotation_2.Text = "Rotation"
+rotation_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+rotation_2.TextScaled = true
+rotation_2.TextSize = 14.000
+rotation_2.TextWrapped = true
+
+rx_2.Name = "rx"
+rx_2.Parent = torso
+rx_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rx_2.Position = UDim2.new(-0.00999999978, 0, 3.36874843, 0)
+rx_2.Size = UDim2.new(0, 98, 0, 50)
+rx_2.Font = Enum.Font.SourceSans
+rx_2.Text = "X"
+rx_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+rx_2.TextScaled = true
+rx_2.TextSize = 14.000
+rx_2.TextWrapped = true
+
+rz_2.Name = "rz"
+rz_2.Parent = torso
+rz_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rz_2.Position = UDim2.new(-0.0399999991, 0, 5.38779068, 0)
+rz_2.Size = UDim2.new(0, 98, 0, 50)
+rz_2.Font = Enum.Font.SourceSans
+rz_2.Text = "z"
+rz_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+rz_2.TextScaled = true
+rz_2.TextSize = 14.000
+rz_2.TextWrapped = true
+
+ry_2.Name = "ry"
+ry_2.Parent = torso
+ry_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+ry_2.Position = UDim2.new(-0.00999999978, 0, 4.36518526, 0)
+ry_2.Size = UDim2.new(0, 98, 0, 50)
+ry_2.Font = Enum.Font.SourceSans
+ry_2.Text = "y"
+ry_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+ry_2.TextScaled = true
+ry_2.TextSize = 14.000
+ry_2.TextWrapped = true
+
+rrhzt_2.Name = "rrhzt"
+rrhzt_2.Parent = torso
+rrhzt_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhzt_2.Position = UDim2.new(0.935314775, 0, 5.38779068, 0)
+rrhzt_2.Size = UDim2.new(0, 45, 0, 50)
+rrhzt_2.ClearTextOnFocus = false
+rrhzt_2.Font = Enum.Font.SourceSans
+rrhzt_2.PlaceholderText = "0"
+rrhzt_2.Text = "0"
+rrhzt_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhzt_2.TextSize = 14.000
+
+rrhyt_2.Name = "rrhyt"
+rrhyt_2.Parent = torso
+rrhyt_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhyt_2.Position = UDim2.new(0.965314746, 0, 4.36518526, 0)
+rrhyt_2.Size = UDim2.new(0, 45, 0, 50)
+rrhyt_2.ClearTextOnFocus = false
+rrhyt_2.Font = Enum.Font.SourceSans
+rrhyt_2.PlaceholderText = "0"
+rrhyt_2.Text = "0"
+rrhyt_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhyt_2.TextSize = 14.000
+
+rrhxt_2.Name = "rrhxt"
+rrhxt_2.Parent = torso
+rrhxt_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhxt_2.Position = UDim2.new(0.945314765, 0, 3.36874843, 0)
+rrhxt_2.Size = UDim2.new(0, 45, 0, 50)
+rrhxt_2.ClearTextOnFocus = false
+rrhxt_2.Font = Enum.Font.SourceSans
+rrhxt_2.PlaceholderText = "0"
+rrhxt_2.Text = "0"
+rrhxt_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhxt_2.TextSize = 14.000
+
+position_2.Name = "position"
+position_2.Parent = torso
+position_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+position_2.Position = UDim2.new(-0.049999997, 0, 0.309999943, 0)
+position_2.Size = UDim2.new(0, 145, 0, 27)
+position_2.Font = Enum.Font.SourceSans
+position_2.Text = "Position"
+position_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+position_2.TextScaled = true
+position_2.TextSize = 14.000
+position_2.TextWrapped = true
+
+leftleg.Name = "leftleg"
+leftleg.Parent = main
+leftleg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+leftleg.BackgroundTransparency = 1.000
+leftleg.Size = UDim2.new(0, 100, 0, 100)
+leftleg.Visible = false
+
+rhxt_3.Name = "rhxt"
+rhxt_3.Parent = leftleg
+rhxt_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhxt_3.Position = UDim2.new(0.945314765, 0, 0.578748345, 0)
+rhxt_3.Size = UDim2.new(0, 45, 0, 50)
+rhxt_3.ClearTextOnFocus = false
+rhxt_3.Font = Enum.Font.SourceSans
+rhxt_3.PlaceholderText = "0"
+rhxt_3.Text = "0"
+rhxt_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhxt_3.TextSize = 14.000
+
+rhyt_3.Name = "rhyt"
+rhyt_3.Parent = leftleg
+rhyt_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhyt_3.Position = UDim2.new(0.965314746, 0, 1.57518518, 0)
+rhyt_3.Size = UDim2.new(0, 45, 0, 50)
+rhyt_3.ClearTextOnFocus = false
+rhyt_3.Font = Enum.Font.SourceSans
+rhyt_3.PlaceholderText = "0"
+rhyt_3.Text = "0"
+rhyt_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhyt_3.TextSize = 14.000
+
+rhzt_3.Name = "rhzt"
+rhzt_3.Parent = leftleg
+rhzt_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhzt_3.Position = UDim2.new(0.935314775, 0, 2.59779048, 0)
+rhzt_3.Size = UDim2.new(0, 45, 0, 50)
+rhzt_3.ClearTextOnFocus = false
+rhzt_3.Font = Enum.Font.SourceSans
+rhzt_3.PlaceholderText = "0"
+rhzt_3.Text = "0"
+rhzt_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhzt_3.TextSize = 14.000
+
+x_3.Name = "x"
+x_3.Parent = leftleg
+x_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+x_3.Position = UDim2.new(-0.00999999978, 0, 0.578748345, 0)
+x_3.Size = UDim2.new(0, 98, 0, 50)
+x_3.Font = Enum.Font.SourceSans
+x_3.Text = "X"
+x_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+x_3.TextScaled = true
+x_3.TextSize = 14.000
+x_3.TextWrapped = true
+
+y_3.Name = "y"
+y_3.Parent = leftleg
+y_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+y_3.Position = UDim2.new(-0.00999999978, 0, 1.57518518, 0)
+y_3.Size = UDim2.new(0, 98, 0, 50)
+y_3.Font = Enum.Font.SourceSans
+y_3.Text = "y"
+y_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+y_3.TextScaled = true
+y_3.TextSize = 14.000
+y_3.TextWrapped = true
+
+z_3.Name = "z"
+z_3.Parent = leftleg
+z_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+z_3.Position = UDim2.new(-0.0399999991, 0, 2.59779048, 0)
+z_3.Size = UDim2.new(0, 98, 0, 50)
+z_3.Font = Enum.Font.SourceSans
+z_3.Text = "z"
+z_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+z_3.TextScaled = true
+z_3.TextSize = 14.000
+z_3.TextWrapped = true
+
+titlehr_3.Name = "titlehr"
+titlehr_3.Parent = leftleg
+titlehr_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+titlehr_3.Position = UDim2.new(2.98023224e-08, 0, -0.00999999791, 0)
+titlehr_3.Size = UDim2.new(0, 97, 0, 31)
+titlehr_3.Font = Enum.Font.SourceSans
+titlehr_3.Text = "Left Leg"
+titlehr_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlehr_3.TextScaled = true
+titlehr_3.TextSize = 14.000
+titlehr_3.TextWrapped = true
+
+rotation_3.Name = "rotation"
+rotation_3.Parent = leftleg
+rotation_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rotation_3.Position = UDim2.new(-0.0299999993, 0, 3.0999999, 0)
+rotation_3.Size = UDim2.new(0, 145, 0, 27)
+rotation_3.Font = Enum.Font.SourceSans
+rotation_3.Text = "Rotation"
+rotation_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+rotation_3.TextScaled = true
+rotation_3.TextSize = 14.000
+rotation_3.TextWrapped = true
+
+rx_3.Name = "rx"
+rx_3.Parent = leftleg
+rx_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rx_3.Position = UDim2.new(-0.00999999978, 0, 3.36874843, 0)
+rx_3.Size = UDim2.new(0, 98, 0, 50)
+rx_3.Font = Enum.Font.SourceSans
+rx_3.Text = "X"
+rx_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+rx_3.TextScaled = true
+rx_3.TextSize = 14.000
+rx_3.TextWrapped = true
+
+rz_3.Name = "rz"
+rz_3.Parent = leftleg
+rz_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rz_3.Position = UDim2.new(-0.0399999991, 0, 5.38779068, 0)
+rz_3.Size = UDim2.new(0, 98, 0, 50)
+rz_3.Font = Enum.Font.SourceSans
+rz_3.Text = "z"
+rz_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+rz_3.TextScaled = true
+rz_3.TextSize = 14.000
+rz_3.TextWrapped = true
+
+ry_3.Name = "ry"
+ry_3.Parent = leftleg
+ry_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+ry_3.Position = UDim2.new(-0.00999999978, 0, 4.36518526, 0)
+ry_3.Size = UDim2.new(0, 98, 0, 50)
+ry_3.Font = Enum.Font.SourceSans
+ry_3.Text = "y"
+ry_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+ry_3.TextScaled = true
+ry_3.TextSize = 14.000
+ry_3.TextWrapped = true
+
+rrhzt_3.Name = "rrhzt"
+rrhzt_3.Parent = leftleg
+rrhzt_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhzt_3.Position = UDim2.new(0.935314775, 0, 5.38779068, 0)
+rrhzt_3.Size = UDim2.new(0, 45, 0, 50)
+rrhzt_3.ClearTextOnFocus = false
+rrhzt_3.Font = Enum.Font.SourceSans
+rrhzt_3.PlaceholderText = "0"
+rrhzt_3.Text = "0"
+rrhzt_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhzt_3.TextSize = 14.000
+
+rrhyt_3.Name = "rrhyt"
+rrhyt_3.Parent = leftleg
+rrhyt_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhyt_3.Position = UDim2.new(0.965314746, 0, 4.36518526, 0)
+rrhyt_3.Size = UDim2.new(0, 45, 0, 50)
+rrhyt_3.ClearTextOnFocus = false
+rrhyt_3.Font = Enum.Font.SourceSans
+rrhyt_3.PlaceholderText = "0"
+rrhyt_3.Text = "0"
+rrhyt_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhyt_3.TextSize = 14.000
+
+rrhxt_3.Name = "rrhxt"
+rrhxt_3.Parent = leftleg
+rrhxt_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhxt_3.Position = UDim2.new(0.945314765, 0, 3.36874843, 0)
+rrhxt_3.Size = UDim2.new(0, 45, 0, 50)
+rrhxt_3.ClearTextOnFocus = false
+rrhxt_3.Font = Enum.Font.SourceSans
+rrhxt_3.PlaceholderText = "0"
+rrhxt_3.Text = "0"
+rrhxt_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhxt_3.TextSize = 14.000
+
+position_3.Name = "position"
+position_3.Parent = leftleg
+position_3.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+position_3.Position = UDim2.new(-0.049999997, 0, 0.309999943, 0)
+position_3.Size = UDim2.new(0, 145, 0, 27)
+position_3.Font = Enum.Font.SourceSans
+position_3.Text = "Position"
+position_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+position_3.TextScaled = true
+position_3.TextSize = 14.000
+position_3.TextWrapped = true
+
+rightarm.Name = "rightarm"
+rightarm.Parent = main
+rightarm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rightarm.BackgroundTransparency = 1.000
+rightarm.Size = UDim2.new(0, 100, 0, 100)
+rightarm.Visible = false
+
+rhxt_4.Name = "rhxt"
+rhxt_4.Parent = rightarm
+rhxt_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhxt_4.Position = UDim2.new(0.945314765, 0, 0.578748345, 0)
+rhxt_4.Size = UDim2.new(0, 45, 0, 50)
+rhxt_4.ClearTextOnFocus = false
+rhxt_4.Font = Enum.Font.SourceSans
+rhxt_4.PlaceholderText = "0"
+rhxt_4.Text = "0"
+rhxt_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhxt_4.TextSize = 14.000
+
+rhyt_4.Name = "rhyt"
+rhyt_4.Parent = rightarm
+rhyt_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhyt_4.Position = UDim2.new(0.965314746, 0, 1.57518518, 0)
+rhyt_4.Size = UDim2.new(0, 45, 0, 50)
+rhyt_4.ClearTextOnFocus = false
+rhyt_4.Font = Enum.Font.SourceSans
+rhyt_4.PlaceholderText = "0"
+rhyt_4.Text = "0"
+rhyt_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhyt_4.TextSize = 14.000
+
+rhzt_4.Name = "rhzt"
+rhzt_4.Parent = rightarm
+rhzt_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhzt_4.Position = UDim2.new(0.935314775, 0, 2.59779048, 0)
+rhzt_4.Size = UDim2.new(0, 45, 0, 50)
+rhzt_4.ClearTextOnFocus = false
+rhzt_4.Font = Enum.Font.SourceSans
+rhzt_4.PlaceholderText = "0"
+rhzt_4.Text = "0"
+rhzt_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhzt_4.TextSize = 14.000
+
+x_4.Name = "x"
+x_4.Parent = rightarm
+x_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+x_4.Position = UDim2.new(-0.00999999978, 0, 0.578748345, 0)
+x_4.Size = UDim2.new(0, 98, 0, 50)
+x_4.Font = Enum.Font.SourceSans
+x_4.Text = "X"
+x_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+x_4.TextScaled = true
+x_4.TextSize = 14.000
+x_4.TextWrapped = true
+
+y_4.Name = "y"
+y_4.Parent = rightarm
+y_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+y_4.Position = UDim2.new(-0.00999999978, 0, 1.57518518, 0)
+y_4.Size = UDim2.new(0, 98, 0, 50)
+y_4.Font = Enum.Font.SourceSans
+y_4.Text = "y"
+y_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+y_4.TextScaled = true
+y_4.TextSize = 14.000
+y_4.TextWrapped = true
+
+z_4.Name = "z"
+z_4.Parent = rightarm
+z_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+z_4.Position = UDim2.new(-0.0399999991, 0, 2.59779048, 0)
+z_4.Size = UDim2.new(0, 98, 0, 50)
+z_4.Font = Enum.Font.SourceSans
+z_4.Text = "z"
+z_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+z_4.TextScaled = true
+z_4.TextSize = 14.000
+z_4.TextWrapped = true
+
+titlehr_4.Name = "titlehr"
+titlehr_4.Parent = rightarm
+titlehr_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+titlehr_4.Position = UDim2.new(2.98023224e-08, 0, -0.00999999791, 0)
+titlehr_4.Size = UDim2.new(0, 97, 0, 31)
+titlehr_4.Font = Enum.Font.SourceSans
+titlehr_4.Text = "Right Leg"
+titlehr_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlehr_4.TextScaled = true
+titlehr_4.TextSize = 14.000
+titlehr_4.TextWrapped = true
+
+rotation_4.Name = "rotation"
+rotation_4.Parent = rightarm
+rotation_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rotation_4.Position = UDim2.new(-0.0299999993, 0, 3.0999999, 0)
+rotation_4.Size = UDim2.new(0, 145, 0, 27)
+rotation_4.Font = Enum.Font.SourceSans
+rotation_4.Text = "Rotation"
+rotation_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+rotation_4.TextScaled = true
+rotation_4.TextSize = 14.000
+rotation_4.TextWrapped = true
+
+rx_4.Name = "rx"
+rx_4.Parent = rightarm
+rx_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rx_4.Position = UDim2.new(-0.00999999978, 0, 3.36874843, 0)
+rx_4.Size = UDim2.new(0, 98, 0, 50)
+rx_4.Font = Enum.Font.SourceSans
+rx_4.Text = "X"
+rx_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+rx_4.TextScaled = true
+rx_4.TextSize = 14.000
+rx_4.TextWrapped = true
+
+rz_4.Name = "rz"
+rz_4.Parent = rightarm
+rz_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rz_4.Position = UDim2.new(-0.0399999991, 0, 5.38779068, 0)
+rz_4.Size = UDim2.new(0, 98, 0, 50)
+rz_4.Font = Enum.Font.SourceSans
+rz_4.Text = "z"
+rz_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+rz_4.TextScaled = true
+rz_4.TextSize = 14.000
+rz_4.TextWrapped = true
+
+ry_4.Name = "ry"
+ry_4.Parent = rightarm
+ry_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+ry_4.Position = UDim2.new(-0.00999999978, 0, 4.36518526, 0)
+ry_4.Size = UDim2.new(0, 98, 0, 50)
+ry_4.Font = Enum.Font.SourceSans
+ry_4.Text = "y"
+ry_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+ry_4.TextScaled = true
+ry_4.TextSize = 14.000
+ry_4.TextWrapped = true
+
+rrhzt_4.Name = "rrhzt"
+rrhzt_4.Parent = rightarm
+rrhzt_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhzt_4.Position = UDim2.new(0.935314775, 0, 5.38779068, 0)
+rrhzt_4.Size = UDim2.new(0, 45, 0, 50)
+rrhzt_4.ClearTextOnFocus = false
+rrhzt_4.Font = Enum.Font.SourceSans
+rrhzt_4.PlaceholderText = "0"
+rrhzt_4.Text = "0"
+rrhzt_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhzt_4.TextSize = 14.000
+
+rrhyt_4.Name = "rrhyt"
+rrhyt_4.Parent = rightarm
+rrhyt_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhyt_4.Position = UDim2.new(0.965314746, 0, 4.36518526, 0)
+rrhyt_4.Size = UDim2.new(0, 45, 0, 50)
+rrhyt_4.ClearTextOnFocus = false
+rrhyt_4.Font = Enum.Font.SourceSans
+rrhyt_4.PlaceholderText = "0"
+rrhyt_4.Text = "0"
+rrhyt_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhyt_4.TextSize = 14.000
+
+rrhxt_4.Name = "rrhxt"
+rrhxt_4.Parent = rightarm
+rrhxt_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhxt_4.Position = UDim2.new(0.945314765, 0, 3.36874843, 0)
+rrhxt_4.Size = UDim2.new(0, 45, 0, 50)
+rrhxt_4.ClearTextOnFocus = false
+rrhxt_4.Font = Enum.Font.SourceSans
+rrhxt_4.PlaceholderText = "0"
+rrhxt_4.Text = "0"
+rrhxt_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhxt_4.TextSize = 14.000
+
+position_4.Name = "position"
+position_4.Parent = rightarm
+position_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+position_4.Position = UDim2.new(-0.049999997, 0, 0.309999943, 0)
+position_4.Size = UDim2.new(0, 145, 0, 27)
+position_4.Font = Enum.Font.SourceSans
+position_4.Text = "Position"
+position_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+position_4.TextScaled = true
+position_4.TextSize = 14.000
+position_4.TextWrapped = true
+
+leftarm.Name = "leftarm"
+leftarm.Parent = main
+leftarm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+leftarm.BackgroundTransparency = 1.000
+leftarm.Size = UDim2.new(0, 100, 0, 100)
+leftarm.Visible = false
+
+rhxt_5.Name = "rhxt"
+rhxt_5.Parent = leftarm
+rhxt_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhxt_5.Position = UDim2.new(0.945314765, 0, 0.578748345, 0)
+rhxt_5.Size = UDim2.new(0, 45, 0, 50)
+rhxt_5.ClearTextOnFocus = false
+rhxt_5.Font = Enum.Font.SourceSans
+rhxt_5.PlaceholderText = "0"
+rhxt_5.Text = "0"
+rhxt_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhxt_5.TextSize = 14.000
+
+rhyt_5.Name = "rhyt"
+rhyt_5.Parent = leftarm
+rhyt_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhyt_5.Position = UDim2.new(0.965314746, 0, 1.57518518, 0)
+rhyt_5.Size = UDim2.new(0, 45, 0, 50)
+rhyt_5.ClearTextOnFocus = false
+rhyt_5.Font = Enum.Font.SourceSans
+rhyt_5.PlaceholderText = "0"
+rhyt_5.Text = "0"
+rhyt_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhyt_5.TextSize = 14.000
+
+rhzt_5.Name = "rhzt"
+rhzt_5.Parent = leftarm
+rhzt_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhzt_5.Position = UDim2.new(0.935314775, 0, 2.59779048, 0)
+rhzt_5.Size = UDim2.new(0, 45, 0, 50)
+rhzt_5.ClearTextOnFocus = false
+rhzt_5.Font = Enum.Font.SourceSans
+rhzt_5.PlaceholderText = "0"
+rhzt_5.Text = "0"
+rhzt_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhzt_5.TextSize = 14.000
+
+x_5.Name = "x"
+x_5.Parent = leftarm
+x_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+x_5.Position = UDim2.new(-0.00999999978, 0, 0.578748345, 0)
+x_5.Size = UDim2.new(0, 98, 0, 50)
+x_5.Font = Enum.Font.SourceSans
+x_5.Text = "X"
+x_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+x_5.TextScaled = true
+x_5.TextSize = 14.000
+x_5.TextWrapped = true
+
+y_5.Name = "y"
+y_5.Parent = leftarm
+y_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+y_5.Position = UDim2.new(-0.00999999978, 0, 1.57518518, 0)
+y_5.Size = UDim2.new(0, 98, 0, 50)
+y_5.Font = Enum.Font.SourceSans
+y_5.Text = "y"
+y_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+y_5.TextScaled = true
+y_5.TextSize = 14.000
+y_5.TextWrapped = true
+
+z_5.Name = "z"
+z_5.Parent = leftarm
+z_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+z_5.Position = UDim2.new(-0.0399999991, 0, 2.59779048, 0)
+z_5.Size = UDim2.new(0, 98, 0, 50)
+z_5.Font = Enum.Font.SourceSans
+z_5.Text = "z"
+z_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+z_5.TextScaled = true
+z_5.TextSize = 14.000
+z_5.TextWrapped = true
+
+titlehr_5.Name = "titlehr"
+titlehr_5.Parent = leftarm
+titlehr_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+titlehr_5.Position = UDim2.new(2.98023224e-08, 0, -0.00999999791, 0)
+titlehr_5.Size = UDim2.new(0, 97, 0, 31)
+titlehr_5.Font = Enum.Font.SourceSans
+titlehr_5.Text = "Right Leg"
+titlehr_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlehr_5.TextScaled = true
+titlehr_5.TextSize = 14.000
+titlehr_5.TextWrapped = true
+
+rotation_5.Name = "rotation"
+rotation_5.Parent = leftarm
+rotation_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rotation_5.Position = UDim2.new(-0.0299999993, 0, 3.0999999, 0)
+rotation_5.Size = UDim2.new(0, 145, 0, 27)
+rotation_5.Font = Enum.Font.SourceSans
+rotation_5.Text = "Rotation"
+rotation_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+rotation_5.TextScaled = true
+rotation_5.TextSize = 14.000
+rotation_5.TextWrapped = true
+
+rx_5.Name = "rx"
+rx_5.Parent = leftarm
+rx_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rx_5.Position = UDim2.new(-0.00999999978, 0, 3.36874843, 0)
+rx_5.Size = UDim2.new(0, 98, 0, 50)
+rx_5.Font = Enum.Font.SourceSans
+rx_5.Text = "X"
+rx_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+rx_5.TextScaled = true
+rx_5.TextSize = 14.000
+rx_5.TextWrapped = true
+
+rz_5.Name = "rz"
+rz_5.Parent = leftarm
+rz_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rz_5.Position = UDim2.new(-0.0399999991, 0, 5.38779068, 0)
+rz_5.Size = UDim2.new(0, 98, 0, 50)
+rz_5.Font = Enum.Font.SourceSans
+rz_5.Text = "z"
+rz_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+rz_5.TextScaled = true
+rz_5.TextSize = 14.000
+rz_5.TextWrapped = true
+
+ry_5.Name = "ry"
+ry_5.Parent = leftarm
+ry_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+ry_5.Position = UDim2.new(-0.00999999978, 0, 4.36518526, 0)
+ry_5.Size = UDim2.new(0, 98, 0, 50)
+ry_5.Font = Enum.Font.SourceSans
+ry_5.Text = "y"
+ry_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+ry_5.TextScaled = true
+ry_5.TextSize = 14.000
+ry_5.TextWrapped = true
+
+rrhzt_5.Name = "rrhzt"
+rrhzt_5.Parent = leftarm
+rrhzt_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhzt_5.Position = UDim2.new(0.935314775, 0, 5.38779068, 0)
+rrhzt_5.Size = UDim2.new(0, 45, 0, 50)
+rrhzt_5.ClearTextOnFocus = false
+rrhzt_5.Font = Enum.Font.SourceSans
+rrhzt_5.PlaceholderText = "0"
+rrhzt_5.Text = "0"
+rrhzt_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhzt_5.TextSize = 14.000
+
+rrhyt_5.Name = "rrhyt"
+rrhyt_5.Parent = leftarm
+rrhyt_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhyt_5.Position = UDim2.new(0.965314746, 0, 4.36518526, 0)
+rrhyt_5.Size = UDim2.new(0, 45, 0, 50)
+rrhyt_5.ClearTextOnFocus = false
+rrhyt_5.Font = Enum.Font.SourceSans
+rrhyt_5.PlaceholderText = "0"
+rrhyt_5.Text = "0"
+rrhyt_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhyt_5.TextSize = 14.000
+
+rrhxt_5.Name = "rrhxt"
+rrhxt_5.Parent = leftarm
+rrhxt_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhxt_5.Position = UDim2.new(0.945314765, 0, 3.36874843, 0)
+rrhxt_5.Size = UDim2.new(0, 45, 0, 50)
+rrhxt_5.ClearTextOnFocus = false
+rrhxt_5.Font = Enum.Font.SourceSans
+rrhxt_5.PlaceholderText = "0"
+rrhxt_5.Text = "0"
+rrhxt_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhxt_5.TextSize = 14.000
+
+position_5.Name = "position"
+position_5.Parent = leftarm
+position_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+position_5.Position = UDim2.new(-0.049999997, 0, 0.309999943, 0)
+position_5.Size = UDim2.new(0, 145, 0, 27)
+position_5.Font = Enum.Font.SourceSans
+position_5.Text = "Position"
+position_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+position_5.TextScaled = true
+position_5.TextSize = 14.000
+position_5.TextWrapped = true
+
+mainmian.Name = "mainmian"
+mainmian.Parent = main
+mainmian.BackgroundColor3 = Color3.fromRGB(209, 209, 209)
+mainmian.Position = UDim2.new(0, 0, 0.0466165431, 0)
+mainmian.Size = UDim2.new(0, 140, 0, 591)
+
+TextLabel.Parent = mainmian
+TextLabel.BackgroundColor3 = Color3.fromRGB(234, 234, 234)
+TextLabel.Position = UDim2.new(0, 0, -0.0524534695, 0)
+TextLabel.Size = UDim2.new(0, 98, 0, 31)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "main menu"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+leftkeg.Name = "leftkeg"
+leftkeg.Parent = mainmian
+leftkeg.BackgroundColor3 = Color3.fromRGB(234, 234, 234)
+leftkeg.Position = UDim2.new(-0.0642857179, 0, 0.0406091362, 0)
+leftkeg.Size = UDim2.new(0, 150, 0, 30)
+leftkeg.Font = Enum.Font.SourceSans
+leftkeg.Text = "Left leg"
+leftkeg.TextColor3 = Color3.fromRGB(0, 0, 0)
+leftkeg.TextScaled = true
+leftkeg.TextSize = 14.000
+leftkeg.TextWrapped = true
+
+rightleg_2.Name = "rightleg"
+rightleg_2.Parent = mainmian
+rightleg_2.BackgroundColor3 = Color3.fromRGB(234, 234, 234)
+rightleg_2.Position = UDim2.new(-0.0642857179, 0, 0.125211507, 0)
+rightleg_2.Size = UDim2.new(0, 150, 0, 30)
+rightleg_2.Font = Enum.Font.SourceSans
+rightleg_2.Text = "Right leg"
+rightleg_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+rightleg_2.TextScaled = true
+rightleg_2.TextSize = 14.000
+rightleg_2.TextWrapped = true
+
+torso_2.Name = "torso"
+torso_2.Parent = mainmian
+torso_2.BackgroundColor3 = Color3.fromRGB(234, 234, 234)
+torso_2.Position = UDim2.new(-0.0714285746, 0, 0.204737723, 0)
+torso_2.Size = UDim2.new(0, 150, 0, 30)
+torso_2.Font = Enum.Font.SourceSans
+torso_2.Text = "Torso"
+torso_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+torso_2.TextScaled = true
+torso_2.TextSize = 14.000
+torso_2.TextWrapped = true
+
+rightarm_2.Name = "right arm"
+rightarm_2.Parent = mainmian
+rightarm_2.BackgroundColor3 = Color3.fromRGB(234, 234, 234)
+rightarm_2.Position = UDim2.new(-0.0714285746, 0, 0.280879855, 0)
+rightarm_2.Size = UDim2.new(0, 150, 0, 30)
+rightarm_2.Font = Enum.Font.SourceSans
+rightarm_2.Text = "Right arm"
+rightarm_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+rightarm_2.TextScaled = true
+rightarm_2.TextSize = 14.000
+rightarm_2.TextWrapped = true
+
+leftarm_2.Name = "left arm"
+leftarm_2.Parent = mainmian
+leftarm_2.BackgroundColor3 = Color3.fromRGB(234, 234, 234)
+leftarm_2.Position = UDim2.new(-0.0714285746, 0, 0.357021987, 0)
+leftarm_2.Size = UDim2.new(0, 150, 0, 30)
+leftarm_2.Font = Enum.Font.SourceSans
+leftarm_2.Text = "Left Arm"
+leftarm_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+leftarm_2.TextScaled = true
+leftarm_2.TextSize = 14.000
+leftarm_2.TextWrapped = true
+
 -- Scripts:
 
-local function BEBXM_fake_script() -- convert.convert script 
+local function LLGZJO_fake_script() -- convert.convert script 
 	local script = Instance.new('Script', convert)
 
 	
@@ -397,27 +1294,114 @@ local function BEBXM_fake_script() -- convert.convert script
 	end)
 	while true do 
 		wait()
+	wait()
 	rhx = script.Parent.Parent.rightleg.rhxt.Text
 	rhy = script.Parent.Parent.rightleg.rhyt.Text
 	rhz = script.Parent.Parent.rightleg.rhzt.Text
 	rrhx = script.Parent.Parent.rightleg.rrhxt.Text
 	rrhy = script.Parent.Parent.rightleg.rrhyt.Text
-		rrhz = script.Parent.Parent.rightleg.rrhzt.Text
+	rrhz = script.Parent.Parent.rightleg.rrhzt.Text
+		lhx = script.Parent.Parent.leftleg.rhxt.Text
+		lhy = script.Parent.Parent.leftleg.rhyt.Text
+		lhz = script.Parent.Parent.leftleg.rhzt.Text
+		lrhx = script.Parent.Parent.leftleg.rrhxt.Text
+		lrhy = script.Parent.Parent.leftleg.rrhyt.Text
+		lrhz = script.Parent.Parent.leftleg.rrhzt.Text
+			rahx = script.Parent.Parent.rightarm.rhxt.Text
+			rahy = script.Parent.Parent.rightarm.rhyt.Text
+			rahz = script.Parent.Parent.rightarm.rhzt.Text
+			rarhx = script.Parent.Parent.rightarm.rrhxt.Text
+			rarhy = script.Parent.Parent.rightarm.rrhyt.Text
+			rarhz = script.Parent.Parent.rightarm.rrhzt.Text
+				lahx = script.Parent.Parent.leftarm.rhxt.Text
+				lahy = script.Parent.Parent.leftarm.rhyt.Text
+				lahz = script.Parent.Parent.leftarm.rhzt.Text
+				larhx = script.Parent.Parent.leftarm.rrhxt.Text
+				larhy = script.Parent.Parent.leftarm.rrhyt.Text
+				larhz = script.Parent.Parent.leftarm.rrhzt.Text
+					tahx = script.Parent.Parent.torso.rhxt.Text
+					tahy = script.Parent.Parent.torso.rhyt.Text
+					tahz = script.Parent.Parent.torso.rhzt.Text
+					tarhx = script.Parent.Parent.torso.rrhxt.Text
+					tarhy = script.Parent.Parent.torso.rrhyt.Text
+					tarhz = script.Parent.Parent.torso.rrhzt.Text
 	wait()
 	RH.C0=clerp(RH.C0,cf(rhx,rhy,rhz)*angles(math.rad(rrhx),math.rad(rrhy),math.rad(rrhz)),.2)
-	LH.C0=clerp(LH.C0,cf(-0,-0,0)*angles(math.rad(0),math.rad(-0),math.rad(0)),.2)
-	RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(0.0,-0.0,0)*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
-	Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(-0)),.3)
-	RW.C0=clerp(RW.C0,cf(0.0,0.0,0.0)*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
-	LW.C0=clerp(LW.C0,cf(0,0,0.1)*angles(math.rad(0),math.rad(0),math.rad(-0)),.3)
+	LH.C0=clerp(LH.C0,cf(lhx,lhy,lhz)*angles(math.rad(lrhx),math.rad(lrhy),math.rad(lrhz)),.2)
+	RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx,tahy,tahz)*angles(math.rad(tarhx),math.rad(tarhy),math.rad(tarhz)),.3)
+	Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
+	RW.C0=clerp(RW.C0,cf(rahx,rahy,rahz)*angles(math.rad(rarhx),math.rad(rarhy),math.rad(rarhz)),.3)
+	LW.C0=clerp(LW.C0,cf(lahx,lahy,lahz)*angles(math.rad(larhx),math.rad(larhy),math.rad(larhz)),.3)
 	end
 end
-coroutine.wrap(BEBXM_fake_script)()
-local function OZKVN_fake_script() -- closepage.Script 
+coroutine.wrap(LLGZJO_fake_script)()
+local function JAPXY_fake_script() -- closepage.Script 
 	local script = Instance.new('Script', closepage)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Visible = false
+		if script.Parent.Parent.leftarm.Visible == true then
+			script.Parent.Parent.leftarm.Visible = false
+			script.Parent.Parent.mainmian.Visible = true
+		elseif script.Parent.Parent.rightleg.Visible == true then
+			script.Parent.Parent.rightleg.Visible = false
+			script.Parent.Parent.mainmian.Visible = true
+		elseif script.Parent.Parent.torso.Visible == true then
+			script.Parent.Parent.torso.Visible = false
+			script.Parent.Parent.mainmian.Visible = true
+		elseif script.Parent.Parent.leftleg.Visible == true then
+			script.Parent.Parent.leftleg.Visible = false
+			script.Parent.Parent.mainmian.Visible = true
+		elseif script.Parent.Parent.rightarm.Visible == true then
+			script.Parent.Parent.rightarm.Visible = false
+			script.Parent.Parent.mainmian.Visible = true
+		else
+			script.Parent.Parent.Parent.main:Destroy()
+		end
 	end)
 end
-coroutine.wrap(OZKVN_fake_script)()
+coroutine.wrap(JAPXY_fake_script)()
+local function VNFB_fake_script() -- leftkeg.Script 
+	local script = Instance.new('Script', leftkeg)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.mainmian.Visible = false
+		script.Parent.Parent.Parent.leftleg.Visible = true
+	end)
+end
+coroutine.wrap(VNFB_fake_script)()
+local function UISJQGM_fake_script() -- rightleg_2.Script 
+	local script = Instance.new('Script', rightleg_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.mainmian.Visible = false
+		script.Parent.Parent.Parent.rightleg.Visible = true
+	end)
+end
+coroutine.wrap(UISJQGM_fake_script)()
+local function JRZPUSY_fake_script() -- torso_2.Script 
+	local script = Instance.new('Script', torso_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.mainmian.Visible = false
+		script.Parent.Parent.Parent.torso.Visible = true
+	end)
+end
+coroutine.wrap(JRZPUSY_fake_script)()
+local function UCJUON_fake_script() -- rightarm_2.Script 
+	local script = Instance.new('Script', rightarm_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.mainmian.Visible = false
+		script.Parent.Parent.Parent.rightarm.Visible = true
+	end)
+end
+coroutine.wrap(UCJUON_fake_script)()
+local function IFKKK_fake_script() -- leftarm_2.Script 
+	local script = Instance.new('Script', leftarm_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.mainmian.Visible = false
+		script.Parent.Parent.Parent.leftarm.Visible = true
+	end)
+end
+coroutine.wrap(IFKKK_fake_script)()
