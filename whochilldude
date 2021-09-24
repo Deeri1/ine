@@ -4,8 +4,13 @@
 -- Instances:
 
 local animator = Instance.new("ScreenGui")
+local convert = Instance.new("Frame")
+local converttext = Instance.new("TextBox")
+local toclipboard = Instance.new("TextButton")
+local contitle = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
 local main = Instance.new("Frame")
-local convert = Instance.new("TextButton")
+local convert_2 = Instance.new("TextButton")
 local rightleg = Instance.new("Frame")
 local rhxt = Instance.new("TextBox")
 local rhyt = Instance.new("TextBox")
@@ -94,11 +99,26 @@ local rightleg_2 = Instance.new("TextButton")
 local torso_2 = Instance.new("TextButton")
 local rightarm_2 = Instance.new("TextButton")
 local leftarm_2 = Instance.new("TextButton")
-local convert_2 = Instance.new("Frame")
-local converttext = Instance.new("TextBox")
-local toclipboard = Instance.new("TextButton")
-local contitle = Instance.new("TextLabel")
-local close = Instance.new("TextButton")
+local animation = Instance.new("TextButton")
+local updatebutton = Instance.new("TextButton")
+local animation_2 = Instance.new("Frame")
+local rightlegani = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local rhxt_6 = Instance.new("TextBox")
+local rhyt_6 = Instance.new("TextBox")
+local rhzt_6 = Instance.new("TextBox")
+local rrhxt_6 = Instance.new("TextBox")
+local rrhyt_6 = Instance.new("TextBox")
+local rrhzt_6 = Instance.new("TextBox")
+local position_6 = Instance.new("TextLabel")
+local rotation_6 = Instance.new("TextLabel")
+local rx_6 = Instance.new("TextLabel")
+local ry_6 = Instance.new("TextLabel")
+local rz_6 = Instance.new("TextLabel")
+local titlehr_6 = Instance.new("TextLabel")
+local x_6 = Instance.new("TextLabel")
+local y_6 = Instance.new("TextLabel")
+local z_6 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -106,23 +126,76 @@ animator.Name = "animator"
 animator.Parent = game.CoreGui
 animator.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
+convert.Name = "convert"
+convert.Parent = animator
+convert.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+convert.Position = UDim2.new(0.544369876, 0, 0.178800851, 0)
+convert.Size = UDim2.new(0, 457, 0, 422)
+convert.Visible = false
+
+converttext.Name = "convert text"
+converttext.Parent = convert
+converttext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+converttext.Position = UDim2.new(0, 0, 0.0663507134, 0)
+converttext.Size = UDim2.new(0, 457, 0, 394)
+converttext.ClearTextOnFocus = false
+converttext.Font = Enum.Font.SourceSans
+converttext.Text = ""
+converttext.TextColor3 = Color3.fromRGB(0, 0, 0)
+converttext.TextSize = 14.000
+
+toclipboard.Name = "toclipboard"
+toclipboard.Parent = convert
+toclipboard.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toclipboard.Position = UDim2.new(0.562363267, 0, 0, 0)
+toclipboard.Size = UDim2.new(0, 200, 0, 28)
+toclipboard.Font = Enum.Font.SourceSans
+toclipboard.Text = "To ClipBoard"
+toclipboard.TextColor3 = Color3.fromRGB(0, 0, 0)
+toclipboard.TextScaled = true
+toclipboard.TextSize = 14.000
+toclipboard.TextWrapped = true
+
+contitle.Name = "contitle"
+contitle.Parent = convert
+contitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+contitle.Position = UDim2.new(0.124726474, 0, 0, 0)
+contitle.Size = UDim2.new(0, 200, 0, 28)
+contitle.Font = Enum.Font.SourceSans
+contitle.Text = "Convert Text"
+contitle.TextColor3 = Color3.fromRGB(0, 0, 0)
+contitle.TextScaled = true
+contitle.TextSize = 14.000
+contitle.TextWrapped = true
+
+close.Name = "close"
+close.Parent = convert
+close.BackgroundColor3 = Color3.fromRGB(230, 76, 0)
+close.Size = UDim2.new(0, 57, 0, 28)
+close.Font = Enum.Font.SourceSans
+close.Text = "Close"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+
 main.Name = "main"
 main.Parent = animator
 main.BackgroundColor3 = Color3.fromRGB(208, 208, 208)
 main.Position = UDim2.new(0, 0, 0.0347554088, 0)
 main.Size = UDim2.new(0, 141, 0, 665)
 
-convert.Name = "convert"
-convert.Parent = main
-convert.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-convert.Position = UDim2.new(-0.0629370958, 0, 0.936142981, 0)
-convert.Size = UDim2.new(0, 149, 0, 50)
-convert.Font = Enum.Font.SourceSans
-convert.Text = "Convert"
-convert.TextColor3 = Color3.fromRGB(0, 0, 0)
-convert.TextScaled = true
-convert.TextSize = 14.000
-convert.TextWrapped = true
+convert_2.Name = "convert"
+convert_2.Parent = main
+convert_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+convert_2.Position = UDim2.new(-0.0629370958, 0, 0.936142981, 0)
+convert_2.Size = UDim2.new(0, 149, 0, 50)
+convert_2.Font = Enum.Font.SourceSans
+convert_2.Text = "Convert"
+convert_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+convert_2.TextScaled = true
+convert_2.TextSize = 14.000
+convert_2.TextWrapped = true
 
 rightleg.Name = "rightleg"
 rightleg.Parent = main
@@ -408,7 +481,7 @@ titlehr_2.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 titlehr_2.Position = UDim2.new(2.98023224e-08, 0, -0.00999999791, 0)
 titlehr_2.Size = UDim2.new(0, 97, 0, 31)
 titlehr_2.Font = Enum.Font.SourceSans
-titlehr_2.Text = "Right Leg"
+titlehr_2.Text = "Torso"
 titlehr_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 titlehr_2.TextScaled = true
 titlehr_2.TextSize = 14.000
@@ -782,7 +855,7 @@ titlehr_4.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 titlehr_4.Position = UDim2.new(2.98023224e-08, 0, -0.00999999791, 0)
 titlehr_4.Size = UDim2.new(0, 97, 0, 31)
 titlehr_4.Font = Enum.Font.SourceSans
-titlehr_4.Text = "Right Leg"
+titlehr_4.Text = "Right Arm"
 titlehr_4.TextColor3 = Color3.fromRGB(0, 0, 0)
 titlehr_4.TextScaled = true
 titlehr_4.TextSize = 14.000
@@ -969,7 +1042,7 @@ titlehr_5.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 titlehr_5.Position = UDim2.new(2.98023224e-08, 0, -0.00999999791, 0)
 titlehr_5.Size = UDim2.new(0, 97, 0, 31)
 titlehr_5.Font = Enum.Font.SourceSans
-titlehr_5.Text = "Right Leg"
+titlehr_5.Text = "Left Arm"
 titlehr_5.TextColor3 = Color3.fromRGB(0, 0, 0)
 titlehr_5.TextScaled = true
 titlehr_5.TextSize = 14.000
@@ -1148,65 +1221,252 @@ leftarm_2.TextScaled = true
 leftarm_2.TextSize = 14.000
 leftarm_2.TextWrapped = true
 
-convert_2.Name = "convert"
-convert_2.Parent = animator
-convert_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-convert_2.Position = UDim2.new(0.544369876, 0, 0.178800851, 0)
-convert_2.Size = UDim2.new(0, 457, 0, 422)
-convert_2.Visible = false
+animation.Name = "animation"
+animation.Parent = main
+animation.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+animation.Position = UDim2.new(0.978723407, 0, 0, 0)
+animation.Size = UDim2.new(0, 62, 0, 31)
+animation.Font = Enum.Font.SourceSans
+animation.Text = "Animation"
+animation.TextColor3 = Color3.fromRGB(0, 0, 0)
+animation.TextScaled = true
+animation.TextSize = 14.000
+animation.TextWrapped = true
 
-converttext.Name = "convert text"
-converttext.Parent = convert_2
-converttext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-converttext.Position = UDim2.new(0, 0, 0.0663507134, 0)
-converttext.Size = UDim2.new(0, 457, 0, 394)
-converttext.ClearTextOnFocus = false
-converttext.Font = Enum.Font.SourceSans
-converttext.Text = ""
-converttext.TextColor3 = Color3.fromRGB(0, 0, 0)
-converttext.TextSize = 14.000
+updatebutton.Name = "update button"
+updatebutton.Parent = main
+updatebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+updatebutton.Position = UDim2.new(0.978723407, 0, 0.0466165431, 0)
+updatebutton.Size = UDim2.new(0, 62, 0, 24)
+updatebutton.Font = Enum.Font.SourceSans
+updatebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+updatebutton.TextSize = 14.000
 
-toclipboard.Name = "toclipboard"
-toclipboard.Parent = convert_2
-toclipboard.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-toclipboard.Position = UDim2.new(0.562363267, 0, 0, 0)
-toclipboard.Size = UDim2.new(0, 200, 0, 28)
-toclipboard.Font = Enum.Font.SourceSans
-toclipboard.Text = "To ClipBoard"
-toclipboard.TextColor3 = Color3.fromRGB(0, 0, 0)
-toclipboard.TextScaled = true
-toclipboard.TextSize = 14.000
-toclipboard.TextWrapped = true
+animation_2.Name = "animation"
+animation_2.Parent = animator
+animation_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+animation_2.BackgroundTransparency = 1.000
+animation_2.Size = UDim2.new(0, 100, 0, 100)
 
-contitle.Name = "contitle"
-contitle.Parent = convert_2
-contitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-contitle.Position = UDim2.new(0.124726474, 0, 0, 0)
-contitle.Size = UDim2.new(0, 200, 0, 28)
-contitle.Font = Enum.Font.SourceSans
-contitle.Text = "Convert Text"
-contitle.TextColor3 = Color3.fromRGB(0, 0, 0)
-contitle.TextScaled = true
-contitle.TextSize = 14.000
-contitle.TextWrapped = true
+rightlegani.Name = "rightlegani"
+rightlegani.Parent = animation_2
+rightlegani.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rightlegani.Position = UDim2.new(11.96, 0, 0, 0)
+rightlegani.Size = UDim2.new(0, 100, 0, 100)
 
-close.Name = "close"
-close.Parent = convert_2
-close.BackgroundColor3 = Color3.fromRGB(230, 76, 0)
-close.Size = UDim2.new(0, 57, 0, 28)
-close.Font = Enum.Font.SourceSans
-close.Text = "Close"
-close.TextColor3 = Color3.fromRGB(0, 0, 0)
-close.TextScaled = true
-close.TextSize = 14.000
-close.TextWrapped = true
+Frame.Parent = rightlegani
+Frame.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+Frame.Size = UDim2.new(0, 145, 0, 589)
+Frame.ZIndex = 0
+
+rhxt_6.Name = "rhxt"
+rhxt_6.Parent = rightlegani
+rhxt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhxt_6.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+rhxt_6.Size = UDim2.new(0, 45, 0, 50)
+rhxt_6.ClearTextOnFocus = false
+rhxt_6.Font = Enum.Font.SourceSans
+rhxt_6.PlaceholderText = "0"
+rhxt_6.Text = "0"
+rhxt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhxt_6.TextSize = 14.000
+
+rhyt_6.Name = "rhyt"
+rhyt_6.Parent = rightlegani
+rhyt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhyt_6.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+rhyt_6.Size = UDim2.new(0, 45, 0, 50)
+rhyt_6.ClearTextOnFocus = false
+rhyt_6.Font = Enum.Font.SourceSans
+rhyt_6.PlaceholderText = "0"
+rhyt_6.Text = "0"
+rhyt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhyt_6.TextSize = 14.000
+
+rhzt_6.Name = "rhzt"
+rhzt_6.Parent = rightlegani
+rhzt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhzt_6.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+rhzt_6.Size = UDim2.new(0, 45, 0, 50)
+rhzt_6.ClearTextOnFocus = false
+rhzt_6.Font = Enum.Font.SourceSans
+rhzt_6.PlaceholderText = "0"
+rhzt_6.Text = "0"
+rhzt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhzt_6.TextSize = 14.000
+
+rrhxt_6.Name = "rrhxt"
+rrhxt_6.Parent = rightlegani
+rrhxt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhxt_6.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+rrhxt_6.Size = UDim2.new(0, 45, 0, 50)
+rrhxt_6.ClearTextOnFocus = false
+rrhxt_6.Font = Enum.Font.SourceSans
+rrhxt_6.PlaceholderText = "0"
+rrhxt_6.Text = "0"
+rrhxt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhxt_6.TextSize = 14.000
+
+rrhyt_6.Name = "rrhyt"
+rrhyt_6.Parent = rightlegani
+rrhyt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhyt_6.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+rrhyt_6.Size = UDim2.new(0, 45, 0, 50)
+rrhyt_6.ClearTextOnFocus = false
+rrhyt_6.Font = Enum.Font.SourceSans
+rrhyt_6.PlaceholderText = "0"
+rrhyt_6.Text = "0"
+rrhyt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhyt_6.TextSize = 14.000
+
+rrhzt_6.Name = "rrhzt"
+rrhzt_6.Parent = rightlegani
+rrhzt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhzt_6.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+rrhzt_6.Size = UDim2.new(0, 45, 0, 50)
+rrhzt_6.ClearTextOnFocus = false
+rrhzt_6.Font = Enum.Font.SourceSans
+rrhzt_6.PlaceholderText = "0"
+rrhzt_6.Text = "0"
+rrhzt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhzt_6.TextSize = 14.000
+
+position_6.Name = "position"
+position_6.Parent = rightlegani
+position_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+position_6.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+position_6.Size = UDim2.new(0, 145, 0, 27)
+position_6.Font = Enum.Font.SourceSans
+position_6.Text = "Position"
+position_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+position_6.TextScaled = true
+position_6.TextSize = 14.000
+position_6.TextWrapped = true
+
+rotation_6.Name = "rotation"
+rotation_6.Parent = rightlegani
+rotation_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rotation_6.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+rotation_6.Size = UDim2.new(0, 145, 0, 27)
+rotation_6.Font = Enum.Font.SourceSans
+rotation_6.Text = "Rotation"
+rotation_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+rotation_6.TextScaled = true
+rotation_6.TextSize = 14.000
+rotation_6.TextWrapped = true
+
+rx_6.Name = "rx"
+rx_6.Parent = rightlegani
+rx_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rx_6.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+rx_6.Size = UDim2.new(0, 98, 0, 50)
+rx_6.Font = Enum.Font.SourceSans
+rx_6.Text = "X"
+rx_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+rx_6.TextScaled = true
+rx_6.TextSize = 14.000
+rx_6.TextWrapped = true
+
+ry_6.Name = "ry"
+ry_6.Parent = rightlegani
+ry_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+ry_6.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+ry_6.Size = UDim2.new(0, 98, 0, 50)
+ry_6.Font = Enum.Font.SourceSans
+ry_6.Text = "y"
+ry_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+ry_6.TextScaled = true
+ry_6.TextSize = 14.000
+ry_6.TextWrapped = true
+
+rz_6.Name = "rz"
+rz_6.Parent = rightlegani
+rz_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rz_6.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+rz_6.Size = UDim2.new(0, 98, 0, 50)
+rz_6.Font = Enum.Font.SourceSans
+rz_6.Text = "z"
+rz_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+rz_6.TextScaled = true
+rz_6.TextSize = 14.000
+rz_6.TextWrapped = true
+
+titlehr_6.Name = "titlehr"
+titlehr_6.Parent = rightlegani
+titlehr_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+titlehr_6.Position = UDim2.new(0.0399999991, 0, 0, 0)
+titlehr_6.Size = UDim2.new(0, 97, 0, 31)
+titlehr_6.Font = Enum.Font.SourceSans
+titlehr_6.Text = "Right Leg"
+titlehr_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlehr_6.TextScaled = true
+titlehr_6.TextSize = 14.000
+titlehr_6.TextWrapped = true
+
+x_6.Name = "x"
+x_6.Parent = rightlegani
+x_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+x_6.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+x_6.Size = UDim2.new(0, 98, 0, 50)
+x_6.Font = Enum.Font.SourceSans
+x_6.Text = "X"
+x_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+x_6.TextScaled = true
+x_6.TextSize = 14.000
+x_6.TextWrapped = true
+
+y_6.Name = "y"
+y_6.Parent = rightlegani
+y_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+y_6.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+y_6.Size = UDim2.new(0, 98, 0, 50)
+y_6.Font = Enum.Font.SourceSans
+y_6.Text = "y"
+y_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+y_6.TextScaled = true
+y_6.TextSize = 14.000
+y_6.TextWrapped = true
+
+z_6.Name = "z"
+z_6.Parent = rightlegani
+z_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+z_6.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+z_6.Size = UDim2.new(0, 101, 0, 50)
+z_6.Font = Enum.Font.SourceSans
+z_6.Text = "z"
+z_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+z_6.TextScaled = true
+z_6.TextSize = 14.000
+z_6.TextWrapped = true
 
 -- Scripts:
 
-local function ZFEO_fake_script() -- convert.convert script 
-	local script = Instance.new('Script', convert)
+local function YOHLJ_fake_script() -- convert_2.convert script 
+	local script = Instance.new('Script', convert_2)
 
+	player = game.Players.LocalPlayer
+	Character = player.Character
+	player = game.Players.LocalPlayer
+	Player = player
+	Character = Player.Character
+	LeftArm=Character["Left Arm"] 
+	LeftLeg=Character["Left Leg"] 
+	RightArm=Character["Right Arm"] 
+	RightLeg=Character["Right Leg"] 
+	PlayerGui=Player.PlayerGui 
+	Backpack=Player.Backpack 
+	Torso=Character.Torso 
+	Head=Character.Head 
+	LW=Torso["Left Shoulder"] 
+	LH=Torso["Left Hip"] 
+	RW=Torso["Right Shoulder"] 
+	RH=Torso["Right Hip"] 
+	LH=Torso["Left Hip"]
+	RH=Torso["Right Hip"]
+	ch = Character
+	Humanoid = ch.Humanoid
 	
+	wait()
 	
 	
 	_G.SelexityNet = true
@@ -1234,8 +1494,8 @@ local function ZFEO_fake_script() -- convert.convert script
 	RW=Torso["Right Shoulder"] 
 	RH=Torso["Right Hip"] 
 	LH=Torso["Left Hip"]
-	RH=Torso["Right Hip"]
 	ch = Character
+	ch.Animate.Parent = nil
 	Humanoid = ch.Humanoid
 	Humanoid.Animator.Parent = nil
 	RootPart=Character.HumanoidRootPart
@@ -1250,6 +1510,11 @@ local function ZFEO_fake_script() -- convert.convert script
 	LHC1=cf(-0.5,1,0,-0,-0,-1,0,1,0,1,0,0)
 	RHC0=cf(1,-1,0,0,0,1,0,1,0,-1,-0,-0)
 	RHC1=cf(0.5,1,0,0,0,1,0,1,0,-1,-0,-0)
+	local M = {C=math.cos,R=math.rad,S=math.sin,P=math.pi,RNG=math.random,MRS=math.randomseed,H=math.huge,RRNG = function(min,max,div) return math.rad(math.random(min,max)/(div or 1)) end}
+	Cos = math.cos
+	local Sine = 0
+	local SINE = Sine
+	local sine=SINE
 	function clerp(a,b,t) 
 		local qa = {QuaternionFromCFrame(a)}
 		local qb = {QuaternionFromCFrame(b)} 
@@ -1380,9 +1645,11 @@ local function ZFEO_fake_script() -- convert.convert script
 		script.Parent.Parent.Parent.convert["convert text"].Text = _G.convertthing
 		script.Parent.Parent.Parent.convert.Visible = true
 	end)
-	while true do 
+	nonanimate = true
+	while nonanimate == true do 
 		wait()
-	wait()
+		wait()
+		rlan=script.Parent.Parent.Parent.animation.rightlegani
 	rhx = script.Parent.Parent.rightleg.rhxt.Text
 	rhy = script.Parent.Parent.rightleg.rhyt.Text
 	rhz = script.Parent.Parent.rightleg.rhzt.Text
@@ -1412,18 +1679,116 @@ local function ZFEO_fake_script() -- convert.convert script
 					tahz = script.Parent.Parent.torso.rhzt.Text
 					tarhx = script.Parent.Parent.torso.rrhxt.Text
 					tarhy = script.Parent.Parent.torso.rrhyt.Text
-					tarhz = script.Parent.Parent.torso.rrhzt.Text
-	wait()
-	RH.C0=clerp(RH.C0,cf(rhx,rhy,rhz)*angles(math.rad(rrhx),math.rad(rrhy),math.rad(rrhz)),.2)
-	LH.C0=clerp(LH.C0,cf(lhx,lhy,lhz)*angles(math.rad(lrhx),math.rad(lrhy),math.rad(lrhz)),.2)
-	RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx,tahy,tahz)*angles(math.rad(tarhx),math.rad(tarhy),math.rad(tarhz)),.3)
-	Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
-	RW.C0=clerp(RW.C0,cf(rahx,rahy,rahz)*angles(math.rad(rarhx),math.rad(rarhy),math.rad(rarhz)),.3)
-	LW.C0=clerp(LW.C0,cf(lahx,lahy,lahz)*angles(math.rad(larhx),math.rad(larhy),math.rad(larhz)),.3)
+		tarhz = script.Parent.Parent.torso.rrhzt.Text
+		rla=rlan.rhxt.Text
+		rla2=rlan.rhyt.Text
+		rla3=rlan.rhzt.Text
+		local change = 1
+		sine = sine + change
+		wait()
+		if tarhz == "" or tarhy == ""  or rhx == "" or rhy == "" or rhz == "" or rla == ""  or rla2 == ""  or rla3 == ""or rla == "-"  or rla2 == "-"  or rla3 == "-" or tarhx == "" or larhz == "" or larhy == "" or larhx == "" or rarhz == "" or rarhy == "" or rarhx == "" or lrhy == "" or lrhz == "" or lrhx == "" or rrhz == "" or rrhy == "" or rrhx == "" then
+			tarhz = "0" 
+			tarhy = "0" 
+			tarhx = "0" 
+			larhz = "0" 
+			larhy = "0" 
+			larhx = "0" 
+			rarhz = "0" 
+			rarhy = "0" 
+			rarhx = "0" 
+			lrhy = "0" 
+			lrhz = "0" 
+			lrhx = "0" 
+			rrhz = "0" 
+			rrhy = "0" 
+			rrhx = "0"
+			rla = "0"
+			rla2 = "0"
+			rla3 = "0"
+			rhx = "0"
+			rhy = "0"
+			rhz = "0"
+			wait()
+		end
+		RH.C0=clerp(RH.C0,cf(rhx + rla * math.cos(sine / 6),rhy + rla2 * math.cos(sine / 15),rhz + rla3 * math.cos(sine / 15))*angles(math.rad(rrhx),math.rad(rrhy),math.rad(rrhz)),.2)
+		LH.C0=clerp(LH.C0,cf(lhx,lhy,lhz)*angles(math.rad(lrhx),math.rad(lrhy),math.rad(lrhz)),.2)
+		RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx,tahy,tahz)*angles(math.rad(tarhx),math.rad(tarhy),math.rad(tarhz)),.3)
+		Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
+		RW.C0=clerp(RW.C0,cf(rahx,rahy,rahz)*angles(math.rad(rarhx),math.rad(rarhy),math.rad(rarhz)),.3)
+		LW.C0=clerp(LW.C0,cf(lahx,lahy,lahz)*angles(math.rad(larhx),math.rad(larhy),math.rad(larhz)),.3)		
+	end
+	while nonanimate == false do
+		wait()
+		script.Parent.Parent["update button"].MouseButton1Click:Connect(function()
+			wait()
+			wait()
+			rlan=script.Parent.Parent.Parent.animation.rightlegani
+			rhx = script.Parent.Parent.rightleg.rhxt.Text
+			rhy = script.Parent.Parent.rightleg.rhyt.Text
+			rhz = script.Parent.Parent.rightleg.rhzt.Text
+			rrhx = script.Parent.Parent.rightleg.rrhxt.Text
+			rrhy = script.Parent.Parent.rightleg.rrhyt.Text
+			rrhz = script.Parent.Parent.rightleg.rrhzt.Text
+			lhx = script.Parent.Parent.leftleg.rhxt.Text
+			lhy = script.Parent.Parent.leftleg.rhyt.Text
+			lhz = script.Parent.Parent.leftleg.rhzt.Text
+			lrhx = script.Parent.Parent.leftleg.rrhxt.Text
+			lrhy = script.Parent.Parent.leftleg.rrhyt.Text
+			lrhz = script.Parent.Parent.leftleg.rrhzt.Text
+			rahx = script.Parent.Parent.rightarm.rhxt.Text
+			rahy = script.Parent.Parent.rightarm.rhyt.Text
+			rahz = script.Parent.Parent.rightarm.rhzt.Text
+			rarhx = script.Parent.Parent.rightarm.rrhxt.Text
+			rarhy = script.Parent.Parent.rightarm.rrhyt.Text
+			rarhz = script.Parent.Parent.rightarm.rrhzt.Text
+			lahx = script.Parent.Parent.leftarm.rhxt.Text
+			lahy = script.Parent.Parent.leftarm.rhyt.Text
+			lahz = script.Parent.Parent.leftarm.rhzt.Text
+			larhx = script.Parent.Parent.leftarm.rrhxt.Text
+			larhy = script.Parent.Parent.leftarm.rrhyt.Text
+			larhz = script.Parent.Parent.leftarm.rrhzt.Text
+			tahx = script.Parent.Parent.torso.rhxt.Text
+			tahy = script.Parent.Parent.torso.rhyt.Text
+			tahz = script.Parent.Parent.torso.rhzt.Text
+			tarhx = script.Parent.Parent.torso.rrhxt.Text
+			tarhy = script.Parent.Parent.torso.rrhyt.Text
+			tarhz = script.Parent.Parent.torso.rrhzt.Text
+			rla=rlan.rhxt.Text
+			rla2=rlan.rhyt.Text
+			rla3=rlan.rhzt.Text
+			local change = 1
+			sine = sine + change
+	
+			wait()
+			if tarhz == "" or tarhy == "" or tarhx == "" or larhz == "" or larhy == "" or larhx == "" or rarhz == "" or rarhy == "" or rarhx == "" or lrhy == "" or lrhz == "" or lrhx == "" or rrhz == "" or rrhy == "" or rrhx == "" then
+				tarhz = "0" 
+				tarhy = "0" 
+				tarhx = "0" 
+				larhz = "0" 
+				larhy = "0" 
+				larhx = "0" 
+				rarhz = "0" 
+				rarhy = "0" 
+				rarhx = "0" 
+				lrhy = "0" 
+				lrhz = "0" 
+				lrhx = "0" 
+				rrhz = "0" 
+				rrhy = "0" 
+				rrhx = "0"
+				wait()
+			end
+			RH.C0=clerp(RH.C0,cf(rhx + rla * math.cos(sine / 6),rhy + rla2 * math.cos(sine / 15),rhz + rla3 * math.cos(sine / 15))*angles(math.rad(rrhx),math.rad(rrhy),math.rad(rrhz)),.2)
+			LH.C0=clerp(LH.C0,cf(lhx,lhy,lhz)*angles(math.rad(lrhx),math.rad(lrhy),math.rad(lrhz)),.2)
+			RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx,tahy,tahz)*angles(math.rad(tarhx),math.rad(tarhy),math.rad(tarhz)),.3)
+			Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
+			RW.C0=clerp(RW.C0,cf(rahx,rahy,rahz)*angles(math.rad(rarhx),math.rad(rarhy),math.rad(rarhz)),.3)
+			LW.C0=clerp(LW.C0,cf(lahx,lahy,lahz)*angles(math.rad(larhx),math.rad(larhy),math.rad(larhz)),.3)		
+			end) 
 	end
 end
-coroutine.wrap(ZFEO_fake_script)()
-local function UKWDJB_fake_script() -- closepage.Script 
+coroutine.wrap(YOHLJ_fake_script)()
+local function DAHZJI_fake_script() -- closepage.Script 
 	local script = Instance.new('Script', closepage)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1447,8 +1812,8 @@ local function UKWDJB_fake_script() -- closepage.Script
 		end
 	end)
 end
-coroutine.wrap(UKWDJB_fake_script)()
-local function TWBFAEM_fake_script() -- leftkeg.Script 
+coroutine.wrap(DAHZJI_fake_script)()
+local function QHVM_fake_script() -- leftkeg.Script 
 	local script = Instance.new('Script', leftkeg)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1456,8 +1821,8 @@ local function TWBFAEM_fake_script() -- leftkeg.Script
 		script.Parent.Parent.Parent.leftleg.Visible = true
 	end)
 end
-coroutine.wrap(TWBFAEM_fake_script)()
-local function OBFVXK_fake_script() -- rightleg_2.Script 
+coroutine.wrap(QHVM_fake_script)()
+local function RZMPS_fake_script() -- rightleg_2.Script 
 	local script = Instance.new('Script', rightleg_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1465,8 +1830,8 @@ local function OBFVXK_fake_script() -- rightleg_2.Script
 		script.Parent.Parent.Parent.rightleg.Visible = true
 	end)
 end
-coroutine.wrap(OBFVXK_fake_script)()
-local function YPOBUC_fake_script() -- torso_2.Script 
+coroutine.wrap(RZMPS_fake_script)()
+local function TFIWXAY_fake_script() -- torso_2.Script 
 	local script = Instance.new('Script', torso_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1474,8 +1839,8 @@ local function YPOBUC_fake_script() -- torso_2.Script
 		script.Parent.Parent.Parent.torso.Visible = true
 	end)
 end
-coroutine.wrap(YPOBUC_fake_script)()
-local function CAFAG_fake_script() -- rightarm_2.Script 
+coroutine.wrap(TFIWXAY_fake_script)()
+local function NBGBEP_fake_script() -- rightarm_2.Script 
 	local script = Instance.new('Script', rightarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1483,8 +1848,8 @@ local function CAFAG_fake_script() -- rightarm_2.Script
 		script.Parent.Parent.Parent.rightarm.Visible = true
 	end)
 end
-coroutine.wrap(CAFAG_fake_script)()
-local function TMHOZ_fake_script() -- leftarm_2.Script 
+coroutine.wrap(NBGBEP_fake_script)()
+local function AZTP_fake_script() -- leftarm_2.Script 
 	local script = Instance.new('Script', leftarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1492,4 +1857,4 @@ local function TMHOZ_fake_script() -- leftarm_2.Script
 		script.Parent.Parent.Parent.leftarm.Visible = true
 	end)
 end
-coroutine.wrap(TMHOZ_fake_script)()
+coroutine.wrap(AZTP_fake_script)()
