@@ -288,6 +288,7 @@ local function HIXF_fake_script() -- main.LocalScript
 	game:GetService("Players").LocalPlayer.Character["Robloxclassicred"].Handle.Mesh:Destroy()
 	game:GetService("Players").LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
 	game:GetService("Players").LocalPlayer.Character["Kate Hair"].Handle.Mesh:Destroy()
+	print("destroying meshes")
 	
 	for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 		if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
