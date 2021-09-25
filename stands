@@ -249,7 +249,7 @@ local function KJSKSVQ_fake_script() -- execute.execute
 			game:GetService("Players").LocalPlayer.Character["LavanderHair"].Name = "gamer6"
 			game:GetService("Players").LocalPlayer.Character["Pink Hair"].Name = "gamer1"
 			game:GetService("Players").LocalPlayer.Character["Kate Hair"].Name = "gamer2"
-			
+			print("hats")
 	
 			--put hats here--    
 		end
@@ -339,7 +339,7 @@ local function HIXF_fake_script() -- main.LocalScript
 			end)
 		end)()
 	end
-	
+	print("netted")
 	game:FindFirstChildOfClass("Players").LocalPlayer["Character"].Archivable = true
 	local hatnameclone = {}
 	for _,v in next, game:FindFirstChildOfClass("Players").LocalPlayer["Character"]:GetChildren() do
@@ -387,7 +387,7 @@ local function HIXF_fake_script() -- main.LocalScript
 	CloneChar.Humanoid.BreakJointsOnDeath = false
 	CloneChar.Name = "non"
 	CloneChar.Humanoid.DisplayDistanceType = "None"
-	
+	print("clonechar")
 	for _,v in next, DeadChar:GetChildren() do
 		if v:IsA("Accessory") then
 			local topacc = false
@@ -424,7 +424,7 @@ local function HIXF_fake_script() -- main.LocalScript
 			end)()
 		end
 	end
-	
+	print("deadchar")
 	local a = DeadChar.Torso
 	local b = DeadChar.HumanoidRootPart
 	local c = DeadChar.Humanoid
@@ -502,7 +502,7 @@ local function HIXF_fake_script() -- main.LocalScript
 			end		
 		end
 	end)()
-	
+	print("scifi")
 	
 	SCIFIMOVIELOL(DeadChar["Head"],CloneChar["Head"])
 	SCIFIMOVIELOL(DeadChar["Torso"],CloneChar["Torso"])
@@ -551,6 +551,7 @@ local function HIXF_fake_script() -- main.LocalScript
 	if ANIMATIONHERE then ANIMATIONHERE.Parent = CloneChar end
 	
 end
+print("guibuttons")
 coroutine.wrap(HIXF_fake_script)()
 local function GDGAWYL_fake_script() -- noobstand_2.noob 
 	local script = Instance.new('Script', noobstand_2)
@@ -577,3 +578,4 @@ local function GDGAWYL_fake_script() -- noobstand_2.noob
 	
 end
 coroutine.wrap(GDGAWYL_fake_script)()
+print("end script")
