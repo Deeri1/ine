@@ -119,6 +119,74 @@ local titlehr_6 = Instance.new("TextLabel")
 local x_6 = Instance.new("TextLabel")
 local y_6 = Instance.new("TextLabel")
 local z_6 = Instance.new("TextLabel")
+local leftlegani = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local rhxt_7 = Instance.new("TextBox")
+local rhyt_7 = Instance.new("TextBox")
+local rhzt_7 = Instance.new("TextBox")
+local rrhxt_7 = Instance.new("TextBox")
+local rrhyt_7 = Instance.new("TextBox")
+local rrhzt_7 = Instance.new("TextBox")
+local position_7 = Instance.new("TextLabel")
+local rotation_7 = Instance.new("TextLabel")
+local rx_7 = Instance.new("TextLabel")
+local ry_7 = Instance.new("TextLabel")
+local rz_7 = Instance.new("TextLabel")
+local titlehr_7 = Instance.new("TextLabel")
+local x_7 = Instance.new("TextLabel")
+local y_7 = Instance.new("TextLabel")
+local z_7 = Instance.new("TextLabel")
+local torsoani = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
+local rhxt_8 = Instance.new("TextBox")
+local rhyt_8 = Instance.new("TextBox")
+local rhzt_8 = Instance.new("TextBox")
+local rrhxt_8 = Instance.new("TextBox")
+local rrhyt_8 = Instance.new("TextBox")
+local rrhzt_8 = Instance.new("TextBox")
+local position_8 = Instance.new("TextLabel")
+local rotation_8 = Instance.new("TextLabel")
+local rx_8 = Instance.new("TextLabel")
+local ry_8 = Instance.new("TextLabel")
+local rz_8 = Instance.new("TextLabel")
+local titlehr_8 = Instance.new("TextLabel")
+local x_8 = Instance.new("TextLabel")
+local y_8 = Instance.new("TextLabel")
+local z_8 = Instance.new("TextLabel")
+local rightarmani = Instance.new("Frame")
+local Frame_4 = Instance.new("Frame")
+local rhxt_9 = Instance.new("TextBox")
+local rhyt_9 = Instance.new("TextBox")
+local rhzt_9 = Instance.new("TextBox")
+local rrhxt_9 = Instance.new("TextBox")
+local rrhyt_9 = Instance.new("TextBox")
+local rrhzt_9 = Instance.new("TextBox")
+local position_9 = Instance.new("TextLabel")
+local rotation_9 = Instance.new("TextLabel")
+local rx_9 = Instance.new("TextLabel")
+local ry_9 = Instance.new("TextLabel")
+local rz_9 = Instance.new("TextLabel")
+local titlehr_9 = Instance.new("TextLabel")
+local x_9 = Instance.new("TextLabel")
+local y_9 = Instance.new("TextLabel")
+local z_9 = Instance.new("TextLabel")
+local Leftarmani = Instance.new("Frame")
+local Frame_5 = Instance.new("Frame")
+local rhxt_10 = Instance.new("TextBox")
+local rhyt_10 = Instance.new("TextBox")
+local rhzt_10 = Instance.new("TextBox")
+local rrhxt_10 = Instance.new("TextBox")
+local rrhyt_10 = Instance.new("TextBox")
+local rrhzt_10 = Instance.new("TextBox")
+local position_10 = Instance.new("TextLabel")
+local rotation_10 = Instance.new("TextLabel")
+local rx_10 = Instance.new("TextLabel")
+local ry_10 = Instance.new("TextLabel")
+local rz_10 = Instance.new("TextLabel")
+local titlehr_10 = Instance.new("TextLabel")
+local x_10 = Instance.new("TextLabel")
+local y_10 = Instance.new("TextLabel")
+local z_10 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -129,26 +197,28 @@ animator.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 convert.Name = "convert"
 convert.Parent = animator
 convert.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-convert.Position = UDim2.new(0.544369876, 0, 0.178800851, 0)
-convert.Size = UDim2.new(0, 457, 0, 422)
+convert.Position = UDim2.new(0.413870245, 0, 0.301927179, 0)
+convert.Size = UDim2.new(0, 786, 0, 422)
 convert.Visible = false
 
 converttext.Name = "convert text"
 converttext.Parent = convert
 converttext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 converttext.Position = UDim2.new(0, 0, 0.0663507134, 0)
-converttext.Size = UDim2.new(0, 457, 0, 394)
+converttext.Size = UDim2.new(0, 786, 0, 394)
 converttext.ClearTextOnFocus = false
 converttext.Font = Enum.Font.SourceSans
 converttext.Text = ""
 converttext.TextColor3 = Color3.fromRGB(0, 0, 0)
+converttext.TextScaled = true
 converttext.TextSize = 14.000
+converttext.TextWrapped = true
 
 toclipboard.Name = "toclipboard"
 toclipboard.Parent = convert
 toclipboard.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-toclipboard.Position = UDim2.new(0.562363267, 0, 0, 0)
-toclipboard.Size = UDim2.new(0, 200, 0, 28)
+toclipboard.Position = UDim2.new(0.562363327, 0, 0, 0)
+toclipboard.Size = UDim2.new(0, 343, 0, 28)
 toclipboard.Font = Enum.Font.SourceSans
 toclipboard.Text = "To ClipBoard"
 toclipboard.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -159,8 +229,8 @@ toclipboard.TextWrapped = true
 contitle.Name = "contitle"
 contitle.Parent = convert
 contitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-contitle.Position = UDim2.new(0.124726474, 0, 0, 0)
-contitle.Size = UDim2.new(0, 200, 0, 28)
+contitle.Position = UDim2.new(0.124726504, 0, 0, 0)
+contitle.Size = UDim2.new(0, 343, 0, 28)
 contitle.Font = Enum.Font.SourceSans
 contitle.Text = "Convert Text"
 contitle.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -171,7 +241,7 @@ contitle.TextWrapped = true
 close.Name = "close"
 close.Parent = convert
 close.BackgroundColor3 = Color3.fromRGB(230, 76, 0)
-close.Size = UDim2.new(0, 57, 0, 28)
+close.Size = UDim2.new(0, 98, 0, 28)
 close.Font = Enum.Font.SourceSans
 close.Text = "Close"
 close.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -1253,6 +1323,7 @@ rightlegani.Parent = animation_2
 rightlegani.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 rightlegani.Position = UDim2.new(11.96, 0, 0, 0)
 rightlegani.Size = UDim2.new(0, 100, 0, 100)
+rightlegani.Visible = false
 
 Frame.Parent = rightlegani
 Frame.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
@@ -1439,9 +1510,795 @@ z_6.TextScaled = true
 z_6.TextSize = 14.000
 z_6.TextWrapped = true
 
+leftlegani.Name = "leftlegani"
+leftlegani.Parent = animation_2
+leftlegani.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+leftlegani.Position = UDim2.new(11.96, 0, 0, 0)
+leftlegani.Size = UDim2.new(0, 100, 0, 100)
+leftlegani.Visible = false
+
+Frame_2.Parent = leftlegani
+Frame_2.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+Frame_2.Size = UDim2.new(0, 145, 0, 589)
+Frame_2.ZIndex = 0
+
+rhxt_7.Name = "rhxt"
+rhxt_7.Parent = leftlegani
+rhxt_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhxt_7.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+rhxt_7.Size = UDim2.new(0, 45, 0, 50)
+rhxt_7.ClearTextOnFocus = false
+rhxt_7.Font = Enum.Font.SourceSans
+rhxt_7.PlaceholderText = "0"
+rhxt_7.Text = "0"
+rhxt_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhxt_7.TextSize = 14.000
+
+rhyt_7.Name = "rhyt"
+rhyt_7.Parent = leftlegani
+rhyt_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhyt_7.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+rhyt_7.Size = UDim2.new(0, 45, 0, 50)
+rhyt_7.ClearTextOnFocus = false
+rhyt_7.Font = Enum.Font.SourceSans
+rhyt_7.PlaceholderText = "0"
+rhyt_7.Text = "0"
+rhyt_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhyt_7.TextSize = 14.000
+
+rhzt_7.Name = "rhzt"
+rhzt_7.Parent = leftlegani
+rhzt_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhzt_7.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+rhzt_7.Size = UDim2.new(0, 45, 0, 50)
+rhzt_7.ClearTextOnFocus = false
+rhzt_7.Font = Enum.Font.SourceSans
+rhzt_7.PlaceholderText = "0"
+rhzt_7.Text = "0"
+rhzt_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhzt_7.TextSize = 14.000
+
+rrhxt_7.Name = "rrhxt"
+rrhxt_7.Parent = leftlegani
+rrhxt_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhxt_7.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+rrhxt_7.Size = UDim2.new(0, 45, 0, 50)
+rrhxt_7.ClearTextOnFocus = false
+rrhxt_7.Font = Enum.Font.SourceSans
+rrhxt_7.PlaceholderText = "0"
+rrhxt_7.Text = "0"
+rrhxt_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhxt_7.TextSize = 14.000
+
+rrhyt_7.Name = "rrhyt"
+rrhyt_7.Parent = leftlegani
+rrhyt_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhyt_7.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+rrhyt_7.Size = UDim2.new(0, 45, 0, 50)
+rrhyt_7.ClearTextOnFocus = false
+rrhyt_7.Font = Enum.Font.SourceSans
+rrhyt_7.PlaceholderText = "0"
+rrhyt_7.Text = "0"
+rrhyt_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhyt_7.TextSize = 14.000
+
+rrhzt_7.Name = "rrhzt"
+rrhzt_7.Parent = leftlegani
+rrhzt_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhzt_7.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+rrhzt_7.Size = UDim2.new(0, 45, 0, 50)
+rrhzt_7.ClearTextOnFocus = false
+rrhzt_7.Font = Enum.Font.SourceSans
+rrhzt_7.PlaceholderText = "0"
+rrhzt_7.Text = "0"
+rrhzt_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhzt_7.TextSize = 14.000
+
+position_7.Name = "position"
+position_7.Parent = leftlegani
+position_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+position_7.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+position_7.Size = UDim2.new(0, 145, 0, 27)
+position_7.Font = Enum.Font.SourceSans
+position_7.Text = "Position"
+position_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+position_7.TextScaled = true
+position_7.TextSize = 14.000
+position_7.TextWrapped = true
+
+rotation_7.Name = "rotation"
+rotation_7.Parent = leftlegani
+rotation_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rotation_7.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+rotation_7.Size = UDim2.new(0, 145, 0, 27)
+rotation_7.Font = Enum.Font.SourceSans
+rotation_7.Text = "Rotation"
+rotation_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+rotation_7.TextScaled = true
+rotation_7.TextSize = 14.000
+rotation_7.TextWrapped = true
+
+rx_7.Name = "rx"
+rx_7.Parent = leftlegani
+rx_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rx_7.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+rx_7.Size = UDim2.new(0, 98, 0, 50)
+rx_7.Font = Enum.Font.SourceSans
+rx_7.Text = "X"
+rx_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+rx_7.TextScaled = true
+rx_7.TextSize = 14.000
+rx_7.TextWrapped = true
+
+ry_7.Name = "ry"
+ry_7.Parent = leftlegani
+ry_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+ry_7.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+ry_7.Size = UDim2.new(0, 98, 0, 50)
+ry_7.Font = Enum.Font.SourceSans
+ry_7.Text = "y"
+ry_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+ry_7.TextScaled = true
+ry_7.TextSize = 14.000
+ry_7.TextWrapped = true
+
+rz_7.Name = "rz"
+rz_7.Parent = leftlegani
+rz_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rz_7.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+rz_7.Size = UDim2.new(0, 98, 0, 50)
+rz_7.Font = Enum.Font.SourceSans
+rz_7.Text = "z"
+rz_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+rz_7.TextScaled = true
+rz_7.TextSize = 14.000
+rz_7.TextWrapped = true
+
+titlehr_7.Name = "titlehr"
+titlehr_7.Parent = leftlegani
+titlehr_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+titlehr_7.Position = UDim2.new(0.0399999991, 0, 0, 0)
+titlehr_7.Size = UDim2.new(0, 97, 0, 31)
+titlehr_7.Font = Enum.Font.SourceSans
+titlehr_7.Text = "Left Leg"
+titlehr_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlehr_7.TextScaled = true
+titlehr_7.TextSize = 14.000
+titlehr_7.TextWrapped = true
+
+x_7.Name = "x"
+x_7.Parent = leftlegani
+x_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+x_7.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+x_7.Size = UDim2.new(0, 98, 0, 50)
+x_7.Font = Enum.Font.SourceSans
+x_7.Text = "X"
+x_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+x_7.TextScaled = true
+x_7.TextSize = 14.000
+x_7.TextWrapped = true
+
+y_7.Name = "y"
+y_7.Parent = leftlegani
+y_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+y_7.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+y_7.Size = UDim2.new(0, 98, 0, 50)
+y_7.Font = Enum.Font.SourceSans
+y_7.Text = "y"
+y_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+y_7.TextScaled = true
+y_7.TextSize = 14.000
+y_7.TextWrapped = true
+
+z_7.Name = "z"
+z_7.Parent = leftlegani
+z_7.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+z_7.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+z_7.Size = UDim2.new(0, 101, 0, 50)
+z_7.Font = Enum.Font.SourceSans
+z_7.Text = "z"
+z_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+z_7.TextScaled = true
+z_7.TextSize = 14.000
+z_7.TextWrapped = true
+
+torsoani.Name = "torsoani"
+torsoani.Parent = animation_2
+torsoani.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+torsoani.Position = UDim2.new(11.96, 0, 0, 0)
+torsoani.Size = UDim2.new(0, 100, 0, 100)
+torsoani.Visible = false
+
+Frame_3.Parent = torsoani
+Frame_3.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+Frame_3.Size = UDim2.new(0, 145, 0, 589)
+Frame_3.ZIndex = 0
+
+rhxt_8.Name = "rhxt"
+rhxt_8.Parent = torsoani
+rhxt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhxt_8.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+rhxt_8.Size = UDim2.new(0, 45, 0, 50)
+rhxt_8.ClearTextOnFocus = false
+rhxt_8.Font = Enum.Font.SourceSans
+rhxt_8.PlaceholderText = "0"
+rhxt_8.Text = "0"
+rhxt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhxt_8.TextSize = 14.000
+
+rhyt_8.Name = "rhyt"
+rhyt_8.Parent = torsoani
+rhyt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhyt_8.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+rhyt_8.Size = UDim2.new(0, 45, 0, 50)
+rhyt_8.ClearTextOnFocus = false
+rhyt_8.Font = Enum.Font.SourceSans
+rhyt_8.PlaceholderText = "0"
+rhyt_8.Text = "0"
+rhyt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhyt_8.TextSize = 14.000
+
+rhzt_8.Name = "rhzt"
+rhzt_8.Parent = torsoani
+rhzt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhzt_8.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+rhzt_8.Size = UDim2.new(0, 45, 0, 50)
+rhzt_8.ClearTextOnFocus = false
+rhzt_8.Font = Enum.Font.SourceSans
+rhzt_8.PlaceholderText = "0"
+rhzt_8.Text = "0"
+rhzt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhzt_8.TextSize = 14.000
+
+rrhxt_8.Name = "rrhxt"
+rrhxt_8.Parent = torsoani
+rrhxt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhxt_8.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+rrhxt_8.Size = UDim2.new(0, 45, 0, 50)
+rrhxt_8.ClearTextOnFocus = false
+rrhxt_8.Font = Enum.Font.SourceSans
+rrhxt_8.PlaceholderText = "0"
+rrhxt_8.Text = "0"
+rrhxt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhxt_8.TextSize = 14.000
+
+rrhyt_8.Name = "rrhyt"
+rrhyt_8.Parent = torsoani
+rrhyt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhyt_8.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+rrhyt_8.Size = UDim2.new(0, 45, 0, 50)
+rrhyt_8.ClearTextOnFocus = false
+rrhyt_8.Font = Enum.Font.SourceSans
+rrhyt_8.PlaceholderText = "0"
+rrhyt_8.Text = "0"
+rrhyt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhyt_8.TextSize = 14.000
+
+rrhzt_8.Name = "rrhzt"
+rrhzt_8.Parent = torsoani
+rrhzt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhzt_8.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+rrhzt_8.Size = UDim2.new(0, 45, 0, 50)
+rrhzt_8.ClearTextOnFocus = false
+rrhzt_8.Font = Enum.Font.SourceSans
+rrhzt_8.PlaceholderText = "0"
+rrhzt_8.Text = "0"
+rrhzt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhzt_8.TextSize = 14.000
+
+position_8.Name = "position"
+position_8.Parent = torsoani
+position_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+position_8.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+position_8.Size = UDim2.new(0, 145, 0, 27)
+position_8.Font = Enum.Font.SourceSans
+position_8.Text = "Position"
+position_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+position_8.TextScaled = true
+position_8.TextSize = 14.000
+position_8.TextWrapped = true
+
+rotation_8.Name = "rotation"
+rotation_8.Parent = torsoani
+rotation_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rotation_8.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+rotation_8.Size = UDim2.new(0, 145, 0, 27)
+rotation_8.Font = Enum.Font.SourceSans
+rotation_8.Text = "Rotation"
+rotation_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+rotation_8.TextScaled = true
+rotation_8.TextSize = 14.000
+rotation_8.TextWrapped = true
+
+rx_8.Name = "rx"
+rx_8.Parent = torsoani
+rx_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rx_8.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+rx_8.Size = UDim2.new(0, 98, 0, 50)
+rx_8.Font = Enum.Font.SourceSans
+rx_8.Text = "X"
+rx_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+rx_8.TextScaled = true
+rx_8.TextSize = 14.000
+rx_8.TextWrapped = true
+
+ry_8.Name = "ry"
+ry_8.Parent = torsoani
+ry_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+ry_8.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+ry_8.Size = UDim2.new(0, 98, 0, 50)
+ry_8.Font = Enum.Font.SourceSans
+ry_8.Text = "y"
+ry_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+ry_8.TextScaled = true
+ry_8.TextSize = 14.000
+ry_8.TextWrapped = true
+
+rz_8.Name = "rz"
+rz_8.Parent = torsoani
+rz_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rz_8.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+rz_8.Size = UDim2.new(0, 98, 0, 50)
+rz_8.Font = Enum.Font.SourceSans
+rz_8.Text = "z"
+rz_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+rz_8.TextScaled = true
+rz_8.TextSize = 14.000
+rz_8.TextWrapped = true
+
+titlehr_8.Name = "titlehr"
+titlehr_8.Parent = torsoani
+titlehr_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+titlehr_8.Position = UDim2.new(0.0399999991, 0, 0, 0)
+titlehr_8.Size = UDim2.new(0, 97, 0, 31)
+titlehr_8.Font = Enum.Font.SourceSans
+titlehr_8.Text = "Right Leg"
+titlehr_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlehr_8.TextScaled = true
+titlehr_8.TextSize = 14.000
+titlehr_8.TextWrapped = true
+
+x_8.Name = "x"
+x_8.Parent = torsoani
+x_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+x_8.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+x_8.Size = UDim2.new(0, 98, 0, 50)
+x_8.Font = Enum.Font.SourceSans
+x_8.Text = "X"
+x_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+x_8.TextScaled = true
+x_8.TextSize = 14.000
+x_8.TextWrapped = true
+
+y_8.Name = "y"
+y_8.Parent = torsoani
+y_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+y_8.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+y_8.Size = UDim2.new(0, 98, 0, 50)
+y_8.Font = Enum.Font.SourceSans
+y_8.Text = "y"
+y_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+y_8.TextScaled = true
+y_8.TextSize = 14.000
+y_8.TextWrapped = true
+
+z_8.Name = "z"
+z_8.Parent = torsoani
+z_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+z_8.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+z_8.Size = UDim2.new(0, 101, 0, 50)
+z_8.Font = Enum.Font.SourceSans
+z_8.Text = "z"
+z_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+z_8.TextScaled = true
+z_8.TextSize = 14.000
+z_8.TextWrapped = true
+
+rightarmani.Name = "rightarmani"
+rightarmani.Parent = animation_2
+rightarmani.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rightarmani.Position = UDim2.new(11.96, 0, 0, 0)
+rightarmani.Size = UDim2.new(0, 100, 0, 100)
+rightarmani.Visible = false
+
+Frame_4.Parent = rightarmani
+Frame_4.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+Frame_4.Size = UDim2.new(0, 145, 0, 589)
+Frame_4.ZIndex = 0
+
+rhxt_9.Name = "rhxt"
+rhxt_9.Parent = rightarmani
+rhxt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhxt_9.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+rhxt_9.Size = UDim2.new(0, 45, 0, 50)
+rhxt_9.ClearTextOnFocus = false
+rhxt_9.Font = Enum.Font.SourceSans
+rhxt_9.PlaceholderText = "0"
+rhxt_9.Text = "0"
+rhxt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhxt_9.TextSize = 14.000
+
+rhyt_9.Name = "rhyt"
+rhyt_9.Parent = rightarmani
+rhyt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhyt_9.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+rhyt_9.Size = UDim2.new(0, 45, 0, 50)
+rhyt_9.ClearTextOnFocus = false
+rhyt_9.Font = Enum.Font.SourceSans
+rhyt_9.PlaceholderText = "0"
+rhyt_9.Text = "0"
+rhyt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhyt_9.TextSize = 14.000
+
+rhzt_9.Name = "rhzt"
+rhzt_9.Parent = rightarmani
+rhzt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhzt_9.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+rhzt_9.Size = UDim2.new(0, 45, 0, 50)
+rhzt_9.ClearTextOnFocus = false
+rhzt_9.Font = Enum.Font.SourceSans
+rhzt_9.PlaceholderText = "0"
+rhzt_9.Text = "0"
+rhzt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhzt_9.TextSize = 14.000
+
+rrhxt_9.Name = "rrhxt"
+rrhxt_9.Parent = rightarmani
+rrhxt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhxt_9.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+rrhxt_9.Size = UDim2.new(0, 45, 0, 50)
+rrhxt_9.ClearTextOnFocus = false
+rrhxt_9.Font = Enum.Font.SourceSans
+rrhxt_9.PlaceholderText = "0"
+rrhxt_9.Text = "0"
+rrhxt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhxt_9.TextSize = 14.000
+
+rrhyt_9.Name = "rrhyt"
+rrhyt_9.Parent = rightarmani
+rrhyt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhyt_9.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+rrhyt_9.Size = UDim2.new(0, 45, 0, 50)
+rrhyt_9.ClearTextOnFocus = false
+rrhyt_9.Font = Enum.Font.SourceSans
+rrhyt_9.PlaceholderText = "0"
+rrhyt_9.Text = "0"
+rrhyt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhyt_9.TextSize = 14.000
+
+rrhzt_9.Name = "rrhzt"
+rrhzt_9.Parent = rightarmani
+rrhzt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhzt_9.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+rrhzt_9.Size = UDim2.new(0, 45, 0, 50)
+rrhzt_9.ClearTextOnFocus = false
+rrhzt_9.Font = Enum.Font.SourceSans
+rrhzt_9.PlaceholderText = "0"
+rrhzt_9.Text = "0"
+rrhzt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhzt_9.TextSize = 14.000
+
+position_9.Name = "position"
+position_9.Parent = rightarmani
+position_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+position_9.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+position_9.Size = UDim2.new(0, 145, 0, 27)
+position_9.Font = Enum.Font.SourceSans
+position_9.Text = "Position"
+position_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+position_9.TextScaled = true
+position_9.TextSize = 14.000
+position_9.TextWrapped = true
+
+rotation_9.Name = "rotation"
+rotation_9.Parent = rightarmani
+rotation_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rotation_9.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+rotation_9.Size = UDim2.new(0, 145, 0, 27)
+rotation_9.Font = Enum.Font.SourceSans
+rotation_9.Text = "Rotation"
+rotation_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+rotation_9.TextScaled = true
+rotation_9.TextSize = 14.000
+rotation_9.TextWrapped = true
+
+rx_9.Name = "rx"
+rx_9.Parent = rightarmani
+rx_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rx_9.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+rx_9.Size = UDim2.new(0, 98, 0, 50)
+rx_9.Font = Enum.Font.SourceSans
+rx_9.Text = "X"
+rx_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+rx_9.TextScaled = true
+rx_9.TextSize = 14.000
+rx_9.TextWrapped = true
+
+ry_9.Name = "ry"
+ry_9.Parent = rightarmani
+ry_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+ry_9.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+ry_9.Size = UDim2.new(0, 98, 0, 50)
+ry_9.Font = Enum.Font.SourceSans
+ry_9.Text = "y"
+ry_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+ry_9.TextScaled = true
+ry_9.TextSize = 14.000
+ry_9.TextWrapped = true
+
+rz_9.Name = "rz"
+rz_9.Parent = rightarmani
+rz_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rz_9.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+rz_9.Size = UDim2.new(0, 98, 0, 50)
+rz_9.Font = Enum.Font.SourceSans
+rz_9.Text = "z"
+rz_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+rz_9.TextScaled = true
+rz_9.TextSize = 14.000
+rz_9.TextWrapped = true
+
+titlehr_9.Name = "titlehr"
+titlehr_9.Parent = rightarmani
+titlehr_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+titlehr_9.Position = UDim2.new(0.0399999991, 0, 0, 0)
+titlehr_9.Size = UDim2.new(0, 97, 0, 31)
+titlehr_9.Font = Enum.Font.SourceSans
+titlehr_9.Text = "Right Leg"
+titlehr_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlehr_9.TextScaled = true
+titlehr_9.TextSize = 14.000
+titlehr_9.TextWrapped = true
+
+x_9.Name = "x"
+x_9.Parent = rightarmani
+x_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+x_9.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+x_9.Size = UDim2.new(0, 98, 0, 50)
+x_9.Font = Enum.Font.SourceSans
+x_9.Text = "X"
+x_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+x_9.TextScaled = true
+x_9.TextSize = 14.000
+x_9.TextWrapped = true
+
+y_9.Name = "y"
+y_9.Parent = rightarmani
+y_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+y_9.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+y_9.Size = UDim2.new(0, 98, 0, 50)
+y_9.Font = Enum.Font.SourceSans
+y_9.Text = "y"
+y_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+y_9.TextScaled = true
+y_9.TextSize = 14.000
+y_9.TextWrapped = true
+
+z_9.Name = "z"
+z_9.Parent = rightarmani
+z_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+z_9.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+z_9.Size = UDim2.new(0, 101, 0, 50)
+z_9.Font = Enum.Font.SourceSans
+z_9.Text = "z"
+z_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+z_9.TextScaled = true
+z_9.TextSize = 14.000
+z_9.TextWrapped = true
+
+Leftarmani.Name = "Leftarmani"
+Leftarmani.Parent = animation_2
+Leftarmani.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Leftarmani.Position = UDim2.new(11.96, 0, 0, 0)
+Leftarmani.Size = UDim2.new(0, 100, 0, 100)
+Leftarmani.Visible = false
+
+Frame_5.Parent = Leftarmani
+Frame_5.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+Frame_5.Size = UDim2.new(0, 145, 0, 589)
+Frame_5.ZIndex = 0
+
+rhxt_10.Name = "rhxt"
+rhxt_10.Parent = Leftarmani
+rhxt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhxt_10.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+rhxt_10.Size = UDim2.new(0, 45, 0, 50)
+rhxt_10.ClearTextOnFocus = false
+rhxt_10.Font = Enum.Font.SourceSans
+rhxt_10.PlaceholderText = "0"
+rhxt_10.Text = "0"
+rhxt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhxt_10.TextSize = 14.000
+
+rhyt_10.Name = "rhyt"
+rhyt_10.Parent = Leftarmani
+rhyt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhyt_10.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+rhyt_10.Size = UDim2.new(0, 45, 0, 50)
+rhyt_10.ClearTextOnFocus = false
+rhyt_10.Font = Enum.Font.SourceSans
+rhyt_10.PlaceholderText = "0"
+rhyt_10.Text = "0"
+rhyt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhyt_10.TextSize = 14.000
+
+rhzt_10.Name = "rhzt"
+rhzt_10.Parent = Leftarmani
+rhzt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rhzt_10.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+rhzt_10.Size = UDim2.new(0, 45, 0, 50)
+rhzt_10.ClearTextOnFocus = false
+rhzt_10.Font = Enum.Font.SourceSans
+rhzt_10.PlaceholderText = "0"
+rhzt_10.Text = "0"
+rhzt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+rhzt_10.TextSize = 14.000
+
+rrhxt_10.Name = "rrhxt"
+rrhxt_10.Parent = Leftarmani
+rrhxt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhxt_10.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+rrhxt_10.Size = UDim2.new(0, 45, 0, 50)
+rrhxt_10.ClearTextOnFocus = false
+rrhxt_10.Font = Enum.Font.SourceSans
+rrhxt_10.PlaceholderText = "0"
+rrhxt_10.Text = "0"
+rrhxt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhxt_10.TextSize = 14.000
+
+rrhyt_10.Name = "rrhyt"
+rrhyt_10.Parent = Leftarmani
+rrhyt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhyt_10.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+rrhyt_10.Size = UDim2.new(0, 45, 0, 50)
+rrhyt_10.ClearTextOnFocus = false
+rrhyt_10.Font = Enum.Font.SourceSans
+rrhyt_10.PlaceholderText = "0"
+rrhyt_10.Text = "0"
+rrhyt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhyt_10.TextSize = 14.000
+
+rrhzt_10.Name = "rrhzt"
+rrhzt_10.Parent = Leftarmani
+rrhzt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rrhzt_10.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+rrhzt_10.Size = UDim2.new(0, 45, 0, 50)
+rrhzt_10.ClearTextOnFocus = false
+rrhzt_10.Font = Enum.Font.SourceSans
+rrhzt_10.PlaceholderText = "0"
+rrhzt_10.Text = "0"
+rrhzt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+rrhzt_10.TextSize = 14.000
+
+position_10.Name = "position"
+position_10.Parent = Leftarmani
+position_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+position_10.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+position_10.Size = UDim2.new(0, 145, 0, 27)
+position_10.Font = Enum.Font.SourceSans
+position_10.Text = "Position"
+position_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+position_10.TextScaled = true
+position_10.TextSize = 14.000
+position_10.TextWrapped = true
+
+rotation_10.Name = "rotation"
+rotation_10.Parent = Leftarmani
+rotation_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rotation_10.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+rotation_10.Size = UDim2.new(0, 145, 0, 27)
+rotation_10.Font = Enum.Font.SourceSans
+rotation_10.Text = "Rotation"
+rotation_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+rotation_10.TextScaled = true
+rotation_10.TextSize = 14.000
+rotation_10.TextWrapped = true
+
+rx_10.Name = "rx"
+rx_10.Parent = Leftarmani
+rx_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rx_10.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+rx_10.Size = UDim2.new(0, 98, 0, 50)
+rx_10.Font = Enum.Font.SourceSans
+rx_10.Text = "X"
+rx_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+rx_10.TextScaled = true
+rx_10.TextSize = 14.000
+rx_10.TextWrapped = true
+
+ry_10.Name = "ry"
+ry_10.Parent = Leftarmani
+ry_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+ry_10.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+ry_10.Size = UDim2.new(0, 98, 0, 50)
+ry_10.Font = Enum.Font.SourceSans
+ry_10.Text = "y"
+ry_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+ry_10.TextScaled = true
+ry_10.TextSize = 14.000
+ry_10.TextWrapped = true
+
+rz_10.Name = "rz"
+rz_10.Parent = Leftarmani
+rz_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+rz_10.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+rz_10.Size = UDim2.new(0, 98, 0, 50)
+rz_10.Font = Enum.Font.SourceSans
+rz_10.Text = "z"
+rz_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+rz_10.TextScaled = true
+rz_10.TextSize = 14.000
+rz_10.TextWrapped = true
+
+titlehr_10.Name = "titlehr"
+titlehr_10.Parent = Leftarmani
+titlehr_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+titlehr_10.Position = UDim2.new(0.0399999991, 0, 0, 0)
+titlehr_10.Size = UDim2.new(0, 97, 0, 31)
+titlehr_10.Font = Enum.Font.SourceSans
+titlehr_10.Text = "Leftarm"
+titlehr_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+titlehr_10.TextScaled = true
+titlehr_10.TextSize = 14.000
+titlehr_10.TextWrapped = true
+
+x_10.Name = "x"
+x_10.Parent = Leftarmani
+x_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+x_10.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+x_10.Size = UDim2.new(0, 98, 0, 50)
+x_10.Font = Enum.Font.SourceSans
+x_10.Text = "X"
+x_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+x_10.TextScaled = true
+x_10.TextSize = 14.000
+x_10.TextWrapped = true
+
+y_10.Name = "y"
+y_10.Parent = Leftarmani
+y_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+y_10.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+y_10.Size = UDim2.new(0, 98, 0, 50)
+y_10.Font = Enum.Font.SourceSans
+y_10.Text = "y"
+y_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+y_10.TextScaled = true
+y_10.TextSize = 14.000
+y_10.TextWrapped = true
+
+z_10.Name = "z"
+z_10.Parent = Leftarmani
+z_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+z_10.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+z_10.Size = UDim2.new(0, 101, 0, 50)
+z_10.Font = Enum.Font.SourceSans
+z_10.Text = "z"
+z_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+z_10.TextScaled = true
+z_10.TextSize = 14.000
+z_10.TextWrapped = true
+
 -- Scripts:
 
-local function YOHLJ_fake_script() -- convert_2.convert script 
+local function BEEMZN_fake_script() -- toclipboard.LocalScript 
+	local script = Instance.new('LocalScript', toclipboard)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		thing = _G.convertthing
+		setclipboard(thing)
+	end)
+	
+end
+coroutine.wrap(BEEMZN_fake_script)()
+local function YDEOEIL_fake_script() -- close.LocalScript 
+	local script = Instance.new('LocalScript', close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(YDEOEIL_fake_script)()
+local function SYWJOJX_fake_script() -- convert_2.convert script 
 	local script = Instance.new('Script', convert_2)
 
 	player = game.Players.LocalPlayer
@@ -1628,7 +2485,7 @@ local function YOHLJ_fake_script() -- convert_2.convert script
 		tarhx = script.Parent.Parent.torso.rrhxt.Text
 		tarhy = script.Parent.Parent.torso.rrhyt.Text
 		tarhz = script.Parent.Parent.torso.rrhzt.Text
-		_G.convertthing = ("RH.C0=clerp(RH.C0,cf("..rhx..","..rhy..","..rhz..")*angles(math.rad("..rrhx.."),math.rad("..rrhy.."),math.rad("..rrhz..")),.2)\nLH.C0=clerp(LH.C0,cf("..lhx..","..lhy..","..lhz..")*angles(math.rad("..lrhx.."),math.rad("..lrhy.."),math.rad("..lrhz..")),.2)\nRootJoint.C0=clerp(RootJoint.C0,RootCF*cf("..tahx..","..tahy..","..tahz..")*angles(math.rad("..tarhx.."),math.rad("..tarhy.."),math.rad("..tarhz..")),.3)\nTorso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)\nRW.C0=clerp(RW.C0,cf("..rahx..","..rahy..","..rahz..")*angles(math.rad("..rarhx.."),math.rad("..rarhy.."),math.rad("..rarhz..")),.3)\nLW.C0=clerp(LW.C0,cf("..lahx..","..lahy..","..lahz..")*angles(math.rad("..larhx.."),math.rad("..larhy..")),math.rad("..larhz..")),.3)")
+		_G.convertthing = ("RH.C0=clerp(RH.C0,cf("..rhx.." + "..rla.." * math.cos(sine / 6),"..rhy.." + "..rla2.." * math.cos(sine / 6),"..rhz.." + "..rla3.." * math.cos(sine / 6))*angles(math.rad("..rrhx.." + "..rla4.." * math.cos(sine / 6)),math.rad("..rrhy.." + "..rla5.." * math.cos(sine / 6)),math.rad("..rrhz.." + "..rla6.." * math.cos(sine / 6))),.2)\nLH.C0=clerp(LH.C0,cf("..lhx.." + "..lla.." * math.cos(sine / 6),"..lhy.." + "..lla2.." * math.cos(sine / 6),"..lhz.." + "..lla3.." * math.cos(sine / 6))*angles(math.rad("..lrhx.." + "..lla4.." * math.cos(sine / 6)),math.rad("..lrhy.." + "..lla5.." * math.cos(sine / 6)),math.rad("..lrhz.." + "..lla6.." * math.cos(sine / 6))),.2)\nRootJoint.C0=clerp(RootJoint.C0,RootCF*cf("..tahx.." + "..to.." * math.cos(sine / 6),"..tahy.." + "..to2.." * math.cos(sine / 6),"..tahz.." + "..to3.." * math.cos(sine / 6))*angles(math.rad("..tarhx.." + "..to4.." * math.cos(sine / 6)),math.rad("..tarhy.." + "..to5.." * math.cos(sine / 6)),math.rad("..tarhz.." + "..to6.." * math.cos(sine / 6))),.3)\nTorso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)\nRW.C0=clerp(RW.C0,cf("..rahx.." + "..raa.." * math.cos(sine / 6),"..rahy.." + "..raa2.." * math.cos(sine / 6),"..rahz.." + "..raa3.." * math.cos(sine / 6))*angles(math.rad("..rarhx.." + "..raa4.." * math.cos(sine / 6)),math.rad("..rarhy.." + "..raa5.." * math.cos(sine / 6)),math.rad("..rarhz.." + "..raa6.." * math.cos(sine / 6))),.3)\nLW.C0=clerp(LW.C0,cf("..lahx.." + "..laa.." * math.cos(sine / 6),"..lahy.." + "..laa2.." * math.cos(sine / 6),"..lahz.." + "..laa3.." * math.cos(sine / 6))*angles(math.rad("..larhx.." + "..laa4.." * math.cos(sine / 6)),math.rad("..larhy.." + "..laa5.." * math.cos(sine / 6))),math.rad("..larhz.." + "..laa6.." * math.cos(sine / 6))),.3)")
 	
 	
 	
@@ -1647,9 +2504,64 @@ local function YOHLJ_fake_script() -- convert_2.convert script
 	end)
 	nonanimate = true
 	while nonanimate == true do 
+		t2hings = script.Parent.Parent
+		ra=t2hings.rightarm.Visible
+		la=t2hings.leftarm.Visible
+		lh=t2hings.leftleg.Visible
+		rh=t2hings.rightleg.Visible
+		main=t2hings.mainmian.Visible
+		t=t2hings.torso.Visible
+		cond=script.Parent.Parent.Parent.animation
+		if t == true then
+			cond.torsoani.Visible = true
+			cond.Leftarmani.Visible = false
+			cond.rightlegani.Visible = false
+			cond.rightarmani.Visible = false
+			cond.leftlegani.Visible = false
+		end
+		if ra == true then
+			cond.torsoani.Visible = false
+			cond.Leftarmani.Visible = false
+			cond.rightlegani.Visible = false
+			cond.rightarmani.Visible = true
+			cond.leftlegani.Visible = false
+		end
+		if la == true then
+			cond.torsoani.Visible = false
+			cond.Leftarmani.Visible = true
+			cond.rightlegani.Visible = false
+			cond.rightarmani.Visible = false
+			cond.leftlegani.Visible = false
+		end
+		if lh == true then
+			cond.torsoani.Visible = false
+			cond.Leftarmani.Visible = false
+			cond.rightlegani.Visible = false
+			cond.rightarmani.Visible = false
+			cond.leftlegani.Visible = true
+		end
+		if rh == true then
+			cond.torsoani.Visible = false
+			cond.Leftarmani.Visible = false
+			cond.rightlegani.Visible = true
+			cond.rightarmani.Visible = false
+			cond.leftlegani.Visible = false
+		end
+		if main == true then
+			cond.torsoani.Visible = false
+			cond.Leftarmani.Visible = false
+			cond.rightlegani.Visible = false
+			cond.rightarmani.Visible = false
+			cond.leftlegani.Visible = false
+		end
+		
 		wait()
 		wait()
 		rlan=script.Parent.Parent.Parent.animation.rightlegani
+		llan=script.Parent.Parent.Parent.animation.leftlegani
+		la=script.Parent.Parent.Parent.animation.Leftarmani
+		ra=script.Parent.Parent.Parent.animation.rightarmani
+		to=script.Parent.Parent.Parent.animation.torsoani
 	rhx = script.Parent.Parent.rightleg.rhxt.Text
 	rhy = script.Parent.Parent.rightleg.rhyt.Text
 	rhz = script.Parent.Parent.rightleg.rhzt.Text
@@ -1680,13 +2592,45 @@ local function YOHLJ_fake_script() -- convert_2.convert script
 					tarhx = script.Parent.Parent.torso.rrhxt.Text
 					tarhy = script.Parent.Parent.torso.rrhyt.Text
 		tarhz = script.Parent.Parent.torso.rrhzt.Text
+		t=script.Parent.Parent.Parent.animation.torsoani
 		rla=rlan.rhxt.Text
 		rla2=rlan.rhyt.Text
 		rla3=rlan.rhzt.Text
+		rla4=rlan.rrhxt.Text
+		rla5=rlan.rrhyt.Text
+		rla6=rlan.rrhzt.Text
+		lla=llan.rhxt.Text
+		lla2=llan.rhyt.Text
+		lla3=llan.rhzt.Text
+		lla4=llan.rrhxt.Text
+		lla5=llan.rrhyt.Text
+		lla6=llan.rrhzt.Text
+		laa=la.rhxt.Text
+		laa2=la.rhyt.Text
+		laa3=la.rhzt.Text
+		laa4=la.rrhxt.Text
+		laa5=la.rrhyt.Text
+		laa6=la.rrhzt.Text
+		raa=ra.rhxt.Text
+		raa2=ra.rhyt.Text
+		raa3=ra.rhzt.Text
+		raa4=ra.rrhxt.Text
+		raa5=ra.rrhyt.Text
+		raa6=ra.rrhzt.Text
+		to=t.rhxt.Text
+		to2=t.rhyt.Text
+		to3=t.rhzt.Text
+		to4=t.rrhxt.Text
+		to5=t.rrhyt.Text
+		to6=t.rrhzt.Text
 		local change = 1
 		sine = sine + change
 		wait()
-		if tarhz == "" or tarhy == ""  or rhx == "" or rhy == "" or rhz == "" or rla == ""  or rla2 == ""  or rla3 == ""or rla == "-"  or rla2 == "-"  or rla3 == "-" or tarhx == "" or larhz == "" or larhy == "" or larhx == "" or rarhz == "" or rarhy == "" or rarhx == "" or lrhy == "" or lrhz == "" or lrhx == "" or rrhz == "" or rrhy == "" or rrhx == "" then
+		--per bldy : or rla == ""  or rla2 == ""  or rla3 == "" or rla == "."  or rla2 == "."  or rla3 == "." or rla == "-"  or rla2 == "-"  or rla3 == "-"  or rla == "-."  or rla2 == "-."  or rla3 == "-."or rla4 == ""  or rla5 == ""  or rla6 == ""or rla4 == "-"  or rla5 == "-"  or rla6 == "-"  or rla4 == "."  or rla5 == "."  or rla6 == "."or rla4 == "-."  or rla5 == "-."  or rla6 == "-."
+		if tarhz == "" or to == ""  or to2 == ""  or to3 == ""  or to4 == ""  or to5 == ""  or to6 == ""or to == "."  or to2 == "."  or to3 == "." or to == "-"  or to2 == "-"  or to3 == "-"  or to == "-."  or to2 == "-."  or to3 == "-."or to4 == ""  or to5 == ""  or to6 == ""or to4 == "-"  or to == "-"  or to6 == "-"  or to4 == "."  or to5 == "."  or to6 == "."or to4 == "-."  or to5 == "-."  or to6 == "-." or tahx == ""  or tahy == ""  or tahz == "" or tahx == "."  or tahy == "."  or tahz == "." or tahx == "-"  or tahy == "-"  or tahz == "-"  or tahx == "-."  or tahy == "-."  or tahz == "-."or tarhx == ""  or tarhy == ""  or tahz == ""or tarhx == "-"  or tarhy == "-"  or tarhz == "-"  or tarhx == "."  or tarhy == "."  or tarhz == "."or tarhx == "-."  or tarhy == "-."  or tarhz == "-." or rahx == ""  or rahy == ""  or rahz == "" or rahx == "."  or rahy == "."  or rahz == "." or rahx == "-"  or rahy == "-"  or rahz == "-"  or rahx == "-."  or rahy == "-."  or rahz == "-."or rarhx == ""  or rarhy == ""  or rahz == ""or rarhx == "-"  or rarhy == "-"  or rarhz == "-"  or rarhx == "."  or rarhy == "."  or rarhz == "."or rarhx == "-."  or rarhy == "-."  or rarhz == "-." or lahx == ""  or lahy == ""  or lahz == "" or lahx == "."  or lahy == "."  or lahz == "." or lahx == "-"  or lahy == "-"  or lahz == "-"  or lahx == "-."  or lahy == "-."  or lahz == "-."or larhx == ""  or larhy == ""  or lahz == ""or larhx == "-"  or larhy == "-"  or larhz == "-"  or larhx == "."  or larhy == "."  or larhz == "."or larhx == "-."  or larhy == "-."  or larhz == "-." or raa == ""  or raa2 == ""  or raa3 == "" or raa == "."  or raa2 == "."  or raa3 == "." or raa == "-"  or raa2 == "-"  or raa3 == "-"  or raa == "-."  or raa2 == "-."  or raa3 == "-."or raa4 == ""  or raa5 == ""  or raa6 == ""or raa4 == "-"  or raa5 == "-"  or raa6 == "-"  or raa4 == "."  or raa5 == "."  or raa6 == "."or raa4 == "-."  or raa5 == "-."  or raa6 == "-." or laa == ""  or laa2 == ""  or laa3 == "" or laa == "."  or laa2 == "."  or laa3 == "." or laa == "-"  or laa2 == "-"  or laa3 == "-"  or laa == "-."  or laa2 == "-."  or laa3 == "-."or laa4 == ""  or laa5 == ""  or laa6 == ""or laa4 == "-"  or laa5 == "-"  or laa6 == "-"  or laa4 == "."  or laa5 == "."  or laa6 == "."or laa4 == "-."  or laa5 == "-."  or laa6 == "-." or lla == ""  or lla2 == ""  or lla3 == "" or lla == "."  or lla2 == "."  or lla3 == "." or lla == "-"  or lla2 == "-"  or lla3 == "-"  or lla == "-."  or lla2 == "-."  or lla3 == "-."or lla4 == ""  or lla5 == ""  or lla6 == ""or lla4 == "-"  or lla5 == "-"  or lla6 == "-"  or lla4 == "."  or lla5 == "."  or lla6 == "."or lla4 == "-."  or lla5 == "-."  or lla6 == "-." or tarhy == ""  or rhx == "" or rhy == "" or rhz == ""  or rhx == "-" or rhy == "-" or rhz == "-" or rhx == "." or rhy == "." or rhz == "."  or rhx == "-." or rhy == "-." or rhz == "-." or lhx == "" or lhy == "" or lhz == ""  or lhx == "-" or lhy == "-" or lhz == "-" or lhx == "." or lhy == "." or lhz == "."  or lhx == "-." or lhy == "-." or lhz == "-." or rla == ""  or rla2 == ""  or rla3 == "" or rla == "."  or rla2 == "."  or rla3 == "." or rla == "-"  or rla2 == "-"  or rla3 == "-"  or rla == "-."  or rla2 == "-."  or rla3 == "-."or rla4 == ""  or rla5 == ""  or rla6 == ""or rla4 == "-"  or rla5 == "-"  or rla6 == "-"  or rla4 == "."  or rla5 == "."  or rla6 == "."or rla4 == "-."  or rla5 == "-."  or rla6 == "-." or tarhx == "" or larhz == "" or larhy == "" or larhx == "" or rarhz == "" or rarhy == "" or rarhx == "" or lrhy == "" or lrhz == "" or lrhx == "" or rrhz == "" or rrhy == "" or rrhx == "" then
+			tahx = "0"
+			tahy = "0"
+			tahz = "0"
 			tarhz = "0" 
 			tarhy = "0" 
 			tarhx = "0" 
@@ -1708,87 +2652,60 @@ local function YOHLJ_fake_script() -- convert_2.convert script
 			rhx = "0"
 			rhy = "0"
 			rhz = "0"
+			rla4 = "0"
+			rla5 = "0"
+			rla6 = "0"
+			lhx = "0"
+			lhy = "0"
+			lhz = "0"
+			rahx = "0"
+			rahy = "0"
+			rahz = "0"
+			lahx = "0"
+			lahy = "0"
+			lahz = "0"
+			tahx = "0"
+			tahy = "0"
+			tahz = "0"
+			lla = "0"
+			lla2 = "0"
+			lla3 = "0"
+			lla4 = "0"
+			lla5 = "0"
+			lla6 = "0"
+			laa = "0"
+			laa2 = "0"
+			laa3 = "0"
+			laa4 = "0"
+			laa5 = "0"
+			laa6 = "0"
+			raa = "0"
+			raa2 = "0"
+			raa3 = "0"
+			raa4 = "0"
+			raa5 = "0"
+			raa6 = "0"
+			to = "0"
+			to2 = "0"
+			to3 = "0"
+			to4 = "0"
+			to5 = "0"
+			to6 = "0"
 			wait()
 		end
-		RH.C0=clerp(RH.C0,cf(rhx + rla * math.cos(sine / 6),rhy + rla2 * math.cos(sine / 15),rhz + rla3 * math.cos(sine / 15))*angles(math.rad(rrhx),math.rad(rrhy),math.rad(rrhz)),.2)
-		LH.C0=clerp(LH.C0,cf(lhx,lhy,lhz)*angles(math.rad(lrhx),math.rad(lrhy),math.rad(lrhz)),.2)
-		RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx,tahy,tahz)*angles(math.rad(tarhx),math.rad(tarhy),math.rad(tarhz)),.3)
-		Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
-		RW.C0=clerp(RW.C0,cf(rahx,rahy,rahz)*angles(math.rad(rarhx),math.rad(rarhy),math.rad(rarhz)),.3)
-		LW.C0=clerp(LW.C0,cf(lahx,lahy,lahz)*angles(math.rad(larhx),math.rad(larhy),math.rad(larhz)),.3)		
-	end
-	while nonanimate == false do
 		wait()
-		script.Parent.Parent["update button"].MouseButton1Click:Connect(function()
-			wait()
-			wait()
-			rlan=script.Parent.Parent.Parent.animation.rightlegani
-			rhx = script.Parent.Parent.rightleg.rhxt.Text
-			rhy = script.Parent.Parent.rightleg.rhyt.Text
-			rhz = script.Parent.Parent.rightleg.rhzt.Text
-			rrhx = script.Parent.Parent.rightleg.rrhxt.Text
-			rrhy = script.Parent.Parent.rightleg.rrhyt.Text
-			rrhz = script.Parent.Parent.rightleg.rrhzt.Text
-			lhx = script.Parent.Parent.leftleg.rhxt.Text
-			lhy = script.Parent.Parent.leftleg.rhyt.Text
-			lhz = script.Parent.Parent.leftleg.rhzt.Text
-			lrhx = script.Parent.Parent.leftleg.rrhxt.Text
-			lrhy = script.Parent.Parent.leftleg.rrhyt.Text
-			lrhz = script.Parent.Parent.leftleg.rrhzt.Text
-			rahx = script.Parent.Parent.rightarm.rhxt.Text
-			rahy = script.Parent.Parent.rightarm.rhyt.Text
-			rahz = script.Parent.Parent.rightarm.rhzt.Text
-			rarhx = script.Parent.Parent.rightarm.rrhxt.Text
-			rarhy = script.Parent.Parent.rightarm.rrhyt.Text
-			rarhz = script.Parent.Parent.rightarm.rrhzt.Text
-			lahx = script.Parent.Parent.leftarm.rhxt.Text
-			lahy = script.Parent.Parent.leftarm.rhyt.Text
-			lahz = script.Parent.Parent.leftarm.rhzt.Text
-			larhx = script.Parent.Parent.leftarm.rrhxt.Text
-			larhy = script.Parent.Parent.leftarm.rrhyt.Text
-			larhz = script.Parent.Parent.leftarm.rrhzt.Text
-			tahx = script.Parent.Parent.torso.rhxt.Text
-			tahy = script.Parent.Parent.torso.rhyt.Text
-			tahz = script.Parent.Parent.torso.rhzt.Text
-			tarhx = script.Parent.Parent.torso.rrhxt.Text
-			tarhy = script.Parent.Parent.torso.rrhyt.Text
-			tarhz = script.Parent.Parent.torso.rrhzt.Text
-			rla=rlan.rhxt.Text
-			rla2=rlan.rhyt.Text
-			rla3=rlan.rhzt.Text
-			local change = 1
-			sine = sine + change
-	
-			wait()
-			if tarhz == "" or tarhy == "" or tarhx == "" or larhz == "" or larhy == "" or larhx == "" or rarhz == "" or rarhy == "" or rarhx == "" or lrhy == "" or lrhz == "" or lrhx == "" or rrhz == "" or rrhy == "" or rrhx == "" then
-				tarhz = "0" 
-				tarhy = "0" 
-				tarhx = "0" 
-				larhz = "0" 
-				larhy = "0" 
-				larhx = "0" 
-				rarhz = "0" 
-				rarhy = "0" 
-				rarhx = "0" 
-				lrhy = "0" 
-				lrhz = "0" 
-				lrhx = "0" 
-				rrhz = "0" 
-				rrhy = "0" 
-				rrhx = "0"
-				wait()
-			end
-			RH.C0=clerp(RH.C0,cf(rhx + rla * math.cos(sine / 6),rhy + rla2 * math.cos(sine / 15),rhz + rla3 * math.cos(sine / 15))*angles(math.rad(rrhx),math.rad(rrhy),math.rad(rrhz)),.2)
-			LH.C0=clerp(LH.C0,cf(lhx,lhy,lhz)*angles(math.rad(lrhx),math.rad(lrhy),math.rad(lrhz)),.2)
-			RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx,tahy,tahz)*angles(math.rad(tarhx),math.rad(tarhy),math.rad(tarhz)),.3)
-			Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
-			RW.C0=clerp(RW.C0,cf(rahx,rahy,rahz)*angles(math.rad(rarhx),math.rad(rarhy),math.rad(rarhz)),.3)
-			LW.C0=clerp(LW.C0,cf(lahx,lahy,lahz)*angles(math.rad(larhx),math.rad(larhy),math.rad(larhz)),.3)		
-			end) 
+			
+		RH.C0=clerp(RH.C0,cf(rhx + rla * math.cos(sine / 6),rhy + rla2 * math.cos(sine / 6),rhz + rla3 * math.cos(sine / 6))*angles(math.rad(rrhx + rla4 * math.cos(sine / 6)),math.rad(rrhy + rla5 * math.cos(sine / 6)),math.rad(rrhz + rla6 * math.cos(sine / 6))),.2)
+		LH.C0=clerp(LH.C0,cf(lhx + lla * math.cos(sine / 6),lhy + lla2 * math.cos(sine / 6),lhz + lla3 * math.cos(sine / 6))*angles(math.rad(lrhx + lla4 * math.cos(sine / 6)),math.rad(lrhy + lla5 * math.cos(sine / 6)),math.rad(lrhz + lla6 * math.cos(sine / 6))),.2)
+		RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx + to * math.cos(sine / 6),tahy + to2 * math.cos(sine / 6),tahz + to3 * math.cos(sine / 6))*angles(math.rad(tarhx + to4 * math.cos(sine / 6)),math.rad(tarhy + to5 * math.cos(sine / 6)),math.rad(tarhz + to6 * math.cos(sine / 6))),.3)
+		Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
+		RW.C0=clerp(RW.C0,cf(rahx + raa * math.cos(sine / 6),rahy + raa2 * math.cos(sine / 6),rahz + raa3 * math.cos(sine / 6))*angles(math.rad(rarhx + raa4 * math.cos(sine / 6)),math.rad(rarhy + raa5 * math.cos(sine / 6)),math.rad(rarhz + raa6 * math.cos(sine / 6))),.3)
+		LW.C0=clerp(LW.C0,cf(lahx + laa * math.cos(sine / 6),lahy + laa2 * math.cos(sine / 6),lahz + laa3 * math.cos(sine / 6))*angles(math.rad(larhx + laa4 * math.cos(sine / 6)),math.rad(larhy + laa5 * math.cos(sine / 6)),math.rad(larhz + laa6 * math.cos(sine / 6))),.3)		
 	end
+	
 end
-coroutine.wrap(YOHLJ_fake_script)()
-local function DAHZJI_fake_script() -- closepage.Script 
+coroutine.wrap(SYWJOJX_fake_script)()
+local function YTFRRE_fake_script() -- closepage.Script 
 	local script = Instance.new('Script', closepage)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1812,8 +2729,8 @@ local function DAHZJI_fake_script() -- closepage.Script
 		end
 	end)
 end
-coroutine.wrap(DAHZJI_fake_script)()
-local function QHVM_fake_script() -- leftkeg.Script 
+coroutine.wrap(YTFRRE_fake_script)()
+local function GTQOOPA_fake_script() -- leftkeg.Script 
 	local script = Instance.new('Script', leftkeg)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1821,8 +2738,8 @@ local function QHVM_fake_script() -- leftkeg.Script
 		script.Parent.Parent.Parent.leftleg.Visible = true
 	end)
 end
-coroutine.wrap(QHVM_fake_script)()
-local function RZMPS_fake_script() -- rightleg_2.Script 
+coroutine.wrap(GTQOOPA_fake_script)()
+local function DBRQAX_fake_script() -- rightleg_2.Script 
 	local script = Instance.new('Script', rightleg_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1830,8 +2747,8 @@ local function RZMPS_fake_script() -- rightleg_2.Script
 		script.Parent.Parent.Parent.rightleg.Visible = true
 	end)
 end
-coroutine.wrap(RZMPS_fake_script)()
-local function TFIWXAY_fake_script() -- torso_2.Script 
+coroutine.wrap(DBRQAX_fake_script)()
+local function MEWVJE_fake_script() -- torso_2.Script 
 	local script = Instance.new('Script', torso_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1839,8 +2756,8 @@ local function TFIWXAY_fake_script() -- torso_2.Script
 		script.Parent.Parent.Parent.torso.Visible = true
 	end)
 end
-coroutine.wrap(TFIWXAY_fake_script)()
-local function NBGBEP_fake_script() -- rightarm_2.Script 
+coroutine.wrap(MEWVJE_fake_script)()
+local function BYPAE_fake_script() -- rightarm_2.Script 
 	local script = Instance.new('Script', rightarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1848,8 +2765,8 @@ local function NBGBEP_fake_script() -- rightarm_2.Script
 		script.Parent.Parent.Parent.rightarm.Visible = true
 	end)
 end
-coroutine.wrap(NBGBEP_fake_script)()
-local function AZTP_fake_script() -- leftarm_2.Script 
+coroutine.wrap(BYPAE_fake_script)()
+local function ORVCV_fake_script() -- leftarm_2.Script 
 	local script = Instance.new('Script', leftarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1857,4 +2774,4 @@ local function AZTP_fake_script() -- leftarm_2.Script
 		script.Parent.Parent.Parent.leftarm.Visible = true
 	end)
 end
-coroutine.wrap(AZTP_fake_script)()
+coroutine.wrap(ORVCV_fake_script)()
