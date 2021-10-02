@@ -2327,7 +2327,7 @@ CLOSE.TextWrapped = true
 
 -- Scripts:
 
-local function NIERCN_fake_script() -- toclipboard.LocalScript 
+local function ENHRO_fake_script() -- toclipboard.LocalScript 
 	local script = Instance.new('LocalScript', toclipboard)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2336,16 +2336,16 @@ local function NIERCN_fake_script() -- toclipboard.LocalScript
 	end)
 	
 end
-coroutine.wrap(NIERCN_fake_script)()
-local function KYIFJX_fake_script() -- close.LocalScript 
+coroutine.wrap(ENHRO_fake_script)()
+local function DRRAKDE_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(KYIFJX_fake_script)()
-local function MYXQJB_fake_script() -- convert_2.convert script 
+coroutine.wrap(DRRAKDE_fake_script)()
+local function VVMV_fake_script() -- convert_2.convert script 
 	local script = Instance.new('Script', convert_2)
 
 	player = game.Players.LocalPlayer
@@ -2561,7 +2561,7 @@ local function MYXQJB_fake_script() -- convert_2.convert script
 		tarhx = script.Parent.Parent.torso.rrhxt.Text
 		tarhy = script.Parent.Parent.torso.rrhyt.Text
 		tarhz = script.Parent.Parent.torso.rrhzt.Text
-		_G.convertthing = ("RH.C0=clerp(RH.C0,cf("..rhx.." + "..rla.." * math.cos(sine / 6),"..rhy.." + "..rla2.." * math.cos(sine / 6),"..rhz.." + "..rla3.." * math.cos(sine / 6))*angles(math.rad("..rrhx.." + "..rla4.." * math.cos(sine / 6)),math.rad("..rrhy.." + "..rla5.." * math.cos(sine / 6)),math.rad("..rrhz.." + "..rla6.." * math.cos(sine / 6))),.2)\nLH.C0=clerp(LH.C0,cf("..lhx.." + "..lla.." * math.cos(sine / 6),"..lhy.." + "..lla2.." * math.cos(sine / 6),"..lhz.." + "..lla3.." * math.cos(sine / 6))*angles(math.rad("..lrhx.." + "..lla4.." * math.cos(sine / 6)),math.rad("..lrhy.." + "..lla5.." * math.cos(sine / 6)),math.rad("..lrhz.." + "..lla6.." * math.cos(sine / 6))),.2)\nRootJoint.C0=clerp(RootJoint.C0,RootCF*cf("..tahx.." + "..to.." * math.cos(sine / 6),"..tahy.." + "..to2.." * math.cos(sine / 6),"..tahz.." + "..to3.." * math.cos(sine / 6))*angles(math.rad("..tarhx.." + "..to4.." * math.cos(sine / 6)),math.rad("..tarhy.." + "..to5.." * math.cos(sine / 6)),math.rad("..tarhz.." + "..to6.." * math.cos(sine / 6))),.3)\nTorso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)\nRW.C0=clerp(RW.C0,cf("..rahx.." + "..raa.." * math.cos(sine / 6),"..rahy.." + "..raa2.." * math.cos(sine / 6),"..rahz.." + "..raa3.." * math.cos(sine / 6))*angles(math.rad("..rarhx.." + "..raa4.." * math.cos(sine / 6)),math.rad("..rarhy.." + "..raa5.." * math.cos(sine / 6)),math.rad("..rarhz.." + "..raa6.." * math.cos(sine / 6))),.3)\nLW.C0=clerp(LW.C0,cf("..lahx.." + "..laa.." * math.cos(sine / 6),"..lahy.." + "..laa2.." * math.cos(sine / 6),"..lahz.." + "..laa3.." * math.cos(sine / 6))*angles(math.rad("..larhx.." + "..laa4.." * math.cos(sine / 6)),math.rad("..larhy.." + "..laa5.." * math.cos(sine / 6)),math.rad("..larhz.." + "..laa6.." * math.cos(sine / 6))),.3)")
+		_G.convertthing = ("local change = .1 \n sine = sine + change \n RH.C0=clerp(RH.C0,cf("..rhx.." + "..rla.." * math.cos(sine / 6),"..rhy.." + "..rla2.." * math.cos(sine / 6),"..rhz.." + "..rla3.." * math.cos(sine / 6))*angles(math.rad("..rrhx.." + "..rla4.." * math.cos(sine / 6)),math.rad("..rrhy.." + "..rla5.." * math.cos(sine / 6)),math.rad("..rrhz.." + "..rla6.." * math.cos(sine / 6))),.2)\nLH.C0=clerp(LH.C0,cf("..lhx.." + "..lla.." * math.cos(sine / 6),"..lhy.." + "..lla2.." * math.cos(sine / 6),"..lhz.." + "..lla3.." * math.cos(sine / 6))*angles(math.rad("..lrhx.." + "..lla4.." * math.cos(sine / 6)),math.rad("..lrhy.." + "..lla5.." * math.cos(sine / 6)),math.rad("..lrhz.." + "..lla6.." * math.cos(sine / 6))),.2)\nRootJoint.C0=clerp(RootJoint.C0,RootCF*cf("..tahx.." + "..to.." * math.cos(sine / 6),"..tahy.." + "..to2.." * math.cos(sine / 6),"..tahz.." + "..to3.." * math.cos(sine / 6))*angles(math.rad("..tarhx.." + "..to4.." * math.cos(sine / 6)),math.rad("..tarhy.." + "..to5.." * math.cos(sine / 6)),math.rad("..tarhz.." + "..to6.." * math.cos(sine / 6))),.3)\nTorso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)\nRW.C0=clerp(RW.C0,cf("..rahx.." + "..raa.." * math.cos(sine / 6),"..rahy.." + "..raa2.." * math.cos(sine / 6),"..rahz.." + "..raa3.." * math.cos(sine / 6))*angles(math.rad("..rarhx.." + "..raa4.." * math.cos(sine / 6)),math.rad("..rarhy.." + "..raa5.." * math.cos(sine / 6)),math.rad("..rarhz.." + "..raa6.." * math.cos(sine / 6))),.3)\nLW.C0=clerp(LW.C0,cf("..lahx.." + "..laa.." * math.cos(sine / 6),"..lahy.." + "..laa2.." * math.cos(sine / 6),"..lahz.." + "..laa3.." * math.cos(sine / 6))*angles(math.rad("..larhx.." + "..laa4.." * math.cos(sine / 6)),math.rad("..larhy.." + "..laa5.." * math.cos(sine / 6)),math.rad("..larhz.." + "..laa6.." * math.cos(sine / 6))),.3)")
 	
 	
 	
@@ -2694,8 +2694,7 @@ local function MYXQJB_fake_script() -- convert_2.convert script
 			cond.leftlegani.Visible = false
 		end
 		
-		wait()
-		wait()
+	
 		rlan=script.Parent.Parent.Parent.animation.rightlegani
 		llan=script.Parent.Parent.Parent.animation.leftlegani
 		la=script.Parent.Parent.Parent.animation.Leftarmani
@@ -3019,9 +3018,9 @@ local function MYXQJB_fake_script() -- convert_2.convert script
 			to4 = "0"
 			to5 = "0"
 			to6 = "0"
-			wait()
+			
 		end
-		wait()
+		
 			
 		RH.C0=clerp(RH.C0,cf(rhx + rla * math.cos(sine / 6),rhy + rla2 * math.cos(sine / 6),rhz + rla3 * math.cos(sine / 6))*angles(math.rad(rrhx + rla4 * math.cos(sine / 6)),math.rad(rrhy + rla5 * math.cos(sine / 6)),math.rad(rrhz + rla6 * math.cos(sine / 6))),.2)
 		LH.C0=clerp(LH.C0,cf(lhx + lla * math.cos(sine / 6),lhy + lla2 * math.cos(sine / 6),lhz + lla3 * math.cos(sine / 6))*angles(math.rad(lrhx + lla4 * math.cos(sine / 6)),math.rad(lrhy + lla5 * math.cos(sine / 6)),math.rad(lrhz + lla6 * math.cos(sine / 6))),.2)
@@ -3032,8 +3031,8 @@ local function MYXQJB_fake_script() -- convert_2.convert script
 	end
 	
 end
-coroutine.wrap(MYXQJB_fake_script)()
-local function AMBKB_fake_script() -- closepage.Script 
+coroutine.wrap(VVMV_fake_script)()
+local function BDOUN_fake_script() -- closepage.Script 
 	local script = Instance.new('Script', closepage)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3057,8 +3056,8 @@ local function AMBKB_fake_script() -- closepage.Script
 		end
 	end)
 end
-coroutine.wrap(AMBKB_fake_script)()
-local function OKRM_fake_script() -- leftkeg.Script 
+coroutine.wrap(BDOUN_fake_script)()
+local function DMCVH_fake_script() -- leftkeg.Script 
 	local script = Instance.new('Script', leftkeg)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3066,8 +3065,8 @@ local function OKRM_fake_script() -- leftkeg.Script
 		script.Parent.Parent.Parent.leftleg.Visible = true
 	end)
 end
-coroutine.wrap(OKRM_fake_script)()
-local function BWDEGMJ_fake_script() -- rightleg_2.Script 
+coroutine.wrap(DMCVH_fake_script)()
+local function HMSJLX_fake_script() -- rightleg_2.Script 
 	local script = Instance.new('Script', rightleg_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3075,8 +3074,8 @@ local function BWDEGMJ_fake_script() -- rightleg_2.Script
 		script.Parent.Parent.Parent.rightleg.Visible = true
 	end)
 end
-coroutine.wrap(BWDEGMJ_fake_script)()
-local function LQEOCE_fake_script() -- torso_2.Script 
+coroutine.wrap(HMSJLX_fake_script)()
+local function XDZTHYO_fake_script() -- torso_2.Script 
 	local script = Instance.new('Script', torso_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3084,8 +3083,8 @@ local function LQEOCE_fake_script() -- torso_2.Script
 		script.Parent.Parent.Parent.torso.Visible = true
 	end)
 end
-coroutine.wrap(LQEOCE_fake_script)()
-local function WJZLGHC_fake_script() -- rightarm_2.Script 
+coroutine.wrap(XDZTHYO_fake_script)()
+local function GMGVTEX_fake_script() -- rightarm_2.Script 
 	local script = Instance.new('Script', rightarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3093,8 +3092,8 @@ local function WJZLGHC_fake_script() -- rightarm_2.Script
 		script.Parent.Parent.Parent.rightarm.Visible = true
 	end)
 end
-coroutine.wrap(WJZLGHC_fake_script)()
-local function NZBPX_fake_script() -- leftarm_2.Script 
+coroutine.wrap(GMGVTEX_fake_script)()
+local function ZJVOX_fake_script() -- leftarm_2.Script 
 	local script = Instance.new('Script', leftarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3102,20 +3101,21 @@ local function NZBPX_fake_script() -- leftarm_2.Script
 		script.Parent.Parent.Parent.leftarm.Visible = true
 	end)
 end
-coroutine.wrap(NZBPX_fake_script)()
-local function VAPDRRZ_fake_script() -- animation.LocalScript 
+coroutine.wrap(ZJVOX_fake_script)()
+local function IKBSLYQ_fake_script() -- animation.LocalScript 
 	local script = Instance.new('LocalScript', animation)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.layouts.Visible = true
 	end)
 end
-coroutine.wrap(VAPDRRZ_fake_script)()
-local function BVTU_fake_script() -- CLOSE.LocalScript 
+coroutine.wrap(IKBSLYQ_fake_script)()
+local function HYLGJ_fake_script() -- CLOSE.LocalScript 
 	local script = Instance.new('LocalScript', CLOSE)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(BVTU_fake_script)()
+coroutine.wrap(HYLGJ_fake_script)()
+--e
