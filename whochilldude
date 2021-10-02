@@ -187,6 +187,10 @@ local titlehr_10 = Instance.new("TextLabel")
 local x_10 = Instance.new("TextLabel")
 local y_10 = Instance.new("TextLabel")
 local z_10 = Instance.new("TextLabel")
+local layouts = Instance.new("Frame")
+local tit = Instance.new("TextLabel")
+local dummypose = Instance.new("TextButton")
+local CLOSE = Instance.new("TextButton")
 
 --Properties:
 
@@ -1296,8 +1300,9 @@ animation.Parent = main
 animation.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 animation.Position = UDim2.new(0.978723407, 0, 0, 0)
 animation.Size = UDim2.new(0, 62, 0, 31)
+animation.Visible = false
 animation.Font = Enum.Font.SourceSans
-animation.Text = "Animation"
+animation.Text = "Layouts"
 animation.TextColor3 = Color3.fromRGB(0, 0, 0)
 animation.TextScaled = true
 animation.TextSize = 14.000
@@ -1308,6 +1313,7 @@ updatebutton.Parent = main
 updatebutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 updatebutton.Position = UDim2.new(0.978723407, 0, 0.0466165431, 0)
 updatebutton.Size = UDim2.new(0, 62, 0, 24)
+updatebutton.Visible = false
 updatebutton.Font = Enum.Font.SourceSans
 updatebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
 updatebutton.TextSize = 14.000
@@ -2278,9 +2284,50 @@ z_10.TextScaled = true
 z_10.TextSize = 14.000
 z_10.TextWrapped = true
 
+layouts.Name = "layouts"
+layouts.Parent = animator
+layouts.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+layouts.Position = UDim2.new(0.571961224, 0, 0.186295509, 0)
+layouts.Size = UDim2.new(0, 448, 0, 369)
+layouts.Visible = false
+
+tit.Name = "tit"
+tit.Parent = layouts
+tit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tit.Size = UDim2.new(0, 448, 0, 40)
+tit.Font = Enum.Font.SourceSans
+tit.Text = "Layout"
+tit.TextColor3 = Color3.fromRGB(0, 0, 0)
+tit.TextScaled = true
+tit.TextSize = 14.000
+tit.TextWrapped = true
+
+dummypose.Name = "dummypose"
+dummypose.Parent = layouts
+dummypose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dummypose.Position = UDim2.new(0, 0, 0.108401082, 0)
+dummypose.Size = UDim2.new(0, 103, 0, 50)
+dummypose.Font = Enum.Font.SourceSans
+dummypose.Text = "Dummy Pose"
+dummypose.TextColor3 = Color3.fromRGB(0, 0, 0)
+dummypose.TextScaled = true
+dummypose.TextSize = 14.000
+dummypose.TextWrapped = true
+
+CLOSE.Name = "CLOSE"
+CLOSE.Parent = layouts
+CLOSE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CLOSE.Size = UDim2.new(0, 72, 0, 40)
+CLOSE.Font = Enum.Font.SourceSans
+CLOSE.Text = "Close"
+CLOSE.TextColor3 = Color3.fromRGB(0, 0, 0)
+CLOSE.TextScaled = true
+CLOSE.TextSize = 14.000
+CLOSE.TextWrapped = true
+
 -- Scripts:
 
-local function BEEMZN_fake_script() -- toclipboard.LocalScript 
+local function CFDFCCS_fake_script() -- toclipboard.LocalScript 
 	local script = Instance.new('LocalScript', toclipboard)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2289,16 +2336,16 @@ local function BEEMZN_fake_script() -- toclipboard.LocalScript
 	end)
 	
 end
-coroutine.wrap(BEEMZN_fake_script)()
-local function YDEOEIL_fake_script() -- close.LocalScript 
+coroutine.wrap(CFDFCCS_fake_script)()
+local function WYTJSE_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(YDEOEIL_fake_script)()
-local function SYWJOJX_fake_script() -- convert_2.convert script 
+coroutine.wrap(WYTJSE_fake_script)()
+local function IZZLC_fake_script() -- convert_2.convert script 
 	local script = Instance.new('Script', convert_2)
 
 	player = game.Players.LocalPlayer
@@ -2448,7 +2495,36 @@ local function SYWJOJX_fake_script() -- convert_2.convert script
 		end 
 		return a[1]*startInterp + b[1]*finishInterp, a[2]*startInterp + b[2]*finishInterp, a[3]*startInterp + b[3]*finishInterp, a[4]*startInterp + b[4]*finishInterp 
 	end
-	
+	rhx = script.Parent.Parent.rightleg.rhxt.Text
+	rhy = script.Parent.Parent.rightleg.rhyt.Text
+	rhz = script.Parent.Parent.rightleg.rhzt.Text
+	rrhx = script.Parent.Parent.rightleg.rrhxt.Text
+	rrhy = script.Parent.Parent.rightleg.rrhyt.Text
+	rrhz = script.Parent.Parent.rightleg.rrhzt.Text
+	lhx = script.Parent.Parent.leftleg.rhxt.Text
+	lhy = script.Parent.Parent.leftleg.rhyt.Text
+	lhz = script.Parent.Parent.leftleg.rhzt.Text
+	lrhx = script.Parent.Parent.leftleg.rrhxt.Text
+	lrhy = script.Parent.Parent.leftleg.rrhyt.Text
+	lrhz = script.Parent.Parent.leftleg.rrhzt.Text
+	rahx = script.Parent.Parent.rightarm.rhxt.Text
+	rahy = script.Parent.Parent.rightarm.rhyt.Text
+	rahz = script.Parent.Parent.rightarm.rhzt.Text
+	rarhx = script.Parent.Parent.rightarm.rrhxt.Text
+	rarhy = script.Parent.Parent.rightarm.rrhyt.Text
+	rarhz = script.Parent.Parent.rightarm.rrhzt.Text
+	lahx = script.Parent.Parent.leftarm.rhxt.Text
+	lahy = script.Parent.Parent.leftarm.rhyt.Text
+	lahz = script.Parent.Parent.leftarm.rhzt.Text
+	larhx = script.Parent.Parent.leftarm.rrhxt.Text
+	larhy = script.Parent.Parent.leftarm.rrhyt.Text
+	larhz = script.Parent.Parent.leftarm.rrhzt.Text
+	tahx = script.Parent.Parent.torso.rhxt.Text
+	tahy = script.Parent.Parent.torso.rhyt.Text
+	tahz = script.Parent.Parent.torso.rhzt.Text
+	tarhx = script.Parent.Parent.torso.rrhxt.Text
+	tarhy = script.Parent.Parent.torso.rrhyt.Text
+	tarhz = script.Parent.Parent.torso.rrhzt.Text
 	player = game.Players.LocalPlayer
 	Character = player.Character
 	
@@ -2502,6 +2578,69 @@ local function SYWJOJX_fake_script() -- convert_2.convert script
 		script.Parent.Parent.Parent.convert["convert text"].Text = _G.convertthing
 		script.Parent.Parent.Parent.convert.Visible = true
 	end)
+	tahx = "0"
+	tahy = "0"
+	tahz = "0"
+	tarhz = "0" 
+	tarhy = "0" 
+	tarhx = "0" 
+	larhz = "0" 
+	larhy = "0" 
+	larhx = "0" 
+	rarhz = "0" 
+	rarhy = "0" 
+	rarhx = "0" 
+	lrhy = "0" 
+	lrhz = "0" 
+	lrhx = "0" 
+	rrhz = "0" 
+	rrhy = "0" 
+	rrhx = "0"
+	rla = "0"
+	rla2 = "0"
+	rla3 = "0"
+	rhx = "0"
+	rhy = "0"
+	rhz = "0"
+	rla4 = "0"
+	rla5 = "0"
+	rla6 = "0"
+	lhx = "0"
+	lhy = "0"
+	lhz = "0"
+	rahx = "0"
+	rahy = "0"
+	rahz = "0"
+	lahx = "0"
+	lahy = "0"
+	lahz = "0"
+	tahx = "0"
+	tahy = "0"
+	tahz = "0"
+	lla = "0"
+	lla2 = "0"
+	lla3 = "0"
+	lla4 = "0"
+	lla5 = "0"
+	lla6 = "0"
+	laa = "0"
+	laa2 = "0"
+	laa3 = "0"
+	laa4 = "0"
+	laa5 = "0"
+	laa6 = "0"
+	raa = "0"
+	raa2 = "0"
+	raa3 = "0"
+	raa4 = "0"
+	raa5 = "0"
+	raa6 = "0"
+	to = "0"
+	to2 = "0"
+	to3 = "0"
+	to4 = "0"
+	to5 = "0"
+	to6 = "0"
 	nonanimate = true
 	while nonanimate == true do 
 		t2hings = script.Parent.Parent
@@ -2626,6 +2765,195 @@ local function SYWJOJX_fake_script() -- convert_2.convert script
 		local change = 1
 		sine = sine + change
 		wait()
+		if script.Parent.Parent.Parent.layouts.dummypose.MouseButton1Click then
+	
+		wait()	
+		end
+		allthings = tahx and tahy and tahz and tarhz and tarhy and tarhx and rarhz and rarhy and rarhx and lrhy and lrhz and lrhx and rrhz and rrhy and rrhx and rla and rla2 and rla3 and rhx and rhy and rhz and rla4 and rla5 and rla6 and lhx and lhy and lhz and rahx and rahy and rahz and lahx and lahy and lahz and tahx and tahy and tahz and lla and lla2 and lla3 and lla4 and lla5 and lla6  and laa and laa2  and laa3  and laa4  and laa5  and laa6  and raa  and raa2  and raa3  and raa4  and raa5 and raa6 and to and to2 and to3 and to4 and to5 and to6
+		if tonumber(tahx) then  else
+			tahx = "0"
+		end
+		if tonumber(tahy) then  else
+			tahy = "0"
+		end
+		if tonumber(tahz) then   else
+			tahz = "0"
+		end
+		if tonumber(tarhx) then   else
+			tarhx = "0"
+		end
+		if tonumber(tarhy) then   else
+			tarhy = "0"
+		end
+		if tonumber(tarhz) then  else
+			tarhz = "0"
+		end
+		if tonumber(larhy) then   else
+			larhy = "0"
+		end
+		if tonumber(larhx) then   else
+			larhx = "0"
+		end
+		if tonumber(larhz) then   else
+			larhz = "0"
+		end
+		--oooooooooooooooooooo
+		if tonumber(lrhy) then   else
+			lrhy = "0"
+		end
+		if tonumber(lrhx) then   else
+			lrhx = "0"
+		end
+		if tonumber(lrhz) then   else
+			lrhz = "0"
+		end
+		if tonumber(rarhx) then   else
+			rarhx = "0"
+		end
+		if tonumber(rarhy) then   else
+			rarhy = "0"
+		end
+		if tonumber(rarhz) then   else
+			rarhz = "0"
+		end
+		if tonumber(rrhx) then   else
+			rrhx = "0"
+		end
+		if tonumber(rrhy) then   else
+			rrhy = "0"
+		end
+		if tonumber(rrhz) then   else
+			rrhz = "0"
+		end
+		if tonumber(rla) then   else
+			rla = "0"
+		end
+		if tonumber(rla2) then   else
+			rla2 = "0"
+		end
+		if tonumber(rla3) then   else
+			rla3= "0"
+		end
+		if tonumber(rla4) then   else
+			rla4 = "0"
+		end
+		if tonumber(rla5) then   else
+			rla5 = "0"
+		end
+		if tonumber(rla6) then   else
+			rla6 = "0"
+		end
+		if tonumber(lhx) then  else
+			lhx = "0"
+		end
+		if tonumber(lhy) then  else
+			lhy = "0"
+		end
+		if tonumber(lhz) then else
+			lhz = "0"
+		end
+		if tonumber(rhx) then  else
+			rhx = "0"
+		end
+		if tonumber(rhy) then  else
+			rhy = "0"
+		end
+		if tonumber(rhz) then else
+			rhz = "0"
+		end
+		if tonumber(rahx)then   else
+			rahx = "0"
+		end
+		if tonumber(rahy) then  else
+			rahy = "0"
+		end
+		if tonumber(rahz) then  else
+			rahz = "0"
+		end
+		if tonumber(lahx) then  else
+			lahx = "0"
+		end
+		if tonumber(lahy) then  else
+			lahy = "0"
+		end
+		if tonumber(lahz) then  else
+			lahz = "0"
+		end
+		if tonumber(lla) then  else
+			lla = "0"
+		end
+		if tonumber(lla2)then  else
+			lla2 = "0"
+		end
+		if tonumber(lla3) then  else
+			lla3 = "0"
+		end
+		if tonumber(lla4) then  else
+			lla4 = "0"
+		end
+		if tonumber(lla5) then  else
+			lla5 = "0"
+		end
+		if tonumber(lla6) then  else
+			lla6 = "0"
+		end
+		if tonumber(laa) then  else
+			laa = "0"
+		end
+		if tonumber(laa2) then  else
+			laa2 = "0"
+		end
+		if tonumber(laa3) then  else
+			laa3 = "0"
+		end
+		if tonumber(laa4) then  else
+			laa4 = "0"
+		end
+		if tonumber(laa5) then  else
+			laa5 = "0"
+		end
+		if tonumber(laa6) then  else
+			laa6 = "0"
+		end
+		if tonumber(raa) then  else
+			raa = "0"
+		end
+		if tonumber(raa2) then  else
+			raa2 = "0"
+		end
+		if tonumber(raa3) then  else
+			raa3 = "0"
+		end
+		if tonumber(raa4) then  else
+			raa4 = "0"
+		end
+		if tonumber(raa5) then  else
+			raa5 = "0"
+		end
+		if tonumber(raa6) then  else
+			raa6 = "0"
+		end
+		if tonumber(to) then  else
+			to = "0"
+		end
+		if tonumber(to2) then  else
+			to2 = "0"
+		end
+		if tonumber(to3) then  else
+			to3 = "0"
+		end
+		if tonumber(to4) then  else
+			to4 = "0"
+		end
+		if tonumber(to5) then  else
+			to5 = "0"
+		end
+		if tonumber(to6) then  else
+			to6 = "0"
+		end	
+		
+		
+		
 		--per bldy : or rla == ""  or rla2 == ""  or rla3 == "" or rla == "."  or rla2 == "."  or rla3 == "." or rla == "-"  or rla2 == "-"  or rla3 == "-"  or rla == "-."  or rla2 == "-."  or rla3 == "-."or rla4 == ""  or rla5 == ""  or rla6 == ""or rla4 == "-"  or rla5 == "-"  or rla6 == "-"  or rla4 == "."  or rla5 == "."  or rla6 == "."or rla4 == "-."  or rla5 == "-."  or rla6 == "-."
 		if tarhz == "" or to == ""  or to2 == ""  or to3 == ""  or to4 == ""  or to5 == ""  or to6 == ""or to == "."  or to2 == "."  or to3 == "." or to == "-"  or to2 == "-"  or to3 == "-"  or to == "-."  or to2 == "-."  or to3 == "-."or to4 == ""  or to5 == ""  or to6 == ""or to4 == "-"  or to == "-"  or to6 == "-"  or to4 == "."  or to5 == "."  or to6 == "."or to4 == "-."  or to5 == "-."  or to6 == "-." or tahx == ""  or tahy == ""  or tahz == "" or tahx == "."  or tahy == "."  or tahz == "." or tahx == "-"  or tahy == "-"  or tahz == "-"  or tahx == "-."  or tahy == "-."  or tahz == "-."or tarhx == ""  or tarhy == ""  or tahz == ""or tarhx == "-"  or tarhy == "-"  or tarhz == "-"  or tarhx == "."  or tarhy == "."  or tarhz == "."or tarhx == "-."  or tarhy == "-."  or tarhz == "-." or rahx == ""  or rahy == ""  or rahz == "" or rahx == "."  or rahy == "."  or rahz == "." or rahx == "-"  or rahy == "-"  or rahz == "-"  or rahx == "-."  or rahy == "-."  or rahz == "-."or rarhx == ""  or rarhy == ""  or rahz == ""or rarhx == "-"  or rarhy == "-"  or rarhz == "-"  or rarhx == "."  or rarhy == "."  or rarhz == "."or rarhx == "-."  or rarhy == "-."  or rarhz == "-." or lahx == ""  or lahy == ""  or lahz == "" or lahx == "."  or lahy == "."  or lahz == "." or lahx == "-"  or lahy == "-"  or lahz == "-"  or lahx == "-."  or lahy == "-."  or lahz == "-."or larhx == ""  or larhy == ""  or lahz == ""or larhx == "-"  or larhy == "-"  or larhz == "-"  or larhx == "."  or larhy == "."  or larhz == "."or larhx == "-."  or larhy == "-."  or larhz == "-." or raa == ""  or raa2 == ""  or raa3 == "" or raa == "."  or raa2 == "."  or raa3 == "." or raa == "-"  or raa2 == "-"  or raa3 == "-"  or raa == "-."  or raa2 == "-."  or raa3 == "-."or raa4 == ""  or raa5 == ""  or raa6 == ""or raa4 == "-"  or raa5 == "-"  or raa6 == "-"  or raa4 == "."  or raa5 == "."  or raa6 == "."or raa4 == "-."  or raa5 == "-."  or raa6 == "-." or laa == ""  or laa2 == ""  or laa3 == "" or laa == "."  or laa2 == "."  or laa3 == "." or laa == "-"  or laa2 == "-"  or laa3 == "-"  or laa == "-."  or laa2 == "-."  or laa3 == "-."or laa4 == ""  or laa5 == ""  or laa6 == ""or laa4 == "-"  or laa5 == "-"  or laa6 == "-"  or laa4 == "."  or laa5 == "."  or laa6 == "."or laa4 == "-."  or laa5 == "-."  or laa6 == "-." or lla == ""  or lla2 == ""  or lla3 == "" or lla == "."  or lla2 == "."  or lla3 == "." or lla == "-"  or lla2 == "-"  or lla3 == "-"  or lla == "-."  or lla2 == "-."  or lla3 == "-."or lla4 == ""  or lla5 == ""  or lla6 == ""or lla4 == "-"  or lla5 == "-"  or lla6 == "-"  or lla4 == "."  or lla5 == "."  or lla6 == "."or lla4 == "-."  or lla5 == "-."  or lla6 == "-." or tarhy == ""  or rhx == "" or rhy == "" or rhz == ""  or rhx == "-" or rhy == "-" or rhz == "-" or rhx == "." or rhy == "." or rhz == "."  or rhx == "-." or rhy == "-." or rhz == "-." or lhx == "" or lhy == "" or lhz == ""  or lhx == "-" or lhy == "-" or lhz == "-" or lhx == "." or lhy == "." or lhz == "."  or lhx == "-." or lhy == "-." or lhz == "-." or rla == ""  or rla2 == ""  or rla3 == "" or rla == "."  or rla2 == "."  or rla3 == "." or rla == "-"  or rla2 == "-"  or rla3 == "-"  or rla == "-."  or rla2 == "-."  or rla3 == "-."or rla4 == ""  or rla5 == ""  or rla6 == ""or rla4 == "-"  or rla5 == "-"  or rla6 == "-"  or rla4 == "."  or rla5 == "."  or rla6 == "."or rla4 == "-."  or rla5 == "-."  or rla6 == "-." or tarhx == "" or larhz == "" or larhy == "" or larhx == "" or rarhz == "" or rarhy == "" or rarhx == "" or lrhy == "" or lrhz == "" or lrhx == "" or rrhz == "" or rrhy == "" or rrhx == "" then
 			tahx = "0"
@@ -2704,8 +3032,8 @@ local function SYWJOJX_fake_script() -- convert_2.convert script
 	end
 	
 end
-coroutine.wrap(SYWJOJX_fake_script)()
-local function YTFRRE_fake_script() -- closepage.Script 
+coroutine.wrap(IZZLC_fake_script)()
+local function XYWF_fake_script() -- closepage.Script 
 	local script = Instance.new('Script', closepage)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2729,8 +3057,8 @@ local function YTFRRE_fake_script() -- closepage.Script
 		end
 	end)
 end
-coroutine.wrap(YTFRRE_fake_script)()
-local function GTQOOPA_fake_script() -- leftkeg.Script 
+coroutine.wrap(XYWF_fake_script)()
+local function YTKF_fake_script() -- leftkeg.Script 
 	local script = Instance.new('Script', leftkeg)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2738,8 +3066,8 @@ local function GTQOOPA_fake_script() -- leftkeg.Script
 		script.Parent.Parent.Parent.leftleg.Visible = true
 	end)
 end
-coroutine.wrap(GTQOOPA_fake_script)()
-local function DBRQAX_fake_script() -- rightleg_2.Script 
+coroutine.wrap(YTKF_fake_script)()
+local function TQLRUTY_fake_script() -- rightleg_2.Script 
 	local script = Instance.new('Script', rightleg_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2747,8 +3075,8 @@ local function DBRQAX_fake_script() -- rightleg_2.Script
 		script.Parent.Parent.Parent.rightleg.Visible = true
 	end)
 end
-coroutine.wrap(DBRQAX_fake_script)()
-local function MEWVJE_fake_script() -- torso_2.Script 
+coroutine.wrap(TQLRUTY_fake_script)()
+local function RTVVOIK_fake_script() -- torso_2.Script 
 	local script = Instance.new('Script', torso_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2756,8 +3084,8 @@ local function MEWVJE_fake_script() -- torso_2.Script
 		script.Parent.Parent.Parent.torso.Visible = true
 	end)
 end
-coroutine.wrap(MEWVJE_fake_script)()
-local function BYPAE_fake_script() -- rightarm_2.Script 
+coroutine.wrap(RTVVOIK_fake_script)()
+local function UNUV_fake_script() -- rightarm_2.Script 
 	local script = Instance.new('Script', rightarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2765,8 +3093,8 @@ local function BYPAE_fake_script() -- rightarm_2.Script
 		script.Parent.Parent.Parent.rightarm.Visible = true
 	end)
 end
-coroutine.wrap(BYPAE_fake_script)()
-local function ORVCV_fake_script() -- leftarm_2.Script 
+coroutine.wrap(UNUV_fake_script)()
+local function IWGMXR_fake_script() -- leftarm_2.Script 
 	local script = Instance.new('Script', leftarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2774,4 +3102,20 @@ local function ORVCV_fake_script() -- leftarm_2.Script
 		script.Parent.Parent.Parent.leftarm.Visible = true
 	end)
 end
-coroutine.wrap(ORVCV_fake_script)()
+coroutine.wrap(IWGMXR_fake_script)()
+local function DFKMZSA_fake_script() -- animation.LocalScript 
+	local script = Instance.new('LocalScript', animation)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.layouts.Visible = true
+	end)
+end
+coroutine.wrap(DFKMZSA_fake_script)()
+local function KRZMM_fake_script() -- CLOSE.LocalScript 
+	local script = Instance.new('LocalScript', CLOSE)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(KRZMM_fake_script)()
