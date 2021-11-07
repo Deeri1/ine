@@ -2,12 +2,17 @@ game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "ga
 game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "gamer5"
 game:GetService("Players").LocalPlayer.Character["ShadowBladeMasterAccessory"].Name = "gamer6"
 
-_G.SelexityNet = true
-_G.StrongerNet = false-- you hats will not lag other that if your moving super fast.
-_G.Net = false -- your regular net. hats may lag behind if moving fast.
-_G.Bot = false -- bot reanimate
-_G.WeakNet = false --a weak net with little jitter
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DeeriHub/Deeri-Hub/main/Deeri%20net"))()
+getgenv().Nullware_ReanimateConfiguration = {
+	["Netless"] = true, --Toggles Netless.
+	["Anti-Fling"] = true, --Toggles Anti-Fling.
+	["Hats To Align"] = {"All"}, --List of hats that you want to align. (e.g. {"Hat1", "Hat2"} or {"All"})
+	["Head Movement Without Godmode"] = false, --Toggles Head Movement Without Godmode.
+	["Enable Limb Collisions"] = false, --Enables your limb's collisions. (Overrides "Disable Torso Collisions" if enabled, also doesn't require godmode)
+	["Disable Torso Collisions"] = false, --Disables your torso's collisions. (Doesn't work with godmode)
+	["R15 To R6"] = false, --Toggles R15 To R6.
+	["Godmode"] = true --Toggles Godmode.
+}
+loadstring(game:HttpGetAsync("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/8cd532018277ee9982433eea25a6c14f/raw/sewMjTpJvVBLR96L"))()
 wait(2.5)
 
 -----------------------------------------------------------------------
