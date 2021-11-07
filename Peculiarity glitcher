@@ -1,6 +1,5 @@
 -- the net
-local net = true
-if net == true then
+
 	game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "gamer2"
 	game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "gamer1"
 	game:GetService("Players").LocalPlayer.Character["ShadowBladeMasterAccessory"].Name = "gamer3"
@@ -9,14 +8,18 @@ if net == true then
 	game:GetService("Players").LocalPlayer.Character["BladeMasterAccessory"].Name = "gamer6"
 
 
-	getgenv().ReanimateVersion = "v5"
+getgenv().Nullware_ReanimateConfiguration = {
+	["Netless"] = true, --Toggles Netless.
+	["Anti-Fling"] = false, --Toggles Anti-Fling.
+	["Hats To Align"] = {"All"}, --List of hats that you want to align. (e.g. {"Hat1", "Hat2"} or {"All"})
+	["Head Movement Without Godmode"] = true, --Toggles Head Movement Without Godmode.
+	["Enable Limb Collisions"] = false, --Enables your limb's collisions. (Overrides "Disable Torso Collisions" if enabled, also doesn't require godmode)
+	["Disable Torso Collisions"] = false, --Disables your torso's collisions. (Doesn't work with godmode)
+	["R15 To R6"] = false, --Toggles R15 To R6.
+	["Godmode"] = false --Toggles Godmode.
+}
+loadstring(game:HttpGetAsync("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/8cd532018277ee9982433eea25a6c14f/raw/sewMjTpJvVBLR96L"))()
 
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Reanimate", true))()
-
-
-	wait(2.5) 
-
-end
 -- end of the net
 
 Player = game.Players.LocalPlayer
