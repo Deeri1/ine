@@ -7947,13 +7947,7 @@ mouse.KeyDown:connect(function(k)
 	num = 0
 	xx = 0
 	zz = 0
-if BanishMode == "Ciomna" == false then
 
-	a= game.Lighting
-	vis.Material = "Plastic"
-	lighting = a
-	a.TimeOfDay = 14
-end
 	if k == "e" and attack == false then
 		hum.WalkSpeed = 15
 		Speed = 40
@@ -8028,7 +8022,13 @@ end
 		vis.BrickColor = BrickColor.new(Color3.fromRGB(181, 181, 181))
 	end
 
+	if BanishMode == "Ciomna" == false then
 
+		a= game.Lighting
+		vis.Material = "Plastic"
+		lighting = a
+		a.TimeOfDay = 14
+	end
 	--clickatacks
 end)
 BanishMode = "deeri"
