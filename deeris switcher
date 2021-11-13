@@ -5331,6 +5331,7 @@ getgenv().mode = "Summer" -- Choose from Summer and Autumn
 
 
 a = game.Lighting
+lighting = a
 a.Ambient = Color3.fromRGB(45, 33, 45)
 a.Brightness = 6
 a.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
@@ -7946,6 +7947,13 @@ mouse.KeyDown:connect(function(k)
 	num = 0
 	xx = 0
 	zz = 0
+if BanishMode == "Ciomna" == false then
+
+	a= game.Lighting
+	vis.Material = "Plastic"
+	lighting = a
+	a.TimeOfDay = 14
+end
 	if k == "e" and attack == false then
 		hum.WalkSpeed = 15
 		Speed = 40
@@ -7955,6 +7963,19 @@ mouse.KeyDown:connect(function(k)
 		Titlething.Text = "Deeri Switcher"
 		vis.BrickColor = BrickColor.new(Color3.fromRGB(188, 184, 72))
 		Titlething.TextColor3 = Color3.fromRGB(226, 226, 112)
+
+	end
+	if k == "4" and attack == false then
+		lighting.TimeOfDay = 3
+		hum.WalkSpeed = 15
+		Speed = 40
+		kan.Pitch = 0.92
+		kan.SoundId = "rbxassetid://4456467079"
+		BanishMode = "Ciomna"
+		Titlething.Text = "Ciomna"
+		vis.Material = "Neon"
+		vis.BrickColor = BrickColor.new(Color3.fromRGB(115, 57, 173))
+		Titlething.TextColor3 = Color3.fromRGB(141, 70, 211)
 
 	end
 	if k == "m" and BanishMode == "deeri" and attack == false then
@@ -8068,6 +8089,28 @@ while true do
 				LW.C0=clerp(LW.C0,cf(-1.1 + 0 * math.cos(sine / 6),.5 + 0 * math.cos(sine / 6),0 + 0 * math.cos(sine / 6))*angles(math.rad(0 + 0 * math.cos(sine / 6)),math.rad(-55 + 0 * math.cos(sine / 6)),math.rad(-30 + -10 * math.cos(sine / 6))),.3)
 			end
 		end
+		if attack==false and BanishMode == "Ciomna" then
+			if equipped == false then
+				lighting.TimeOfDay = 3
+				local change = .1 
+				sine = sine + change 
+				RH.C0=clerp(RH.C0,cf(1 + 0 * math.cos(sine / 4),-1 + .25 * math.cos(sine / 4),-.5 + .3 * math.cos(sine / 4))*angles(math.rad(0 + 0 * math.cos(sine / 4)),math.rad(130 + 0 * math.cos(sine / 4)),math.rad(-60 + 0 * math.cos(sine / 4))),.2)
+				LH.C0=clerp(LH.C0,cf(-1 + 0 * math.cos(sine / 4),-.7 + .2 * math.cos(sine / 4),-.5 + -.2 * math.cos(sine / 4))*angles(math.rad(-20 + 12 * math.cos(sine / 4)),math.rad(-85 + 0 * math.cos(sine / 4)),math.rad(0 + 0 * math.cos(sine / 4))),.2)
+				RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(0 + 0 * math.cos(sine / 4),0 + 0 * math.cos(sine / 4),5 + .2 * math.cos(sine / 4))*angles(math.rad(25 + -14 * math.cos(sine / 4)),math.rad(0 + 0 * math.cos(sine / 4)),math.rad(-20 + 0 * math.cos(sine / 4))),.3)
+				Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
+				RW.C0=clerp(RW.C0,cf(1.5 + 0 * math.cos(sine / 4),.2 + 0 * math.cos(sine / 4),0 + 0 * math.cos(sine / 4))*angles(math.rad(-60 + -12 * math.cos(sine / 4)),math.rad(55 + 0 * math.cos(sine / 4)),math.rad(30 + 0 * math.cos(sine / 4))),.3)
+				LW.C0=clerp(LW.C0,cf(-1.5 + 0 * math.cos(sine / 4),.7 + 0 * math.cos(sine / 4),0 + 0 * math.cos(sine / 4))*angles(math.rad(90 + -3 * math.cos(sine / 4)),math.rad(-50 + 0 * math.cos(sine / 4)),math.rad(-30 + 0 * math.cos(sine / 4))),.3)
+			else
+				local change = .1 
+				sine = sine + change 
+				RH.C0=clerp(RH.C0,cf(1 + 0 * math.cos(sine / 6),-1 + -.5 * math.cos(sine / 6),0 + 0 * math.cos(sine / 6))*angles(math.rad(0 + 0 * math.cos(sine / 6)),math.rad(75 + 0 * math.cos(sine / 6)),math.rad(0 + 5 * math.cos(sine / 6))),.2)
+				LH.C0=clerp(LH.C0,cf(-1 + 0 * math.cos(sine / 6),-1 + 0 * math.cos(sine / 6),0 + 0 * math.cos(sine / 6))*angles(math.rad(180 + 0 * math.cos(sine / 6)),math.rad(-120 + 0 * math.cos(sine / 6)),math.rad(-120 + 0 * math.cos(sine / 6))),.2)
+				RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(0 + .05 * math.cos(sine / 6),0 + .009 * math.cos(sine / 6),4 + 1.5 * math.cos(sine / 6))*angles(math.rad(5 + 0 * math.cos(sine / 6)),math.rad(30 + 5.5 * math.cos(sine / 6)),math.rad(0 + 0 * math.cos(sine / 6))),.3)
+				Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
+				RW.C0=clerp(RW.C0,cf(1 + 0 * math.cos(sine / 6),.5 + 0 * math.cos(sine / 6),0 + 0 * math.cos(sine / 6))*angles(math.rad(-90 + 0 * math.cos(sine / 6)),math.rad(55 + 0 * math.cos(sine / 6)),math.rad(100 + -10 * math.cos(sine / 6))),.3)
+				LW.C0=clerp(LW.C0,cf(-1.1 + 0 * math.cos(sine / 6),.5 + 0 * math.cos(sine / 6),0 + 0 * math.cos(sine / 6))*angles(math.rad(0 + 0 * math.cos(sine / 6)),math.rad(-55 + 0 * math.cos(sine / 6)),math.rad(-30 + -10 * math.cos(sine / 6))),.3)
+			end
+		end
 		if attack==false and BanishMode == "deeri" then
 			if equipped == false then
 				local change = .1 
@@ -8159,6 +8202,28 @@ while true do
 				LW.C0=clerp(LW.C0,cf(-1.1 + 0 * math.cos(sine / 6),.5 + 0 * math.cos(sine / 6),0 + 0 * math.cos(sine / 6))*angles(math.rad(0 + 0 * math.cos(sine / 6)),math.rad(-55 + 0 * math.cos(sine / 6)),math.rad(-30 + -10 * math.cos(sine / 6))),.3)
 			end
 		end
+		if attack==false and BanishMode == "Ciomna" then
+			if equipped == false then
+				lighting.TimeOfDay = 3
+				local change = .1 
+				sine = sine + change 
+				RH.C0=clerp(RH.C0,cf(1 + 0 * math.cos(sine / 4),-1 + .25 * math.cos(sine / 4),-.5 + .3 * math.cos(sine / 4))*angles(math.rad(0 + 0 * math.cos(sine / 4)),math.rad(130 + 0 * math.cos(sine / 4)),math.rad(-60 + 0 * math.cos(sine / 4))),.2)
+				LH.C0=clerp(LH.C0,cf(-1 + 0 * math.cos(sine / 4),-.7 + .2 * math.cos(sine / 4),-.5 + -.2 * math.cos(sine / 4))*angles(math.rad(-20 + 12 * math.cos(sine / 4)),math.rad(-85 + 0 * math.cos(sine / 4)),math.rad(0 + 0 * math.cos(sine / 4))),.2)
+				RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(0 + 0 * math.cos(sine / 4),0 + 0 * math.cos(sine / 4),5 + 1 * math.cos(sine / 4))*angles(math.rad(0 + -14 * math.cos(sine / 4)),math.rad(0 + 0 * math.cos(sine / 4)),math.rad(-20 + 0 * math.cos(sine / 4))),.3)
+				Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
+				RW.C0=clerp(RW.C0,cf(1.5 + 0 * math.cos(sine / 4),.2 + 0 * math.cos(sine / 4),0 + 0 * math.cos(sine / 4))*angles(math.rad(-60 + -12 * math.cos(sine / 4)),math.rad(55 + 0 * math.cos(sine / 4)),math.rad(30 + 0 * math.cos(sine / 4))),.3)
+				LW.C0=clerp(LW.C0,cf(-1.5 + 0 * math.cos(sine / 4),.7 + 0 * math.cos(sine / 4),0 + 0 * math.cos(sine / 4))*angles(math.rad(90 + -3 * math.cos(sine / 4)),math.rad(-50 + 0 * math.cos(sine / 4)),math.rad(-30 + 0 * math.cos(sine / 4))),.3)
+			else
+				local change = .1 
+				sine = sine + change 
+				RH.C0=clerp(RH.C0,cf(1 + 0 * math.cos(sine / 6),-1 + 0 * math.cos(sine / 6),0 + 0 * math.cos(sine / 6))*angles(math.rad(0 + -50 * math.cos(sine / 6)),math.rad(75 + 30 * math.cos(sine / 6)),math.rad(0 + 30 * math.cos(sine / 6))),.2)
+				LH.C0=clerp(LH.C0,cf(-1 + 0 * math.cos(sine / 6),-1 + 0 * math.cos(sine / 6),0 + 0 * math.cos(sine / 6))*angles(math.rad(180 + 0 * math.cos(sine / 6)),math.rad(-120 + 0 * math.cos(sine / 6)),math.rad(170 + 30 * math.cos(sine / 6))),.2)
+				RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(0 + .05 * math.cos(sine / 6),0 + .009 * math.cos(sine / 6),4 + .5 * math.cos(sine / 6))*angles(math.rad(5 + 0 * math.cos(sine / 6)),math.rad(30 + 5.5 * math.cos(sine / 6)),math.rad(0 + 0 * math.cos(sine / 6))),.3)
+				Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
+				RW.C0=clerp(RW.C0,cf(1 + 0 * math.cos(sine / 6),.5 + 0 * math.cos(sine / 6),0 + 0 * math.cos(sine / 6))*angles(math.rad(0 + 0 * math.cos(sine / 6)),math.rad(30 + 0 * math.cos(sine / 6)),math.rad(60 + -15 * math.cos(sine / 6))),.3)
+				LW.C0=clerp(LW.C0,cf(-1.1 + 0 * math.cos(sine / 6),.5 + 0 * math.cos(sine / 6),0 + 0 * math.cos(sine / 6))*angles(math.rad(0 + 0 * math.cos(sine / 6)),math.rad(-55 + 0 * math.cos(sine / 6)),math.rad(-30 + -10 * math.cos(sine / 6))),.3)
+			end
+		end
 		if attack==false and BanishMode == "80s" then
 			if equipped == false then
 				local change = .1 
@@ -8239,6 +8304,28 @@ while true do
 				Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
 				RW.C0=clerp(RW.C0,cf(1.5 + 0 * math.cos(sine / 6),.5 + 0 * math.cos(sine / 6),0 + 0 * math.cos(sine / 6))*angles(math.rad(180 + 0 * math.cos(sine / 6)),math.rad(0 + 0 * math.cos(sine / 6)),math.rad(0 + 0 * math.cos(sine / 6))),.3)
 				LW.C0=clerp(LW.C0,cf(-1.3 + 0 * math.cos(sine / 6),.5 + 0 * math.cos(sine / 6),-.5 + 0 * math.cos(sine / 6))*angles(math.rad(0 + 0 * math.cos(sine / 6)),math.rad(0 + 0 * math.cos(sine / 6)),math.rad(75 + 0 * math.cos(sine / 6))),.3)
+			else
+				local change = .1 
+				sine = sine + change 
+				RH.C0=clerp(RH.C0,cf(.5 + 0 * math.cos(sine / 1.5),-.5 + 0 * math.cos(sine / 1.5),.5 + 0 * math.cos(sine / 1.5))*angles(math.rad(-20 + -60 * math.cos(sine / 1.5)),math.rad(0 + 0 * math.cos(sine / 1.5)),math.rad(0 + 0 * math.cos(sine / 1.5))),.2)
+				LH.C0=clerp(LH.C0,cf(-.5 + 0 * math.cos(sine / 1.5),-.5 + 0 * math.cos(sine / 1.5),.5 + 0 * math.cos(sine / 1.5))*angles(math.rad(-20 + 60 * math.cos(sine / 1.5)),math.rad(0 + 0 * math.cos(sine / 1.5)),math.rad(0 + 0 * math.cos(sine / 1.5))),.2)
+				RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(0 + 0 * math.cos(sine / 1.5),0 + 0 * math.cos(sine / 1.5),-.5 + 0 * math.cos(sine / 1.5))*angles(math.rad(5 + 0 * math.cos(sine / 1.5)),math.rad(0 + -5 * math.cos(sine / 1.5)),math.rad(0 + 0 * math.cos(sine / 1.5))),.3)
+				Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
+				RW.C0=clerp(RW.C0,cf(1.5 + 0 * math.cos(sine / 1.5),.5 + 0 * math.cos(sine / 1.5),0 + 0 * math.cos(sine / 1.5))*angles(math.rad(-10 + 40 * math.cos(sine / 1.5)),math.rad(0 + 0 * math.cos(sine / 1.5)),math.rad(20 + 0 * math.cos(sine / 1.5))),.3)
+				LW.C0=clerp(LW.C0,cf(-1.5 + 0 * math.cos(sine / 1.5),.5 + 0 * math.cos(sine / 1.5),0 + 0 * math.cos(sine / 1.5))*angles(math.rad(-10 + -40 * math.cos(sine / 1.5)),math.rad(0 + 0 * math.cos(sine / 1.5)),math.rad(-20 + 0 * math.cos(sine / 1.5))),.3)
+			end
+		end
+		if attack==false and BanishMode == "Ciomna" then
+			if equipped == false then
+				lighting.TimeOfDay = 3
+				local change = .1 
+				sine = sine + change 
+				RH.C0=clerp(RH.C0,cf(1 + 0 * math.cos(sine / 4),-1 + .25 * math.cos(sine / 4),-.5 + .3 * math.cos(sine / 4))*angles(math.rad(0 + 0 * math.cos(sine / 4)),math.rad(130 + 0 * math.cos(sine / 4)),math.rad(-60 + 0 * math.cos(sine / 4))),.2)
+				LH.C0=clerp(LH.C0,cf(-1 + 0 * math.cos(sine / 4),-.7 + .2 * math.cos(sine / 4),-.5 + -.2 * math.cos(sine / 4))*angles(math.rad(-20 + 12 * math.cos(sine / 4)),math.rad(-85 + 0 * math.cos(sine / 4)),math.rad(0 + 0 * math.cos(sine / 4))),.2)
+				RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(0 + 0 * math.cos(sine / 4),0 + 0 * math.cos(sine / 4),5 + .2 * math.cos(sine / 4))*angles(math.rad(25 + -14 * math.cos(sine / 4)),math.rad(0 + 0 * math.cos(sine / 4)),math.rad(-20 + 0 * math.cos(sine / 4))),.3)
+				Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
+				RW.C0=clerp(RW.C0,cf(1.5 + 0 * math.cos(sine / 4),.2 + 0 * math.cos(sine / 4),0 + 0 * math.cos(sine / 4))*angles(math.rad(-60 + -12 * math.cos(sine / 4)),math.rad(55 + 0 * math.cos(sine / 4)),math.rad(30 + 0 * math.cos(sine / 4))),.3)
+				LW.C0=clerp(LW.C0,cf(-1.5 + 0 * math.cos(sine / 4),.7 + 0 * math.cos(sine / 4),0 + 0 * math.cos(sine / 4))*angles(math.rad(90 + -3 * math.cos(sine / 4)),math.rad(-50 + 0 * math.cos(sine / 4)),math.rad(-30 + 0 * math.cos(sine / 4))),.3)
 			else
 				local change = .1 
 				sine = sine + change 
