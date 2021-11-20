@@ -381,7 +381,7 @@ animator.rhyt.Size = UDim2.new(0, 45, 0, 50)
 animator.rhyt.ClearTextOnFocus = false
 animator.rhyt.Font = Enum.Font.SourceSans
 animator.rhyt.PlaceholderText = "0"
-animator.rhyt.Text = "0"
+animator.rhyt.Text = "-1"
 animator.rhyt.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhyt.TextSize = 14.000
 
@@ -513,7 +513,7 @@ animator.rrhyt.Size = UDim2.new(0, 45, 0, 50)
 animator.rrhyt.ClearTextOnFocus = false
 animator.rrhyt.Font = Enum.Font.SourceSans
 animator.rrhyt.PlaceholderText = "0"
-animator.rrhyt.Text = "0"
+animator.rrhyt.Text = "90"
 animator.rrhyt.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rrhyt.TextSize = 14.000
 
@@ -767,7 +767,7 @@ animator.rhyt_3.Size = UDim2.new(0, 45, 0, 50)
 animator.rhyt_3.ClearTextOnFocus = false
 animator.rhyt_3.Font = Enum.Font.SourceSans
 animator.rhyt_3.PlaceholderText = "0"
-animator.rhyt_3.Text = "0"
+animator.rhyt_3.Text = "-1"
 animator.rhyt_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhyt_3.TextSize = 14.000
 
@@ -899,7 +899,7 @@ animator.rrhyt_3.Size = UDim2.new(0, 45, 0, 50)
 animator.rrhyt_3.ClearTextOnFocus = false
 animator.rrhyt_3.Font = Enum.Font.SourceSans
 animator.rrhyt_3.PlaceholderText = "0"
-animator.rrhyt_3.Text = "0"
+animator.rrhyt_3.Text = "-90"
 animator.rrhyt_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rrhyt_3.TextSize = 14.000
 
@@ -942,7 +942,7 @@ animator.rhxt_4.Size = UDim2.new(0, 45, 0, 50)
 animator.rhxt_4.ClearTextOnFocus = false
 animator.rhxt_4.Font = Enum.Font.SourceSans
 animator.rhxt_4.PlaceholderText = "0"
-animator.rhxt_4.Text = "0"
+animator.rhxt_4.Text = "1"
 animator.rhxt_4.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhxt_4.TextSize = 14.000
 
@@ -954,7 +954,7 @@ animator.rhyt_4.Size = UDim2.new(0, 45, 0, 50)
 animator.rhyt_4.ClearTextOnFocus = false
 animator.rhyt_4.Font = Enum.Font.SourceSans
 animator.rhyt_4.PlaceholderText = "0"
-animator.rhyt_4.Text = "0"
+animator.rhyt_4.Text = ".5"
 animator.rhyt_4.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhyt_4.TextSize = 14.000
 
@@ -1086,7 +1086,7 @@ animator.rrhyt_4.Size = UDim2.new(0, 45, 0, 50)
 animator.rrhyt_4.ClearTextOnFocus = false
 animator.rrhyt_4.Font = Enum.Font.SourceSans
 animator.rrhyt_4.PlaceholderText = "0"
-animator.rrhyt_4.Text = "0"
+animator.rrhyt_4.Text = "90"
 animator.rrhyt_4.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rrhyt_4.TextSize = 14.000
 
@@ -1129,7 +1129,7 @@ animator.rhxt_5.Size = UDim2.new(0, 45, 0, 50)
 animator.rhxt_5.ClearTextOnFocus = false
 animator.rhxt_5.Font = Enum.Font.SourceSans
 animator.rhxt_5.PlaceholderText = "0"
-animator.rhxt_5.Text = "0"
+animator.rhxt_5.Text = "-1"
 animator.rhxt_5.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhxt_5.TextSize = 14.000
 
@@ -1141,7 +1141,7 @@ animator.rhyt_5.Size = UDim2.new(0, 45, 0, 50)
 animator.rhyt_5.ClearTextOnFocus = false
 animator.rhyt_5.Font = Enum.Font.SourceSans
 animator.rhyt_5.PlaceholderText = "0"
-animator.rhyt_5.Text = "0"
+animator.rhyt_5.Text = ".5"
 animator.rhyt_5.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhyt_5.TextSize = 14.000
 
@@ -1273,7 +1273,7 @@ animator.rrhyt_5.Size = UDim2.new(0, 45, 0, 50)
 animator.rrhyt_5.ClearTextOnFocus = false
 animator.rrhyt_5.Font = Enum.Font.SourceSans
 animator.rrhyt_5.PlaceholderText = "0"
-animator.rrhyt_5.Text = "0"
+animator.rrhyt_5.Text = "-90"
 animator.rrhyt_5.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rrhyt_5.TextSize = 14.000
 
@@ -3192,7 +3192,7 @@ animator.CLOSE_3.TextWrapped = true
 
 -- Scripts:
 
-local function UDPGV_fake_script() -- animator.toclipboard.LocalScript 
+local function JHWVD_fake_script() -- animator.toclipboard.LocalScript 
 	local script = Instance.new('LocalScript', animator.toclipboard)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3201,27 +3201,26 @@ local function UDPGV_fake_script() -- animator.toclipboard.LocalScript
 	end)
 	
 end
-coroutine.wrap(UDPGV_fake_script)()
-local function FZLBIF_fake_script() -- animator.close.LocalScript 
+coroutine.wrap(JHWVD_fake_script)()
+local function LTMQ_fake_script() -- animator.close.LocalScript 
 	local script = Instance.new('LocalScript', animator.close)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(FZLBIF_fake_script)()
-local function SUMG_fake_script() -- animator.hat1.LocalScript 
+coroutine.wrap(LTMQ_fake_script)()
+local function ZYRFD_fake_script() -- animator.hat1.LocalScript 
 	local script = Instance.new('LocalScript', animator.hat1)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate1
 	end)
 end
-coroutine.wrap(SUMG_fake_script)()
-local function ZUSU_fake_script() -- animator.convert_2.convert script 
+coroutine.wrap(ZYRFD_fake_script)()
+local function KLLEJAW_fake_script() -- animator.convert_2.convert script 
 	local script = Instance.new('Script', animator.convert_2)
 
-	
 	player = game.Players.LocalPlayer
 	Character = player.Character
 	player = game.Players.LocalPlayer
@@ -3466,20 +3465,20 @@ local function ZUSU_fake_script() -- animator.convert_2.convert script
 		tarhy = script.Parent.Parent.torso.rrhyt.Text
 		tarhz = script.Parent.Parent.torso.rrhzt.Text
 		_G.convertthing = ("local change = .1 \n sine = 0 \n sine = sine + change \n RH.C0=clerp(RH.C0,cf("..rhx.." + "..rla.." * math.cos(sine / 6),"..rhy.." + "..rla2.." * math.cos(sine / 6),"..rhz.." + "..rla3.." * math.cos(sine / 6))*angles(math.rad("..rrhx.." + "..rla4.." * math.cos(sine / 6)),math.rad("..rrhy.." + "..rla5.." * math.cos(sine / 6)),math.rad("..rrhz.." + "..rla6.." * math.cos(sine / 6))),.2)\nLH.C0=clerp(LH.C0,cf("..lhx.." + "..lla.." * math.cos(sine / 6),"..lhy.." + "..lla2.." * math.cos(sine / 6),"..lhz.." + "..lla3.." * math.cos(sine / 6))*angles(math.rad("..lrhx.." + "..lla4.." * math.cos(sine / 6)),math.rad("..lrhy.." + "..lla5.." * math.cos(sine / 6)),math.rad("..lrhz.." + "..lla6.." * math.cos(sine / 6))),.2)\nRootJoint.C0=clerp(RootJoint.C0,RootCF*cf("..tahx.." + "..to.." * math.cos(sine / 6),"..tahy.." + "..to2.." * math.cos(sine / 6),"..tahz.." + "..to3.." * math.cos(sine / 6))*angles(math.rad("..tarhx.." + "..to4.." * math.cos(sine / 6)),math.rad("..tarhy.." + "..to5.." * math.cos(sine / 6)),math.rad("..tarhz.." + "..to6.." * math.cos(sine / 6))),.3)\nTorso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)\nRW.C0=clerp(RW.C0,cf("..rahx.." + "..raa.." * math.cos(sine / 6),"..rahy.." + "..raa2.." * math.cos(sine / 6),"..rahz.." + "..raa3.." * math.cos(sine / 6))*angles(math.rad("..rarhx.." + "..raa4.." * math.cos(sine / 6)),math.rad("..rarhy.." + "..raa5.." * math.cos(sine / 6)),math.rad("..rarhz.." + "..raa6.." * math.cos(sine / 6))),.3)\nLW.C0=clerp(LW.C0,cf("..lahx.." + "..laa.." * math.cos(sine / 6),"..lahy.." + "..laa2.." * math.cos(sine / 6),"..lahz.." + "..laa3.." * math.cos(sine / 6))*angles(math.rad("..larhx.." + "..laa4.." * math.cos(sine / 6)),math.rad("..larhy.." + "..laa5.." * math.cos(sine / 6)),math.rad("..larhz.." + "..laa6.." * math.cos(sine / 6))),.3)")
-	yowch = [["RunService"]]	
-_G.hate1 = ("c = "..script.Parent.Parent["hat settings"].enterthin.Text.."\ngame:GetService("..yowch..").RenderStepped:Connect(function(dt)\n  c.Anchored = true \n c.CFrame = cf("..hx.." + "..rhhx.." * math.cos(sine / 6),"..hy.." + "..rhhy.." * math.cos(sine / 6),"..hz.." + "..rhhz.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr.." + "..rhxr.." * math.cos(sine / 6)), "..hyr.." + "..rhyr.." * math.cos(sine / 6), "..hzr.." + "..rhzr.." * math.cos(sine / 6)) \n c.Anchored = false end")
+		yowch = [["RunService"]]	
+		_G.hate1 = ("c = "..script.Parent.Parent["hat settings"].enterthin.Text.."\ngame:GetService("..yowch..").RenderStepped:Connect(function(dt)\n  c.Anchored = true \n c.CFrame = cf("..hx.." + "..rhhx.." * math.cos(sine / 6),"..hy.." + "..rhhy.." * math.cos(sine / 6),"..hz.." + "..rhhz.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr.." + "..rhxr.." * math.cos(sine / 6)), "..hyr.." + "..rhyr.." * math.cos(sine / 6), "..hzr.." + "..rhzr.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	
 	
 	
 	
 		print("converting")
 		_G.convertthin2 = [[
-			RH.C0=clerp(RH.C0,cf(rhx,rhy,rhz)*angles(math.rad(rrhx),math.rad(rrhy),math.rad(rrhz)),.2)
-			LH.C0=clerp(LH.C0,cf(lhx,lhy,lhz)*angles(math.rad(lrhx),math.rad(lrhy),math.rad(lrhz)),.2)
-			RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx,tahy,tahz)*angles(math.rad(tarhx),math.rad(tarhy),math.rad(tarhz)),.3)
-			Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
-			RW.C0=clerp(RW.C0,cf(rahx,rahy,rahz)*angles(math.rad(rarhx),math.rad(rarhy),math.rad(rarhz)),.3)
-			LW.C0=clerp(LW.C0,cf(lahx,lahy,lahz)*angles(math.rad(larhx),math.rad(larhy),math.rad(larhz)),.3)"]]
+				RH.C0=clerp(RH.C0,cf(rhx,rhy,rhz)*angles(math.rad(rrhx),math.rad(rrhy),math.rad(rrhz)),.2)
+				LH.C0=clerp(LH.C0,cf(lhx,lhy,lhz)*angles(math.rad(lrhx),math.rad(lrhy),math.rad(lrhz)),.2)
+				RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx,tahy,tahz)*angles(math.rad(tarhx),math.rad(tarhy),math.rad(tarhz)),.3)
+				Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
+				RW.C0=clerp(RW.C0,cf(rahx,rahy,rahz)*angles(math.rad(rarhx),math.rad(rarhy),math.rad(rarhz)),.3)
+				LW.C0=clerp(LW.C0,cf(lahx,lahy,lahz)*angles(math.rad(larhx),math.rad(larhy),math.rad(larhz)),.3)"]]
 		print(_G.convertthing)
 		script.Parent.Parent.Parent.convert["convert text"].Text = _G.convertthing
 		script.Parent.Parent.Parent.convert.Visible = true
@@ -3705,7 +3704,7 @@ _G.hate1 = ("c = "..script.Parent.Parent["hat settings"].enterthin.Text.."\ngame
 		rhxr = rrwq.rrhxt.Text
 		rhyr = rrwq.rrhyt.Text
 		rhzr = rrwq.rrhzt.Text
-
+	
 	
 		allthings = tahx and tahy and tahz and tarhz and tarhy and tarhx and rarhz and rarhy and rarhx and lrhy and lrhz and lrhx and rrhz and rrhy and rrhx and rla and rla2 and rla3 and rhx and rhy and rhz and rla4 and rla5 and rla6 and lhx and lhy and lhz and rahx and rahy and rahz and lahx and lahy and lahz and tahx and tahy and tahz and lla and lla2 and lla3 and lla4 and lla5 and lla6  and laa and laa2  and laa3  and laa4  and laa5  and laa6  and raa  and raa2  and raa3  and raa4  and raa5 and raa6 and to and to2 and to3 and to4 and to5 and to6
 		if tonumber(tahx) then  else
@@ -3975,11 +3974,9 @@ _G.hate1 = ("c = "..script.Parent.Parent["hat settings"].enterthin.Text.."\ngame
 	
 	
 	end
-	
-	
 end
-coroutine.wrap(ZUSU_fake_script)()
-local function KPJJHQO_fake_script() -- animator.closepage.Script 
+coroutine.wrap(KLLEJAW_fake_script)()
+local function SIMET_fake_script() -- animator.closepage.Script 
 	local script = Instance.new('Script', animator.closepage)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4007,8 +4004,8 @@ local function KPJJHQO_fake_script() -- animator.closepage.Script
 	end)
 	
 end
-coroutine.wrap(KPJJHQO_fake_script)()
-local function LHUNEZF_fake_script() -- animator.leftkeg.Script 
+coroutine.wrap(SIMET_fake_script)()
+local function FFFZNDJ_fake_script() -- animator.leftkeg.Script 
 	local script = Instance.new('Script', animator.leftkeg)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4016,8 +4013,8 @@ local function LHUNEZF_fake_script() -- animator.leftkeg.Script
 		script.Parent.Parent.Parent.leftleg.Visible = true
 	end)
 end
-coroutine.wrap(LHUNEZF_fake_script)()
-local function NBKOF_fake_script() -- animator.rightleg_2.Script 
+coroutine.wrap(FFFZNDJ_fake_script)()
+local function GUDF_fake_script() -- animator.rightleg_2.Script 
 	local script = Instance.new('Script', animator.rightleg_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4025,8 +4022,8 @@ local function NBKOF_fake_script() -- animator.rightleg_2.Script
 		script.Parent.Parent.Parent.rightleg.Visible = true
 	end)
 end
-coroutine.wrap(NBKOF_fake_script)()
-local function KDWHPJ_fake_script() -- animator.torso_2.Script 
+coroutine.wrap(GUDF_fake_script)()
+local function ILMZU_fake_script() -- animator.torso_2.Script 
 	local script = Instance.new('Script', animator.torso_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4034,8 +4031,8 @@ local function KDWHPJ_fake_script() -- animator.torso_2.Script
 		script.Parent.Parent.Parent.torso.Visible = true
 	end)
 end
-coroutine.wrap(KDWHPJ_fake_script)()
-local function ZTUTZ_fake_script() -- animator.rightarm_2.Script 
+coroutine.wrap(ILMZU_fake_script)()
+local function CTVAIET_fake_script() -- animator.rightarm_2.Script 
 	local script = Instance.new('Script', animator.rightarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4043,8 +4040,8 @@ local function ZTUTZ_fake_script() -- animator.rightarm_2.Script
 		script.Parent.Parent.Parent.rightarm.Visible = true
 	end)
 end
-coroutine.wrap(ZTUTZ_fake_script)()
-local function UPFSBUH_fake_script() -- animator.leftarm_2.Script 
+coroutine.wrap(CTVAIET_fake_script)()
+local function MDUFVUE_fake_script() -- animator.leftarm_2.Script 
 	local script = Instance.new('Script', animator.leftarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4052,8 +4049,8 @@ local function UPFSBUH_fake_script() -- animator.leftarm_2.Script
 		script.Parent.Parent.Parent.leftarm.Visible = true
 	end)
 end
-coroutine.wrap(UPFSBUH_fake_script)()
-local function OPVQ_fake_script() -- animator.hats.Script 
+coroutine.wrap(MDUFVUE_fake_script)()
+local function FBVKES_fake_script() -- animator.hats.Script 
 	local script = Instance.new('Script', animator.hats)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4061,24 +4058,24 @@ local function OPVQ_fake_script() -- animator.hats.Script
 		script.Parent.Parent.Parent["hat frame"].Visible = true
 	end)
 end
-coroutine.wrap(OPVQ_fake_script)()
-local function AVMTTRS_fake_script() -- animator.animation.LocalScript 
+coroutine.wrap(FBVKES_fake_script)()
+local function MJVRMX_fake_script() -- animator.animation.LocalScript 
 	local script = Instance.new('LocalScript', animator.animation)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.layouts.Visible = true
 	end)
 end
-coroutine.wrap(AVMTTRS_fake_script)()
-local function OJWE_fake_script() -- animator.openhats.LocalScript 
+coroutine.wrap(MJVRMX_fake_script)()
+local function OAWXLJO_fake_script() -- animator.openhats.LocalScript 
 	local script = Instance.new('LocalScript', animator.openhats)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.main["hat frame"].Visible = true
 	end)
 end
-coroutine.wrap(OJWE_fake_script)()
-local function IQLFZU_fake_script() -- animator.hatsname.open hat one 
+coroutine.wrap(OAWXLJO_fake_script)()
+local function CTZQS_fake_script() -- animator.hatsname.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4095,24 +4092,24 @@ local function IQLFZU_fake_script() -- animator.hatsname.open hat one
 		end
 	end)
 end
-coroutine.wrap(IQLFZU_fake_script)()
-local function CADCH_fake_script() -- animator.CLOSE.LocalScript 
+coroutine.wrap(CTZQS_fake_script)()
+local function NIRIEF_fake_script() -- animator.CLOSE.LocalScript 
 	local script = Instance.new('LocalScript', animator.CLOSE)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(CADCH_fake_script)()
-local function IVPTY_fake_script() -- animator.CLOSE_2.close 
+coroutine.wrap(NIRIEF_fake_script)()
+local function XUZSW_fake_script() -- animator.CLOSE_2.close 
 	local script = Instance.new('LocalScript', animator.CLOSE_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(IVPTY_fake_script)()
-local function ZKAUD_fake_script() -- animator.done.done 
+coroutine.wrap(XUZSW_fake_script)()
+local function BQMXA_fake_script() -- animator.done.done 
 	local script = Instance.new('LocalScript', animator.done)
 
 	
@@ -4131,12 +4128,12 @@ local function ZKAUD_fake_script() -- animator.done.done
 		script.Parent.Parent.Parent.hat1.Visible = true
 	end)
 end
-coroutine.wrap(ZKAUD_fake_script)()
-local function JEYGFIR_fake_script() -- animator.CLOSE_3.LocalScript 
+coroutine.wrap(BQMXA_fake_script)()
+local function XITZ_fake_script() -- animator.CLOSE_3.LocalScript 
 	local script = Instance.new('LocalScript', animator.CLOSE_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(JEYGFIR_fake_script)()
+coroutine.wrap(XITZ_fake_script)()
