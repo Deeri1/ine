@@ -3244,7 +3244,12 @@ local function FEEED_fake_script() -- animator.convert_2.convert script
 	Humanoid = ch.Humanoid
 	
 	wait()
-	
+	getgenv().ReanimateVersion = "v5"
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Reanimate", true))()
+
+
+	wait(2.5) 
 	
 	for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 		if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
