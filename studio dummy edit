@@ -15,7 +15,7 @@ game:GetService("RunService").Heartbeat:Connect(function()
 	player.HumanoidRootPart.Velocity = ve
 	for i,v in pairs(player:GetDescendants()) do
 		if v:IsA("Accessory") then
-			v.Handle.Velocity = Vector3.new(26,0,0)
+			v.Handle.Velocity = Vector3.new(50,0,0)
 		end
 	end
 end)
@@ -63,28 +63,28 @@ game:GetService("RunService").Stepped:connect(function()
 		if v:IsA("BasePart") then
 			v.CanCollide = false
 		end
-   --[[ if v:IsA("Accessory") then
-        v.Handle.Velocity = Vector3.new(0,2,0)
-    end
-    if v:IsA("BasePart") and v.Parent == Character and v.Name ~= "Left Arm" and v.Name ~= "Right Arm" then
-        v.Transparency = CloneChar.Head.LocalTransparencyModifier
-    end
-    if v:IsA("Accessory") then
-        v.Handle.Transparency = CloneChar.Head.LocalTransparencyModifier
-    end
-    if v:IsA("Part") and v.Parent == CloneChar then
-        v.Transparency = 1
-    end
-    if v:IsA("Accessory") and v.Parent == CloneChar then
-        v.Handle.Transparency =1
-    end
-end
-for i,v in pairs(CloneChar:GetDescendants()) do
-    if v:IsA("Part") then
-        v.Transparency = 1
-    end
-end]]
+		if v:IsA("Accessory") then
+			v.Handle.Velocity = Vector3.new(0,2,0)
+		end
+		if v:IsA("BasePart") and v.Parent == Character and v.Name ~= "Left Arm" and v.Name ~= "Right Arm" then
+			v.Transparency = CloneChar.Head.LocalTransparencyModifier
+		end
+		if v:IsA("Accessory") then
+			v.Handle.Transparency = CloneChar.Head.LocalTransparencyModifier
+		end
+		if v:IsA("Part") and v.Parent == CloneChar then
+			v.Transparency = 1
+		end
+		if v:IsA("Accessory") and v.Parent == CloneChar then
+			v.Handle.Transparency =1
+		end
 	end
+	for i,v in pairs(CloneChar:GetDescendants()) do
+		if v:IsA("Part") then
+			v.Transparency = 1
+		end
+	end
+
 	--Character.Head.face.Texture = CloneChar.Head.face.Texture
 	for i,v in pairs(Character:GetDescendants()) do
 		if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
@@ -141,7 +141,7 @@ end
 for i,v in pairs(Character:GetDescendants()) do
 	if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" and not v.Parent:IsA("Accessory") and v.Parent == Character then
 		table.insert(aligns, v)
-		print(v.Name)
+
 	end
 end
 game:GetService("RunService").Stepped:connect(function()
@@ -187,31 +187,31 @@ wait(6)
 for i,v in pairs(Character:GetDescendants()) do
 	if v:IsA("Accessory") and v.Parent == Character then
 		table.insert(hataligns, v)
-		print(v.Name)
+	
 	end
 end
 for i,v in ipairs(hataligns) do
 	v.AlignPosition.Attachment0 = v.Handle.Attachment
 	v.AlignPosition.Attachment1 = CloneChar[v.Name].Handle.Attachment
-	print(CloneChar[v.Name])
+	
 	v.AlignOrientation.Attachment0 = v.Handle.Attachment
 	v.AlignOrientation.Attachment1 = CloneChar[v.Name].Handle.Attachment
-	print(CloneChar[v.Name])
+	
 end
 for i,v in ipairs(aligns) do
 	v.AlignPosition.Attachment0 = v.Attachment
 	v.AlignPosition.Attachment1 = CloneChar[v.Name].Attachment
-	print(CloneChar[v.Name])
+	
 	v.AlignOrientation.Attachment0 = v.Attachment
 	v.AlignOrientation.Attachment1 = CloneChar[v.Name].Attachment
-	print(CloneChar[v.Name])
+	
 end
 Character.Head.AlignOrientation.Attachment0 = Character.Head.Attachment
 Character.Head.AlignOrientation.Attachment1 = CloneChar.Head.Attachment
 Character.Torso.AlignOrientation.Attachment0 = Character.Torso.Attachment
 Character.Torso.AlignOrientation.Attachment1 = CloneChar.Torso.Attachment
 CloneChar.Parent.Torso.Neck:Destroy()
-print("Done")
+
 for i,v in pairs(CloneChar.Parent.Torso:GetDescendants()) do
 	if v:IsA("Motor6D") and v.Name ~= "Neck" then
 		v:Destroy()
@@ -256,7 +256,7 @@ local hrp = game:GetService("Players").LocalPlayer.Character.Parent.HumanoidRoot
 local e = Instance.new("SelectionBox", hrp)
 e.Adornee = hrp
 hrp.Name = "HumanoidRootPart"
-hrp.Transparency = 0.5
+hrp.Transparency = 1
 hrp.Anchored = false
 if hrp:FindFirstChildOfClass("AlignPosition") then
 	hrp:FindFirstChildOfClass("AlignPosition"):Destroy()
@@ -284,6 +284,7 @@ spawn(function()
 		e.Transparency = (hrp.Parent.Head.LocalTransparencyModifier)
 	end
 end)
+stye = -.8
 local c = game.Players.LocalPlayer.Character:FindFirstChild("Red Sci-Fi Scattergun").Handle
 c.AccessoryWeld:Destroy()
 c.Anchored = false
@@ -291,9 +292,9 @@ local cRot = 0.1
 game:GetService("RunService").RenderStepped:Connect(function(dt)
 	cRot = cRot + 0*dt
 	c.Anchored = true
-	c.CFrame = game.Players.LocalPlayer.Character:FindFirstChild("Right Arm").CFrame * CFrame.new(0,-2,-.3) * CFrame.Angles(math.rad(-60), 55, -cRot)
-	c.Velocity = Vector3.new(50,0,0)
-	c.Anchored = false
+	c.CFrame = game.Players.LocalPlayer.Character:FindFirstChild("Right Arm").CFrame * CFrame.new(0,stye,-.3) * CFrame.Angles(math.rad(-50), 55, -cRot)
+	c.Velocity = Vector3.new(0,0,0)
+	c.Anchored = true
 end)
 --r
 --[[
@@ -338,6 +339,7 @@ x1X0X011Xx01X0X1Xx0xxx11XxXxx11X0x0xx0Xx11Xx0111X1X1xXXxxX001010xX0x01110xx11x00
 ]]
 
 print("MrMaddox32 is not english")
+warn("converted by Deeri")
 local stopeverything = false
 local MAINRUINCOLOR = Color3.fromRGB(0,0,0) -- Custom Color
 local BAW = Color3.new(0,0,0) -- don't edit
@@ -354,7 +356,7 @@ Cos=math.cos
 Sin=math.sin
 local inf = "inf"
 local change = 1
-print("when")
+
 game:GetService("RunService").RenderStepped:Wait()
 
 
@@ -1785,7 +1787,7 @@ function mdmg(centerofeffect,range)
 				local bruh = CreateSound(7093366228,deathp,10,1)
 				bruh.PlayOnRemove = true
 				for o = 1,15 do				
-					print("die")
+					
 				end
 				deathp.Parent = workspace
 				pcall(function()
@@ -3693,10 +3695,10 @@ function EFFECT1(bonuspeed,FastSpeed,type,pos,x1,y1,z1,value,color,outerpos)
 	end))
 end
 function OpenSH()
-	
+
 end
 function OpenSHMDMG()
-	
+
 end
 coroutine.resume(coroutine.create(function() -- antifaggot
 	while true do
@@ -3761,7 +3763,7 @@ end
 --is a good script but is server destroyer.
 
 function Warp()
-	
+
 end
 --[[function Switch()
 	CreateSound(147722227, Torso, 4, 1.3, false)
@@ -3771,16 +3773,17 @@ end
 	Effect({Time = 10, EffectType = "Sphere", Size = VT(0.5,0.5,0.5), Size2 = VT(75,75,75), Transparency = 0, Transparency2 = 0.5, CFrame = Torso.CFrame, MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = GUN.NeonParts.Color, SoundID = nil, SoundPitch = nil, SoundVolume = nil})
 end]]
 function balfolderclearlol()
-	
+
 end
 function spawnball()
-	
+
 end
 mode = "Default" 
 local UserInputService = game:GetService("UserInputService")
 Default = 1
 UserInputService.InputBegan:Connect(function(keyCode)
 	if keyCode.keyCode == Enum.KeyCode.M then
+		stye = -.8
 		print("keydown")
 		if kan.SoundId ~= "rbxassetid://3539652313" and kan.SoundId ~= "rbxassetid://4550046224" and kan.SoundId ~= "rbxassetid://601021377" and kan.SoundId ~= "rbxassetid://6496316621" and kan.SoundId ~= "rbxassetid://361511879" and kan.SoundId ~= "rbxassetid://4249182384" and kan.SoundId ~= "rbxassetid://1338971957" and kan.SoundId ~= "rbxassetid://4550046224" and kan.SoundId ~= "rbxassetid://2732168439" and kan.SoundId ~= "rbxassetid://2423003084" and kan.SoundId ~= "rbxassetid://7884895421" and kan.SoundId ~= "rbxassetid://6826870339" and kan.SoundId ~= "rbxassetid://4770746196" and kan.SoundId ~= "rbxassetid://148285099" and kan.SoundId ~= "rbxassetid://6501947390" and kan.SoundId ~= "rbxassetid://6577287143" and kan.SoundId ~= "rbxassetid://2728389795" and kan.SoundId ~= "rbxassetid://573736432" and kan.SoundId ~= "rbxassetid://7576995029" and kan.SoundId ~= "rbxassetid://614032233" and kan.SoundId ~= "rbxassetid://925806262" and kan.SoundId ~= "rbxassetid://3510239144" and kan.SoundId ~= "rbxassetid://6575225432" and kan.SoundId ~= "rbxassetid://2702926518" then
 			mode = "Default" 
@@ -3818,10 +3821,11 @@ UserInputService.InputBegan:Connect(function(keyCode)
 			mode = "Matt"
 			kan.SoundId = "rbxassetid://148285099"
 		elseif kan.SoundId == "rbxassetid://148285099" then
+			stye = -50
 			mode = "FAST BOIII"
 			kan.SoundId = "rbxassetid://6826870339"
 		elseif kan.SoundId == "rbxassetid://6826870339" then
-			
+
 			mode = "Glitch"
 			kan.SoundId = "rbxassetid://4770746196"
 		elseif kan.SoundId == "rbxassetid://4770746196" then
@@ -3854,33 +3858,33 @@ UserInputService.InputBegan:Connect(function(keyCode)
 			mode = "uncolored"
 			kan.SoundId = "rbxassetid://6577287143" --Credits To Godcat567
 		elseif kan.SoundId == "rbxassetid://6577287143" then
-			print("secondlast")
+			
 			mode = "X⁔X"
 			kan.SoundId = "rbxassetid://7576995029" --Credits To The person who made the anims
 		elseif kan.SoundId == "rbxassetid://7576995029" then
-			print("last")
+			
 			mode = "Banisher"
 			kan.SoundId = "rbxassetid://3539652313" -- Credits to Powertommm or idk
-	end	
-	
+		end	
+
 	end
-	end
+end
 )
 kan.Pitch = .8
 sound = 1
 sus = 1
 UserInputService.InputBegan:Connect(function(keyCode)
-if keyCode.keyCode == Enum.KeyCode.P then
+	if keyCode.keyCode == Enum.KeyCode.P then
 		if sus == 1 then
-		mode = "Sus"
+			mode = "Sus"
 			kan.SoundId = "rbxassetid://806947472"
 			sus = 0
-	else
+		else
 			Default = 1
 			mode = "Default" 
 			kan.SoundId = "rbxassetid:/4550046224"
 			sus = 1
-	end
+		end
 	elseif keyCode.keyCode == Enum.KeyCode.H then
 		if sound == 2 then
 			kan.Pitch = 0.55
@@ -3892,12 +3896,12 @@ if keyCode.keyCode == Enum.KeyCode.P then
 			kan.Pitch = 1
 			sound = 2
 		end
-	
-elseif keyCode.keyCode == Enum.KeyCode.F then
-	ISFLYING = not ISFLYING
-	if lplr.Name == USERNAME then
-		sFLY()
-	end
+
+	elseif keyCode.keyCode == Enum.KeyCode.F then
+		ISFLYING = not ISFLYING
+		if lplr.Name == USERNAME then
+			sFLY()
+		end
 
 
 	end
@@ -5563,7 +5567,7 @@ while not stopeverything do
 
 					swait()
 					if not alreadyfixing then
-						print("e")
+						
 					end
 				end))
 			end
@@ -5681,7 +5685,7 @@ while not stopeverything do
 					if HipValLock == false then
 						HipVal = 3
 					end
-					
+
 					--eeepitch = 1
 					--eevol = 5
 					change = 1
@@ -5718,7 +5722,7 @@ while not stopeverything do
 
 							swait()
 							if not alreadyfixing then
-								print("but ex")
+								
 							end
 						end))
 						--GUN.Base.Transparency = 1
