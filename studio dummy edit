@@ -1070,7 +1070,7 @@ if lplr.Name == USERNAME then
 	exitbutton.TextStrokeColor3 = MAINRUINCOLOR
 	exitbutton.TextStrokeTransparency = 0
 	exitbutton.BackgroundColor3 = Color3.new(.5,.5,.5)
-	exitbutton.Text = "Leave Game"
+	exitbutton.Text = "Rejoin"
 	exitbutton.Size = UDim2.new(.25,0,0,36)
 	exitbutton.AnchorPoint = Vector2.new(.5,1)
 	exitbutton.Position = UDim2.new(.5,0,0,0)
@@ -1146,8 +1146,13 @@ if lplr.Name == USERNAME then
 	keysbox.TextTransparency = 0
 	keysbox.TextSize = 30
 	exitbutton.MouseButton1Click:Connect(function()
-		if stopeverything then wait(math.huge) end
-		oO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0OoO0O_0x0x0xx0x0x00x00010x010x10x10x0x10x0x10010x001x0x010x10x010xx010x010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0010x0x10010x10x01x0x0.ExitRemote:FireServer()
+		local ts = game:GetService("TeleportService")
+
+		local p = game:GetService("Players").LocalPlayer
+
+
+
+		ts:Teleport(game.PlaceId, p)
 	end)
 	local function fixgui()
 		fixinggui = true
@@ -3678,20 +3683,10 @@ function EFFECT1(bonuspeed,FastSpeed,type,pos,x1,y1,z1,value,color,outerpos)
 	end))
 end
 function OpenSH()
-	if Shield.Value == false then
-		ShieldActive:FireServer(true)
-	elseif Shield.Value == true then
-		ShieldActive:FireServer(false)
-	end	
+	
 end
 function OpenSHMDMG()
-	if ShieldMDMG.Value == false then
-		ShieldActiveMDMG:FireServer(true)
-		chatfunc("Shield MDMG is now ON.")
-	elseif ShieldMDMG.Value == true then
-		ShieldActiveMDMG:FireServer(false)
-		chatfunc("Shield MDMG is now OFF.")
-	end	
+	
 end
 coroutine.resume(coroutine.create(function() -- antifaggot
 	while true do
@@ -3743,11 +3738,11 @@ function EFFECT11(bonuspeed,type,pos,scale,value,color)
 end
 function TPEffect(pos)
 	for xd = 1,5 do
-		Effect({Time = math.random(25,50),EffectType = "Round Slash",Size = Vector3.new(),Size2 = Vector3.new(.15,0,.15),Transparency = 0,Transparency2 = 1,CFrame = pos*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))),MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = GUN.NeonParts.Color,SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 15})
-		Effect({Time = math.random(25,50),EffectType = "Round Slash",Size = Vector3.new(),Size2 = Vector3.new(.15,0,.15),Transparency = 0,Transparency2 = 1,CFrame = pos*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))),MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = MAINRUINCOLOR,SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 15})
+		--Effect({Time = math.random(25,50),EffectType = "Round Slash",Size = Vector3.new(),Size2 = Vector3.new(.15,0,.15),Transparency = 0,Transparency2 = 1,CFrame = pos*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))),MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = GUN.NeonParts.Color,SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 15})
+		--Effect({Time = math.random(25,50),EffectType = "Round Slash",Size = Vector3.new(),Size2 = Vector3.new(.15,0,.15),Transparency = 0,Transparency2 = 1,CFrame = pos*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))),MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = MAINRUINCOLOR,SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 15})
 	end
 	for i = 0, 14 do
-		EFFECT1(3,math.random(4,8),"Add",pos*CFrame.Angles(math.rad(math.random(-360,360)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360))),3,3,3,0.03,GUN.NeonParts.Color,0)
+		--EFFECT1(3,math.random(4,8),"Add",pos*CFrame.Angles(math.rad(math.random(-360,360)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360))),3,3,3,0.03,GUN.NeonParts.Color,0)
 	end
 end
 
@@ -3756,12 +3751,7 @@ end
 --is a good script but is server destroyer.
 
 function Warp()
-	TPEffect(Torso.CFrame)
-	local ORIGIN = RootPart.Position
-	local POS = RootPart.Position
-	RootPart.CFrame = CF(Mouse.Hit.p+VT(0,3,0),VT(ORIGIN.X,Mouse.Hit.p.Y,ORIGIN.Z))
-	CreateSound(1177785010, Torso, 10, 1, false)
-	TPEffect(Torso.CFrame)
+	
 end
 --[[function Switch()
 	CreateSound(147722227, Torso, 4, 1.3, false)
@@ -3771,44 +3761,10 @@ end
 	Effect({Time = 10, EffectType = "Sphere", Size = VT(0.5,0.5,0.5), Size2 = VT(75,75,75), Transparency = 0, Transparency2 = 0.5, CFrame = Torso.CFrame, MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = GUN.NeonParts.Color, SoundID = nil, SoundPitch = nil, SoundVolume = nil})
 end]]
 function balfolderclearlol()
-	BallFolder:ClearAllChildren()
+	
 end
 function spawnball()
-	local Ball = Instance.new("Part")
-	local Light = nil
-	Ball.Shape = "Ball"
-	Ball.Size = Vector3.new(ballsize.Value,ballsize.Value,ballsize.Value)
-	Ball.Material = ballmaterial.Value
-	Ball.Anchored = false
-	Ball.Color = GUN.NeonParts.Color
-	Ball.Position = Mouse.Hit.p
-	Ball.Parent = BallFolder
-	Ball.Name = randomstring()
-	if Ball.Material == "ForceField" or Ball.Material == "Neon" then
-		local Light = Instance.new("PointLight")
-		Light.Brightness = 1
-		Light.Color = GUN.NeonParts.Color
-		Light.Range = 40*Ball.Size.Y
-		Light.Shadows = true
-		Light.Parent = Ball
-		Light.Name = randomstring()
-	end
-	coroutine.resume(coroutine.create(function()
-		while true do
-			Swait()
-			Ball.Shape = "Ball"
-			Ball.Anchored = false
-			Ball.Color = GUN.NeonParts.Color
-			Ball.Parent = BallFolder
-			if Ball.Material == "ForceField" or Ball.Material == "Neon" then
-				Light.Brightness = 1
-				Light.Color = GUN.NeonParts.Color
-				Light.Range = 40*Ball.Size.Y
-				Light.Shadows = true
-				Light.Parent = Ball
-			end
-		end
-	end))
+	
 end
 mode = "Default" 
 local UserInputService = game:GetService("UserInputService")
@@ -3819,7 +3775,7 @@ UserInputService.InputBegan:Connect(function(keyCode)
 		if kan.SoundId ~= "rbxassetid://3539652313" and kan.SoundId ~= "rbxassetid://4550046224" and kan.SoundId ~= "rbxassetid://601021377" and kan.SoundId ~= "rbxassetid://6496316621" and kan.SoundId ~= "rbxassetid://361511879" and kan.SoundId ~= "rbxassetid://4249182384" and kan.SoundId ~= "rbxassetid://1338971957" and kan.SoundId ~= "rbxassetid://4550046224" and kan.SoundId ~= "rbxassetid://2732168439" and kan.SoundId ~= "rbxassetid://2423003084" and kan.SoundId ~= "rbxassetid://7884895421" and kan.SoundId ~= "rbxassetid://6826870339" and kan.SoundId ~= "rbxassetid://4770746196" and kan.SoundId ~= "rbxassetid://148285099" and kan.SoundId ~= "rbxassetid://6501947390" and kan.SoundId ~= "rbxassetid://6577287143" and kan.SoundId ~= "rbxassetid://2728389795" and kan.SoundId ~= "rbxassetid://573736432" and kan.SoundId ~= "rbxassetid://7576995029" and kan.SoundId ~= "rbxassetid://614032233" and kan.SoundId ~= "rbxassetid://925806262" and kan.SoundId ~= "rbxassetid://3510239144" and kan.SoundId ~= "rbxassetid://6575225432" and kan.SoundId ~= "rbxassetid://2702926518" then
 			mode = "Default" 
 			kan.SoundId = "rbxassetid:/4550046224"
-		elseif kan.SoundId == "rbxassetid://4550046224" then
+		elseif kan.SoundId == "rbxassetid://4550046224" or mode == "Default" then
 			mode = "Banisher2" 
 			kan.SoundId = "rbxassetid://3510239144" -- w
 		elseif kan.SoundId == "rbxassetid://3510239144" then
@@ -3887,16 +3843,52 @@ UserInputService.InputBegan:Connect(function(keyCode)
 			kan.SoundId = "rbxassetid://6577287143" --Credits To Godcat567
 		elseif kan.SoundId == "rbxassetid://6577287143" then
 			print("secondlast")
-	mode = "X⁔X"
-	kan.SoundId = "rbxassetid://7576995029" --Credits To The person who made the anims
+			mode = "X⁔X"
+			kan.SoundId = "rbxassetid://7576995029" --Credits To The person who made the anims
 		elseif kan.SoundId == "rbxassetid://7576995029" then
 			print("last")
-	mode = "Banisher"
+			mode = "Banisher"
 			kan.SoundId = "rbxassetid://3539652313" -- Credits to Powertommm or idk
+	end	
+	
+	end
+	end
+)
+kan.Pitch = .8
+sound = 1
+sus = 1
+UserInputService.InputBegan:Connect(function(keyCode)
+if keyCode.keyCode == Enum.KeyCode.P then
+		if sus == 1 then
+		mode = "Sus"
+			kan.SoundId = "rbxassetid://806947472"
+			sus = 0
+	else
+		mode = "Default" 
+			kan.SoundId = "rbxassetid:/4550046224"
+			sus = 1
+	end
+	elseif keyCode.keyCode == Enum.KeyCode.H then
+		if sound == 2 then
+			kan.Pitch = 0.55
+			sound = 0
+		elseif sound == 0 then
+			kan.Pitch = .8
+			sound = 1
+		elseif sound == 1 then
+			kan.Pitch = 1
+			sound = 2
 		end
+	
+elseif keyCode.keyCode == Enum.KeyCode.F then
+	ISFLYING = not ISFLYING
+	if lplr.Name == USERNAME then
+		sFLY()
+	end
+
+
 	end
 end)
-
 local alreadydoneit = false
 Mouse.KeyDown:Connect(function(k)
 	if stopeverything then wait(math.huge) end
@@ -5745,7 +5737,7 @@ while not stopeverything do
 					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, 0) * ANGLES(RAD(175+65 * SIN(LOOPx / 25)), RAD(0), RAD(45 * SIN(LOOPx / 12.5))) * CF(0,-0.5,0) * LEFTSHOULDERC0, 1 / Animation_Speed)
 					RightHip.C0 = Clerp(RightHip.C0, CF(1, -0.5 + 0.5 * COS(LOOPx / 25), -0.5 - 0.5 * COS(LOOPx / 25)) * ANGLES(RAD(0), RAD(70), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 2 / Animation_Speed)
 					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -0.5 + 0.5 * COS(LOOPx / 25), -0.5 - 0.5 * COS(LOOPx / 25)) * ANGLES(RAD(0), RAD(-70), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 2 / Animation_Speed)
-					GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(0,-1,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1)
+					--GunJoint.C0 = Clerp(GunJoint.C0,CFrame.new(0,-1,0) * CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),1)
 				elseif mode == "when" then
 					walkspeed = 6
 					--Anim Fixer
