@@ -284,7 +284,17 @@ spawn(function()
 		e.Transparency = (hrp.Parent.Head.LocalTransparencyModifier)
 	end
 end)
-
+local c = game.Players.LocalPlayer.Character:FindFirstChild("Red Sci-Fi Scattergun").Handle
+c.AccessoryWeld:Destroy()
+c.Anchored = false
+local cRot = 0.1
+game:GetService("RunService").RenderStepped:Connect(function(dt)
+	cRot = cRot + 0*dt
+	c.Anchored = true
+	c.CFrame = game.Players.LocalPlayer.Character:FindFirstChild("Right Arm").CFrame * CFrame.new(0,-2,-.3) * CFrame.Angles(math.rad(-60), 55, -cRot)
+	c.Velocity = Vector3.new(50,0,0)
+	c.Anchored = false
+end)
 --r
 --[[
 --Fixed
@@ -3768,14 +3778,16 @@ function spawnball()
 end
 mode = "Default" 
 local UserInputService = game:GetService("UserInputService")
-
+Default = 1
 UserInputService.InputBegan:Connect(function(keyCode)
 	if keyCode.keyCode == Enum.KeyCode.M then
 		print("keydown")
 		if kan.SoundId ~= "rbxassetid://3539652313" and kan.SoundId ~= "rbxassetid://4550046224" and kan.SoundId ~= "rbxassetid://601021377" and kan.SoundId ~= "rbxassetid://6496316621" and kan.SoundId ~= "rbxassetid://361511879" and kan.SoundId ~= "rbxassetid://4249182384" and kan.SoundId ~= "rbxassetid://1338971957" and kan.SoundId ~= "rbxassetid://4550046224" and kan.SoundId ~= "rbxassetid://2732168439" and kan.SoundId ~= "rbxassetid://2423003084" and kan.SoundId ~= "rbxassetid://7884895421" and kan.SoundId ~= "rbxassetid://6826870339" and kan.SoundId ~= "rbxassetid://4770746196" and kan.SoundId ~= "rbxassetid://148285099" and kan.SoundId ~= "rbxassetid://6501947390" and kan.SoundId ~= "rbxassetid://6577287143" and kan.SoundId ~= "rbxassetid://2728389795" and kan.SoundId ~= "rbxassetid://573736432" and kan.SoundId ~= "rbxassetid://7576995029" and kan.SoundId ~= "rbxassetid://614032233" and kan.SoundId ~= "rbxassetid://925806262" and kan.SoundId ~= "rbxassetid://3510239144" and kan.SoundId ~= "rbxassetid://6575225432" and kan.SoundId ~= "rbxassetid://2702926518" then
 			mode = "Default" 
+			Default = 1
 			kan.SoundId = "rbxassetid:/4550046224"
-		elseif kan.SoundId == "rbxassetid://4550046224" or mode == "Default" then
+		elseif Default == 1 then
+			Default = 0
 			mode = "Banisher2" 
 			kan.SoundId = "rbxassetid://3510239144" -- w
 		elseif kan.SoundId == "rbxassetid://3510239144" then
@@ -3864,7 +3876,8 @@ if keyCode.keyCode == Enum.KeyCode.P then
 			kan.SoundId = "rbxassetid://806947472"
 			sus = 0
 	else
-		mode = "Default" 
+			Default = 1
+			mode = "Default" 
 			kan.SoundId = "rbxassetid:/4550046224"
 			sus = 1
 	end
