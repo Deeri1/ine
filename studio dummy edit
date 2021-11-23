@@ -285,7 +285,14 @@ spawn(function()
 	end
 end)
 stye = -.8
-local c = game.Players.LocalPlayer.Character:FindFirstChild("Red Sci-Fi Scattergun").Handle
+local USERNAME = game.Players.LocalPlayer.Name
+if USERNAME == "highlywantedd" then
+	print("yes")
+	 c = game.Players.LocalPlayer.Character:FindFirstChild("Moon Lord").Handle
+else
+	print("nahh")
+	 c = game.Players.LocalPlayer.Character:FindFirstChild("Red Sci-Fi Scattergun").Handle
+end
 c.AccessoryWeld:Destroy()
 c.Anchored = false
 local cRot = 0.1
