@@ -164,7 +164,7 @@ openui.TextWrapped = true
 -- Scripts:
 
 openui.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/deeri%20hub%202'),true))()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/Deeri%20hub%20beta'),true))()
 end)
 
 local function UMPPLS_fake_script() -- openui.close scripty 
