@@ -20,7 +20,7 @@ local openui = Instance.new("TextButton")
 --Properties:
 
 newuiload.Name = "newuiload"
-newuiload.Parent = game.Workspace
+newuiload.Parent = game.CoreGui
 
 main.Name = "main"
 main.Parent = newuiload
@@ -163,7 +163,7 @@ openui.TextWrapped = true
 
 openui.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/Deeri%20hub%20beta'),true))()
-end
+end)
 
 local function IHPU_fake_script() -- openui.close scripty 
 	local script = Instance.new('LocalScript', openui)
