@@ -1,14 +1,4 @@
-local net = true
-if net == true then
 
-	getgenv().ReanimateVersion = "v5"
-
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Reanimate", true))()
-
-
-	wait(2.5) 
-
-end
 
 script.Parent = game.CoreGui.animator.main.convert
 player = game.Players.LocalPlayer
