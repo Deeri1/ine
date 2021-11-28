@@ -176,9 +176,39 @@ function QuaternionSlerp(a, b, t)
 	end 
 	return a[1]*startInterp + b[1]*finishInterp, a[2]*startInterp + b[2]*finishInterp, a[3]*startInterp + b[3]*finishInterp, a[4]*startInterp + b[4]*finishInterp 
 end
-
+rhx = script.Parent.Parent.rightleg.rhxt.Text
+rhy = script.Parent.Parent.rightleg.rhyt.Text
+rhz = script.Parent.Parent.rightleg.rhzt.Text
+rrhx = script.Parent.Parent.rightleg.rrhxt.Text
+rrhy = script.Parent.Parent.rightleg.rrhyt.Text
+rrhz = script.Parent.Parent.rightleg.rrhzt.Text
+lhx = script.Parent.Parent.leftleg.rhxt.Text
+lhy = script.Parent.Parent.leftleg.rhyt.Text
+lhz = script.Parent.Parent.leftleg.rhzt.Text
+lrhx = script.Parent.Parent.leftleg.rrhxt.Text
+lrhy = script.Parent.Parent.leftleg.rrhyt.Text
+lrhz = script.Parent.Parent.leftleg.rrhzt.Text
+rahx = script.Parent.Parent.rightarm.rhxt.Text
+rahy = script.Parent.Parent.rightarm.rhyt.Text
+rahz = script.Parent.Parent.rightarm.rhzt.Text
+rarhx = script.Parent.Parent.rightarm.rrhxt.Text
+rarhy = script.Parent.Parent.rightarm.rrhyt.Text
+rarhz = script.Parent.Parent.rightarm.rrhzt.Text
+lahx = script.Parent.Parent.leftarm.rhxt.Text
+lahy = script.Parent.Parent.leftarm.rhyt.Text
+lahz = script.Parent.Parent.leftarm.rhzt.Text
+larhx = script.Parent.Parent.leftarm.rrhxt.Text
+larhy = script.Parent.Parent.leftarm.rrhyt.Text
+larhz = script.Parent.Parent.leftarm.rrhzt.Text
+tahx = script.Parent.Parent.torso.rhxt.Text
+tahy = script.Parent.Parent.torso.rhyt.Text
+tahz = script.Parent.Parent.torso.rhzt.Text
+tarhx = script.Parent.Parent.torso.rrhxt.Text
+tarhy = script.Parent.Parent.torso.rrhyt.Text
+tarhz = script.Parent.Parent.torso.rrhzt.Text
 player = game.Players.LocalPlayer
 Character = player.Character
+
 
 script.Parent.MouseButton1Click:Connect(function()
 	player = game.Players.LocalPlayer
