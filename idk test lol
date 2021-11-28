@@ -543,7 +543,7 @@ while nonanimate == true do
 	hyr5 = script.Parent.Parent.hat5.rrhyt.Text
 	hzr5 = script.Parent.Parent.hat5.rrhzt.Text
 	hx6 = script.Parent.Parent.hat6.rhxt.Text
-	hy6 = script.Parent.Parent.hat.rhyt.Text
+	hy6 = script.Parent.Parent.hat6.rhyt.Text
 	hz6 = script.Parent.Parent.hat6.rhzt.Text
 	hxr6 = script.Parent.Parent.hat6.rrhxt.Text
 	hyr6 = script.Parent.Parent.hat6.rrhyt.Text
