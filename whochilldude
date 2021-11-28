@@ -135,7 +135,7 @@ local animator = {
 	TextLabel2 = Instance.new("TextLabel"),
 	enterthin2 = Instance.new("TextBox"),
 	nomesh = Instance.new("TextButton"),
-	hat2 = Instance.new("Frame"),
+	hat3 = Instance.new("Frame"),
 	rhxt_6 = Instance.new("TextBox"),
 	rhyt_6 = Instance.new("TextBox"),
 	rhzt_6 = Instance.new("TextBox"),
@@ -185,31 +185,47 @@ local animator = {
 	rrhyt_7 = Instance.new("TextBox"),
 	rrhxt_7 = Instance.new("TextBox"),
 	position_7 = Instance.new("TextLabel"),
-	animation_2 = Instance.new("Frame"),
-	rightlegani = Instance.new("Frame"),
-	Frame = Instance.new("Frame"),
+	hat2 = Instance.new("Frame"),
 	rhxt_8 = Instance.new("TextBox"),
 	rhyt_8 = Instance.new("TextBox"),
 	rhzt_8 = Instance.new("TextBox"),
-	rrhxt_8 = Instance.new("TextBox"),
-	rrhyt_8 = Instance.new("TextBox"),
-	rrhzt_8 = Instance.new("TextBox"),
-	position_8 = Instance.new("TextLabel"),
-	rotation_8 = Instance.new("TextLabel"),
-	rx_8 = Instance.new("TextLabel"),
-	ry_8 = Instance.new("TextLabel"),
-	rz_8 = Instance.new("TextLabel"),
-	titlehr_8 = Instance.new("TextLabel"),
 	x_8 = Instance.new("TextLabel"),
 	y_8 = Instance.new("TextLabel"),
 	z_8 = Instance.new("TextLabel"),
-	speed = Instance.new("TextLabel"),
+	titlehr_8 = Instance.new("TextLabel"),
+	rotation_8 = Instance.new("TextLabel"),
+	rx_8 = Instance.new("TextLabel"),
+	rz_8 = Instance.new("TextLabel"),
+	ry_8 = Instance.new("TextLabel"),
+	rrhzt_8 = Instance.new("TextBox"),
+	rrhyt_8 = Instance.new("TextBox"),
+	rrhxt_8 = Instance.new("TextBox"),
+	position_8 = Instance.new("TextLabel"),
+	animation_2 = Instance.new("Frame"),
+	rightlegani = Instance.new("Frame"),
+	Frame = Instance.new("Frame"),
+	rhxt_9 = Instance.new("TextBox"),
+	rhyt_9 = Instance.new("TextBox"),
+	rhzt_9 = Instance.new("TextBox"),
+	rrhxt_9 = Instance.new("TextBox"),
+	rrhyt_9 = Instance.new("TextBox"),
+	rrhzt_9 = Instance.new("TextBox"),
+	position_9 = Instance.new("TextLabel"),
 	rotation_9 = Instance.new("TextLabel"),
+	rx_9 = Instance.new("TextLabel"),
+	ry_9 = Instance.new("TextLabel"),
+	rz_9 = Instance.new("TextLabel"),
+	titlehr_9 = Instance.new("TextLabel"),
 	x_9 = Instance.new("TextLabel"),
-	rhxts = Instance.new("TextBox"),
 	y_9 = Instance.new("TextLabel"),
-	rhyts = Instance.new("TextBox"),
 	z_9 = Instance.new("TextLabel"),
+	speed = Instance.new("TextLabel"),
+	rotation_10 = Instance.new("TextLabel"),
+	x_10 = Instance.new("TextLabel"),
+	rhxts = Instance.new("TextBox"),
+	y_10 = Instance.new("TextLabel"),
+	rhyts = Instance.new("TextBox"),
+	z_10 = Instance.new("TextLabel"),
 	rhzts = Instance.new("TextBox"),
 	rxs = Instance.new("TextLabel"),
 	rrhxts = Instance.new("TextBox"),
@@ -217,27 +233,10 @@ local animator = {
 	rrhyts = Instance.new("TextBox"),
 	rzs = Instance.new("TextLabel"),
 	rrhzts = Instance.new("TextBox"),
-	position_9 = Instance.new("TextLabel"),
+	position_10 = Instance.new("TextLabel"),
 	Frame_2 = Instance.new("Frame"),
 	leftlegani = Instance.new("Frame"),
 	Frame_3 = Instance.new("Frame"),
-	rhxt_9 = Instance.new("TextBox"),
-	rhyt_9 = Instance.new("TextBox"),
-	rhzt_9 = Instance.new("TextBox"),
-	rrhxt_9 = Instance.new("TextBox"),
-	rrhyt_9 = Instance.new("TextBox"),
-	rrhzt_9 = Instance.new("TextBox"),
-	position_10 = Instance.new("TextLabel"),
-	rotation_10 = Instance.new("TextLabel"),
-	rx_9 = Instance.new("TextLabel"),
-	ry_9 = Instance.new("TextLabel"),
-	rz_9 = Instance.new("TextLabel"),
-	titlehr_9 = Instance.new("TextLabel"),
-	x_10 = Instance.new("TextLabel"),
-	y_10 = Instance.new("TextLabel"),
-	z_10 = Instance.new("TextLabel"),
-	torsoani = Instance.new("Frame"),
-	Frame_4 = Instance.new("Frame"),
 	rhxt_10 = Instance.new("TextBox"),
 	rhyt_10 = Instance.new("TextBox"),
 	rhzt_10 = Instance.new("TextBox"),
@@ -253,8 +252,8 @@ local animator = {
 	x_11 = Instance.new("TextLabel"),
 	y_11 = Instance.new("TextLabel"),
 	z_11 = Instance.new("TextLabel"),
-	rightarmani = Instance.new("Frame"),
-	Frame_5 = Instance.new("Frame"),
+	torsoani = Instance.new("Frame"),
+	Frame_4 = Instance.new("Frame"),
 	rhxt_11 = Instance.new("TextBox"),
 	rhyt_11 = Instance.new("TextBox"),
 	rhzt_11 = Instance.new("TextBox"),
@@ -270,8 +269,8 @@ local animator = {
 	x_12 = Instance.new("TextLabel"),
 	y_12 = Instance.new("TextLabel"),
 	z_12 = Instance.new("TextLabel"),
-	Leftarmani = Instance.new("Frame"),
-	Frame_6 = Instance.new("Frame"),
+	rightarmani = Instance.new("Frame"),
+	Frame_5 = Instance.new("Frame"),
 	rhxt_12 = Instance.new("TextBox"),
 	rhyt_12 = Instance.new("TextBox"),
 	rhzt_12 = Instance.new("TextBox"),
@@ -287,8 +286,8 @@ local animator = {
 	x_13 = Instance.new("TextLabel"),
 	y_13 = Instance.new("TextLabel"),
 	z_13 = Instance.new("TextLabel"),
-	hat2ani = Instance.new("Frame"),
-	Frame_7 = Instance.new("Frame"),
+	Leftarmani = Instance.new("Frame"),
+	Frame_6 = Instance.new("Frame"),
 	rhxt_13 = Instance.new("TextBox"),
 	rhyt_13 = Instance.new("TextBox"),
 	rhzt_13 = Instance.new("TextBox"),
@@ -304,8 +303,8 @@ local animator = {
 	x_14 = Instance.new("TextLabel"),
 	y_14 = Instance.new("TextLabel"),
 	z_14 = Instance.new("TextLabel"),
-	hat1ani = Instance.new("Frame"),
-	Frame_8 = Instance.new("Frame"),
+	hat3ani = Instance.new("Frame"),
+	Frame_7 = Instance.new("Frame"),
 	rhxt_14 = Instance.new("TextBox"),
 	rhyt_14 = Instance.new("TextBox"),
 	rhzt_14 = Instance.new("TextBox"),
@@ -321,6 +320,40 @@ local animator = {
 	x_15 = Instance.new("TextLabel"),
 	y_15 = Instance.new("TextLabel"),
 	z_15 = Instance.new("TextLabel"),
+	hat1ani = Instance.new("Frame"),
+	Frame_8 = Instance.new("Frame"),
+	rhxt_15 = Instance.new("TextBox"),
+	rhyt_15 = Instance.new("TextBox"),
+	rhzt_15 = Instance.new("TextBox"),
+	rrhxt_15 = Instance.new("TextBox"),
+	rrhyt_15 = Instance.new("TextBox"),
+	rrhzt_15 = Instance.new("TextBox"),
+	position_16 = Instance.new("TextLabel"),
+	rotation_16 = Instance.new("TextLabel"),
+	rx_15 = Instance.new("TextLabel"),
+	ry_15 = Instance.new("TextLabel"),
+	rz_15 = Instance.new("TextLabel"),
+	titlehr_15 = Instance.new("TextLabel"),
+	x_16 = Instance.new("TextLabel"),
+	y_16 = Instance.new("TextLabel"),
+	z_16 = Instance.new("TextLabel"),
+	hat2ani = Instance.new("Frame"),
+	Frame_9 = Instance.new("Frame"),
+	rhxt_16 = Instance.new("TextBox"),
+	rhyt_16 = Instance.new("TextBox"),
+	rhzt_16 = Instance.new("TextBox"),
+	rrhxt_16 = Instance.new("TextBox"),
+	rrhyt_16 = Instance.new("TextBox"),
+	rrhzt_16 = Instance.new("TextBox"),
+	position_17 = Instance.new("TextLabel"),
+	rotation_17 = Instance.new("TextLabel"),
+	rx_16 = Instance.new("TextLabel"),
+	ry_16 = Instance.new("TextLabel"),
+	rz_16 = Instance.new("TextLabel"),
+	titlehr_16 = Instance.new("TextLabel"),
+	x_17 = Instance.new("TextLabel"),
+	y_17 = Instance.new("TextLabel"),
+	z_17 = Instance.new("TextLabel"),
 	layouts = Instance.new("Frame"),
 	tit = Instance.new("TextLabel"),
 	dummypose = Instance.new("TextButton"),
@@ -1584,7 +1617,6 @@ animator.hatframe.Active = true
 animator.hatframe.BackgroundColor3 = Color3.fromRGB(209, 209, 209)
 animator.hatframe.Position = UDim2.new(1, 0, 0.772932351, 0)
 animator.hatframe.Size = UDim2.new(0, 950, 0, 158)
-animator.hatframe.Visible = false
 
 animator.hats_2.Name = "hats"
 animator.hats_2.Parent = animator.hatframe
@@ -1828,15 +1860,15 @@ animator.nomesh.TextScaled = true
 animator.nomesh.TextSize = 14.000
 animator.nomesh.TextWrapped = true
 
-animator.hat2.Name = "hat2"
-animator.hat2.Parent = animator.main
-animator.hat2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-animator.hat2.BackgroundTransparency = 1.000
-animator.hat2.Size = UDim2.new(0, 100, 0, 100)
-animator.hat2.Visible = false
+animator.hat3.Name = "hat3"
+animator.hat3.Parent = animator.main
+animator.hat3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+animator.hat3.BackgroundTransparency = 1.000
+animator.hat3.Size = UDim2.new(0, 100, 0, 100)
+animator.hat3.Visible = false
 
 animator.rhxt_6.Name = "rhxt"
-animator.rhxt_6.Parent = animator.hat2
+animator.rhxt_6.Parent = animator.hat3
 animator.rhxt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rhxt_6.Position = UDim2.new(0.945314765, 0, 0.578748345, 0)
 animator.rhxt_6.Size = UDim2.new(0, 45, 0, 50)
@@ -1848,7 +1880,7 @@ animator.rhxt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhxt_6.TextSize = 14.000
 
 animator.rhyt_6.Name = "rhyt"
-animator.rhyt_6.Parent = animator.hat2
+animator.rhyt_6.Parent = animator.hat3
 animator.rhyt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rhyt_6.Position = UDim2.new(0.965314746, 0, 1.57518518, 0)
 animator.rhyt_6.Size = UDim2.new(0, 45, 0, 50)
@@ -1860,7 +1892,7 @@ animator.rhyt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhyt_6.TextSize = 14.000
 
 animator.rhzt_6.Name = "rhzt"
-animator.rhzt_6.Parent = animator.hat2
+animator.rhzt_6.Parent = animator.hat3
 animator.rhzt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rhzt_6.Position = UDim2.new(0.935314775, 0, 2.59779048, 0)
 animator.rhzt_6.Size = UDim2.new(0, 45, 0, 50)
@@ -1872,7 +1904,7 @@ animator.rhzt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhzt_6.TextSize = 14.000
 
 animator.x_6.Name = "x"
-animator.x_6.Parent = animator.hat2
+animator.x_6.Parent = animator.hat3
 animator.x_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.x_6.Position = UDim2.new(-0.00999999978, 0, 0.578748345, 0)
 animator.x_6.Size = UDim2.new(0, 98, 0, 50)
@@ -1884,7 +1916,7 @@ animator.x_6.TextSize = 14.000
 animator.x_6.TextWrapped = true
 
 animator.y_6.Name = "y"
-animator.y_6.Parent = animator.hat2
+animator.y_6.Parent = animator.hat3
 animator.y_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.y_6.Position = UDim2.new(-0.00999999978, 0, 1.57518518, 0)
 animator.y_6.Size = UDim2.new(0, 98, 0, 50)
@@ -1896,7 +1928,7 @@ animator.y_6.TextSize = 14.000
 animator.y_6.TextWrapped = true
 
 animator.z_6.Name = "z"
-animator.z_6.Parent = animator.hat2
+animator.z_6.Parent = animator.hat3
 animator.z_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.z_6.Position = UDim2.new(-0.0399999991, 0, 2.59779048, 0)
 animator.z_6.Size = UDim2.new(0, 98, 0, 50)
@@ -1908,7 +1940,7 @@ animator.z_6.TextSize = 14.000
 animator.z_6.TextWrapped = true
 
 animator.titlehr_6.Name = "titlehr"
-animator.titlehr_6.Parent = animator.hat2
+animator.titlehr_6.Parent = animator.hat3
 animator.titlehr_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.titlehr_6.Position = UDim2.new(2.98023224e-08, 0, -0.00999999791, 0)
 animator.titlehr_6.Size = UDim2.new(0, 97, 0, 31)
@@ -1920,7 +1952,7 @@ animator.titlehr_6.TextSize = 14.000
 animator.titlehr_6.TextWrapped = true
 
 animator.rotation_6.Name = "rotation"
-animator.rotation_6.Parent = animator.hat2
+animator.rotation_6.Parent = animator.hat3
 animator.rotation_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rotation_6.Position = UDim2.new(-0.0299999993, 0, 3.0999999, 0)
 animator.rotation_6.Size = UDim2.new(0, 145, 0, 27)
@@ -1932,7 +1964,7 @@ animator.rotation_6.TextSize = 14.000
 animator.rotation_6.TextWrapped = true
 
 animator.rx_6.Name = "rx"
-animator.rx_6.Parent = animator.hat2
+animator.rx_6.Parent = animator.hat3
 animator.rx_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rx_6.Position = UDim2.new(-0.00999999978, 0, 3.36874843, 0)
 animator.rx_6.Size = UDim2.new(0, 98, 0, 50)
@@ -1944,7 +1976,7 @@ animator.rx_6.TextSize = 14.000
 animator.rx_6.TextWrapped = true
 
 animator.rz_6.Name = "rz"
-animator.rz_6.Parent = animator.hat2
+animator.rz_6.Parent = animator.hat3
 animator.rz_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rz_6.Position = UDim2.new(-0.0399999991, 0, 5.38779068, 0)
 animator.rz_6.Size = UDim2.new(0, 98, 0, 50)
@@ -1956,7 +1988,7 @@ animator.rz_6.TextSize = 14.000
 animator.rz_6.TextWrapped = true
 
 animator.ry_6.Name = "ry"
-animator.ry_6.Parent = animator.hat2
+animator.ry_6.Parent = animator.hat3
 animator.ry_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.ry_6.Position = UDim2.new(-0.00999999978, 0, 4.36518526, 0)
 animator.ry_6.Size = UDim2.new(0, 98, 0, 50)
@@ -1968,7 +2000,7 @@ animator.ry_6.TextSize = 14.000
 animator.ry_6.TextWrapped = true
 
 animator.rrhzt_6.Name = "rrhzt"
-animator.rrhzt_6.Parent = animator.hat2
+animator.rrhzt_6.Parent = animator.hat3
 animator.rrhzt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rrhzt_6.Position = UDim2.new(0.935314775, 0, 5.38779068, 0)
 animator.rrhzt_6.Size = UDim2.new(0, 45, 0, 50)
@@ -1980,7 +2012,7 @@ animator.rrhzt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rrhzt_6.TextSize = 14.000
 
 animator.rrhyt_6.Name = "rrhyt"
-animator.rrhyt_6.Parent = animator.hat2
+animator.rrhyt_6.Parent = animator.hat3
 animator.rrhyt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rrhyt_6.Position = UDim2.new(0.965314746, 0, 4.36518526, 0)
 animator.rrhyt_6.Size = UDim2.new(0, 45, 0, 50)
@@ -1992,7 +2024,7 @@ animator.rrhyt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rrhyt_6.TextSize = 14.000
 
 animator.rrhxt_6.Name = "rrhxt"
-animator.rrhxt_6.Parent = animator.hat2
+animator.rrhxt_6.Parent = animator.hat3
 animator.rrhxt_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rrhxt_6.Position = UDim2.new(0.945314765, 0, 3.36874843, 0)
 animator.rrhxt_6.Size = UDim2.new(0, 45, 0, 50)
@@ -2004,7 +2036,7 @@ animator.rrhxt_6.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rrhxt_6.TextSize = 14.000
 
 animator.position_6.Name = "position"
-animator.position_6.Parent = animator.hat2
+animator.position_6.Parent = animator.hat3
 animator.position_6.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.position_6.Position = UDim2.new(-0.049999997, 0, 0.309999943, 0)
 animator.position_6.Size = UDim2.new(0, 145, 0, 27)
@@ -2400,6 +2432,193 @@ animator.position_7.TextScaled = true
 animator.position_7.TextSize = 14.000
 animator.position_7.TextWrapped = true
 
+animator.hat2.Name = "hat2"
+animator.hat2.Parent = animator.main
+animator.hat2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+animator.hat2.BackgroundTransparency = 1.000
+animator.hat2.Size = UDim2.new(0, 100, 0, 100)
+animator.hat2.Visible = false
+
+animator.rhxt_8.Name = "rhxt"
+animator.rhxt_8.Parent = animator.hat2
+animator.rhxt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhxt_8.Position = UDim2.new(0.945314765, 0, 0.578748345, 0)
+animator.rhxt_8.Size = UDim2.new(0, 45, 0, 50)
+animator.rhxt_8.ClearTextOnFocus = false
+animator.rhxt_8.Font = Enum.Font.SourceSans
+animator.rhxt_8.PlaceholderText = "0"
+animator.rhxt_8.Text = "0"
+animator.rhxt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhxt_8.TextSize = 14.000
+
+animator.rhyt_8.Name = "rhyt"
+animator.rhyt_8.Parent = animator.hat2
+animator.rhyt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhyt_8.Position = UDim2.new(0.965314746, 0, 1.57518518, 0)
+animator.rhyt_8.Size = UDim2.new(0, 45, 0, 50)
+animator.rhyt_8.ClearTextOnFocus = false
+animator.rhyt_8.Font = Enum.Font.SourceSans
+animator.rhyt_8.PlaceholderText = "0"
+animator.rhyt_8.Text = "0"
+animator.rhyt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhyt_8.TextSize = 14.000
+
+animator.rhzt_8.Name = "rhzt"
+animator.rhzt_8.Parent = animator.hat2
+animator.rhzt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhzt_8.Position = UDim2.new(0.935314775, 0, 2.59779048, 0)
+animator.rhzt_8.Size = UDim2.new(0, 45, 0, 50)
+animator.rhzt_8.ClearTextOnFocus = false
+animator.rhzt_8.Font = Enum.Font.SourceSans
+animator.rhzt_8.PlaceholderText = "0"
+animator.rhzt_8.Text = "0"
+animator.rhzt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhzt_8.TextSize = 14.000
+
+animator.x_8.Name = "x"
+animator.x_8.Parent = animator.hat2
+animator.x_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.x_8.Position = UDim2.new(-0.00999999978, 0, 0.578748345, 0)
+animator.x_8.Size = UDim2.new(0, 98, 0, 50)
+animator.x_8.Font = Enum.Font.SourceSans
+animator.x_8.Text = "X"
+animator.x_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.x_8.TextScaled = true
+animator.x_8.TextSize = 14.000
+animator.x_8.TextWrapped = true
+
+animator.y_8.Name = "y"
+animator.y_8.Parent = animator.hat2
+animator.y_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.y_8.Position = UDim2.new(-0.00999999978, 0, 1.57518518, 0)
+animator.y_8.Size = UDim2.new(0, 98, 0, 50)
+animator.y_8.Font = Enum.Font.SourceSans
+animator.y_8.Text = "y"
+animator.y_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.y_8.TextScaled = true
+animator.y_8.TextSize = 14.000
+animator.y_8.TextWrapped = true
+
+animator.z_8.Name = "z"
+animator.z_8.Parent = animator.hat2
+animator.z_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.z_8.Position = UDim2.new(-0.0399999991, 0, 2.59779048, 0)
+animator.z_8.Size = UDim2.new(0, 98, 0, 50)
+animator.z_8.Font = Enum.Font.SourceSans
+animator.z_8.Text = "z"
+animator.z_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.z_8.TextScaled = true
+animator.z_8.TextSize = 14.000
+animator.z_8.TextWrapped = true
+
+animator.titlehr_8.Name = "titlehr"
+animator.titlehr_8.Parent = animator.hat2
+animator.titlehr_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.titlehr_8.Position = UDim2.new(2.98023224e-08, 0, -0.00999999791, 0)
+animator.titlehr_8.Size = UDim2.new(0, 97, 0, 31)
+animator.titlehr_8.Font = Enum.Font.SourceSans
+animator.titlehr_8.Text = "Hat two"
+animator.titlehr_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.titlehr_8.TextScaled = true
+animator.titlehr_8.TextSize = 14.000
+animator.titlehr_8.TextWrapped = true
+
+animator.rotation_8.Name = "rotation"
+animator.rotation_8.Parent = animator.hat2
+animator.rotation_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rotation_8.Position = UDim2.new(-0.0299999993, 0, 3.0999999, 0)
+animator.rotation_8.Size = UDim2.new(0, 145, 0, 27)
+animator.rotation_8.Font = Enum.Font.SourceSans
+animator.rotation_8.Text = "Rotation"
+animator.rotation_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rotation_8.TextScaled = true
+animator.rotation_8.TextSize = 14.000
+animator.rotation_8.TextWrapped = true
+
+animator.rx_8.Name = "rx"
+animator.rx_8.Parent = animator.hat2
+animator.rx_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rx_8.Position = UDim2.new(-0.00999999978, 0, 3.36874843, 0)
+animator.rx_8.Size = UDim2.new(0, 98, 0, 50)
+animator.rx_8.Font = Enum.Font.SourceSans
+animator.rx_8.Text = "X"
+animator.rx_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rx_8.TextScaled = true
+animator.rx_8.TextSize = 14.000
+animator.rx_8.TextWrapped = true
+
+animator.rz_8.Name = "rz"
+animator.rz_8.Parent = animator.hat2
+animator.rz_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rz_8.Position = UDim2.new(-0.0399999991, 0, 5.38779068, 0)
+animator.rz_8.Size = UDim2.new(0, 98, 0, 50)
+animator.rz_8.Font = Enum.Font.SourceSans
+animator.rz_8.Text = "z"
+animator.rz_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rz_8.TextScaled = true
+animator.rz_8.TextSize = 14.000
+animator.rz_8.TextWrapped = true
+
+animator.ry_8.Name = "ry"
+animator.ry_8.Parent = animator.hat2
+animator.ry_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.ry_8.Position = UDim2.new(-0.00999999978, 0, 4.36518526, 0)
+animator.ry_8.Size = UDim2.new(0, 98, 0, 50)
+animator.ry_8.Font = Enum.Font.SourceSans
+animator.ry_8.Text = "y"
+animator.ry_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.ry_8.TextScaled = true
+animator.ry_8.TextSize = 14.000
+animator.ry_8.TextWrapped = true
+
+animator.rrhzt_8.Name = "rrhzt"
+animator.rrhzt_8.Parent = animator.hat2
+animator.rrhzt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhzt_8.Position = UDim2.new(0.935314775, 0, 5.38779068, 0)
+animator.rrhzt_8.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhzt_8.ClearTextOnFocus = false
+animator.rrhzt_8.Font = Enum.Font.SourceSans
+animator.rrhzt_8.PlaceholderText = "0"
+animator.rrhzt_8.Text = "0"
+animator.rrhzt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhzt_8.TextSize = 14.000
+
+animator.rrhyt_8.Name = "rrhyt"
+animator.rrhyt_8.Parent = animator.hat2
+animator.rrhyt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhyt_8.Position = UDim2.new(0.965314746, 0, 4.36518526, 0)
+animator.rrhyt_8.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhyt_8.ClearTextOnFocus = false
+animator.rrhyt_8.Font = Enum.Font.SourceSans
+animator.rrhyt_8.PlaceholderText = "0"
+animator.rrhyt_8.Text = "0"
+animator.rrhyt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhyt_8.TextSize = 14.000
+
+animator.rrhxt_8.Name = "rrhxt"
+animator.rrhxt_8.Parent = animator.hat2
+animator.rrhxt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhxt_8.Position = UDim2.new(0.945314765, 0, 3.36874843, 0)
+animator.rrhxt_8.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhxt_8.ClearTextOnFocus = false
+animator.rrhxt_8.Font = Enum.Font.SourceSans
+animator.rrhxt_8.PlaceholderText = "0"
+animator.rrhxt_8.Text = "0"
+animator.rrhxt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhxt_8.TextSize = 14.000
+
+animator.position_8.Name = "position"
+animator.position_8.Parent = animator.hat2
+animator.position_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.position_8.Position = UDim2.new(-0.049999997, 0, 0.309999943, 0)
+animator.position_8.Size = UDim2.new(0, 145, 0, 27)
+animator.position_8.Font = Enum.Font.SourceSans
+animator.position_8.Text = "Position"
+animator.position_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.position_8.TextScaled = true
+animator.position_8.TextSize = 14.000
+animator.position_8.TextWrapped = true
+
 animator.animation_2.Name = "animation"
 animator.animation_2.Parent = animator.animator
 animator.animation_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -2418,185 +2637,185 @@ animator.Frame.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
 animator.Frame.Size = UDim2.new(0, 145, 0, 589)
 animator.Frame.ZIndex = 0
 
-animator.rhxt_8.Name = "rhxt"
-animator.rhxt_8.Parent = animator.rightlegani
-animator.rhxt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhxt_8.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
-animator.rhxt_8.Size = UDim2.new(0, 45, 0, 50)
-animator.rhxt_8.ClearTextOnFocus = false
-animator.rhxt_8.Font = Enum.Font.SourceSans
-animator.rhxt_8.PlaceholderText = "0"
-animator.rhxt_8.Text = "0"
-animator.rhxt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhxt_8.TextSize = 14.000
+animator.rhxt_9.Name = "rhxt"
+animator.rhxt_9.Parent = animator.rightlegani
+animator.rhxt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhxt_9.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+animator.rhxt_9.Size = UDim2.new(0, 45, 0, 50)
+animator.rhxt_9.ClearTextOnFocus = false
+animator.rhxt_9.Font = Enum.Font.SourceSans
+animator.rhxt_9.PlaceholderText = "0"
+animator.rhxt_9.Text = "0"
+animator.rhxt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhxt_9.TextSize = 14.000
 
-animator.rhyt_8.Name = "rhyt"
-animator.rhyt_8.Parent = animator.rightlegani
-animator.rhyt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhyt_8.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
-animator.rhyt_8.Size = UDim2.new(0, 45, 0, 50)
-animator.rhyt_8.ClearTextOnFocus = false
-animator.rhyt_8.Font = Enum.Font.SourceSans
-animator.rhyt_8.PlaceholderText = "0"
-animator.rhyt_8.Text = "0"
-animator.rhyt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhyt_8.TextSize = 14.000
+animator.rhyt_9.Name = "rhyt"
+animator.rhyt_9.Parent = animator.rightlegani
+animator.rhyt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhyt_9.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+animator.rhyt_9.Size = UDim2.new(0, 45, 0, 50)
+animator.rhyt_9.ClearTextOnFocus = false
+animator.rhyt_9.Font = Enum.Font.SourceSans
+animator.rhyt_9.PlaceholderText = "0"
+animator.rhyt_9.Text = "0"
+animator.rhyt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhyt_9.TextSize = 14.000
 
-animator.rhzt_8.Name = "rhzt"
-animator.rhzt_8.Parent = animator.rightlegani
-animator.rhzt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhzt_8.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
-animator.rhzt_8.Size = UDim2.new(0, 45, 0, 50)
-animator.rhzt_8.ClearTextOnFocus = false
-animator.rhzt_8.Font = Enum.Font.SourceSans
-animator.rhzt_8.PlaceholderText = "0"
-animator.rhzt_8.Text = "0"
-animator.rhzt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhzt_8.TextSize = 14.000
+animator.rhzt_9.Name = "rhzt"
+animator.rhzt_9.Parent = animator.rightlegani
+animator.rhzt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhzt_9.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+animator.rhzt_9.Size = UDim2.new(0, 45, 0, 50)
+animator.rhzt_9.ClearTextOnFocus = false
+animator.rhzt_9.Font = Enum.Font.SourceSans
+animator.rhzt_9.PlaceholderText = "0"
+animator.rhzt_9.Text = "0"
+animator.rhzt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhzt_9.TextSize = 14.000
 
-animator.rrhxt_8.Name = "rrhxt"
-animator.rrhxt_8.Parent = animator.rightlegani
-animator.rrhxt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhxt_8.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
-animator.rrhxt_8.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhxt_8.ClearTextOnFocus = false
-animator.rrhxt_8.Font = Enum.Font.SourceSans
-animator.rrhxt_8.PlaceholderText = "0"
-animator.rrhxt_8.Text = "0"
-animator.rrhxt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhxt_8.TextSize = 14.000
+animator.rrhxt_9.Name = "rrhxt"
+animator.rrhxt_9.Parent = animator.rightlegani
+animator.rrhxt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhxt_9.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+animator.rrhxt_9.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhxt_9.ClearTextOnFocus = false
+animator.rrhxt_9.Font = Enum.Font.SourceSans
+animator.rrhxt_9.PlaceholderText = "0"
+animator.rrhxt_9.Text = "0"
+animator.rrhxt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhxt_9.TextSize = 14.000
 
-animator.rrhyt_8.Name = "rrhyt"
-animator.rrhyt_8.Parent = animator.rightlegani
-animator.rrhyt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhyt_8.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
-animator.rrhyt_8.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhyt_8.ClearTextOnFocus = false
-animator.rrhyt_8.Font = Enum.Font.SourceSans
-animator.rrhyt_8.PlaceholderText = "0"
-animator.rrhyt_8.Text = "0"
-animator.rrhyt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhyt_8.TextSize = 14.000
+animator.rrhyt_9.Name = "rrhyt"
+animator.rrhyt_9.Parent = animator.rightlegani
+animator.rrhyt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhyt_9.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+animator.rrhyt_9.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhyt_9.ClearTextOnFocus = false
+animator.rrhyt_9.Font = Enum.Font.SourceSans
+animator.rrhyt_9.PlaceholderText = "0"
+animator.rrhyt_9.Text = "0"
+animator.rrhyt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhyt_9.TextSize = 14.000
 
-animator.rrhzt_8.Name = "rrhzt"
-animator.rrhzt_8.Parent = animator.rightlegani
-animator.rrhzt_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhzt_8.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
-animator.rrhzt_8.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhzt_8.ClearTextOnFocus = false
-animator.rrhzt_8.Font = Enum.Font.SourceSans
-animator.rrhzt_8.PlaceholderText = "0"
-animator.rrhzt_8.Text = "0"
-animator.rrhzt_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhzt_8.TextSize = 14.000
+animator.rrhzt_9.Name = "rrhzt"
+animator.rrhzt_9.Parent = animator.rightlegani
+animator.rrhzt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhzt_9.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+animator.rrhzt_9.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhzt_9.ClearTextOnFocus = false
+animator.rrhzt_9.Font = Enum.Font.SourceSans
+animator.rrhzt_9.PlaceholderText = "0"
+animator.rrhzt_9.Text = "0"
+animator.rrhzt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhzt_9.TextSize = 14.000
 
-animator.position_8.Name = "position"
-animator.position_8.Parent = animator.rightlegani
-animator.position_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.position_8.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
-animator.position_8.Size = UDim2.new(0, 145, 0, 27)
-animator.position_8.Font = Enum.Font.SourceSans
-animator.position_8.Text = "Position"
-animator.position_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.position_8.TextScaled = true
-animator.position_8.TextSize = 14.000
-animator.position_8.TextWrapped = true
+animator.position_9.Name = "position"
+animator.position_9.Parent = animator.rightlegani
+animator.position_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.position_9.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+animator.position_9.Size = UDim2.new(0, 145, 0, 27)
+animator.position_9.Font = Enum.Font.SourceSans
+animator.position_9.Text = "Position"
+animator.position_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.position_9.TextScaled = true
+animator.position_9.TextSize = 14.000
+animator.position_9.TextWrapped = true
 
-animator.rotation_8.Name = "rotation"
-animator.rotation_8.Parent = animator.rightlegani
-animator.rotation_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rotation_8.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
-animator.rotation_8.Size = UDim2.new(0, 145, 0, 27)
-animator.rotation_8.Font = Enum.Font.SourceSans
-animator.rotation_8.Text = "Rotation"
-animator.rotation_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rotation_8.TextScaled = true
-animator.rotation_8.TextSize = 14.000
-animator.rotation_8.TextWrapped = true
+animator.rotation_9.Name = "rotation"
+animator.rotation_9.Parent = animator.rightlegani
+animator.rotation_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rotation_9.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+animator.rotation_9.Size = UDim2.new(0, 145, 0, 27)
+animator.rotation_9.Font = Enum.Font.SourceSans
+animator.rotation_9.Text = "Rotation"
+animator.rotation_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rotation_9.TextScaled = true
+animator.rotation_9.TextSize = 14.000
+animator.rotation_9.TextWrapped = true
 
-animator.rx_8.Name = "rx"
-animator.rx_8.Parent = animator.rightlegani
-animator.rx_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rx_8.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
-animator.rx_8.Size = UDim2.new(0, 98, 0, 50)
-animator.rx_8.Font = Enum.Font.SourceSans
-animator.rx_8.Text = "X"
-animator.rx_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rx_8.TextScaled = true
-animator.rx_8.TextSize = 14.000
-animator.rx_8.TextWrapped = true
+animator.rx_9.Name = "rx"
+animator.rx_9.Parent = animator.rightlegani
+animator.rx_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rx_9.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+animator.rx_9.Size = UDim2.new(0, 98, 0, 50)
+animator.rx_9.Font = Enum.Font.SourceSans
+animator.rx_9.Text = "X"
+animator.rx_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rx_9.TextScaled = true
+animator.rx_9.TextSize = 14.000
+animator.rx_9.TextWrapped = true
 
-animator.ry_8.Name = "ry"
-animator.ry_8.Parent = animator.rightlegani
-animator.ry_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.ry_8.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
-animator.ry_8.Size = UDim2.new(0, 98, 0, 50)
-animator.ry_8.Font = Enum.Font.SourceSans
-animator.ry_8.Text = "y"
-animator.ry_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.ry_8.TextScaled = true
-animator.ry_8.TextSize = 14.000
-animator.ry_8.TextWrapped = true
+animator.ry_9.Name = "ry"
+animator.ry_9.Parent = animator.rightlegani
+animator.ry_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.ry_9.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+animator.ry_9.Size = UDim2.new(0, 98, 0, 50)
+animator.ry_9.Font = Enum.Font.SourceSans
+animator.ry_9.Text = "y"
+animator.ry_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.ry_9.TextScaled = true
+animator.ry_9.TextSize = 14.000
+animator.ry_9.TextWrapped = true
 
-animator.rz_8.Name = "rz"
-animator.rz_8.Parent = animator.rightlegani
-animator.rz_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rz_8.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
-animator.rz_8.Size = UDim2.new(0, 98, 0, 50)
-animator.rz_8.Font = Enum.Font.SourceSans
-animator.rz_8.Text = "z"
-animator.rz_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rz_8.TextScaled = true
-animator.rz_8.TextSize = 14.000
-animator.rz_8.TextWrapped = true
+animator.rz_9.Name = "rz"
+animator.rz_9.Parent = animator.rightlegani
+animator.rz_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rz_9.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+animator.rz_9.Size = UDim2.new(0, 98, 0, 50)
+animator.rz_9.Font = Enum.Font.SourceSans
+animator.rz_9.Text = "z"
+animator.rz_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rz_9.TextScaled = true
+animator.rz_9.TextSize = 14.000
+animator.rz_9.TextWrapped = true
 
-animator.titlehr_8.Name = "titlehr"
-animator.titlehr_8.Parent = animator.rightlegani
-animator.titlehr_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.titlehr_8.Position = UDim2.new(0.0399999991, 0, 0, 0)
-animator.titlehr_8.Size = UDim2.new(0, 97, 0, 31)
-animator.titlehr_8.Font = Enum.Font.SourceSans
-animator.titlehr_8.Text = "Right Leg"
-animator.titlehr_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.titlehr_8.TextScaled = true
-animator.titlehr_8.TextSize = 14.000
-animator.titlehr_8.TextWrapped = true
+animator.titlehr_9.Name = "titlehr"
+animator.titlehr_9.Parent = animator.rightlegani
+animator.titlehr_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.titlehr_9.Position = UDim2.new(0.0399999991, 0, 0, 0)
+animator.titlehr_9.Size = UDim2.new(0, 97, 0, 31)
+animator.titlehr_9.Font = Enum.Font.SourceSans
+animator.titlehr_9.Text = "Right Leg"
+animator.titlehr_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.titlehr_9.TextScaled = true
+animator.titlehr_9.TextSize = 14.000
+animator.titlehr_9.TextWrapped = true
 
-animator.x_8.Name = "x"
-animator.x_8.Parent = animator.rightlegani
-animator.x_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.x_8.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
-animator.x_8.Size = UDim2.new(0, 98, 0, 50)
-animator.x_8.Font = Enum.Font.SourceSans
-animator.x_8.Text = "X"
-animator.x_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.x_8.TextScaled = true
-animator.x_8.TextSize = 14.000
-animator.x_8.TextWrapped = true
+animator.x_9.Name = "x"
+animator.x_9.Parent = animator.rightlegani
+animator.x_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.x_9.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+animator.x_9.Size = UDim2.new(0, 98, 0, 50)
+animator.x_9.Font = Enum.Font.SourceSans
+animator.x_9.Text = "X"
+animator.x_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.x_9.TextScaled = true
+animator.x_9.TextSize = 14.000
+animator.x_9.TextWrapped = true
 
-animator.y_8.Name = "y"
-animator.y_8.Parent = animator.rightlegani
-animator.y_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.y_8.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
-animator.y_8.Size = UDim2.new(0, 98, 0, 50)
-animator.y_8.Font = Enum.Font.SourceSans
-animator.y_8.Text = "y"
-animator.y_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.y_8.TextScaled = true
-animator.y_8.TextSize = 14.000
-animator.y_8.TextWrapped = true
+animator.y_9.Name = "y"
+animator.y_9.Parent = animator.rightlegani
+animator.y_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.y_9.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+animator.y_9.Size = UDim2.new(0, 98, 0, 50)
+animator.y_9.Font = Enum.Font.SourceSans
+animator.y_9.Text = "y"
+animator.y_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.y_9.TextScaled = true
+animator.y_9.TextSize = 14.000
+animator.y_9.TextWrapped = true
 
-animator.z_8.Name = "z"
-animator.z_8.Parent = animator.rightlegani
-animator.z_8.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.z_8.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
-animator.z_8.Size = UDim2.new(0, 101, 0, 50)
-animator.z_8.Font = Enum.Font.SourceSans
-animator.z_8.Text = "z"
-animator.z_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.z_8.TextScaled = true
-animator.z_8.TextSize = 14.000
-animator.z_8.TextWrapped = true
+animator.z_9.Name = "z"
+animator.z_9.Parent = animator.rightlegani
+animator.z_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.z_9.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+animator.z_9.Size = UDim2.new(0, 101, 0, 50)
+animator.z_9.Font = Enum.Font.SourceSans
+animator.z_9.Text = "z"
+animator.z_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.z_9.TextScaled = true
+animator.z_9.TextSize = 14.000
+animator.z_9.TextWrapped = true
 
 animator.speed.Name = "speed"
 animator.speed.Parent = animator.rightlegani
@@ -2610,29 +2829,29 @@ animator.speed.TextScaled = true
 animator.speed.TextSize = 14.000
 animator.speed.TextWrapped = true
 
-animator.rotation_9.Name = "rotation"
-animator.rotation_9.Parent = animator.rightlegani
-animator.rotation_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rotation_9.Position = UDim2.new(1.49000025, 0, 3.11000013, 0)
-animator.rotation_9.Size = UDim2.new(0, 145, 0, 27)
-animator.rotation_9.Font = Enum.Font.SourceSans
-animator.rotation_9.Text = "Rotation"
-animator.rotation_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rotation_9.TextScaled = true
-animator.rotation_9.TextSize = 14.000
-animator.rotation_9.TextWrapped = true
+animator.rotation_10.Name = "rotation"
+animator.rotation_10.Parent = animator.rightlegani
+animator.rotation_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rotation_10.Position = UDim2.new(1.49000025, 0, 3.11000013, 0)
+animator.rotation_10.Size = UDim2.new(0, 145, 0, 27)
+animator.rotation_10.Font = Enum.Font.SourceSans
+animator.rotation_10.Text = "Rotation"
+animator.rotation_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rotation_10.TextScaled = true
+animator.rotation_10.TextSize = 14.000
+animator.rotation_10.TextWrapped = true
 
-animator.x_9.Name = "x"
-animator.x_9.Parent = animator.rightlegani
-animator.x_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.x_9.Position = UDim2.new(1.44999969, 0, 0.578748345, 0)
-animator.x_9.Size = UDim2.new(0, 98, 0, 50)
-animator.x_9.Font = Enum.Font.SourceSans
-animator.x_9.Text = "X"
-animator.x_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.x_9.TextScaled = true
-animator.x_9.TextSize = 14.000
-animator.x_9.TextWrapped = true
+animator.x_10.Name = "x"
+animator.x_10.Parent = animator.rightlegani
+animator.x_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.x_10.Position = UDim2.new(1.44999969, 0, 0.578748345, 0)
+animator.x_10.Size = UDim2.new(0, 98, 0, 50)
+animator.x_10.Font = Enum.Font.SourceSans
+animator.x_10.Text = "X"
+animator.x_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.x_10.TextScaled = true
+animator.x_10.TextSize = 14.000
+animator.x_10.TextWrapped = true
 
 animator.rhxts.Name = "rhxts"
 animator.rhxts.Parent = animator.rightlegani
@@ -2646,17 +2865,17 @@ animator.rhxts.Text = "0"
 animator.rhxts.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhxts.TextSize = 14.000
 
-animator.y_9.Name = "y"
-animator.y_9.Parent = animator.rightlegani
-animator.y_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.y_9.Position = UDim2.new(1.44999969, 0, 1.57518518, 0)
-animator.y_9.Size = UDim2.new(0, 98, 0, 50)
-animator.y_9.Font = Enum.Font.SourceSans
-animator.y_9.Text = "y"
-animator.y_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.y_9.TextScaled = true
-animator.y_9.TextSize = 14.000
-animator.y_9.TextWrapped = true
+animator.y_10.Name = "y"
+animator.y_10.Parent = animator.rightlegani
+animator.y_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.y_10.Position = UDim2.new(1.44999969, 0, 1.57518518, 0)
+animator.y_10.Size = UDim2.new(0, 98, 0, 50)
+animator.y_10.Font = Enum.Font.SourceSans
+animator.y_10.Text = "y"
+animator.y_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.y_10.TextScaled = true
+animator.y_10.TextSize = 14.000
+animator.y_10.TextWrapped = true
 
 animator.rhyts.Name = "rhyts"
 animator.rhyts.Parent = animator.rightlegani
@@ -2670,17 +2889,17 @@ animator.rhyts.Text = "0"
 animator.rhyts.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhyts.TextSize = 14.000
 
-animator.z_9.Name = "z"
-animator.z_9.Parent = animator.rightlegani
-animator.z_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.z_9.Position = UDim2.new(1.43000019, 0, 2.59779048, 0)
-animator.z_9.Size = UDim2.new(0, 101, 0, 50)
-animator.z_9.Font = Enum.Font.SourceSans
-animator.z_9.Text = "z"
-animator.z_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.z_9.TextScaled = true
-animator.z_9.TextSize = 14.000
-animator.z_9.TextWrapped = true
+animator.z_10.Name = "z"
+animator.z_10.Parent = animator.rightlegani
+animator.z_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.z_10.Position = UDim2.new(1.43000019, 0, 2.59779048, 0)
+animator.z_10.Size = UDim2.new(0, 101, 0, 50)
+animator.z_10.Font = Enum.Font.SourceSans
+animator.z_10.Text = "z"
+animator.z_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.z_10.TextScaled = true
+animator.z_10.TextSize = 14.000
+animator.z_10.TextWrapped = true
 
 animator.rhzts.Name = "rhzts"
 animator.rhzts.Parent = animator.rightlegani
@@ -2766,17 +2985,17 @@ animator.rrhzts.Text = "0"
 animator.rrhzts.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rrhzts.TextSize = 14.000
 
-animator.position_9.Name = "position"
-animator.position_9.Parent = animator.rightlegani
-animator.position_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.position_9.Position = UDim2.new(1.42999995, 0, 0.309999943, 0)
-animator.position_9.Size = UDim2.new(0, 145, 0, 27)
-animator.position_9.Font = Enum.Font.SourceSans
-animator.position_9.Text = "Position"
-animator.position_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.position_9.TextScaled = true
-animator.position_9.TextSize = 14.000
-animator.position_9.TextWrapped = true
+animator.position_10.Name = "position"
+animator.position_10.Parent = animator.rightlegani
+animator.position_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.position_10.Position = UDim2.new(1.42999995, 0, 0.309999943, 0)
+animator.position_10.Size = UDim2.new(0, 145, 0, 27)
+animator.position_10.Font = Enum.Font.SourceSans
+animator.position_10.Text = "Position"
+animator.position_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.position_10.TextScaled = true
+animator.position_10.TextSize = 14.000
+animator.position_10.TextWrapped = true
 
 animator.Frame_2.Parent = animator.rightlegani
 animator.Frame_2.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
@@ -2796,185 +3015,185 @@ animator.Frame_3.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
 animator.Frame_3.Size = UDim2.new(0, 145, 0, 589)
 animator.Frame_3.ZIndex = 0
 
-animator.rhxt_9.Name = "rhxt"
-animator.rhxt_9.Parent = animator.leftlegani
-animator.rhxt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhxt_9.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
-animator.rhxt_9.Size = UDim2.new(0, 45, 0, 50)
-animator.rhxt_9.ClearTextOnFocus = false
-animator.rhxt_9.Font = Enum.Font.SourceSans
-animator.rhxt_9.PlaceholderText = "0"
-animator.rhxt_9.Text = "0"
-animator.rhxt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhxt_9.TextSize = 14.000
+animator.rhxt_10.Name = "rhxt"
+animator.rhxt_10.Parent = animator.leftlegani
+animator.rhxt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhxt_10.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+animator.rhxt_10.Size = UDim2.new(0, 45, 0, 50)
+animator.rhxt_10.ClearTextOnFocus = false
+animator.rhxt_10.Font = Enum.Font.SourceSans
+animator.rhxt_10.PlaceholderText = "0"
+animator.rhxt_10.Text = "0"
+animator.rhxt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhxt_10.TextSize = 14.000
 
-animator.rhyt_9.Name = "rhyt"
-animator.rhyt_9.Parent = animator.leftlegani
-animator.rhyt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhyt_9.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
-animator.rhyt_9.Size = UDim2.new(0, 45, 0, 50)
-animator.rhyt_9.ClearTextOnFocus = false
-animator.rhyt_9.Font = Enum.Font.SourceSans
-animator.rhyt_9.PlaceholderText = "0"
-animator.rhyt_9.Text = "0"
-animator.rhyt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhyt_9.TextSize = 14.000
+animator.rhyt_10.Name = "rhyt"
+animator.rhyt_10.Parent = animator.leftlegani
+animator.rhyt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhyt_10.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+animator.rhyt_10.Size = UDim2.new(0, 45, 0, 50)
+animator.rhyt_10.ClearTextOnFocus = false
+animator.rhyt_10.Font = Enum.Font.SourceSans
+animator.rhyt_10.PlaceholderText = "0"
+animator.rhyt_10.Text = "0"
+animator.rhyt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhyt_10.TextSize = 14.000
 
-animator.rhzt_9.Name = "rhzt"
-animator.rhzt_9.Parent = animator.leftlegani
-animator.rhzt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhzt_9.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
-animator.rhzt_9.Size = UDim2.new(0, 45, 0, 50)
-animator.rhzt_9.ClearTextOnFocus = false
-animator.rhzt_9.Font = Enum.Font.SourceSans
-animator.rhzt_9.PlaceholderText = "0"
-animator.rhzt_9.Text = "0"
-animator.rhzt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhzt_9.TextSize = 14.000
+animator.rhzt_10.Name = "rhzt"
+animator.rhzt_10.Parent = animator.leftlegani
+animator.rhzt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhzt_10.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+animator.rhzt_10.Size = UDim2.new(0, 45, 0, 50)
+animator.rhzt_10.ClearTextOnFocus = false
+animator.rhzt_10.Font = Enum.Font.SourceSans
+animator.rhzt_10.PlaceholderText = "0"
+animator.rhzt_10.Text = "0"
+animator.rhzt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhzt_10.TextSize = 14.000
 
-animator.rrhxt_9.Name = "rrhxt"
-animator.rrhxt_9.Parent = animator.leftlegani
-animator.rrhxt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhxt_9.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
-animator.rrhxt_9.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhxt_9.ClearTextOnFocus = false
-animator.rrhxt_9.Font = Enum.Font.SourceSans
-animator.rrhxt_9.PlaceholderText = "0"
-animator.rrhxt_9.Text = "0"
-animator.rrhxt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhxt_9.TextSize = 14.000
+animator.rrhxt_10.Name = "rrhxt"
+animator.rrhxt_10.Parent = animator.leftlegani
+animator.rrhxt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhxt_10.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+animator.rrhxt_10.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhxt_10.ClearTextOnFocus = false
+animator.rrhxt_10.Font = Enum.Font.SourceSans
+animator.rrhxt_10.PlaceholderText = "0"
+animator.rrhxt_10.Text = "0"
+animator.rrhxt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhxt_10.TextSize = 14.000
 
-animator.rrhyt_9.Name = "rrhyt"
-animator.rrhyt_9.Parent = animator.leftlegani
-animator.rrhyt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhyt_9.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
-animator.rrhyt_9.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhyt_9.ClearTextOnFocus = false
-animator.rrhyt_9.Font = Enum.Font.SourceSans
-animator.rrhyt_9.PlaceholderText = "0"
-animator.rrhyt_9.Text = "0"
-animator.rrhyt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhyt_9.TextSize = 14.000
+animator.rrhyt_10.Name = "rrhyt"
+animator.rrhyt_10.Parent = animator.leftlegani
+animator.rrhyt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhyt_10.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+animator.rrhyt_10.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhyt_10.ClearTextOnFocus = false
+animator.rrhyt_10.Font = Enum.Font.SourceSans
+animator.rrhyt_10.PlaceholderText = "0"
+animator.rrhyt_10.Text = "0"
+animator.rrhyt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhyt_10.TextSize = 14.000
 
-animator.rrhzt_9.Name = "rrhzt"
-animator.rrhzt_9.Parent = animator.leftlegani
-animator.rrhzt_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhzt_9.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
-animator.rrhzt_9.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhzt_9.ClearTextOnFocus = false
-animator.rrhzt_9.Font = Enum.Font.SourceSans
-animator.rrhzt_9.PlaceholderText = "0"
-animator.rrhzt_9.Text = "0"
-animator.rrhzt_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhzt_9.TextSize = 14.000
+animator.rrhzt_10.Name = "rrhzt"
+animator.rrhzt_10.Parent = animator.leftlegani
+animator.rrhzt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhzt_10.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+animator.rrhzt_10.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhzt_10.ClearTextOnFocus = false
+animator.rrhzt_10.Font = Enum.Font.SourceSans
+animator.rrhzt_10.PlaceholderText = "0"
+animator.rrhzt_10.Text = "0"
+animator.rrhzt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhzt_10.TextSize = 14.000
 
-animator.position_10.Name = "position"
-animator.position_10.Parent = animator.leftlegani
-animator.position_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.position_10.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
-animator.position_10.Size = UDim2.new(0, 145, 0, 27)
-animator.position_10.Font = Enum.Font.SourceSans
-animator.position_10.Text = "Position"
-animator.position_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.position_10.TextScaled = true
-animator.position_10.TextSize = 14.000
-animator.position_10.TextWrapped = true
+animator.position_11.Name = "position"
+animator.position_11.Parent = animator.leftlegani
+animator.position_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.position_11.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+animator.position_11.Size = UDim2.new(0, 145, 0, 27)
+animator.position_11.Font = Enum.Font.SourceSans
+animator.position_11.Text = "Position"
+animator.position_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.position_11.TextScaled = true
+animator.position_11.TextSize = 14.000
+animator.position_11.TextWrapped = true
 
-animator.rotation_10.Name = "rotation"
-animator.rotation_10.Parent = animator.leftlegani
-animator.rotation_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rotation_10.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
-animator.rotation_10.Size = UDim2.new(0, 145, 0, 27)
-animator.rotation_10.Font = Enum.Font.SourceSans
-animator.rotation_10.Text = "Rotation"
-animator.rotation_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rotation_10.TextScaled = true
-animator.rotation_10.TextSize = 14.000
-animator.rotation_10.TextWrapped = true
+animator.rotation_11.Name = "rotation"
+animator.rotation_11.Parent = animator.leftlegani
+animator.rotation_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rotation_11.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+animator.rotation_11.Size = UDim2.new(0, 145, 0, 27)
+animator.rotation_11.Font = Enum.Font.SourceSans
+animator.rotation_11.Text = "Rotation"
+animator.rotation_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rotation_11.TextScaled = true
+animator.rotation_11.TextSize = 14.000
+animator.rotation_11.TextWrapped = true
 
-animator.rx_9.Name = "rx"
-animator.rx_9.Parent = animator.leftlegani
-animator.rx_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rx_9.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
-animator.rx_9.Size = UDim2.new(0, 98, 0, 50)
-animator.rx_9.Font = Enum.Font.SourceSans
-animator.rx_9.Text = "X"
-animator.rx_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rx_9.TextScaled = true
-animator.rx_9.TextSize = 14.000
-animator.rx_9.TextWrapped = true
+animator.rx_10.Name = "rx"
+animator.rx_10.Parent = animator.leftlegani
+animator.rx_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rx_10.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+animator.rx_10.Size = UDim2.new(0, 98, 0, 50)
+animator.rx_10.Font = Enum.Font.SourceSans
+animator.rx_10.Text = "X"
+animator.rx_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rx_10.TextScaled = true
+animator.rx_10.TextSize = 14.000
+animator.rx_10.TextWrapped = true
 
-animator.ry_9.Name = "ry"
-animator.ry_9.Parent = animator.leftlegani
-animator.ry_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.ry_9.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
-animator.ry_9.Size = UDim2.new(0, 98, 0, 50)
-animator.ry_9.Font = Enum.Font.SourceSans
-animator.ry_9.Text = "y"
-animator.ry_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.ry_9.TextScaled = true
-animator.ry_9.TextSize = 14.000
-animator.ry_9.TextWrapped = true
+animator.ry_10.Name = "ry"
+animator.ry_10.Parent = animator.leftlegani
+animator.ry_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.ry_10.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+animator.ry_10.Size = UDim2.new(0, 98, 0, 50)
+animator.ry_10.Font = Enum.Font.SourceSans
+animator.ry_10.Text = "y"
+animator.ry_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.ry_10.TextScaled = true
+animator.ry_10.TextSize = 14.000
+animator.ry_10.TextWrapped = true
 
-animator.rz_9.Name = "rz"
-animator.rz_9.Parent = animator.leftlegani
-animator.rz_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rz_9.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
-animator.rz_9.Size = UDim2.new(0, 98, 0, 50)
-animator.rz_9.Font = Enum.Font.SourceSans
-animator.rz_9.Text = "z"
-animator.rz_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rz_9.TextScaled = true
-animator.rz_9.TextSize = 14.000
-animator.rz_9.TextWrapped = true
+animator.rz_10.Name = "rz"
+animator.rz_10.Parent = animator.leftlegani
+animator.rz_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rz_10.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+animator.rz_10.Size = UDim2.new(0, 98, 0, 50)
+animator.rz_10.Font = Enum.Font.SourceSans
+animator.rz_10.Text = "z"
+animator.rz_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rz_10.TextScaled = true
+animator.rz_10.TextSize = 14.000
+animator.rz_10.TextWrapped = true
 
-animator.titlehr_9.Name = "titlehr"
-animator.titlehr_9.Parent = animator.leftlegani
-animator.titlehr_9.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.titlehr_9.Position = UDim2.new(0.0399999991, 0, 0, 0)
-animator.titlehr_9.Size = UDim2.new(0, 97, 0, 31)
-animator.titlehr_9.Font = Enum.Font.SourceSans
-animator.titlehr_9.Text = "Left Leg"
-animator.titlehr_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.titlehr_9.TextScaled = true
-animator.titlehr_9.TextSize = 14.000
-animator.titlehr_9.TextWrapped = true
+animator.titlehr_10.Name = "titlehr"
+animator.titlehr_10.Parent = animator.leftlegani
+animator.titlehr_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.titlehr_10.Position = UDim2.new(0.0399999991, 0, 0, 0)
+animator.titlehr_10.Size = UDim2.new(0, 97, 0, 31)
+animator.titlehr_10.Font = Enum.Font.SourceSans
+animator.titlehr_10.Text = "Left Leg"
+animator.titlehr_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.titlehr_10.TextScaled = true
+animator.titlehr_10.TextSize = 14.000
+animator.titlehr_10.TextWrapped = true
 
-animator.x_10.Name = "x"
-animator.x_10.Parent = animator.leftlegani
-animator.x_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.x_10.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
-animator.x_10.Size = UDim2.new(0, 98, 0, 50)
-animator.x_10.Font = Enum.Font.SourceSans
-animator.x_10.Text = "X"
-animator.x_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.x_10.TextScaled = true
-animator.x_10.TextSize = 14.000
-animator.x_10.TextWrapped = true
+animator.x_11.Name = "x"
+animator.x_11.Parent = animator.leftlegani
+animator.x_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.x_11.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+animator.x_11.Size = UDim2.new(0, 98, 0, 50)
+animator.x_11.Font = Enum.Font.SourceSans
+animator.x_11.Text = "X"
+animator.x_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.x_11.TextScaled = true
+animator.x_11.TextSize = 14.000
+animator.x_11.TextWrapped = true
 
-animator.y_10.Name = "y"
-animator.y_10.Parent = animator.leftlegani
-animator.y_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.y_10.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
-animator.y_10.Size = UDim2.new(0, 98, 0, 50)
-animator.y_10.Font = Enum.Font.SourceSans
-animator.y_10.Text = "y"
-animator.y_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.y_10.TextScaled = true
-animator.y_10.TextSize = 14.000
-animator.y_10.TextWrapped = true
+animator.y_11.Name = "y"
+animator.y_11.Parent = animator.leftlegani
+animator.y_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.y_11.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+animator.y_11.Size = UDim2.new(0, 98, 0, 50)
+animator.y_11.Font = Enum.Font.SourceSans
+animator.y_11.Text = "y"
+animator.y_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.y_11.TextScaled = true
+animator.y_11.TextSize = 14.000
+animator.y_11.TextWrapped = true
 
-animator.z_10.Name = "z"
-animator.z_10.Parent = animator.leftlegani
-animator.z_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.z_10.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
-animator.z_10.Size = UDim2.new(0, 101, 0, 50)
-animator.z_10.Font = Enum.Font.SourceSans
-animator.z_10.Text = "z"
-animator.z_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.z_10.TextScaled = true
-animator.z_10.TextSize = 14.000
-animator.z_10.TextWrapped = true
+animator.z_11.Name = "z"
+animator.z_11.Parent = animator.leftlegani
+animator.z_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.z_11.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+animator.z_11.Size = UDim2.new(0, 101, 0, 50)
+animator.z_11.Font = Enum.Font.SourceSans
+animator.z_11.Text = "z"
+animator.z_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.z_11.TextScaled = true
+animator.z_11.TextSize = 14.000
+animator.z_11.TextWrapped = true
 
 animator.torsoani.Name = "torsoani"
 animator.torsoani.Parent = animator.animation_2
@@ -2988,185 +3207,185 @@ animator.Frame_4.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
 animator.Frame_4.Size = UDim2.new(0, 145, 0, 589)
 animator.Frame_4.ZIndex = 0
 
-animator.rhxt_10.Name = "rhxt"
-animator.rhxt_10.Parent = animator.torsoani
-animator.rhxt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhxt_10.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
-animator.rhxt_10.Size = UDim2.new(0, 45, 0, 50)
-animator.rhxt_10.ClearTextOnFocus = false
-animator.rhxt_10.Font = Enum.Font.SourceSans
-animator.rhxt_10.PlaceholderText = "0"
-animator.rhxt_10.Text = "0"
-animator.rhxt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhxt_10.TextSize = 14.000
+animator.rhxt_11.Name = "rhxt"
+animator.rhxt_11.Parent = animator.torsoani
+animator.rhxt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhxt_11.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+animator.rhxt_11.Size = UDim2.new(0, 45, 0, 50)
+animator.rhxt_11.ClearTextOnFocus = false
+animator.rhxt_11.Font = Enum.Font.SourceSans
+animator.rhxt_11.PlaceholderText = "0"
+animator.rhxt_11.Text = "0"
+animator.rhxt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhxt_11.TextSize = 14.000
 
-animator.rhyt_10.Name = "rhyt"
-animator.rhyt_10.Parent = animator.torsoani
-animator.rhyt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhyt_10.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
-animator.rhyt_10.Size = UDim2.new(0, 45, 0, 50)
-animator.rhyt_10.ClearTextOnFocus = false
-animator.rhyt_10.Font = Enum.Font.SourceSans
-animator.rhyt_10.PlaceholderText = "0"
-animator.rhyt_10.Text = "0"
-animator.rhyt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhyt_10.TextSize = 14.000
+animator.rhyt_11.Name = "rhyt"
+animator.rhyt_11.Parent = animator.torsoani
+animator.rhyt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhyt_11.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+animator.rhyt_11.Size = UDim2.new(0, 45, 0, 50)
+animator.rhyt_11.ClearTextOnFocus = false
+animator.rhyt_11.Font = Enum.Font.SourceSans
+animator.rhyt_11.PlaceholderText = "0"
+animator.rhyt_11.Text = "0"
+animator.rhyt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhyt_11.TextSize = 14.000
 
-animator.rhzt_10.Name = "rhzt"
-animator.rhzt_10.Parent = animator.torsoani
-animator.rhzt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhzt_10.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
-animator.rhzt_10.Size = UDim2.new(0, 45, 0, 50)
-animator.rhzt_10.ClearTextOnFocus = false
-animator.rhzt_10.Font = Enum.Font.SourceSans
-animator.rhzt_10.PlaceholderText = "0"
-animator.rhzt_10.Text = "0"
-animator.rhzt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhzt_10.TextSize = 14.000
+animator.rhzt_11.Name = "rhzt"
+animator.rhzt_11.Parent = animator.torsoani
+animator.rhzt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhzt_11.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+animator.rhzt_11.Size = UDim2.new(0, 45, 0, 50)
+animator.rhzt_11.ClearTextOnFocus = false
+animator.rhzt_11.Font = Enum.Font.SourceSans
+animator.rhzt_11.PlaceholderText = "0"
+animator.rhzt_11.Text = "0"
+animator.rhzt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhzt_11.TextSize = 14.000
 
-animator.rrhxt_10.Name = "rrhxt"
-animator.rrhxt_10.Parent = animator.torsoani
-animator.rrhxt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhxt_10.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
-animator.rrhxt_10.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhxt_10.ClearTextOnFocus = false
-animator.rrhxt_10.Font = Enum.Font.SourceSans
-animator.rrhxt_10.PlaceholderText = "0"
-animator.rrhxt_10.Text = "0"
-animator.rrhxt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhxt_10.TextSize = 14.000
+animator.rrhxt_11.Name = "rrhxt"
+animator.rrhxt_11.Parent = animator.torsoani
+animator.rrhxt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhxt_11.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+animator.rrhxt_11.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhxt_11.ClearTextOnFocus = false
+animator.rrhxt_11.Font = Enum.Font.SourceSans
+animator.rrhxt_11.PlaceholderText = "0"
+animator.rrhxt_11.Text = "0"
+animator.rrhxt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhxt_11.TextSize = 14.000
 
-animator.rrhyt_10.Name = "rrhyt"
-animator.rrhyt_10.Parent = animator.torsoani
-animator.rrhyt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhyt_10.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
-animator.rrhyt_10.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhyt_10.ClearTextOnFocus = false
-animator.rrhyt_10.Font = Enum.Font.SourceSans
-animator.rrhyt_10.PlaceholderText = "0"
-animator.rrhyt_10.Text = "0"
-animator.rrhyt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhyt_10.TextSize = 14.000
+animator.rrhyt_11.Name = "rrhyt"
+animator.rrhyt_11.Parent = animator.torsoani
+animator.rrhyt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhyt_11.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+animator.rrhyt_11.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhyt_11.ClearTextOnFocus = false
+animator.rrhyt_11.Font = Enum.Font.SourceSans
+animator.rrhyt_11.PlaceholderText = "0"
+animator.rrhyt_11.Text = "0"
+animator.rrhyt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhyt_11.TextSize = 14.000
 
-animator.rrhzt_10.Name = "rrhzt"
-animator.rrhzt_10.Parent = animator.torsoani
-animator.rrhzt_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhzt_10.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
-animator.rrhzt_10.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhzt_10.ClearTextOnFocus = false
-animator.rrhzt_10.Font = Enum.Font.SourceSans
-animator.rrhzt_10.PlaceholderText = "0"
-animator.rrhzt_10.Text = "0"
-animator.rrhzt_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhzt_10.TextSize = 14.000
+animator.rrhzt_11.Name = "rrhzt"
+animator.rrhzt_11.Parent = animator.torsoani
+animator.rrhzt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhzt_11.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+animator.rrhzt_11.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhzt_11.ClearTextOnFocus = false
+animator.rrhzt_11.Font = Enum.Font.SourceSans
+animator.rrhzt_11.PlaceholderText = "0"
+animator.rrhzt_11.Text = "0"
+animator.rrhzt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhzt_11.TextSize = 14.000
 
-animator.position_11.Name = "position"
-animator.position_11.Parent = animator.torsoani
-animator.position_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.position_11.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
-animator.position_11.Size = UDim2.new(0, 145, 0, 27)
-animator.position_11.Font = Enum.Font.SourceSans
-animator.position_11.Text = "Position"
-animator.position_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.position_11.TextScaled = true
-animator.position_11.TextSize = 14.000
-animator.position_11.TextWrapped = true
+animator.position_12.Name = "position"
+animator.position_12.Parent = animator.torsoani
+animator.position_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.position_12.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+animator.position_12.Size = UDim2.new(0, 145, 0, 27)
+animator.position_12.Font = Enum.Font.SourceSans
+animator.position_12.Text = "Position"
+animator.position_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.position_12.TextScaled = true
+animator.position_12.TextSize = 14.000
+animator.position_12.TextWrapped = true
 
-animator.rotation_11.Name = "rotation"
-animator.rotation_11.Parent = animator.torsoani
-animator.rotation_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rotation_11.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
-animator.rotation_11.Size = UDim2.new(0, 145, 0, 27)
-animator.rotation_11.Font = Enum.Font.SourceSans
-animator.rotation_11.Text = "Rotation"
-animator.rotation_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rotation_11.TextScaled = true
-animator.rotation_11.TextSize = 14.000
-animator.rotation_11.TextWrapped = true
+animator.rotation_12.Name = "rotation"
+animator.rotation_12.Parent = animator.torsoani
+animator.rotation_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rotation_12.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+animator.rotation_12.Size = UDim2.new(0, 145, 0, 27)
+animator.rotation_12.Font = Enum.Font.SourceSans
+animator.rotation_12.Text = "Rotation"
+animator.rotation_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rotation_12.TextScaled = true
+animator.rotation_12.TextSize = 14.000
+animator.rotation_12.TextWrapped = true
 
-animator.rx_10.Name = "rx"
-animator.rx_10.Parent = animator.torsoani
-animator.rx_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rx_10.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
-animator.rx_10.Size = UDim2.new(0, 98, 0, 50)
-animator.rx_10.Font = Enum.Font.SourceSans
-animator.rx_10.Text = "X"
-animator.rx_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rx_10.TextScaled = true
-animator.rx_10.TextSize = 14.000
-animator.rx_10.TextWrapped = true
+animator.rx_11.Name = "rx"
+animator.rx_11.Parent = animator.torsoani
+animator.rx_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rx_11.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+animator.rx_11.Size = UDim2.new(0, 98, 0, 50)
+animator.rx_11.Font = Enum.Font.SourceSans
+animator.rx_11.Text = "X"
+animator.rx_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rx_11.TextScaled = true
+animator.rx_11.TextSize = 14.000
+animator.rx_11.TextWrapped = true
 
-animator.ry_10.Name = "ry"
-animator.ry_10.Parent = animator.torsoani
-animator.ry_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.ry_10.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
-animator.ry_10.Size = UDim2.new(0, 98, 0, 50)
-animator.ry_10.Font = Enum.Font.SourceSans
-animator.ry_10.Text = "y"
-animator.ry_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.ry_10.TextScaled = true
-animator.ry_10.TextSize = 14.000
-animator.ry_10.TextWrapped = true
+animator.ry_11.Name = "ry"
+animator.ry_11.Parent = animator.torsoani
+animator.ry_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.ry_11.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+animator.ry_11.Size = UDim2.new(0, 98, 0, 50)
+animator.ry_11.Font = Enum.Font.SourceSans
+animator.ry_11.Text = "y"
+animator.ry_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.ry_11.TextScaled = true
+animator.ry_11.TextSize = 14.000
+animator.ry_11.TextWrapped = true
 
-animator.rz_10.Name = "rz"
-animator.rz_10.Parent = animator.torsoani
-animator.rz_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rz_10.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
-animator.rz_10.Size = UDim2.new(0, 98, 0, 50)
-animator.rz_10.Font = Enum.Font.SourceSans
-animator.rz_10.Text = "z"
-animator.rz_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rz_10.TextScaled = true
-animator.rz_10.TextSize = 14.000
-animator.rz_10.TextWrapped = true
+animator.rz_11.Name = "rz"
+animator.rz_11.Parent = animator.torsoani
+animator.rz_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rz_11.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+animator.rz_11.Size = UDim2.new(0, 98, 0, 50)
+animator.rz_11.Font = Enum.Font.SourceSans
+animator.rz_11.Text = "z"
+animator.rz_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rz_11.TextScaled = true
+animator.rz_11.TextSize = 14.000
+animator.rz_11.TextWrapped = true
 
-animator.titlehr_10.Name = "titlehr"
-animator.titlehr_10.Parent = animator.torsoani
-animator.titlehr_10.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.titlehr_10.Position = UDim2.new(0.0399999991, 0, 0, 0)
-animator.titlehr_10.Size = UDim2.new(0, 97, 0, 31)
-animator.titlehr_10.Font = Enum.Font.SourceSans
-animator.titlehr_10.Text = "Torso"
-animator.titlehr_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.titlehr_10.TextScaled = true
-animator.titlehr_10.TextSize = 14.000
-animator.titlehr_10.TextWrapped = true
+animator.titlehr_11.Name = "titlehr"
+animator.titlehr_11.Parent = animator.torsoani
+animator.titlehr_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.titlehr_11.Position = UDim2.new(0.0399999991, 0, 0, 0)
+animator.titlehr_11.Size = UDim2.new(0, 97, 0, 31)
+animator.titlehr_11.Font = Enum.Font.SourceSans
+animator.titlehr_11.Text = "Torso"
+animator.titlehr_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.titlehr_11.TextScaled = true
+animator.titlehr_11.TextSize = 14.000
+animator.titlehr_11.TextWrapped = true
 
-animator.x_11.Name = "x"
-animator.x_11.Parent = animator.torsoani
-animator.x_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.x_11.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
-animator.x_11.Size = UDim2.new(0, 98, 0, 50)
-animator.x_11.Font = Enum.Font.SourceSans
-animator.x_11.Text = "X"
-animator.x_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.x_11.TextScaled = true
-animator.x_11.TextSize = 14.000
-animator.x_11.TextWrapped = true
+animator.x_12.Name = "x"
+animator.x_12.Parent = animator.torsoani
+animator.x_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.x_12.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+animator.x_12.Size = UDim2.new(0, 98, 0, 50)
+animator.x_12.Font = Enum.Font.SourceSans
+animator.x_12.Text = "X"
+animator.x_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.x_12.TextScaled = true
+animator.x_12.TextSize = 14.000
+animator.x_12.TextWrapped = true
 
-animator.y_11.Name = "y"
-animator.y_11.Parent = animator.torsoani
-animator.y_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.y_11.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
-animator.y_11.Size = UDim2.new(0, 98, 0, 50)
-animator.y_11.Font = Enum.Font.SourceSans
-animator.y_11.Text = "y"
-animator.y_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.y_11.TextScaled = true
-animator.y_11.TextSize = 14.000
-animator.y_11.TextWrapped = true
+animator.y_12.Name = "y"
+animator.y_12.Parent = animator.torsoani
+animator.y_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.y_12.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+animator.y_12.Size = UDim2.new(0, 98, 0, 50)
+animator.y_12.Font = Enum.Font.SourceSans
+animator.y_12.Text = "y"
+animator.y_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.y_12.TextScaled = true
+animator.y_12.TextSize = 14.000
+animator.y_12.TextWrapped = true
 
-animator.z_11.Name = "z"
-animator.z_11.Parent = animator.torsoani
-animator.z_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.z_11.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
-animator.z_11.Size = UDim2.new(0, 101, 0, 50)
-animator.z_11.Font = Enum.Font.SourceSans
-animator.z_11.Text = "z"
-animator.z_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.z_11.TextScaled = true
-animator.z_11.TextSize = 14.000
-animator.z_11.TextWrapped = true
+animator.z_12.Name = "z"
+animator.z_12.Parent = animator.torsoani
+animator.z_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.z_12.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+animator.z_12.Size = UDim2.new(0, 101, 0, 50)
+animator.z_12.Font = Enum.Font.SourceSans
+animator.z_12.Text = "z"
+animator.z_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.z_12.TextScaled = true
+animator.z_12.TextSize = 14.000
+animator.z_12.TextWrapped = true
 
 animator.rightarmani.Name = "rightarmani"
 animator.rightarmani.Parent = animator.animation_2
@@ -3180,185 +3399,185 @@ animator.Frame_5.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
 animator.Frame_5.Size = UDim2.new(0, 145, 0, 589)
 animator.Frame_5.ZIndex = 0
 
-animator.rhxt_11.Name = "rhxt"
-animator.rhxt_11.Parent = animator.rightarmani
-animator.rhxt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhxt_11.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
-animator.rhxt_11.Size = UDim2.new(0, 45, 0, 50)
-animator.rhxt_11.ClearTextOnFocus = false
-animator.rhxt_11.Font = Enum.Font.SourceSans
-animator.rhxt_11.PlaceholderText = "0"
-animator.rhxt_11.Text = "0"
-animator.rhxt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhxt_11.TextSize = 14.000
+animator.rhxt_12.Name = "rhxt"
+animator.rhxt_12.Parent = animator.rightarmani
+animator.rhxt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhxt_12.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+animator.rhxt_12.Size = UDim2.new(0, 45, 0, 50)
+animator.rhxt_12.ClearTextOnFocus = false
+animator.rhxt_12.Font = Enum.Font.SourceSans
+animator.rhxt_12.PlaceholderText = "0"
+animator.rhxt_12.Text = "0"
+animator.rhxt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhxt_12.TextSize = 14.000
 
-animator.rhyt_11.Name = "rhyt"
-animator.rhyt_11.Parent = animator.rightarmani
-animator.rhyt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhyt_11.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
-animator.rhyt_11.Size = UDim2.new(0, 45, 0, 50)
-animator.rhyt_11.ClearTextOnFocus = false
-animator.rhyt_11.Font = Enum.Font.SourceSans
-animator.rhyt_11.PlaceholderText = "0"
-animator.rhyt_11.Text = "0"
-animator.rhyt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhyt_11.TextSize = 14.000
+animator.rhyt_12.Name = "rhyt"
+animator.rhyt_12.Parent = animator.rightarmani
+animator.rhyt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhyt_12.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+animator.rhyt_12.Size = UDim2.new(0, 45, 0, 50)
+animator.rhyt_12.ClearTextOnFocus = false
+animator.rhyt_12.Font = Enum.Font.SourceSans
+animator.rhyt_12.PlaceholderText = "0"
+animator.rhyt_12.Text = "0"
+animator.rhyt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhyt_12.TextSize = 14.000
 
-animator.rhzt_11.Name = "rhzt"
-animator.rhzt_11.Parent = animator.rightarmani
-animator.rhzt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhzt_11.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
-animator.rhzt_11.Size = UDim2.new(0, 45, 0, 50)
-animator.rhzt_11.ClearTextOnFocus = false
-animator.rhzt_11.Font = Enum.Font.SourceSans
-animator.rhzt_11.PlaceholderText = "0"
-animator.rhzt_11.Text = "0"
-animator.rhzt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhzt_11.TextSize = 14.000
+animator.rhzt_12.Name = "rhzt"
+animator.rhzt_12.Parent = animator.rightarmani
+animator.rhzt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhzt_12.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+animator.rhzt_12.Size = UDim2.new(0, 45, 0, 50)
+animator.rhzt_12.ClearTextOnFocus = false
+animator.rhzt_12.Font = Enum.Font.SourceSans
+animator.rhzt_12.PlaceholderText = "0"
+animator.rhzt_12.Text = "0"
+animator.rhzt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhzt_12.TextSize = 14.000
 
-animator.rrhxt_11.Name = "rrhxt"
-animator.rrhxt_11.Parent = animator.rightarmani
-animator.rrhxt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhxt_11.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
-animator.rrhxt_11.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhxt_11.ClearTextOnFocus = false
-animator.rrhxt_11.Font = Enum.Font.SourceSans
-animator.rrhxt_11.PlaceholderText = "0"
-animator.rrhxt_11.Text = "0"
-animator.rrhxt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhxt_11.TextSize = 14.000
+animator.rrhxt_12.Name = "rrhxt"
+animator.rrhxt_12.Parent = animator.rightarmani
+animator.rrhxt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhxt_12.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+animator.rrhxt_12.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhxt_12.ClearTextOnFocus = false
+animator.rrhxt_12.Font = Enum.Font.SourceSans
+animator.rrhxt_12.PlaceholderText = "0"
+animator.rrhxt_12.Text = "0"
+animator.rrhxt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhxt_12.TextSize = 14.000
 
-animator.rrhyt_11.Name = "rrhyt"
-animator.rrhyt_11.Parent = animator.rightarmani
-animator.rrhyt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhyt_11.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
-animator.rrhyt_11.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhyt_11.ClearTextOnFocus = false
-animator.rrhyt_11.Font = Enum.Font.SourceSans
-animator.rrhyt_11.PlaceholderText = "0"
-animator.rrhyt_11.Text = "0"
-animator.rrhyt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhyt_11.TextSize = 14.000
+animator.rrhyt_12.Name = "rrhyt"
+animator.rrhyt_12.Parent = animator.rightarmani
+animator.rrhyt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhyt_12.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+animator.rrhyt_12.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhyt_12.ClearTextOnFocus = false
+animator.rrhyt_12.Font = Enum.Font.SourceSans
+animator.rrhyt_12.PlaceholderText = "0"
+animator.rrhyt_12.Text = "0"
+animator.rrhyt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhyt_12.TextSize = 14.000
 
-animator.rrhzt_11.Name = "rrhzt"
-animator.rrhzt_11.Parent = animator.rightarmani
-animator.rrhzt_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhzt_11.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
-animator.rrhzt_11.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhzt_11.ClearTextOnFocus = false
-animator.rrhzt_11.Font = Enum.Font.SourceSans
-animator.rrhzt_11.PlaceholderText = "0"
-animator.rrhzt_11.Text = "0"
-animator.rrhzt_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhzt_11.TextSize = 14.000
+animator.rrhzt_12.Name = "rrhzt"
+animator.rrhzt_12.Parent = animator.rightarmani
+animator.rrhzt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhzt_12.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+animator.rrhzt_12.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhzt_12.ClearTextOnFocus = false
+animator.rrhzt_12.Font = Enum.Font.SourceSans
+animator.rrhzt_12.PlaceholderText = "0"
+animator.rrhzt_12.Text = "0"
+animator.rrhzt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhzt_12.TextSize = 14.000
 
-animator.position_12.Name = "position"
-animator.position_12.Parent = animator.rightarmani
-animator.position_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.position_12.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
-animator.position_12.Size = UDim2.new(0, 145, 0, 27)
-animator.position_12.Font = Enum.Font.SourceSans
-animator.position_12.Text = "Position"
-animator.position_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.position_12.TextScaled = true
-animator.position_12.TextSize = 14.000
-animator.position_12.TextWrapped = true
+animator.position_13.Name = "position"
+animator.position_13.Parent = animator.rightarmani
+animator.position_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.position_13.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+animator.position_13.Size = UDim2.new(0, 145, 0, 27)
+animator.position_13.Font = Enum.Font.SourceSans
+animator.position_13.Text = "Position"
+animator.position_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.position_13.TextScaled = true
+animator.position_13.TextSize = 14.000
+animator.position_13.TextWrapped = true
 
-animator.rotation_12.Name = "rotation"
-animator.rotation_12.Parent = animator.rightarmani
-animator.rotation_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rotation_12.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
-animator.rotation_12.Size = UDim2.new(0, 145, 0, 27)
-animator.rotation_12.Font = Enum.Font.SourceSans
-animator.rotation_12.Text = "Rotation"
-animator.rotation_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rotation_12.TextScaled = true
-animator.rotation_12.TextSize = 14.000
-animator.rotation_12.TextWrapped = true
+animator.rotation_13.Name = "rotation"
+animator.rotation_13.Parent = animator.rightarmani
+animator.rotation_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rotation_13.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+animator.rotation_13.Size = UDim2.new(0, 145, 0, 27)
+animator.rotation_13.Font = Enum.Font.SourceSans
+animator.rotation_13.Text = "Rotation"
+animator.rotation_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rotation_13.TextScaled = true
+animator.rotation_13.TextSize = 14.000
+animator.rotation_13.TextWrapped = true
 
-animator.rx_11.Name = "rx"
-animator.rx_11.Parent = animator.rightarmani
-animator.rx_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rx_11.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
-animator.rx_11.Size = UDim2.new(0, 98, 0, 50)
-animator.rx_11.Font = Enum.Font.SourceSans
-animator.rx_11.Text = "X"
-animator.rx_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rx_11.TextScaled = true
-animator.rx_11.TextSize = 14.000
-animator.rx_11.TextWrapped = true
+animator.rx_12.Name = "rx"
+animator.rx_12.Parent = animator.rightarmani
+animator.rx_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rx_12.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+animator.rx_12.Size = UDim2.new(0, 98, 0, 50)
+animator.rx_12.Font = Enum.Font.SourceSans
+animator.rx_12.Text = "X"
+animator.rx_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rx_12.TextScaled = true
+animator.rx_12.TextSize = 14.000
+animator.rx_12.TextWrapped = true
 
-animator.ry_11.Name = "ry"
-animator.ry_11.Parent = animator.rightarmani
-animator.ry_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.ry_11.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
-animator.ry_11.Size = UDim2.new(0, 98, 0, 50)
-animator.ry_11.Font = Enum.Font.SourceSans
-animator.ry_11.Text = "y"
-animator.ry_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.ry_11.TextScaled = true
-animator.ry_11.TextSize = 14.000
-animator.ry_11.TextWrapped = true
+animator.ry_12.Name = "ry"
+animator.ry_12.Parent = animator.rightarmani
+animator.ry_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.ry_12.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+animator.ry_12.Size = UDim2.new(0, 98, 0, 50)
+animator.ry_12.Font = Enum.Font.SourceSans
+animator.ry_12.Text = "y"
+animator.ry_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.ry_12.TextScaled = true
+animator.ry_12.TextSize = 14.000
+animator.ry_12.TextWrapped = true
 
-animator.rz_11.Name = "rz"
-animator.rz_11.Parent = animator.rightarmani
-animator.rz_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rz_11.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
-animator.rz_11.Size = UDim2.new(0, 98, 0, 50)
-animator.rz_11.Font = Enum.Font.SourceSans
-animator.rz_11.Text = "z"
-animator.rz_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rz_11.TextScaled = true
-animator.rz_11.TextSize = 14.000
-animator.rz_11.TextWrapped = true
+animator.rz_12.Name = "rz"
+animator.rz_12.Parent = animator.rightarmani
+animator.rz_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rz_12.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+animator.rz_12.Size = UDim2.new(0, 98, 0, 50)
+animator.rz_12.Font = Enum.Font.SourceSans
+animator.rz_12.Text = "z"
+animator.rz_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rz_12.TextScaled = true
+animator.rz_12.TextSize = 14.000
+animator.rz_12.TextWrapped = true
 
-animator.titlehr_11.Name = "titlehr"
-animator.titlehr_11.Parent = animator.rightarmani
-animator.titlehr_11.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.titlehr_11.Position = UDim2.new(0.0399999991, 0, 0, 0)
-animator.titlehr_11.Size = UDim2.new(0, 97, 0, 31)
-animator.titlehr_11.Font = Enum.Font.SourceSans
-animator.titlehr_11.Text = "Right arm"
-animator.titlehr_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.titlehr_11.TextScaled = true
-animator.titlehr_11.TextSize = 14.000
-animator.titlehr_11.TextWrapped = true
+animator.titlehr_12.Name = "titlehr"
+animator.titlehr_12.Parent = animator.rightarmani
+animator.titlehr_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.titlehr_12.Position = UDim2.new(0.0399999991, 0, 0, 0)
+animator.titlehr_12.Size = UDim2.new(0, 97, 0, 31)
+animator.titlehr_12.Font = Enum.Font.SourceSans
+animator.titlehr_12.Text = "Right arm"
+animator.titlehr_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.titlehr_12.TextScaled = true
+animator.titlehr_12.TextSize = 14.000
+animator.titlehr_12.TextWrapped = true
 
-animator.x_12.Name = "x"
-animator.x_12.Parent = animator.rightarmani
-animator.x_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.x_12.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
-animator.x_12.Size = UDim2.new(0, 98, 0, 50)
-animator.x_12.Font = Enum.Font.SourceSans
-animator.x_12.Text = "X"
-animator.x_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.x_12.TextScaled = true
-animator.x_12.TextSize = 14.000
-animator.x_12.TextWrapped = true
+animator.x_13.Name = "x"
+animator.x_13.Parent = animator.rightarmani
+animator.x_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.x_13.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+animator.x_13.Size = UDim2.new(0, 98, 0, 50)
+animator.x_13.Font = Enum.Font.SourceSans
+animator.x_13.Text = "X"
+animator.x_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.x_13.TextScaled = true
+animator.x_13.TextSize = 14.000
+animator.x_13.TextWrapped = true
 
-animator.y_12.Name = "y"
-animator.y_12.Parent = animator.rightarmani
-animator.y_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.y_12.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
-animator.y_12.Size = UDim2.new(0, 98, 0, 50)
-animator.y_12.Font = Enum.Font.SourceSans
-animator.y_12.Text = "y"
-animator.y_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.y_12.TextScaled = true
-animator.y_12.TextSize = 14.000
-animator.y_12.TextWrapped = true
+animator.y_13.Name = "y"
+animator.y_13.Parent = animator.rightarmani
+animator.y_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.y_13.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+animator.y_13.Size = UDim2.new(0, 98, 0, 50)
+animator.y_13.Font = Enum.Font.SourceSans
+animator.y_13.Text = "y"
+animator.y_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.y_13.TextScaled = true
+animator.y_13.TextSize = 14.000
+animator.y_13.TextWrapped = true
 
-animator.z_12.Name = "z"
-animator.z_12.Parent = animator.rightarmani
-animator.z_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.z_12.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
-animator.z_12.Size = UDim2.new(0, 101, 0, 50)
-animator.z_12.Font = Enum.Font.SourceSans
-animator.z_12.Text = "z"
-animator.z_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.z_12.TextScaled = true
-animator.z_12.TextSize = 14.000
-animator.z_12.TextWrapped = true
+animator.z_13.Name = "z"
+animator.z_13.Parent = animator.rightarmani
+animator.z_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.z_13.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+animator.z_13.Size = UDim2.new(0, 101, 0, 50)
+animator.z_13.Font = Enum.Font.SourceSans
+animator.z_13.Text = "z"
+animator.z_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.z_13.TextScaled = true
+animator.z_13.TextSize = 14.000
+animator.z_13.TextWrapped = true
 
 animator.Leftarmani.Name = "Leftarmani"
 animator.Leftarmani.Parent = animator.animation_2
@@ -3372,200 +3591,8 @@ animator.Frame_6.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
 animator.Frame_6.Size = UDim2.new(0, 145, 0, 589)
 animator.Frame_6.ZIndex = 0
 
-animator.rhxt_12.Name = "rhxt"
-animator.rhxt_12.Parent = animator.Leftarmani
-animator.rhxt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhxt_12.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
-animator.rhxt_12.Size = UDim2.new(0, 45, 0, 50)
-animator.rhxt_12.ClearTextOnFocus = false
-animator.rhxt_12.Font = Enum.Font.SourceSans
-animator.rhxt_12.PlaceholderText = "0"
-animator.rhxt_12.Text = "0"
-animator.rhxt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhxt_12.TextSize = 14.000
-
-animator.rhyt_12.Name = "rhyt"
-animator.rhyt_12.Parent = animator.Leftarmani
-animator.rhyt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhyt_12.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
-animator.rhyt_12.Size = UDim2.new(0, 45, 0, 50)
-animator.rhyt_12.ClearTextOnFocus = false
-animator.rhyt_12.Font = Enum.Font.SourceSans
-animator.rhyt_12.PlaceholderText = "0"
-animator.rhyt_12.Text = "0"
-animator.rhyt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhyt_12.TextSize = 14.000
-
-animator.rhzt_12.Name = "rhzt"
-animator.rhzt_12.Parent = animator.Leftarmani
-animator.rhzt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhzt_12.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
-animator.rhzt_12.Size = UDim2.new(0, 45, 0, 50)
-animator.rhzt_12.ClearTextOnFocus = false
-animator.rhzt_12.Font = Enum.Font.SourceSans
-animator.rhzt_12.PlaceholderText = "0"
-animator.rhzt_12.Text = "0"
-animator.rhzt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhzt_12.TextSize = 14.000
-
-animator.rrhxt_12.Name = "rrhxt"
-animator.rrhxt_12.Parent = animator.Leftarmani
-animator.rrhxt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhxt_12.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
-animator.rrhxt_12.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhxt_12.ClearTextOnFocus = false
-animator.rrhxt_12.Font = Enum.Font.SourceSans
-animator.rrhxt_12.PlaceholderText = "0"
-animator.rrhxt_12.Text = "0"
-animator.rrhxt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhxt_12.TextSize = 14.000
-
-animator.rrhyt_12.Name = "rrhyt"
-animator.rrhyt_12.Parent = animator.Leftarmani
-animator.rrhyt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhyt_12.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
-animator.rrhyt_12.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhyt_12.ClearTextOnFocus = false
-animator.rrhyt_12.Font = Enum.Font.SourceSans
-animator.rrhyt_12.PlaceholderText = "0"
-animator.rrhyt_12.Text = "0"
-animator.rrhyt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhyt_12.TextSize = 14.000
-
-animator.rrhzt_12.Name = "rrhzt"
-animator.rrhzt_12.Parent = animator.Leftarmani
-animator.rrhzt_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhzt_12.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
-animator.rrhzt_12.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhzt_12.ClearTextOnFocus = false
-animator.rrhzt_12.Font = Enum.Font.SourceSans
-animator.rrhzt_12.PlaceholderText = "0"
-animator.rrhzt_12.Text = "0"
-animator.rrhzt_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhzt_12.TextSize = 14.000
-
-animator.position_13.Name = "position"
-animator.position_13.Parent = animator.Leftarmani
-animator.position_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.position_13.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
-animator.position_13.Size = UDim2.new(0, 145, 0, 27)
-animator.position_13.Font = Enum.Font.SourceSans
-animator.position_13.Text = "Position"
-animator.position_13.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.position_13.TextScaled = true
-animator.position_13.TextSize = 14.000
-animator.position_13.TextWrapped = true
-
-animator.rotation_13.Name = "rotation"
-animator.rotation_13.Parent = animator.Leftarmani
-animator.rotation_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rotation_13.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
-animator.rotation_13.Size = UDim2.new(0, 145, 0, 27)
-animator.rotation_13.Font = Enum.Font.SourceSans
-animator.rotation_13.Text = "Rotation"
-animator.rotation_13.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rotation_13.TextScaled = true
-animator.rotation_13.TextSize = 14.000
-animator.rotation_13.TextWrapped = true
-
-animator.rx_12.Name = "rx"
-animator.rx_12.Parent = animator.Leftarmani
-animator.rx_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rx_12.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
-animator.rx_12.Size = UDim2.new(0, 98, 0, 50)
-animator.rx_12.Font = Enum.Font.SourceSans
-animator.rx_12.Text = "X"
-animator.rx_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rx_12.TextScaled = true
-animator.rx_12.TextSize = 14.000
-animator.rx_12.TextWrapped = true
-
-animator.ry_12.Name = "ry"
-animator.ry_12.Parent = animator.Leftarmani
-animator.ry_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.ry_12.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
-animator.ry_12.Size = UDim2.new(0, 98, 0, 50)
-animator.ry_12.Font = Enum.Font.SourceSans
-animator.ry_12.Text = "y"
-animator.ry_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.ry_12.TextScaled = true
-animator.ry_12.TextSize = 14.000
-animator.ry_12.TextWrapped = true
-
-animator.rz_12.Name = "rz"
-animator.rz_12.Parent = animator.Leftarmani
-animator.rz_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rz_12.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
-animator.rz_12.Size = UDim2.new(0, 98, 0, 50)
-animator.rz_12.Font = Enum.Font.SourceSans
-animator.rz_12.Text = "z"
-animator.rz_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rz_12.TextScaled = true
-animator.rz_12.TextSize = 14.000
-animator.rz_12.TextWrapped = true
-
-animator.titlehr_12.Name = "titlehr"
-animator.titlehr_12.Parent = animator.Leftarmani
-animator.titlehr_12.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.titlehr_12.Position = UDim2.new(0.0399999991, 0, 0, 0)
-animator.titlehr_12.Size = UDim2.new(0, 97, 0, 31)
-animator.titlehr_12.Font = Enum.Font.SourceSans
-animator.titlehr_12.Text = "Leftarm"
-animator.titlehr_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.titlehr_12.TextScaled = true
-animator.titlehr_12.TextSize = 14.000
-animator.titlehr_12.TextWrapped = true
-
-animator.x_13.Name = "x"
-animator.x_13.Parent = animator.Leftarmani
-animator.x_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.x_13.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
-animator.x_13.Size = UDim2.new(0, 98, 0, 50)
-animator.x_13.Font = Enum.Font.SourceSans
-animator.x_13.Text = "X"
-animator.x_13.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.x_13.TextScaled = true
-animator.x_13.TextSize = 14.000
-animator.x_13.TextWrapped = true
-
-animator.y_13.Name = "y"
-animator.y_13.Parent = animator.Leftarmani
-animator.y_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.y_13.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
-animator.y_13.Size = UDim2.new(0, 98, 0, 50)
-animator.y_13.Font = Enum.Font.SourceSans
-animator.y_13.Text = "y"
-animator.y_13.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.y_13.TextScaled = true
-animator.y_13.TextSize = 14.000
-animator.y_13.TextWrapped = true
-
-animator.z_13.Name = "z"
-animator.z_13.Parent = animator.Leftarmani
-animator.z_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.z_13.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
-animator.z_13.Size = UDim2.new(0, 101, 0, 50)
-animator.z_13.Font = Enum.Font.SourceSans
-animator.z_13.Text = "z"
-animator.z_13.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.z_13.TextScaled = true
-animator.z_13.TextSize = 14.000
-animator.z_13.TextWrapped = true
-
-animator.hat2ani.Name = "hat2ani"
-animator.hat2ani.Parent = animator.animation_2
-animator.hat2ani.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-animator.hat2ani.Position = UDim2.new(11.96, 0, 0, 0)
-animator.hat2ani.Size = UDim2.new(0, 100, 0, 100)
-animator.hat2ani.Visible = false
-
-animator.Frame_7.Parent = animator.hat2ani
-animator.Frame_7.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
-animator.Frame_7.Size = UDim2.new(0, 145, 0, 589)
-animator.Frame_7.ZIndex = 0
-
 animator.rhxt_13.Name = "rhxt"
-animator.rhxt_13.Parent = animator.hat2ani
+animator.rhxt_13.Parent = animator.Leftarmani
 animator.rhxt_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rhxt_13.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
 animator.rhxt_13.Size = UDim2.new(0, 45, 0, 50)
@@ -3577,7 +3604,7 @@ animator.rhxt_13.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhxt_13.TextSize = 14.000
 
 animator.rhyt_13.Name = "rhyt"
-animator.rhyt_13.Parent = animator.hat2ani
+animator.rhyt_13.Parent = animator.Leftarmani
 animator.rhyt_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rhyt_13.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
 animator.rhyt_13.Size = UDim2.new(0, 45, 0, 50)
@@ -3589,7 +3616,7 @@ animator.rhyt_13.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhyt_13.TextSize = 14.000
 
 animator.rhzt_13.Name = "rhzt"
-animator.rhzt_13.Parent = animator.hat2ani
+animator.rhzt_13.Parent = animator.Leftarmani
 animator.rhzt_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rhzt_13.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
 animator.rhzt_13.Size = UDim2.new(0, 45, 0, 50)
@@ -3601,7 +3628,7 @@ animator.rhzt_13.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rhzt_13.TextSize = 14.000
 
 animator.rrhxt_13.Name = "rrhxt"
-animator.rrhxt_13.Parent = animator.hat2ani
+animator.rrhxt_13.Parent = animator.Leftarmani
 animator.rrhxt_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rrhxt_13.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
 animator.rrhxt_13.Size = UDim2.new(0, 45, 0, 50)
@@ -3613,7 +3640,7 @@ animator.rrhxt_13.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rrhxt_13.TextSize = 14.000
 
 animator.rrhyt_13.Name = "rrhyt"
-animator.rrhyt_13.Parent = animator.hat2ani
+animator.rrhyt_13.Parent = animator.Leftarmani
 animator.rrhyt_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rrhyt_13.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
 animator.rrhyt_13.Size = UDim2.new(0, 45, 0, 50)
@@ -3625,7 +3652,7 @@ animator.rrhyt_13.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rrhyt_13.TextSize = 14.000
 
 animator.rrhzt_13.Name = "rrhzt"
-animator.rrhzt_13.Parent = animator.hat2ani
+animator.rrhzt_13.Parent = animator.Leftarmani
 animator.rrhzt_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rrhzt_13.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
 animator.rrhzt_13.Size = UDim2.new(0, 45, 0, 50)
@@ -3637,7 +3664,7 @@ animator.rrhzt_13.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.rrhzt_13.TextSize = 14.000
 
 animator.position_14.Name = "position"
-animator.position_14.Parent = animator.hat2ani
+animator.position_14.Parent = animator.Leftarmani
 animator.position_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.position_14.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
 animator.position_14.Size = UDim2.new(0, 145, 0, 27)
@@ -3649,7 +3676,7 @@ animator.position_14.TextSize = 14.000
 animator.position_14.TextWrapped = true
 
 animator.rotation_14.Name = "rotation"
-animator.rotation_14.Parent = animator.hat2ani
+animator.rotation_14.Parent = animator.Leftarmani
 animator.rotation_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rotation_14.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
 animator.rotation_14.Size = UDim2.new(0, 145, 0, 27)
@@ -3661,7 +3688,7 @@ animator.rotation_14.TextSize = 14.000
 animator.rotation_14.TextWrapped = true
 
 animator.rx_13.Name = "rx"
-animator.rx_13.Parent = animator.hat2ani
+animator.rx_13.Parent = animator.Leftarmani
 animator.rx_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rx_13.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
 animator.rx_13.Size = UDim2.new(0, 98, 0, 50)
@@ -3673,7 +3700,7 @@ animator.rx_13.TextSize = 14.000
 animator.rx_13.TextWrapped = true
 
 animator.ry_13.Name = "ry"
-animator.ry_13.Parent = animator.hat2ani
+animator.ry_13.Parent = animator.Leftarmani
 animator.ry_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.ry_13.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
 animator.ry_13.Size = UDim2.new(0, 98, 0, 50)
@@ -3685,7 +3712,7 @@ animator.ry_13.TextSize = 14.000
 animator.ry_13.TextWrapped = true
 
 animator.rz_13.Name = "rz"
-animator.rz_13.Parent = animator.hat2ani
+animator.rz_13.Parent = animator.Leftarmani
 animator.rz_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.rz_13.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
 animator.rz_13.Size = UDim2.new(0, 98, 0, 50)
@@ -3697,19 +3724,19 @@ animator.rz_13.TextSize = 14.000
 animator.rz_13.TextWrapped = true
 
 animator.titlehr_13.Name = "titlehr"
-animator.titlehr_13.Parent = animator.hat2ani
+animator.titlehr_13.Parent = animator.Leftarmani
 animator.titlehr_13.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.titlehr_13.Position = UDim2.new(0.0399999991, 0, 0, 0)
 animator.titlehr_13.Size = UDim2.new(0, 97, 0, 31)
 animator.titlehr_13.Font = Enum.Font.SourceSans
-animator.titlehr_13.Text = "Torso"
+animator.titlehr_13.Text = "Leftarm"
 animator.titlehr_13.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.titlehr_13.TextScaled = true
 animator.titlehr_13.TextSize = 14.000
 animator.titlehr_13.TextWrapped = true
 
 animator.x_14.Name = "x"
-animator.x_14.Parent = animator.hat2ani
+animator.x_14.Parent = animator.Leftarmani
 animator.x_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.x_14.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
 animator.x_14.Size = UDim2.new(0, 98, 0, 50)
@@ -3721,7 +3748,7 @@ animator.x_14.TextSize = 14.000
 animator.x_14.TextWrapped = true
 
 animator.y_14.Name = "y"
-animator.y_14.Parent = animator.hat2ani
+animator.y_14.Parent = animator.Leftarmani
 animator.y_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.y_14.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
 animator.y_14.Size = UDim2.new(0, 98, 0, 50)
@@ -3733,7 +3760,7 @@ animator.y_14.TextSize = 14.000
 animator.y_14.TextWrapped = true
 
 animator.z_14.Name = "z"
-animator.z_14.Parent = animator.hat2ani
+animator.z_14.Parent = animator.Leftarmani
 animator.z_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
 animator.z_14.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
 animator.z_14.Size = UDim2.new(0, 101, 0, 50)
@@ -3743,6 +3770,198 @@ animator.z_14.TextColor3 = Color3.fromRGB(0, 0, 0)
 animator.z_14.TextScaled = true
 animator.z_14.TextSize = 14.000
 animator.z_14.TextWrapped = true
+
+animator.hat3ani.Name = "hat3ani"
+animator.hat3ani.Parent = animator.animation_2
+animator.hat3ani.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+animator.hat3ani.Position = UDim2.new(11.96, 0, 0, 0)
+animator.hat3ani.Size = UDim2.new(0, 100, 0, 100)
+animator.hat3ani.Visible = false
+
+animator.Frame_7.Parent = animator.hat3ani
+animator.Frame_7.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+animator.Frame_7.Size = UDim2.new(0, 145, 0, 589)
+animator.Frame_7.ZIndex = 0
+
+animator.rhxt_14.Name = "rhxt"
+animator.rhxt_14.Parent = animator.hat3ani
+animator.rhxt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhxt_14.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+animator.rhxt_14.Size = UDim2.new(0, 45, 0, 50)
+animator.rhxt_14.ClearTextOnFocus = false
+animator.rhxt_14.Font = Enum.Font.SourceSans
+animator.rhxt_14.PlaceholderText = "0"
+animator.rhxt_14.Text = "0"
+animator.rhxt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhxt_14.TextSize = 14.000
+
+animator.rhyt_14.Name = "rhyt"
+animator.rhyt_14.Parent = animator.hat3ani
+animator.rhyt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhyt_14.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+animator.rhyt_14.Size = UDim2.new(0, 45, 0, 50)
+animator.rhyt_14.ClearTextOnFocus = false
+animator.rhyt_14.Font = Enum.Font.SourceSans
+animator.rhyt_14.PlaceholderText = "0"
+animator.rhyt_14.Text = "0"
+animator.rhyt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhyt_14.TextSize = 14.000
+
+animator.rhzt_14.Name = "rhzt"
+animator.rhzt_14.Parent = animator.hat3ani
+animator.rhzt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhzt_14.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+animator.rhzt_14.Size = UDim2.new(0, 45, 0, 50)
+animator.rhzt_14.ClearTextOnFocus = false
+animator.rhzt_14.Font = Enum.Font.SourceSans
+animator.rhzt_14.PlaceholderText = "0"
+animator.rhzt_14.Text = "0"
+animator.rhzt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhzt_14.TextSize = 14.000
+
+animator.rrhxt_14.Name = "rrhxt"
+animator.rrhxt_14.Parent = animator.hat3ani
+animator.rrhxt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhxt_14.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+animator.rrhxt_14.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhxt_14.ClearTextOnFocus = false
+animator.rrhxt_14.Font = Enum.Font.SourceSans
+animator.rrhxt_14.PlaceholderText = "0"
+animator.rrhxt_14.Text = "0"
+animator.rrhxt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhxt_14.TextSize = 14.000
+
+animator.rrhyt_14.Name = "rrhyt"
+animator.rrhyt_14.Parent = animator.hat3ani
+animator.rrhyt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhyt_14.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+animator.rrhyt_14.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhyt_14.ClearTextOnFocus = false
+animator.rrhyt_14.Font = Enum.Font.SourceSans
+animator.rrhyt_14.PlaceholderText = "0"
+animator.rrhyt_14.Text = "0"
+animator.rrhyt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhyt_14.TextSize = 14.000
+
+animator.rrhzt_14.Name = "rrhzt"
+animator.rrhzt_14.Parent = animator.hat3ani
+animator.rrhzt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhzt_14.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+animator.rrhzt_14.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhzt_14.ClearTextOnFocus = false
+animator.rrhzt_14.Font = Enum.Font.SourceSans
+animator.rrhzt_14.PlaceholderText = "0"
+animator.rrhzt_14.Text = "0"
+animator.rrhzt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhzt_14.TextSize = 14.000
+
+animator.position_15.Name = "position"
+animator.position_15.Parent = animator.hat3ani
+animator.position_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.position_15.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+animator.position_15.Size = UDim2.new(0, 145, 0, 27)
+animator.position_15.Font = Enum.Font.SourceSans
+animator.position_15.Text = "Position"
+animator.position_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.position_15.TextScaled = true
+animator.position_15.TextSize = 14.000
+animator.position_15.TextWrapped = true
+
+animator.rotation_15.Name = "rotation"
+animator.rotation_15.Parent = animator.hat3ani
+animator.rotation_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rotation_15.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+animator.rotation_15.Size = UDim2.new(0, 145, 0, 27)
+animator.rotation_15.Font = Enum.Font.SourceSans
+animator.rotation_15.Text = "Rotation"
+animator.rotation_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rotation_15.TextScaled = true
+animator.rotation_15.TextSize = 14.000
+animator.rotation_15.TextWrapped = true
+
+animator.rx_14.Name = "rx"
+animator.rx_14.Parent = animator.hat3ani
+animator.rx_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rx_14.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+animator.rx_14.Size = UDim2.new(0, 98, 0, 50)
+animator.rx_14.Font = Enum.Font.SourceSans
+animator.rx_14.Text = "X"
+animator.rx_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rx_14.TextScaled = true
+animator.rx_14.TextSize = 14.000
+animator.rx_14.TextWrapped = true
+
+animator.ry_14.Name = "ry"
+animator.ry_14.Parent = animator.hat3ani
+animator.ry_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.ry_14.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+animator.ry_14.Size = UDim2.new(0, 98, 0, 50)
+animator.ry_14.Font = Enum.Font.SourceSans
+animator.ry_14.Text = "y"
+animator.ry_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.ry_14.TextScaled = true
+animator.ry_14.TextSize = 14.000
+animator.ry_14.TextWrapped = true
+
+animator.rz_14.Name = "rz"
+animator.rz_14.Parent = animator.hat3ani
+animator.rz_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rz_14.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+animator.rz_14.Size = UDim2.new(0, 98, 0, 50)
+animator.rz_14.Font = Enum.Font.SourceSans
+animator.rz_14.Text = "z"
+animator.rz_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rz_14.TextScaled = true
+animator.rz_14.TextSize = 14.000
+animator.rz_14.TextWrapped = true
+
+animator.titlehr_14.Name = "titlehr"
+animator.titlehr_14.Parent = animator.hat3ani
+animator.titlehr_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.titlehr_14.Position = UDim2.new(0.0399999991, 0, 0, 0)
+animator.titlehr_14.Size = UDim2.new(0, 97, 0, 31)
+animator.titlehr_14.Font = Enum.Font.SourceSans
+animator.titlehr_14.Text = "Hat 3"
+animator.titlehr_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.titlehr_14.TextScaled = true
+animator.titlehr_14.TextSize = 14.000
+animator.titlehr_14.TextWrapped = true
+
+animator.x_15.Name = "x"
+animator.x_15.Parent = animator.hat3ani
+animator.x_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.x_15.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+animator.x_15.Size = UDim2.new(0, 98, 0, 50)
+animator.x_15.Font = Enum.Font.SourceSans
+animator.x_15.Text = "X"
+animator.x_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.x_15.TextScaled = true
+animator.x_15.TextSize = 14.000
+animator.x_15.TextWrapped = true
+
+animator.y_15.Name = "y"
+animator.y_15.Parent = animator.hat3ani
+animator.y_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.y_15.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+animator.y_15.Size = UDim2.new(0, 98, 0, 50)
+animator.y_15.Font = Enum.Font.SourceSans
+animator.y_15.Text = "y"
+animator.y_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.y_15.TextScaled = true
+animator.y_15.TextSize = 14.000
+animator.y_15.TextWrapped = true
+
+animator.z_15.Name = "z"
+animator.z_15.Parent = animator.hat3ani
+animator.z_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.z_15.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+animator.z_15.Size = UDim2.new(0, 101, 0, 50)
+animator.z_15.Font = Enum.Font.SourceSans
+animator.z_15.Text = "z"
+animator.z_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.z_15.TextScaled = true
+animator.z_15.TextSize = 14.000
+animator.z_15.TextWrapped = true
 
 animator.hat1ani.Name = "hat1ani"
 animator.hat1ani.Parent = animator.animation_2
@@ -3756,185 +3975,377 @@ animator.Frame_8.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
 animator.Frame_8.Size = UDim2.new(0, 145, 0, 589)
 animator.Frame_8.ZIndex = 0
 
-animator.rhxt_14.Name = "rhxt"
-animator.rhxt_14.Parent = animator.hat1ani
-animator.rhxt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhxt_14.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
-animator.rhxt_14.Size = UDim2.new(0, 45, 0, 50)
-animator.rhxt_14.ClearTextOnFocus = false
-animator.rhxt_14.Font = Enum.Font.SourceSans
-animator.rhxt_14.PlaceholderText = "0"
-animator.rhxt_14.Text = "0"
-animator.rhxt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhxt_14.TextSize = 14.000
+animator.rhxt_15.Name = "rhxt"
+animator.rhxt_15.Parent = animator.hat1ani
+animator.rhxt_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhxt_15.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+animator.rhxt_15.Size = UDim2.new(0, 45, 0, 50)
+animator.rhxt_15.ClearTextOnFocus = false
+animator.rhxt_15.Font = Enum.Font.SourceSans
+animator.rhxt_15.PlaceholderText = "0"
+animator.rhxt_15.Text = "0"
+animator.rhxt_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhxt_15.TextSize = 14.000
 
-animator.rhyt_14.Name = "rhyt"
-animator.rhyt_14.Parent = animator.hat1ani
-animator.rhyt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhyt_14.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
-animator.rhyt_14.Size = UDim2.new(0, 45, 0, 50)
-animator.rhyt_14.ClearTextOnFocus = false
-animator.rhyt_14.Font = Enum.Font.SourceSans
-animator.rhyt_14.PlaceholderText = "0"
-animator.rhyt_14.Text = "0"
-animator.rhyt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhyt_14.TextSize = 14.000
+animator.rhyt_15.Name = "rhyt"
+animator.rhyt_15.Parent = animator.hat1ani
+animator.rhyt_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhyt_15.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+animator.rhyt_15.Size = UDim2.new(0, 45, 0, 50)
+animator.rhyt_15.ClearTextOnFocus = false
+animator.rhyt_15.Font = Enum.Font.SourceSans
+animator.rhyt_15.PlaceholderText = "0"
+animator.rhyt_15.Text = "0"
+animator.rhyt_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhyt_15.TextSize = 14.000
 
-animator.rhzt_14.Name = "rhzt"
-animator.rhzt_14.Parent = animator.hat1ani
-animator.rhzt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rhzt_14.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
-animator.rhzt_14.Size = UDim2.new(0, 45, 0, 50)
-animator.rhzt_14.ClearTextOnFocus = false
-animator.rhzt_14.Font = Enum.Font.SourceSans
-animator.rhzt_14.PlaceholderText = "0"
-animator.rhzt_14.Text = "0"
-animator.rhzt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rhzt_14.TextSize = 14.000
+animator.rhzt_15.Name = "rhzt"
+animator.rhzt_15.Parent = animator.hat1ani
+animator.rhzt_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhzt_15.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+animator.rhzt_15.Size = UDim2.new(0, 45, 0, 50)
+animator.rhzt_15.ClearTextOnFocus = false
+animator.rhzt_15.Font = Enum.Font.SourceSans
+animator.rhzt_15.PlaceholderText = "0"
+animator.rhzt_15.Text = "0"
+animator.rhzt_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhzt_15.TextSize = 14.000
 
-animator.rrhxt_14.Name = "rrhxt"
-animator.rrhxt_14.Parent = animator.hat1ani
-animator.rrhxt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhxt_14.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
-animator.rrhxt_14.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhxt_14.ClearTextOnFocus = false
-animator.rrhxt_14.Font = Enum.Font.SourceSans
-animator.rrhxt_14.PlaceholderText = "0"
-animator.rrhxt_14.Text = "0"
-animator.rrhxt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhxt_14.TextSize = 14.000
+animator.rrhxt_15.Name = "rrhxt"
+animator.rrhxt_15.Parent = animator.hat1ani
+animator.rrhxt_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhxt_15.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+animator.rrhxt_15.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhxt_15.ClearTextOnFocus = false
+animator.rrhxt_15.Font = Enum.Font.SourceSans
+animator.rrhxt_15.PlaceholderText = "0"
+animator.rrhxt_15.Text = "0"
+animator.rrhxt_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhxt_15.TextSize = 14.000
 
-animator.rrhyt_14.Name = "rrhyt"
-animator.rrhyt_14.Parent = animator.hat1ani
-animator.rrhyt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhyt_14.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
-animator.rrhyt_14.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhyt_14.ClearTextOnFocus = false
-animator.rrhyt_14.Font = Enum.Font.SourceSans
-animator.rrhyt_14.PlaceholderText = "0"
-animator.rrhyt_14.Text = "0"
-animator.rrhyt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhyt_14.TextSize = 14.000
+animator.rrhyt_15.Name = "rrhyt"
+animator.rrhyt_15.Parent = animator.hat1ani
+animator.rrhyt_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhyt_15.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+animator.rrhyt_15.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhyt_15.ClearTextOnFocus = false
+animator.rrhyt_15.Font = Enum.Font.SourceSans
+animator.rrhyt_15.PlaceholderText = "0"
+animator.rrhyt_15.Text = "0"
+animator.rrhyt_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhyt_15.TextSize = 14.000
 
-animator.rrhzt_14.Name = "rrhzt"
-animator.rrhzt_14.Parent = animator.hat1ani
-animator.rrhzt_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rrhzt_14.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
-animator.rrhzt_14.Size = UDim2.new(0, 45, 0, 50)
-animator.rrhzt_14.ClearTextOnFocus = false
-animator.rrhzt_14.Font = Enum.Font.SourceSans
-animator.rrhzt_14.PlaceholderText = "0"
-animator.rrhzt_14.Text = "0"
-animator.rrhzt_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rrhzt_14.TextSize = 14.000
+animator.rrhzt_15.Name = "rrhzt"
+animator.rrhzt_15.Parent = animator.hat1ani
+animator.rrhzt_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhzt_15.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+animator.rrhzt_15.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhzt_15.ClearTextOnFocus = false
+animator.rrhzt_15.Font = Enum.Font.SourceSans
+animator.rrhzt_15.PlaceholderText = "0"
+animator.rrhzt_15.Text = "0"
+animator.rrhzt_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhzt_15.TextSize = 14.000
 
-animator.position_15.Name = "position"
-animator.position_15.Parent = animator.hat1ani
-animator.position_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.position_15.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
-animator.position_15.Size = UDim2.new(0, 145, 0, 27)
-animator.position_15.Font = Enum.Font.SourceSans
-animator.position_15.Text = "Position"
-animator.position_15.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.position_15.TextScaled = true
-animator.position_15.TextSize = 14.000
-animator.position_15.TextWrapped = true
+animator.position_16.Name = "position"
+animator.position_16.Parent = animator.hat1ani
+animator.position_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.position_16.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+animator.position_16.Size = UDim2.new(0, 145, 0, 27)
+animator.position_16.Font = Enum.Font.SourceSans
+animator.position_16.Text = "Position"
+animator.position_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.position_16.TextScaled = true
+animator.position_16.TextSize = 14.000
+animator.position_16.TextWrapped = true
 
-animator.rotation_15.Name = "rotation"
-animator.rotation_15.Parent = animator.hat1ani
-animator.rotation_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rotation_15.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
-animator.rotation_15.Size = UDim2.new(0, 145, 0, 27)
-animator.rotation_15.Font = Enum.Font.SourceSans
-animator.rotation_15.Text = "Rotation"
-animator.rotation_15.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rotation_15.TextScaled = true
-animator.rotation_15.TextSize = 14.000
-animator.rotation_15.TextWrapped = true
+animator.rotation_16.Name = "rotation"
+animator.rotation_16.Parent = animator.hat1ani
+animator.rotation_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rotation_16.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+animator.rotation_16.Size = UDim2.new(0, 145, 0, 27)
+animator.rotation_16.Font = Enum.Font.SourceSans
+animator.rotation_16.Text = "Rotation"
+animator.rotation_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rotation_16.TextScaled = true
+animator.rotation_16.TextSize = 14.000
+animator.rotation_16.TextWrapped = true
 
-animator.rx_14.Name = "rx"
-animator.rx_14.Parent = animator.hat1ani
-animator.rx_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rx_14.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
-animator.rx_14.Size = UDim2.new(0, 98, 0, 50)
-animator.rx_14.Font = Enum.Font.SourceSans
-animator.rx_14.Text = "X"
-animator.rx_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rx_14.TextScaled = true
-animator.rx_14.TextSize = 14.000
-animator.rx_14.TextWrapped = true
+animator.rx_15.Name = "rx"
+animator.rx_15.Parent = animator.hat1ani
+animator.rx_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rx_15.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+animator.rx_15.Size = UDim2.new(0, 98, 0, 50)
+animator.rx_15.Font = Enum.Font.SourceSans
+animator.rx_15.Text = "X"
+animator.rx_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rx_15.TextScaled = true
+animator.rx_15.TextSize = 14.000
+animator.rx_15.TextWrapped = true
 
-animator.ry_14.Name = "ry"
-animator.ry_14.Parent = animator.hat1ani
-animator.ry_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.ry_14.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
-animator.ry_14.Size = UDim2.new(0, 98, 0, 50)
-animator.ry_14.Font = Enum.Font.SourceSans
-animator.ry_14.Text = "y"
-animator.ry_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.ry_14.TextScaled = true
-animator.ry_14.TextSize = 14.000
-animator.ry_14.TextWrapped = true
+animator.ry_15.Name = "ry"
+animator.ry_15.Parent = animator.hat1ani
+animator.ry_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.ry_15.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+animator.ry_15.Size = UDim2.new(0, 98, 0, 50)
+animator.ry_15.Font = Enum.Font.SourceSans
+animator.ry_15.Text = "y"
+animator.ry_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.ry_15.TextScaled = true
+animator.ry_15.TextSize = 14.000
+animator.ry_15.TextWrapped = true
 
-animator.rz_14.Name = "rz"
-animator.rz_14.Parent = animator.hat1ani
-animator.rz_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.rz_14.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
-animator.rz_14.Size = UDim2.new(0, 98, 0, 50)
-animator.rz_14.Font = Enum.Font.SourceSans
-animator.rz_14.Text = "z"
-animator.rz_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.rz_14.TextScaled = true
-animator.rz_14.TextSize = 14.000
-animator.rz_14.TextWrapped = true
+animator.rz_15.Name = "rz"
+animator.rz_15.Parent = animator.hat1ani
+animator.rz_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rz_15.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+animator.rz_15.Size = UDim2.new(0, 98, 0, 50)
+animator.rz_15.Font = Enum.Font.SourceSans
+animator.rz_15.Text = "z"
+animator.rz_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rz_15.TextScaled = true
+animator.rz_15.TextSize = 14.000
+animator.rz_15.TextWrapped = true
 
-animator.titlehr_14.Name = "titlehr"
-animator.titlehr_14.Parent = animator.hat1ani
-animator.titlehr_14.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.titlehr_14.Position = UDim2.new(0.0399999991, 0, 0, 0)
-animator.titlehr_14.Size = UDim2.new(0, 97, 0, 31)
-animator.titlehr_14.Font = Enum.Font.SourceSans
-animator.titlehr_14.Text = "Torso"
-animator.titlehr_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.titlehr_14.TextScaled = true
-animator.titlehr_14.TextSize = 14.000
-animator.titlehr_14.TextWrapped = true
+animator.titlehr_15.Name = "titlehr"
+animator.titlehr_15.Parent = animator.hat1ani
+animator.titlehr_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.titlehr_15.Position = UDim2.new(0.0399999991, 0, 0, 0)
+animator.titlehr_15.Size = UDim2.new(0, 97, 0, 31)
+animator.titlehr_15.Font = Enum.Font.SourceSans
+animator.titlehr_15.Text = "Hat 1"
+animator.titlehr_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.titlehr_15.TextScaled = true
+animator.titlehr_15.TextSize = 14.000
+animator.titlehr_15.TextWrapped = true
 
-animator.x_15.Name = "x"
-animator.x_15.Parent = animator.hat1ani
-animator.x_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.x_15.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
-animator.x_15.Size = UDim2.new(0, 98, 0, 50)
-animator.x_15.Font = Enum.Font.SourceSans
-animator.x_15.Text = "X"
-animator.x_15.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.x_15.TextScaled = true
-animator.x_15.TextSize = 14.000
-animator.x_15.TextWrapped = true
+animator.x_16.Name = "x"
+animator.x_16.Parent = animator.hat1ani
+animator.x_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.x_16.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+animator.x_16.Size = UDim2.new(0, 98, 0, 50)
+animator.x_16.Font = Enum.Font.SourceSans
+animator.x_16.Text = "X"
+animator.x_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.x_16.TextScaled = true
+animator.x_16.TextSize = 14.000
+animator.x_16.TextWrapped = true
 
-animator.y_15.Name = "y"
-animator.y_15.Parent = animator.hat1ani
-animator.y_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.y_15.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
-animator.y_15.Size = UDim2.new(0, 98, 0, 50)
-animator.y_15.Font = Enum.Font.SourceSans
-animator.y_15.Text = "y"
-animator.y_15.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.y_15.TextScaled = true
-animator.y_15.TextSize = 14.000
-animator.y_15.TextWrapped = true
+animator.y_16.Name = "y"
+animator.y_16.Parent = animator.hat1ani
+animator.y_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.y_16.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+animator.y_16.Size = UDim2.new(0, 98, 0, 50)
+animator.y_16.Font = Enum.Font.SourceSans
+animator.y_16.Text = "y"
+animator.y_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.y_16.TextScaled = true
+animator.y_16.TextSize = 14.000
+animator.y_16.TextWrapped = true
 
-animator.z_15.Name = "z"
-animator.z_15.Parent = animator.hat1ani
-animator.z_15.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
-animator.z_15.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
-animator.z_15.Size = UDim2.new(0, 101, 0, 50)
-animator.z_15.Font = Enum.Font.SourceSans
-animator.z_15.Text = "z"
-animator.z_15.TextColor3 = Color3.fromRGB(0, 0, 0)
-animator.z_15.TextScaled = true
-animator.z_15.TextSize = 14.000
-animator.z_15.TextWrapped = true
+animator.z_16.Name = "z"
+animator.z_16.Parent = animator.hat1ani
+animator.z_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.z_16.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+animator.z_16.Size = UDim2.new(0, 101, 0, 50)
+animator.z_16.Font = Enum.Font.SourceSans
+animator.z_16.Text = "z"
+animator.z_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.z_16.TextScaled = true
+animator.z_16.TextSize = 14.000
+animator.z_16.TextWrapped = true
+
+animator.hat2ani.Name = "hat2ani"
+animator.hat2ani.Parent = animator.animation_2
+animator.hat2ani.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+animator.hat2ani.Position = UDim2.new(11.96, 0, 0, 0)
+animator.hat2ani.Size = UDim2.new(0, 100, 0, 100)
+animator.hat2ani.Visible = false
+
+animator.Frame_9.Parent = animator.hat2ani
+animator.Frame_9.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+animator.Frame_9.Size = UDim2.new(0, 145, 0, 589)
+animator.Frame_9.ZIndex = 0
+
+animator.rhxt_16.Name = "rhxt"
+animator.rhxt_16.Parent = animator.hat2ani
+animator.rhxt_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhxt_16.Position = UDim2.new(0.985314429, 0, 0.588748336, 0)
+animator.rhxt_16.Size = UDim2.new(0, 45, 0, 50)
+animator.rhxt_16.ClearTextOnFocus = false
+animator.rhxt_16.Font = Enum.Font.SourceSans
+animator.rhxt_16.PlaceholderText = "0"
+animator.rhxt_16.Text = "0"
+animator.rhxt_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhxt_16.TextSize = 14.000
+
+animator.rhyt_16.Name = "rhyt"
+animator.rhyt_16.Parent = animator.hat2ani
+animator.rhyt_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhyt_16.Position = UDim2.new(1.00531495, 0, 1.58518517, 0)
+animator.rhyt_16.Size = UDim2.new(0, 45, 0, 50)
+animator.rhyt_16.ClearTextOnFocus = false
+animator.rhyt_16.Font = Enum.Font.SourceSans
+animator.rhyt_16.PlaceholderText = "0"
+animator.rhyt_16.Text = "0"
+animator.rhyt_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhyt_16.TextSize = 14.000
+
+animator.rhzt_16.Name = "rhzt"
+animator.rhzt_16.Parent = animator.hat2ani
+animator.rhzt_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rhzt_16.Position = UDim2.new(1.00531495, 0, 2.60779047, 0)
+animator.rhzt_16.Size = UDim2.new(0, 45, 0, 50)
+animator.rhzt_16.ClearTextOnFocus = false
+animator.rhzt_16.Font = Enum.Font.SourceSans
+animator.rhzt_16.PlaceholderText = "0"
+animator.rhzt_16.Text = "0"
+animator.rhzt_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rhzt_16.TextSize = 14.000
+
+animator.rrhxt_16.Name = "rrhxt"
+animator.rrhxt_16.Parent = animator.hat2ani
+animator.rrhxt_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhxt_16.Position = UDim2.new(0.985314429, 0, 3.37874842, 0)
+animator.rrhxt_16.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhxt_16.ClearTextOnFocus = false
+animator.rrhxt_16.Font = Enum.Font.SourceSans
+animator.rrhxt_16.PlaceholderText = "0"
+animator.rrhxt_16.Text = "0"
+animator.rrhxt_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhxt_16.TextSize = 14.000
+
+animator.rrhyt_16.Name = "rrhyt"
+animator.rrhyt_16.Parent = animator.hat2ani
+animator.rrhyt_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhyt_16.Position = UDim2.new(1.00531495, 0, 4.37518549, 0)
+animator.rrhyt_16.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhyt_16.ClearTextOnFocus = false
+animator.rrhyt_16.Font = Enum.Font.SourceSans
+animator.rrhyt_16.PlaceholderText = "0"
+animator.rrhyt_16.Text = "0"
+animator.rrhyt_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhyt_16.TextSize = 14.000
+
+animator.rrhzt_16.Name = "rrhzt"
+animator.rrhzt_16.Parent = animator.hat2ani
+animator.rrhzt_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rrhzt_16.Position = UDim2.new(0.975315154, 0, 5.39779091, 0)
+animator.rrhzt_16.Size = UDim2.new(0, 45, 0, 50)
+animator.rrhzt_16.ClearTextOnFocus = false
+animator.rrhzt_16.Font = Enum.Font.SourceSans
+animator.rrhzt_16.PlaceholderText = "0"
+animator.rrhzt_16.Text = "0"
+animator.rrhzt_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rrhzt_16.TextSize = 14.000
+
+animator.position_17.Name = "position"
+animator.position_17.Parent = animator.hat2ani
+animator.position_17.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.position_17.Position = UDim2.new(0.0399999991, 0, 0.309999943, 0)
+animator.position_17.Size = UDim2.new(0, 145, 0, 27)
+animator.position_17.Font = Enum.Font.SourceSans
+animator.position_17.Text = "Position"
+animator.position_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.position_17.TextScaled = true
+animator.position_17.TextSize = 14.000
+animator.position_17.TextWrapped = true
+
+animator.rotation_17.Name = "rotation"
+animator.rotation_17.Parent = animator.hat2ani
+animator.rotation_17.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rotation_17.Position = UDim2.new(0.0100002661, 0, 3.11000013, 0)
+animator.rotation_17.Size = UDim2.new(0, 145, 0, 27)
+animator.rotation_17.Font = Enum.Font.SourceSans
+animator.rotation_17.Text = "Rotation"
+animator.rotation_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rotation_17.TextScaled = true
+animator.rotation_17.TextSize = 14.000
+animator.rotation_17.TextWrapped = true
+
+animator.rx_16.Name = "rx"
+animator.rx_16.Parent = animator.hat2ani
+animator.rx_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rx_16.Position = UDim2.new(0.0299997702, 0, 3.37874842, 0)
+animator.rx_16.Size = UDim2.new(0, 98, 0, 50)
+animator.rx_16.Font = Enum.Font.SourceSans
+animator.rx_16.Text = "X"
+animator.rx_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rx_16.TextScaled = true
+animator.rx_16.TextSize = 14.000
+animator.rx_16.TextWrapped = true
+
+animator.ry_16.Name = "ry"
+animator.ry_16.Parent = animator.hat2ani
+animator.ry_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.ry_16.Position = UDim2.new(0.0299997702, 0, 4.37518549, 0)
+animator.ry_16.Size = UDim2.new(0, 98, 0, 50)
+animator.ry_16.Font = Enum.Font.SourceSans
+animator.ry_16.Text = "y"
+animator.ry_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.ry_16.TextScaled = true
+animator.ry_16.TextSize = 14.000
+animator.ry_16.TextWrapped = true
+
+animator.rz_16.Name = "rz"
+animator.rz_16.Parent = animator.hat2ani
+animator.rz_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.rz_16.Position = UDim2.new(3.7252903e-08, 0, 5.39779091, 0)
+animator.rz_16.Size = UDim2.new(0, 98, 0, 50)
+animator.rz_16.Font = Enum.Font.SourceSans
+animator.rz_16.Text = "z"
+animator.rz_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.rz_16.TextScaled = true
+animator.rz_16.TextSize = 14.000
+animator.rz_16.TextWrapped = true
+
+animator.titlehr_16.Name = "titlehr"
+animator.titlehr_16.Parent = animator.hat2ani
+animator.titlehr_16.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.titlehr_16.Position = UDim2.new(0.0399999991, 0, 0, 0)
+animator.titlehr_16.Size = UDim2.new(0, 97, 0, 31)
+animator.titlehr_16.Font = Enum.Font.SourceSans
+animator.titlehr_16.Text = "Hat 2"
+animator.titlehr_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.titlehr_16.TextScaled = true
+animator.titlehr_16.TextSize = 14.000
+animator.titlehr_16.TextWrapped = true
+
+animator.x_17.Name = "x"
+animator.x_17.Parent = animator.hat2ani
+animator.x_17.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.x_17.Position = UDim2.new(0.0299997702, 0, 0.588748336, 0)
+animator.x_17.Size = UDim2.new(0, 98, 0, 50)
+animator.x_17.Font = Enum.Font.SourceSans
+animator.x_17.Text = "X"
+animator.x_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.x_17.TextScaled = true
+animator.x_17.TextSize = 14.000
+animator.x_17.TextWrapped = true
+
+animator.y_17.Name = "y"
+animator.y_17.Parent = animator.hat2ani
+animator.y_17.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.y_17.Position = UDim2.new(0.0299997702, 0, 1.58518517, 0)
+animator.y_17.Size = UDim2.new(0, 98, 0, 50)
+animator.y_17.Font = Enum.Font.SourceSans
+animator.y_17.Text = "y"
+animator.y_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.y_17.TextScaled = true
+animator.y_17.TextSize = 14.000
+animator.y_17.TextWrapped = true
+
+animator.z_17.Name = "z"
+animator.z_17.Parent = animator.hat2ani
+animator.z_17.BackgroundColor3 = Color3.fromRGB(236, 236, 236)
+animator.z_17.Position = UDim2.new(0.0100002661, 0, 2.60779047, 0)
+animator.z_17.Size = UDim2.new(0, 101, 0, 50)
+animator.z_17.Font = Enum.Font.SourceSans
+animator.z_17.Text = "z"
+animator.z_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+animator.z_17.TextScaled = true
+animator.z_17.TextSize = 14.000
+animator.z_17.TextWrapped = true
 
 animator.layouts.Name = "layouts"
 animator.layouts.Parent = animator.animator
@@ -3979,7 +4390,7 @@ animator.CLOSE_5.TextWrapped = true
 
 -- Scripts:
 
-local function KSXFOG_fake_script() -- animator.toclipboard.LocalScript 
+local function NKJFJV_fake_script() -- animator.toclipboard.LocalScript 
 	local script = Instance.new('LocalScript', animator.toclipboard)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3988,782 +4399,38 @@ local function KSXFOG_fake_script() -- animator.toclipboard.LocalScript
 	end)
 	
 end
-coroutine.wrap(KSXFOG_fake_script)()
-local function PJJKGST_fake_script() -- animator.close.LocalScript 
+coroutine.wrap(NKJFJV_fake_script)()
+local function GMOHI_fake_script() -- animator.close.LocalScript 
 	local script = Instance.new('LocalScript', animator.close)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(PJJKGST_fake_script)()
-local function TUMFTG_fake_script() -- animator.TextButton.LocalScript 
+coroutine.wrap(GMOHI_fake_script)()
+local function LXVSAJW_fake_script() -- animator.TextButton.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate1
 	end)
 end
-coroutine.wrap(TUMFTG_fake_script)()
-local function RNLL_fake_script() -- animator.TextButton_2.LocalScript 
+coroutine.wrap(LXVSAJW_fake_script)()
+local function REFDFD_fake_script() -- animator.TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate2
 	end)
 end
-coroutine.wrap(RNLL_fake_script)()
-local function LTYAOF_fake_script() -- animator.convert_2.convert script 
-	local script = Instance.new('Script', animator.convert_2)
+coroutine.wrap(REFDFD_fake_script)()
+local function KFDZ_fake_script() -- animator.convert_2.LocalScript 
+	local script = Instance.new('LocalScript', animator.convert_2)
 
-	player = game.Players.LocalPlayer
-	Character = player.Character
-	player = game.Players.LocalPlayer
-	Player = player
-	Character = Player.Character
-	LeftArm=Character["Left Arm"] 
-	LeftLeg=Character["Left Leg"] 
-	RightArm=Character["Right Arm"] 
-	RightLeg=Character["Right Leg"] 
-	PlayerGui=Player.PlayerGui 
-	Backpack=Player.Backpack 
-	Torso=Character.Torso 
-	Head=Character.Head 
-	LW=Torso["Left Shoulder"] 
-	LH=Torso["Left Hip"] 
-	RW=Torso["Right Shoulder"] 
-	RH=Torso["Right Hip"] 
-	LH=Torso["Left Hip"]
-	RH=Torso["Right Hip"]
-	ch = Character
-	Humanoid = ch.Humanoid
-	
-	wait()
-	
-	
-	for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-		if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-			game:GetService("RunService").Heartbeat:connect(function()
-				v.Velocity = Vector3.new(27,0,0)
-			end)
-		end
-	end
-	
-	
-	
-	game:FindFirstChildOfClass("Players").LocalPlayer["Character"].Archivable = true
-	local hatnameclone = {}
-	for _,v in next, game:FindFirstChildOfClass("Players").LocalPlayer["Character"]:GetChildren() do
-		if v:IsA("Accessory") then
-			if hatnameclone[v.Name] then
-				if hatnameclone[v.Name] == "s" then
-					hatnameclone[v.Name] = {}
-				end
-				table.insert(hatnameclone[v.Name],v)
-			else
-				hatnameclone[v.Name] = "s"
-			end
-		end
-	end
-	for _,v in pairs(hatnameclone) do
-		if type(v) == "table" then
-			local num = 1
-			for _,w in pairs(v) do
-				w.Name = w.Name..num
-				num = num + 1
-			end
-		end
-	end
-	hatnameclone = nil
-	
-	
-	
-	player = game.Players.LocalPlayer
-	Character = player.Character
-	player = game.Players.LocalPlayer
-	Player = player
-	Character = Player.Character
-	LeftArm=Character["Left Arm"] 
-	LeftLeg=Character["Left Leg"] 
-	RightArm=Character["Right Arm"] 
-	RightLeg=Character["Right Leg"] 
-	PlayerGui=Player.PlayerGui 
-	Backpack=Player.Backpack 
-	Torso=Character.Torso 
-	Head=Character.Head 
-	LW=Torso["Left Shoulder"] 
-	LH=Torso["Left Hip"] 
-	RW=Torso["Right Shoulder"] 
-	RH=Torso["Right Hip"] 
-	LH=Torso["Left Hip"]
-	ch = Character
-	ch.Animate.Parent = nil
-	Humanoid = ch.Humanoid
-	Humanoid.Animator.Parent = nil
-	RootPart=Character.HumanoidRootPart
-	RootJoint=RootPart.RootJoint
-	cf = CFrame.new
-	angles=CFrame.Angles
-	euler=CFrame.fromEulerAnglesXYZ
-	RootCF=euler(-1.57,0,3.14)
-	necko=cf(0, 1, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
-	necko2=cf(0, -0.5, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
-	LHC0=cf(-1,-1,0,-0,-0,-1,0,1,0,1,0,0)
-	LHC1=cf(-0.5,1,0,-0,-0,-1,0,1,0,1,0,0)
-	RHC0=cf(1,-1,0,0,0,1,0,1,0,-1,-0,-0)
-	RHC1=cf(0.5,1,0,0,0,1,0,1,0,-1,-0,-0)
-	local M = {C=math.cos,R=math.rad,S=math.sin,P=math.pi,RNG=math.random,MRS=math.randomseed,H=math.huge,RRNG = function(min,max,div) return math.rad(math.random(min,max)/(div or 1)) end}
-	Cos = math.cos
-	local Sine = 0
-	local SINE = Sine
-	local sine=SINE
-	function clerp(a,b,t) 
-		local qa = {QuaternionFromCFrame(a)}
-		local qb = {QuaternionFromCFrame(b)} 
-		local ax, ay, az = a.x, a.y, a.z 
-		local bx, by, bz = b.x, b.y, b.z
-		local _t = 1-t
-		return QuaternionToCFrame(_t*ax + t*bx, _t*ay + t*by, _t*az + t*bz,QuaternionSlerp(qa, qb, t)) 
-	end 
-	function QuaternionFromCFrame(cf) 
-		local mx, my, mz, m00, m01, m02, m10, m11, m12, m20, m21, m22 = cf:components() 
-		local trace = m00 + m11 + m22 
-		if trace > 0 then 
-			local s = math.sqrt(1 + trace) 
-			local recip = 0.5/s 
-			return (m21-m12)*recip, (m02-m20)*recip, (m10-m01)*recip, s*0.5 
-		else 
-			local i = 0 
-			if m11 > m00 then
-				i = 1
-			end
-			if m22 > (i == 0 and m00 or m11) then 
-				i = 2 
-			end 
-			if i == 0 then 
-				local s = math.sqrt(m00-m11-m22+1) 
-				local recip = 0.5/s 
-				return 0.5*s, (m10+m01)*recip, (m20+m02)*recip, (m21-m12)*recip 
-			elseif i == 1 then 
-				local s = math.sqrt(m11-m22-m00+1) 
-				local recip = 0.5/s 
-				return (m01+m10)*recip, 0.5*s, (m21+m12)*recip, (m02-m20)*recip 
-			elseif i == 2 then 
-				local s = math.sqrt(m22-m00-m11+1) 
-				local recip = 0.5/s return (m02+m20)*recip, (m12+m21)*recip, 0.5*s, (m10-m01)*recip 
-			end 
-		end 
-	end
-	
-	function QuaternionToCFrame(px, py, pz, x, y, z, w) 
-		local xs, ys, zs = x + x, y + y, z + z 
-		local wx, wy, wz = w*xs, w*ys, w*zs 
-		local xx = x*xs 
-		local xy = x*ys 
-		local xz = x*zs 
-		local yy = y*ys 
-		local yz = y*zs 
-		local zz = z*zs 
-		return CFrame.new(px, py, pz,1-(yy+zz), xy - wz, xz + wy,xy + wz, 1-(xx+zz), yz - wx, xz - wy, yz + wx, 1-(xx+yy)) 
-	end
-	
-	function QuaternionSlerp(a, b, t) 
-		local cosTheta = a[1]*b[1] + a[2]*b[2] + a[3]*b[3] + a[4]*b[4] 
-		local startInterp, finishInterp; 
-		if cosTheta >= 0.0001 then 
-			if (1 - cosTheta) > 0.0001 then 
-				local theta = math.acos(cosTheta) 
-				local invSinTheta = 1/math.sin(theta) 
-				startInterp = math.sin((1-t)*theta)*invSinTheta 
-				finishInterp = math.sin(t*theta)*invSinTheta  
-			else 
-				startInterp = 1-t 
-				finishInterp = t 
-			end 
-		else 
-			if (1+cosTheta) > 0.0001 then 
-				local theta = math.acos(-cosTheta) 
-				local invSinTheta = 1/math.sin(theta) 
-				startInterp = math.sin((t-1)*theta)*invSinTheta 
-				finishInterp = math.sin(t*theta)*invSinTheta 
-			else 
-				startInterp = t-1 
-				finishInterp = t 
-			end 
-		end 
-		return a[1]*startInterp + b[1]*finishInterp, a[2]*startInterp + b[2]*finishInterp, a[3]*startInterp + b[3]*finishInterp, a[4]*startInterp + b[4]*finishInterp 
-	end
-	rhx = script.Parent.Parent.rightleg.rhxt.Text
-	rhy = script.Parent.Parent.rightleg.rhyt.Text
-	rhz = script.Parent.Parent.rightleg.rhzt.Text
-	rrhx = script.Parent.Parent.rightleg.rrhxt.Text
-	rrhy = script.Parent.Parent.rightleg.rrhyt.Text
-	rrhz = script.Parent.Parent.rightleg.rrhzt.Text
-	lhx = script.Parent.Parent.leftleg.rhxt.Text
-	lhy = script.Parent.Parent.leftleg.rhyt.Text
-	lhz = script.Parent.Parent.leftleg.rhzt.Text
-	lrhx = script.Parent.Parent.leftleg.rrhxt.Text
-	lrhy = script.Parent.Parent.leftleg.rrhyt.Text
-	lrhz = script.Parent.Parent.leftleg.rrhzt.Text
-	rahx = script.Parent.Parent.rightarm.rhxt.Text
-	rahy = script.Parent.Parent.rightarm.rhyt.Text
-	rahz = script.Parent.Parent.rightarm.rhzt.Text
-	rarhx = script.Parent.Parent.rightarm.rrhxt.Text
-	rarhy = script.Parent.Parent.rightarm.rrhyt.Text
-	rarhz = script.Parent.Parent.rightarm.rrhzt.Text
-	lahx = script.Parent.Parent.leftarm.rhxt.Text
-	lahy = script.Parent.Parent.leftarm.rhyt.Text
-	lahz = script.Parent.Parent.leftarm.rhzt.Text
-	larhx = script.Parent.Parent.leftarm.rrhxt.Text
-	larhy = script.Parent.Parent.leftarm.rrhyt.Text
-	larhz = script.Parent.Parent.leftarm.rrhzt.Text
-	tahx = script.Parent.Parent.torso.rhxt.Text
-	tahy = script.Parent.Parent.torso.rhyt.Text
-	tahz = script.Parent.Parent.torso.rhzt.Text
-	tarhx = script.Parent.Parent.torso.rrhxt.Text
-	tarhy = script.Parent.Parent.torso.rrhyt.Text
-	tarhz = script.Parent.Parent.torso.rrhzt.Text
-	player = game.Players.LocalPlayer
-	Character = player.Character
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		player = game.Players.LocalPlayer
-		Character = player.Character
-		hatonehat = script.Parent.Parent["hat settings"].enterthin.Text
-		_G.convertthing = ("local change = 1 \n sine = sine + change \n RH.C0=clerp(RH.C0,cf("..rhx.." + "..rla.." * math.cos(sine / 6),"..rhy.." + "..rla2.." * math.cos(sine / 6),"..rhz.." + "..rla3.." * math.cos(sine / 6))*angles(math.rad("..rrhx.." + "..rla4.." * math.cos(sine / 6)),math.rad("..rrhy.." + "..rla5.." * math.cos(sine / 6)),math.rad("..rrhz.." + "..rla6.." * math.cos(sine / 6))),.2)\nLH.C0=clerp(LH.C0,cf("..lhx.." + "..lla.." * math.cos(sine / 6),"..lhy.." + "..lla2.." * math.cos(sine / 6),"..lhz.." + "..lla3.." * math.cos(sine / 6))*angles(math.rad("..lrhx.." + "..lla4.." * math.cos(sine / 6)),math.rad("..lrhy.." + "..lla5.." * math.cos(sine / 6)),math.rad("..lrhz.." + "..lla6.." * math.cos(sine / 6))),.2)\nRootJoint.C0=clerp(RootJoint.C0,RootCF*cf("..tahx.." + "..to.." * math.cos(sine / 6),"..tahy.." + "..to2.." * math.cos(sine / 6),"..tahz.." + "..to3.." * math.cos(sine / 6))*angles(math.rad("..tarhx.." + "..to4.." * math.cos(sine / 6)),math.rad("..tarhy.." + "..to5.." * math.cos(sine / 6)),math.rad("..tarhz.." + "..to6.." * math.cos(sine / 6))),.3)\nTorso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)\nRW.C0=clerp(RW.C0,cf("..rahx.." + "..raa.." * math.cos(sine / 6),"..rahy.." + "..raa2.." * math.cos(sine / 6),"..rahz.." + "..raa3.." * math.cos(sine / 6))*angles(math.rad("..rarhx.." + "..raa4.." * math.cos(sine / 6)),math.rad("..rarhy.." + "..raa5.." * math.cos(sine / 6)),math.rad("..rarhz.." + "..raa6.." * math.cos(sine / 6))),.3)\nLW.C0=clerp(LW.C0,cf("..lahx.." + "..laa.." * math.cos(sine / 6),"..lahy.." + "..laa2.." * math.cos(sine / 6),"..lahz.." + "..laa3.." * math.cos(sine / 6))*angles(math.rad("..larhx.." + "..laa4.." * math.cos(sine / 6)),math.rad("..larhy.." + "..laa5.." * math.cos(sine / 6)),math.rad("..larhz.." + "..laa6.." * math.cos(sine / 6))),.3)")
-		yowch = "Right Arm"	
-		char = game.Players.LocalPlayer.Character
-		hat = hatonehat
-		hatonehat2 = script.Parent.Parent["hat2 settings"].enterthin.Text
-		hat2 = hatonehat2
-		attackment1 = _G.hat1atach
-		attackment2 = _G.hat2atach
-		_G.hate1 = ("char = game.Players.LocalPlayer.Character \n char['"..hat.."'].Handle.AccessoryWeld.Part1 = char['"..attackment1.."'] \n char['"..hat.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat.."'].Handle.AccessoryWeld.C0 = cf("..hx.." + "..rhhx.." * math.cos(sine / 6),"..hy.." + "..rhhy.." * math.cos(sine / 6),"..hz.." + "..rhhz.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr.." + "..rhxr.." * math.cos(sine / 6)), "..hyr.." + "..rhyr.." * math.cos(sine / 6), "..hzr.." + "..rhzr.." * math.cos(sine / 6)) \n c.Anchored = false end")
-		_G.hate2 = ("char = game.Players.LocalPlayer.Character \n char['"..hat2.."'].Handle.AccessoryWeld.Part1 = char['"..attackment2.."'] \n char['"..hat2.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat2.."'].Handle.AccessoryWeld.C0 = cf("..hx2.." + "..rhhx2.." * math.cos(sine / 6),"..hy2.." + "..rhhy2.." * math.cos(sine / 6),"..hz2.." + "..rhhz2.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr2.." + "..rhxr2.." * math.cos(sine / 6)), "..hyr2.." + "..rhyr2.." * math.cos(sine / 6), "..hzr2.." + "..rhzr2.." * math.cos(sine / 6)) \n c.Anchored = false end")
-	
-	
-	
-	
-		print("converting")
-		_G.convertthin2 = [[
-				RH.C0=clerp(RH.C0,cf(rhx,rhy,rhz)*angles(math.rad(rrhx),math.rad(rrhy),math.rad(rrhz)),.2)
-				LH.C0=clerp(LH.C0,cf(lhx,lhy,lhz)*angles(math.rad(lrhx),math.rad(lrhy),math.rad(lrhz)),.2)
-				RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx,tahy,tahz)*angles(math.rad(tarhx),math.rad(tarhy),math.rad(tarhz)),.3)
-				Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
-				RW.C0=clerp(RW.C0,cf(rahx,rahy,rahz)*angles(math.rad(rarhx),math.rad(rarhy),math.rad(rarhz)),.3)
-				LW.C0=clerp(LW.C0,cf(lahx,lahy,lahz)*angles(math.rad(larhx),math.rad(larhy),math.rad(larhz)),.3)"]]
-		print(_G.convertthing)
-		script.Parent.Parent.Parent.convert["convert text"].Text = _G.convertthing
-		script.Parent.Parent.Parent.convert.Visible = true
-	end)
-	
-	
-	nonanimate = true
-	while nonanimate == true do 
-		t2hings = script.Parent.Parent
-		ra=t2hings.rightarm.Visible
-		la=t2hings.leftarm.Visible
-		lh=t2hings.leftleg.Visible
-		rh=t2hings.rightleg.Visible
-		main=t2hings.mainmian.Visible
-		t=t2hings.torso.Visible
-		taw=t2hings.hat1.Visible
-		taw2=t2hings.hat2.Visible
-		cond=script.Parent.Parent.Parent.animation
-		if t == true then
-			cond.torsoani.Visible = true
-			cond.Leftarmani.Visible = false
-			cond.rightlegani.Visible = false
-			cond.rightarmani.Visible = false
-			cond.leftlegani.Visible = false
-			cond.hat1ani.Visible = false
-			cond.hat2ani.Visible = false
-		end
-		if taw == true then
-			cond.torsoani.Visible = false
-			cond.Leftarmani.Visible = false
-			cond.rightlegani.Visible = false
-			cond.rightarmani.Visible = false
-			cond.leftlegani.Visible = false
-			cond.hat1ani.Visible = true
-			cond.hat2ani.Visible = false
-		end
-		if taw2 == true then
-			cond.torsoani.Visible = false
-			cond.Leftarmani.Visible = false
-			cond.rightlegani.Visible = false
-			cond.rightarmani.Visible = false
-			cond.leftlegani.Visible = false
-			cond.hat1ani.Visible = false
-			cond.hat2ani.Visible = true
-		end
-		if ra == true then
-			cond.torsoani.Visible = false
-			cond.Leftarmani.Visible = false
-			cond.rightlegani.Visible = false
-			cond.rightarmani.Visible = true
-			cond.leftlegani.Visible = false
-			cond.hat1ani.Visible = false
-			cond.hat2ani.Visible = false
-		end
-		if la == true then
-			cond.torsoani.Visible = false
-			cond.Leftarmani.Visible = true
-			cond.rightlegani.Visible = false
-			cond.rightarmani.Visible = false
-			cond.leftlegani.Visible = false
-			cond.hat1ani.Visible = false
-			cond.hat2ani.Visible = false
-		end
-		if lh == true then
-			cond.torsoani.Visible = false
-			cond.Leftarmani.Visible = false
-			cond.rightlegani.Visible = false
-			cond.rightarmani.Visible = false
-			cond.leftlegani.Visible = true
-			cond.hat1ani.Visible = false
-			cond.hat2ani.Visible = false
-		end
-		if rh == true then
-			cond.torsoani.Visible = false
-			cond.Leftarmani.Visible = false
-			cond.rightlegani.Visible = true
-			cond.rightarmani.Visible = false
-			cond.leftlegani.Visible = false
-			cond.hat1ani.Visible = false
-			cond.hat2ani.Visible = false
-		end
-		if main == true then
-			cond.torsoani.Visible = false
-			cond.Leftarmani.Visible = false
-			cond.rightlegani.Visible = false
-			cond.rightarmani.Visible = false
-			cond.leftlegani.Visible = false
-			cond.hat1ani.Visible = false
-			cond.hat2ani.Visible = false
-		end
-	
-	
-		rlan=script.Parent.Parent.Parent.animation.rightlegani
-		llan=script.Parent.Parent.Parent.animation.leftlegani
-		la=script.Parent.Parent.Parent.animation.Leftarmani
-		ra=script.Parent.Parent.Parent.animation.rightarmani
-		to=script.Parent.Parent.Parent.animation.torsoani
-		rhx = script.Parent.Parent.rightleg.rhxt.Text
-		rhy = script.Parent.Parent.rightleg.rhyt.Text
-		rhz = script.Parent.Parent.rightleg.rhzt.Text
-		rrhx = script.Parent.Parent.rightleg.rrhxt.Text
-		rrhy = script.Parent.Parent.rightleg.rrhyt.Text
-		rrhz = script.Parent.Parent.rightleg.rrhzt.Text
-	
-		lhx = script.Parent.Parent.leftleg.rhxt.Text
-		lhy = script.Parent.Parent.leftleg.rhyt.Text
-		lhz = script.Parent.Parent.leftleg.rhzt.Text
-		lrhx = script.Parent.Parent.leftleg.rrhxt.Text
-		lrhy = script.Parent.Parent.leftleg.rrhyt.Text
-		lrhz = script.Parent.Parent.leftleg.rrhzt.Text
-		rahx = script.Parent.Parent.rightarm.rhxt.Text
-		rahy = script.Parent.Parent.rightarm.rhyt.Text
-		rahz = script.Parent.Parent.rightarm.rhzt.Text
-		rarhx = script.Parent.Parent.rightarm.rrhxt.Text
-		rarhy = script.Parent.Parent.rightarm.rrhyt.Text
-		rarhz = script.Parent.Parent.rightarm.rrhzt.Text
-		lahx = script.Parent.Parent.leftarm.rhxt.Text
-		lahy = script.Parent.Parent.leftarm.rhyt.Text
-		lahz = script.Parent.Parent.leftarm.rhzt.Text
-		larhx = script.Parent.Parent.leftarm.rrhxt.Text
-		larhy = script.Parent.Parent.leftarm.rrhyt.Text
-		larhz = script.Parent.Parent.leftarm.rrhzt.Text
-		tahx = script.Parent.Parent.torso.rhxt.Text
-		tahy = script.Parent.Parent.torso.rhyt.Text
-		tahz = script.Parent.Parent.torso.rhzt.Text
-		tarhx = script.Parent.Parent.torso.rrhxt.Text
-		tarhy = script.Parent.Parent.torso.rrhyt.Text
-		tarhz = script.Parent.Parent.torso.rrhzt.Text
-		t=script.Parent.Parent.Parent.animation.torsoani
-		rla=rlan.rhxt.Text
-		rla2=rlan.rhyt.Text
-		rla3=rlan.rhzt.Text
-		rla4=rlan.rrhxt.Text
-		rla5=rlan.rrhyt.Text
-		rla6=rlan.rrhzt.Text
-		rhxs=rlan.rhxts.Text
-		rhys=rlan.rhyts.Text
-		rhzs=rlan.rhzts.Text
-		rrhxs=rlan.rrhxts.Text
-		rrhys=rlan.rrhyts.Text
-		rrhzs=rlan.rrhzts.Text
-		lla=llan.rhxt.Text
-		lla2=llan.rhyt.Text
-		lla3=llan.rhzt.Text
-		lla4=llan.rrhxt.Text
-		lla5=llan.rrhyt.Text
-		lla6=llan.rrhzt.Text
-		laa=la.rhxt.Text
-		laa2=la.rhyt.Text
-		laa3=la.rhzt.Text
-		laa4=la.rrhxt.Text
-		laa5=la.rrhyt.Text
-		laa6=la.rrhzt.Text
-		raa=ra.rhxt.Text
-		raa2=ra.rhyt.Text
-		raa3=ra.rhzt.Text
-		raa4=ra.rrhxt.Text
-		raa5=ra.rrhyt.Text
-		raa6=ra.rrhzt.Text
-		to=t.rhxt.Text
-		to2=t.rhyt.Text
-		to3=t.rhzt.Text
-		to4=t.rrhxt.Text
-		to5=t.rrhyt.Text
-		to6=t.rrhzt.Text
-		local change = 1
-		sine = sine + change
-		hx = script.Parent.Parent.hat1.rhxt.Text
-		hy = script.Parent.Parent.hat1.rhyt.Text
-		hz = script.Parent.Parent.hat1.rhzt.Text
-		hxr = script.Parent.Parent.hat1.rrhxt.Text
-		hyr = script.Parent.Parent.hat1.rrhyt.Text
-		hzr = script.Parent.Parent.hat1.rrhzt.Text
-		hx2 = script.Parent.Parent.hat2.rhxt.Text
-		hy2 = script.Parent.Parent.hat2.rhyt.Text
-		hz2 = script.Parent.Parent.hat2.rhzt.Text
-		hxr2 = script.Parent.Parent.hat2.rrhxt.Text
-		hyr2 = script.Parent.Parent.hat2.rrhyt.Text
-		hzr2 = script.Parent.Parent.hat2.rrhzt.Text
-		rrwq=script.Parent.Parent.Parent.animation.hat1ani
-		rhhx = rrwq.rhxt.Text
-		rhhy = rrwq.rhyt.Text
-		rhhz = rrwq.rhzt.Text
-		rhxr = rrwq.rrhxt.Text
-		rhyr = rrwq.rrhyt.Text
-		rhzr = rrwq.rrhzt.Text
-		rrwq2=script.Parent.Parent.Parent.animation.hat2ani
-		rhhx2 = rrwq2.rhxt.Text
-		rhhy2 = rrwq2.rhyt.Text
-		rhhz2 = rrwq2.rhzt.Text
-		rhxr2 = rrwq2.rrhxt.Text
-		rhyr2 = rrwq2.rrhyt.Text
-		rhzr2 = rrwq2.rrhzt.Text
-	
-	
-		allthings = tahx and tahy and tahz and tarhz and tarhy and tarhx and rarhz and rarhy and rarhx and lrhy and lrhz and lrhx and rrhz and rrhy and rrhx and rla and rla2 and rla3 and rhx and rhy and rhz and rla4 and rla5 and rla6 and lhx and lhy and lhz and rahx and rahy and rahz and lahx and lahy and lahz and tahx and tahy and tahz and lla and lla2 and lla3 and lla4 and lla5 and lla6  and laa and laa2  and laa3  and laa4  and laa5  and laa6  and raa  and raa2  and raa3  and raa4  and raa5 and raa6 and to and to2 and to3 and to4 and to5 and to6
-		if tonumber(tahx) then  else
-			tahx = "0"
-		end
-		if tonumber(tahy) then  else
-			tahy = "0"
-		end
-		if tonumber(tahz) then   else
-			tahz = "0"
-		end
-		if tonumber(hx) then  else
-			hx = "0"
-		end
-		if tonumber(hy) then  else
-			hy = "0"
-		end
-		if tonumber(hz) then   else
-			hz = "0"
-		end
-		if tonumber(hxr) then  else
-			hxr = "0"
-		end
-		if tonumber(hyr) then  else
-			hyr = "0"
-		end
-		if tonumber(hzr) then   else
-			hzr = "0"
-		end
-		--hat2
-		if tonumber(hx2) then  else
-			hx2 = "0"
-		end
-		if tonumber(hy2) then  else
-			hy2 = "0"
-		end
-		if tonumber(hz2) then   else
-			hz2 = "0"
-		end
-		if tonumber(hxr2) then  else
-			hxr2 = "0"
-		end
-		if tonumber(hyr2) then  else
-			hyr2 = "0"
-		end
-		if tonumber(hzr2) then   else
-			hzr2 = "0"
-		end
-		if tonumber(tarhx) then   else
-			tarhx = "0"
-		end
-		if tonumber(tarhy) then   else
-			tarhy = "0"
-		end
-		if tonumber(tarhz) then  else
-			tarhz = "0"
-		end
-		if tonumber(larhy) then   else
-			larhy = "0"
-		end
-		if tonumber(larhx) then   else
-			larhx = "0"
-		end
-		if tonumber(larhz) then   else
-			larhz = "0"
-		end
-		--oooooooooooooooooooo
-		if tonumber(lrhy) then   else
-			lrhy = "0"
-		end
-		if tonumber(lrhx) then   else
-			lrhx = "0"
-		end
-		if tonumber(lrhz) then   else
-			lrhz = "0"
-		end
-		if tonumber(rarhx) then   else
-			rarhx = "0"
-		end
-		if tonumber(rarhy) then   else
-			rarhy = "0"
-		end
-		if tonumber(rarhz) then   else
-			rarhz = "0"
-		end
-		if tonumber(rrhx) then   else
-			rrhx = "0"
-		end
-		if tonumber(rrhy) then   else
-			rrhy = "0"
-		end
-		if tonumber(rrhz) then   else
-			rrhz = "0"
-		end
-	
-		if tonumber(rla) then   else
-			rla = "0"
-		end
-		if tonumber(rla2) then   else
-			rla2 = "0"
-		end
-		if tonumber(rla3) then   else
-			rla3= "0"
-		end
-		if tonumber(rla4) then   else
-			rla4 = "0"
-		end
-		if tonumber(rla5) then   else
-			rla5 = "0"
-		end
-		if tonumber(rla6) then   else
-			rla6 = "0"
-		end
-		if tonumber(lhx) then  else
-			lhx = "0"
-		end
-		if tonumber(lhy) then  else
-			lhy = "0"
-		end
-		if tonumber(lhz) then else
-			lhz = "0"
-		end
-		if tonumber(rhx) then  else
-			rhx = "0"
-		end
-		if tonumber(rhy) then  else
-			rhy = "0"
-		end
-		if tonumber(rhz) then else
-			rhz = "0"
-		end
-		if tonumber(rahx)then   else
-			rahx = "0"
-		end
-		if tonumber(rahy) then  else
-			rahy = "0"
-		end
-		if tonumber(rahz) then  else
-			rahz = "0"
-		end
-		if tonumber(lahx) then  else
-			lahx = "0"
-		end
-		if tonumber(lahy) then  else
-			lahy = "0"
-		end
-		if tonumber(lahz) then  else
-			lahz = "0"
-		end
-		if tonumber(lla) then  else
-			lla = "0"
-		end
-		if tonumber(lla2)then  else
-			lla2 = "0"
-		end
-		if tonumber(lla3) then  else
-			lla3 = "0"
-		end
-		if tonumber(lla4) then  else
-			lla4 = "0"
-		end
-		if tonumber(lla5) then  else
-			lla5 = "0"
-		end
-		if tonumber(lla6) then  else
-			lla6 = "0"
-		end
-		if tonumber(laa) then  else
-			laa = "0"
-		end
-		if tonumber(laa2) then  else
-			laa2 = "0"
-		end
-		if tonumber(laa3) then  else
-			laa3 = "0"
-		end
-		if tonumber(laa4) then  else
-			laa4 = "0"
-		end
-		if tonumber(laa5) then  else
-			laa5 = "0"
-		end
-		if tonumber(laa6) then  else
-			laa6 = "0"
-		end
-		if tonumber(raa) then  else
-			raa = "0"
-		end
-		if tonumber(raa2) then  else
-			raa2 = "0"
-		end
-		if tonumber(raa3) then  else
-			raa3 = "0"
-		end
-		if tonumber(raa4) then  else
-			raa4 = "0"
-		end
-		if tonumber(raa5) then  else
-			raa5 = "0"
-		end
-		if tonumber(raa6) then  else
-			raa6 = "0"
-		end
-		if tonumber(to) then  else
-			to = "0"
-		end
-		if tonumber(to2) then  else
-			to2 = "0"
-		end
-		if tonumber(to3) then  else
-			to3 = "0"
-		end
-		if tonumber(to4) then  else
-			to4 = "0"
-		end
-		if tonumber(to5) then  else
-			to5 = "0"
-		end
-		if tonumber(to6) then  else
-			to6 = "0"
-		end
-		if tonumber(hx) then  else
-			hx = "0"
-		end
-		if tonumber(hy) then  else
-			hy = "0"
-		end
-		if tonumber(hz) then   else
-			hz = "0"
-		end
-		if tonumber(hxr) then  else
-			hxr = "0"
-		end
-		if tonumber(hyr) then  else
-			hyr = "0"
-		end
-		if tonumber(hzr) then   else
-			hzr = "0"
-		end
-		if tonumber(rhhx) then  else
-			rhhx = "0"
-		end
-		if tonumber(rhhy) then  else
-			rhhy = "0"
-		end
-		if tonumber(rhhz) then   else
-			rhhz = "0"
-		end
-		if tonumber(rhxr) then  else
-			rhxr = "0"
-		end
-		if tonumber(rhyr) then  else
-			rhyr = "0"
-		end
-		if tonumber(rhzr) then   else
-			rhzr = "0"
-		end
-		--hat 2
-		if tonumber(rhhx2) then  else
-			rhhx2 = "0"
-		end
-		if tonumber(rhhy2) then  else
-			rhhy2 = "0"
-		end
-		if tonumber(rhhz2) then   else
-			rhhz2 = "0"
-		end
-		if tonumber(rhxr2) then  else
-			rhxr2 = "0"
-		end
-		if tonumber(rhyr2) then  else
-			rhyr2 = "0"
-		end
-		if tonumber(rhzr2) then   else
-			rhzr2 = "0"
-		end
-				
-		
-		wait()
-		--per bldy : or rla == ""  or rla2 == ""  or rla3 == "" or rla == "."  or rla2 == "."  or rla3 == "." or rla == "-"  or rla2 == "-"  or rla3 == "-"  or rla == "-."  or rla2 == "-."  or rla3 == "-."or rla4 == ""  or rla5 == ""  or rla6 == ""or rla4 == "-"  or rla5 == "-"  or rla6 == "-"  or rla4 == "."  or rla5 == "."  or rla6 == "."or rla4 == "-."  or rla5 == "-."  or rla6 == "-."
-	
-	
-		siner = rhxs
-		sinerhx = sine + change
-		RH.C0=clerp(RH.C0,cf(rhx + rla * math.cos(sinerhx / 6),rhy + rla2 * math.cos(sine / 6),rhz + rla3 * math.cos(sine / 6))*angles(math.rad(rrhx + rla4 * math.cos(sine / 6)),math.rad(rrhy + rla5 * math.cos(sine / 6)),math.rad(rrhz + rla6 * math.cos(sine / 6))),.2)
-		LH.C0=clerp(LH.C0,cf(lhx + lla * math.cos(sine / 6),lhy + lla2 * math.cos(sine / 6),lhz + lla3 * math.cos(sine / 6))*angles(math.rad(lrhx + lla4 * math.cos(sine / 6)),math.rad(lrhy + lla5 * math.cos(sine / 6)),math.rad(lrhz + lla6 * math.cos(sine / 6))),.2)
-		RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx + to * math.cos(sine / 6),tahy + to2 * math.cos(sine / 6),tahz + to3 * math.cos(sine / 6))*angles(math.rad(tarhx + to4 * math.cos(sine / 6)),math.rad(tarhy + to5 * math.cos(sine / 6)),math.rad(tarhz + to6 * math.cos(sine / 6))),.3)
-		Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
-		RW.C0=clerp(RW.C0,cf(rahx + raa * math.cos(sine / 6),rahy + raa2 * math.cos(sine / 6),rahz + raa3 * math.cos(sine / 6))*angles(math.rad(rarhx + raa4 * math.cos(sine / 6)),math.rad(rarhy + raa5 * math.cos(sine / 6)),math.rad(rarhz + raa6 * math.cos(sine / 6))),.3)
-		LW.C0=clerp(LW.C0,cf(lahx + laa * math.cos(sine / 6),lahy + laa2 * math.cos(sine / 6),lahz + laa3 * math.cos(sine / 6))*angles(math.rad(larhx + laa4 * math.cos(sine / 6)),math.rad(larhy + laa5 * math.cos(sine / 6)),math.rad(larhz + laa6 * math.cos(sine / 6))),.3)		
-	
-		if _G.hat1tf == true then
-			attackment1 = _G.hat1atach
-	
-			char = game.Players.LocalPlayer.Character
-			char[hat].Handle.AccessoryWeld.Part1 = char[attackment1]
-			char[hat].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
-			char[hat].Handle.AccessoryWeld.C0 = cf(hx+rhhx*math.cos(sine/6),hy+rhhy*math.cos(sine/6),hz+rhhz*math.cos(sine/6))*CFrame.Angles(math.rad(hxr+rhxr*math.cos(sine/6)),math.rad(hyr+rhyr*math.cos(sine/6)),math.rad(hzr+rhzr*math.cos(sine/6)))
-	
-	
-		end
-		if _G.hat2tf == true then
-			attackment1 = _G.hat2atach
-			char = game.Players.LocalPlayer.Character
-			char[hat2].Handle.AccessoryWeld.Part1 = char[attackment1]
-			char[hat2].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
-			char[hat2].Handle.AccessoryWeld.C0 = cf(hx2+rhhx2*math.cos(sine/6),hy2+rhhy2*math.cos(sine/6),hz2+rhhz2*math.cos(sine/6))*CFrame.Angles(math.rad(hxr2+rhxr2*math.cos(sine/6)),math.rad(hyr2+rhyr2*math.cos(sine/6)),math.rad(hzr2+rhzr2*math.cos(sine/6)))
-	
-	
-		end
-	
-	
-	
-	
-	end
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/idk%20test%20lol"))()
 end
-coroutine.wrap(LTYAOF_fake_script)()
-local function ODMIR_fake_script() -- animator.closepage.Script 
+coroutine.wrap(KFDZ_fake_script)()
+local function WTPCY_fake_script() -- animator.closepage.Script 
 	local script = Instance.new('Script', animator.closepage)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4794,8 +4461,8 @@ local function ODMIR_fake_script() -- animator.closepage.Script
 	end)
 	
 end
-coroutine.wrap(ODMIR_fake_script)()
-local function BKXTDRI_fake_script() -- animator.leftkeg.Script 
+coroutine.wrap(WTPCY_fake_script)()
+local function LZCALIF_fake_script() -- animator.leftkeg.Script 
 	local script = Instance.new('Script', animator.leftkeg)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4803,8 +4470,8 @@ local function BKXTDRI_fake_script() -- animator.leftkeg.Script
 		script.Parent.Parent.Parent.leftleg.Visible = true
 	end)
 end
-coroutine.wrap(BKXTDRI_fake_script)()
-local function CQTZEK_fake_script() -- animator.rightleg_2.Script 
+coroutine.wrap(LZCALIF_fake_script)()
+local function UTWY_fake_script() -- animator.rightleg_2.Script 
 	local script = Instance.new('Script', animator.rightleg_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4812,8 +4479,8 @@ local function CQTZEK_fake_script() -- animator.rightleg_2.Script
 		script.Parent.Parent.Parent.rightleg.Visible = true
 	end)
 end
-coroutine.wrap(CQTZEK_fake_script)()
-local function KLLV_fake_script() -- animator.torso_2.Script 
+coroutine.wrap(UTWY_fake_script)()
+local function JSSEUX_fake_script() -- animator.torso_2.Script 
 	local script = Instance.new('Script', animator.torso_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4821,8 +4488,8 @@ local function KLLV_fake_script() -- animator.torso_2.Script
 		script.Parent.Parent.Parent.torso.Visible = true
 	end)
 end
-coroutine.wrap(KLLV_fake_script)()
-local function NTIL_fake_script() -- animator.rightarm_2.Script 
+coroutine.wrap(JSSEUX_fake_script)()
+local function TZEHYT_fake_script() -- animator.rightarm_2.Script 
 	local script = Instance.new('Script', animator.rightarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4830,8 +4497,8 @@ local function NTIL_fake_script() -- animator.rightarm_2.Script
 		script.Parent.Parent.Parent.rightarm.Visible = true
 	end)
 end
-coroutine.wrap(NTIL_fake_script)()
-local function IPPYXT_fake_script() -- animator.leftarm_2.Script 
+coroutine.wrap(TZEHYT_fake_script)()
+local function TSHI_fake_script() -- animator.leftarm_2.Script 
 	local script = Instance.new('Script', animator.leftarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4839,8 +4506,8 @@ local function IPPYXT_fake_script() -- animator.leftarm_2.Script
 		script.Parent.Parent.Parent.leftarm.Visible = true
 	end)
 end
-coroutine.wrap(IPPYXT_fake_script)()
-local function CLBKO_fake_script() -- animator.hats.Script 
+coroutine.wrap(TSHI_fake_script)()
+local function VLCFXZG_fake_script() -- animator.hats.Script 
 	local script = Instance.new('Script', animator.hats)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4848,24 +4515,24 @@ local function CLBKO_fake_script() -- animator.hats.Script
 		script.Parent.Parent.Parent["hat frame"].Visible = true
 	end)
 end
-coroutine.wrap(CLBKO_fake_script)()
-local function RTYLVT_fake_script() -- animator.animation.LocalScript 
+coroutine.wrap(VLCFXZG_fake_script)()
+local function KVDBMK_fake_script() -- animator.animation.LocalScript 
 	local script = Instance.new('LocalScript', animator.animation)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.layouts.Visible = true
 	end)
 end
-coroutine.wrap(RTYLVT_fake_script)()
-local function BRVVGLB_fake_script() -- animator.openhats.LocalScript 
+coroutine.wrap(KVDBMK_fake_script)()
+local function DFUNKS_fake_script() -- animator.openhats.LocalScript 
 	local script = Instance.new('LocalScript', animator.openhats)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.main["hat frame"].Visible = true
 	end)
 end
-coroutine.wrap(BRVVGLB_fake_script)()
-local function YHCLQKC_fake_script() -- animator.hatsname.open hat one 
+coroutine.wrap(DFUNKS_fake_script)()
+local function IGRAE_fake_script() -- animator.hatsname.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4874,8 +4541,8 @@ local function YHCLQKC_fake_script() -- animator.hatsname.open hat one
 		
 	end)
 end
-coroutine.wrap(YHCLQKC_fake_script)()
-local function FTQBL_fake_script() -- animator.hatsname_2.open hat one 
+coroutine.wrap(IGRAE_fake_script)()
+local function DNNE_fake_script() -- animator.hatsname_2.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4884,24 +4551,34 @@ local function FTQBL_fake_script() -- animator.hatsname_2.open hat one
 		
 	end)
 end
-coroutine.wrap(FTQBL_fake_script)()
-local function HWRR_fake_script() -- animator.CLOSE.LocalScript 
+coroutine.wrap(DNNE_fake_script)()
+local function UBOJSB_fake_script() -- animator.hatsname_3.open hat one 
+	local script = Instance.new('LocalScript', animator.hatsname_3)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	
+			script.Parent.Parent.Parent["hat3 settings"].Visible = true
+		
+	end)
+end
+coroutine.wrap(UBOJSB_fake_script)()
+local function KBRQBPE_fake_script() -- animator.CLOSE.LocalScript 
 	local script = Instance.new('LocalScript', animator.CLOSE)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(HWRR_fake_script)()
-local function WSBOI_fake_script() -- animator.CLOSE_2.close 
+coroutine.wrap(KBRQBPE_fake_script)()
+local function PPDD_fake_script() -- animator.CLOSE_2.close 
 	local script = Instance.new('LocalScript', animator.CLOSE_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(WSBOI_fake_script)()
-local function OQFWFT_fake_script() -- animator.done.done2 
+coroutine.wrap(PPDD_fake_script)()
+local function KBTJUPZ_fake_script() -- animator.done.done2 
 	local script = Instance.new('LocalScript', animator.done)
 
 	
@@ -4918,8 +4595,8 @@ local function OQFWFT_fake_script() -- animator.done.done2
 		script.Parent.Parent.Parent.hat2.Visible = true
 	end)
 end
-coroutine.wrap(OQFWFT_fake_script)()
-local function TGYRH_fake_script() -- animator.nomesh.LocalScript 
+coroutine.wrap(KBTJUPZ_fake_script)()
+local function OWYRSBI_fake_script() -- animator.nomesh.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4927,16 +4604,16 @@ local function TGYRH_fake_script() -- animator.nomesh.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.SpecialMesh:Destroy()
 	end)
 end
-coroutine.wrap(TGYRH_fake_script)()
-local function LRZN_fake_script() -- animator.CLOSE_3.close 
+coroutine.wrap(OWYRSBI_fake_script)()
+local function GKCN_fake_script() -- animator.CLOSE_3.close 
 	local script = Instance.new('LocalScript', animator.CLOSE_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(LRZN_fake_script)()
-local function OOGZ_fake_script() -- animator.done_2.done 
+coroutine.wrap(GKCN_fake_script)()
+local function UJISBX_fake_script() -- animator.done_2.done 
 	local script = Instance.new('LocalScript', animator.done_2)
 
 	
@@ -4953,8 +4630,8 @@ local function OOGZ_fake_script() -- animator.done_2.done
 		script.Parent.Parent.Parent.hat1.Visible = true
 	end)
 end
-coroutine.wrap(OOGZ_fake_script)()
-local function PINFWGR_fake_script() -- animator.nomesh_2.LocalScript 
+coroutine.wrap(UJISBX_fake_script)()
+local function WRAD_fake_script() -- animator.nomesh_2.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4962,34 +4639,34 @@ local function PINFWGR_fake_script() -- animator.nomesh_2.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.SpecialMesh:Destroy()
 	end)
 end
-coroutine.wrap(PINFWGR_fake_script)()
-local function XNKS_fake_script() -- animator.CLOSE_4.close 
+coroutine.wrap(WRAD_fake_script)()
+local function JXKSOD_fake_script() -- animator.CLOSE_4.close 
 	local script = Instance.new('LocalScript', animator.CLOSE_4)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(XNKS_fake_script)()
-local function IFRMAO_fake_script() -- animator.done_3.done 
+coroutine.wrap(JXKSOD_fake_script)()
+local function HIYTP_fake_script() -- animator.done_3.done 
 	local script = Instance.new('LocalScript', animator.done_3)
 
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		_G.hat1atach = script.Parent.Parent.enterthin2.Text
-		hat = script.Parent.Parent.enterthin.Text
+		_G.hat3atach = script.Parent.Parent.enterthin2.Text
+		hat3 = script.Parent.Parent.enterthin.Text
 		
 	
 		script.Parent.Parent.Parent.mainmian.Visible = false
 		
 		script.Parent.Parent.Visible = false
 	
-		_G.hat1tf = true
-		script.Parent.Parent.Parent.hat1.Visible = true
+		_G.hat3tf = true
+		script.Parent.Parent.Parent.hat3.Visible = true
 	end)
 end
-coroutine.wrap(IFRMAO_fake_script)()
-local function EYSG_fake_script() -- animator.nomesh_3.LocalScript 
+coroutine.wrap(HIYTP_fake_script)()
+local function LUOIRAV_fake_script() -- animator.nomesh_3.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4997,12 +4674,12 @@ local function EYSG_fake_script() -- animator.nomesh_3.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.SpecialMesh:Destroy()
 	end)
 end
-coroutine.wrap(EYSG_fake_script)()
-local function CMBU_fake_script() -- animator.CLOSE_5.LocalScript 
+coroutine.wrap(LUOIRAV_fake_script)()
+local function AJOC_fake_script() -- animator.CLOSE_5.LocalScript 
 	local script = Instance.new('LocalScript', animator.CLOSE_5)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(CMBU_fake_script)()
+coroutine.wrap(AJOC_fake_script)()
