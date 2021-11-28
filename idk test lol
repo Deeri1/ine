@@ -225,12 +225,21 @@ script.Parent.MouseButton1Click:Connect(function()
 	hatonehat4 = script.Parent.Parent["hat4 settings"].enterthin.Text
 	hatonehat5 = script.Parent.Parent["hat5 settings"].enterthin.Text
 	hatonehat6 = script.Parent.Parent["hat6 settings"].enterthin.Text
+	hatonehat7 = script.Parent.Parent["hat7 settings"].enterthin.Text
+	hatonehat8 = script.Parent.Parent["hat8 settings"].enterthin.Text
+	hatonehat9 = script.Parent.Parent["hat9 settings"].enterthin.Text
+	hatonehat10 = script.Parent.Parent["hat10 settings"].enterthin.Text
 
 	hat2 = hatonehat2
 	hat3 = hatonehat3
 	hat4 = hatonehat4
 	hat5 = hatonehat5
 	hat6 = hatonehat6
+	--
+	hat7 = hatonehat3
+	hat8 = hatonehat4
+	hat9 = hatonehat5
+	hat10 = hatonehat6
 
 	attackment1 = _G.hat1atach
 	attackment2 = _G.hat2atach
@@ -238,6 +247,11 @@ script.Parent.MouseButton1Click:Connect(function()
 	attackment4 = _G.hat4atach
 	attackment5 = _G.hat5atach
 	attackment6 = _G.hat6atach
+	
+	attackment7 = _G.hat7atach
+	attackment8 = _G.hat8atach
+	attackment9 = _G.hat9atach
+	attackment10 = _G.hat10atach
 	if _G.hat1tf == true then
 	_G.hate1 = ("char = game.Players.LocalPlayer.Character \n char['"..hat.."'].Handle.AccessoryWeld.Part1 = char['"..attackment1.."'] \n char['"..hat.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat.."'].Handle.AccessoryWeld.C0 = cf("..hx.." + "..rhhx.." * math.cos(sine / 6),"..hy.." + "..rhhy.." * math.cos(sine / 6),"..hz.." + "..rhhz.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr.." + "..rhxr.." * math.cos(sine / 6)), "..hyr.." + "..rhyr.." * math.cos(sine / 6), "..hzr.." + "..rhzr.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
@@ -255,6 +269,19 @@ script.Parent.MouseButton1Click:Connect(function()
 	end
 	if _G.hat6tf == true then
 		_G.hate6 = ("char = game.Players.LocalPlayer.Character \n char['"..hat6.."'].Handle.AccessoryWeld.Part1 = char['"..attackment6.."'] \n char['"..hat6.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat6.."'].Handle.AccessoryWeld.C0 = cf("..hx6.." + "..rhhx6.." * math.cos(sine / 6),"..hy6.." + "..rhhy6.." * math.cos(sine / 6),"..hz6.." + "..rhhz6.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr6.." + "..rhxr6.." * math.cos(sine / 6)), "..hyr6.." + "..rhyr6.." * math.cos(sine / 6), "..hzr6.." + "..rhzr6.." * math.cos(sine / 6)) \n c.Anchored = false end")
+	end
+	--
+	if _G.hat7tf == true then
+		_G.hate7 = ("char = game.Players.LocalPlayer.Character \n char['"..hat7.."'].Handle.AccessoryWeld.Part1 = char['"..attackment7.."'] \n char['"..hat7.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat7.."'].Handle.AccessoryWeld.C0 = cf("..hx7.." + "..rhhx7.." * math.cos(sine / 6),"..hy7.." + "..rhhy7.." * math.cos(sine / 6),"..hz7.." + "..rhhz7.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr7.." + "..rhxr7.." * math.cos(sine / 6)), "..hyr7.." + "..rhyr7.." * math.cos(sine / 6), "..hzr7.." + "..rhzr7.." * math.cos(sine / 6)) \n c.Anchored = false end")
+	end
+	if _G.hat8tf == true then
+		_G.hate8 = ("char = game.Players.LocalPlayer.Character \n char['"..hat8.."'].Handle.AccessoryWeld.Part1 = char['"..attackment8.."'] \n char['"..hat8.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat8.."'].Handle.AccessoryWeld.C0 = cf("..hx8.." + "..rhhx8.." * math.cos(sine / 6),"..hy8.." + "..rhhy8.." * math.cos(sine / 6),"..hz8.." + "..rhhz8.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr8.." + "..rhxr8.." * math.cos(sine / 6)), "..hyr8.." + "..rhyr8.." * math.cos(sine / 6), "..hzr8.." + "..rhzr8.." * math.cos(sine / 6)) \n c.Anchored = false end")
+	end
+	if _G.hat9tf == true then
+		_G.hate9 = ("char = game.Players.LocalPlayer.Character \n char['"..hat9.."'].Handle.AccessoryWeld.Part1 = char['"..attackment9.."'] \n char['"..hat9.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat9.."'].Handle.AccessoryWeld.C0 = cf("..hx9.." + "..rhhx9.." * math.cos(sine / 6),"..hy9.." + "..rhhy9.." * math.cos(sine / 6),"..hz9.." + "..rhhz9.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr9.." + "..rhxr9.." * math.cos(sine / 6)), "..hyr9.." + "..rhyr9.." * math.cos(sine / 6), "..hzr9.." + "..rhzr9.." * math.cos(sine / 6)) \n c.Anchored = false end")
+	end
+	if _G.hat10tf == true then
+		_G.hate10 = ("char = game.Players.LocalPlayer.Character \n char['"..hat10.."'].Handle.AccessoryWeld.Part1 = char['"..attackment10.."'] \n char['"..hat10.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat10.."'].Handle.AccessoryWeld.C0 = cf("..hx10.." + "..rhhx10.." * math.cos(sine / 6),"..hy10.." + "..rhhy10.." * math.cos(sine / 6),"..hz10.." + "..rhhz10.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr10.." + "..rhxr10.." * math.cos(sine / 6)), "..hyr10.." + "..rhyr10.." * math.cos(sine / 6), "..hzr10.." + "..rhzr10.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
 
 
@@ -280,6 +307,10 @@ while nonanimate == true do
 	taw4=t2hings.hat4.Visible
 	taw5=t2hings.hat5.Visible
 	taw6=t2hings.hat6.Visible
+	taw7=t2hings.hat7.Visible
+	taw8=t2hings.hat8.Visible
+	taw9=t2hings.hat9.Visible
+	taw10=t2hings.hat10.Visible
 	cond=script.Parent.Parent.Parent.animation
 	if t == true then
 		cond.torsoani.Visible = true
@@ -293,6 +324,10 @@ while nonanimate == true do
 		cond.hat4ani.Visible = false
 		cond.hat5ani.Visible = false
 		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
 	if taw == true then
 		cond.torsoani.Visible = false
@@ -306,6 +341,10 @@ while nonanimate == true do
 		cond.hat4ani.Visible = false
 		cond.hat5ani.Visible = false
 		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
 	if taw2 == true then
 		cond.torsoani.Visible = false
@@ -319,6 +358,10 @@ while nonanimate == true do
 		cond.hat4ani.Visible = false
 		cond.hat5ani.Visible = false
 		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
 	if taw3 == true then
 		cond.torsoani.Visible = false
@@ -332,6 +375,10 @@ while nonanimate == true do
 		cond.hat4ani.Visible = false
 		cond.hat5ani.Visible = false
 		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
 	if taw4 == true then
 		cond.torsoani.Visible = false
@@ -345,7 +392,81 @@ while nonanimate == true do
 		cond.hat4ani.Visible = true
 		cond.hat5ani.Visible = false
 		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
+	--
+	if taw10 == true then
+		cond.torsoani.Visible = false
+		cond.Leftarmani.Visible = false
+		cond.rightlegani.Visible = false
+		cond.rightarmani.Visible = false
+		cond.leftlegani.Visible = false
+		cond.hat1ani.Visible = false
+		cond.hat3ani.Visible = false
+		cond.hat2ani.Visible = false
+		cond.hat4ani.Visible = false
+		cond.hat5ani.Visible = false
+		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = true
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
+	end
+	if taw7 == true then
+		cond.torsoani.Visible = false
+		cond.Leftarmani.Visible = false
+		cond.rightlegani.Visible = false
+		cond.rightarmani.Visible = false
+		cond.leftlegani.Visible = false
+		cond.hat1ani.Visible = false
+		cond.hat3ani.Visible = false
+		cond.hat2ani.Visible = false
+		cond.hat4ani.Visible = false
+		cond.hat5ani.Visible = false
+		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = true
+	end
+	if taw8 == true then
+		cond.torsoani.Visible = false
+		cond.Leftarmani.Visible = false
+		cond.rightlegani.Visible = false
+		cond.rightarmani.Visible = false
+		cond.leftlegani.Visible = false
+		cond.hat1ani.Visible = false
+		cond.hat2ani.Visible = false
+		cond.hat3ani.Visible = false
+		cond.hat4ani.Visible = false
+		cond.hat5ani.Visible = false
+		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = true
+		cond.hat7ani.Visible = false
+	end
+	if taw9 == true then
+		cond.torsoani.Visible = false
+		cond.Leftarmani.Visible = false
+		cond.rightlegani.Visible = false
+		cond.rightarmani.Visible = false
+		cond.leftlegani.Visible = false
+		cond.hat1ani.Visible = true
+		cond.hat3ani.Visible = false
+		cond.hat2ani.Visible = false
+		cond.hat4ani.Visible = false
+		cond.hat5ani.Visible = false
+		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = true
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
+	end
+	
 	if taw5 == true then
 		cond.torsoani.Visible = false
 		cond.Leftarmani.Visible = false
@@ -358,6 +479,10 @@ while nonanimate == true do
 		cond.hat4ani.Visible = false
 		cond.hat5ani.Visible = true	
 		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
 	if taw6 == true then
 		cond.torsoani.Visible = false
@@ -371,6 +496,10 @@ while nonanimate == true do
 		cond.hat4ani.Visible = false
 		cond.hat5ani.Visible = false
 		cond.hat6ani.Visible = true	
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
 	if ra == true then
 		cond.torsoani.Visible = false
@@ -384,6 +513,10 @@ while nonanimate == true do
 		cond.hat4ani.Visible = false
 		cond.hat5ani.Visible = false
 		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
 	if la == true then
 		cond.torsoani.Visible = false
@@ -397,6 +530,10 @@ while nonanimate == true do
 		cond.hat4ani.Visible = false
 		cond.hat5ani.Visible = false
 		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
 	if lh == true then
 		cond.torsoani.Visible = false
@@ -410,6 +547,10 @@ while nonanimate == true do
 		cond.hat4ani.Visible = false
 		cond.hat5ani.Visible = false
 		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
 	if rh == true then
 		cond.torsoani.Visible = false
@@ -423,6 +564,10 @@ while nonanimate == true do
 		cond.hat4ani.Visible = false
 		cond.hat5ani.Visible = false
 		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
 	if main == true then
 		cond.torsoani.Visible = false
@@ -436,6 +581,10 @@ while nonanimate == true do
 		cond.hat4ani.Visible = false
 		cond.hat5ani.Visible = false
 		cond.hat6ani.Visible = false
+		cond.hat10ani.Visible = false
+		cond.hat9ani.Visible = false
+		cond.hat8ani.Visible = false
+		cond.hat7ani.Visible = false
 	end
 
 
@@ -550,6 +699,30 @@ while nonanimate == true do
 	hxr6 = script.Parent.Parent.hat6.rrhxt.Text
 	hyr6 = script.Parent.Parent.hat6.rrhyt.Text
 	hzr6 = script.Parent.Parent.hat6.rrhzt.Text
+	hx7 = script.Parent.Parent.hat7.rhxt.Text
+	hy7 = script.Parent.Parent.hat7.rhyt.Text
+	hz7 = script.Parent.Parent.hat7.rhzt.Text
+	hxr7 = script.Parent.Parent.hat7.rrhxt.Text
+	hyr7 = script.Parent.Parent.hat7.rrhyt.Text
+	hzr7 = script.Parent.Parent.hat7.rrhzt.Text
+	hx8 = script.Parent.Parent.hat8.rhxt.Text
+	hy8 = script.Parent.Parent.hat8.rhyt.Text
+	hz8 = script.Parent.Parent.hat8.rhzt.Text
+	hxr8 = script.Parent.Parent.hat8.rrhxt.Text
+	hyr8 = script.Parent.Parent.hat8.rrhyt.Text
+	hzr8 = script.Parent.Parent.hat8.rrhzt.Text
+	hx9 = script.Parent.Parent.hat9.rhxt.Text
+	hy9 = script.Parent.Parent.hat9.rhyt.Text
+	hz9 = script.Parent.Parent.hat9.rhzt.Text
+	hxr9 = script.Parent.Parent.hat9.rrhxt.Text
+	hyr9 = script.Parent.Parent.hat9.rrhyt.Text
+	hzr9 = script.Parent.Parent.hat9.rrhzt.Text
+	hx10 = script.Parent.Parent.hat10.rhxt.Text
+	hy10 = script.Parent.Parent.hat10.rhyt.Text
+	hz10 = script.Parent.Parent.hat10.rhzt.Text
+	hxr10 = script.Parent.Parent.hat10.rrhxt.Text
+	hyr10 = script.Parent.Parent.hat10.rrhyt.Text
+	hzr10 = script.Parent.Parent.hat10.rrhzt.Text
 	rrwq=script.Parent.Parent.Parent.animation.hat1ani
 	rhhx = rrwq.rhxt.Text
 	rhhy = rrwq.rhyt.Text
@@ -592,6 +765,34 @@ while nonanimate == true do
 	rhxr6 = rrwq6.rrhxt.Text
 	rhyr6 = rrwq6.rrhyt.Text
 	rhzr6 = rrwq6.rrhzt.Text
+	rrwq7=script.Parent.Parent.Parent.animation.hat7ani
+	rhhx7 = rrwq7.rhxt.Text
+	rhhy7 = rrwq7.rhyt.Text
+	rhhz7 = rrwq7.rhzt.Text
+	rhxr7 = rrwq7.rrhxt.Text
+	rhyr7 = rrwq7.rrhyt.Text
+	rhzr7 = rrwq7.rrhzt.Text
+	rrwq8=script.Parent.Parent.Parent.animation.hat8ani
+	rhhx8 = rrwq8.rhxt.Text
+	rhhy8 = rrwq8.rhyt.Text
+	rhhz8 = rrwq8.rhzt.Text
+	rhxr8 = rrwq8.rrhxt.Text
+	rhyr8 = rrwq8.rrhyt.Text
+	rhzr8 = rrwq8.rrhzt.Text
+	rrwq9=script.Parent.Parent.Parent.animation.hat9ani
+	rhhx9 = rrwq9.rhxt.Text
+	rhhy9 = rrwq9.rhyt.Text
+	rhhz9 = rrwq9.rhzt.Text
+	rhxr9 = rrwq9.rrhxt.Text
+	rhyr9 = rrwq9.rrhyt.Text
+	rhzr9 = rrwq9.rrhzt.Text
+	rrwq10=script.Parent.Parent.Parent.animation.hat10ani
+	rhhx10 = rrwq10.rhxt.Text
+	rhhy10 = rrwq10.rhyt.Text
+	rhhz10 = rrwq10.rhzt.Text
+	rhxr10 = rrwq10.rrhxt.Text
+	rhyr10 = rrwq10.rrhyt.Text
+	rhzr10 = rrwq10.rrhzt.Text
 
 
 	allthings = tahx and tahy and tahz and tarhz and tarhy and tarhx and rarhz and rarhy and rarhx and lrhy and lrhz and lrhx and rrhz and rrhy and rrhx and rla and rla2 and rla3 and rhx and rhy and rhz and rla4 and rla5 and rla6 and lhx and lhy and lhz and rahx and rahy and rahz and lahx and lahy and lahz and tahx and tahy and tahz and lla and lla2 and lla3 and lla4 and lla5 and lla6  and laa and laa2  and laa3  and laa4  and laa5  and laa6  and raa  and raa2  and raa3  and raa4  and raa5 and raa6 and to and to2 and to3 and to4 and to5 and to6
@@ -736,6 +937,83 @@ while nonanimate == true do
 	if tonumber(hzr6) then   else
 		hzr6 = "0"
 	end
+	--hat 7
+	if tonumber(hx7) then  else
+		hx7 = "0"
+	end
+	if tonumber(hy7) then  else
+		hy7 = "0"
+	end
+	if tonumber(hz7) then   else
+		hz7 = "0"
+	end
+	if tonumber(hxr7) then  else
+		hxr7 = "0"
+	end
+	if tonumber(hyr7) then  else
+		hyr7 = "0"
+	end
+	if tonumber(hzr7) then   else
+		hzr7 = "0"
+	end
+	--hat 8
+	if tonumber(hx8) then  else
+		hx8 = "0"
+	end
+	if tonumber(hy8) then  else
+		hy8 = "0"
+	end
+	if tonumber(hz8) then   else
+		hz8 = "0"
+	end
+	if tonumber(hxr8) then  else
+		hxr8 = "0"
+	end
+	if tonumber(hyr8) then  else
+		hyr8 = "0"
+	end
+	if tonumber(hzr8) then   else
+		hzr8 = "0"
+	end
+	-- hat 9
+	if tonumber(hx9) then  else
+		hx9 = "0"
+	end
+	if tonumber(hy9) then  else
+		hy9 = "0"
+	end
+	if tonumber(hz9) then   else
+		hz9 = "0"
+	end
+	if tonumber(hxr9) then  else
+		hxr9 = "0"
+	end
+	if tonumber(hyr9) then  else
+		hyr9 = "0"
+	end
+	if tonumber(hzr9) then   else
+		hzr9 = "0"
+	end
+	--hat 10
+	if tonumber(hx10) then  else
+		hx6 = "0"
+	end
+	if tonumber(hy10) then  else
+		hy6 = "0"
+	end
+	if tonumber(hz10) then   else
+		hz6 = "0"
+	end
+	if tonumber(hxr10) then  else
+		hxr6 = "0"
+	end
+	if tonumber(hyr10) then  else
+		hyr6 = "0"
+	end
+	if tonumber(hzr10) then   else
+		hzr6 = "0"
+	end
+	--
 	if tonumber(tarhx) then   else
 		tarhx = "0"
 	end
@@ -1002,7 +1280,120 @@ while nonanimate == true do
 	if tonumber(rhzr4) then   else
 		rhzr4 = "0"
 	end	
-	
+	--hat 5
+	if tonumber(rhhx5) then  else
+		rhhx5 = "0"
+	end
+	if tonumber(rhhy5) then  else
+		rhhy5 = "0"
+	end
+	if tonumber(rhhz5) then   else
+		rhhz5 = "0"
+	end
+	if tonumber(rhxr5) then  else
+		rhxr5 = "0"
+	end
+	if tonumber(rhyr5) then  else
+		rhyr5 = "0"
+	end
+	if tonumber(rhzr5) then   else
+		rhzr5 = "0"
+	end	
+	--hat 6
+	if tonumber(rhhx6) then  else
+		rhhx6 = "0"
+	end
+	if tonumber(rhhy6) then  else
+		rhhy6 = "0"
+	end
+	if tonumber(rhhz6) then   else
+		rhhz6 = "0"
+	end
+	if tonumber(rhxr6) then  else
+		rhxr6 = "0"
+	end
+	if tonumber(rhyr6) then  else
+		rhyr6 = "0"
+	end
+	if tonumber(rhzr6) then   else
+		rhzr6 = "0"
+	end	
+	--hat7
+	if tonumber(rhhx7) then  else
+		rhhx7 = "0"
+	end
+	if tonumber(rhhy7) then  else
+		rhhy7 = "0"
+	end
+	if tonumber(rhhz7) then   else
+		rhhz7 = "0"
+	end
+	if tonumber(rhxr7) then  else
+		rhxr7 = "0"
+	end
+	if tonumber(rhyr7) then  else
+		rhyr7 = "0"
+	end
+	if tonumber(rhzr7) then   else
+		rhzr7 = "0"
+	end	
+	--hat 8
+	if tonumber(rhhx8) then  else
+		rhhx8 = "0"
+	end
+	if tonumber(rhhy8) then  else
+		rhhy8 = "0"
+	end
+	if tonumber(rhhz8) then   else
+		rhhz8 = "0"
+	end
+	if tonumber(rhxr8) then  else
+		rhxr8 = "0"
+	end
+	if tonumber(rhyr8) then  else
+		rhyr8 = "0"
+	end
+	if tonumber(rhzr8) then   else
+		rhzr8 = "0"
+	end	
+	--hat9
+	if tonumber(rhhx9) then  else
+		rhhx9 = "0"
+	end
+	if tonumber(rhhy9) then  else
+		rhhy9 = "0"
+	end
+	if tonumber(rhhz9) then   else
+		rhhz9 = "0"
+	end
+	if tonumber(rhxr9) then  else
+		rhxr9 = "0"
+	end
+	if tonumber(rhyr9) then  else
+		rhyr9 = "0"
+	end
+	if tonumber(rhzr9) then   else
+		rhzr9 = "0"
+	end	
+	--hat 10
+	if tonumber(rhhx10) then  else
+		rhhx10 = "0"
+	end
+	if tonumber(rhhy10) then  else
+		rhhy10 = "0"
+	end
+	if tonumber(rhhz10) then   else
+		rhhz10 = "0"
+	end
+	if tonumber(rhxr10) then  else
+		rhxr10 = "0"
+	end
+	if tonumber(rhyr10) then  else
+		rhyr10 = "0"
+	end
+	if tonumber(rhzr10) then   else
+		rhzr10 = "0"
+	end	
 	wait()
 	--per bldy : or rla == ""  or rla2 == ""  or rla3 == "" or rla == "."  or rla2 == "."  or rla3 == "." or rla == "-"  or rla2 == "-"  or rla3 == "-"  or rla == "-."  or rla2 == "-."  or rla3 == "-."or rla4 == ""  or rla5 == ""  or rla6 == ""or rla4 == "-"  or rla5 == "-"  or rla6 == "-"  or rla4 == "."  or rla5 == "."  or rla6 == "."or rla4 == "-."  or rla5 == "-."  or rla6 == "-."
 
@@ -1068,7 +1459,7 @@ while nonanimate == true do
 
 
 	end
-	if _G.ha43tf == true then
+	if _G.hat4tf == true then
 		hat4 = script.Parent.Parent["hat4 settings"].enterthin.Text
 		char = game.Players.LocalPlayer.Character
 		attackment1 = _G.hat4atach
@@ -1079,6 +1470,51 @@ while nonanimate == true do
 
 
 	end
+	--eee
+	if _G.hat7tf == true then
+		hat7 = script.Parent.Parent["hat7 settings"].enterthin.Text
+		attackment1 = _G.hat7atach
+		char = game.Players.LocalPlayer.Character
+		char[hat7].Handle.AccessoryWeld.Part1 = char[attackment1]
+		char[hat7].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat7].Handle.AccessoryWeld.C0 = cf(hx7+rhhx7*math.cos(sine/6),hy7+rhhy7*math.cos(sine/6),hz7+rhhz7*math.cos(sine/6))*CFrame.Angles(math.rad(hxr7+rhxr7*math.cos(sine/6)),math.rad(hyr7+rhyr7*math.cos(sine/6)),math.rad(hzr7+rhzr7*math.cos(sine/6)))
+
+
+	end
+	if _G.hat8tf == true then
+
+		attackment1 = _G.hat8atach
+		hat8 = script.Parent.Parent["hat8 settings"].enterthin.Text
+		char = game.Players.LocalPlayer.Character
+		char[hat8].Handle.AccessoryWeld.Part1 = char[attackment1]
+		char[hat8].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat8].Handle.AccessoryWeld.C0 = cf(hx8+rhhx8*math.cos(sine/6),hy8+rhhy8*math.cos(sine/6),hz8+rhhz8*math.cos(sine/6))*CFrame.Angles(math.rad(hxr8+rhxr8*math.cos(sine/6)),math.rad(hyr8+rhyr8*math.cos(sine/6)),math.rad(hzr8+rhzr8*math.cos(sine/6)))
+
+
+	end
+	if _G.hat9tf == true then
+
+		attackment1 = _G.hat9atach
+		hat9 = script.Parent.Parent["hat9 settings"].enterthin.Text
+		char = game.Players.LocalPlayer.Character
+		char[hat9].Handle.AccessoryWeld.Part1 = char[attackment1]
+		char[hat9].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat9].Handle.AccessoryWeld.C0 = cf(hx9+rhhx9*math.cos(sine/6),hy9+rhhy9*math.cos(sine/6),hz9+rhhz9*math.cos(sine/6))*CFrame.Angles(math.rad(hxr9+rhxr9*math.cos(sine/6)),math.rad(hyr9+rhyr9*math.cos(sine/6)),math.rad(hzr9+rhzr9*math.cos(sine/6)))
+
+
+	end
+	if _G.hat10tf == true then
+		hat10 = script.Parent.Parent["hat10 settings"].enterthin.Text
+		char = game.Players.LocalPlayer.Character
+		attackment1 = _G.hat10atach
+		char = game.Players.LocalPlayer.Character
+		char[hat10].Handle.AccessoryWeld.Part1 = char[attackment1]
+		char[hat10].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat10].Handle.AccessoryWeld.C0 = cf(hx10+rhhx10*math.cos(sine/6),hy10+rhhy10*math.cos(sine/6),hz10+rhhz10*math.cos(sine/6))*CFrame.Angles(math.rad(hxr10+rhxr10*math.cos(sine/6)),math.rad(hyr10+rhyr10*math.cos(sine/6)),math.rad(hzr10+rhzr10*math.cos(sine/6)))
+
+
+	end
+
 
 
 
