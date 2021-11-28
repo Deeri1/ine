@@ -189,14 +189,11 @@ script.Parent.MouseButton1Click:Connect(function()
 	char = game.Players.LocalPlayer.Character
 	hat = hatonehat
 	hatonehat2 = script.Parent.Parent["hat2 settings"].enterthin.Text
-	hatonehat3 = script.Parent.Parent["hat3 settings"].enterthin.Text
 	hat2 = hatonehat2
-	hat3 = hatonehat3
 	attackment1 = _G.hat1atach
 	attackment2 = _G.hat2atach
 	_G.hate1 = ("char = game.Players.LocalPlayer.Character \n char['"..hat.."'].Handle.AccessoryWeld.Part1 = char['"..attackment1.."'] \n char['"..hat.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat.."'].Handle.AccessoryWeld.C0 = cf("..hx.." + "..rhhx.." * math.cos(sine / 6),"..hy.." + "..rhhy.." * math.cos(sine / 6),"..hz.." + "..rhhz.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr.." + "..rhxr.." * math.cos(sine / 6)), "..hyr.." + "..rhyr.." * math.cos(sine / 6), "..hzr.." + "..rhzr.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	_G.hate2 = ("char = game.Players.LocalPlayer.Character \n char['"..hat2.."'].Handle.AccessoryWeld.Part1 = char['"..attackment2.."'] \n char['"..hat2.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat2.."'].Handle.AccessoryWeld.C0 = cf("..hx2.." + "..rhhx2.." * math.cos(sine / 6),"..hy2.." + "..rhhy2.." * math.cos(sine / 6),"..hz2.." + "..rhhz2.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr2.." + "..rhxr2.." * math.cos(sine / 6)), "..hyr2.." + "..rhyr2.." * math.cos(sine / 6), "..hzr2.." + "..rhzr2.." * math.cos(sine / 6)) \n c.Anchored = false end")
-
 
 
 
