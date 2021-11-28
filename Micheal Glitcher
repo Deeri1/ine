@@ -67,6 +67,13 @@ for i,v in pairs(Character:GetDescendants()) do
         v:Destroy()
     end
 end
+isworking = _G.netless
+if isworking == nil then
+repeat wait() until nil
+
+else 
+
+end
 game:GetService("RunService").Stepped:connect(function()
 fgvbhnjmi(math.huge)
 for i,v in pairs(Character:GetDescendants()) do
