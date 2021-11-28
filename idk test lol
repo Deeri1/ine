@@ -1,3 +1,4 @@
+--hi
 script.Parent = game.CoreGui.animator.main.convert
 player = game.Players.LocalPlayer
 Character = player.Character
