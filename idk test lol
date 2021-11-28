@@ -1,4 +1,3 @@
---hi
 script.Parent = game.CoreGui.animator.main.convert
 player = game.Players.LocalPlayer
 Character = player.Character
@@ -216,27 +215,29 @@ script.Parent.MouseButton1Click:Connect(function()
 	Character = player.Character
 	hatonehat = script.Parent.Parent["hat settings"].enterthin.Text
 	_G.convertthing = ("local change = 1 \n sine = sine + change \n RH.C0=clerp(RH.C0,cf("..rhx.." + "..rla.." * math.cos(sine / 6),"..rhy.." + "..rla2.." * math.cos(sine / 6),"..rhz.." + "..rla3.." * math.cos(sine / 6))*angles(math.rad("..rrhx.." + "..rla4.." * math.cos(sine / 6)),math.rad("..rrhy.." + "..rla5.." * math.cos(sine / 6)),math.rad("..rrhz.." + "..rla6.." * math.cos(sine / 6))),.2)\nLH.C0=clerp(LH.C0,cf("..lhx.." + "..lla.." * math.cos(sine / 6),"..lhy.." + "..lla2.." * math.cos(sine / 6),"..lhz.." + "..lla3.." * math.cos(sine / 6))*angles(math.rad("..lrhx.." + "..lla4.." * math.cos(sine / 6)),math.rad("..lrhy.." + "..lla5.." * math.cos(sine / 6)),math.rad("..lrhz.." + "..lla6.." * math.cos(sine / 6))),.2)\nRootJoint.C0=clerp(RootJoint.C0,RootCF*cf("..tahx.." + "..to.." * math.cos(sine / 6),"..tahy.." + "..to2.." * math.cos(sine / 6),"..tahz.." + "..to3.." * math.cos(sine / 6))*angles(math.rad("..tarhx.." + "..to4.." * math.cos(sine / 6)),math.rad("..tarhy.." + "..to5.." * math.cos(sine / 6)),math.rad("..tarhz.." + "..to6.." * math.cos(sine / 6))),.3)\nTorso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)\nRW.C0=clerp(RW.C0,cf("..rahx.." + "..raa.." * math.cos(sine / 6),"..rahy.." + "..raa2.." * math.cos(sine / 6),"..rahz.." + "..raa3.." * math.cos(sine / 6))*angles(math.rad("..rarhx.." + "..raa4.." * math.cos(sine / 6)),math.rad("..rarhy.." + "..raa5.." * math.cos(sine / 6)),math.rad("..rarhz.." + "..raa6.." * math.cos(sine / 6))),.3)\nLW.C0=clerp(LW.C0,cf("..lahx.." + "..laa.." * math.cos(sine / 6),"..lahy.." + "..laa2.." * math.cos(sine / 6),"..lahz.." + "..laa3.." * math.cos(sine / 6))*angles(math.rad("..larhx.." + "..laa4.." * math.cos(sine / 6)),math.rad("..larhy.." + "..laa5.." * math.cos(sine / 6)),math.rad("..larhz.." + "..laa6.." * math.cos(sine / 6))),.3)")
-	yowch = "Right Arm"	
+		
 	char = game.Players.LocalPlayer.Character
 	hat = hatonehat
 	hatonehat2 = script.Parent.Parent["hat2 settings"].enterthin.Text
+	hatonehat3 = script.Parent.Parent["hat3 settings"].enterthin.Text
 	hat2 = hatonehat2
+	hat3 = hatonehat3
 	attackment1 = _G.hat1atach
 	attackment2 = _G.hat2atach
+	attackment3 = _G.hat3atach
+	if _G.hat1tf == true then
 	_G.hate1 = ("char = game.Players.LocalPlayer.Character \n char['"..hat.."'].Handle.AccessoryWeld.Part1 = char['"..attackment1.."'] \n char['"..hat.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat.."'].Handle.AccessoryWeld.C0 = cf("..hx.." + "..rhhx.." * math.cos(sine / 6),"..hy.." + "..rhhy.." * math.cos(sine / 6),"..hz.." + "..rhhz.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr.." + "..rhxr.." * math.cos(sine / 6)), "..hyr.." + "..rhyr.." * math.cos(sine / 6), "..hzr.." + "..rhzr.." * math.cos(sine / 6)) \n c.Anchored = false end")
-	_G.hate2 = ("char = game.Players.LocalPlayer.Character \n char['"..hat2.."'].Handle.AccessoryWeld.Part1 = char['"..attackment2.."'] \n char['"..hat2.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat2.."'].Handle.AccessoryWeld.C0 = cf("..hx2.." + "..rhhx2.." * math.cos(sine / 6),"..hy2.." + "..rhhy2.." * math.cos(sine / 6),"..hz2.." + "..rhhz2.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr2.." + "..rhxr2.." * math.cos(sine / 6)), "..hyr2.." + "..rhyr2.." * math.cos(sine / 6), "..hzr2.." + "..rhzr2.." * math.cos(sine / 6)) \n c.Anchored = false end")
-
+	end
+	if _G.hat2tf == true then
+		_G.hate2 = ("char = game.Players.LocalPlayer.Character \n char['"..hat2.."'].Handle.AccessoryWeld.Part1 = char['"..attackment2.."'] \n char['"..hat2.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat2.."'].Handle.AccessoryWeld.C0 = cf("..hx2.." + "..rhhx2.." * math.cos(sine / 6),"..hy2.." + "..rhhy2.." * math.cos(sine / 6),"..hz2.." + "..rhhz2.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr2.." + "..rhxr2.." * math.cos(sine / 6)), "..hyr2.." + "..rhyr2.." * math.cos(sine / 6), "..hzr2.." + "..rhzr2.." * math.cos(sine / 6)) \n c.Anchored = false end")
+	end
+	if _G.hat3tf == true then
+		_G.hate3 = ("char = game.Players.LocalPlayer.Character \n char['"..hat3.."'].Handle.AccessoryWeld.Part1 = char['"..attackment3.."'] \n char['"..hat3.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat3.."'].Handle.AccessoryWeld.C0 = cf("..hx3.." + "..rhhx3.." * math.cos(sine / 6),"..hy3.." + "..rhhy3.." * math.cos(sine / 6),"..hz3.." + "..rhhz3.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr3.." + "..rhxr3.." * math.cos(sine / 6)), "..hyr3.." + "..rhyr3.." * math.cos(sine / 6), "..hzr3.." + "..rhzr3.." * math.cos(sine / 6)) \n c.Anchored = false end")
+	end
 
 
 	print("converting")
-	_G.convertthin2 = [[
-			RH.C0=clerp(RH.C0,cf(rhx,rhy,rhz)*angles(math.rad(rrhx),math.rad(rrhy),math.rad(rrhz)),.2)
-			LH.C0=clerp(LH.C0,cf(lhx,lhy,lhz)*angles(math.rad(lrhx),math.rad(lrhy),math.rad(lrhz)),.2)
-			RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx,tahy,tahz)*angles(math.rad(tarhx),math.rad(tarhy),math.rad(tarhz)),.3)
-			Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
-			RW.C0=clerp(RW.C0,cf(rahx,rahy,rahz)*angles(math.rad(rarhx),math.rad(rarhy),math.rad(rarhz)),.3)
-			LW.C0=clerp(LW.C0,cf(lahx,lahy,lahz)*angles(math.rad(larhx),math.rad(larhy),math.rad(larhz)),.3)"]]
-	print(_G.convertthing)
+	
 	script.Parent.Parent.Parent.convert["convert text"].Text = _G.convertthing
 	script.Parent.Parent.Parent.convert.Visible = true
 end)
@@ -792,7 +793,9 @@ while nonanimate == true do
 
 	if _G.hat1tf == true then
 		attackment1 = _G.hat1atach
-
+		attackment1 = _G.hat1atach
+		hat = script.Parent.Parent["hat settings"].enterthin.Text
+		char = game.Players.LocalPlayer.Character
 		char = game.Players.LocalPlayer.Character
 		char[hat].Handle.AccessoryWeld.Part1 = char[attackment1]
 		char[hat].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
@@ -802,6 +805,9 @@ while nonanimate == true do
 	end
 	if _G.hat2tf == true then
 		attackment1 = _G.hat2atach
+		attackment1 = _G.hat1atach
+		hat2 = script.Parent.Parent["hat2 settings"].enterthin.Text
+		char = game.Players.LocalPlayer.Character
 		char = game.Players.LocalPlayer.Character
 		char[hat2].Handle.AccessoryWeld.Part1 = char[attackment1]
 		char[hat2].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
@@ -810,6 +816,9 @@ while nonanimate == true do
 
 	end
 	if _G.hat3tf == true then
+		attackment1 = _G.hat1atach
+		hat3 = script.Parent.Parent["hat3 settings"].enterthin.Text
+		char = game.Players.LocalPlayer.Character
 		attackment1 = _G.hat3atach
 		char = game.Players.LocalPlayer.Character
 		char[hat3].Handle.AccessoryWeld.Part1 = char[attackment1]
