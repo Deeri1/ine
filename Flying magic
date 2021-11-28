@@ -1177,7 +1177,13 @@ bp2.P = 400
 bp2.Position = end1.Position
 bp2.D = 100
 
+isworking = _G.netless
+if isworking == nil then
+repeat wait() until _G.netless == true
 
+else 
+
+end
 
 star3 = Instance.new("Part",char)
 star3.BrickColor = BrickColor.new("New Yeller")
