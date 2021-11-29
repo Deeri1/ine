@@ -1,4 +1,4 @@
-
+--new
 
 script.Parent = game.CoreGui.animator.main.convert
 player = game.Players.LocalPlayer
@@ -236,10 +236,10 @@ script.Parent.MouseButton1Click:Connect(function()
 	hat5 = hatonehat5
 	hat6 = hatonehat6
 	--
-	hat7 = hatonehat3
-	hat8 = hatonehat4
-	hat9 = hatonehat5
-	hat10 = hatonehat6
+	hat7 = hatonehat7
+	hat8 = hatonehat8
+	hat9 = hatonehat9
+	hat10 = hatonehat10
 
 	attackment1 = _G.hat1atach
 	attackment2 = _G.hat2atach
