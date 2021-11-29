@@ -1,6 +1,6 @@
 -- Gui to Lua
 -- Version: 3.2
---lololol
+--new
 -- Instances:
 
 local animator = {
@@ -4124,12 +4124,13 @@ animator.TextButton_10.TextWrapped = true
 
 -- Scripts:
 
-local function RGWIALI_fake_script() -- animator.convert.LocalScript 
+local function YCXX_fake_script() -- animator.convert.LocalScript 
 	local script = Instance.new('LocalScript', animator.convert)
 
-	end
-coroutine.wrap(RGWIALI_fake_script)()
-local function ZWJCGF_fake_script() -- animator.closepage.Script 
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/idk%20test%20lol"))()
+end
+coroutine.wrap(YCXX_fake_script)()
+local function HEDBXJ_fake_script() -- animator.closepage.Script 
 	local script = Instance.new('Script', animator.closepage)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4166,6 +4167,18 @@ local function ZWJCGF_fake_script() -- animator.closepage.Script
 		elseif script.Parent.Parent.hat6.Visible == true then
 			script.Parent.Parent.hat6.Visible = false
 			script.Parent.Parent.mainmian.Visible = true
+		elseif script.Parent.Parent.hat7.Visible == true then
+			script.Parent.Parent.hat7.Visible = false
+			script.Parent.Parent.mainmian.Visible = true
+		elseif script.Parent.Parent.hat8.Visible == true then
+			script.Parent.Parent.hat8.Visible = false
+			script.Parent.Parent.mainmian.Visible = true
+		elseif script.Parent.Parent.hat9.Visible == true then
+			script.Parent.Parent.hat9.Visible = false
+			script.Parent.Parent.mainmian.Visible = true
+		elseif script.Parent.Parent.hat10.Visible == true then
+			script.Parent.Parent.hat10.Visible = false
+			script.Parent.Parent.mainmian.Visible = true
 		else
 			
 			script.Parent.Parent.Parent.main:Destroy()
@@ -4173,16 +4186,16 @@ local function ZWJCGF_fake_script() -- animator.closepage.Script
 	end)
 	
 end
-coroutine.wrap(ZWJCGF_fake_script)()
-local function OMJJ_fake_script() -- animator.CLOSE.close 
+coroutine.wrap(HEDBXJ_fake_script)()
+local function NCSZRWQ_fake_script() -- animator.CLOSE.close 
 	local script = Instance.new('LocalScript', animator.CLOSE)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(OMJJ_fake_script)()
-local function WDGJW_fake_script() -- animator.done.done2 
+coroutine.wrap(NCSZRWQ_fake_script)()
+local function XCEAOX_fake_script() -- animator.done.done2 
 	local script = Instance.new('LocalScript', animator.done)
 
 	
@@ -4199,8 +4212,8 @@ local function WDGJW_fake_script() -- animator.done.done2
 		script.Parent.Parent.Parent.hat8.Visible = true
 	end)
 end
-coroutine.wrap(WDGJW_fake_script)()
-local function HJCH_fake_script() -- animator.nomesh.LocalScript 
+coroutine.wrap(XCEAOX_fake_script)()
+local function ZBDUFZ_fake_script() -- animator.nomesh.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4208,8 +4221,8 @@ local function HJCH_fake_script() -- animator.nomesh.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.SpecialMesh:Destroy()
 	end)
 end
-coroutine.wrap(HJCH_fake_script)()
-local function TUOGF_fake_script() -- animator.nomesh2.LocalScript 
+coroutine.wrap(ZBDUFZ_fake_script)()
+local function OFPCRUL_fake_script() -- animator.nomesh2.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4217,24 +4230,24 @@ local function TUOGF_fake_script() -- animator.nomesh2.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.Mesh:Destroy()
 	end)
 end
-coroutine.wrap(TUOGF_fake_script)()
-local function TFUBBJL_fake_script() -- animator.animation.LocalScript 
+coroutine.wrap(OFPCRUL_fake_script)()
+local function EBXOS_fake_script() -- animator.animation.LocalScript 
 	local script = Instance.new('LocalScript', animator.animation)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.layouts.Visible = true
 	end)
 end
-coroutine.wrap(TFUBBJL_fake_script)()
-local function NDECB_fake_script() -- animator.openhats.LocalScript 
+coroutine.wrap(EBXOS_fake_script)()
+local function MSCEAFL_fake_script() -- animator.openhats.LocalScript 
 	local script = Instance.new('LocalScript', animator.openhats)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.main["hat frame"].Visible = true
 	end)
 end
-coroutine.wrap(NDECB_fake_script)()
-local function GTIJBXU_fake_script() -- animator.hatsname.open hat one 
+coroutine.wrap(MSCEAFL_fake_script)()
+local function KYMDYU_fake_script() -- animator.hatsname.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4243,8 +4256,8 @@ local function GTIJBXU_fake_script() -- animator.hatsname.open hat one
 		
 	end)
 end
-coroutine.wrap(GTIJBXU_fake_script)()
-local function RORFRTP_fake_script() -- animator.hatsname_2.open hat one 
+coroutine.wrap(KYMDYU_fake_script)()
+local function PBLFGP_fake_script() -- animator.hatsname_2.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4253,8 +4266,8 @@ local function RORFRTP_fake_script() -- animator.hatsname_2.open hat one
 		
 	end)
 end
-coroutine.wrap(RORFRTP_fake_script)()
-local function NWDB_fake_script() -- animator.hatsname_3.open hat one 
+coroutine.wrap(PBLFGP_fake_script)()
+local function NNZVL_fake_script() -- animator.hatsname_3.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4263,8 +4276,8 @@ local function NWDB_fake_script() -- animator.hatsname_3.open hat one
 		
 	end)
 end
-coroutine.wrap(NWDB_fake_script)()
-local function PBWZJPE_fake_script() -- animator.hatsname_4.open hat one 
+coroutine.wrap(NNZVL_fake_script)()
+local function OANKJ_fake_script() -- animator.hatsname_4.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname_4)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4273,8 +4286,8 @@ local function PBWZJPE_fake_script() -- animator.hatsname_4.open hat one
 		
 	end)
 end
-coroutine.wrap(PBWZJPE_fake_script)()
-local function VDSH_fake_script() -- animator.hatsname_5.open hat one 
+coroutine.wrap(OANKJ_fake_script)()
+local function REZBEND_fake_script() -- animator.hatsname_5.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname_5)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4283,8 +4296,8 @@ local function VDSH_fake_script() -- animator.hatsname_5.open hat one
 		
 	end)
 end
-coroutine.wrap(VDSH_fake_script)()
-local function RTXNS_fake_script() -- animator.hatsname_6.open hat one 
+coroutine.wrap(REZBEND_fake_script)()
+local function CPQCF_fake_script() -- animator.hatsname_6.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname_6)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4293,8 +4306,8 @@ local function RTXNS_fake_script() -- animator.hatsname_6.open hat one
 		
 	end)
 end
-coroutine.wrap(RTXNS_fake_script)()
-local function ZKQS_fake_script() -- animator.hatsname_7.open hat one 
+coroutine.wrap(CPQCF_fake_script)()
+local function WMON_fake_script() -- animator.hatsname_7.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname_7)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4303,8 +4316,8 @@ local function ZKQS_fake_script() -- animator.hatsname_7.open hat one
 		
 	end)
 end
-coroutine.wrap(ZKQS_fake_script)()
-local function ONUMTFC_fake_script() -- animator.hatsname_8.open hat one 
+coroutine.wrap(WMON_fake_script)()
+local function LYKSYOW_fake_script() -- animator.hatsname_8.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname_8)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4313,8 +4326,8 @@ local function ONUMTFC_fake_script() -- animator.hatsname_8.open hat one
 		
 	end)
 end
-coroutine.wrap(ONUMTFC_fake_script)()
-local function RWAL_fake_script() -- animator.hatsname_9.open hat one 
+coroutine.wrap(LYKSYOW_fake_script)()
+local function ISHQCWS_fake_script() -- animator.hatsname_9.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname_9)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4323,16 +4336,16 @@ local function RWAL_fake_script() -- animator.hatsname_9.open hat one
 		
 	end)
 end
-coroutine.wrap(RWAL_fake_script)()
-local function KOHPTW_fake_script() -- animator.CLOSE_2.LocalScript 
+coroutine.wrap(ISHQCWS_fake_script)()
+local function CRYLDZP_fake_script() -- animator.CLOSE_2.LocalScript 
 	local script = Instance.new('LocalScript', animator.CLOSE_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(KOHPTW_fake_script)()
-local function RADCQ_fake_script() -- animator.hatsname_10.open hat one 
+coroutine.wrap(CRYLDZP_fake_script)()
+local function ILZXZAX_fake_script() -- animator.hatsname_10.open hat one 
 	local script = Instance.new('LocalScript', animator.hatsname_10)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4341,16 +4354,16 @@ local function RADCQ_fake_script() -- animator.hatsname_10.open hat one
 		
 	end)
 end
-coroutine.wrap(RADCQ_fake_script)()
-local function KTHLJ_fake_script() -- animator.CLOSE_3.close 
+coroutine.wrap(ILZXZAX_fake_script)()
+local function SNYCJ_fake_script() -- animator.CLOSE_3.close 
 	local script = Instance.new('LocalScript', animator.CLOSE_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(KTHLJ_fake_script)()
-local function IYKJ_fake_script() -- animator.done_2.done 
+coroutine.wrap(SNYCJ_fake_script)()
+local function PXLHA_fake_script() -- animator.done_2.done 
 	local script = Instance.new('LocalScript', animator.done_2)
 
 	
@@ -4367,8 +4380,8 @@ local function IYKJ_fake_script() -- animator.done_2.done
 		script.Parent.Parent.Parent.hat10.Visible = true
 	end)
 end
-coroutine.wrap(IYKJ_fake_script)()
-local function HSCJA_fake_script() -- animator.nomesh_2.LocalScript 
+coroutine.wrap(PXLHA_fake_script)()
+local function VGTVKPG_fake_script() -- animator.nomesh_2.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4376,8 +4389,8 @@ local function HSCJA_fake_script() -- animator.nomesh_2.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.SpecialMesh:Destroy()
 	end)
 end
-coroutine.wrap(HSCJA_fake_script)()
-local function GZWKELO_fake_script() -- animator.nomesh2_2.LocalScript 
+coroutine.wrap(VGTVKPG_fake_script)()
+local function WHEBE_fake_script() -- animator.nomesh2_2.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh2_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4385,16 +4398,16 @@ local function GZWKELO_fake_script() -- animator.nomesh2_2.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.Mesh:Destroy()
 	end)
 end
-coroutine.wrap(GZWKELO_fake_script)()
-local function UZGUWI_fake_script() -- animator.CLOSE_4.close 
+coroutine.wrap(WHEBE_fake_script)()
+local function OMAHGMS_fake_script() -- animator.CLOSE_4.close 
 	local script = Instance.new('LocalScript', animator.CLOSE_4)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(UZGUWI_fake_script)()
-local function KFCK_fake_script() -- animator.done_3.done 
+coroutine.wrap(OMAHGMS_fake_script)()
+local function SFREI_fake_script() -- animator.done_3.done 
 	local script = Instance.new('LocalScript', animator.done_3)
 
 	
@@ -4411,8 +4424,8 @@ local function KFCK_fake_script() -- animator.done_3.done
 		script.Parent.Parent.Parent.hat1.Visible = true
 	end)
 end
-coroutine.wrap(KFCK_fake_script)()
-local function UYZK_fake_script() -- animator.nomesh_3.LocalScript 
+coroutine.wrap(SFREI_fake_script)()
+local function GICKC_fake_script() -- animator.nomesh_3.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4420,8 +4433,8 @@ local function UYZK_fake_script() -- animator.nomesh_3.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.SpecialMesh:Destroy()
 	end)
 end
-coroutine.wrap(UYZK_fake_script)()
-local function ZMXHK_fake_script() -- animator.nomesh2_3.LocalScript 
+coroutine.wrap(GICKC_fake_script)()
+local function WUUUGZT_fake_script() -- animator.nomesh2_3.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh2_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4429,16 +4442,16 @@ local function ZMXHK_fake_script() -- animator.nomesh2_3.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.Mesh:Destroy()
 	end)
 end
-coroutine.wrap(ZMXHK_fake_script)()
-local function DVVN_fake_script() -- animator.CLOSE_5.close 
+coroutine.wrap(WUUUGZT_fake_script)()
+local function GMWORX_fake_script() -- animator.CLOSE_5.close 
 	local script = Instance.new('LocalScript', animator.CLOSE_5)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(DVVN_fake_script)()
-local function TVJWYQV_fake_script() -- animator.done_4.done 
+coroutine.wrap(GMWORX_fake_script)()
+local function VEXQTEQ_fake_script() -- animator.done_4.done 
 	local script = Instance.new('LocalScript', animator.done_4)
 
 	
@@ -4455,8 +4468,8 @@ local function TVJWYQV_fake_script() -- animator.done_4.done
 		script.Parent.Parent.Parent.hat7.Visible = true
 	end)
 end
-coroutine.wrap(TVJWYQV_fake_script)()
-local function VYKOFT_fake_script() -- animator.nomesh_4.LocalScript 
+coroutine.wrap(VEXQTEQ_fake_script)()
+local function MJCI_fake_script() -- animator.nomesh_4.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh_4)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4464,8 +4477,8 @@ local function VYKOFT_fake_script() -- animator.nomesh_4.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.SpecialMesh:Destroy()
 	end)
 end
-coroutine.wrap(VYKOFT_fake_script)()
-local function SDUKXTS_fake_script() -- animator.nomesh2_4.LocalScript 
+coroutine.wrap(MJCI_fake_script)()
+local function UKET_fake_script() -- animator.nomesh2_4.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh2_4)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4473,16 +4486,16 @@ local function SDUKXTS_fake_script() -- animator.nomesh2_4.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.Mesh:Destroy()
 	end)
 end
-coroutine.wrap(SDUKXTS_fake_script)()
-local function TKQK_fake_script() -- animator.CLOSE_6.close 
+coroutine.wrap(UKET_fake_script)()
+local function WXHZ_fake_script() -- animator.CLOSE_6.close 
 	local script = Instance.new('LocalScript', animator.CLOSE_6)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(TKQK_fake_script)()
-local function OCSWQBE_fake_script() -- animator.done_5.done 
+coroutine.wrap(WXHZ_fake_script)()
+local function YQVTUIJ_fake_script() -- animator.done_5.done 
 	local script = Instance.new('LocalScript', animator.done_5)
 
 	
@@ -4499,8 +4512,8 @@ local function OCSWQBE_fake_script() -- animator.done_5.done
 		script.Parent.Parent.Parent.hat9.Visible = true
 	end)
 end
-coroutine.wrap(OCSWQBE_fake_script)()
-local function NEATBJ_fake_script() -- animator.nomesh_5.LocalScript 
+coroutine.wrap(YQVTUIJ_fake_script)()
+local function CZRZJ_fake_script() -- animator.nomesh_5.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh_5)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4508,8 +4521,8 @@ local function NEATBJ_fake_script() -- animator.nomesh_5.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.SpecialMesh:Destroy()
 	end)
 end
-coroutine.wrap(NEATBJ_fake_script)()
-local function JHECE_fake_script() -- animator.nomesh2_5.LocalScript 
+coroutine.wrap(CZRZJ_fake_script)()
+local function VHIWXR_fake_script() -- animator.nomesh2_5.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh2_5)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4517,8 +4530,8 @@ local function JHECE_fake_script() -- animator.nomesh2_5.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.Mesh:Destroy()
 	end)
 end
-coroutine.wrap(JHECE_fake_script)()
-local function BWEIFP_fake_script() -- animator.leftkeg.Script 
+coroutine.wrap(VHIWXR_fake_script)()
+local function SBRLA_fake_script() -- animator.leftkeg.Script 
 	local script = Instance.new('Script', animator.leftkeg)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4526,8 +4539,8 @@ local function BWEIFP_fake_script() -- animator.leftkeg.Script
 		script.Parent.Parent.Parent.leftleg.Visible = true
 	end)
 end
-coroutine.wrap(BWEIFP_fake_script)()
-local function EFPZR_fake_script() -- animator.rightleg_2.Script 
+coroutine.wrap(SBRLA_fake_script)()
+local function BCZHFL_fake_script() -- animator.rightleg_2.Script 
 	local script = Instance.new('Script', animator.rightleg_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4535,8 +4548,8 @@ local function EFPZR_fake_script() -- animator.rightleg_2.Script
 		script.Parent.Parent.Parent.rightleg.Visible = true
 	end)
 end
-coroutine.wrap(EFPZR_fake_script)()
-local function ZKWS_fake_script() -- animator.torso.Script 
+coroutine.wrap(BCZHFL_fake_script)()
+local function HZBQPC_fake_script() -- animator.torso.Script 
 	local script = Instance.new('Script', animator.torso)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4544,8 +4557,8 @@ local function ZKWS_fake_script() -- animator.torso.Script
 		script.Parent.Parent.Parent.torso.Visible = true
 	end)
 end
-coroutine.wrap(ZKWS_fake_script)()
-local function CKMZ_fake_script() -- animator.rightarm_2.Script 
+coroutine.wrap(HZBQPC_fake_script)()
+local function ZYYDS_fake_script() -- animator.rightarm_2.Script 
 	local script = Instance.new('Script', animator.rightarm_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4553,8 +4566,8 @@ local function CKMZ_fake_script() -- animator.rightarm_2.Script
 		script.Parent.Parent.Parent.rightarm.Visible = true
 	end)
 end
-coroutine.wrap(CKMZ_fake_script)()
-local function WBVX_fake_script() -- animator.leftarm.Script 
+coroutine.wrap(ZYYDS_fake_script)()
+local function GYAEBMC_fake_script() -- animator.leftarm.Script 
 	local script = Instance.new('Script', animator.leftarm)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4562,8 +4575,8 @@ local function WBVX_fake_script() -- animator.leftarm.Script
 		script.Parent.Parent.Parent.leftarm.Visible = true
 	end)
 end
-coroutine.wrap(WBVX_fake_script)()
-local function WOKZ_fake_script() -- animator.hats_2.Script 
+coroutine.wrap(GYAEBMC_fake_script)()
+local function ERFGUR_fake_script() -- animator.hats_2.Script 
 	local script = Instance.new('Script', animator.hats_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4571,16 +4584,16 @@ local function WOKZ_fake_script() -- animator.hats_2.Script
 		script.Parent.Parent.Parent["hat frame"].Visible = true
 	end)
 end
-coroutine.wrap(WOKZ_fake_script)()
-local function FOAKZ_fake_script() -- animator.CLOSE_7.close 
+coroutine.wrap(ERFGUR_fake_script)()
+local function QIWH_fake_script() -- animator.CLOSE_7.close 
 	local script = Instance.new('LocalScript', animator.CLOSE_7)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(FOAKZ_fake_script)()
-local function HIDPO_fake_script() -- animator.done_6.done2 
+coroutine.wrap(QIWH_fake_script)()
+local function GDODPQE_fake_script() -- animator.done_6.done2 
 	local script = Instance.new('LocalScript', animator.done_6)
 
 	
@@ -4597,8 +4610,8 @@ local function HIDPO_fake_script() -- animator.done_6.done2
 		script.Parent.Parent.Parent.hat2.Visible = true
 	end)
 end
-coroutine.wrap(HIDPO_fake_script)()
-local function OWOFVS_fake_script() -- animator.nomesh_6.LocalScript 
+coroutine.wrap(GDODPQE_fake_script)()
+local function RJOL_fake_script() -- animator.nomesh_6.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh_6)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4606,8 +4619,8 @@ local function OWOFVS_fake_script() -- animator.nomesh_6.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.SpecialMesh:Destroy()
 	end)
 end
-coroutine.wrap(OWOFVS_fake_script)()
-local function JWLUM_fake_script() -- animator.nomesh2_6.LocalScript 
+coroutine.wrap(RJOL_fake_script)()
+local function VQOG_fake_script() -- animator.nomesh2_6.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh2_6)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4615,16 +4628,16 @@ local function JWLUM_fake_script() -- animator.nomesh2_6.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.Mesh:Destroy()
 	end)
 end
-coroutine.wrap(JWLUM_fake_script)()
-local function VKIROOD_fake_script() -- animator.CLOSE_8.close 
+coroutine.wrap(VQOG_fake_script)()
+local function AITC_fake_script() -- animator.CLOSE_8.close 
 	local script = Instance.new('LocalScript', animator.CLOSE_8)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(VKIROOD_fake_script)()
-local function YXMPB_fake_script() -- animator.done_7.done 
+coroutine.wrap(AITC_fake_script)()
+local function TSVXN_fake_script() -- animator.done_7.done 
 	local script = Instance.new('LocalScript', animator.done_7)
 
 	
@@ -4641,8 +4654,8 @@ local function YXMPB_fake_script() -- animator.done_7.done
 		script.Parent.Parent.Parent.hat3.Visible = true
 	end)
 end
-coroutine.wrap(YXMPB_fake_script)()
-local function BMOQHOM_fake_script() -- animator.nomesh_7.LocalScript 
+coroutine.wrap(TSVXN_fake_script)()
+local function CVUTXTI_fake_script() -- animator.nomesh_7.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh_7)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4650,8 +4663,8 @@ local function BMOQHOM_fake_script() -- animator.nomesh_7.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.SpecialMesh:Destroy()
 	end)
 end
-coroutine.wrap(BMOQHOM_fake_script)()
-local function VIEPXID_fake_script() -- animator.nomesh2_7.LocalScript 
+coroutine.wrap(CVUTXTI_fake_script)()
+local function GIZYFJ_fake_script() -- animator.nomesh2_7.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh2_7)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4659,16 +4672,16 @@ local function VIEPXID_fake_script() -- animator.nomesh2_7.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.Mesh:Destroy()
 	end)
 end
-coroutine.wrap(VIEPXID_fake_script)()
-local function GBEH_fake_script() -- animator.CLOSE_9.close 
+coroutine.wrap(GIZYFJ_fake_script)()
+local function LMBJ_fake_script() -- animator.CLOSE_9.close 
 	local script = Instance.new('LocalScript', animator.CLOSE_9)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(GBEH_fake_script)()
-local function TNXQ_fake_script() -- animator.done_8.done 
+coroutine.wrap(LMBJ_fake_script)()
+local function BFYQM_fake_script() -- animator.done_8.done 
 	local script = Instance.new('LocalScript', animator.done_8)
 
 	
@@ -4685,8 +4698,8 @@ local function TNXQ_fake_script() -- animator.done_8.done
 		script.Parent.Parent.Parent.hat4.Visible = true
 	end)
 end
-coroutine.wrap(TNXQ_fake_script)()
-local function JZPP_fake_script() -- animator.nomesh_8.LocalScript 
+coroutine.wrap(BFYQM_fake_script)()
+local function DOTKNNI_fake_script() -- animator.nomesh_8.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh_8)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4694,8 +4707,8 @@ local function JZPP_fake_script() -- animator.nomesh_8.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.SpecialMesh:Destroy()
 	end)
 end
-coroutine.wrap(JZPP_fake_script)()
-local function DVICJT_fake_script() -- animator.nomesh2_8.LocalScript 
+coroutine.wrap(DOTKNNI_fake_script)()
+local function GBBY_fake_script() -- animator.nomesh2_8.LocalScript 
 	local script = Instance.new('LocalScript', animator.nomesh2_8)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4703,14 +4716,14 @@ local function DVICJT_fake_script() -- animator.nomesh2_8.LocalScript
 		game:GetService("Players").LocalPlayer.Character[""..hat1..""].Handle.Mesh:Destroy()
 	end)
 end
-coroutine.wrap(DVICJT_fake_script)()
-local function CDJO_fake_script() -- animator.animator.LocalScript 
+coroutine.wrap(GBBY_fake_script)()
+local function PNXDT_fake_script() -- animator.animator.LocalScript 
 	local script = Instance.new('LocalScript', animator.animator)
 
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/part%20two"))()
 end
-coroutine.wrap(CDJO_fake_script)()
-local function UDTSVA_fake_script() -- animator.toclipboard.LocalScript 
+coroutine.wrap(PNXDT_fake_script)()
+local function DSNC_fake_script() -- animator.toclipboard.LocalScript 
 	local script = Instance.new('LocalScript', animator.toclipboard)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4719,95 +4732,95 @@ local function UDTSVA_fake_script() -- animator.toclipboard.LocalScript
 	end)
 	
 end
-coroutine.wrap(UDTSVA_fake_script)()
-local function KEEXDW_fake_script() -- animator.close.LocalScript 
+coroutine.wrap(DSNC_fake_script)()
+local function AINP_fake_script() -- animator.close.LocalScript 
 	local script = Instance.new('LocalScript', animator.close)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(KEEXDW_fake_script)()
-local function HWEZ_fake_script() -- animator.TextButton.LocalScript 
+coroutine.wrap(AINP_fake_script)()
+local function XDREEZC_fake_script() -- animator.TextButton.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate1
 	end)
 end
-coroutine.wrap(HWEZ_fake_script)()
-local function BKRNCEJ_fake_script() -- animator.TextButton_2.LocalScript 
+coroutine.wrap(XDREEZC_fake_script)()
+local function AGSXUQV_fake_script() -- animator.TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate2
 	end)
 end
-coroutine.wrap(BKRNCEJ_fake_script)()
-local function RZDEJS_fake_script() -- animator.TextButton_3.LocalScript 
+coroutine.wrap(AGSXUQV_fake_script)()
+local function WZQLKV_fake_script() -- animator.TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate3
 	end)
 end
-coroutine.wrap(RZDEJS_fake_script)()
-local function SKGYF_fake_script() -- animator.TextButton_4.LocalScript 
+coroutine.wrap(WZQLKV_fake_script)()
+local function PDVK_fake_script() -- animator.TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton_4)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate4
 	end)
 end
-coroutine.wrap(SKGYF_fake_script)()
-local function FFGSKDW_fake_script() -- animator.TextButton_5.LocalScript 
+coroutine.wrap(PDVK_fake_script)()
+local function XGAKGGP_fake_script() -- animator.TextButton_5.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton_5)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate5
 	end)
 end
-coroutine.wrap(FFGSKDW_fake_script)()
-local function PQVUV_fake_script() -- animator.TextButton_6.LocalScript 
+coroutine.wrap(XGAKGGP_fake_script)()
+local function JRGTRZT_fake_script() -- animator.TextButton_6.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton_6)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate6
 	end)
 end
-coroutine.wrap(PQVUV_fake_script)()
-local function NGBNGP_fake_script() -- animator.TextButton_7.LocalScript 
+coroutine.wrap(JRGTRZT_fake_script)()
+local function BRBZ_fake_script() -- animator.TextButton_7.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton_7)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate7
 	end)
 end
-coroutine.wrap(NGBNGP_fake_script)()
-local function EPEWTLO_fake_script() -- animator.TextButton_8.LocalScript 
+coroutine.wrap(BRBZ_fake_script)()
+local function FRRELCQ_fake_script() -- animator.TextButton_8.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton_8)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate8
 	end)
 end
-coroutine.wrap(EPEWTLO_fake_script)()
-local function FFOOZID_fake_script() -- animator.TextButton_9.LocalScript 
+coroutine.wrap(FRRELCQ_fake_script)()
+local function BTYAV_fake_script() -- animator.TextButton_9.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton_9)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate9
 	end)
 end
-coroutine.wrap(FFOOZID_fake_script)()
-local function YNHZP_fake_script() -- animator.TextButton_10.LocalScript 
+coroutine.wrap(BTYAV_fake_script)()
+local function GKJHXGW_fake_script() -- animator.TextButton_10.LocalScript 
 	local script = Instance.new('LocalScript', animator.TextButton_10)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["convert text"].Text = _G.hate10
 	end)
 end
-coroutine.wrap(YNHZP_fake_script)()
+coroutine.wrap(GKJHXGW_fake_script)()
 -- Gui to Lua
 -- Version: 3.2
 
