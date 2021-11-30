@@ -1,4 +1,4 @@
-
+--new
 
 script.Parent = game.CoreGui.animator.main.convert
 player = game.Players.LocalPlayer
@@ -1422,7 +1422,7 @@ while nonanimate == true do
 		hat2 = script.Parent.Parent["hat2 settings"].enterthin.Text
 		char = game.Players.LocalPlayer.Character
 		char[hat2].Handle.AccessoryWeld.Part1 = char[attackment1]
-		char[hat2].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat2].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
 		char[hat2].Handle.AccessoryWeld.C0 = cf(hx2+rhhx2*math.cos(sine/6),hy2+rhhy2*math.cos(sine/6),hz2+rhhz2*math.cos(sine/6))*CFrame.Angles(math.rad(hxr2+rhxr2*math.cos(sine/6)),math.rad(hyr2+rhyr2*math.cos(sine/6)),math.rad(hzr2+rhzr2*math.cos(sine/6)))
 
 
