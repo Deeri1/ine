@@ -1,4 +1,4 @@
---newone
+
 
 script.Parent = game.CoreGui.animator.main.convert
 player = game.Players.LocalPlayer
@@ -253,35 +253,35 @@ script.Parent.MouseButton1Click:Connect(function()
 	attackment9 = _G.hat9atach
 	attackment10 = _G.hat10atach
 	if _G.hat1tf == true then
-	_G.hate1 = ("char = game.Players.LocalPlayer.Character \n char['"..hat.."'].Handle.AccessoryWeld.Part1 = char['"..attackment1.."'] \n char['"..hat.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat.."'].Handle.AccessoryWeld.C0 = cf("..hx.." + "..rhhx.." * math.cos(sine / 6),"..hy.." + "..rhhy.." * math.cos(sine / 6),"..hz.." + "..rhhz.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr.." + "..rhxr.." * math.cos(sine / 6)), "..hyr.." + "..rhyr.." * math.cos(sine / 6), "..hzr.." + "..rhzr.." * math.cos(sine / 6)) \n c.Anchored = false end")
+	_G.hate1 = ("char = game.Players.LocalPlayer.Character \n char['"..hat.."'].Handle.AccessoryWeld.Part1 = char['"..attackment1.."'] \n char['"..hat.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-0)) \n char['"..hat.."'].Handle.AccessoryWeld.C0 = cf("..hx.." + "..rhhx.." * math.cos(sine / 6),"..hy.." + "..rhhy.." * math.cos(sine / 6),"..hz.." + "..rhhz.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr.." + "..rhxr.." * math.cos(sine / 6)), "..hyr.." + "..rhyr.." * math.cos(sine / 6), "..hzr.." + "..rhzr.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
 	if _G.hat2tf == true then
-		_G.hate2 = ("char = game.Players.LocalPlayer.Character \n char['"..hat2.."'].Handle.AccessoryWeld.Part1 = char['"..attackment2.."'] \n char['"..hat2.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat2.."'].Handle.AccessoryWeld.C0 = cf("..hx2.." + "..rhhx2.." * math.cos(sine / 6),"..hy2.." + "..rhhy2.." * math.cos(sine / 6),"..hz2.." + "..rhhz2.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr2.." + "..rhxr2.." * math.cos(sine / 6)), "..hyr2.." + "..rhyr2.." * math.cos(sine / 6), "..hzr2.." + "..rhzr2.." * math.cos(sine / 6)) \n c.Anchored = false end")
+		_G.hate2 = ("char = game.Players.LocalPlayer.Character \n char['"..hat2.."'].Handle.AccessoryWeld.Part1 = char['"..attackment2.."'] \n char['"..hat2.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-0)) \n char['"..hat2.."'].Handle.AccessoryWeld.C0 = cf("..hx2.." + "..rhhx2.." * math.cos(sine / 6),"..hy2.." + "..rhhy2.." * math.cos(sine / 6),"..hz2.." + "..rhhz2.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr2.." + "..rhxr2.." * math.cos(sine / 6)), "..hyr2.." + "..rhyr2.." * math.cos(sine / 6), "..hzr2.." + "..rhzr2.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
 	if _G.hat3tf == true then
-		_G.hate3 = ("char = game.Players.LocalPlayer.Character \n char['"..hat3.."'].Handle.AccessoryWeld.Part1 = char['"..attackment3.."'] \n char['"..hat3.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat3.."'].Handle.AccessoryWeld.C0 = cf("..hx3.." + "..rhhx3.." * math.cos(sine / 6),"..hy3.." + "..rhhy3.." * math.cos(sine / 6),"..hz3.." + "..rhhz3.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr3.." + "..rhxr3.." * math.cos(sine / 6)), "..hyr3.." + "..rhyr3.." * math.cos(sine / 6), "..hzr3.." + "..rhzr3.." * math.cos(sine / 6)) \n c.Anchored = false end")
+		_G.hate3 = ("char = game.Players.LocalPlayer.Character \n char['"..hat3.."'].Handle.AccessoryWeld.Part1 = char['"..attackment3.."'] \n char['"..hat3.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-0)) \n char['"..hat3.."'].Handle.AccessoryWeld.C0 = cf("..hx3.." + "..rhhx3.." * math.cos(sine / 6),"..hy3.." + "..rhhy3.." * math.cos(sine / 6),"..hz3.." + "..rhhz3.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr3.." + "..rhxr3.." * math.cos(sine / 6)), "..hyr3.." + "..rhyr3.." * math.cos(sine / 6), "..hzr3.." + "..rhzr3.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
 	if _G.hat4tf == true then
-		_G.hate4 = ("char = game.Players.LocalPlayer.Character \n char['"..hat4.."'].Handle.AccessoryWeld.Part1 = char['"..attackment4.."'] \n char['"..hat4.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat4.."'].Handle.AccessoryWeld.C0 = cf("..hx4.." + "..rhhx4.." * math.cos(sine / 6),"..hy4.." + "..rhhy4.." * math.cos(sine / 6),"..hz4.." + "..rhhz4.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr4.." + "..rhxr4.." * math.cos(sine / 6)), "..hyr4.." + "..rhyr4.." * math.cos(sine / 6), "..hzr4.." + "..rhzr4.." * math.cos(sine / 6)) \n c.Anchored = false end")
+		_G.hate4 = ("char = game.Players.LocalPlayer.Character \n char['"..hat4.."'].Handle.AccessoryWeld.Part1 = char['"..attackment4.."'] \n char['"..hat4.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-0)) \n char['"..hat4.."'].Handle.AccessoryWeld.C0 = cf("..hx4.." + "..rhhx4.." * math.cos(sine / 6),"..hy4.." + "..rhhy4.." * math.cos(sine / 6),"..hz4.." + "..rhhz4.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr4.." + "..rhxr4.." * math.cos(sine / 6)), "..hyr4.." + "..rhyr4.." * math.cos(sine / 6), "..hzr4.." + "..rhzr4.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
 	if _G.hat5tf == true then
-		_G.hate5 = ("char = game.Players.LocalPlayer.Character \n char['"..hat5.."'].Handle.AccessoryWeld.Part1 = char['"..attackment5.."'] \n char['"..hat5.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat5.."'].Handle.AccessoryWeld.C0 = cf("..hx5.." + "..rhhx5.." * math.cos(sine / 6),"..hy5.." + "..rhhy5.." * math.cos(sine / 6),"..hz5.." + "..rhhz5.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr5.." + "..rhxr5.." * math.cos(sine / 6)), "..hyr5.." + "..rhyr5.." * math.cos(sine / 6), "..hzr5.." + "..rhzr5.." * math.cos(sine / 6)) \n c.Anchored = false end")
+		_G.hate5 = ("char = game.Players.LocalPlayer.Character \n char['"..hat5.."'].Handle.AccessoryWeld.Part1 = char['"..attackment5.."'] \n char['"..hat5.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-0)) \n char['"..hat5.."'].Handle.AccessoryWeld.C0 = cf("..hx5.." + "..rhhx5.." * math.cos(sine / 6),"..hy5.." + "..rhhy5.." * math.cos(sine / 6),"..hz5.." + "..rhhz5.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr5.." + "..rhxr5.." * math.cos(sine / 6)), "..hyr5.." + "..rhyr5.." * math.cos(sine / 6), "..hzr5.." + "..rhzr5.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
 	if _G.hat6tf == true then
-		_G.hate6 = ("char = game.Players.LocalPlayer.Character \n char['"..hat6.."'].Handle.AccessoryWeld.Part1 = char['"..attackment6.."'] \n char['"..hat6.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat6.."'].Handle.AccessoryWeld.C0 = cf("..hx6.." + "..rhhx6.." * math.cos(sine / 6),"..hy6.." + "..rhhy6.." * math.cos(sine / 6),"..hz6.." + "..rhhz6.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr6.." + "..rhxr6.." * math.cos(sine / 6)), "..hyr6.." + "..rhyr6.." * math.cos(sine / 6), "..hzr6.." + "..rhzr6.." * math.cos(sine / 6)) \n c.Anchored = false end")
+		_G.hate6 = ("char = game.Players.LocalPlayer.Character \n char['"..hat6.."'].Handle.AccessoryWeld.Part1 = char['"..attackment6.."'] \n char['"..hat6.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-0)) \n char['"..hat6.."'].Handle.AccessoryWeld.C0 = cf("..hx6.." + "..rhhx6.." * math.cos(sine / 6),"..hy6.." + "..rhhy6.." * math.cos(sine / 6),"..hz6.." + "..rhhz6.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr6.." + "..rhxr6.." * math.cos(sine / 6)), "..hyr6.." + "..rhyr6.." * math.cos(sine / 6), "..hzr6.." + "..rhzr6.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
 	--
 	if _G.hat7tf == true then
-		_G.hate7 = ("char = game.Players.LocalPlayer.Character \n char['"..hat7.."'].Handle.AccessoryWeld.Part1 = char['"..attackment7.."'] \n char['"..hat7.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat7.."'].Handle.AccessoryWeld.C0 = cf("..hx7.." + "..rhhx7.." * math.cos(sine / 6),"..hy7.." + "..rhhy7.." * math.cos(sine / 6),"..hz7.." + "..rhhz7.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr7.." + "..rhxr7.." * math.cos(sine / 6)), "..hyr7.." + "..rhyr7.." * math.cos(sine / 6), "..hzr7.." + "..rhzr7.." * math.cos(sine / 6)) \n c.Anchored = false end")
+		_G.hate7 = ("char = game.Players.LocalPlayer.Character \n char['"..hat7.."'].Handle.AccessoryWeld.Part1 = char['"..attackment7.."'] \n char['"..hat7.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-0)) \n char['"..hat7.."'].Handle.AccessoryWeld.C0 = cf("..hx7.." + "..rhhx7.." * math.cos(sine / 6),"..hy7.." + "..rhhy7.." * math.cos(sine / 6),"..hz7.." + "..rhhz7.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr7.." + "..rhxr7.." * math.cos(sine / 6)), "..hyr7.." + "..rhyr7.." * math.cos(sine / 6), "..hzr7.." + "..rhzr7.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
 	if _G.hat8tf == true then
-		_G.hate8 = ("char = game.Players.LocalPlayer.Character \n char['"..hat8.."'].Handle.AccessoryWeld.Part1 = char['"..attackment8.."'] \n char['"..hat8.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat8.."'].Handle.AccessoryWeld.C0 = cf("..hx8.." + "..rhhx8.." * math.cos(sine / 6),"..hy8.." + "..rhhy8.." * math.cos(sine / 6),"..hz8.." + "..rhhz8.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr8.." + "..rhxr8.." * math.cos(sine / 6)), "..hyr8.." + "..rhyr8.." * math.cos(sine / 6), "..hzr8.." + "..rhzr8.." * math.cos(sine / 6)) \n c.Anchored = false end")
+		_G.hate8 = ("char = game.Players.LocalPlayer.Character \n char['"..hat8.."'].Handle.AccessoryWeld.Part1 = char['"..attackment8.."'] \n char['"..hat8.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-0)) \n char['"..hat8.."'].Handle.AccessoryWeld.C0 = cf("..hx8.." + "..rhhx8.." * math.cos(sine / 6),"..hy8.." + "..rhhy8.." * math.cos(sine / 6),"..hz8.." + "..rhhz8.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr8.." + "..rhxr8.." * math.cos(sine / 6)), "..hyr8.." + "..rhyr8.." * math.cos(sine / 6), "..hzr8.." + "..rhzr8.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
 	if _G.hat9tf == true then
-		_G.hate9 = ("char = game.Players.LocalPlayer.Character \n char['"..hat9.."'].Handle.AccessoryWeld.Part1 = char['"..attackment9.."'] \n char['"..hat9.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat9.."'].Handle.AccessoryWeld.C0 = cf("..hx9.." + "..rhhx9.." * math.cos(sine / 6),"..hy9.." + "..rhhy9.." * math.cos(sine / 6),"..hz9.." + "..rhhz9.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr9.." + "..rhxr9.." * math.cos(sine / 6)), "..hyr9.." + "..rhyr9.." * math.cos(sine / 6), "..hzr9.." + "..rhzr9.." * math.cos(sine / 6)) \n c.Anchored = false end")
+		_G.hate9 = ("char = game.Players.LocalPlayer.Character \n char['"..hat9.."'].Handle.AccessoryWeld.Part1 = char['"..attackment9.."'] \n char['"..hat9.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-0)) \n char['"..hat9.."'].Handle.AccessoryWeld.C0 = cf("..hx9.." + "..rhhx9.." * math.cos(sine / 6),"..hy9.." + "..rhhy9.." * math.cos(sine / 6),"..hz9.." + "..rhhz9.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr9.." + "..rhxr9.." * math.cos(sine / 6)), "..hyr9.." + "..rhyr9.." * math.cos(sine / 6), "..hzr9.." + "..rhzr9.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
 	if _G.hat10tf == true then
-		_G.hate10 = ("char = game.Players.LocalPlayer.Character \n char['"..hat10.."'].Handle.AccessoryWeld.Part1 = char['"..attackment10.."'] \n char['"..hat10.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320)) \n char['"..hat10.."'].Handle.AccessoryWeld.C0 = cf("..hx10.." + "..rhhx10.." * math.cos(sine / 6),"..hy10.." + "..rhhy10.." * math.cos(sine / 6),"..hz10.." + "..rhhz10.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr10.." + "..rhxr10.." * math.cos(sine / 6)), "..hyr10.." + "..rhyr10.." * math.cos(sine / 6), "..hzr10.." + "..rhzr10.." * math.cos(sine / 6)) \n c.Anchored = false end")
+		_G.hate10 = ("char = game.Players.LocalPlayer.Character \n char['"..hat10.."'].Handle.AccessoryWeld.Part1 = char['"..attackment10.."'] \n char['"..hat10.."'].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-0)) \n char['"..hat10.."'].Handle.AccessoryWeld.C0 = cf("..hx10.." + "..rhhx10.." * math.cos(sine / 6),"..hy10.." + "..rhhy10.." * math.cos(sine / 6),"..hz10.." + "..rhhz10.." * math.cos(sine / 6)) * CFrame.Angles(math.rad("..hxr10.." + "..rhxr10.." * math.cos(sine / 6)), "..hyr10.." + "..rhyr10.." * math.cos(sine / 6), "..hzr10.." + "..rhzr10.." * math.cos(sine / 6)) \n c.Anchored = false end")
 	end
 
 
@@ -1412,7 +1412,7 @@ while nonanimate == true do
 		hat = script.Parent.Parent["hat settings"].enterthin.Text
 		char = game.Players.LocalPlayer.Character
 		char[hat].Handle.AccessoryWeld.Part1 = char[attackment1]
-		char[hat].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
 		char[hat].Handle.AccessoryWeld.C0 = cf(hx+rhhx*math.cos(sine/6),hy+rhhy*math.cos(sine/6),hz+rhhz*math.cos(sine/6))*CFrame.Angles(math.rad(hxr+rhxr*math.cos(sine/6)),math.rad(hyr+rhyr*math.cos(sine/6)),math.rad(hzr+rhzr*math.cos(sine/6)))
 
 
@@ -1432,7 +1432,7 @@ while nonanimate == true do
 		attackment1 = _G.hat3atach
 		char = game.Players.LocalPlayer.Character
 		char[hat3].Handle.AccessoryWeld.Part1 = char[attackment1]
-		char[hat3].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat3].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
 		char[hat3].Handle.AccessoryWeld.C0 = cf(hx3+rhhx3*math.cos(sine/6),hy3+rhhy3*math.cos(sine/6),hz3+rhhz3*math.cos(sine/6))*CFrame.Angles(math.rad(hxr3+rhxr3*math.cos(sine/6)),math.rad(hyr3+rhyr3*math.cos(sine/6)),math.rad(hzr3+rhzr3*math.cos(sine/6)))
 
 
@@ -1443,7 +1443,7 @@ while nonanimate == true do
 		hat6 = script.Parent.Parent["hat6 settings"].enterthin.Text
 		char = game.Players.LocalPlayer.Character
 		char[hat6].Handle.AccessoryWeld.Part1 = char[attackment1]
-		char[hat6].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat6].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
 		char[hat6].Handle.AccessoryWeld.C0 = cf(hx6+rhhx6*math.cos(sine/6),hy6+rhhy6*math.cos(sine/6),hz6+rhhz6*math.cos(sine/6))*CFrame.Angles(math.rad(hxr6+rhxr6*math.cos(sine/6)),math.rad(hyr6+rhyr6*math.cos(sine/6)),math.rad(hzr6+rhzr6*math.cos(sine/6)))
 
 
@@ -1454,7 +1454,7 @@ while nonanimate == true do
 		hat5 = script.Parent.Parent["hat5 settings"].enterthin.Text
 		char = game.Players.LocalPlayer.Character
 		char[hat5].Handle.AccessoryWeld.Part1 = char[attackment1]
-		char[hat5].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat5].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
 		char[hat5].Handle.AccessoryWeld.C0 = cf(hx5+rhhx5*math.cos(sine/6),hy5+rhhy5*math.cos(sine/6),hz5+rhhz5*math.cos(sine/6))*CFrame.Angles(math.rad(hxr5+rhxr5*math.cos(sine/6)),math.rad(hyr5+rhyr5*math.cos(sine/6)),math.rad(hzr5+rhzr5*math.cos(sine/6)))
 
 
@@ -1465,7 +1465,7 @@ while nonanimate == true do
 		attackment1 = _G.hat4atach
 		char = game.Players.LocalPlayer.Character
 		char[hat4].Handle.AccessoryWeld.Part1 = char[attackment1]
-		char[hat4].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat4].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
 		char[hat4].Handle.AccessoryWeld.C0 = cf(hx4+rhhx4*math.cos(sine/6),hy4+rhhy4*math.cos(sine/6),hz4+rhhz4*math.cos(sine/6))*CFrame.Angles(math.rad(hxr4+rhxr4*math.cos(sine/6)),math.rad(hyr4+rhyr4*math.cos(sine/6)),math.rad(hzr4+rhzr4*math.cos(sine/6)))
 
 
@@ -1476,7 +1476,7 @@ while nonanimate == true do
 		attackment1 = _G.hat7atach
 		char = game.Players.LocalPlayer.Character
 		char[hat7].Handle.AccessoryWeld.Part1 = char[attackment1]
-		char[hat7].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat7].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
 		char[hat7].Handle.AccessoryWeld.C0 = cf(hx7+rhhx7*math.cos(sine/6),hy7+rhhy7*math.cos(sine/6),hz7+rhhz7*math.cos(sine/6))*CFrame.Angles(math.rad(hxr7+rhxr7*math.cos(sine/6)),math.rad(hyr7+rhyr7*math.cos(sine/6)),math.rad(hzr7+rhzr7*math.cos(sine/6)))
 
 
@@ -1487,7 +1487,7 @@ while nonanimate == true do
 		hat8 = script.Parent.Parent["hat8 settings"].enterthin.Text
 		char = game.Players.LocalPlayer.Character
 		char[hat8].Handle.AccessoryWeld.Part1 = char[attackment1]
-		char[hat8].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat8].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
 		char[hat8].Handle.AccessoryWeld.C0 = cf(hx8+rhhx8*math.cos(sine/6),hy8+rhhy8*math.cos(sine/6),hz8+rhhz8*math.cos(sine/6))*CFrame.Angles(math.rad(hxr8+rhxr8*math.cos(sine/6)),math.rad(hyr8+rhyr8*math.cos(sine/6)),math.rad(hzr8+rhzr8*math.cos(sine/6)))
 
 
@@ -1498,7 +1498,7 @@ while nonanimate == true do
 		hat9 = script.Parent.Parent["hat9 settings"].enterthin.Text
 		char = game.Players.LocalPlayer.Character
 		char[hat9].Handle.AccessoryWeld.Part1 = char[attackment1]
-		char[hat9].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat9].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
 		char[hat9].Handle.AccessoryWeld.C0 = cf(hx9+rhhx9*math.cos(sine/6),hy9+rhhy9*math.cos(sine/6),hz9+rhhz9*math.cos(sine/6))*CFrame.Angles(math.rad(hxr9+rhxr9*math.cos(sine/6)),math.rad(hyr9+rhyr9*math.cos(sine/6)),math.rad(hzr9+rhzr9*math.cos(sine/6)))
 
 
@@ -1509,7 +1509,7 @@ while nonanimate == true do
 		attackment1 = _G.hat10atach
 		char = game.Players.LocalPlayer.Character
 		char[hat10].Handle.AccessoryWeld.Part1 = char[attackment1]
-		char[hat10].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(270),math.rad(-320))
+		char[hat10].Handle.AccessoryWeld.C1 = cf(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
 		char[hat10].Handle.AccessoryWeld.C0 = cf(hx10+rhhx10*math.cos(sine/6),hy10+rhhy10*math.cos(sine/6),hz10+rhhz10*math.cos(sine/6))*CFrame.Angles(math.rad(hxr10+rhxr10*math.cos(sine/6)),math.rad(hyr10+rhyr10*math.cos(sine/6)),math.rad(hzr10+rhzr10*math.cos(sine/6)))
 
 
