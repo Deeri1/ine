@@ -34,10 +34,6 @@ local computer = Instance.new("TextLabel")
 local onoff44 = Instance.new("TextButton")
 local animator = Instance.new("TextLabel")
 local onoff55 = Instance.new("TextButton")
-local load = Instance.new("Frame")
-local title_2 = Instance.new("TextBox")
-local TextBox = Instance.new("TextBox")
-local funniname = Instance.new("TextBox")
 
 --Properties:
 
@@ -339,57 +335,9 @@ onoff55.Text = ""
 onoff55.TextColor3 = Color3.fromRGB(0, 0, 0)
 onoff55.TextSize = 14.000
 
-load.Name = "load"
-load.Parent = newload
-load.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
-load.Position = UDim2.new(0.0780089125, 0, 0.206979543, 0)
-load.Size = UDim2.new(0, 1081, 0, 474)
-load.Visible = false
-
-title_2.Name = "title"
-title_2.Parent = load
-title_2.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
-title_2.Position = UDim2.new(0, 0, 0.226233438, 0)
-title_2.Size = UDim2.new(0, 1081, 0, 180)
-title_2.ClearTextOnFocus = false
-title_2.Font = Enum.Font.SourceSans
-title_2.Text = "Deeri Hub"
-title_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-title_2.TextSize = 100.000
-title_2.TextWrapped = true
-
-TextBox.Parent = load
-TextBox.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
-TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.105145417, 0, 0.533092678, 0)
-TextBox.Selectable = false
-TextBox.Size = UDim2.new(0, 516, 0, 150)
-TextBox.ClearTextOnFocus = false
-TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = "Welcome"
-TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.TextScaled = true
-TextBox.TextSize = 14.000
-TextBox.TextWrapped = true
-
-funniname.Name = "funni name"
-funniname.Parent = load
-funniname.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
-funniname.BorderSizePixel = 0
-funniname.Position = UDim2.new(0.489932895, 0, 0.533092678, 0)
-funniname.Selectable = false
-funniname.Size = UDim2.new(0, 516, 0, 150)
-funniname.ClearTextOnFocus = false
-funniname.Font = Enum.Font.SourceSans
-funniname.Text = ""
-funniname.TextColor3 = Color3.fromRGB(0, 0, 0)
-funniname.TextScaled = true
-funniname.TextSize = 14.000
-funniname.TextWrapped = true
-
 -- Scripts:
 
-local function LKJYU_fake_script() -- done.wl and load 
+local function JIINBWR_fake_script() -- done.wl and load 
 	local script = Instance.new('LocalScript', done)
 
 	local function makeLookupTable(table)  
@@ -448,32 +396,32 @@ local function LKJYU_fake_script() -- done.wl and load
 	
 	
 end
-coroutine.wrap(LKJYU_fake_script)()
-local function PHMF_fake_script() -- howdaa.huHHH 
+coroutine.wrap(JIINBWR_fake_script)()
+local function GOOA_fake_script() -- howdaa.huHHH 
 	local script = Instance.new('LocalScript', howdaa)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.nada.Visible = true
 	end)
 end
-coroutine.wrap(PHMF_fake_script)()
-local function LTDOZ_fake_script() -- closedaextra.close da da 
+coroutine.wrap(GOOA_fake_script)()
+local function HYHNP_fake_script() -- closedaextra.close da da 
 	local script = Instance.new('LocalScript', closedaextra)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(LTDOZ_fake_script)()
-local function IPCC_fake_script() -- closeall.LocalScript 
+coroutine.wrap(HYHNP_fake_script)()
+local function AZDW_fake_script() -- closeall.LocalScript 
 	local script = Instance.new('LocalScript', closeall)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent["new load"]:Destroy()
 	end)
 end
-coroutine.wrap(IPCC_fake_script)()
-local function UALCXI_fake_script() -- updates.open updates 
+coroutine.wrap(AZDW_fake_script)()
+local function EXSFCVR_fake_script() -- updates.open updates 
 	local script = Instance.new('LocalScript', updates)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -481,8 +429,8 @@ local function UALCXI_fake_script() -- updates.open updates
 	end)
 	
 end
-coroutine.wrap(UALCXI_fake_script)()
-local function HYQMC_fake_script() -- credits.credits 
+coroutine.wrap(EXSFCVR_fake_script)()
+local function QYNLSX_fake_script() -- credits.credits 
 	local script = Instance.new('LocalScript', credits)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -490,16 +438,16 @@ local function HYQMC_fake_script() -- credits.credits
 	end)
 	
 end
-coroutine.wrap(HYQMC_fake_script)()
-local function FGAFB_fake_script() -- silentrejoin.LocalScript 
+coroutine.wrap(QYNLSX_fake_script)()
+local function DHSS_fake_script() -- silentrejoin.LocalScript 
 	local script = Instance.new('LocalScript', silentrejoin)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent["new load"]:Destroy()
 	end)
 end
-coroutine.wrap(FGAFB_fake_script)()
-local function FEPA_fake_script() -- onoff33.main script 
+coroutine.wrap(DHSS_fake_script)()
+local function NHRD_fake_script() -- onoff33.main script 
 	local script = Instance.new('LocalScript', onoff33)
 
 	local onoff2 = script.Parent.Parent["onoff33"]
@@ -524,8 +472,8 @@ local function FEPA_fake_script() -- onoff33.main script
 	end
 	)
 end
-coroutine.wrap(FEPA_fake_script)()
-local function DTCYFK_fake_script() -- onoff22.sidebar script 
+coroutine.wrap(NHRD_fake_script)()
+local function ECWUC_fake_script() -- onoff22.sidebar script 
 	local script = Instance.new('LocalScript', onoff22)
 
 	local onoff2 = script.Parent.Parent["onoff22"]
@@ -550,8 +498,8 @@ local function DTCYFK_fake_script() -- onoff22.sidebar script
 	
 	
 end
-coroutine.wrap(DTCYFK_fake_script)()
-local function LWWJHJ_fake_script() -- onoff11.main script 
+coroutine.wrap(ECWUC_fake_script)()
+local function GYITD_fake_script() -- onoff11.main script 
 	local script = Instance.new('LocalScript', onoff11)
 
 	local onoff2 = script.Parent.Parent["onoff11"]
@@ -576,8 +524,8 @@ local function LWWJHJ_fake_script() -- onoff11.main script
 	
 	
 end
-coroutine.wrap(LWWJHJ_fake_script)()
-local function MJGTZ_fake_script() -- onoff44.computer script 
+coroutine.wrap(GYITD_fake_script)()
+local function OVTC_fake_script() -- onoff44.computer script 
 	local script = Instance.new('LocalScript', onoff44)
 
 	local onoff2 = script.Parent.Parent["onoff44"]
@@ -602,8 +550,8 @@ local function MJGTZ_fake_script() -- onoff44.computer script
 	
 	
 end
-coroutine.wrap(MJGTZ_fake_script)()
-local function YVDECX_fake_script() -- onoff55.animator script script 
+coroutine.wrap(OVTC_fake_script)()
+local function DXOAN_fake_script() -- onoff55.animator script script 
 	local script = Instance.new('LocalScript', onoff55)
 
 	local onoff2 = script.Parent.Parent["onoff55"]
@@ -628,8 +576,8 @@ local function YVDECX_fake_script() -- onoff55.animator script script
 	
 	
 end
-coroutine.wrap(YVDECX_fake_script)()
-local function FYDEFPF_fake_script() -- main.dragable 
+coroutine.wrap(DXOAN_fake_script)()
+local function BDERL_fake_script() -- main.dragable 
 	local script = Instance.new('LocalScript', main)
 
 	local main = script.Parent.Parent.main
@@ -638,38 +586,4 @@ local function FYDEFPF_fake_script() -- main.dragable
 	
 	main.Draggable = true
 end
-coroutine.wrap(FYDEFPF_fake_script)()
-local function FOUQXUJ_fake_script() -- funniname.LocalScript 
-	local script = Instance.new('LocalScript', funniname)
-
-	do
-		print("gamer")
-		local USERNAME = game.Players.LocalPlayer.Name
-		script.Parent.Parent.Parent.main.Parent = game.CoreGui
-		load = script.Parent.Parent.Parent.load
-		load.Visible = true
-		funiname = script.Parent.Parent["funni name"]
-		title = script.Parent.Parent.title
-		text = script.Parent.Parent.TextBox
-		
-	script.Parent.Text = USERNAME
-	script.Parent.Parent.Parent.main.Visible = false
-	wait(1)
-		load.BackgroundTransparency = .5
-		funiname.BackgroundTransparency = .5
-		title.BackgroundTransparency = .5
-		text.BackgroundTransparency = .5
-	wait(1)
-		load.BackgroundTransparency = 1
-		funiname.BackgroundTransparency = 1
-		title.BackgroundTransparency = 1
-		text.BackgroundTransparency = 1
-		text.BackgroundTransparency = 1
-		script.Parent.Parent.Parent.main.Visible = true
-		load:Destroy()
-	
-		
-	end
-	
-end
-coroutine.wrap(FOUQXUJ_fake_script)()
+coroutine.wrap(BDERL_fake_script)()
