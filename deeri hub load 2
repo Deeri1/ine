@@ -20,7 +20,7 @@ local openui = Instance.new("TextButton")
 --Properties:
 
 newuiload.Name = "newuiload"
-newuiload.Parent = game.Workspace
+newuiload.Parent = game.CoreGui
 
 main.Name = "main"
 main.Parent = newuiload
