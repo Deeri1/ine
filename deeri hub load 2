@@ -20,19 +20,17 @@ local openui = Instance.new("TextButton")
 --Properties:
 
 newuiload.Name = "newuiload"
-newuiload.Parent = game.CoreGui
+newuiload.Parent = game.Workspace
 
 main.Name = "main"
 main.Parent = newuiload
-main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
 main.Position = UDim2.new(0.183155075, 0, 0.26462397, 0)
 main.Size = UDim2.new(0, 589, 0, 495)
-main.Active = true
-main.Draggable = true
 
 title.Name = "title"
 title.Parent = main
-title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
 title.Size = UDim2.new(0, 589, 0, 106)
 title.Font = Enum.Font.SourceSans
 title.Text = "WELCOME TO DEERI HUB"
@@ -43,7 +41,7 @@ title.TextWrapped = true
 
 infotitle.Name = "info title"
 infotitle.Parent = main
-infotitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+infotitle.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
 infotitle.Position = UDim2.new(0.32937181, 0, 0.214141414, 0)
 infotitle.Size = UDim2.new(0, 200, 0, 50)
 infotitle.Font = Enum.Font.SourceSans
@@ -55,7 +53,7 @@ infotitle.TextWrapped = true
 
 cmdsinfo.Name = "cmds info"
 cmdsinfo.Parent = main
-cmdsinfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cmdsinfo.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
 cmdsinfo.Position = UDim2.new(0, 0, 0.315151513, 0)
 cmdsinfo.Size = UDim2.new(0, 194, 0, 50)
 cmdsinfo.Font = Enum.Font.SourceSans
@@ -67,7 +65,7 @@ cmdsinfo.TextWrapped = true
 
 howtoentercommnds.Name = "howtoentercommnds"
 howtoentercommnds.Parent = main
-howtoentercommnds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+howtoentercommnds.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
 howtoentercommnds.Position = UDim2.new(0.67062819, 0, 0.315151513, 0)
 howtoentercommnds.Size = UDim2.new(0, 194, 0, 50)
 howtoentercommnds.Font = Enum.Font.SourceSans
@@ -79,7 +77,7 @@ howtoentercommnds.TextWrapped = true
 
 hwotoentercommadns.Name = "hwo to enter commadns"
 hwotoentercommadns.Parent = main
-hwotoentercommadns.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hwotoentercommadns.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
 hwotoentercommadns.Position = UDim2.new(0.67062819, 0, 0.448484838, 0)
 hwotoentercommadns.Size = UDim2.new(0, 194, 0, 50)
 hwotoentercommadns.Font = Enum.Font.SourceSans
@@ -91,7 +89,7 @@ hwotoentercommadns.TextWrapped = true
 
 howtoopenandclose.Name = "howtoopenandclose"
 howtoopenandclose.Parent = main
-howtoopenandclose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+howtoopenandclose.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
 howtoopenandclose.Position = UDim2.new(0, 0, 0.448484838, 0)
 howtoopenandclose.Size = UDim2.new(0, 194, 0, 50)
 howtoopenandclose.Font = Enum.Font.SourceSans
@@ -103,7 +101,7 @@ howtoopenandclose.TextWrapped = true
 
 hatrequired.Name = "hat required"
 hatrequired.Parent = main
-hatrequired.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hatrequired.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
 hatrequired.Position = UDim2.new(0, 0, 0.589898944, 0)
 hatrequired.Size = UDim2.new(0, 194, 0, 50)
 hatrequired.Font = Enum.Font.SourceSans
@@ -115,7 +113,7 @@ hatrequired.TextWrapped = true
 
 clickclear.Name = "click clear"
 clickclear.Parent = main
-clickclear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clickclear.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
 clickclear.Position = UDim2.new(0.668930411, 0, 0.589898944, 0)
 clickclear.Size = UDim2.new(0, 194, 0, 50)
 clickclear.Font = Enum.Font.SourceSans
@@ -127,7 +125,7 @@ clickclear.TextWrapped = true
 
 credits.Name = "credits"
 credits.Parent = main
-credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+credits.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
 credits.Position = UDim2.new(0.668930411, 0, 0.755555511, 0)
 credits.Size = UDim2.new(0, 194, 0, 50)
 credits.Font = Enum.Font.SourceSans
@@ -139,7 +137,7 @@ credits.TextWrapped = true
 
 rejoining.Name = "rejoining"
 rejoining.Parent = main
-rejoining.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rejoining.BackgroundColor3 = Color3.fromRGB(0, 132, 198)
 rejoining.Position = UDim2.new(0, 0, 0.755555511, 0)
 rejoining.Size = UDim2.new(0, 194, 0, 50)
 rejoining.Font = Enum.Font.SourceSans
@@ -163,18 +161,11 @@ openui.TextWrapped = true
 
 -- Scripts:
 
-openui.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/deeri%20hub%202'),true))()
-end)
-
-local function UMPPLS_fake_script() -- openui.close scripty 
+local function LOJEOP_fake_script() -- openui.close scripty 
 	local script = Instance.new('LocalScript', openui)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
-		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(UMPPLS_fake_script)()
-
-
+coroutine.wrap(LOJEOP_fake_script)()
