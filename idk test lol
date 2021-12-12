@@ -1,4 +1,4 @@
-
+--new
 
 script.Parent = game.CoreGui.animator.main.convert
 player = game.Players.LocalPlayer
@@ -1397,13 +1397,11 @@ while nonanimate == true do
 	wait()
 	--per bldy : or rla == ""  or rla2 == ""  or rla3 == "" or rla == "."  or rla2 == "."  or rla3 == "." or rla == "-"  or rla2 == "-"  or rla3 == "-"  or rla == "-."  or rla2 == "-."  or rla3 == "-."or rla4 == ""  or rla5 == ""  or rla6 == ""or rla4 == "-"  or rla5 == "-"  or rla6 == "-"  or rla4 == "."  or rla5 == "."  or rla6 == "."or rla4 == "-."  or rla5 == "-."  or rla6 == "-."
 
-	rhs = main.rh.Text
-	lhs = main.lh.Text
-	
+
 	siner = rhxs
 	sinerhx = sine + change
-	RH.C0=clerp(RH.C0,cf(rhx + rla * math.cos(sine / rhs),rhy + rla2 * math.cos(sine / rhs),rhz + rla3 * math.cos(sine / rhs))*angles(math.rad(rrhx + rla4 * math.cos(sine / rhs)),math.rad(rrhy + rla5 * math.cos(sine / rhs)),math.rad(rrhz + rla6 * math.cos(sine / rhs))),.2)
-	LH.C0=clerp(LH.C0,cf(lhx + lla * math.cos(sine / lhs),lhy + lla2 * math.cos(sine / lhs),lhz + lla3 * math.cos(sine / lhs))*angles(math.rad(lrhx + lla4 * math.cos(sine / lhs)),math.rad(lrhy + lla5 * math.cos(sine / lhs)),math.rad(lrhz + lla6 * math.cos(sine / lhs))),.2)
+	RH.C0=clerp(RH.C0,cf(rhx + rla * math.cos(sinerhx / 6),rhy + rla2 * math.cos(sine / 6),rhz + rla3 * math.cos(sine / 6))*angles(math.rad(rrhx + rla4 * math.cos(sine / 6)),math.rad(rrhy + rla5 * math.cos(sine / 6)),math.rad(rrhz + rla6 * math.cos(sine / 6))),.2)
+	LH.C0=clerp(LH.C0,cf(lhx + lla * math.cos(sine / 6),lhy + lla2 * math.cos(sine / 6),lhz + lla3 * math.cos(sine / 6))*angles(math.rad(lrhx + lla4 * math.cos(sine / 6)),math.rad(lrhy + lla5 * math.cos(sine / 6)),math.rad(lrhz + lla6 * math.cos(sine / 6))),.2)
 	RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(tahx + to * math.cos(sine / 6),tahy + to2 * math.cos(sine / 6),tahz + to3 * math.cos(sine / 6))*angles(math.rad(tarhx + to4 * math.cos(sine / 6)),math.rad(tarhy + to5 * math.cos(sine / 6)),math.rad(tarhz + to6 * math.cos(sine / 6))),.3)
 	Torso.Neck.C0=clerp(Torso.Neck.C0,necko*angles(math.rad(0),math.rad(0),math.rad(0)),.3)
 	RW.C0=clerp(RW.C0,cf(rahx + raa * math.cos(sine / 6),rahy + raa2 * math.cos(sine / 6),rahz + raa3 * math.cos(sine / 6))*angles(math.rad(rarhx + raa4 * math.cos(sine / 6)),math.rad(rarhy + raa5 * math.cos(sine / 6)),math.rad(rarhz + raa6 * math.cos(sine / 6))),.3)
