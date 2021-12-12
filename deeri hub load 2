@@ -166,6 +166,7 @@ local function LOJEOP_fake_script() -- openui.close scripty
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deeri1/ine/main/Deeri%20hub%20beta'),true))()
 	end)
 end
 coroutine.wrap(LOJEOP_fake_script)()
