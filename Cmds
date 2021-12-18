@@ -1259,7 +1259,7 @@ elseif
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/studio%20dummy%20edit"))()
 elseif
 	CMD.Text == ".mlc" then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/studio%20dummy%20edit"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/mlce"))()
 elseif
 	CMD.Text == ".stands" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/stands"))()
