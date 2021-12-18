@@ -1,3 +1,5 @@
+--new
+
 stye = -.8
 local player = game:GetService("Players").LocalPlayer.Character
 local aligns = {}
@@ -445,16 +447,16 @@ game:GetService("RunService").RenderStepped:Connect(function(dt)
 	x.Anchored = true
 end)
 local USERNAME = game.Players.LocalPlayer.Name
-if USERNAME == "highlywantedd" then
+if USERNAME == "highlywantedd" or USERNAME == "pkuxe" then
+	if USERNAME == "highlywantedd" then
 	print("yes")
 	c = game.Players.LocalPlayer.Character:FindFirstChild("Moon Lord").Handle
 else
 	print("nahh")
-	c = game.Players.LocalPlayer.Character:FindFirstChild("Red Sci-Fi Scattergun").Handle
-end
-if USERNAME == "pkuxe" then
-	print("yes")
-	c = game.Players.LocalPlayer.Character:FindFirstChild("Starslayer Railgun").Handle
+		c = game.Players.LocalPlayer.Character:FindFirstChild("Starslayer Railgun").Handle
+	end
+else
+		c = game.Players.LocalPlayer.Character:FindFirstChild("Red Sci-Fi Scattergun").Handle
 end
 c.AccessoryWeld:Destroy()
 c.Anchored = false
