@@ -1,5 +1,4 @@
---new2
-
+--newver
 stye = -.8
 local player = game:GetService("Players").LocalPlayer.Character
 local aligns = {}
@@ -431,8 +430,12 @@ stye2 = -.8
 local USERNAME = game.Players.LocalPlayer.Name
 if USERNAME == "pkuxe" then
 	print("yes")
+	min = 0.90
+	x1,x3,x4,x5 = 0,-1.5,55,80
 	x = game.Players.LocalPlayer.Character:FindFirstChild("MeshPartAccessory").Handle
 else
+	min = 1
+	x1,x3,x4,x5 = 0,2,-120,55
 	x = game.Players.LocalPlayer.Character:FindFirstChild("ShadowBladeMasterAccessory").Handle
 end
 
@@ -442,7 +445,7 @@ local cRot = 0.1
 game:GetService("RunService").RenderStepped:Connect(function(dt)
 	cRot = cRot + 0*dt
 	x.Anchored = true
-	x.CFrame = RightArm.CFrame * CFrame.new(0,stye2-1,2) * CFrame.Angles(math.rad(-120), 55, -cRot)
+	x.CFrame = RightArm.CFrame * CFrame.new(x1,stye2-min,x3) * CFrame.Angles(math.rad(x4), x5, -cRot)
 	x.Velocity = Vector3.new(0,0,0)
 	x.Anchored = true
 end)
@@ -452,10 +455,12 @@ if USERNAME == "highlywantedd" or USERNAME == "pkuxe" then
 	print("yes")
 	c = game.Players.LocalPlayer.Character:FindFirstChild("Moon Lord").Handle
 else
-	print("nahh")
+		print("nahh")
+		c1,c3,c4,c5 = 0,-1.5,-55,80
 		c = game.Players.LocalPlayer.Character:FindFirstChild("Starslayer Railgun").Handle
 	end
 else
+	c1,c3,c4,c5 = 0,-.3,-50,55
 		c = game.Players.LocalPlayer.Character:FindFirstChild("Red Sci-Fi Scattergun").Handle
 end
 c.AccessoryWeld:Destroy()
@@ -464,7 +469,7 @@ local cRot = 0.1
 game:GetService("RunService").RenderStepped:Connect(function(dt)
 	cRot = cRot + 0*dt
 	c.Anchored = true
-	c.CFrame = RightArm.CFrame * CFrame.new(0,stye,-.3) * CFrame.Angles(math.rad(-50), 55, -cRot)
+	c.CFrame = RightArm.CFrame * CFrame.new(c1,stye,c3) * CFrame.Angles(math.rad(c4), c5, -cRot)
 	c.Velocity = Vector3.new(0,0,0)
 	c.Anchored = true
 end)
