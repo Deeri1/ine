@@ -868,6 +868,10 @@ showDamage=function(Char,Dealt,du,Color)
 end
 
 
+if game.CoreGui.deeri == false then
+repeat wait() until nil
+end
+
 function ShowDamage2(Pos, Text, Time, Color)
 	local Rate = (1 / 30)
 	local Pos = (Pos or Vector3.new(0, 0, 0))
