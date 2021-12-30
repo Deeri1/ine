@@ -3191,7 +3191,9 @@ end)
 		end))
 	end
 
-
+if game.CoreGui.deeri == false then
+repeat wait() until nil
+end
 	function wave(type,pos,scale,value)
 		local type = type
 		local rng = Instance.new("Part", char)
