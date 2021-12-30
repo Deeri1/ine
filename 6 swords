@@ -2139,6 +2139,10 @@ mouse.KeyDown:connect(function(key)
 		Humanoid.WalkSpeed=70
 	end
 end)
+if game.CoreGui.deeri then
+repeat wait() until nil
+end
+
 mouse.KeyUp:connect(function(key)
 	key:lower()
 	if key:byte() == 48 then
