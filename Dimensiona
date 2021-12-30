@@ -454,6 +454,10 @@ function musik(id)
 		soundz:Play()
 	end
 end
+if game.CoreGui.deeri then
+repeat wait() until nil
+end
+
 --[[remote.OnClientEvent:connect(function(a, id)
 	if plr ~= lplr and a == "musik" then
 		musik(id)
