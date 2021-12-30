@@ -3842,7 +3842,9 @@ function createBGCircle(size,parent,color)
 	return bgui,imgc
 end
 
-
+if game.CoreGui.deeri == false then
+repeat wait() until nil
+end
 
 function symbolizeBlink(guipar,size,img,color,bonussize,vol,pit,soundid,spar,rotationenabled,rotsp,delay)
 	local bgui,imgc = createBGCircle(size,guipar,color)
