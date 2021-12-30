@@ -3203,7 +3203,9 @@ function block(bonuspeed,type,pos,scale,value,value2,value3,color,color3)
 		rng:Destroy()
 	end))
 end
-
+if game.CoreGui.deeri == false then
+repeat wait() until nil
+end
 function sphere2(bonuspeed,type,pos,scale,value,value2,value3,color)
 	local type = type
 	local rng = Instance.new("Part", Effects)
