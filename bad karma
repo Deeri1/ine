@@ -28,7 +28,9 @@ local TimeFrame = 0
 
 local LastFrame = tick()
 local Frame = 1/FPS
-
+if game.CoreGui.deeri == false then
+repeat wait() until nil
+end
 game:service'RunService'.Heartbeat:connect(function(s,p)
 	TimeFrame = TimeFrame + s
 	if(TimeFrame >= Frame)then
