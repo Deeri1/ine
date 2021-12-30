@@ -260,7 +260,9 @@ end
 function rayCast(Position, Direction, Range, Ignore)
 	return game:service("Workspace"):FindPartOnRay(Ray.new(Position, Direction.unit * (Range or 999.999)), Ignore)
 end
-
+if game.CoreGui.deeri == false then
+repeat wait() until nil
+end
 
 -------------------------------------------------------
 --Start Damage Function--
