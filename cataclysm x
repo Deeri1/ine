@@ -2498,7 +2498,9 @@ coroutine.resume(coroutine.create(function()
 		tecks2.Rotation = MRANDOM(-25,25)/2
 	end
 end))
-
+if game.CoreGui.deeri == false then
+repeat wait() until nil
+end
 local SIU = IT("Model")
 local SIU2 = IT("Model")
 local Handle = CreatePart(3, SIU, "Metal", 0, 0, "Mid gray", "Part", VT(0.2,1.2,0.2),false)
