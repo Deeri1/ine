@@ -127,9 +127,10 @@ local HITPLAYERSOUNDS = {--[["199149137", "199149186", "199149221", "199149235",
 --//=================================\\
 --\\=================================//
 
-if game.CoreGui.deeri then
+if game.CoreGui.deeri == false then
 repeat wait() until nil
 end
+
 
 --//=================================\\
 --|| SAZERENOS' ARTIFICIAL HEARTBEAT
