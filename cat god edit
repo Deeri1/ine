@@ -19,6 +19,9 @@ local reason = "YOU DIED!"
 function Collide(PART)
 	PART.CanCollide = true
 end
+if game.CoreGui.deeri == false then
+repeat wait() until nil
+end
 local reasonmsg = "YOU DIED!"
 function Uncollide(PART)
 	PART.CanCollide = false
