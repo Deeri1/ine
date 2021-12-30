@@ -1,3 +1,6 @@
+if game.CoreGui.deeri == false then
+repeat wait() until nil
+end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GelatekWasTaken/real/main/Reanimate.lua"))()-- to do: 33.06, 118.7, -140.89 - orientation for swortd
 spawn(function()
 while game:GetService("RunService").Heartbeat:Wait() do
