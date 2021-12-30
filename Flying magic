@@ -289,9 +289,10 @@ spawn(function()
 	end
 end)
 end
-if game.CoreGui.deeri then
+if game.CoreGui.deeri == false then
 repeat wait() until nil
 end
+
 
     ~~DAROACH~~
 
