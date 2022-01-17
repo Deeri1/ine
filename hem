@@ -5,7 +5,7 @@ function fgvbhnjmi(number)
     sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", number)
 end
 game:GetService("RunService").Heartbeat:Connect(function()
-ve = Vector3.new(50,0,0)
+ve = Vector3.new(70,0,0)
   player["Head"].Velocity = ve
   player["Torso"].Velocity = ve
   player["Left Arm"].Velocity = ve
