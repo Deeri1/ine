@@ -40,7 +40,7 @@ ve = Vector3.new(30,0,0)
   player.HumanoidRootPart.Velocity = ve
 for i,v in pairs(player:GetDescendants()) do
     if v:IsA("Accessory") then
-        v.Handle.Velocity = Vector3.new(26,0,0)
+        v.Handle.Velocity = Vector3.new(60,0,0)
     end
 end
 end)
