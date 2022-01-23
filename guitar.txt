@@ -1,0 +1,564 @@
+print('Guitar')
+print('By slenercat5')
+print('F to toggle Camera perspectives')
+print('Play/SongID')
+local player = game:GetService("Players").LocalPlayer.Character
+local aligns = {}
+local hataligns = {}
+function fgvbhnjmi(number)
+	sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", number)
+end
+game:GetService("RunService").Heartbeat:Connect(function()
+	ve = Vector3.new(30,0,0)
+	player["Head"].Velocity = ve
+	player["Torso"].Velocity = ve
+	player["Left Arm"].Velocity = ve
+	player["Right Arm"].Velocity = ve
+	player["Left Leg"].Velocity = ve
+	player["Right Leg"].Velocity = ve
+	player["Torso"].CanCollide = false
+	player["Left Arm"].CanCollide = false
+	player["Right Arm"].CanCollide = false
+	player["Left Leg"].CanCollide = false
+	player["Right Leg"].CanCollide = false
+
+	for i,v in pairs(player:GetDescendants()) do
+		if v:IsA("Accessory") then
+			v.Handle.Velocity = Vector3.new(90,0,0)
+		end
+	end
+end)
+wait(0.1)
+settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
+settings().Physics.AllowSleep = false
+game.Players.LocalPlayer.ReplicationFocus = player
+local Player = game.Players.LocalPlayer
+local Character = Player.Character
+local RespawnTime = 10
+--Character["Local Ragdoll"]:Destroy()
+Character.Archivable = true
+local CloneChar = Character:Clone()
+CloneChar.Name = "ReanimChar"
+CloneChar.Parent = Character
+Workspace.CurrentCamera.CameraSubject = CloneChar
+for _,v in pairs(Character:GetDescendants()) do
+	if v:IsA("BasePart") then
+		Instance.new("Attachment", v)
+	end
+end
+for _,v in pairs(Character:GetDescendants()) do
+	if v:IsA("Accessory") then
+		Instance.new("Attachment", v.Handle)
+		Instance.new("AlignPosition",v)
+		Instance.new("AlignOrientation",v)
+	end
+end
+for i,v in pairs(Character:GetDescendants()) do
+	if v:IsA("BasePart") and v.Parent == Character then
+		Instance.new("AlignPosition", v)
+		Instance.new("AlignOrientation", v)
+		Instance.new("BodyVelocity", v)
+		--Instance.new("BodyPosition", v)
+		Instance.new("BodyForce", v)
+		Instance.new("BodyAngularVelocity", v)
+	end
+	if v:IsA("BallSocketConstraint") or v:IsA("HingeConstraint") then
+		v:Destroy()
+	end
+end
+game:GetService("RunService").Stepped:connect(function()
+	fgvbhnjmi(math.huge)
+	for i,v in pairs(Character:GetDescendants()) do
+		if v:IsA("BasePart") then
+			v.CanCollide = false
+		end
+   --[[ if v:IsA("Accessory") then
+        v.Handle.Velocity = Vector3.new(0,2,0)
+    end
+    if v:IsA("BasePart") and v.Parent == Character and v.Name ~= "Left Arm" and v.Name ~= "Right Arm" then
+        v.Transparency = CloneChar.Head.LocalTransparencyModifier
+    end
+    if v:IsA("Accessory") then
+        v.Handle.Transparency = CloneChar.Head.LocalTransparencyModifier
+    end
+    if v:IsA("Part") and v.Parent == CloneChar then
+        v.Transparency = 1
+    end
+    if v:IsA("Accessory") and v.Parent == CloneChar then
+        v.Handle.Transparency =1
+    end
+end
+for i,v in pairs(CloneChar:GetDescendants()) do
+    if v:IsA("Part") then
+        v.Transparency = 1
+    end
+end]]
+	end
+	--Character.Head.face.Texture = CloneChar.Head.face.Texture
+	for i,v in pairs(Character:GetDescendants()) do
+		if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
+			v.Velocity = Vector3.new(0,1,0)
+		end
+	end
+--[[for i,v in pairs(CloneChar:GetDescendants()) do
+    if v:IsA("Part") then
+        v.Transparency = 1
+    end
+end]]
+end)
+for i,v in pairs(Character:GetDescendants()) do
+	if v.Name == "AccessoryWeld" and v.Parent.Parent.Parent == Character then
+		v:Destroy()
+	end
+	if v:IsA("AlignPosition") or v:IsA("AlignOrientation") then
+		v.Responsiveness = 200
+	end
+	if v:IsA("AlignPosition") then
+		v.MaxVelocity = math.huge
+		v.MaxForce = 50000350345545
+	end
+	if v:IsA("Motor6D") and v.Parent == CloneChar.Torso then
+		v.RobloxLocked = true
+	end
+    --[[if v:IsA("BodyPosition") and v.Parent.Parent == Character and v.Parent.Name ~= "HumanoidRootPart" then
+        --v.MaxForce = Vector3.new(1,1,1) * math.huge
+        v.P = v.P * 2
+        v.Position = CloneChar[v.Parent.Name].Position
+    end]]
+	if v:IsA("BodyVelocity") then
+		v.MaxForce = Vector3.new(1,1,1) * math.huge
+		v.P = math.huge
+		v.Velocity = ve
+	end
+	if v:IsA("BodyAngularVelocity") and v.Parent.Name ~= "HumanoidRootPart" then
+		v.MaxTorque = Vector3.new(1,1,1) * math.huge
+		v.P = math.huge
+		v.AngularVelocity = Vector3.new(0,0,0)
+	end
+	if v:IsA("BodyForce") then
+		v.Force = Vector3.new(15.2,15.2,15.2)
+	end
+	if v:IsA("Part") and v.Parent == CloneChar then
+		v.Transparency = 1
+	end
+end
+for i,v in pairs(Character.Torso:GetDescendants()) do
+	if v:IsA("Motor6D") and v.Name ~= "Neck" then
+		v:Destroy()
+	end
+end
+for i,v in pairs(Character:GetDescendants()) do
+	if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" and not v.Parent:IsA("Accessory") and v.Parent == Character then
+		table.insert(aligns, v)
+		print(v.Name)
+	end
+end
+game:GetService("RunService").Stepped:connect(function()
+	for i,v in ipairs(aligns) do
+		--v.AlignPosition.Attachment0 = v.Attachment
+		v.CFrame = CloneChar[v.Name].CFrame
+	end
+end)
+game:GetService("RunService").Heartbeat:connect(function()
+	for i,v in ipairs(aligns) do
+		--v.AlignPosition.Attachment0 = v.Attachment
+		v.CFrame = CloneChar[v.Name].CFrame
+	end
+end)
+game:GetService("RunService").RenderStepped:connect(function()
+	for i,v in ipairs(aligns) do
+		--v.AlignPosition.Attachment0 = v.Attachment
+		v.CFrame = CloneChar[v.Name].CFrame
+	end
+end)
+spawn(function()
+	while true do
+		game:GetService("RunService").Stepped:wait()
+		v.CFrame = CloneChar[v.Name].CFrame
+		game:GetService("RunService").Heartbeat:wait()
+		v.CFrame = CloneChar[v.Name].CFrame
+		game:GetService("RunService").RenderStepped:wait()
+		v.CFrame = CloneChar[v.Name].CFrame
+	end
+end)
+Character.Head.AlignPosition.Attachment0 = Character.Head.Attachment
+Character.Head.AlignPosition.Attachment1 = CloneChar.Head.Attachment
+Character.Torso.AlignPosition.Attachment0 = Character.Torso.Attachment
+Character.Torso.AlignPosition.Attachment1 = CloneChar.Torso.Attachment
+Character["HumanoidRootPart"].AlignPosition.Attachment0 = Character["HumanoidRootPart"].Attachment
+Character["HumanoidRootPart"].AlignPosition.Attachment1 = CloneChar["Torso"].Attachment
+Character["HumanoidRootPart"].AlignOrientation.Attachment0 = Character["HumanoidRootPart"].Attachment
+Character["HumanoidRootPart"].AlignOrientation.Attachment1 = CloneChar["Torso"].Attachment
+
+Character.Humanoid.BreakJointsOnDeath = false
+game:FindFirstChildOfClass("Players").LocalPlayer.Character = Character.ReanimChar
+wait(6)
+for i,v in pairs(Character:GetDescendants()) do
+	if v:IsA("Accessory") and v.Parent == Character then
+		table.insert(hataligns, v)
+		print(v.Name)
+	end
+end
+for i,v in ipairs(hataligns) do
+	v.AlignPosition.Attachment0 = v.Handle.Attachment
+	v.AlignPosition.Attachment1 = CloneChar[v.Name].Handle.Attachment
+	print(CloneChar[v.Name])
+	v.AlignOrientation.Attachment0 = v.Handle.Attachment
+	v.AlignOrientation.Attachment1 = CloneChar[v.Name].Handle.Attachment
+	print(CloneChar[v.Name])
+end
+for i,v in ipairs(aligns) do
+	v.AlignPosition.Attachment0 = v.Attachment
+	v.AlignPosition.Attachment1 = CloneChar[v.Name].Attachment
+	print(CloneChar[v.Name])
+	v.AlignOrientation.Attachment0 = v.Attachment
+	v.AlignOrientation.Attachment1 = CloneChar[v.Name].Attachment
+	print(CloneChar[v.Name])
+end
+Character.Head.AlignOrientation.Attachment0 = Character.Head.Attachment
+Character.Head.AlignOrientation.Attachment1 = CloneChar.Head.Attachment
+Character.Torso.AlignOrientation.Attachment0 = Character.Torso.Attachment
+Character.Torso.AlignOrientation.Attachment1 = CloneChar.Torso.Attachment
+CloneChar.Parent.Torso.Neck:Destroy()
+print("Done")
+for i,v in pairs(CloneChar.Parent.Torso:GetDescendants()) do
+	if v:IsA("Motor6D") and v.Name ~= "Neck" then
+		v:Destroy()
+	end
+end
+Character.HumanoidRootPart.RootJoint.Part0 = nil
+Character.HumanoidRootPart.RootJoint.Part1 = nil 
+Character.Head.AlignPosition.Attachment0 = Character.Head.Attachment
+Character.Head.AlignPosition.Attachment1 = CloneChar.Head.Attachment
+Character.Torso.AlignPosition.Attachment0 = Character.Torso.Attachment
+Character.Torso.AlignPosition.Attachment1 = CloneChar.Torso.Attachment
+Character["HumanoidRootPart"].AlignPosition.Attachment0 = Character["HumanoidRootPart"].Attachment
+Character["HumanoidRootPart"].AlignPosition.Attachment1 = CloneChar["Torso"].Attachment
+Character["HumanoidRootPart"].AlignOrientation.Attachment0 = Character["HumanoidRootPart"].Attachment
+Character["HumanoidRootPart"].AlignOrientation.Attachment1 = CloneChar["Torso"].Attachment
+wait(1)
+CloneChar.Parent.HumanoidRootPart.Position = Vector3.new(0,-5200,0)
+spawn(function()
+	while true do
+		game.RunService.RenderStepped:wait()
+		for i,v in pairs(Character:GetDescendants()) do
+			if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" and v.Parent == Character then
+				v.Anchored = true
+			end
+		end
+		game.RunService.Stepped:wait()
+		for i,v in pairs(Character:GetDescendants()) do
+			if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" and v.Parent == Character then
+				v.Anchored = false
+			end
+		end
+		game.RunService.Heartbeat:wait()
+		for i,v in pairs(Character:GetDescendants()) do
+			if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" and v.Parent == Character then
+				v.Anchored = false
+			end
+		end
+	end
+end)
+
+local hrp = game:GetService("Players").LocalPlayer.Character.Parent.HumanoidRootPart
+local e = Instance.new("SelectionBox", hrp)
+e.Adornee = hrp
+hrp.Name = "HumanoidRootPart"
+hrp.Transparency = 0.5
+hrp.Anchored = false
+if hrp:FindFirstChildOfClass("AlignPosition") then
+	hrp:FindFirstChildOfClass("AlignPosition"):Destroy()
+end
+if hrp:FindFirstChildOfClass("BodyAngularVelocity") then
+	hrp:FindFirstChildOfClass("BodyAngularVelocity"):Destroy()
+end
+if hrp:FindFirstChildOfClass("AlignOrientation") then
+	hrp:FindFirstChildOfClass("AlignOrientation"):Destroy()
+end
+local bp = Instance.new("BodyPosition", hrp)
+bp.Position = hrp.Position
+bp.D = 9999999
+bp.P = 999999999999999
+bp.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+local flinger = Instance.new("BodyAngularVelocity",hrp)
+flinger.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+flinger.P = 1000000000000000000000000000
+flinger.AngularVelocity = Vector3.new(99999999999999999999,999999999999999999,999999999999999)
+
+spawn(function()
+	while game:GetService("RunService").Heartbeat:Wait() do
+		bp.Position = hrp.Parent.Torso.Position
+		hrp.Velocity = ve
+		-- e.Transparency = (hrp.Parent.Head.LocalTransparencyModifier)
+	end
+end)--FANCY :D
+game:GetService("Players").LocalPlayer.Character["pgcase"].Name = "gamer2"
+Player=game.Players.LocalPlayer
+Character=Player.Character
+Character.Animate.Disabled=true
+local LeftArm = Character["Left Arm"]
+local RightArm = Character["Right Arm"]
+local LeftLeg = Character["Left Leg"]
+local RightLeg = Character["Right Leg"]
+local Head = Character.Head
+local Torso = Character.Torso
+local Camera = game.Workspace.CurrentCamera	
+local RootPart = Character.HumanoidRootPart
+local RootJoint = RootPart.RootJoint
+local Humanoid=Character.Humanoid
+CAM=Camera
+FF=Instance.new('ForceField',Character)
+FF.Visible=false
+Humanoid.Name='LOLOL YOU CANT HIT ME'
+Character.
+Health:remove()
+for i,v in pairs (Humanoid:GetPlayingAnimationTracks()) do
+	v:Stop()
+end
+
+local newMotor = function(part0, part1, c0, c1)
+	w = Instance.new('Motor')
+	w.Parent = part0
+	w.Part0 = part0
+	w.Part1 = part1
+	w.C0 = c0
+	w.C1 = c1
+
+	return w
+end
+
+
+
+
+RootCF = CFrame.fromEulerAnglesXYZ(-1.57, 0, 3.14)
+NeckCF = CFrame.new(0, 1, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+
+local RW = newMotor(Torso, RightArm, CFrame.new(2.5, 0, 0), CFrame.new(0, 0, 0)) 
+local LW = newMotor(Torso, LeftArm, CFrame.new(-2.5, 0, 0), CFrame.new(0, 0, 0))
+local RH = newMotor(Torso, RightLeg, CFrame.new(1.5, -3, 0), CFrame.new(0, 0, 0))
+local LH = newMotor(Torso, LeftLeg, CFrame.new(-1.5, -3, 0), CFrame.new(0, 0, 0))
+RootJoint.C1 = CFrame.new(0, 0, 0)
+RootJoint.C0 = CFrame.new(0, 0, 0)
+Torso.Neck.C1 = CFrame.new(0, 0, 0)
+Torso.Neck.C0 = CFrame.new(0, 2.5, 0)
+
+local rarmc1 = RW.C1
+local larmc1 = LW.C1
+local rlegc1 = RH.C1
+local llegc1 = LH.C1
+
+local resetc1 = false
+
+function clerp(a, b, t)
+	return a:lerp(b, t)
+end
+function AutoWeld(Foop, OOF)
+	local W = Instance.new("Weld")
+	W.Part0 = Foop
+	W.Part1 = OOF
+	local CJ = CFrame.new(Foop.Position)
+	local C0 = Foop.CFrame:inverse()*CJ
+	local C1 = OOF.CFrame:inverse()*CJ
+	W.C0 = C0
+	W.C1 = C1
+	W.Name='o0o'
+	W.Parent = Foop
+
+end
+
+
+
+function PlayAnimationFromTable(table, speed, bool)
+	RootJoint.C0 = clerp(RootJoint.C0, table[1], speed) 
+	Torso.Neck.C0 = clerp(Torso.Neck.C0, table[2], speed) 
+	RW.C0 = clerp(RW.C0, table[3], speed) 
+	LW.C0 = clerp(LW.C0, table[4], speed) 
+	RH.C0 = clerp(RH.C0, table[5], speed) 
+	LH.C0 = clerp(LH.C0, table[6], speed) 
+	if bool == true then
+		if resetc1 == false then
+			resetc1 = true
+			RootJoint.C1 = RootJoint.C1
+			Torso.Neck.C1 = Torso.Neck.C1
+			RW.C1 = rarmc1
+			LW.C1 = larmc1
+			RH.C1 = rlegc1
+			LH.C1 = llegc1
+		end
+	end
+end
+sine=1
+
+Torso.CFrame=Torso.CFrame*CFrame.new(0,1,0)
+
+
+Grass=Instance.new('Part',Character)
+Grass.Name='Grass'
+Grass.Anchored=true
+Grass.Size=Vector3.new(11.42, 0.17, 17.6)
+Grass.CFrame=Torso.CFrame*CFrame.new(-0.43, -3.905, -0.1)
+Grass.Material='Grass'
+Grass.BrickColor=BrickColor.new('Bright green')
+m=Instance.new('CylinderMesh',Grass)
+White=Instance.new('Part',Character)
+White.Name='White Space'
+White.Anchored=true
+White.Size=Vector3.new(35.2, 0.05, 17.6)
+White.CFrame=Torso.CFrame*CFrame.new(0.39, -3.965, -0.1)
+White.Material='Neon'
+White.BrickColor=BrickColor.new('Medium stone grey')
+m=Instance.new('CylinderMesh',White)
+
+
+Humanoid.AutoRotate=false
+Humanoid.WalkSpeed=0
+Humanoid.JumpPower=0
+
+Flute=Instance.new('Part',Character)
+Flute.Name='Flute'
+Flute.CFrame=Torso.CFrame*CFrame.new(-0.5,-.5,-1)*CFrame.Angles(0,0,-2.5)
+m=Instance.new('SpecialMesh',Flute)
+m.MeshId='http://www.roblox.com/asset/?id=161269074'
+m.TextureId='http://www.roblox.com/asset/?id=228874694'
+m.Scale=Vector3.new(0, 0, 0)
+Flute.Size=Vector3.new(0,0,.0)
+local hat = game:GetService("Players").LocalPlayer.Character["gamer2"]
+local function align(part0, part1)
+
+	part0.AccessoryWeld:Destroy()
+	local attachment0 = Instance.new("Attachment", part0)
+	attachment0.Position = Vector3.new(0, -0, 0) --Custom Positioning Values Here
+	attachment0.Orientation = Vector3.new(0, 0, -120) --Custom Rotationing Values here
+	local attachment1 = Instance.new("Attachment", part1)
+	local weldpos = Instance.new("AlignPosition", part0)
+	weldpos.Attachment0 = attachment0
+	weldpos.Attachment1 = attachment1
+	weldpos.RigidityEnabled = true
+	weldpos.ReactionForceEnabled = false
+	weldpos.ApplyAtCenterOfMass = false
+	weldpos.MaxForce = 20000
+	weldpos.MaxVelocity = math.huge
+	weldpos.Responsiveness = 200000000000000
+	local weldrot = Instance.new("AlignOrientation", part0)
+	weldrot.Attachment0 = attachment0
+	weldrot.Attachment1 = attachment1
+	weldrot.ReactionTorqueEnabled = false
+	weldrot.PrimaryAxisOnly = false
+	weldrot.MaxTorque = 200000000
+	weldrot.MaxAngularVelocity = math.huge
+	weldrot.Responsiveness = 200000000000000
+end
+align(hat.Handle, Flute)
+
+AutoWeld(Flute,Torso)
+THEME=Instance.new('Sound',Character.Torso)
+music=nil
+firsttype=false
+Player.Chatted:connect(function(msg)
+	for def in string.gmatch(msg, "%d+") do
+		print(def)
+
+		if def~=nil then
+			music=def
+		end	
+	end
+
+	for def in string.gmatch(msg,"[%u%l%p]+") do
+		print(def)
+		if def=='Play/' and music~=nil then
+			THEME:stop()
+			THEME.SoundId='rbxassetid://'.. music
+			THEME:play()
+		elseif def=='Play/Demo' then
+			THEME:stop()
+			THEME.SoundId='rbxassetid://'.. 164167420
+			THEME:play()
+		elseif def=='S_Guitar' then
+			THEME:stop()
+		end
+	end
+	music=nil
+end)
+Ms=Player:GetMouse()
+Ms.KeyDown:connect(function(key)
+	if key=='f' then
+		if cam then
+			cam=false
+			CAM.CameraType='Custom'
+		else
+			cam=true
+			CAM.CameraType='Scriptable'
+		end
+	end
+end)
+
+
+cam=true--Custom Camera Perspectives
+if cam==true then 
+	CAM.CameraType=Enum.CameraType.Scriptable
+
+end
+Campart1=Instance.new('Part',Character)
+Campart1.Transparency=1
+Campart1.Anchored=true
+Campart1.CanCollide=false
+Campart2=Campart1:clone()
+Campart2.Parent=Character
+Campart3=Campart1:clone()
+Campart3.Parent=Character
+
+camtime=0
+camphase=0
+
+while 1 do
+	wait()	
+	sine=sine+1
+	PlayAnimationFromTable({
+		CFrame.new(-math.cos(sine/16)*.2, math.cos(sine/8)/8, 0) * CFrame.Angles(0, 0, 0), 
+		CFrame.new(0, 1.5, 0) * CFrame.new(0, 0, -.3) * CFrame.Angles(-.5,0.5-THEME.PlaybackLoudness/150, 0), 
+		CFrame.new(1.5-THEME.PlaybackLoudness/700, .5, -.5)*CFrame.Angles(1.5+THEME.PlaybackLoudness/700,0,0-THEME.PlaybackLoudness/700),  
+		CFrame.new(-1.5+THEME.PlaybackLoudness/700, 0, -.5)*CFrame.Angles(1-THEME.PlaybackLoudness/700,0,0+THEME.PlaybackLoudness/700), 
+		CFrame.new(1+math.cos(sine/16)*.2,-2-math.cos(sine/8)/8, 0)*CFrame.Angles(0,0,0.5) ,
+		CFrame.new(-1+math.cos(sine/16)*.2,-2-math.cos(sine/8)/8,0)*CFrame.Angles(0,0,-0.5),
+	}, .3, false)
+
+	White.Size=Vector3.new(35.2+THEME.PlaybackLoudness/10, 0.05, 17.6+THEME.PlaybackLoudness/10)
+	Campart1=Instance.new('Part')
+	if cam==true then
+		CAM.CameraType='Scriptable'
+		Campart1.CFrame=Torso.CFrame*CFrame.new(8,8,8)*CFrame.Angles(-0.5,.5,-0.5)			
+		Campart2.CFrame=Torso.CFrame*CFrame.new(-8,-3,-5)*CFrame.Angles(-1,-2,-1)
+		Campart3.CFrame=Flute.CFrame*CFrame.new(1.5,0,-1)*CFrame.Angles(0,1.8,3)
+		if camphase==0 then
+			if camtime<20+math.random(-2,2) then
+				CAM.CFrame=Campart1.CFrame
+				camtime=camtime+1
+			else
+				camtime=0
+				camphase=camphase+1
+			end	
+		elseif camphase==1 then
+			if camtime<40+math.random(-8,12) then
+				CAM.CFrame=Campart2.CFrame
+				camtime=camtime+1
+			else
+				camtime=0
+				camphase=camphase+1
+			end
+		elseif camphase==2 then
+			if camtime<50+math.random(-2,5) then
+				CAM.CFrame=Campart3.CFrame
+				camtime=camtime+1
+			else
+				camtime=0
+				camphase=camphase+1
+			end	
+
+		elseif camphase==3 then
+			camphase=0
+		end
+
+
+	end
+end
