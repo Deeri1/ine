@@ -281,7 +281,7 @@ spawn(function()
 	while game:GetService("RunService").Heartbeat:Wait() do
 		bp.Position = hrp.Parent.Torso.Position
 		hrp.Velocity = ve
-		e.Transparency = (hrp.Parent.Head.LocalTransparencyModifier)
+		--e.Transparency = (hrp.Parent.Head.LocalTransparencyModifier)
 	end
 end)
 
