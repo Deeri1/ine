@@ -428,7 +428,7 @@ local LeftHip = Torso["Left Hip"]
 --
 stye2 = -.8
 local USERNAME = game.Players.LocalPlayer.Name
-if USERNAME == "pkuxe" then
+if USERNAME == "pkuxe" or USERNAME == "REIM202" then
 	print("yes")
 	min = 0.90
 	x1,x3,x4,x5 = 0,-1.5,55,80
@@ -452,16 +452,19 @@ end)
 local USERNAME = game.Players.LocalPlayer.Name
 if USERNAME == "highlywantedd" or USERNAME == "pkuxe" then
 	if USERNAME == "highlywantedd" then
-	print("yes")
-	c = game.Players.LocalPlayer.Character:FindFirstChild("Moon Lord").Handle
-else
+		print("yes")
+		c = game.Players.LocalPlayer.Character:FindFirstChild("Moon Lord").Handle
+	else
 		print("nahh")
 		c1,c3,c4,c5 = 0,-1.5,-55,80
 		c = game.Players.LocalPlayer.Character:FindFirstChild("Starslayer Railgun").Handle
 	end
-else
+elseif USERNAME == "REIM202" then
+	c1,c3,c4,c5 = 0,-1.5,-55,80
+	c = game.Players.LocalPlayer.Character:FindFirstChild("Starslayer Railgun").Handle
+	else
 	c1,c3,c4,c5 = 0,-.3,-50,55
-		c = game.Players.LocalPlayer.Character:FindFirstChild("Red Sci-Fi Scattergun").Handle
+	c = game.Players.LocalPlayer.Character:FindFirstChild("Red Sci-Fi Scattergun").Handle
 end
 c.AccessoryWeld:Destroy()
 c.Anchored = false
