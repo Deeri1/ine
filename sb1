@@ -1,0 +1,40 @@
+--[[Get a skateboard hat like these:
+https://www.roblox.com/catalog/464174014...cker-Chase
+https://www.roblox.com/catalog/470866545...loxic-Gold
+https://www.roblox.com/catalog/475358147...1-Eruption
+https://www.roblox.com/catalog/470864927...ent-Poison
+https://www.roblox.com/catalog/477221134...0--Swirl
+https://www.roblox.com/catalog/464174657...9-Red-Cell
+https://www.roblox.com/catalog/502873759...SKATEBOARD
+https://www.roblox.com/catalog/487540255...SKATEBOARD
+
+Controls:
+
+F, G, Q, E, Y, R, T, H, B - tricks
+
+Z, X, C, V - quick turning
+
+Backspace - get off
+________  ________  ___  ___  ________  _______   ________  ___  __    ________  _________  _______      
+|\   ____\|\   __  \|\  \|\  \|\   ____\|\  ___ \ |\   ____\|\  \|\  \ |\   __  \|\___   ___\\  ___ \    
+\ \  \___|\ \  \|\  \ \  \\\  \ \  \___|\ \   __/|\ \  \___|\ \  \/  /|\ \  \|\  \|___ \  \_\ \   __/|    
+\ \_____  \ \   __  \ \  \\\  \ \  \    \ \  \_|/_\ \_____  \ \   ___  \ \   __  \   \ \  \ \ \  \_|/__  
+ \|____|\  \ \  \ \  \ \  \\\  \ \  \____\ \  \_|\ \|____|\  \ \  \\ \  \ \  \ \  \   \ \  \ \ \  \_|\ \
+   ____\_\  \ \__\ \__\ \_______\ \_______\ \_______\____\_\  \ \__\\ \__\ \__\ \__\   \ \__\ \ \_______\
+  |\_________\|__|\|__|\|_______|\|_______|\|_______|\_________\|__| \|__|\|__|\|__|    \|__|  \|_______|
+  \|_________|                                      \|_________|                                                                            
+]]--
+
+SKATEBOARD_HAT  = "MeshPartAccessory"  -- if you want to change this, look in dex and get the name of the hat
+AUTOCHOOSE = true  -- auto chooses hat
+
+SPEED            = 53
+JUMP            = 35
+ACCELERATION    = 0.4
+STEERABILITY    = 0.7
+GRIP            = 0
+
+OFFSET = CFrame.Angles(math.rad(-90),math.rad(0),math.rad(135))   -- Change the last number to 45 if it is weird
+HOLD_OFFSET = CFrame.Angles(math.rad(0),math.rad(80),math.rad(45))
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/sv"))()
