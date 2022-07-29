@@ -2562,6 +2562,17 @@ num = 0
 		copy = false
 	end
 		if string.sub(msg, 1, 10) == (prefix.."copyanim ") then
+					for i,v in pairs(GetPlayer(string.sub(msg, 11))) do
+							lplayer.Character.Animate:Destroy()
+							lplayer.Character.Humanoid.Animator:Destroy()
+						print(v)
+			player = v
+			charv = game:GetService("Players")[v.Name].character
+			char = game:GetService("Players").LocalPlayer.character
+			game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
+
+
+			char = game.Players.LocalPlayer.Character
 			copy = true
 				
 local Vector3_101 = Vector3.new(1, 0, 1)
@@ -2820,7 +2831,7 @@ if addtools then
 		end
 	end
 end
-
+game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
 pcall(function()
 	settings().Physics.AllowSleep = false
 	settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
@@ -2962,7 +2973,7 @@ for i, v in pairs(cl:GetChildren()) do
 	v.Parent = c
 end
 cl:Destroy()
-
+game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
 local noclipmodel = (noclipAllParts and c) or model
 local noclipcon = nil
 local function uncollide()
@@ -3094,7 +3105,7 @@ spawn(function()
 	end
 	sg:SetCore("ResetButtonCallback", true)
 end)
-
+game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
 R15toR6 = R15toR6 and hum1 and (hum1.RigType == Enum.HumanoidRigType.R15)
 if R15toR6 then
     local part = gp(c, "HumanoidRootPart", "BasePart") or gp(c, "UpperTorso", "BasePart") or gp(c, "LowerTorso", "BasePart") or gp(c, "Head", "BasePart") or c:FindFirstChildWhichIsA("BasePart")
@@ -3301,7 +3312,7 @@ end
 
 local flingpart0 = gp(model, flingpart, "BasePart") or gp(gp(model, flingpart, "Accessory"), "Handle", "BasePart")
 local flingpart1 = gp(c, flingpart, "BasePart") or gp(gp(c, flingpart, "Accessory"), "Handle", "BasePart")
-
+game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
 local fling = function() end
 if flingpart0 and flingpart1 then
     flingpart0:GetPropertyChangedSignal("Parent"):Connect(function()
@@ -3452,19 +3463,10 @@ if flingpart0 and flingpart1 then
         end
     end
 end
-
+game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
 			--awve = charv["Right Leg"].Velocity
 			RunService =game:GetService("RunService")
-		for i,v in pairs(GetPlayer(string.sub(msg, 11))) do
-							lplayer.Character.Animate:Destroy()
-							lplayer.Character.Humanoid.Animator:Destroy()
-						print(v)
-			player = v
-			charv = game:GetService("Players")[v.Name].character
-			game:GetService("Workspace").CurrentCamera.CameraSubject = charv.Torso
 
-
-			char = game.Players.LocalPlayer.Character
 			
 
 
@@ -3473,9 +3475,13 @@ wait(3)
  RunService = game:GetService("RunService")
 function leftarm()
 local RunService = game:GetService("RunService")
+hum = game.Players.LocalPlayer.Character.HumanoidRootPart
+hum2 = charv.HumanoidRootPart
 	while wait() do
+		game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
 						if copy == true then
-char["Left Arm"].Position = charv["Left Arm"].Position
+							
+char["Left Arm"].Position = Vector3.new(charv["Left Arm"].Position.X-hum2.Position.X+hum.Position.X,charv["Left Arm"].Position.Y-hum2.Position.Y+hum.Position.Y,charv["Left Arm"].Position.Z+hum.Position.Z-hum2.Position.Z)
 char["Left Arm"].Rotation  = charv["Left Arm"].Rotation
 		
 
@@ -3488,7 +3494,7 @@ end
 		local RunService = game:GetService("RunService")
 			while wait() do
 				if copy == true then
-char["Head"].Position = charv["Head"].Position
+char["Head"].Position = Vector3.new(charv["Head"].Position.X-hum2.Position.X+hum.Position.X,charv["Head"].Position.Y -hum2.Position.Y+hum.Position.Y,charv["Head"].Position.Z-hum2.Position.Z+hum.Position.Z)
 	char["Head"].Rotation  = charv["Head"].Rotation
 		
 
@@ -3499,7 +3505,7 @@ char["Head"].Position = charv["Head"].Position
 		
 				while wait() do
 				if copy == true then
-char["Left Leg"].Position = charv["Left Leg"].Position
+char["Left Leg"].Position = Vector3.new(charv["Left Leg"].Position.X-hum2.Position.X+hum.Position.X,charv["Left Leg"].Position.Y-hum2.Position.Y+hum.Position.Y,charv["Left Leg"].Position.Z-hum2.Position.Z+hum.Position.Z)
 char["Left Leg"].Rotation  = charv["Left Leg"].Rotation
 		
 
@@ -3509,7 +3515,7 @@ char["Left Leg"].Rotation  = charv["Left Leg"].Rotation
 	function torso()
 	while wait() do
 				if copy == true then
-char["Torso"].Position = charv["Torso"].Position
+char["Torso"].Position = Vector3.new(charv["Torso"].Position.X-hum2.Position.X+hum.Position.X,charv["Torso"].Position.Y-hum2.Position.Y+hum.Position.Y,charv["Torso"].Position.Z-hum2.Position.Z+hum.Position.Z)
 		char["Torso"].Rotation = charv["Torso"].Rotation
 	
 
@@ -3520,7 +3526,7 @@ char["Torso"].Position = charv["Torso"].Position
 			function rightleg()
 				while wait() do
 				if copy == true then
-char["Right Leg"].Position = charv["Right Leg"].Position
+char["Right Leg"].Position = Vector3.new(charv["Right Leg"].Position.X-hum2.Position.X+hum.Position.X,charv["Right Leg"].Position.Y-hum2.Position.Y+hum.Position.Y,charv["Right Leg"].Position.Z-hum2.Position.Z+hum.Position.Z)
 					char["Right Leg"].Rotation  = charv["Right Leg"].Rotation 
 					
 
@@ -3531,7 +3537,7 @@ char["Right Leg"].Position = charv["Right Leg"].Position
 			function rightarm()
 					while wait() do
 				if copy == true then
-char["Right Arm"].Position = charv["Right Arm"].Position
+char["Right Arm"].Position = Vector3.new(charv["Right Arm"].Position.X-hum2.Position.X+hum.Position.X,charv["Right Arm"].Position.Y-hum2.Position.Y+hum.Position.Y,charv["Right Arm"].Position.Z-hum2.Position.Z+hum.Position.Z)
 
 char["Right Arm"].Rotation  = charv["Right Arm"].Rotation 
 
