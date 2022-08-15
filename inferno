@@ -1,8 +1,7 @@
 local hat = false
 local net = true
 if hat == true then
-	game:GetService("Players").LocalPlayer.Character["ShadowBladeMasterAccessory"].Name = "gamer1"
-	game:GetService("Players").LocalPlayer.Character["BladeMasterAccessory"].Name = "gamer2"
+
 end
 if net == true then
 	for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
