@@ -16,10 +16,15 @@ ve = Vector3.new(30,0,0)
   player["Right Arm"].Velocity = ve
   player["Left Leg"].Velocity = ve
   player["Right Leg"].Velocity = ve
-  player.HumanoidRootPart.Velocity = ve
+  player["Torso"].CanCollide = false
+  player["Left Arm"].CanCollide = false
+  player["Right Arm"].CanCollide = false
+  player["Left Leg"].CanCollide = false
+  player["Right Leg"].CanCollide = false
+
 for i,v in pairs(player:GetDescendants()) do
     if v:IsA("Accessory") then
-        v.Handle.Velocity = Vector3.new(26,0,0)
+        v.Handle.Velocity = Vector3.new(90,0,0)
     end
 end
 end)
@@ -285,16 +290,16 @@ spawn(function()
 	while game:GetService("RunService").Heartbeat:Wait() do
 		bp.Position = hrp.Parent.Torso.Position
         hrp.Velocity = ve
-        e.Transparency = (hrp.Parent.Head.LocalTransparencyModifier)
+       -- e.Transparency = (hrp.Parent.Head.LocalTransparencyModifier)
 	end
 end)
 end
 if game.CoreGui.deeri == false then
 repeat wait() until nil
 end
+--[[
 
-
-    ~~DAROACH~~
+   -- ~~DAROACH~~
 
     
 
