@@ -1,3 +1,4 @@
+_G.reanimatedended = true
 function r6reanimate()
 --resubmit
 	local player = game:GetService("Players").LocalPlayer.Character
