@@ -2598,8 +2598,7 @@ num = 0
 										
 										else
 											for _, childe2 in pairs(child.Handle:GetDescendants()) do
-												if childe2:IsA("SpecialMesh") and child2.Name ~= "l1" and child2.Name ~= "l2" and child2.Name ~= "l3" and child2.Name ~= "l4" and child2.Name ~= "l5" and child2.Name ~= "l6" and child2.Name ~= "l7" and child2.Name ~= "l8" and child2.Name ~= "l9" then
-													childe2:Destroy()
+												if childe2:IsA("SpecialMesh") then													childe2:Destroy()
 												end
 											end
 									end
