@@ -314,7 +314,7 @@ banpl = false
 changingstate = false
 statechosen = 0
 
-adminversion = "Reviz Admin by illremember, Version 2.0"
+adminversion = "Deeri"
 
 flying = false
 speedfly = 1
@@ -784,6 +784,10 @@ end
 		local ts = game:GetService("TeleportService")
 		local p = game:GetService("Players").LocalPlayer
 		ts:Teleport(game.PlaceId, p)
+
+	end
+		if string.sub(msg, 1, 9) == (prefix.."ldex") then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/Lazy_Dex.lua"))()
 
 	end
 	if string.sub(msg, 1, 10) == (prefix.."freefall ") then
@@ -2030,7 +2034,7 @@ num = 0
 		lplayer.Character.Torso.CFrame = CFrame.new(1000000,0,1000000)
 	end
 	if string.sub(msg, 1, 9) == (prefix.."explorer") then
-		loadstring(game:GetObjects("rbxassetid://492005721")[1].Source)()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
 		game:GetService("StarterGui"):SetCore("SendNotification", {
 			Title = "Success!";
 			Text = "DEX Explorer has loaded.";
@@ -2560,6 +2564,10 @@ num = 0
 	end
 		if string.sub(msg, 1, 7) == (prefix.."nocopy") then
 		copy = false
+		char = game.Players.LocalPlayer.Character
+		charv = nil
+		game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
+	
 	end
 		if string.sub(msg, 1, 10) == (prefix.."copyanim ") then
 					for i,v in pairs(GetPlayer(string.sub(msg, 11))) do
@@ -2569,6 +2577,174 @@ num = 0
 			player = v
 			charv = game:GetService("Players")[v.Name].character
 			char = game:GetService("Players").LocalPlayer.character
+			hatnum = 0
+			hattable = {"","","","","","","","",""}
+			for _, child in pairs(char:GetDescendants()) do
+				if child:IsA("Accessory") and ended == true and child.Name ~= "l1" and child.Name ~= "l2" and child.Name ~= "l3" and child.Name ~= "l4" and child.Name ~= "l5" and child.Name ~= "l6" and child.Name ~= "l7" and child.Name ~= "l8" and child.Name ~= "l9" then
+					ended =false
+					
+					x = child.Name
+					
+					for _, child2 in pairs(charv:GetDescendants()) do
+						if child2:IsA("Accessory") and child2.Name ~= "l1" and child2.Name ~= "l2" and child2.Name ~= "l3" and child2.Name ~= "l4" and child2.Name ~= "l5" and child2.Name ~= "l6" and child2.Name ~= "l7" and child2.Name ~= "l8" and child2.Name ~= "l9" then
+							if child2.Name == x and child.Name ~= "l1" and child.Name ~= "l2" and child.Name ~= "l3" and child.Name ~= "l4" and child.Name ~= "l5" and child.Name ~= "l6" and child.Name ~= "l7" and child.Name ~= "l8" and child.Name ~= "l9" then
+								hatnum = hatnum+1
+								hattable[hatnum] = '"'..child2.Name..'"'
+								print("Copying Anim With Hat ",hattable[hatnum])
+								child.Name = 'l'..hatnum..''
+								child2.Name = 'l'..hatnum..''
+								for _, childe in pairs(child2.Handle:GetDescendants()) do
+									if child2.Handle:FindFirstChild("Mesh") or child2.Handle:FindFirstChild("SpecialMesh")  then
+										
+										else
+											for _, childe2 in pairs(child.Handle:GetDescendants()) do
+												if childe2:IsA("SpecialMesh") and child2.Name ~= "l1" and child2.Name ~= "l2" and child2.Name ~= "l3" and child2.Name ~= "l4" and child2.Name ~= "l5" and child2.Name ~= "l6" and child2.Name ~= "l7" and child2.Name ~= "l8" and child2.Name ~= "l9" then
+													childe2:Destroy()
+												end
+											end
+									end
+								end
+
+							end
+						end
+					end
+				end
+			ended =true
+			end
+			hum = game.Players.LocalPlayer.Character.HumanoidRootPart
+--hum2 = charv.HumanoidRootPart
+
+local success, errormessage = pcall(function()
+if charv:FindFirstChild(HumanoidRootPart) then
+end
+end)
+if success then
+hum2 = charv.HumanoidRootPart
+print("yea")
+else
+hum2 = charv.Torso
+print("naw")
+print(errormessage)
+end
+hum.Position = Vector3.new(hum.Position.X,hum.Position.Y,hum.Position.Z)
+			function hat1()
+				if hatnum>=1 then
+					print("yes")
+			RunService = game:GetService("RunService")
+				RunService.RenderStepped:Connect(function()
+				
+					char.l1.Handle.Position = Vector3.new(charv.l1.Handle.Position.X-hum2.Position.X+hum.Position.X,charv.l1.Handle.Position.Y+hum.Position.Y-3.45,charv.l1.Handle.Position.Z+hum.Position.Z-hum2.Position.Z)
+
+					char.l1.Handle.Rotation = charv.l1.Handle.Rotation
+				end)
+				end
+			end
+			function hat2()
+				if hatnum>=2 then
+				RunService = game:GetService("RunService")
+				RunService.RenderStepped:Connect(function()
+				
+					char.l2.Handle.Position = Vector3.new(charv.l2.Handle.Position.X-hum2.Position.X+hum.Position.X,charv.l2.Handle.Position.Y+hum.Position.Y-3.45,charv.l2.Handle.Position.Z+hum.Position.Z-hum2.Position.Z)
+
+					char.l2.Handle.Rotation = charv.l2.Handle.Rotation
+								end)
+				end
+			end
+				
+			function hat3()
+				if hatnum>=3 then
+			RunService = game:GetService("RunService")
+				RunService.RenderStepped:Connect(function()
+				
+					char.l3.Handle.Position = Vector3.new(charv.l3.Handle.Position.X-hum2.Position.X+hum.Position.X,charv.l3.Handle.Position.Y+hum.Position.Y-3.45,charv.l3.Handle.Position.Z+hum.Position.Z-hum2.Position.Z)
+
+					char.l3.Handle.Rotation = charv.l3.Handle.Rotation
+				end)
+				end
+			end
+			function hat4()
+				if hatnum>=4 then
+			RunService = game:GetService("RunService")
+				RunService.RenderStepped:Connect(function()
+				
+					char.l4.Handle.Position = Vector3.new(charv.l4.Handle.Position.X-hum2.Position.X+hum.Position.X,charv.l4.Handle.Position.Y+hum.Position.Y-3.45,charv.l4.Handle.Position.Z+hum.Position.Z-hum2.Position.Z)
+
+					char.l4.Handle.Rotation = charv.l4.Handle.Rotation
+							end)
+				end
+			end
+				
+			function hat5()
+				if hatnum>=5 then
+			RunService = game:GetService("RunService")
+				RunService.RenderStepped:Connect(function()
+				
+					char.l5.Handle.Position = Vector3.new(charv.l5.Handle.Position.X-hum2.Position.X+hum.Position.X,charv.l5.Handle.Position.Y+hum.Position.Y-3.45,charv.l5.Handle.Position.Z+hum.Position.Z-hum2.Position.Z)
+
+					char.l5.Handle.Rotation = charv.l5.Handle.Rotation
+							end)
+				end
+			end
+				
+			function hat6()
+				if hatnum>=6 then
+			RunService = game:GetService("RunService")
+				RunService.RenderStepped:Connect(function()
+				
+					char.l6.Handle.Position = Vector3.new(charv.l6.Handle.Position.X-hum2.Position.X+hum.Position.X,charv.l6.Handle.Position.Y+hum.Position.Y-3.45,charv.l6.Handle.Position.Z+hum.Position.Z-hum2.Position.Z)
+
+					char.l6.Handle.Rotation = charv.l6.Handle.Rotation
+							end)
+				end
+			end
+				
+			function hat7()
+				if hatnum>=7 then
+			RunService = game:GetService("RunService")
+				RunService.RenderStepped:Connect(function()
+				
+					char.l7.Handle.Position = Vector3.new(charv.l7.Handle.Position.X-hum2.Position.X+hum.Position.X,charv.l7.Handle.Position.Y+hum.Position.Y-3.45,charv.l7.Handle.Position.Z+hum.Position.Z-hum2.Position.Z)
+
+					char.l7.Handle.Rotation = charv.l7.Handle.Rotation
+								end)
+				end
+			end
+				
+			function hat8()
+				if hatnum>=8 then
+			RunService = game:GetService("RunService")
+				RunService.RenderStepped:Connect(function()
+				
+					char.l8.Handle.Position = Vector3.new(charv.l8.Handle.Position.X-hum2.Position.X+hum.Position.X,charv.l8.Handle.Position.Y+hum.Position.Y-3.45,charv.l8.Handle.Position.Z+hum.Position.Z-hum2.Position.Z)
+
+					char.l8.Handle.Rotation = charv.l8.Handle.Rotation
+								end)
+				end
+			end
+				
+			function hat9()
+				if hatnum>=9 then
+			RunService = game:GetService("RunService")
+				RunService.RenderStepped:Connect(function()
+				
+					char.l9.Handle.Position = Vector3.new(charv.l9.Handle.Position.X-hum2.Position.X+hum.Position.X,charv.l9.Handle.Position.Y+hum.Position.Y-3.45,charv.l9.Handle.Position.Z+hum.Position.Z-hum2.Position.Z)
+
+					char.l9.Handle.Rotation = charv.l9.Handle.Rotation
+								end)
+				end
+			end
+				
+			
+coroutine.wrap(hat1)()
+coroutine.wrap(hat2)()
+coroutine.wrap(hat3)()
+coroutine.wrap(hat4)()
+coroutine.wrap(hat5)()
+coroutine.wrap(hat6)()
+coroutine.wrap(hat7)()
+coroutine.wrap(hat8)()
+coroutine.wrap(hat9)()
+
 			game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
 
 
@@ -3474,81 +3650,106 @@ game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
 wait(3)
  RunService = game:GetService("RunService")
 function leftarm()
-local RunService = game:GetService("RunService")
+ RunService = game:GetService("RunService")
 hum = game.Players.LocalPlayer.Character.HumanoidRootPart
+--hum2 = charv.HumanoidRootPart
+
+local success, errormessage = pcall(function()
+if charv:FindFirstChild(HumanoidRootPart) then
+end
+end)
+if success then
 hum2 = charv.HumanoidRootPart
-	while wait() do
-		game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
-						if copy == true then
-							
-char["Left Arm"].Position = Vector3.new(charv["Left Arm"].Position.X-hum2.Position.X+hum.Position.X,charv["Left Arm"].Position.Y-hum2.Position.Y+hum.Position.Y,charv["Left Arm"].Position.Z+hum.Position.Z-hum2.Position.Z)
+print("yea")
+else
+hum2 = charv.Torso
+print("naw")
+print(errormessage)
+end
+hum.Position = Vector3.new(hum.Position.X,hum.Position.Y,hum.Position.Z)
+	RunService.RenderStepped:Connect(function()
+							if copy == true then
+								local success, errormessage = pcall(function()
+if charv:FindFirstChild(HumanoidRootPart) then
+end
+end)
+if success then
+hum2 = charv.HumanoidRootPart
+
+else
+hum2 = charv.Torso
+
+end
+							game:GetService("Workspace").CurrentCamera.CameraSubject = char.Head
+
+char["Left Arm"].Position = Vector3.new(charv["Left Arm"].Position.X-hum2.Position.X+hum.Position.X,charv["Left Arm"].Position.Y+hum.Position.Y-3.45,charv["Left Arm"].Position.Z+hum.Position.Z-hum2.Position.Z)
 char["Left Arm"].Rotation  = charv["Left Arm"].Rotation
 		
 
 			end
-	end
+	end)
 
 		
 end
 		function head()
-		local RunService = game:GetService("RunService")
-			while wait() do
+		 RunService = game:GetService("RunService")
+			RunService.RenderStepped:Connect(function()
 				if copy == true then
-char["Head"].Position = Vector3.new(charv["Head"].Position.X-hum2.Position.X+hum.Position.X,charv["Head"].Position.Y -hum2.Position.Y+hum.Position.Y,charv["Head"].Position.Z-hum2.Position.Z+hum.Position.Z)
+char["Head"].Position = Vector3.new(charv["Head"].Position.X-hum2.Position.X+hum.Position.X,charv["Head"].Position.Y+hum.Position.Y-3.45,charv["Head"].Position.Z-hum2.Position.Z+hum.Position.Z)
 	char["Head"].Rotation  = charv["Head"].Rotation
 		
 
 			end
-			end
+			end)
 		end
 	function leftleg()
 		
-				while wait() do
+				RunService.RenderStepped:Connect(function()
 				if copy == true then
-char["Left Leg"].Position = Vector3.new(charv["Left Leg"].Position.X-hum2.Position.X+hum.Position.X,charv["Left Leg"].Position.Y-hum2.Position.Y+hum.Position.Y,charv["Left Leg"].Position.Z-hum2.Position.Z+hum.Position.Z)
+char["Left Leg"].Position = Vector3.new(charv["Left Leg"].Position.X-hum2.Position.X+hum.Position.X,charv["Left Leg"].Position.Y+hum.Position.Y-3.45,charv["Left Leg"].Position.Z-hum2.Position.Z+hum.Position.Z)
 char["Left Leg"].Rotation  = charv["Left Leg"].Rotation
 		
 
 			end
-		end
+		end)
 	end		
 	function torso()
-	while wait() do
+	RunService.RenderStepped:Connect(function()
 				if copy == true then
-char["Torso"].Position = Vector3.new(charv["Torso"].Position.X-hum2.Position.X+hum.Position.X,charv["Torso"].Position.Y-hum2.Position.Y+hum.Position.Y,charv["Torso"].Position.Z-hum2.Position.Z+hum.Position.Z)
+char["Torso"].Position = Vector3.new(charv["Torso"].Position.X-hum2.Position.X+hum.Position.X,charv["Torso"].Position.Y+hum.Position.Y-3.45,charv["Torso"].Position.Z-hum2.Position.Z+hum.Position.Z)
 		char["Torso"].Rotation = charv["Torso"].Rotation
 	
 
 			end
-		end
+		end)
 	end		
 					
 			function rightleg()
-				while wait() do
+				RunService.RenderStepped:Connect(function()
 				if copy == true then
-char["Right Leg"].Position = Vector3.new(charv["Right Leg"].Position.X-hum2.Position.X+hum.Position.X,charv["Right Leg"].Position.Y-hum2.Position.Y+hum.Position.Y,charv["Right Leg"].Position.Z-hum2.Position.Z+hum.Position.Z)
+char["Right Leg"].Position = Vector3.new(charv["Right Leg"].Position.X-hum2.Position.X+hum.Position.X,charv["Right Leg"].Position.Y+hum.Position.Y-3.45,charv["Right Leg"].Position.Z-hum2.Position.Z+hum.Position.Z)
 					char["Right Leg"].Rotation  = charv["Right Leg"].Rotation 
 					
 
 			end
-		end
+		end)
 			end
 					
 			function rightarm()
-					while wait() do
+					RunService.RenderStepped:Connect(function()
 				if copy == true then
-char["Right Arm"].Position = Vector3.new(charv["Right Arm"].Position.X-hum2.Position.X+hum.Position.X,charv["Right Arm"].Position.Y-hum2.Position.Y+hum.Position.Y,charv["Right Arm"].Position.Z-hum2.Position.Z+hum.Position.Z)
+char["Right Arm"].Position = Vector3.new(charv["Right Arm"].Position.X-hum2.Position.X+hum.Position.X,charv["Right Arm"].Position.Y+hum.Position.Y-3.45,charv["Right Arm"].Position.Z-hum2.Position.Z+hum.Position.Z)
 
 char["Right Arm"].Rotation  = charv["Right Arm"].Rotation 
 
 		
 
 			end
-		end
+		end)
 			end
 				
 		function doanims()
-						coroutine.wrap(leftarm)()
+			coroutine.wrap(leftarm)()
 			coroutine.wrap(rightarm)()
 			coroutine.wrap(leftleg)()
 			coroutine.wrap(rightleg)()
