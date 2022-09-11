@@ -320,5 +320,5 @@ _G.reanimatedended = true
 end
 
 if _G.r6reanim == true then
-coroutine.warp(r6reanimate)()
+coroutine.wrap(r6reanimate)()
 end
