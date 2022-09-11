@@ -9,8 +9,9 @@ game:GetService("Players").LocalPlayer.Character["ShadowBladeMasterAccessory"].N
 
 --
 _G.r6reanim  = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows%3F"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
 repeat wait() until _G.reanimatedended == true
+
 
 local net = false
 if net == true then
