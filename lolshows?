@@ -1,6 +1,6 @@
 _G.reanimatedended = false
 function r6reanimate()
---resubmit
+--resubmit 2
 	local player = game:GetService("Players").LocalPlayer.Character
 local aligns = {}
 local hataligns = {}
