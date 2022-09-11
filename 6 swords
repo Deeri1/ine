@@ -8,8 +8,9 @@ game:GetService("Players").LocalPlayer.Character["ShadowBladeMasterAccessory"].N
 
 
 
-
-local net = true
+_G.r6reanim  = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows%3F"))()
+local net = false
 if net == true then
 --reanimate by MyWorld#4430 discord.gg/pYVHtSJmEY
 local Vector3_101 = Vector3.new(1, 0, 1)
