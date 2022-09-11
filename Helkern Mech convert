@@ -1,9 +1,5 @@
-	getgenv().ReanimateVersion = "v5"
-
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Reanimate", true))()
-
-
-	wait (2.10)
+_G.r6reanim  = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows%3F"))()
 
 
 
