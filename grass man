@@ -19,14 +19,9 @@ game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "ga
 	game:GetService("Players").LocalPlayer.Character["BoomBox"].Name = "gamer6"
 end
 if net == true then
-	_G.SelexityNet = true
-	_G.StrongerNet = false-- you hats will not lag other that if your moving super fast.
-	_G.Net = false -- your regular net. hats may lag behind if moving fast.
-	_G.Bot = false -- bot reanimate
-	_G.WeakNet = false --a weak net with little jitter
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/DeeriHub/Deeri-Hub/main/Deeri%20net"))()
-	wait(2.5)
-end
+_G.r6reanim  = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
+repeat wait() until _G.reanimatedended == true
 -- nebula's ezconvert
 --[[
 PUT YOUR SCRIPTS BELOW HERE VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV	

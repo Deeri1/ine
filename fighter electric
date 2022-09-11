@@ -5,13 +5,9 @@ if hats == false then
 --put hats here--	
 end
 if net == true then
-_G.SelexityNet = true -- some hat scripts wont work for the other ones so use this
-_G.StrongerNet = false-- you hats will not lag other that if your moving super fast.
-_G.Net = false -- your regular net. hats may lag behind if moving fast.
-_G.Bot = false -- bot reanimate
-_G.WeakNet = false --a weak net with little jitter
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DeeriHub/Deeri-Hub/main/Deeri%20net"))()
-wait(2.5)
+_G.r6reanim  = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
+repeat wait() until _G.reanimatedended == true
 end--fixed by Scenius
 plr = game.Players.LocalPlayer
 repeat

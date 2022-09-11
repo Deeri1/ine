@@ -8,12 +8,9 @@ if net == true then
 	game:GetService("Players").LocalPlayer.Character["BladeMasterAccessory"].Name = "gamer6"
 
 
-	getgenv().ReanimateVersion = "v5"
-
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Reanimate", true))()
-
-
-	wait(2.5) 
+_G.r6reanim  = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
+repeat wait() until _G.reanimatedended == true
 
 end
 local Player = game.Players.LocalPlayer
