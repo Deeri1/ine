@@ -2,6 +2,8 @@
 local net = false
 _G.r6reanim  = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows%3F"))()
+repeat wait() until _G.reanimatedended == true
+
 if net == true then
 local player = game:GetService("Players").LocalPlayer.Character
 local aligns = {}
