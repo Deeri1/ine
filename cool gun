@@ -1,5 +1,7 @@
-local net = true
-
+local net = false
+_G.r6reanim  = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
+repeat wait() until _G.reanimatedended == true
 if net == true then
 	game:GetService("Players").LocalPlayer.Character["METALXLIGHTSEER77Accessory"].Name = "gamer1"
 	local player = game:GetService("Players").LocalPlayer.Character
