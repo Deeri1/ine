@@ -1,5 +1,5 @@
 _G.r6reanim  = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows%3F"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
 repeat wait() until _G.reanimatedended == true
 
 

@@ -1,10 +1,6 @@
-getgenv().ReanimateVersion = "v5"
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Reanimate", true))()
-
-
-wait (2.10)
-
+_G.r6reanim  = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
+repeat wait() until _G.reanimatedended == true
 local c = game.Players.LocalPlayer.Character:FindFirstChild("Black Type-37 Pulse Rifle").Handle
 c.AccessoryWeld:Destroy()
 c.Anchored = false
