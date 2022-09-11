@@ -10,7 +10,10 @@ if net == true then
 		game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "gamer5"
 		game:GetService("Players").LocalPlayer.Character["BladeMasterAccessory"].Name = "gamer6"
 	end
-	if mainnet == true then
+	_G.r6reanim  = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
+repeat wait() until _G.reanimatedended == true
+	if mainnet == false then
 local player = game:GetService("Players").LocalPlayer.Character
 local aligns = {}
 local hataligns = {}
