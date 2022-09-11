@@ -1,4 +1,5 @@
 function r6reanimate()
+--resubmit
 	local player = game:GetService("Players").LocalPlayer.Character
 local aligns = {}
 local hataligns = {}
@@ -25,6 +26,7 @@ for i,v in pairs(player:GetDescendants()) do
     end
 end
 end)
+
 wait(0.1)
 		settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
 		settings().Physics.AllowSleep = false
