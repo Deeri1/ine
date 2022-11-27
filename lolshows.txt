@@ -172,13 +172,8 @@ for i,v in ipairs(aligns) do
 end
 end)
 spawn(function()
-while true do
-    game:GetService("RunService").Stepped:wait()
-v.CFrame = CloneChar[v.Name].CFrame
-game:GetService("RunService").Heartbeat:wait()
-v.CFrame = CloneChar[v.Name].CFrame
-game:GetService("RunService").RenderStepped:wait()
-v.CFrame = CloneChar[v.Name].CFrame
+while wait() do
+
 end
 end)
 Character.Head.AlignPosition.Attachment0 = Character.Head.Attachment
