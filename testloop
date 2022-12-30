@@ -1,4 +1,4 @@
---dupe loop3
+--dupe loop3 
 player = game.Players.LocalPlayer
 humanoid = player.Character.Humanoid
 char = player.Character
