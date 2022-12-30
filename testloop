@@ -1,4 +1,4 @@
---dupe loop
+--dupe loop2
 player = game.Players.LocalPlayer
 humanoid = player.Character.Humanoid
 char = player.Character
@@ -17,7 +17,7 @@ for i = 1, loopnum do
 		end
 		while char:FindFirstChild("BloxyCola") do
 		player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,5000,0))
-wait(.1)
+wait(.2)
 			char.BloxyCola.Parent = workspace
 			wait()
 		end
@@ -33,7 +33,7 @@ wait(.1)
 				print(v.Name)
 				v.Parent = char
 				player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,5000,0))
-				wait(.1)
+				wait(.2)
 				v.Parent = game.Workspace
 			end 		
 		end
@@ -41,9 +41,9 @@ wait(.1)
 
 		local character = player:FindFirstChild("Character")
 
-		wait(.5)
+		wait(.6)
 		game.Players:Chat("-cola")
-		wait(.2)
+		--wait(.2)
 		allworkspace = game.Workspace:GetChildren()
 			for _, v in ipairs(allworkspace) do
 			if v:IsA("Tool") then
