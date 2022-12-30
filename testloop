@@ -1,4 +1,4 @@
---dupe loop3 
+--dupe loop
 player = game.Players.LocalPlayer
 humanoid = player.Character.Humanoid
 char = player.Character
@@ -8,33 +8,52 @@ ogpos = player.Character.HumanoidRootPart.CFrame
 
 for i = 1, loopnum do
 	if game.GameId == 1768079756 then
-		--player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,50,0))
+		--[[--player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,50,0))
 		wait(.1)
 		while backpack:FindFirstChild("BloxyCola") do
+			--backpack.BloxyCola.DespawnTime = 600
 			backpack.BloxyCola.Parent = char
 			char.BloxyCola.Parent = workspace
 			wait()
 		end
 		while char:FindFirstChild("BloxyCola") do
-		player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,50,0))
+		player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,200,0))
 wait(.2)
+--char.BloxyCola.DespawnTime = 600
 			char.BloxyCola.Parent = workspace
 			wait()
-		end
+		end]]
 		alleqqipted = char:GetChildren()
 		for _, v in ipairs(alleqqipted) do
 			if v:IsA("Tool") then
+			if v.Name ~= "BloxyCola" then
+				--v.DespawnTime = 600
 				v.Parent = backpack
+			else
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,200,0))
+				wait(.1)
+				v.Parent = game.Workspace
+				end
 			end 		
 		end
 		allbackpack = backpack:GetChildren()
 		for _, v in ipairs(allbackpack) do
 			if v:IsA("Tool") then
+			if v.Name ~= "BloxyCola" then
 				print(v.Name)
 				v.Parent = char
-				player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,50,0))
-				wait(.2)
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,200,0))
+				wait(.25)
 				v.Parent = game.Workspace
+				else
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,200,0))
+				wait(.1)
+				v.Parent = char
+				v.Parent =  game.Workspace
+				
+				end
+			end 		
+		end
 			end 		
 		end
 		game.Players:Chat("-re")
@@ -55,7 +74,18 @@ wait(.2)
 				end
 			end 		
 		end
-		wait(.2)
+		wait(.6)
 		player.Character.HumanoidRootPart.CFrame = ogpos
-	end
+		allworkspace = game.Workspace:GetChildren()
+			for _, v in ipairs(allworkspace) do
+			if v:IsA("Tool") then
+				print(v.Name)
+					if v:FindFirstChild("Handle") then
+					player.Character.HumanoidRootPart.CFrame = CFrame.new(v.Handle.Position + Vector3.new(0,0,0))
+					wait(.4)
+				end
+			end 		
+		
+	player.Character.HumanoidRootPart.CFrame = ogpos
+	
 end
