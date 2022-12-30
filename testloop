@@ -1,4 +1,4 @@
---dupe loop2
+--dupe loop3
 player = game.Players.LocalPlayer
 humanoid = player.Character.Humanoid
 char = player.Character
@@ -8,7 +8,7 @@ ogpos = player.Character.HumanoidRootPart.CFrame
 
 for i = 1, loopnum do
 	if game.GameId == 1768079756 then
-		--player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,5000,0))
+		--player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,50,0))
 		wait(.1)
 		while backpack:FindFirstChild("BloxyCola") do
 			backpack.BloxyCola.Parent = char
@@ -16,7 +16,7 @@ for i = 1, loopnum do
 			wait()
 		end
 		while char:FindFirstChild("BloxyCola") do
-		player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,5000,0))
+		player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,50,0))
 wait(.2)
 			char.BloxyCola.Parent = workspace
 			wait()
@@ -32,7 +32,7 @@ wait(.2)
 			if v:IsA("Tool") then
 				print(v.Name)
 				v.Parent = char
-				player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,5000,0))
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,50,0))
 				wait(.2)
 				v.Parent = game.Workspace
 			end 		
