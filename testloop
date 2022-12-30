@@ -1,0 +1,142 @@
+local player = game.Players.LocalPlayer
+
+local humanoid = player.Character.Humanoid
+
+local char = player.Character
+
+endedwait = "lol"
+
+_G.donefr = endedwait
+
+backpack = game.Players.LocalPlayer.Backpack
+
+for i = 1, 1 do
+
+if endedwait ~= "lol" then
+
+endedwait = false
+
+--warn("lol regular")
+
+else
+
+endedwait = true
+
+--warn("lol bypassed")
+
+end
+
+ogpos = player.Character.HumanoidRootPart.CFrame
+
+--print(game.GameId)
+
+if game.GameId == 1768079756 then
+
+game.Players:Chat("-cola")
+
+--print("cola")
+
+end
+
+wait(.3)
+
+findchar = game.Players.LocalPlayer:FindFirstChild("Character")
+
+if findchar then 
+
+--print("foundchar")
+
+else
+
+wait(.5)
+
+end
+
+wait(.3)
+
+local toolinchar = char:GetChildren()
+
+--print("lol2323")
+
+for _, tool in ipairs(toolinchar) do
+
+print(tool.Name.."lol")
+
+    if tool:IsA("Tool") then
+
+            tool.Parent = backpack
+
+            print(tool.Name.."xd")
+
+      end
+
+end
+
+wait(.3)
+
+local toolinpack = backpack:GetChildren()
+
+for _, tool in ipairs(toolinpack) do
+
+    if tool:IsA("Tool") then
+
+    ishandle = tool:FindFirstChild("Handle")
+
+    tool.Parent = char
+
+            tool.Parent = workspace
+
+            tool.Handle.CanCollide = true
+
+            --print(tool.Name.."1")
+
+      end
+
+end
+
+wait(.3)
+
+if game.GameId == 1768079756 then
+
+game.Players:Chat("-re")
+
+--print("yes")
+
+end
+
+local tools = game.Workspace:GetChildren()
+
+
+
+for _, tool in ipairs(tools) do
+
+    if tool:IsA("Tool") then
+
+    ishandle = tool:FindFirstChild("Handle")
+
+        if ishandle then
+
+        root = player.Character:FindFirstChild("HumanoidRootPart")
+
+        repeat wait() until root
+
+        --print("yeslolol")
+
+            player.Character.HumanoidRootPart.CFrame = CFrame.new(tool.Handle.Position + Vector3.new(0,0,0))
+
+         wait(.6)
+
+         endedwait = true
+
+         end
+
+      end
+
+end
+
+repeat wait() until root and endedwait == true
+
+_G.donefr = endedwait
+
+--print("done")
+end
