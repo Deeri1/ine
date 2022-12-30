@@ -1,142 +1,61 @@
-local player = game.Players.LocalPlayer
-
-local humanoid = player.Character.Humanoid
-
-local char = player.Character
-
-endedwait = "lol"
-
-_G.donefr = endedwait
-
+--dupe loop
+player = game.Players.LocalPlayer
+humanoid = player.Character.Humanoid
+char = player.Character
 backpack = game.Players.LocalPlayer.Backpack
-
-for i = 1, 1 do
-
-if endedwait ~= "lol" then
-
-endedwait = false
-
---warn("lol regular")
-
-else
-
-endedwait = true
-
---warn("lol bypassed")
-
-end
-
+loopnum = 1
 ogpos = player.Character.HumanoidRootPart.CFrame
 
---print(game.GameId)
+for i = 1, loopnum do
+	if game.GameId == 1768079756 then
+		--player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,5000,0))
+		wait(.1)
+		while backpack:FindFirstChild("BloxyCola") do
+			backpack.BloxyCola.Parent = char
+			char.BloxyCola.Parent = workspace
+			wait()
+		end
+		while char:FindFirstChild("BloxyCola") do
+		player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,5000,0))
+wait(.1)
+			char.BloxyCola.Parent = workspace
+			wait()
+		end
+		alleqqipted = char:GetChildren()
+		for _, v in ipairs(alleqqipted) do
+			if v:IsA("Tool") then
+				v.Parent = backpack
+			end 		
+		end
+		allbackpack = backpack:GetChildren()
+		for _, v in ipairs(allbackpack) do
+			if v:IsA("Tool") then
+				print(v.Name)
+				v.Parent = char
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(player.Character.HumanoidRootPart.Position + Vector3.new(0,5000,0))
+				wait(.1)
+				v.Parent = game.Workspace
+			end 		
+		end
+		game.Players:Chat("-re")
 
-if game.GameId == 1768079756 then
+		local character = player:FindFirstChild("Character")
 
-game.Players:Chat("-cola")
-
---print("cola")
-
-end
-
-wait(.3)
-
-findchar = game.Players.LocalPlayer:FindFirstChild("Character")
-
-if findchar then 
-
---print("foundchar")
-
-else
-
-wait(.5)
-
-end
-
-wait(.3)
-
-local toolinchar = char:GetChildren()
-
---print("lol2323")
-
-for _, tool in ipairs(toolinchar) do
-
-print(tool.Name.."lol")
-
-    if tool:IsA("Tool") then
-
-            tool.Parent = backpack
-
-            print(tool.Name.."xd")
-
-      end
-
-end
-
-wait(.3)
-
-local toolinpack = backpack:GetChildren()
-
-for _, tool in ipairs(toolinpack) do
-
-    if tool:IsA("Tool") then
-
-    ishandle = tool:FindFirstChild("Handle")
-
-    tool.Parent = char
-
-            tool.Parent = workspace
-
-            tool.Handle.CanCollide = true
-
-            --print(tool.Name.."1")
-
-      end
-
-end
-
-wait(.3)
-
-if game.GameId == 1768079756 then
-
-game.Players:Chat("-re")
-
---print("yes")
-
-end
-
-local tools = game.Workspace:GetChildren()
-
-
-
-for _, tool in ipairs(tools) do
-
-    if tool:IsA("Tool") then
-
-    ishandle = tool:FindFirstChild("Handle")
-
-        if ishandle then
-
-        root = player.Character:FindFirstChild("HumanoidRootPart")
-
-        repeat wait() until root
-
-        --print("yeslolol")
-
-            player.Character.HumanoidRootPart.CFrame = CFrame.new(tool.Handle.Position + Vector3.new(0,0,0))
-
-         wait(.6)
-
-         endedwait = true
-
-         end
-
-      end
-
-end
-
-repeat wait() until root and endedwait == true
-
-_G.donefr = endedwait
-
---print("done")
+		wait(.5)
+		game.Players:Chat("-cola")
+		wait(.2)
+		allworkspace = game.Workspace:GetChildren()
+			for _, v in ipairs(allworkspace) do
+			if v:IsA("Tool") then
+				print(v.Name)
+				repeat wait() until player.Character:FindFirstChild("HumanoidRootPart")
+				if v:FindFirstChild("Handle") then
+					player.Character.HumanoidRootPart.CFrame = CFrame.new(v.Handle.Position + Vector3.new(0,0,0))
+					wait()
+				end
+			end 		
+		end
+		wait(.2)
+		player.Character.HumanoidRootPart.CFrame = ogpos
+	end
 end
