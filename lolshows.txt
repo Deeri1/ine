@@ -1,3 +1,6 @@
+--fix
+
+_G.r6reanim  = true
 _G.reanimatedended = false
 function r6reanimate()
 --resubmit 2
@@ -184,7 +187,12 @@ Character["HumanoidRootPart"].AlignPosition.Attachment0 = Character["HumanoidRoo
 Character["HumanoidRootPart"].AlignPosition.Attachment1 = CloneChar["Torso"].Attachment
 Character["HumanoidRootPart"].AlignOrientation.Attachment0 = Character["HumanoidRootPart"].Attachment
 Character["HumanoidRootPart"].AlignOrientation.Attachment1 = CloneChar["Torso"].Attachment
-
+wait(.4)
+lol = Character.HumanoidRootPart:FindFirstChild("RootJoint")
+if lol then
+Character.HumanoidRootPart.RootJoint:Destroy()
+print("yes")
+end
 Character.Humanoid.BreakJointsOnDeath = false
 game:FindFirstChildOfClass("Players").LocalPlayer.Character = Character.ReanimChar
 wait(6)
@@ -221,8 +229,8 @@ for i,v in pairs(CloneChar.Parent.Torso:GetDescendants()) do
         v:Destroy()
     end
 end
-Character.HumanoidRootPart.RootJoint.Part0 = nil
-Character.HumanoidRootPart.RootJoint.Part1 = nil 
+--Character.HumanoidRootPart.RootJoint.Part0 = nil
+--Character.HumanoidRootPart.RootJoint.Part1 = nil 
 Character.Head.AlignPosition.Attachment0 = Character.Head.Attachment
 Character.Head.AlignPosition.Attachment1 = CloneChar.Head.Attachment
 Character.Torso.AlignPosition.Attachment0 = Character.Torso.Attachment
@@ -257,11 +265,6 @@ end
 end)
 
 local hrp = game:GetService("Players").LocalPlayer.Character.Parent.HumanoidRootPart
-wait(.1)
-if hrp:FindFirstChild("RootJoint") then
-hrp.RootJoint:Destroy()
-print("yes")
-end
 local e = Instance.new("SelectionBox", hrp)
 e.Adornee = hrp
 hrp.Name = "HumanoidRootPart"
