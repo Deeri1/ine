@@ -257,6 +257,11 @@ end
 end)
 
 local hrp = game:GetService("Players").LocalPlayer.Character.Parent.HumanoidRootPart
+wait(.1)
+if hrp:FindFirstChild("RootJoint") then
+hrp.RootJoint:Destroy()
+print("yes")
+end
 local e = Instance.new("SelectionBox", hrp)
 e.Adornee = hrp
 hrp.Name = "HumanoidRootPart"
@@ -271,6 +276,7 @@ end
 if hrp:FindFirstChildOfClass("AlignOrientation") then
 	hrp:FindFirstChildOfClass("AlignOrientation"):Destroy()
 end
+
 local bp = Instance.new("BodyPosition", hrp)
 bp.Position = hrp.Position
 bp.D = 9999999
@@ -311,6 +317,7 @@ ResetBindable.Event:Connect(function()
 	game:FindFirstChildOfClass("Players").LocalPlayer.Character = game.Players.LocalPlayer.Character.Parent
 	game.Players.LocalPlayer.Character.Humanoid:Destroy()
 end)
+
 _G.reanimatedended = true
 end
 
