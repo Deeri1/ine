@@ -1,6 +1,6 @@
---fix
+--fix2
 
-_G.r6reanim  = true
+
 _G.reanimatedended = false
 function r6reanimate()
 --resubmit 2
@@ -11,8 +11,9 @@ function fgvbhnjmi(number)
     sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", number)
 end
 game:GetService("RunService").Heartbeat:Connect(function()
-ve = Vector3.new(30,0,0)
-  player["Head"].Velocity = ve
+        ve = Vector3.new(30, 0, 0)
+if player:FindFirstChild("Head") then
+    player["Head"].Velocity = ve
   player["Torso"].Velocity = ve
   player["Left Arm"].Velocity = ve
   player["Right Arm"].Velocity = ve
@@ -23,7 +24,7 @@ ve = Vector3.new(30,0,0)
   player["Right Arm"].CanCollide = false
   player["Left Leg"].CanCollide = false
   player["Right Leg"].CanCollide = false
-
+end
 for i,v in pairs(player:GetDescendants()) do
     if v:IsA("Accessory") then
         v.Handle.Velocity = Vector3.new(90,0,0)
@@ -234,7 +235,11 @@ end
 Character.Head.AlignPosition.Attachment0 = Character.Head.Attachment
 Character.Head.AlignPosition.Attachment1 = CloneChar.Head.Attachment
 Character.Torso.AlignPosition.Attachment0 = Character.Torso.Attachment
-Character.Torso.AlignPosition.Attachment1 = CloneChar.Torso.Attachment
+    Character.Torso.AlignPosition.Attachment1 = CloneChar.Torso.Attachment
+if not Character:FindFirstChild("HumanoidRootPart") then
+    repeat wait() until Character:FindFirstChild("HumanoidRootPart")
+end
+
 Character["HumanoidRootPart"].AlignPosition.Attachment0 = Character["HumanoidRootPart"].Attachment
 Character["HumanoidRootPart"].AlignPosition.Attachment1 = CloneChar["Torso"].Attachment
 Character["HumanoidRootPart"].AlignOrientation.Attachment0 = Character["HumanoidRootPart"].Attachment
@@ -321,7 +326,17 @@ ResetBindable.Event:Connect(function()
 	game.Players.LocalPlayer.Character.Humanoid:Destroy()
 end)
 
-_G.reanimatedended = true
+    _G.reanimatedended = true
+function destroyall()
+    while wait() do
+    for i, v in pairs(CloneChar:GetDescendants()) do
+       if v:IsA("Accessory") then
+        v.Handle.Transparency = 1
+       end
+    end
+    end
+    end
+coroutine.wrap(destroyall)()
 end
 
 if _G.r6reanim == true then
