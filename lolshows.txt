@@ -1,4 +1,4 @@
---fix2
+--fix23
 
 
 _G.reanimatedended = false
@@ -306,7 +306,6 @@ spawn(function()
 	end
 end)
 end
-end
 local StarterGui = game:GetService("StarterGui")
 local ResetBindable = Instance.new("BindableEvent")
 
@@ -339,14 +338,7 @@ function destroyall()
         v.Handle.Transparency = 1
        end
     end
-    for i, v in pairs(CloneChar:GetDescendants()) do
-    if v:IsA("Part") then
-        v.Transparency = 1
-                end
-
-end
-
-    
+    end
     end
 coroutine.wrap(destroyall)()
 end
