@@ -1,4 +1,4 @@
---fix23
+--fix29
 
 
 _G.reanimatedended = false
@@ -346,7 +346,7 @@ function destroyall()
 
 end
 
-    end
+    
     end
 coroutine.wrap(destroyall)()
 end
