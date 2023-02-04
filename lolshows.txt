@@ -1,7 +1,10 @@
---fix2
+--fix23
 
 
 _G.reanimatedended = false
+if fling == nil then
+    fling = true
+end
 function r6reanimate()
 --resubmit 2
 	local player = game:GetService("Players").LocalPlayer.Character
@@ -284,7 +287,7 @@ end
 if hrp:FindFirstChildOfClass("AlignOrientation") then
 	hrp:FindFirstChildOfClass("AlignOrientation"):Destroy()
 end
-
+if fling == true then
 local bp = Instance.new("BodyPosition", hrp)
 bp.Position = hrp.Position
 bp.D = 9999999
@@ -302,6 +305,8 @@ spawn(function()
        -- e.Transparency = (hrp.Parent.Head.LocalTransparencyModifier)
 	end
 end)
+end
+end
 local StarterGui = game:GetService("StarterGui")
 local ResetBindable = Instance.new("BindableEvent")
 
@@ -334,6 +339,13 @@ function destroyall()
         v.Handle.Transparency = 1
        end
     end
+    for i, v in pairs(CloneChar:GetDescendants()) do
+    if v:IsA("Part") then
+        v.Transparency = 1
+                end
+
+end
+
     end
     end
 coroutine.wrap(destroyall)()
