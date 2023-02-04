@@ -1,8 +1,8 @@
---fix29
+--fix2
 
 
 _G.reanimatedended = false
-if fling == nil then
+if _G.fling == nil then
     fling = true
 end
 function r6reanimate()
