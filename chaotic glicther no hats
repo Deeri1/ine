@@ -1,6 +1,42 @@
-_G.r6reanim  = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
-repeat wait() until _G.reanimatedended == true
+showfakechar = 1
+showrealchar = 0
+player=game.Players.LocalPlayer
+char=player.Character
+plrname=char.Name
+realcharee = workspace:FindFirstChild(plrname)
+char.Archivable = true
+workspace.FallenPartsDestroyHeight = 0/0
+for i, v in pairs(workspace:GetDescendants()) do
+    if v.Name == "Dummylolxdnoo" then
+    v:Destroy()
+    end
+end
+for i, v in pairs(char:GetDescendants()) do
+    v.Archivable = true
+
+end
+local Vector3_101 = Vector3.new(1, 0, 1)
+local netless_Y = Vector3.new(0, 25.1, 0)
+
+dummy = char:Clone()
+dummy.Name = "Dummylolxdnoo"
+dummy.Parent = workspace
+
+dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
+
+settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
+settings().Physics.AllowSleep = false
+for i, v in pairs(dummy:GetDescendants()) do
+    v.Archivable = true
+    if v:IsA("BasePart") then
+    v.Transparency = showfakechar
+    v.CanCollide = false
+    end
+end
+game.Players.LocalPlayer.Character = dummy
+function scripthere()
+    game.Players.LocalPlayer.Character = dummy
+
 
 
 local Player = game.Players.LocalPlayer
@@ -7374,10 +7410,6 @@ coroutine.resume(coroutine.create(function()
 			WACKYEFFECT({Time = 90,EffectType = "Block", Size = RightArm.Size, Size2 = RightArm.Size, Transparency = 0.5, Transparency2 = 1, CFrame = LeftArm.CFrame*CF(0,0,0), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Glass", Color = C3(0,0.5,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil})
 			WACKYEFFECT({Time = 90,EffectType = "Block", Size = RightArm.Size, Size2 = RightArm.Size, Transparency = 0.5, Transparency2 = 1, CFrame = LeftLeg.CFrame*CF(0,0,0), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Glass", Color = C3(0,0.5,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil})
 			swait(10)
-		elseif MODE == "Nuclear" and EFFECTPOS~=nil and GetClientProperty(sick,"PlaybackLoudness") then
-			WACKYEFFECT({Time = MRANDOM(10,40) - GetClientProperty(sick,"PlaybackLoudness")/300, EffectType = "Sphere", Size = VT(0.25+GetClientProperty(sick,"PlaybackLoudness")/500,0,0.25+GetClientProperty(sick,"PlaybackLoudness")/500), Size2 = VT(0.25+GetClientProperty(sick,"PlaybackLoudness")/500,8+GetClientProperty(sick,"PlaybackLoudness")/75,0.25+GetClientProperty(sick,"PlaybackLoudness")/500), Transparency = 0, Transparency2 = 1, CFrame = RootPart.CFrame*CF(MRANDOM(-30,30),-4,MRANDOM(-30,30)) * ANGLES(RAD(MRANDOM(-15,15)), RAD(MRANDOM(-15,15)), RAD(MRANDOM(-15,15))), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Glass", Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1500,GetClientProperty(sick,"PlaybackLoudness")/1500,0), SoundID = nil, SoundPitch = 1, SoundVolume = 0})
-			WACKYEFFECT({Time = MRANDOM(10,40) - GetClientProperty(sick,"PlaybackLoudness")/300, EffectType = "Sphere", Size = VT(0.25+GetClientProperty(sick,"PlaybackLoudness")/500,0,0.25+GetClientProperty(sick,"PlaybackLoudness")/500), Size2 = VT(0.25+GetClientProperty(sick,"PlaybackLoudness")/500,8+GetClientProperty(sick,"PlaybackLoudness")/75,0.25+GetClientProperty(sick,"PlaybackLoudness")/500), Transparency = 0, Transparency2 = 1, CFrame = RootPart.CFrame*CF(MRANDOM(-30,30),-4,MRANDOM(-30,30)) * ANGLES(RAD(MRANDOM(-15,15)), RAD(MRANDOM(-15,15)), RAD(MRANDOM(-15,15))), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Glass", Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0), SoundID = nil, SoundPitch = 1, SoundVolume = 0})
-			Swait(5 - GetClientProperty(sick,"PlaybackLoudness")/75)
 		end
 	end
 end))
@@ -7391,7 +7423,7 @@ coroutine.resume(coroutine.create(function()
 		EFFECTPOS = Raycast(RootPart.Position, (CF(RootPart.Position, RootPart.Position + VT(0, -1, 0))).lookVector, 4, Character)
 		if MODE == "Nuclear" and EFFECTPOS~=nil then
 			EffectsAoE(RootPart.Position,5,0,0,50,"Poison",false)
-			WACKYEFFECT({Time = 700, EffectType = "Sphere", Size = VT(8,0.55,8), Size2 = VT(0,0,0), Transparency = 0, Transparency2 = 1, CFrame = RootPart.CFrame*CF(0,-3,0), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "ForceField", Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil})
+	--		WACKYEFFECT({Time = 700, EffectType = "Sphere", Size = VT(8,0.55,8), Size2 = VT(0,0,0), Transparency = 0, Transparency2 = 1, CFrame = RootPart.CFrame*CF(0,-3,0), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "ForceField", Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil})
 			Swait(13)
 		elseif MODE == "Berceuse" then
 			WACKYEFFECT({EffectType = "Block", Size = VT(0.6 + 0.2 * SIN(SINE / 30),0.6 + 0.2 * SIN(SINE / 30),0.6 + 0.2 * SIN(SINE / 30)), Size2 = VT(0,0,0), Transparency = 0, Transparency2 = 1, CFrame = par1.CFrame, MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = C3(0,0,1), SoundID = nil, SoundPitch = nil, SoundVolume = nil})
@@ -7569,62 +7601,7 @@ while true do
 		lwing3weld.C1 = rwing2weld.C1
 		handleweld.C1 = Clerp(handleweld.C1, CF(0, 1, -0.6) * ANGLES(RAD(0), RAD(0), RAD(infrotate)), 0.05 / Animation_Speed)
 	elseif MODE == "Peculiar" then
-		for i, v in pairs(rwing1top:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 1
-			end
-		end
-		for i, v in pairs(rwing1right:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 1
-			end
-		end
-		for i, v in pairs(rwing1left:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 1
-			end
-		end
-		for i, v in pairs(lwing1top:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 1
-			end
-		end
-		for i, v in pairs(lwing1right:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 1
-			end
-		end
-		for i, v in pairs(lwing1left:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 1
-			end
-		end
-		--tr1.Enabled = false
-		--tr1.Enabled = false
-		rwing1.MainWelder.Emitter1.Enabled = false
-		rwing1.MainWelder.Emitter2.Enabled = false
-		lwing1.MainWelder.Emitter1.Enabled = false
-		lwing1.MainWelder.Emitter2.Enabled = false
-		rwing1weld.C1 = rwing2weld.C1
-		rwing2weld.C1 = Clerp(rwing2weld.C1, CF(0, 0, -4.5+1*SIN(SINE / 36)) * ANGLES(RAD(0), RAD(-90), RAD(0)), 0.2 / Animation_Speed)
-		--rwing1leftweld.C1 = Clerp(--rwing1leftweld.C1, CF(0, 0, -1.1)*ANGLES(RAD(0),RAD(0),RAD(0)), 0.2 / Animation_Speed)
-		----rwing1leftweld.C1 = Clerp(----rwing1leftweld.C1, CF(-1.6, 0, -0.75)*ANGLES(RAD(0),RAD(-45+7.5*SIN(SINE / 16)),RAD(0)), 0.2 / Animation_Speed)
-		----rwing1leftweld.C1 = Clerp(----rwing1leftweld.C1, CF(1.6, 0, -0.75)*ANGLES(RAD(0),RAD(45-7.5*SIN(SINE / 16)),RAD(0)), 0.4 / Animation_Speed)
-		rwing3weld.C1 = Clerp(rwing3weld.C1, CF(0, 0, -4.5+1*SIN(SINE / 36)) * ANGLES(RAD(0), RAD(180), RAD(0)), 0.2 / Animation_Speed)
-		--rwing1leftweld.C1 = Clerp(--rwing1leftweld.C1, CF(0, 0, -1.1)*ANGLES(RAD(0),RAD(0),RAD(0)), 0.4 / Animation_Speed)
-		----rwing1leftweld.C1 = Clerp(----rwing1leftweld.C1, CF(-1.6, 0, -0.75)*ANGLES(RAD(0),RAD(-45+7.5*SIN(SINE / 16)),RAD(0)), 0.2 / Animation_Speed)
-		----rwing1leftweld.C1 = Clerp(----rwing1leftweld.C1, CF(1.6, 0, -0.75)*ANGLES(RAD(0),RAD(45-7.5*SIN(SINE / 16)),RAD(0)), 0.2 / Animation_Speed)
-		lwing1weld.C1 = lwing2weld.C1     
-		lwing2weld.C1 = Clerp(lwing2weld.C1, CF(0, 0, -4.5+1*SIN(SINE / 36)) * ANGLES(RAD(0), RAD(0), RAD(0)), 0.2 / Animation_Speed)
-		--rwing1leftweld.C1 = Clerp(--rwing1leftweld.C1, CF(0, 0, -1.1)*ANGLES(RAD(0),RAD(0),RAD(0)), 0.2 / Animation_Speed)
-		----rwing1leftweld.C1 = Clerp(----rwing1leftweld.C1, CF(-1.6, 0, -0.75)*ANGLES(RAD(0),RAD(-45+7.5*SIN(SINE / 16)),RAD(0)), 0.2 / Animation_Speed)
-		----rwing1leftweld.C1 = Clerp(----rwing1leftweld.C1, CF(1.6, 0, -0.75)*ANGLES(RAD(0),RAD(45-7.5*SIN(SINE / 16)),RAD(0)), 0.2 / Animation_Speed)
-		lwing3weld.C1 = Clerp(lwing3weld.C1, CF(0, 0, -4.5+1*SIN(SINE / 36)) * ANGLES(RAD(0), RAD(90), RAD(0)), 0.2 / Animation_Speed)
-		--rwing1leftweld.C1 = Clerp(--rwing1leftweld.C1, CF(0, 0, -1.1)*ANGLES(RAD(0),RAD(0),RAD(0)), 0.4 / Animation_Speed)
-		----rwing1leftweld.C1 = Clerp(----rwing1leftweld.C1, CF(-1.6, 0, -0.75)*ANGLES(RAD(0),RAD(-45+7.5*SIN(SINE / 16)),RAD(0)), 0.2 / Animation_Speed)
-		----rwing1leftweld.C1 = Clerp(----rwing1leftweld.C1, CF(1.6, 0, -0.75)*ANGLES(RAD(0),RAD(45-7.5*SIN(SINE / 16)),RAD(0)), 0.2 / Animation_Speed)
-		handleweld.C1 = Clerp(handleweld.C1, CF(0, 1, -0.6) * ANGLES(RAD(0), RAD(0), RAD(3600 * SIN(SINE / 360))), 0.4 / Animation_Speed)
-	elseif MODE == "Time" then
+		elseif MODE == "Time" then
 		for i, v in pairs(mw4:GetChildren()) do
 			if v:IsA("Part") then
 				v.Transparency = 1
@@ -7823,10 +7800,8 @@ while true do
 					RightHip.C0 = Clerp(RightHip.C0, CF(1, -1 - 0.1 * COS(SINE / 15), -0.01) * ANGLES(RAD(0), RAD(80), RAD(0)) * ANGLES(RAD(-4+2.5 * COS(SINE / 30)), RAD(0), RAD(0+ 5 * COS(SINE / 30))), 1 / Animation_Speed)
 					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1 - 0.1 * COS(SINE / 15), -0.01) * ANGLES(RAD(0), RAD(-80), RAD(0)) * ANGLES(RAD(-4-2.5 * COS(SINE / 30)), RAD(0), RAD(0- 5 * COS(SINE / 30))), 1 / Animation_Speed)
 				elseif MODE=="Nuclear" then
-					WACKYEFFECT({EffectType = "Crystal", Size = VT(0,0,0), Size2 = VT(1,2,1), Transparency = 0, Transparency2 = 1, CFrame = LeftArm.CFrame*CF(0,-1,0)*ANGLES(RAD(MRANDOM(0,360)),RAD(MRANDOM(0,360)),RAD(MRANDOM(0,360))), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil})
-					if MRANDOM(1,25-GetClientProperty(sick,"PlaybackLoudness")/30)==1 then
-						Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0 + ((1) - 1)) * ANGLES(RAD(25 - 2.5 * SIN(SINE / 45)+MRANDOM(-10-GetClientProperty(sick,"PlaybackLoudness")/10,10+GetClientProperty(sick,"PlaybackLoudness")/10)), RAD(0+MRANDOM(-10-GetClientProperty(sick,"PlaybackLoudness")/10,10+GetClientProperty(sick,"PlaybackLoudness")/10)), RAD(0+MRANDOM(-10-GetClientProperty(sick,"PlaybackLoudness")/10,10+GetClientProperty(sick,"PlaybackLoudness")/10))), 3 / Animation_Speed)
-					end
+				--	WACKYEFFECT({EffectType = "Crystal", Size = VT(0,0,0), Size2 = VT(1,2,1), Transparency = 0, Transparency2 = 1, CFrame = LeftArm.CFrame*CF(0,-1,0)*ANGLES(RAD(MRANDOM(0,360)),RAD(MRANDOM(0,360)),RAD(MRANDOM(0,360))), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil})
+
 					Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0 + ((1) - 1)) * ANGLES(RAD(25 - 2.5 * SIN(SINE / 45)), RAD(0), RAD(0)), 0.2 / Animation_Speed)
 					RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, 0) * ANGLES(RAD(-5), RAD(0), RAD(18- 6 * COS(SINE / 60))) * RIGHTSHOULDERC0, 0.2 / Animation_Speed)
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(0, 0, 0 + 0.1 * COS(SINE / 60)) * ANGLES(RAD(10), RAD(0), RAD(0)), 0.2 / Animation_Speed)
@@ -8128,10 +8103,8 @@ while true do
 					RightHip.C0 = Clerp(RightHip.C0, CF(1 , -1, 0) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(-5 + 50 * SIN(SINE / 12))), 0.8 / Animation_Speed)
 					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1, 0) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(5 + 50 * SIN(SINE / 12))), 0.8 / Animation_Speed)
 				elseif MODE=="Nuclear" then
-					WACKYEFFECT({EffectType = "Crystal", Size = VT(0,0,0), Size2 = VT(1,2,1), Transparency = 0, Transparency2 = 1, CFrame = LeftArm.CFrame*CF(0,-1,0)*ANGLES(RAD(MRANDOM(0,360)),RAD(MRANDOM(0,360)),RAD(MRANDOM(0,360))), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil})
-					if MRANDOM(1,25-GetClientProperty(sick,"PlaybackLoudness")/30)==1 then
-						Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0 + ((1) - 1)) * ANGLES(RAD(25 - 2.5 * SIN(SINE / 36)+MRANDOM(-10-GetClientProperty(sick,"PlaybackLoudness")/10,10+GetClientProperty(sick,"PlaybackLoudness")/10)), RAD(0+MRANDOM(-10-GetClientProperty(sick,"PlaybackLoudness")/10,10+GetClientProperty(sick,"PlaybackLoudness")/10)), RAD(0+MRANDOM(-10-GetClientProperty(sick,"PlaybackLoudness")/10,10+GetClientProperty(sick,"PlaybackLoudness")/10))), 3 / Animation_Speed)
-					end
+				--	WACKYEFFECT({EffectType = "Crystal", Size = VT(0,0,0), Size2 = VT(1,2,1), Transparency = 0, Transparency2 = 1, CFrame = LeftArm.CFrame*CF(0,-1,0)*ANGLES(RAD(MRANDOM(0,360)),RAD(MRANDOM(0,360)),RAD(MRANDOM(0,360))), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0), SoundID = nil, SoundPitch = nil, SoundVolume = nil})
+
 					Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0 + ((1) - 1)) * ANGLES(RAD(25 - 2.5 * SIN(SINE / 18)), RAD(0), RAD(0)), 0.1 / Animation_Speed)
 					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(0, 0, 0+0.1* SIN(SINE / 9)) * ANGLES(RAD(10), RAD(0), RAD(0+10* SIN(SINE / 18))), 0.1 / Animation_Speed)
 					RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, 0) * ANGLES(RAD(0-35* SIN(SINE / 18)), RAD(0), RAD(12)) * RIGHTSHOULDERC0, 0.1 / Animation_Speed)
@@ -8261,15 +8234,15 @@ while true do
 	end
 	if MODE == "Devil" then
 		for i = 0, 2 do
-			WACKYEFFECT({EffectType = "Box", Size = VT(1,0,1), Size2 = VT(0,10,0)*MRANDOM(1,2), Transparency = 0, Transparency2 = 1, CFrame = RootPart.CFrame*CF(MRANDOM(-5-GetClientProperty(sick,"PlaybackLoudness")/2.5,5+GetClientProperty(sick,"PlaybackLoudness")/2.5),-4,MRANDOM(-5-GetClientProperty(sick,"PlaybackLoudness")/2.5,5+GetClientProperty(sick,"PlaybackLoudness")/2.5))*ANGLES(RAD(MRANDOM(-5,5)),RAD(MRANDOM(-5,5)),RAD(MRANDOM(-5,5))), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = TEXTCOLOR, SoundID = nil, SoundPitch = nil, SoundVolume = nil})
+		--	WACKYEFFECT({EffectType = "Box", Size = VT(1,0,1), Size2 = VT(0,10,0)*MRANDOM(1,2), Transparency = 0, Transparency2 = 1, CFrame = RootPart.CFrame*CF(MRANDOM(-5-GetClientProperty(sick,"PlaybackLoudness")/2.5,5+GetClientProperty(sick,"PlaybackLoudness")/2.5),-4,MRANDOM(-5-GetClientProperty(sick,"PlaybackLoudness")/2.5,5+GetClientProperty(sick,"PlaybackLoudness")/2.5))*ANGLES(RAD(MRANDOM(-5,5)),RAD(MRANDOM(-5,5)),RAD(MRANDOM(-5,5))), MoveToPos = nil, RotationX = 0, RotationY = 0, RotationZ = 0, Material = "Neon", Color = TEXTCOLOR, SoundID = nil, SoundPitch = nil, SoundVolume = nil})
 		end
 	elseif MODE == "Peculiar" then
 		if HITFLOOR~=nil then
 			if MRANDOM(1,2)==1 then
-				WACKYEFFECT({Time = 25, EffectType = "Slash", Size = VT(0,0,0), Size2 = VT(0.1,0,0.1)*MRANDOM(1000/1000,1750/1000), Transparency = 0, Transparency2 = 1, CFrame = RootPart.CFrame*CF(0,-3,0)*ANGLES(RAD(MRANDOM(-5,5)),RAD(MRANDOM(-360,360)),RAD(MRANDOM(-5,5))), MoveToPos = nil, RotationX = 0, RotationY = MRANDOM(-100/100,100/100), RotationZ = 0, Material = "Neon", Color = TEXTCOLOR, SoundID = nil, SoundPitch = nil, SoundVolume = nil})
+			--	WACKYEFFECT({Time = 25, EffectType = "Slash", Size = VT(0,0,0), Size2 = VT(0.1,0,0.1)*MRANDOM(1000/1000,1750/1000), Transparency = 0, Transparency2 = 1, CFrame = RootPart.CFrame*CF(0,-3,0)*ANGLES(RAD(MRANDOM(-5,5)),RAD(MRANDOM(-360,360)),RAD(MRANDOM(-5,5))), MoveToPos = nil, RotationX = 0, RotationY = MRANDOM(-100/100,100/100), RotationZ = 0, Material = "Neon", Color = TEXTCOLOR, SoundID = nil, SoundPitch = nil, SoundVolume = nil})
 			end
-			WACKYEFFECT({Time = 5, EffectType = "Cylinder", Size = VT(0.2,12.5-2.5*SIN(SINE / 35),12.5-2.5*SIN(SINE / 35)), Size2 = VT(0,0,0), Transparency = 0, Transparency2 = 0, CFrame = RootPart.CFrame*CF(0,-3,0)*ANGLES(RAD(0),RAD(MRANDOM(-360,360)),RAD(90)), MoveToPos = nil, RotationX = MRANDOM(-100/100,100/100), RotationY = 0, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Dark indigo").Color, SoundID = nil, SoundPitch = nil, SoundVolume = nil})
-			WACKYEFFECT({Time = 5, EffectType = "Cylinder", Size = VT(0.3,11-2.5*SIN(SINE / 35),11-2.5*SIN(SINE / 35)), Size2 = VT(0,0,0), Transparency = 0, Transparency2 = 0, CFrame = RootPart.CFrame*CF(0,-3,0)*ANGLES(RAD(0),RAD(MRANDOM(-360,360)),RAD(90)), MoveToPos = nil, RotationX = MRANDOM(-100/100,100/100), RotationY = 0, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Navy blue").Color, SoundID = nil, SoundPitch = nil, SoundVolume = nil})
+		--	WACKYEFFECT({Time = 5, EffectType = "Cylinder", Size = VT(0.2,12.5-2.5*SIN(SINE / 35),12.5-2.5*SIN(SINE / 35)), Size2 = VT(0,0,0), Transparency = 0, Transparency2 = 0, CFrame = RootPart.CFrame*CF(0,-3,0)*ANGLES(RAD(0),RAD(MRANDOM(-360,360)),RAD(90)), MoveToPos = nil, RotationX = MRANDOM(-100/100,100/100), RotationY = 0, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Dark indigo").Color, SoundID = nil, SoundPitch = nil, SoundVolume = nil})
+		--	WACKYEFFECT({Time = 5, EffectType = "Cylinder", Size = VT(0.3,11-2.5*SIN(SINE / 35),11-2.5*SIN(SINE / 35)), Size2 = VT(0,0,0), Transparency = 0, Transparency2 = 0, CFrame = RootPart.CFrame*CF(0,-3,0)*ANGLES(RAD(0),RAD(MRANDOM(-360,360)),RAD(90)), MoveToPos = nil, RotationX = MRANDOM(-100/100,100/100), RotationY = 0, RotationZ = 0, Material = "Neon", Color = BrickColor.new("Navy blue").Color, SoundID = nil, SoundPitch = nil, SoundVolume = nil})
 		end
 	elseif MODE == "Visual" then
 		local col = Color3.new(0,math.min(GetClientProperty(sick,"PlaybackLoudness")/1000),math.min(GetClientProperty(sick,"PlaybackLoudness")/1000,1))
@@ -8469,24 +8442,24 @@ while true do
 	elseif MODE == "Nuclear" then
 		for i, v in pairs(mw2:GetChildren()) do
 			if v:IsA("Part") then
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
+				--v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
 				v.Material = "Neon"
 			end
 		end
 		for i, v in pairs(mw4:GetChildren()) do
 			if v:IsA("Part") then
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1500,GetClientProperty(sick,"PlaybackLoudness")/1500,0)
+				--v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1500,GetClientProperty(sick,"PlaybackLoudness")/1500,0)
 				v.Material = "Neon"
 			end
 		end
 		for i, v in pairs(mw1:GetChildren()) do
 			if v:IsA("Part") then
 				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1500,GetClientProperty(sick,"PlaybackLoudness")/1500,0)
+				--v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1500,GetClientProperty(sick,"PlaybackLoudness")/1500,0)
 				v.Material = "Neon"
 			end
 		end
-		rwing1.MainWelder.Emitter1.Color = ColorSequence.new(C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0))
+		--[[rwing1.MainWelder.Emitter1.Color = ColorSequence.new(C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0))
 		rwing1.MainWelder.Emitter2.Color = ColorSequence.new(C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0))
 		rwing2.MainWelder.Emitter1.Color = ColorSequence.new(C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0))
 		rwing2.MainWelder.Emitter2.Color = ColorSequence.new(C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0))
@@ -8498,151 +8471,8 @@ while true do
 		lwing2.MainWelder.Emitter2.Color = ColorSequence.new(C3(GetClientProperty(sick,"PlaybackLoudness")/1500,GetClientProperty(sick,"PlaybackLoudness")/1500,0))
 		lwing3.MainWelder.Emitter1.Color = ColorSequence.new(C3(GetClientProperty(sick,"PlaybackLoudness")/1500,GetClientProperty(sick,"PlaybackLoudness")/1500,0))
 		lwing3.MainWelder.Emitter2.Color = ColorSequence.new(C3(GetClientProperty(sick,"PlaybackLoudness")/1500,GetClientProperty(sick,"PlaybackLoudness")/1500,0))
-		for i, v in pairs(rwing1top:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(rwing1left:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(rwing1right:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(rwing1.Buttom:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(rwing2top:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(rwing2left:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(rwing2right:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(rwing2.Buttom:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(rwing3top:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(rwing3left:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(rwing3right:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(rwing3.Buttom:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(0,GetClientProperty(sick,"PlaybackLoudness")/500,0)
-			end
-		end
-		for i, v in pairs(lwing1top:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		for i, v in pairs(lwing1left:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		for i, v in pairs(lwing1right:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		for i, v in pairs(lwing1.Buttom:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		for i, v in pairs(lwing2top:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		for i, v in pairs(lwing2left:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		for i, v in pairs(lwing2right:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		for i, v in pairs(lwing2.Buttom:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		for i, v in pairs(lwing3top:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		for i, v in pairs(lwing3left:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		for i, v in pairs(lwing3right:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		for i, v in pairs(lwing3.Buttom:GetChildren()) do
-			if v:IsA("WedgePart") then
-				v.Transparency = 0
-				v.Color = C3(GetClientProperty(sick,"PlaybackLoudness")/1000,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
-			end
-		end
-		MAINRUINCOLOR = BrickColor.new(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
+		]]
+		--[[MAINRUINCOLOR = BrickColor.new(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
 		SECONDRUINCOLOR  = BrickColor.new(GetClientProperty(sick,"PlaybackLoudness")/1500,GetClientProperty(sick,"PlaybackLoudness")/1500,0)
 		refec.Color = ColorSequence.new(C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0))
 		refec2.Color = ColorSequence.new(C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0))
@@ -8654,7 +8484,7 @@ while true do
 		imgl2.ImageColor3 = C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
 		circl.ImageColor3 = C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0)
 		techc.ImageColor3 = C3(GetClientProperty(sick,"PlaybackLoudness")/1500,GetClientProperty(sick,"PlaybackLoudness")/1500,0)
-		--tr1.Color = ColorSequence.new(C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0))
+		]]--tr1.Color = ColorSequence.new(C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0))
 		--tr1.Color = ColorSequence.new(C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0))
 		--tr1.Color = ColorSequence.new(C3(0,GetClientProperty(sick,"PlaybackLoudness")/1000,0))
 		--tr1.Color = ColorSequence.new(C3(GetClientProperty(sick,"PlaybackLoudness")/1500,GetClientProperty(sick,"PlaybackLoudness")/1500,0))
@@ -8817,64 +8647,64 @@ while true do
 			--tr1.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			rwing1.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
+		--	rwing1.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			rwing1.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
+			--rwing1.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			rwing2.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
+			--rwing2.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			rwing2.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
+			--rwing2.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			rwing3.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
+		--	rwing3.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			rwing3.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
+		--	rwing3.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			lwing1.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
+		--	lwing1.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			lwing1.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
+		--	lwing1.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			lwing2.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
+			--lwing2.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			lwing2.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
+			--lwing2.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			lwing3.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
+			--lwing3.MainWelder.Emitter1.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			lwing3.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
+			--lwing3.MainWelder.Emitter1.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			rwing1.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
+			--rwing1.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			rwing1.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
+			--rwing1.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			rwing2.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
+			--rwing2.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			rwing2.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
+			--rwing2.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			rwing3.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
+			--rwing3.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			rwing3.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
+			--.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			lwing1.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
+			--lwing1.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			lwing1.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
+			--lwing1.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			lwing2.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
+			--lwing2.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			lwing2.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
+			--lwing2.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
-			lwing3.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
+			--lwing3.MainWelder.Emitter2.Color = ColorSequence.new(orangecolorrandom)
 		elseif MRANDOM(1,2)==2 then	
-			lwing3.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
+			--lwing3.MainWelder.Emitter2.Color = ColorSequence.new(bluecolorrandom)
 		end
 		if MRANDOM(1,2)==1 then	
 			for i, v in pairs(rwing1top:GetChildren()) do
@@ -9254,3 +9084,156 @@ end
 --//====================================================\\--
 --||			  		 END OF SCRIPT
 --\\====================================================//--
+end
+done=false
+function waitseclol()
+    wait(.2)
+    done=true
+end
+
+    game:GetService("RunService").Heartbeat:Connect(function()
+        ve = Vector3.new(-.5, 0, 0)
+        ve2 = Vector3.new(-25, 0, 0)
+            templol = workspace:FindFirstChild(plrname)
+            for i, v in pairs(templol:GetDescendants()) do
+                if v:IsA("BasePart") and v.Name ~= ("HumanoidRootPart") then
+                    v.Velocity = ve
+                    v.CanCollide = false
+                elseif v:IsA("BasePart") and v.Name == ("HumanoidRootPart") then
+                    v.Velocity = ve2
+                    v.CanCollide = false
+                end
+            end
+        --wait(0.2)
+        for i, v in pairs(templol:GetDescendants()) do
+            if v:IsA("Accessory") and v:FindFirstChild("Handle") then
+                v.Handle.Velocity = Vector3.new(.5, 0, 0)
+            end
+        end
+    end)
+    started = false
+function reanim()
+    if  workspace[plrname]:FindFirstChild("Animate") then
+        repeat
+          wait()  
+        until  workspace[plrname]["Left Arm"].BrickColor.Name ~= BrickColor.new("Medium stone grey").Name
+        wait()
+    game.Players.LocalPlayer.Character = workspace[plrname]
+    
+    if  workspace[plrname]:FindFirstChild("Animate") and started == false then
+
+        started = true
+        for i, e in pairs(dummy:GetDescendants()) do
+            if e:IsA("Accessory") then
+                if e:FindFirstChild("usedlol") then
+                    e.usedlol:Destroy()
+                end
+            end
+        end
+     --   game.Players:Chat("-gh 5168118559")
+    for i, v in pairs(workspace[plrname]:GetDescendants()) do
+        if v:IsA("Motor6D") then
+            v:Destroy()
+        end
+        if v:IsA("BasePart") then
+            v.CanCollide = false
+        end
+        if v:IsA("Accessory") then
+                    if v:FindFirstChild("Handle") and not dummy:FindFirstChild(v.Name) then
+            for i, e in pairs(dummy:GetDescendants()) do
+                if e:IsA("BasePart") or e:IsA("Part") then
+                    e.CanCollide = false
+                end
+                if e:IsA("Accessory") then
+                if v.AttachmentPoint == e.AttachmentPoint and not e:FindFirstChild("usedlol") then
+                    v.Name = e.Name
+                   lol2 = Instance.new("Part",e)
+                   lol2.Parent = e
+                    lol2.Name = "usedlol"
+                 if not e.Handle:FindFirstChild("Mesh") and not e.Handle:FindFirstChild("SpecialMesh") then
+                    if v.Handle:FindFirstChild("SpecialMesh") then
+                        v.Handle.SpecialMesh:Destroy()
+                    elseif v.Handle:FindFirstChild("Mesh") then
+                        v.Handle.Mesh:Destroy()
+                    end
+                end
+            end
+                end
+        end
+                    end
+       -- wait(.1)
+        if v:FindFirstChild("Handle") and dummy:FindFirstChild(v.Name) then
+        if not dummy[v.Name].Handle:FindFirstChild("Mesh") and not dummy[v.Name].Handle:FindFirstChild("SpecialMesh") then
+            if v.Handle:FindFirstChild("SpecialMesh") then
+                v.Handle.SpecialMesh:Destroy()
+            elseif v.Handle:FindFirstChild("Mesh") then
+                v.Handle.Mesh:Destroy()
+            end
+        end
+        end
+    end
+    end
+    if  workspace[plrname]:FindFirstChild("Animate") then
+    workspace[plrname].Animate:Destroy()
+    workspace[plrname].Humanoid:Destroy()
+    end
+    started = false
+    end
+    Workspace.CurrentCamera.CameraType = Enum.CameraType.Track
+    Workspace.CurrentCamera.CameraSubject  = dummy
+    game.Players.LocalPlayer.Character = dummy
+   end
+end
+--workspace.CurrentCamera.CameraSubject = dummy.Head
+num = 0
+num2 = 0
+function gotoa()
+    --game.Players.LocalPlayer.Character = workspace[plrname]
+for i, v in pairs(workspace[plrname]:GetDescendants()) do
+   -- Workspace.CurrentCamera.CameraSubject  = dummy
+        if v:IsA("Accessory") then
+            if v:FindFirstChild("Handle") and dummy:FindFirstChild(v.Name)then
+            v.Handle.CFrame = dummy:FindFirstChild(v.Name).Handle.CFrame
+            v.Handle.CanCollide = false
+            v.Handle.Transparency = showrealchar
+            dummy:FindFirstChild(v.Name).Handle.CanCollide = false
+            elseif v:FindFirstChild("Handle") and not dummy:FindFirstChild(v.Name) then
+            for i, e in pairs(dummy:GetDescendants()) do
+                if e:IsA("Accessory") then
+                if v.AttachmentPoint == e.AttachmentPoint then
+                    v.Handle.CFrame = e.Handle.CFrame
+                end
+         end
+            end
+        end
+    end
+end
+--game.Players.LocalPlayer.Character = dummy
+end
+function goto()
+    for i, v in pairs(workspace[plrname]:GetDescendants()) do
+        -- Workspace.CurrentCamera.CameraSubject  = dummy
+             if v:IsA("BasePart") then
+             if v.Name == "Right Arm" or v.Name == "Left Arm" or v.Name == "Right Leg" or v.Name == "Left Leg" or v.Name == "Torso" or v.Name == "Head" or v.Name == "HumanoidRootPart" then
+              if v.Name == "HumanoidRootPart" then
+                v.Position = dummy:FindFirstChild("Torso").Position
+              else
+                v.CFrame = dummy:FindFirstChild(v.Name).CFrame
+              end
+                v.Transparency = showrealchar
+               -- print(v.Name,v.Parent)
+             end
+             end
+            end
+end
+coroutine.wrap(scripthere)()
+local runservice = game:GetService("RunService")
+
+runservice.Stepped:Connect(function()
+    coroutine.wrap(reanim)()
+    game.Players.LocalPlayer.Character = workspace[plrname]
+     coroutine.wrap(goto)()
+     coroutine.wrap(gotoa)()
+     game.Players.LocalPlayer.Character = dummy
+end)
+
