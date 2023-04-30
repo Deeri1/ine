@@ -5,7 +5,7 @@ game:GetService("Players").LocalPlayer.Character["Robloxclassicred"].Handle.Mesh
 game:GetService("Players").LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Kate Hair"].Handle.Mesh:Destroy()
 
-
+--
 game:GetService("Players").LocalPlayer.Character["LavanderHair"].Name     = "gamer1"
 game:GetService("Players").LocalPlayer.Character["Hat1"].Name             = "gamer2"
 game:GetService("Players").LocalPlayer.Character["Pal Hair"].Name         = "gamer3"
