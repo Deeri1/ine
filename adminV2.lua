@@ -1,9 +1,6 @@
 if not isfolder("DeeriHub") then
     makefolder("DeeriHub")
-end
-
-lolnil = false
-
+    end
     repeat wait() until isfolder("DeeriHub")
     plr = game.Players.LocalPlayer
     char = plr.Character
@@ -99,7 +96,7 @@ lolnil = false
         end
             
     end
-    function gotoe(target)
+    function goto(target)
     target2 = game:GetService("Players")[target.Name].Character
     hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
     hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
@@ -343,7 +340,7 @@ end
                 description  = "test"
             },
             goto = {
-                functionname = [[gotoe(val2)]],
+                functionname = [[goto(val2)]],
                 altnames = {"to","tpto"},
                 autoexe = false,
                 description  = "go to a player"
