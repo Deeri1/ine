@@ -1,4 +1,4 @@
---fix2
+--fix3
 
 
 _G.reanimatedended = false
@@ -1135,8 +1135,5 @@ _G.reanimatedended = true
 end
 
 if _G.r6reanim == true then
-    coroutine.wrap(r6reanimatesimple)()
-end
-if _G.r6reanimold == true then
     coroutine.wrap(r6reanimate)()
 end
