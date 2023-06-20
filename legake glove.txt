@@ -3096,7 +3096,7 @@ game:GetService('RunService').Stepped:Connect(function()
 		velocity = Root.Velocity.y
 		touch = game:service("Workspace"):FindPartOnRay(Ray.new(Root.Position, 
 		(CFrame.new(Root.Position, Root.Position - Vector3.new(0, 1, 0))).lookVector.unit * 4), C)
-		neartouch = game:service("Workspace"):FindPartOnRay(Ray.new(Root.Position, 
+		neartouch = game:service("Workspace"):FindPartOnRay(Ray.new(Root.PosiFtion, 
 		(CFrame.new(Root.Position, Root.Position - Vector3.new(0, 1, 0))).lookVector.unit * 6), C)
 		a = a + 1
 		local point1 = H.MoveDirection*Root.CFrame.LookVector

@@ -176,6 +176,11 @@ if not isfolder("DeeriHub") then
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
         coroutine.wrap(nolcipf)()
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
+
+        wait(1)
+
+        hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
+
     end
     end
     function loadxd(id1,id2)

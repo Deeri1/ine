@@ -144,6 +144,7 @@ function reanim()
     game.Players.LocalPlayer.Character = dummy
    end
 end
+
 --workspace.CurrentCamera.CameraSubject = dummy.Head
 num = 0
 num2 = 0
@@ -196,4 +197,3 @@ runservice.Stepped:Connect(function()
      coroutine.wrap(gotoa)()
      game.Players.LocalPlayer.Character = dummy
 end)
-
