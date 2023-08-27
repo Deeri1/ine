@@ -901,6 +901,12 @@ coroutine.resume(coroutine.create(function()
 	--lp:GetMouse().Button1Down:Connect(fling) --click fling
 end))
 
+
+
+
+
+
+
 wait(0.1)
 game.Players.LocalPlayer.Character.Model["Left Arm"]:Destroy()
 game.Players.LocalPlayer.Character.Model["Left Leg"]:Destroy()

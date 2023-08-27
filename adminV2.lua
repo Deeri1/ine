@@ -5,6 +5,7 @@ if not isfolder("DeeriHub") then
     plr = game.Players.LocalPlayer
     char = plr.Character
     hum = char.Humanoid
+    humanoid = hum
     hrp = char.HumanoidRootPart
     lplayer = plr
     plrname = game.Players.LocalPlayer.Name
@@ -322,9 +323,108 @@ if not isfolder("DeeriHub") then
     end
     end
 end
+
+
+function ghlol(hats)
+    print(hats)
+    val = string.sub(hats,1,1)
+    print(val,"startnumlol")
+    starth = 1
+    endh = 1    
+   while wait() do
+        if  string.sub(hats,endh,endh) ~="," and tonumber(string.sub(hats,endh,endh)) then
+            endh = endh + 1
+            print("nextnum")
+            --hats[] = {}
+        elseif string.sub(hats,endh,endh) == "," then
+        print(string.sub(hats,starth,endh-1),"a")
+        lol = game:GetObjects("rbxassetid://"..string.sub(hats,starth,endh-1).."")[1]
+        humanoid:AddAccessory(lol)
+           nweld = Instance.new("WeldConstraint",lol.Handle)
+            nweld.Name = "AccessoryWeld"
+            lol.Handle.CFrame = hrp.CFrame
+            nweld.Part0 = lol.Handle
+            nweld.Part1 = hrp
+       -- loadxd(string.sub(hats,starth,endh-1),game.Players.LocalPlayer.Name)
+        starth = endh+1
+        endh = endh + 1
+
+        elseif string.sub(hats,endh,endh) == " " or string.sub(hats,endh,endh) == ""   then
+        print(string.sub(hats,starth,endh-1),"a")
+        lol = game:GetObjects("rbxassetid://"..string.sub(hats,starth,endh-1).."")[1]
+        humanoid:AddAccessory(lol)
+           nweld = Instance.new("WeldConstraint",lol.Handle)
+            nweld.Name = "AccessoryWeld"
+            lol.Handle.CFrame = hrp.CFrame
+            nweld.Part0 = lol.Handle
+            nweld.Part1 = hrp
+           -- nweld.Active = true
+           -- nweld.Part0 = lol.Handle
+       --    lol.Handle.CFrame = char.HumanoidRootPart.CFrame
+       -- lol.Parent = char
+           return
+        end
+    end
+end
+
+function printxd(subcmd)
+    if subcmd == "plrs" or subcmd == "players" then
+        print("list of players")
+        plrtbl = game.Players:GetPlayers()
+        numplr = #plrtbl
+        count = 1
+        for i = 1, numplr do
+        print(plrtbl[count])
+        count = count + 1
+        end
+        print("________________________________________________________________")
+
+    end
+
+    if subcmd == "cmds" or subcmd == "commands" then
+        print("________________________________________________________________")
+        print("list of commands")
+        --print("________________________________________________________________")
+        for i, v in pairs(commands) do
+            print("________________________________________________________________")
+            print(i)
+            print(v[i])
+            print("________________________________________________________________")
+            if type(v) == "table" then
+             for i, e in pairs(v) do
+                print(i)
+                print(e)
+                if type(e) == "table" then
+                    for i, a in pairs(e) do
+                       print(i)
+                       print(a)
+                       --print("________________________________________________________________")
+                   end
+                   end
+                --print("________________________________________________________________")
+            end
+            end
+        end
+        print("________________________________________________________________")
+    end
+
+
+
+end
+
+function glitchskidxd()
+    workspace.FallenPartsDestroyHeight = 0/0
+    local savpos = hrp.CFrame
+
+    hrp.CFrame = CFrame.new(math.huge,math.huge,math.huge)
+    wait()
+    hrp.CFrame = savpos
+end
+
     function empty()
         
     end
+
     commands = {
             noclip = {
                 functionname = [[nolcipf(val2)]],
@@ -332,11 +432,29 @@ end
                 autoexe = false,
                 description  = "Prevents your character from getting flung and allows you to walk through walls"
             },
+            gh = {
+                functionname = [[ghlol(val2)]],
+                altnames = {"gethats"},
+                autoexe = false,
+                description  = "loads hats onto character is not fe but is usefull to use scripts that require hats but you dont have them"
+            },
             rj = {
                 functionname = [[rejoin(val2)]],
                 altnames = {"rejoin"},
                 autoexe = false,
                 description  = "You rejoin the game"
+            },
+            glitchskid = {
+                functionname = [[glitchskidxd()]],
+                altnames = {"glitchtpskid","gtpskid"},
+                autoexe = false,
+                description  = "teleport somewere faraway to glitch players who teleport to you"
+            },
+            print = {
+                functionname = [[printxd(val2)]],
+                altnames = {"output"},
+                autoexe = false,
+                description  = "a few things you could print exe: /e print cmds or /e print plrs"
             },
             te = {
                 functionname = [[test(val2)]],
