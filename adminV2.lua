@@ -368,6 +368,7 @@ function ghlol(hats)
 end
 
 function printxd(subcmd)
+    print("printran" , subcmd)
     if subcmd == "plrs" or subcmd == "players" then
         print("list of players")
         plrtbl = game.Players:GetPlayers()
@@ -387,7 +388,7 @@ function printxd(subcmd)
         --print("________________________________________________________________")
         for i, v in pairs(commands) do
             print("________________________________________________________________")
-            print(i)
+            print(i,"V")
             print(v[i])
             print("________________________________________________________________")
             if type(v) == "table" then
@@ -416,10 +417,32 @@ function glitchskidxd()
     workspace.FallenPartsDestroyHeight = 0/0
     local savpos = hrp.CFrame
 
-    hrp.CFrame = CFrame.new(math.huge,math.huge,math.huge)
+    hrp.CFrame = CFrame.new(math.huge,-math.huge,math.huge)
     wait()
     hrp.CFrame = savpos
 end
+
+
+
+function splite(endcmd)
+    local foundend = false
+        for i, v in pairs(ctable) do
+            if i ~= 1 and i ~= 2 and not foundend then
+                
+                if v == endcmd then
+                    print("found end at phrase",i,"end is",v)
+                    foundend = true
+                end
+
+
+
+            end
+        end
+
+
+end
+
+
 
     function empty()
         
@@ -427,19 +450,25 @@ end
 
     commands = {
             noclip = {
-                functionname = [[nolcipf(val2)]],
+                functionname = [[nolcipf(ctable[2])]],
                 altnames = {"antifling"},
                 autoexe = false,
                 description  = "Prevents your character from getting flung and allows you to walk through walls"
             },
             gh = {
-                functionname = [[ghlol(val2)]],
+                functionname = [[ghlol(ctable[2])]],
                 altnames = {"gethats"},
                 autoexe = false,
                 description  = "loads hats onto character is not fe but is usefull to use scripts that require hats but you dont have them"
             },
+            split = {
+                functionname = [[splite(ctable[2])]],
+                altnames = {},
+                autoexe = false,
+                description  = "usefull in auto exe."
+            },
             rj = {
-                functionname = [[rejoin(val2)]],
+                functionname = [[rejoin(ctable[2])]],
                 altnames = {"rejoin"},
                 autoexe = false,
                 description  = "You rejoin the game"
@@ -451,31 +480,31 @@ end
                 description  = "teleport somewere faraway to glitch players who teleport to you"
             },
             print = {
-                functionname = [[printxd(val2)]],
+                functionname = [[printxd(ctable[2])]],
                 altnames = {"output"},
                 autoexe = false,
                 description  = "a few things you could print exe: /e print cmds or /e print plrs"
             },
             te = {
-                functionname = [[test(val2)]],
+                functionname = [[test(ctable[2])]],
                 altnames = {"test",'st'},
                 autoexe = false,
                 description  = "test"
             },
             goto = {
-                functionname = [[goto(val2)]],
+                functionname = [[goto(ctable[2])]],
                 altnames = {"to","tpto"},
                 autoexe = false,
                 description  = "go to a player"
             },
             tkill = {
-                functionname = [[notoolkill(val2)]],
+                functionname = [[notoolkill(ctable[2])]],
                 altnames = {"anti-tkill"},
                 autoexe = false,
                 description  = "not the best but it constantly unequpts your tools"
             },
             sfling = {
-                functionname = [[sflinge(val2)]],
+                functionname = [[sflinge(ctable[2])]],
                 altnames = {"fling"},
                 autoexe = false,
                 description  = "tp to a player and spin fling them"
@@ -487,25 +516,25 @@ end
                 description  = "press crtl and click to tp to your mouses location"
             },
             spy = {
-                functionname = [[cspye(val2)]],
+                functionname = [[cspye(ctable[2])]],
                 altnames = {"cspy","chatspy","chat-spy"},
                 autoexe = false,
                 description  = "Chat Spy"
             },
             load = {
-                functionname = [[loadxd(val2,val3)]],
+                functionname = [[loadxd(ctable[2],ctable[3])]],
                 altnames = {"spawn"},
                 autoexe = false,
                 description  = "Loads a asset into the game can be used on a player exe; '/e load 'id' 'playername'' if no player name it will be put in workspace"
             },
             autoexe = {
-                functionname = [[autoexee(val2,val3)]],
+                functionname = [[autoexee(ctable[2],ctable[3])]],
                 altnames = {},
                 autoexe = false,
                 description  = "allows you to run a command as the script is ran exe: '/e autoexe 'command name' 'extra values'' "
             },
             dex = {
-                functionname = [[dexf(val2)]],
+                functionname = [[dexf(ctable[2])]],
                 altnames = {"explorer"},
                 autoexe = false,
                 description  = "Opens up the Dex Explorer you can add extra permitters exe: '/e dex (v2/v3/v4/v4/frosty)' can be left as just '/e dex' "
@@ -556,68 +585,96 @@ end
         end
         if itsago == true then
         before2 = before
-        while wait() do
-        if string.sub(msg,before2,before2) ~= " " and string.sub(msg,before2,before2) ~= ""  and  string.sub(msg,before2,before2) ~=  "  "   then--then
+
+        done = false
+        total = 0
+        ctable = {}
+        while done == false do
+            wait()
+            if string.sub(msg,before2,before2) ~= " " and string.sub(msg,before2,before2) ~= ""  and  string.sub(msg,before2,before2) ~=  "  " then--then
                 val = string.sub(msg,before2,before2)
-                print(val)
+                --print(val)
                 before2 = before2+1
-        else 
-        break
-        end
-    end
-    val1 = string.sub(msg,before,before2-1)
-    before3 = before2
-    before4 = before2+1
-    while wait() do
-        if string.sub(msg,before4,before4) ~= " " and string.sub(msg,before4,before4) ~= ""  and  string.sub(msg,before4,before4) ~=  "  "   then
-            val2 = string.sub(msg,before4,before4)
-            print(val2)
-            before4 = before4+1
-        else
-            break
-        end
-    end
-    val2 = string.sub(msg,before3+1,before4)
-    before5 = before4
-    before6 = before4+1
-    while wait() do
-        if string.sub(msg,before6,before6) ~= " " and string.sub(msg,before6,before6) ~= ""  and  string.sub(msg,before6,before6) ~=  "  "   then
-            val3 = string.sub(msg,before6,before6)
-            print(val3)
-            before6 = before6+1
-        else
-            break
-        end
-    end
-    val3 = string.sub(msg,before5+1,before6)
-    print("val3",val3)
-    print("val2",val2)
-    print("val1",val1)
-        if GetPlayer(val2) then
-            if GetPlayer(val2)[1] ~= nil then
-            val2 = GetPlayer(val2)[1]
-            end
-            print('Player',val2)
-        end
-    if commands[val1] then
-        print("yesir")
-        v = commands[val1]
-        loadstring(v.functionname)(val2)
-    else
-        y = val1
-        for i, v in pairs(commands) do
-            e = i
-            v = v["altnames"]
-           -- print('lol',v[1])
-            for i, v in pairs(v) do
-                print(v,y)
-                if v == y then
-                   i = commands[e]
-                   loadstring(i.functionname)(val2,val3)
-                   return
+            else 
+                total = total+1
+                before = before
+                ctable[total] = string.sub(msg,before,before2-1)
+                --print(ctable[total],"xd",total)
+                before2 = before2+1
+                before = before2
+
+                if string.sub(msg,before2,before2) == " " or string.sub(msg,before2,before2) == ""  or  string.sub(msg,before2,before2) ==  "  " then--then
+                    done = true
+                    break
+                    --total = total -1
                 end
             end
+
+
+
         end
-    end
+        for i, v in pairs(ctable) do -- fix them idk why
+            print(i,v,"i,v",ctable[i],ctable[v],"ctable[i],ctable[v]")
+            if i~= 1 then
+            ctable[i] = v
+            end
+        end
+
+        for i, v in pairs(ctable) do
+            --print(v)
+           -- print(ctable[i])
+            if GetPlayer(v)[1] ~= nil  and ctable[i] ~= ctable[1] then
+              --  print(i,v,"lolidk")
+                ctable[i] = GetPlayer(v)[1]
+                print(ctable[i])
+            end
+        end
+        print("total: ",total)
+        if commands[ctable[1]] then
+            print("cmd "..ctable[1].." found nosearch")
+            v = commands[ctable[1]]
+            if total == 1 then
+                print("total 1")
+                loadstring(v.functionname)()
+            elseif total == 2 then
+                print("total 2")
+                print(ctable[2],"ctable[2]")
+                loadstring(v.functionname)(ctable[2])
+            elseif total == 3 then
+                print("total 3")
+                print(ctable[2],ctable[3],"ctable[2],ctable[3]")
+                loadstring(v.functionname)(ctable[2],ctable[3])
+            end
+
+        else
+            print("cmd "..ctable[1].." found search")
+            y = ctable[1]
+            for i, v in pairs(commands) do
+                e = i
+                v = v["altnames"]
+               -- print('lol',v[1])
+                for i, v in pairs(v) do
+                    print(v,y)
+                    if v == y then
+                       i = commands[e]
+                       if total == 1 then
+                        print("total 1")
+                        loadstring(i.functionname)()
+                    elseif total == 2 then
+                        print("total 2")
+                        print(ctable[2],"ctable[2]")
+                        loadstring(i.functionname)(ctable[2])
+                    elseif total == 3 then
+                        print("total 3")
+                        print(ctable[2],ctable[3],"ctable[2],ctable[3]")
+                        loadstring(i.functionname)(ctable[2],ctable[3])
+                    end
+                       return
+                    end
+                end
+            end
+
+        end
+      
     end
     end)
