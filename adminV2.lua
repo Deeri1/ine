@@ -4,8 +4,10 @@ if not isfolder("DeeriHub") then
     repeat wait() until isfolder("DeeriHub")
     plr = game.Players.LocalPlayer
     char = plr.Character
+    if char:FindFirstChild("Humanoid") then
     hum = char.Humanoid
     humanoid = hum
+    end
     hrp = char.HumanoidRootPart
     lplayer = plr
     plrname = game.Players.LocalPlayer.Name
@@ -94,7 +96,7 @@ if not isfolder("DeeriHub") then
                     end
                 end
             end
-        end
+        end     
             
     end
     function goto(target)
