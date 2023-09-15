@@ -41,12 +41,12 @@ function botbasic(nh)
            for i,v in pairs(nh) do
                for i,h in pairs(workspace.tempart:GetDescendants()) do
                    if h:FindFirstChild("Mesh") then
-                       if h.Mesh.MeshId == v then
+                       if h.Mesh.TextureId == v then
                            totalmh = totalmh + 1
                            table.insert(hataray,h)
                        end
                    elseif h:FindFirstChild("SpecialMesh") then
-                       if h.SpecialMesh.MeshId == v then
+                       if h.SpecialMesh.TextureId == v then
                            totalmh = totalmh + 1
                            table.insert(hataray,h)
                        end
@@ -61,11 +61,9 @@ function botbasic(nh)
    
        function putonmhats(ha)
            for i,v in pairs(ha) do
-            if not workspace[plrname]:FindFirstChild(v.Parent.Name) then
                tmph = v.Parent:Clone()
                --print("cloned"..v.Parent.Name.."")
                tmph.Parent = workspace[plrname]
-            end
            end
            task.wait()
        end
@@ -136,7 +134,7 @@ function botbasic(nh)
                         end
                         if e:IsA("Accessory") then
                             if e.Handle:FindFirstChild(vm) then
-                                if  e.Handle[vm].MeshId == v.Handle[vm].MeshId  then
+                                if  e.Handle[vm].MeshId == v.Handle[vm].MeshId and e.Handle[vm].TextureId == v.Handle[vm].TextureId  then
                                     v.Handle.CFrame = e:findFirstChild("Handle").CFrame
                                 end
                             elseif v.Name == e.Name then
@@ -256,7 +254,7 @@ for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
             if e:IsA("Accessory") then
                 if e.Handle:FindFirstChild("Mesh") then
                     if v.Handle:FindFirstChild("Mesh") then
-                        if e.Handle.Mesh.MeshId == v.Handle.Mesh.MeshId then
+                        if e.Handle.Mesh.MeshId == v.Handle.Mesh.MeshId and e.Handle.Mesh.TextureId == v.Handle.Mesh.TextureId then
                             e:Destroy()
                         end
                     elseif v.Handle:FindFirstChild("SpecialMesh") then
@@ -264,7 +262,7 @@ for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
                 elseif e.Handle:FindFirstChild("SpecialMesh") then
                     if v.Handle:FindFirstChild("Mesh") then            
                     elseif v.Handle:FindFirstChild("SpecialMesh") then
-                    if e.Handle.SpecialMesh.MeshId == v.Handle.SpecialMesh.MeshId then
+                    if e.Handle.SpecialMesh.MeshId == v.Handle.SpecialMesh.MeshId and e.Handle.SpecialMesh.TextureId == v.Handle.SpecialMesh.TextureId then
                         e:Destroy()
                     end   
                     end
@@ -285,7 +283,7 @@ for i,v in pairs(tempart:GetDescendants()) do -- clearing neededhats and setting
     else
         vm = "Mesh"
     end
-    table.insert(neededhats, v.Handle[vm].MeshId)
+    table.insert(neededhats, v.Handle[vm].TextureId)
     end
 end
 
