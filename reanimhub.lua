@@ -3,10 +3,10 @@
 --[[launcher
 --hats needed for bot 14768693948,11159410305,11263254795,14768678294,14768701869 -- put in needed hats to test out without buying hats
 _G.scripthere = function()
-    game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo
+    game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
     
 end
-_G.neededhats = {} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {4820152700,4524991457}
+_G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {}
 _G.type = "bot"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
 ]]
@@ -234,7 +234,7 @@ for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
             if e:IsA("Accessory") then
                 if e.Handle:FindFirstChild("Mesh") then
                     if v.Handle:FindFirstChild("Mesh") then
-                        if e.Handle.Mesh.MeshId == v.Mesh.MeshId then
+                        if e.Handle.Mesh.MeshId == v.Handle.Mesh.MeshId then
                             e:Destroy()
                         end
                     elseif v.Handle:FindFirstChild("SpecialMesh") then
