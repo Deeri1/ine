@@ -14,6 +14,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reani
 showfakechar = 1
 showrealchar = 0
 player=game.Players.LocalPlayer
+ogplr = player
 char=player.Character
 plrname=char.Name
 realcharee = workspace:FindFirstChild(plrname)
@@ -91,12 +92,12 @@ function weld(p1,p2)
     ao.RigidityEnabled = false;
     ao.Responsiveness = 200;
     
-	ap.ApplyAtCenterOfMass = true;
+	ap.ApplyAtCenterOfMass = true
 	ap.MaxForce = 5772000--67752;
 	ap.MaxVelocity = math.huge/9e110;
-	ap.ReactionForceEnabled = false;
-	ap.Responsiveness = 200;
-	ap.RigidityEnabled = false;
+	ap.ReactionForceEnabled = false
+	ap.Responsiveness = 200
+	ap.RigidityEnabled = false
     if p2:FindFirstChild("checkrem") then
         p2.checkrem:Destroy()
     end
@@ -138,9 +139,9 @@ function weld2(p1,p2)
     ao.Responsiveness = 200;
     
     ap.MaxForce = 1000000;
-    ap.MaxVelocity = Vector3.new(0,0,0);
-    ap.RigidityEnabled = false;
-    ap.ApplyAtCenterOfMass = true;
+    ap.MaxVelocity = Vector3.new(0,0,0)
+    ap.RigidityEnabled = true
+    ap.ApplyAtCenterOfMass = true
     ap.Responsiveness = 200;
     if p2:FindFirstChild("checkrem") then
         p2.checkrem:Destroy()
@@ -175,18 +176,16 @@ function weld2(p1,p2)
 end
 
 function reanim() --- killing player and switching to fake char
-    if workspace:FindFirstChild(plrname):FindFirstChild("Head") then
+    if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
     wait()
-    if workspace:FindFirstChild(plrname):FindFirstChild("Head") then
-        workspace:FindFirstChild(plrname).HumanoidRootPart.CanCollide = false
+    if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
     weld2(workspace:FindFirstChild(plrname).HumanoidRootPart,dummy.HumanoidRootPart)
       workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
       --dummy.HumanoidRootPart.CFrame
     wait(.1)
     --repeat wait() until workspace:FindFirstChild(plrname):FindFirstChild("Head")
-    if workspace:FindFirstChild(plrname):FindFirstChild("Head") then
-    workspace:FindFirstChild(plrname).Head:Destroy()
-    workspace:FindFirstChild(plrname).Torso.Neck:Destroy()
+    if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+    workspace:FindFirstChild(plrname):BreakJoints()
     workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
         end
     end
@@ -304,21 +303,20 @@ runservice.Stepped:Connect(function()
     repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
    -- workspace:FindFirstChild(plrname).HumanoidRootPart.Anchored = true
    workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
-
-    dummy .HumanoidRootPart.Anchored = true
-    
+   -- dummy .HumanoidRootPart.Anchored = true
     wait()
     end
+    sethiddenproperty(ogplr, "SimulationRadius", 10000000)
     for i, v in pairs(workspace:FindFirstChild(plrname):GetDescendants()) do
         if v:IsA("BasePart") then
            v.CanCollide = false
         end
         if v:IsA("Accessory") and v:FindFirstChild("Handle") then
             v.Handle.CanCollide = false
-            v.Handle.Velocity = Vector3.new(30,0,0)
+            v.Handle.Velocity = Vector3.new(150,0,0)
         end
         if v.Name =="HumanoidRootPart" then
-           v.Velocity = Vector3.new(60, 0, 0) 
+           v.Velocity = Vector3.new(5, 0, 0) 
            v.CanCollide = false
         end 
     end
@@ -327,7 +325,7 @@ runservice.Stepped:Connect(function()
     -- coroutine.wrap(gotoa)()
     repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
    -- workspace:FindFirstChild(plrname).HumanoidRootPart.Anchored = false
-    dummy.HumanoidRootPart.Anchored = false
+   -- dummy.HumanoidRootPart.Anchored = false
     workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
 
     game.Players.LocalPlayer.Character = dummy
