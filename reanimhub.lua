@@ -27,11 +27,10 @@ function botbasic(nh)
     player=game.Players.LocalPlayer
     ogplr = player
     char=player.Character
-    spawnedCF = char.HumanoidRootPart.CFrame
     plrname=char.Name
     realcharee = workspace:FindFirstChild(plrname)
     char.Archivable = true
-   -- workspace.FallenPartsDestroyHeight = 0/0
+    workspace.FallenPartsDestroyHeight = 0/0
        --finds the hats your missing and sets them as a hat in tempart
 
     
@@ -64,10 +63,11 @@ function botbasic(nh)
            for i,v in pairs(ha) do
             if not workspace[plrname]:FindFirstChild(v.Parent.Name) then
                tmph = v.Parent:Clone()
-               print("cloned"..v.Parent.Name.."")
+               --print("cloned"..v.Parent.Name.."")
                tmph.Parent = workspace[plrname]
             end
            end
+           task.wait()
        end
 
        fmissinghats(nh)
@@ -91,7 +91,6 @@ function botbasic(nh)
     dummy.Parent = workspace
 
     dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
-    root =  dummy.HumanoidRootPart
 
     settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
     settings().Physics.AllowSleep = false
@@ -101,7 +100,7 @@ function botbasic(nh)
         v.Archivable = true
         if v:IsA("BasePart") then
         v.Transparency = showfakechar
-        v.CanCollide = false
+       -- v.CanCollide = false
         end
     end
     game.Players.LocalPlayer.Character = dummy
@@ -132,11 +131,20 @@ function botbasic(nh)
                    
                     for i, e in pairs(dummy:GetDescendants()) do
                         if e:IsA("BasePart") then
-                            e.CanCollide = false
+                           -- e.CanCollide = false
                             e.Massless = true
                         end
-                        if  e:IsA("Accessory") and e.Name == v.Name and e.Handle[vm].MeshId == v.Handle[vm].MeshId  then
-                            v.Handle.CFrame = e.Handle.CFrame
+                        if e:IsA("Accessory") then
+                            if e.Handle:FindFirstChild(vm) then
+                                if  e.Handle[vm].MeshId == v.Handle[vm].MeshId  then
+                                    v.Handle.CFrame = e:findFirstChild("Handle").CFrame
+                                end
+                            elseif v.Name == e.Name then
+                                    v.Handle.CFrame = e:findFirstChild("Handle").CFrame
+                            
+                            elseif v.AttachmentPoint == e.AttachmentPoint and v.Handle.Size == e.Handle.Size then
+                                    v.Handle.CFrame = e:findFirstChild("Handle").CFrame
+                            end
                         end
                     end
 
@@ -206,12 +214,21 @@ function botbasic(nh)
         end
         goto()
         sethiddenproperty(ogplr, "SimulationRadius", 10000000)
-		if root.Position.Y <= workspace.FallenPartsDestroyHeight + 20 then
-			root.CFrame = spawnedCF
-			print("lol idk why it falls quick fix xd")
-		end
+        for i, v in pairs(workspace:GetDescendants()) do
+            if v:IsA("Part") then
+                if v.Parent~=workspace then
+                    v.CanCollide = false
+                end
+            end
+        end
     end)
-
+    i=0
+    while i<50 do
+        dummy.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+        dummy.HumanoidRootPart.RotVelocity = Vector3.new(0, 0, 0)
+        wait()
+        i=i+1
+    end
 
 end--the end of basic bot function
 
