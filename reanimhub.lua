@@ -27,10 +27,11 @@ function botbasic(nh)
     player=game.Players.LocalPlayer
     ogplr = player
     char=player.Character
+    spawnedCF = char.HumanoidRootPart.CFrame
     plrname=char.Name
     realcharee = workspace:FindFirstChild(plrname)
     char.Archivable = true
-    workspace.FallenPartsDestroyHeight = 0/0
+   -- workspace.FallenPartsDestroyHeight = 0/0
        --finds the hats your missing and sets them as a hat in tempart
 
     
@@ -90,6 +91,7 @@ function botbasic(nh)
     dummy.Parent = workspace
 
     dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
+    root =  dummy.HumanoidRootPart
 
     settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
     settings().Physics.AllowSleep = false
@@ -204,7 +206,10 @@ function botbasic(nh)
         end
         goto()
         sethiddenproperty(ogplr, "SimulationRadius", 10000000)
-
+		if root.Position.Y <= workspace.FallenPartsDestroyHeight + 20 then
+			root.CFrame = spawnedCF
+			print("lol idk why it falls quick fix xd")
+		end
     end)
 
 
