@@ -1,7 +1,7 @@
 --hub for my reanims and its settings // stuff
 ----------------------------------------------------------------
---[[launcher
---hats needed for bot 14768693948,11159410305,11263254795,14768678294,14768701869 -- put in needed hats to test out without buying hats
+--launcher
+--[[hats needed for bot 14768693948,11159410305,11263254795,14768678294,14768701869 -- put in needed hats to test out without buying hats
 _G.scripthere = function()
     game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
     
