@@ -306,7 +306,7 @@ runservice.Stepped:Connect(function()
    -- dummy .HumanoidRootPart.Anchored = true
     wait()
     end
-    sethiddenproperty(ogplr, "SimulationRadius", 10000000)
+    --sethiddenproperty(ogplr, "SimulationRadius", 10000000)
     for i, v in pairs(workspace:FindFirstChild(plrname):GetDescendants()) do
         if v:IsA("BasePart") then
            v.CanCollide = false
