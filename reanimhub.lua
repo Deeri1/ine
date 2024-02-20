@@ -211,7 +211,7 @@ function botbasic(nh)
             coroutine.wrap(reanim)()
         end
         goto()
-        sethiddenproperty(ogplr, "SimulationRadius", 10000000)
+       -- sethiddenproperty(ogplr, "SimulationRadius", 10000000)
         for i, v in pairs(workspace:GetDescendants()) do
             if v:IsA("Part") then
                 if v.Parent~=workspace then
