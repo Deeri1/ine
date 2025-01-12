@@ -8,6 +8,7 @@ _G.scripthere = function()
 end
 _G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {}
 _G.type = "bot"
+_G.bottype = "OG" -- OG, Freehat, Freehair
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
 ]]
 --lol my code not that good looking --deeri
@@ -31,6 +32,7 @@ function botbasic(nh)
     realcharee = workspace:FindFirstChild(plrname)
     char.Archivable = true
     workspace.FallenPartsDestroyHeight = 0/0
+
        --finds the hats your missing and sets them as a hat in tempart
 
     
@@ -240,6 +242,13 @@ end
 tempart = Instance.new("Part",workspace)
 tempart.Parent = workspace
 tempart.Name = "tempart"
+if _G.type = "bot" then
+    if _G.bottype == "OG" then
+        _G.neededhats = _G.neededhats + {14768693948,11159410305,11263254795,14768678294,14768701869}
+    else  _G.bottype = "Freehat" then
+    
+    end
+end
 for i,v in pairs(_G.neededhats) do
     lol = game:GetObjects("rbxassetid://"..v.."")[1]
     lol.Parent = tempart
