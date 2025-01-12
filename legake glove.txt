@@ -1,7 +1,6 @@
-_G.r6reanim  = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
-repeat wait() until _G.reanimatedended == true
-
+_G.scripthere = function()
+    game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
+    
 local rplr = game.Players.LocalPlayer
 local RepStorage = game.ReplicatedStorage
 --local Remote = RepStorage:WaitForChild(script.Parent.RemoteName.Value)
@@ -3403,3 +3402,7 @@ end)
 -------- BIG MISC ----------------
 
 -- Slay
+end
+_G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {}
+_G.type = "bot"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
