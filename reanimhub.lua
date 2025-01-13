@@ -242,6 +242,11 @@ end
 tempart = Instance.new("Part",workspace)
 tempart.Parent = workspace
 tempart.Name = "tempart"
+coroutine.wrap(function()
+
+
+)
+pcall(function()
 if _G.type == "bot" then
     if _G.bottype == "OG" then
         _G.neededhats = table.pack(table.unpack(_G.neededhats),14768693948,11159410305,11263254795,14768678294,14768701869))
@@ -249,6 +254,7 @@ if _G.type == "bot" then
     
     end
 end
+end()
 for i,v in pairs(_G.neededhats) do
     lol = game:GetObjects("rbxassetid://"..v.."")[1]
     lol.Parent = tempart
