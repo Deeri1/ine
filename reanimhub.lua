@@ -118,7 +118,7 @@ function botbasic(nh)
 
     function goto()
        pcall(function()
-	    repeat task.wait() until workspace[plrname]:FindFirstChild("Unloaded head") and workspace[plrname]:FindFirstChild("Black") and workspace[plrname]:FindFirstChild("MeshPartAccessory") 
+	  --  repeat task.wait() until workspace[plrname]:FindFirstChild("Unloaded head") and workspace[plrname]:FindFirstChild("Black") and workspace[plrname]:FindFirstChild("MeshPartAccessory") 
 
         for i,v in pairs(workspace[plrname]:GetDescendants()) do
             if v:IsA("Accessory") then
@@ -128,44 +128,83 @@ function botbasic(nh)
                 else
                     vm = "Mesh"
                 end
-                if v.Name ~= "LARM" and v.Name ~= "RARM" and v.Name ~= "used" and v.Name ~= "Unloaded head" and v.Name ~= "Black" and v.Handle[vm].MeshId ~= "rbxassetid://11263221350" then
-                   
-                    for i, e in pairs(dummy:GetDescendants()) do
-                        if e:IsA("BasePart") then
-                           -- e.CanCollide = false
-                            e.Massless = true
-                        end
-                        if e:IsA("Accessory") then
-                            if e.Handle:FindFirstChild(vm) then
-                                if  e.Handle[vm].MeshId == v.Handle[vm].MeshId and e.Handle[vm].TextureId == v.Handle[vm].TextureId  then
-                                    v.Handle.CFrame = e:findFirstChild("Handle").CFrame
-                                end
-                            elseif v.Name == e.Name then
-                                    v.Handle.CFrame = e:findFirstChild("Handle").CFrame
-                            
-                            elseif v.AttachmentPoint == e.AttachmentPoint and v.Handle.Size == e.Handle.Size then
-                                    v.Handle.CFrame = e:findFirstChild("Handle").CFrame
+                if _G.bottype == "OG" then
+                    if v.Name ~= "LARM" and v.Name ~= "RARM" and v.Name ~= "used" and v.Name ~= "Unloaded head" and v.Name ~= "Black" and v.Handle[vm].MeshId ~= "rbxassetid://11263221350" then
+                    
+                        for i, e in pairs(dummy:GetDescendants()) do
+                            if e:IsA("BasePart") then
+                            -- e.CanCollide = false
+                                e.Massless = true
                             end
+                            if e:IsA("Accessory") then
+                                if e.Handle:FindFirstChild(vm) then
+                                    if  e.Handle[vm].MeshId == v.Handle[vm].MeshId and e.Handle[vm].TextureId == v.Handle[vm].TextureId  then
+                                        v.Handle.CFrame = e:findFirstChild("Handle").CFrame
+                                    end
+                                elseif v.Name == e.Name then
+                                        v.Handle.CFrame = e:findFirstChild("Handle").CFrame
+                                
+                                elseif v.AttachmentPoint == e.AttachmentPoint and v.Handle.Size == e.Handle.Size then
+                                        v.Handle.CFrame = e:findFirstChild("Handle").CFrame
+                                end
+                            end
+                        end
+
+                    elseif v.Name ~= "used" then
+                        if v.Name == "LARM" then
+                            v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        end
+                        if v.Name == "RARM" then
+                            v.Handle.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        end
+                        if v.Name == "MeshPartAccessory" then
+                            v.Handle.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        end
+                        if v.Name == "Unloaded head" then
+                            v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        end
+                        if v.Name == "Black" then
+                            v.Handle.CFrame = dummy["Torso"].CFrame
+                        end
+                    end  
+                elseif _G.bottype == "Freehat" then
+                    if v.Handle[vm].TextureId ~= "rbxassetid://4324138210" and v.Handle[vm].TextureId ~= "rbxassetid://4246186778" and v.Handle[vm].TextureId ~= "rbxassetid://4584026407" and v.Handle[vm].TextureId ~= "rbxassetid://4489233876" and v.Handle[vm].TextureId ~= "rbxassetid://4819722776" then 
+                        for i, e in pairs(dummy:GetDescendants()) do
+                            if e:IsA("BasePart") then
+                            -- e.CanCollide = false
+                                e.Massless = true
+                            end
+                            if e:IsA("Accessory") then
+                                if e.Handle:FindFirstChild(vm) then
+                                    if  e.Handle[vm].MeshId == v.Handle[vm].MeshId and e.Handle[vm].TextureId == v.Handle[vm].TextureId  then
+                                        v.Handle.CFrame = e:findFirstChild("Handle").CFrame
+                                    end
+                                elseif v.Name == e.Name then
+                                        v.Handle.CFrame = e:findFirstChild("Handle").CFrame
+                                
+                                elseif v.AttachmentPoint == e.AttachmentPoint and v.Handle.Size == e.Handle.Size then
+                                        v.Handle.CFrame = e:findFirstChild("Handle").CFrame
+                                end
+                            end 
+                    else
+                        if v.Handle[vm].TextureId == "rbxassetid://4324138210" then --leftleg
+                            v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        end
+                        if v.Handle[vm].TextureId == "rbxassetid://4246186778" then -- rightleg
+                            v.Handle.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        end
+                        if v.Handle[vm].TextureId == "rbxassetid://4584026407" then -- leftarm
+                            v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        end
+                        if v.Handle[vm].TextureId == "rbxassetid://4489233876" then -- rightarm
+                            v.Handle.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        end
+                        if v.Handle[vm].TextureId == "rbxassetid://4819722776" then --torso
+                            v.Handle.CFrame = dummy["Torso"].CFrame
                         end
                     end
 
-                elseif v.Name ~= "used" then
-                    if v.Name == "LARM" then
-                        v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                    end
-                    if v.Name == "RARM" then
-                        v.Handle.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                    end
-                    if v.Name == "MeshPartAccessory" then
-                        v.Handle.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                    end
-                    if v.Name == "Unloaded head" then
-                        v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                    end
-                    if v.Name == "Black" then
-                        v.Handle.CFrame = dummy["Torso"].CFrame
-                    end
-                end   
+                end
             end
         end
 		end)
@@ -253,7 +292,9 @@ if _G.type == "bot" then
             table.insert(_G.neededhats,v)
         end
     elseif  _G.bottype == "Freehat" then
-    
+        for i,v in pairs({4819740796,4489239608,4584029953,4246228452,4324158403}) do
+            table.insert(_G.neededhats,v)
+        end
     end
 end
 
