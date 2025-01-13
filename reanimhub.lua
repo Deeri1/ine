@@ -1,14 +1,14 @@
 --hub for my reanims and its settings // stuff
 ----------------------------------------------------------------
---[[launcher
---hats needed for bot 14768693948,11159410305,11263254795,14768678294,14768701869 -- put in needed hats to test out without buying hats
+--launcher
+--[[hats needed for bot 14768693948,11159410305,11263254795,14768678294,14768701869 -- put in needed hats to test out without buying hats
 _G.scripthere = function()
     game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
     
 end
 _G.neededhats = {} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869}
 _G.type = "bot"
-_G.bottype = "OG" -- OG, Freehat, Freehair
+_G.bottype = "OG" -- OG, Freehat
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
 
 --lol my code not that good looking --deeri]]
@@ -192,16 +192,16 @@ function botbasic(nh)
                             v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
                         end
                         if v.Handle[vm].TextureId == "rbxassetid://4246186778" then -- rightleg
-                            v.Handle.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                            v.Handle.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(180),math.rad(90))
                         end
                         if v.Handle[vm].TextureId == "rbxassetid://4584026407" then -- leftarm
                             v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
                         end
                         if v.Handle[vm].TextureId == "rbxassetid://4489233876" then -- rightarm
-                            v.Handle.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                            v.Handle.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(180),math.rad(90))
                         end
                         if v.Handle[vm].TextureId == "rbxassetid://4819722776" then --torso
-                            v.Handle.CFrame = dummy["Torso"].CFrame
+                            v.Handle.CFrame = dummy["Torso"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(-15))
                         end
                     end
 
