@@ -245,7 +245,10 @@ tempart.Name = "tempart"
 pcall(function()
 	if _G.type == "bot" then
     if _G.bottype == "OG" then
-        _G.neededhats = _G.neededhats..{14768693948,11159410305,11263254795,14768678294,14768701869}
+        --_G.neededhats = _G.neededhats..{14768693948,11159410305,11263254795,14768678294,14768701869}
+        for i,v in pairs({14768693948,11159410305,11263254795,14768678294,14768701869}) do
+            table.insert(_G.neededhats,{14768693948,11159410305,11263254795,14768678294,14768701869}[i])
+        end
     elseif  _G.bottype == "Freehat" then
     
     end
