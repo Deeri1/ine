@@ -1,7 +1,7 @@
 --hub for my reanims and its settings // stuff
 ----------------------------------------------------------------
---launcher
---[[hats needed for bot 14768693948,11159410305,11263254795,14768678294,14768701869 -- put in needed hats to test out without buying hats
+--[[launcher
+--hats needed for bot 14768693948,11159410305,11263254795,14768678294,14768701869 -- put in needed hats to test out without buying hats
 _G.scripthere = function()
     game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
     
@@ -118,9 +118,9 @@ function botbasic(nh)
 
     function goto()
        pcall(function()
-	  --  repeat task.wait() until workspace[plrname]:FindFirstChild("Unloaded head") and workspace[plrname]:FindFirstChild("Black") and workspace[plrname]:FindFirstChild("MeshPartAccessory") 
-
-        for i,v in pairs(workspace[plrname]:GetDescendants()) do
+	    --repeat task.wait() until workspace[plrname]:FindFirstChild("Unloaded head") and workspace[plrname]:FindFirstChild("Black") and workspace[plrname]:FindFirstChild("MeshPartAccessory") 
+        task.wait()
+		for i,v in pairs(workspace[plrname]:GetDescendants()) do
             if v:IsA("Accessory") then
                 v.Handle.CanCollide = false
                 if v.Handle:FindFirstChild("SpecialMesh") then
@@ -168,7 +168,7 @@ function botbasic(nh)
                         end
                     end  
                 elseif _G.bottype == "Freehat" then
-                    if v.Handle[vm].TextureId ~= "rbxassetid://4324138210" and v.Handle[vm].TextureId ~= "rbxassetid://4246186778" and v.Handle[vm].TextureId ~= "rbxassetid://4584026407" and v.Handle[vm].TextureId ~= "rbxassetid://4489233876" and v.Handle[vm].TextureId ~= "rbxassetid://4819722776" then 
+                    if v.Name ~= "used" and v.Handle[vm].TextureId ~= "rbxassetid://4324138210" and v.Handle[vm].TextureId ~= "rbxassetid://4246186778" and v.Handle[vm].TextureId ~= "rbxassetid://4584026407" and v.Handle[vm].TextureId ~= "rbxassetid://4489233876" and v.Handle[vm].TextureId ~= "rbxassetid://4819722776" then 
                         for i, e in pairs(dummy:GetDescendants()) do
                             if e:IsA("BasePart") then
                             -- e.CanCollide = false
@@ -187,7 +187,7 @@ function botbasic(nh)
                                 end
                             end 
                         end
-                    else
+                    elseif v.Name ~= "used" then
                         if v.Handle[vm].TextureId == "rbxassetid://4324138210" then --leftleg
                             v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
                         end
