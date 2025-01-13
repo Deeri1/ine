@@ -6,12 +6,12 @@ _G.scripthere = function()
     game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
     
 end
-_G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {}
+_G.neededhats = {} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {}
 _G.type = "bot"
 _G.bottype = "OG" -- OG, Freehat, Freehair
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
-]]
---lol my code not that good looking --deeri
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
+
+--lol my code not that good looking --deeri]]
 ----------------------------------------------------------------
 
 --functions for the different reanims
@@ -122,7 +122,7 @@ function botbasic(nh)
         for i,v in pairs(workspace[plrname]:GetDescendants()) do
             if v:IsA("Accessory") then
                 v.Handle.CanCollide = false
-                if v.Handle:FindFirstChild("SpecialMesh") then
+                if v:WaitForChild("Handle"):FindFirstChild("SpecialMesh") then
                     vm = "SpecialMesh"
                 else
                     vm = "Mesh"
@@ -207,7 +207,7 @@ function botbasic(nh)
     local runservice = game:GetService("RunService")
 
     runservice.Stepped:Connect(function()
-        if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+        if workspace:FindFirstChild(plrname):WaitForChild("Torso"):FindFirstChildOfClass("Motor6D") then
             repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
 
             coroutine.wrap(reanim)()
@@ -242,20 +242,18 @@ end
 tempart = Instance.new("Part",workspace)
 tempart.Parent = workspace
 tempart.Name = "tempart"
-coroutine.wrap(function()
-
-
-)
 pcall(function()
-if _G.type == "bot" then
+	if _G.type == "bot" then
     if _G.bottype == "OG" then
-        _G.neededhats = table.pack(table.unpack(_G.neededhats),14768693948,11159410305,11263254795,14768678294,14768701869))
+        _G.neededhats = _G.neededhats..{14768693948,11159410305,11263254795,14768678294,14768701869}
     elseif  _G.bottype == "Freehat" then
     
     end
 end
-end()
+end)
+
 for i,v in pairs(_G.neededhats) do
+print(v)
     lol = game:GetObjects("rbxassetid://"..v.."")[1]
     lol.Parent = tempart
 end
