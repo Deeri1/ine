@@ -244,7 +244,7 @@ tempart.Parent = workspace
 tempart.Name = "tempart"
 if _G.type == "bot" then
     if _G.bottype == "OG" then
-        _G.neededhats = table.pack(table.unpack(_G.neededhats),table.unpack({14768693948,11159410305,11263254795,14768678294,14768701869}))
+        _G.neededhats = table.pack(table.unpack(_G.neededhats),14768693948,11159410305,11263254795,14768678294,14768701869))
     elseif  _G.bottype == "Freehat" then
     
     end
