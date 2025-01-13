@@ -186,6 +186,7 @@ function botbasic(nh)
                                         v.Handle.CFrame = e:findFirstChild("Handle").CFrame
                                 end
                             end 
+                        end
                     else
                         if v.Handle[vm].TextureId == "rbxassetid://4324138210" then --leftleg
                             v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
