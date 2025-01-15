@@ -259,7 +259,7 @@ function botbasic(nh)
        -- sethiddenproperty(ogplr, "SimulationRadius", 10000000)
         for i, v in pairs(workspace:GetDescendants()) do
             if v:IsA("Part") then
-                if v.Parent~=workspace then
+                if v and v.Parent~=workspace then
                     v.CanCollide = false
                 end
             end
