@@ -5123,8 +5123,9 @@ Part475.brickColor = BrickColor.new("Mid gray")
 SpecialMesh476.Parent = Part475
 SpecialMesh476.Scale = Vector3.new(0.349999994, 1.04999995, 0.5)
 SpecialMesh476.MeshType = Enum.MeshType.Brick
+
 for i,v in pairs(mas:GetChildren()) do
-	v.Parent = game:GetService("Players").LocalPlayer.Character.Model
+	v.Parent = game:GetService("Players").LocalPlayer.Character
 	pcall(function() v:MakeJoints() end)
 end
 mas:Destroy()
@@ -5143,7 +5144,7 @@ end
 
 
 plr = game:GetService("Players").LocalPlayer
-char = plr.Character.Model
+char = plr.Character
 hum = char.Humanoid
 local cam = game.Workspace.CurrentCamera
 t = char.Torso
@@ -5642,7 +5643,7 @@ function CreateWeld(Parent, Part0, Part1, C0, C1)
 end
 
 Player=game:GetService("Players").LocalPlayer
-Character=Player.Character.Model
+Character=Player.Character
 PlayerGui=Player.PlayerGui 
 Backpack=Player.Backpack 
 Torso=Character.Torso 
@@ -6327,12 +6328,7 @@ function Align(Part0,Part1,Position,Angle)
     Count = Count + 1
 end
 Hat.Handle.AccessoryWeld:Destroy()
-Align(Hat.Handle,AlignChar.Model.Model.Part,Vector3.new(0,-0.1,0),Vector3.new(0,90,60))
-for _,v in pairs(char.Model:GetChildren()) do
-	if v:IsA("BasePart") then
-		v.Transparency = 1
-	end
-end
+
 
 -- first vector is Position
 -- second vector is Orientation
@@ -7427,7 +7423,7 @@ end
 end
 end
 end
-_G.neededhats = {} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869}
+_G.neededhats = {4506945409} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869}
 _G.type = "bot"
 _G.bottype = "OG" -- OG, Freehat
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
