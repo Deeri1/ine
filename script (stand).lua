@@ -1,5 +1,9 @@
+--hats needed for bot 14768693948,11159410305,11263254795,14768678294,14768701869 -- put in needed hats to test out without buying hats
+_G.scripthere = function()
+    game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
+    
 game:GetService("Players").LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
-game:GetService("Players").LocalPlayer.Character["Hat1"].Handle.Mesh:Destroy()
+game:GetService("Players").LocalPlayer.Character["International Fedora"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Pal Hair"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Robloxclassicred"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
@@ -7,7 +11,7 @@ game:GetService("Players").LocalPlayer.Character["Kate Hair"].Handle.Mesh:Destro
 
 --
 game:GetService("Players").LocalPlayer.Character["LavanderHair"].Name     = "gamer1"
-game:GetService("Players").LocalPlayer.Character["Hat1"].Name             = "gamer2"
+game:GetService("Players").LocalPlayer.Character["International Fedora"].Name             = "gamer2"
 game:GetService("Players").LocalPlayer.Character["Pal Hair"].Name         = "gamer3"
 game:GetService("Players").LocalPlayer.Character["Robloxclassicred"].Name = "gamer4"
 game:GetService("Players").LocalPlayer.Character["Pink Hair"].Name        = "gamer5"
@@ -15,9 +19,7 @@ game:GetService("Players").LocalPlayer.Character["Kate Hair"].Name        = "gam
 game:GetService("Players").LocalPlayer.Character["Hollow"].Name           = "gamer7"
 game:GetService("Players").LocalPlayer.Character["WizardHatBlue"].Name    = "gamer8"
 game:GetService("Players").LocalPlayer.Character["Worn Hero Sword"].Name  = "gamer9"
-_G.r6reanim                                                               = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
-repeat wait() until _G.reanimatedended == true
+
 
 wait(math.random() * 2)
 
@@ -2204,3 +2206,9 @@ warn("AnimationSpeed3: ", .5 / 2.25)
 warn("AnimationSpeed4: ", 3 / 14)
 warn("FPS: ", fps)
 wait()
+
+end
+_G.neededhats = {8918826107,6201747264,4735551808,62724852,48474294,48474313,63690008,3662265036,451220849} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869}
+_G.type = "bot"
+_G.bottype = "OG" -- OG, Freehat
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
