@@ -3,7 +3,7 @@ _G.scripthere = function()
     game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
     
 game:GetService("Players").LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
-game:GetService("Players").LocalPlayer.Character["International Fedora"].Handle.Mesh:Destroy()
+game:GetService("Players").LocalPlayer.Character["International Fedora"].Handle.SpecialMesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Pal Hair"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Robloxclassicred"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
@@ -816,16 +816,7 @@ function sphereMK(bonuspeed, FastSpeed, type, pos, x1, y1, z1, value, color, out
 end
 
 workspace.ChildAdded:connect(function(instance)
-	for BANISH = 1, #TOBANISH do
-		if TOBANISH[BANISH] ~= nil then
-			if instance.Name == TOBANISH[BANISH] then
-				coroutine.resume(coroutine.create(function()
-					instance:ClearAllChildren()
-					game.Debris:AddItem(instance, 0.0005)
-				end))
-			end
-		end
-	end
+	
 end)
 
 function SpawnTrail(FROM, TO, BIG)
@@ -1918,7 +1909,7 @@ spawn(function()
 					clne.Transparency = .8
 					clne.Material = "Neon"
 					clne:BreakJoints()
-					clne.CanCollide = false
+				--	clne.CanCollide = false
 					clne.Anchored = true
 					clne.Parent = effects
 					clne.Name = "glitch"
@@ -1943,7 +1934,7 @@ spawn(function()
 							clne.Transparency = .8
 							clne.Material = "Neon"
 							clne:BreakJoints()
-							clne.CanCollide = false
+						--	clne.CanCollide = false
 							clne.Anchored = true
 							clne.Parent = effects
 							clne.Name = "glitch"
