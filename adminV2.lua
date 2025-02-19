@@ -1,12 +1,12 @@
 if not isfolder("DeeriHub") then
     makefolder("DeeriHub")
-    end
-    repeat wait() until isfolder("DeeriHub")
+end
+repeat wait() until isfolder("DeeriHub")
     plr = game.Players.LocalPlayer
     char = plr.Character
     if char:FindFirstChild("Humanoid") then
-    hum = char.Humanoid
-    humanoid = hum
+        hum = char.Humanoid
+        humanoid = hum
     end
     hrp = char.HumanoidRootPart
     lplayer = plr
@@ -100,14 +100,14 @@ if not isfolder("DeeriHub") then
             
     end
     function goto(target)
-    target2 = game:GetService("Players")[target.Name].Character
-    hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-    hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-    hrp.RotVelocity = Vector3.new(0, 0, 0)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = GetRoot(target2).CFrame
+        target2 = game:GetService("Players")[target.Name].Character
+        hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+        hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+        hrp.RotVelocity = Vector3.new(0, 0, 0)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = GetRoot(target2).CFrame
     end
     function test(traget)
-    print(traget)
+        print(traget)
     end
     function cspye(traget)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/chat%20spy"))()
@@ -115,76 +115,76 @@ if not isfolder("DeeriHub") then
     function sflinge(target)
         if target ~= "stop" and target ~= plrname and game.Workspace:FindFirstChild(target.Name) then
                 coroutine.wrap(nolcipf)()
-            target = game.Workspace[target.Name]
-    speaker = game.Players.LocalPlayer
-    for _, child in pairs(speaker.Character:GetDescendants()) do
-            if child:IsA("BasePart") then
-                child.CustomPhysicalProperties = PhysicalProperties.new(math.huge, 0.3, 0.5)
+                target = game.Workspace[target.Name]
+                speaker = game.Players.LocalPlayer
+            for _, child in pairs(speaker.Character:GetDescendants()) do
+                if child:IsA("BasePart") then
+                    child.CustomPhysicalProperties = PhysicalProperties.new(math.huge, 0.3, 0.5)
+                end
             end
-        end
-        local Char = speaker.Character:GetChildren()
-        for i, v in next, Char do
-            if v:IsA("BasePart") then
-                v.CanCollide = false
-                v.Massless = true
-                v.Velocity = Vector3.new(0, 0, 0)
+            local Char = speaker.Character:GetChildren()
+            for i, v in next, Char do
+                if v:IsA("BasePart") then
+                    v.CanCollide = false
+                    v.Massless = true
+                    v.Velocity = Vector3.new(0, 0, 0)
+                end
             end
-        end
-        wait(.1)
-        hrp = speaker.Character.HumanoidRootPart
-        oldcf = speaker.Character.HumanoidRootPart.CFrame
-      -- hrp.Parent.Humanoid.PlatformStand = true
-      endedskid = false
-      function gotoskid()
-        while wait() do
-            if target:FindFirstChild("HumanoidRootPart") then
-                v = target:FindFirstChild("HumanoidRootPart")
-                hrp.CFrame = v.CFrame
-            elseif  target:FindFirstChildOfClass("Accessory") then
-                v = target:FindFirstChildOfClass("Accessory")
-                hrp.CFrame = v.Handle.CFrame
-            end
-            if endedskid == true then
-                break
-            end
-        end
-      end
-      coroutine.wrap(gotoskid)()
             wait(.1)
-        local bambam = Instance.new("BodyAngularVelocity")
-        bambam.Name = randomString()
-        bambam.Parent = speaker.Character.HumanoidRootPart
-        bambam.AngularVelocity = Vector3.new(0,99999,0)
-        bambam.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
-        bambam.P = math.huge
-        local bambam = Instance.new("BodyVelocity")
-        bambam.Name = randomString()
-        bambam.Parent = speaker.Character.HumanoidRootPart
-        bambam.MaxForce = Vector3.new(0,99999,0)
-        bambam.Velocity = Vector3.new(math.huge,math.huge,math.huge)
-        bambam.P = math.huge
-    wait(2)
-    endedskid = true
-        for i,v in pairs(speaker.Character.HumanoidRootPart:GetChildren()) do
-            if v.ClassName == 'BodyAngularVelocity'or v.ClassName == 'BodyVelocity' then
-                v:Destroy()
+            hrp = speaker.Character.HumanoidRootPart
+            oldcf = speaker.Character.HumanoidRootPart.CFrame
+            -- hrp.Parent.Humanoid.PlatformStand = true
+            endedskid = false
+            function gotoskid()
+                while wait() do
+                    if target:FindFirstChild("HumanoidRootPart") then
+                        v = target:FindFirstChild("HumanoidRootPart")
+                        hrp.CFrame = v.CFrame
+                    elseif  target:FindFirstChildOfClass("Accessory") then
+                        v = target:FindFirstChildOfClass("Accessory")
+                        hrp.CFrame = v.Handle.CFrame
+                    end
+                    if endedskid == true then
+                        break
+                    end
+                end
             end
+            coroutine.wrap(gotoskid)()
+            wait(.1)
+            local bambam = Instance.new("BodyAngularVelocity")
+            bambam.Name = randomString()
+            bambam.Parent = speaker.Character.HumanoidRootPart
+            bambam.AngularVelocity = Vector3.new(0,99999,0)
+            bambam.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+            bambam.P = math.huge
+            local bambam = Instance.new("BodyVelocity")
+            bambam.Name = randomString()
+            bambam.Parent = speaker.Character.HumanoidRootPart
+            bambam.MaxForce = Vector3.new(0,99999,0)
+            bambam.Velocity = Vector3.new(math.huge,math.huge,math.huge)
+            bambam.P = math.huge
+            wait(2)
+            endedskid = true
+            for i,v in pairs(speaker.Character.HumanoidRootPart:GetChildren()) do
+                if v.ClassName == 'BodyAngularVelocity'or v.ClassName == 'BodyVelocity' then
+                    v:Destroy()
+                end
+            end
+            wait(.2)
+            -- coroutine.wrap(nolcipf)("off")
+            --   game:GetService('RunService').Heartbeat:Wait()
+            hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+            hrp.RotVelocity = Vector3.new(0, 0, 0)
+            --hrp.AssemblyAngularVelocity
+            hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
+            coroutine.wrap(nolcipf)()
+            hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
+
+            wait(1)
+
+            hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
+
         end
-        wait(.2)
-       -- coroutine.wrap(nolcipf)("off")
-       --   game:GetService('RunService').Heartbeat:Wait()
-        hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-        hrp.RotVelocity = Vector3.new(0, 0, 0)
-        --hrp.AssemblyAngularVelocity
-        hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
-        coroutine.wrap(nolcipf)()
-        hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
-
-        wait(1)
-
-        hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
-
-    end
     end
     function loadxd(id1,id2)
         if id2 ~= "" and id2 ~= " " and id2 ~= nil then
@@ -246,27 +246,27 @@ if not isfolder("DeeriHub") then
         end
     end
     function clicktpe()
-    local UserInputService = game:GetService("UserInputService")
-    if doingclick2 == false then
-    while wait() and doingclick2 == false  do
-        if doingclick== false then
-            doingclick = true
-            doingclick2 = true
-            thing2 = mouse.Button1Down:Connect(function() 
-                        if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) and mouse.Target then
-                            hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-                            hrp.RotVelocity = Vector3.new(0, 0, 0)
-                          hrp.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
-                        end
-                    end)
-    end
-    end
-    else
-        thing2:Disconnect()
-        wait()
-        doingclick2 = false
-    end
-    
+        local UserInputService = game:GetService("UserInputService")
+        if doingclick2 == false then
+        while wait() and doingclick2 == false  do
+            if doingclick== false then
+                doingclick = true
+                doingclick2 = true
+                thing2 = mouse.Button1Down:Connect(function() 
+                            if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) and mouse.Target then
+                                hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+                                hrp.RotVelocity = Vector3.new(0, 0, 0)
+                            hrp.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+                            end
+                        end)
+        end
+        end
+        else
+            thing2:Disconnect()
+            wait()
+            doingclick2 = false
+        end
+        
     end
     alreadydone = false
     function autoexee(val2,val3)
@@ -448,142 +448,142 @@ end
 
 
 
-    function empty()
-        
-    end
-
-    commands = {
-            noclip = {
-                functionname = [[nolcipf(ctable[2])]],
-                altnames = {"antifling"},
-                autoexe = false,
-                description  = "Prevents your character from getting flung and allows you to walk through walls"
-            },
-            gh = {
-                functionname = [[ghlol(ctable[2])]],
-                altnames = {"gethats"},
-                autoexe = false,
-                description  = "loads hats onto character is not fe but is usefull to use scripts that require hats but you dont have them"
-            },
-            split = {
-                functionname = [[splite(ctable[2])]],
-                altnames = {},
-                autoexe = false,
-                description  = "usefull in auto exe."
-            },
-            rj = {
-                functionname = [[rejoin(ctable[2])]],
-                altnames = {"rejoin"},
-                autoexe = false,
-                description  = "You rejoin the game"
-            },
-            glitchskid = {
-                functionname = [[glitchskidxd()]],
-                altnames = {"glitchtpskid","gtpskid"},
-                autoexe = false,
-                description  = "teleport somewere faraway to glitch players who teleport to you"
-            },
-            print = {
-                functionname = [[printxd(ctable[2])]],
-                altnames = {"output"},
-                autoexe = false,
-                description  = "a few things you could print exe: /e print cmds or /e print plrs"
-            },
-            te = {
-                functionname = [[test(ctable[2])]],
-                altnames = {"test",'st'},
-                autoexe = false,
-                description  = "test"
-            },
-            time = {
-                functionname = [[setclock(ctable[2])]],
-                altnames = {"ctime"},
-                autoexe = false,
-                description  = "sets the time with number"
-            },
-            goto = {
-                functionname = [[goto(ctable[2])]],
-                altnames = {"to","tpto"},
-                autoexe = false,
-                description  = "go to a player"
-            },
-            tkill = {
-                functionname = [[notoolkill(ctable[2])]],
-                altnames = {"anti-tkill"},
-                autoexe = false,
-                description  = "not the best but it constantly unequpts your tools"
-            },
-            sfling = {
-                functionname = [[sflinge(ctable[2])]],
-                altnames = {"fling","spinfling"},
-                autoexe = false,
-                description  = "tp to a player and spin fling them"
-            },
-            clicktp = {
-                functionname = [[clicktpe()]],
-                altnames = {"ctp"},
-                autoexe = false,
-                description  = "press crtl and click to tp to your mouses location"
-            },
-            spy = {
-                functionname = [[cspye(ctable[2])]],
-                altnames = {"cspy","chatspy","chat-spy"},
-                autoexe = false,
-                description  = "Chat Spy"
-            },
-            load = {
-                functionname = [[loadxd(ctable[2],ctable[3])]],
-                altnames = {"spawn"},
-                autoexe = false,
-                description  = "Loads a asset into the game can be used on a player exe; '/e load 'id' 'playername'' if no player name it will be put in workspace"
-            },
-            autoexe = {
-                functionname = [[autoexee(ctable[2],ctable[3])]],
-                altnames = {},
-                autoexe = false,
-                description  = "allows you to run a command as the script is ran exe: '/e autoexe 'command name' 'extra values'' "
-            },
-            dex = {
-                functionname = [[dexf(ctable[2])]],
-                altnames = {"explorer"},
-                autoexe = false,
-                description  = "Opens up the Dex Explorer you can add extra permitters exe: '/e dex (v2/v3/v4/v4/frosty)' can be left as just '/e dex' "
-            }
+function empty()
     
-    }
-    --[[
-    autoexe stuff 👍
-    ]]--
-    commandnum = 0
-    if not isfile("DeeriHub/AdminDNA.txt") then
-    data = {}
-     for i, v in pairs(commands) do
-         if v.functionname then
-             commandnum = commandnum +1
-             table.insert(data, tostring(v.autoexe))
-             print(data[commandnum])
-         end
-     end
-    savedata = table.concat(data, ":")
-    print(savedata)
-    print(commandnum,":Commands")
-    writefile("DeeriHub/AdminDNA.txt",savedata)
-    print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
-    end
-    data = readfile("DeeriHub/AdminDNA.txt")
-    data = data:split(":")
-    commandnum = 0
+end
+
+commands = {
+        noclip = {
+            functionname = [[nolcipf(ctable[2])]],
+            altnames = {"antifling"},
+            autoexe = false,
+            description  = "Prevents your character from getting flung and allows you to walk through walls"
+        },
+        gh = {
+            functionname = [[ghlol(ctable[2])]],
+            altnames = {"gethats"},
+            autoexe = false,
+            description  = "loads hats onto character is not fe but is usefull to use scripts that require hats but you dont have them"
+        },
+        split = {
+            functionname = [[splite(ctable[2])]],
+            altnames = {},
+            autoexe = false,
+            description  = "usefull in auto exe."
+        },
+        rj = {
+            functionname = [[rejoin(ctable[2])]],
+            altnames = {"rejoin"},
+            autoexe = false,
+            description  = "You rejoin the game"
+        },
+        glitchskid = {
+            functionname = [[glitchskidxd()]],
+            altnames = {"glitchtpskid","gtpskid"},
+            autoexe = false,
+            description  = "teleport somewere faraway to glitch players who teleport to you"
+        },
+        print = {
+            functionname = [[printxd(ctable[2])]],
+            altnames = {"output"},
+            autoexe = false,
+            description  = "a few things you could print exe: /e print cmds or /e print plrs"
+        },
+        te = {
+            functionname = [[test(ctable[2])]],
+            altnames = {"test",'st'},
+            autoexe = false,
+            description  = "test"
+        },
+        time = {
+            functionname = [[setclock(ctable[2])]],
+            altnames = {"ctime"},
+            autoexe = false,
+            description  = "sets the time with number"
+        },
+        goto = {
+            functionname = [[goto(ctable[2])]],
+            altnames = {"to","tpto"},
+            autoexe = false,
+            description  = "go to a player"
+        },
+        tkill = {
+            functionname = [[notoolkill(ctable[2])]],
+            altnames = {"anti-tkill"},
+            autoexe = false,
+            description  = "not the best but it constantly unequpts your tools"
+        },
+        sfling = {
+            functionname = [[sflinge(ctable[2])]],
+            altnames = {"fling","spinfling"},
+            autoexe = false,
+            description  = "tp to a player and spin fling them"
+        },
+        clicktp = {
+            functionname = [[clicktpe()]],
+            altnames = {"ctp"},
+            autoexe = false,
+            description  = "press crtl and click to tp to your mouses location"
+        },
+        spy = {
+            functionname = [[cspye(ctable[2])]],
+            altnames = {"cspy","chatspy","chat-spy"},
+            autoexe = false,
+            description  = "Chat Spy"
+        },
+        load = {
+            functionname = [[loadxd(ctable[2],ctable[3])]],
+            altnames = {"spawn"},
+            autoexe = false,
+            description  = "Loads a asset into the game can be used on a player exe; '/e load 'id' 'playername'' if no player name it will be put in workspace"
+        },
+        autoexe = {
+            functionname = [[autoexee(ctable[2],ctable[3])]],
+            altnames = {},
+            autoexe = false,
+            description  = "allows you to run a command as the script is ran exe: '/e autoexe 'command name' 'extra values'' "
+        },
+        dex = {
+            functionname = [[dexf(ctable[2])]],
+            altnames = {"explorer"},
+            autoexe = false,
+            description  = "Opens up the Dex Explorer you can add extra permitters exe: '/e dex (v2/v3/v4/v4/frosty)' can be left as just '/e dex' "
+        }
+
+}
+--[[
+autoexe stuff 👍
+]]--
+commandnum = 0
+if not isfile("DeeriHub/AdminDNA.txt") then
+data = {}
     for i, v in pairs(commands) do
-         commandnum = commandnum+1
-         if data[commandnum] == true then
-             v.autoexe = true
-             loadstring(v.functionname)()
-         end
+        if v.functionname then
+            commandnum = commandnum +1
+            table.insert(data, tostring(v.autoexe))
+            print(data[commandnum])
+        end
     end
-    --done
-    characters = ('a') or ('b') or ("c") or ('d') or ('e') or ("f") or ('g') or ('h') or ("i") or ('j') or ('k') or ("l") or ('m') or ("n") or ('o') or ('p') or ("q") or ('r') or ("s") or ('t') or ('u') or ("v") or ('w') or ("x") or ('y') or ('z')
-    debouse = false
-    plr.Chatted:Connect(function(msg)
+savedata = table.concat(data, ":")
+print(savedata)
+print(commandnum,":Commands")
+writefile("DeeriHub/AdminDNA.txt",savedata)
+print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
+end
+data = readfile("DeeriHub/AdminDNA.txt")
+data = data:split(":")
+commandnum = 0
+for i, v in pairs(commands) do
+        commandnum = commandnum+1
+        if data[commandnum] == true then
+            v.autoexe = true
+            loadstring(v.functionname)()
+        end
+end
+--done
+characters = ('a') or ('b') or ("c") or ('d') or ('e') or ("f") or ('g') or ('h') or ("i") or ('j') or ('k') or ("l") or ('m') or ("n") or ('o') or ('p') or ("q") or ('r') or ("s") or ('t') or ('u') or ("v") or ('w') or ("x") or ('y') or ('z')
+debouse = false
+plr.Chatted:Connect(function(msg)
         if debouse then
             return
         end
@@ -691,6 +691,6 @@ end
             end
 
         end
-      debouse = false
     end
-    end)
+    debouse = false
+end)
