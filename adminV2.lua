@@ -582,7 +582,12 @@ end
     end
     --done
     characters = ('a') or ('b') or ("c") or ('d') or ('e') or ("f") or ('g') or ('h') or ("i") or ('j') or ('k') or ("l") or ('m') or ("n") or ('o') or ('p') or ("q") or ('r') or ("s") or ('t') or ('u') or ("v") or ('w') or ("x") or ('y') or ('z')
+    debouse = false
     plr.Chatted:Connect(function(msg)
+        if debouse then
+            return
+        end
+        debouse = true
         itsago = false
         if string.sub(msg, 0, 2) == "/e" then
             before = 4
@@ -685,6 +690,6 @@ end
             end
 
         end
-      
+      debouse = false
     end
     end)
