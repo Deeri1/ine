@@ -273,7 +273,7 @@ if not isfolder("DeeriHub") then
         alreadydone =false
         commandnum = 0
         data = readfile("DeeriHub/AdminDNA.txt")
-        data = table.concat(data, ":")
+        data = string.split(data, ":")
         if val2 ~= nil then
             print("running2")
         for i, v in pairs(commands) do
@@ -424,7 +424,9 @@ function glitchskidxd()
     hrp.CFrame = savpos
 end
 
-
+function setclock(var)
+    game.Lighting.ClockTime = var
+end
 
 function splite(endcmd)
     local foundend = false
@@ -493,6 +495,12 @@ end
                 autoexe = false,
                 description  = "test"
             },
+            time = {
+                functionname = [[setclock(ctable[2])]],
+                altnames = {"ctime"},
+                autoexe = false,
+                description  = "sets the time with number"
+            },
             goto = {
                 functionname = [[goto(ctable[2])]],
                 altnames = {"to","tpto"},
@@ -507,7 +515,7 @@ end
             },
             sfling = {
                 functionname = [[sflinge(ctable[2])]],
-                altnames = {"fling"},
+                altnames = {"fling","spinfling"},
                 autoexe = false,
                 description  = "tp to a player and spin fling them"
             },
