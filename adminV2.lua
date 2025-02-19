@@ -647,6 +647,7 @@ plr.Chatted:Connect(function(msg)
         print("total: ",total)
         if commands[ctable[1]] then
             print("cmd "..ctable[1].." found nosearch")
+            debouse = false
             v = commands[ctable[1]]
             if total == 1 then
                 print("total 1")
@@ -663,6 +664,7 @@ plr.Chatted:Connect(function(msg)
 
         else
             print("cmd "..ctable[1].." found search")
+            debouse = false
             y = ctable[1]
             for i, v in pairs(commands) do
                 e = i
@@ -684,7 +686,7 @@ plr.Chatted:Connect(function(msg)
                         print(ctable[2],ctable[3],"ctable[2],ctable[3]")
                         loadstring(i.functionname)(ctable[2],ctable[3])
                     end
-                         debouse = false
+                        debouse = false
                        return
                     end
                 end
