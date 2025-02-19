@@ -684,6 +684,7 @@ end
                         print(ctable[2],ctable[3],"ctable[2],ctable[3]")
                         loadstring(i.functionname)(ctable[2],ctable[3])
                     end
+                         debouse = false
                        return
                     end
                 end
