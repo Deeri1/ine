@@ -461,7 +461,7 @@ function cleardata()
 
 end
 loaddata = {}
-function loadxd(typee,slot)
+function positionthang(typee,slot)
     if typee == "save" then
         loaddata[slot] = {slot,hrp.CFrame}
     elseif typee == "load" then
