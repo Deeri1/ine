@@ -464,7 +464,7 @@ end
 function positionthang(typee,slot) -- saves data as string slot.cframe
     hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
     if typee == "save" then
-        loaddata[slot] = {slot,hrp.CFrame}
+        loaddata[slot] = {slot,tostring(hrp.CFrame)}
         table.insert(data["pos"][2],table.concat(loaddata[slot],"."))
     elseif typee == "load" then
         if loaddata[slot] then
@@ -472,7 +472,7 @@ function positionthang(typee,slot) -- saves data as string slot.cframe
                 humanoid.Sit = false
                 wait()
             end
-            hrp.CFrame = loaddata[slot][2]
+            hrp.CFrame = CFrame.new(loaddata[slot][2])
         end
     end
     
@@ -634,9 +634,14 @@ data = readfile("DeeriHub/AdminDNA.txt")
 data = data:split(":")
 tempdata = {}
 for i, v in pairs(data) do
-    tempdata{v:split("*")[1]} = {v:split("*")[2]:split(";")}
-    tempdata{v:split("*")[1]}[2] = tempdata{v:split("*")[1]}[2]:split(",")
-    print(tempdata{v:split("*")[1]}[1])
+if v ~= "" then
+	print(v)
+    tempdata[v:split("*")[1]] = {v:split("*")[2]:split(";")}
+	--print(tempdata[v:split("*")[1]][1][1])
+    tempdata[v:split("*")[1]][2] = tempdata[v:split("*")[1]][1][2]:split(",")
+    tempdata[v:split("*")[1]][1] = tempdata[v:split("*")[1]][1][1]
+--	print(tempdata[v:split("*")[1]][1])
+	end
 end
 data = tempdata
 commandnum = 0
@@ -650,7 +655,7 @@ end
 --done
 --stuff for saving 
 loaddata = {} -- pos thing
-for i,v in pairs(data[pos][2]) do
+for i,v in pairs(data["pos"][2]) do
     if v ~= "" then
         loaddata[v:split(".")[1]] = v:split(".")
     end
