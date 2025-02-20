@@ -635,7 +635,7 @@ data = data:split(":")
 for i, v in pairs(data) do
     data[v:split("*")[1]] = v:split(";") -- puts da name in there
 
-    data[v:split("*")[1]][2] = data[i][2]:split(",") --splits the data
+    data[v:split("*")[1]][2] = data[i][2]:split(".") --splits the data
     data[i] = nil
 end
 commandnum = 0
