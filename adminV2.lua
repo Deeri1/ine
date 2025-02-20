@@ -606,7 +606,7 @@ if not isfile("DeeriHub/AdminDNA.txt") then
             data[i] = {}
             data[i][1] = tostring(v.autoexe)
             data[i][2] = {"def","ult"}
-            print(data[commandnum])
+            print(data[i])
         end
     end
     --arr[string,arr]
@@ -614,9 +614,9 @@ if not isfile("DeeriHub/AdminDNA.txt") then
     tempdata = data
 
     for i, v in pairs(data) do
-        tempdata[2] = table.concat(data[2], ",")
+        tempdata[i][2] = table.concat(data[i][2], ",")
         --arr[string,string]
-        savedata = savedata..i.."*"..v[1]..";"..tempdata[2]..":"
+        savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
         --string*string;string
     end
   
