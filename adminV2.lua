@@ -410,7 +410,32 @@ function printxd(subcmd)
         end
         print("________________________________________________________________")
     end
-
+    if subcmd == "data" or subcmd == "dna" then
+        print("________________________________________________________________")
+        print("list of data")
+        --print("________________________________________________________________")
+        for i, v in pairs(data) do
+            print("________________________________________________________________")
+            print(i,"V")
+            print(v[i])
+            print("________________________________________________________________")
+            if type(v) == "table" then
+             for i, e in pairs(v) do
+                print(i)
+                print(e)
+                if type(e) == "table" then
+                    for i, a in pairs(e) do
+                       print(i)
+                       print(a)
+                       --print("________________________________________________________________")
+                   end
+                   end
+                --print("________________________________________________________________")
+            end
+            end
+        end
+        print("________________________________________________________________")
+    end
 
 
 end
@@ -470,7 +495,7 @@ function positionthang(typee,slot) -- saves data as string slot.cframe
         if loaddata[slot] then
             if humanoid.Sit == true then
                 humanoid.Sit = false
-                wait()
+                wait();  wait()
             end
 			print(loaddata[slot][2])
             hrp.CFrame = CFrame.new(table.unpack(loaddata[slot][2]:gsub(" ",""):split(",")))
@@ -744,7 +769,7 @@ plr.Chatted:Connect(function(msg)
 
         end
         for i, v in pairs(ctable) do -- fix them idk why
-            print(i,v,"i,v",ctable[i],ctable[v],"ctable[i],ctable[v]")
+            print(i,v,"i,v",ctable[i],",",ctable[v],"ctable[i],ctable[v]")
             if i~= 1 then
             ctable[i] = v
             end
@@ -756,7 +781,7 @@ plr.Chatted:Connect(function(msg)
             if GetPlayer(v)[1] ~= nil  and ctable[i] ~= ctable[1] then
               --  print(i,v,"lolidk")
                 ctable[i] = GetPlayer(v)[1]
-                print(ctable[i])
+               -- print(ctable[i])
             end
         end
         print("total: ",total)
@@ -765,14 +790,14 @@ plr.Chatted:Connect(function(msg)
             debouse = false
             v = commands[ctable[1]]
             if total == 1 then
-                print("total 1")
+               -- print("total 1")
                 loadstring(v.functionname)()
             elseif total == 2 then
-                print("total 2")
+               -- print("total 2")
                 print(ctable[2],"ctable[2]")
                 loadstring(v.functionname)(ctable[2])
             elseif total == 3 then
-                print("total 3")
+             --   print("total 3")
                 print(ctable[2],ctable[3],"ctable[2],ctable[3]")
                 loadstring(v.functionname)(ctable[2],ctable[3])
             end
@@ -790,14 +815,14 @@ plr.Chatted:Connect(function(msg)
                     if v == y then
                        i = commands[e]
                        if total == 1 then
-                        print("total 1")
+                       -- print("total 1")
                         loadstring(i.functionname)()
                     elseif total == 2 then
-                        print("total 2")
+                      --  print("total 2")
                         print(ctable[2],"ctable[2]")
                         loadstring(i.functionname)(ctable[2])
                     elseif total == 3 then
-                        print("total 3")
+                       -- print("total 3")
                         print(ctable[2],ctable[3],"ctable[2],ctable[3]")
                         loadstring(i.functionname)(ctable[2],ctable[3])
                     end
