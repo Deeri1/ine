@@ -460,14 +460,16 @@ function cleardata()
 
 
 end
-loaddata = {}
-function positionthang(typee,slot)
+
+function positionthang(typee,slot) -- saves data as string slot.cframe
     if typee == "save" then
         loaddata[slot] = {slot,hrp.CFrame}
+        table.insert(data["pos"][2],table.concat(loaddata[slot],"."))
     elseif typee == "load" then
         if loaddata[slot] then
             if humanoid.Sit == true then
                 humanoid.Sit = false
+                wait()
             end
             hrp.CFrame = loaddata[slot][2]
         end
@@ -605,7 +607,7 @@ if not isfile("DeeriHub/AdminDNA.txt") then
             commandnum = commandnum +1
             data[i] = {}
             data[i][1] = tostring(v.autoexe)
-            data[i][2] = {"def","ult"}
+            data[i][2] = {"",""}
             print(data[i])
         end
     end
@@ -629,6 +631,12 @@ if not isfile("DeeriHub/AdminDNA.txt") then
 end
 data = readfile("DeeriHub/AdminDNA.txt")
 data = data:split(":")
+for i, v in pairs(data) do
+    data[v:split("*")[1]] = v:split(";") -- puts da name in there
+
+    data[v:split("*")[1]][2] = data[i][2]:split(",") --splits the data
+    data[i] = nil
+end
 commandnum = 0
 for i, v in pairs(commands) do
         commandnum = commandnum+1
@@ -636,6 +644,14 @@ for i, v in pairs(commands) do
             v.autoexe = true
             loadstring(v.functionname)()
         end
+end
+--done
+--stuff for saving 
+loaddata = {} -- pos thing
+for i,v in pairs(data[pos][2]) do
+    if v ~= "" then
+        loaddata[v:split(".")[1]] = v:split(".")
+    end
 end
 --done
 characters = ('a') or ('b') or ("c") or ('d') or ('e') or ("f") or ('g') or ('h') or ("i") or ('j') or ('k') or ("l") or ('m') or ("n") or ('o') or ('p') or ("q") or ('r') or ("s") or ('t') or ('u') or ("v") or ('w') or ("x") or ('y') or ('z')
