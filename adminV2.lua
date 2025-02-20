@@ -466,6 +466,9 @@ function positionthang(typee,slot)
         loaddata[slot] = {slot,hrp.CFrame}
     elseif typee == "load" then
         if loaddata[slot] then
+            if humanoid.Sit == true then
+                humanoid.Sit = false
+            end
             hrp.CFrame = loaddata[slot][2]
         end
     end
@@ -591,16 +594,34 @@ commands = {
 autoexe stuff 👍
 ]]--
 commandnum = 0
+--dna format
+--[[
+command1name*command1autoexe;command1data1,command1data2:command2name*command2autoexe;command2data1,command2data2
+]]
 if not isfile("DeeriHub/AdminDNA.txt") then
     data = {}
     for i, v in pairs(commands) do
         if v.functionname then
             commandnum = commandnum +1
-            table.insert(data, tostring(v.autoexe))
+            data[i] = {}
+            data[i][1] = tostring(v.autoexe)
+            data[i][2] = {"def","ult"}
             print(data[commandnum])
         end
     end
-    savedata = table.concat(data, ":")
+    --arr[string,arr]
+    savedata = ""
+    tempdata = data
+
+    for i, v in pairs(data) do
+        tempdata[2] = table.concat(data[2], ",")
+        --arr[string,string]
+        savedata = savedata..i.."*"..v[1]..";"..tempdata[2]..":"
+        --string*string;string
+    end
+  
+
+    
     print(savedata)
     print(commandnum,":Commands")
     writefile("DeeriHub/AdminDNA.txt",savedata)
