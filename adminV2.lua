@@ -473,7 +473,7 @@ function positionthang(typee,slot) -- saves data as string slot.cframe
                 wait()
             end
 			print(loaddata[slot][2])
-            hrp.CFrame = CFrame.new(table.unpack(loaddata[slot][2]:gsub(" ",""):split(",")))
+            hrp.CFrame = CFrame.new(table.unpack(loaddata[slot][2]:gsub(" ",""):split("")))
         end
     end
     
@@ -634,7 +634,7 @@ autoexe stuff 👍
 commandnum = 0
 --dna format
 --[[
-command1name*command1autoexe;command1data1,command1data2:command2name*command2autoexe;command2data1,command2data2
+command1name*command1autoexe;command1data1+command1data2:command2name*command2autoexe;command2data1+command2data2
 ]]
 if not isfile("DeeriHub/AdminDNA.txt") then
     data = {}
