@@ -477,6 +477,11 @@ function positionthang(typee,slot) -- saves data as string slot.cframe
     end
     
 end
+nomore = false
+function remadmin()
+    print("removing admin")
+    nomore = true
+end
 
 function empty()
     
@@ -566,6 +571,12 @@ commands = {
             altnames = {"ctp"},
             autoexe = false,
             description  = "press crtl and click to tp to your mouses location"
+        },
+        removeadmin = {
+            functionname = [[remadmin()]],
+            altnames = {"closeadmin","endadmin","noadmin"},
+            autoexe = false,
+            description  = "removes the admin"
         },
         spy = {
             functionname = [[cspye(ctable[2])]],
@@ -664,7 +675,7 @@ end
 characters = ('a') or ('b') or ("c") or ('d') or ('e') or ("f") or ('g') or ('h') or ("i") or ('j') or ('k') or ("l") or ('m') or ("n") or ('o') or ('p') or ("q") or ('r') or ("s") or ('t') or ('u') or ("v") or ('w') or ("x") or ('y') or ('z')
 debouse = false
 plr.Chatted:Connect(function(msg)
-        if debouse then
+        if debouse or nomore then
             return
         end
         debouse = true
