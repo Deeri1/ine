@@ -472,7 +472,8 @@ function positionthang(typee,slot) -- saves data as string slot.cframe
                 humanoid.Sit = false
                 wait()
             end
-            hrp.CFrame = CFrame.new(loaddata[slot][2])
+			print(loaddata[slot][2])
+            hrp.CFrame = CFrame.new(table.unpack(loaddata[slot][2]:gsub(" ",""):split(",")))
         end
     end
     
