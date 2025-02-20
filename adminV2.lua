@@ -447,6 +447,30 @@ function splite(endcmd)
 end
 
 
+function cleardata()
+    if isfile("DeeriHub/AdminDNA.txt") then
+        delfile("DeeriHub/AdminDNA.txt")
+        print("deleatedfile")
+    end
+    for i,v in pairs(commands) do -- clearing autoexe
+        v.autoexe = false
+    end
+    
+
+
+
+end
+loaddata = {}
+function loadxd(typee,slot)
+    if typee == "save" then
+        loaddata[slot] = {slot,hrp.CFrame}
+    elseif typee == "load" then
+        if loaddata[slot] then
+            hrp.CFrame = loaddata[slot][2]
+        end
+    end
+    
+end
 
 function empty()
     
@@ -464,6 +488,18 @@ commands = {
             altnames = {"gethats"},
             autoexe = false,
             description  = "loads hats onto character is not fe but is usefull to use scripts that require hats but you dont have them"
+        },
+        pos = {
+            functionname = [[positionthang(ctable[2],ctable[3])]],
+            altnames = {"go"},
+            autoexe = false,
+            description  = "save/load a position to a data slot, exe: /e pos save seats (saves position to slot \"seats\") :: /e pos load seats (teleports you to position at data slot \"seats\")"
+        },
+        deldna = {
+            functionname = [[cleardata()]],
+            altnames = {"deldata","cleardata","resetdata"},
+            autoexe = false,
+            description  = "resets data"
         },
         split = {
             functionname = [[splite(ctable[2])]],
@@ -556,7 +592,7 @@ autoexe stuff 👍
 ]]--
 commandnum = 0
 if not isfile("DeeriHub/AdminDNA.txt") then
-data = {}
+    data = {}
     for i, v in pairs(commands) do
         if v.functionname then
             commandnum = commandnum +1
@@ -564,11 +600,11 @@ data = {}
             print(data[commandnum])
         end
     end
-savedata = table.concat(data, ":")
-print(savedata)
-print(commandnum,":Commands")
-writefile("DeeriHub/AdminDNA.txt",savedata)
-print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
+    savedata = table.concat(data, ":")
+    print(savedata)
+    print(commandnum,":Commands")
+    writefile("DeeriHub/AdminDNA.txt",savedata)
+    print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
 end
 data = readfile("DeeriHub/AdminDNA.txt")
 data = data:split(":")
