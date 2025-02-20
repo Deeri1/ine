@@ -462,6 +462,7 @@ function cleardata()
 end
 
 function positionthang(typee,slot) -- saves data as string slot.cframe
+    hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
     if typee == "save" then
         loaddata[slot] = {slot,hrp.CFrame}
         table.insert(data["pos"][2],table.concat(loaddata[slot],"."))
