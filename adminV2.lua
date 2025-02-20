@@ -484,6 +484,23 @@ function remadmin()
     nomore = true
 end
 
+function updateee()
+
+    for i, v in pairs(data) do
+        tempdata[i][2] = table.concat(data[i][2], ",")
+        --arr[string,string]
+        savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
+        --string*string;string
+    end
+  
+
+    
+    print(savedata)
+   -- print(commandnum,":Commands")
+    writefile("DeeriHub/AdminDNA.txt",savedata)
+    print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
+end
+
 function empty()
     
 end
@@ -512,6 +529,12 @@ commands = {
             altnames = {"deldata","cleardata","resetdata"},
             autoexe = false,
             description  = "resets data"
+        },
+        save = {
+            functionname = [[updateee()]],
+            altnames = {"savedata","savedna","updatedna"},
+            autoexe = false,
+            description  = "saves data"
         },
         split = {
             functionname = [[splite(ctable[2])]],
