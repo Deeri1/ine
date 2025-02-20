@@ -465,7 +465,7 @@ function positionthang(typee,slot) -- saves data as string slot.cframe
     hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
     if typee == "save" then
         loaddata[slot] = {slot,tostring(hrp.CFrame)}
-        table.insert(data["pos"][2],table.concat(loaddata[slot],"."))
+        table.insert(data["pos"][2],table.concat(loaddata[slot],"/"))
     elseif typee == "load" then
         if loaddata[slot] then
             if humanoid.Sit == true then
@@ -485,9 +485,9 @@ function remadmin()
 end
 
 function updateee()
-
+    savedata = ""
     for i, v in pairs(data) do
-        tempdata[i][2] = table.concat(data[i][2], ",")
+        tempdata[i][2] = table.concat(data[i][2], "+")
         --arr[string,string]
         savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
         --string*string;string
@@ -652,7 +652,7 @@ if not isfile("DeeriHub/AdminDNA.txt") then
     tempdata = data
 
     for i, v in pairs(data) do
-        tempdata[i][2] = table.concat(data[i][2], ",")
+        tempdata[i][2] = table.concat(data[i][2], "+")
         --arr[string,string]
         savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
         --string*string;string
@@ -673,7 +673,7 @@ if v ~= "" then
 	print(v)
     tempdata[v:split("*")[1]] = {v:split("*")[2]:split(";")}
 	--print(tempdata[v:split("*")[1]][1][1])
-    tempdata[v:split("*")[1]][2] = tempdata[v:split("*")[1]][1][2]:split(",")
+    tempdata[v:split("*")[1]][2] = tempdata[v:split("*")[1]][1][2]:split("+")
     tempdata[v:split("*")[1]][1] = tempdata[v:split("*")[1]][1][1]
 --	print(tempdata[v:split("*")[1]][1])
 	end
@@ -692,7 +692,7 @@ end
 loaddata = {} -- pos thing
 for i,v in pairs(data["pos"][2]) do
     if v ~= "" then
-        loaddata[v:split(".")[1]] = v:split(".")
+        loaddata[v:split("/")[1]] = v:split("/")
     end
 end
 --done
