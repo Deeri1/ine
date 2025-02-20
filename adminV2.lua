@@ -632,12 +632,13 @@ if not isfile("DeeriHub/AdminDNA.txt") then
 end
 data = readfile("DeeriHub/AdminDNA.txt")
 data = data:split(":")
+tempdata = {}
 for i, v in pairs(data) do
-    data[v:split("*")[1]] = v:split(";") -- puts da name in there
-
-    data[v:split("*")[1]][2] = data[i][2]:split(".") --splits the data
-    data[i] = nil
+    tempdata{v:split("*")[1]} = {v:split("*")[2]:split(";")}
+    tempdata{v:split("*")[1]}[2] = tempdata{v:split("*")[1]}[2]:split(",")
+    print(tempdata{v:split("*")[1]}[1])
 end
+data = tempdata
 commandnum = 0
 for i, v in pairs(commands) do
         commandnum = commandnum+1
