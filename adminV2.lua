@@ -767,6 +767,12 @@ commands = {
             autoexe = false,
             description  = "when you respawn you will respawn at the position you saved with /e pos save 'slot' exe: /e resettp 'slot' :: /e resettp default (resets to default spawn)"
         },
+        attach = {
+            functionname = [[respawntp(ctable[2],ctable[3])]],
+            altnames = {"atc"},
+            autoexe = false,
+            description  = "attaches you to a player exe: /e attach weld 'playername' :: /e attach stop (stops the attachment)"
+        },
         plr = {
             functionname = [[playervars(ctable[2],ctable[3])]],
             altnames = {"player","playerval"},
