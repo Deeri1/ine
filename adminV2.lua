@@ -445,7 +445,7 @@ function glitchskidxd()
     local savpos = hrp.CFrame
 
     hrp.CFrame = CFrame.new(math.huge,-math.huge,math.huge)
-    wait()
+    wait(.1)
     hrp.CFrame = savpos
 end
 
@@ -583,7 +583,7 @@ commands = {
             functionname = [[printxd(ctable[2])]],
             altnames = {"output"},
             autoexe = false,
-            description  = "a few things you could print exe: /e print cmds or /e print plrs"
+            description  = "a few things you could print exe: /e print cmds or /e print plrs or /e print data"
         },
         te = {
             functionname = [[test(ctable[2])]],
