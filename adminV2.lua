@@ -619,6 +619,8 @@ function atachee(typee,whom)
             lol.Parent = hrp
             lol.Part0 = hrp
             lol.Part1 = whom.Character.HumanoidRootPart
+            lol.C0 = vector3(0,0,0)
+            lol.C1 = vector3(0,0,0)
             lol.Name = "atachweld"
         end
 
