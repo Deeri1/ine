@@ -615,13 +615,13 @@ function atachee(typee,whom)
 
         elseif typee == "weld" then
             attachgone = false
-            lol = Instance.new("Weld")
+            lol = Instance.new("Attachment")
+			lol.Name = "atachweld"
             lol.Parent = hrp
-            lol.Part0 = hrp
-            lol.Part1 = whom.Character.HumanoidRootPart
+            lol.Part0 = whom.Character.HumanoidRootPart
+            lol.Part1 = hrp
             lol.C0 = vector3(0,0,0)
             lol.C1 = vector3(0,0,0)
-            lol.Name = "atachweld"
         end
 
 
