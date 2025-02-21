@@ -570,6 +570,36 @@ function respawntp(slot)
     end
 end
 
+function playervars(typee,num)
+    humanoid = game.Players.LocalPlayer.Character.Humanoid
+    if typee == "walkspeed" or typee == "ws" then
+        if num then
+            humanoid.WalkSpeed = num
+        else
+            print(humanoid.WalkSpeed)
+        end
+    elseif typee == "jumppower" or typee == "jp" then
+        if num then
+            humanoid.JumpPower = num
+        else
+            print(humanoid.JumpPower)
+        end
+    elseif typee == "gravity" or typee == "grav" then
+        if num then
+            workspace.Gravity = num
+        else
+            print(workspace.Gravity)
+        end
+    elseif typee == "hipheight" or typee == "hh" then
+        if num then
+            humanoid.HipHeight = num
+        else
+            print(humanoid.HipHeight)
+        end     
+    end
+
+end
+
 function empty()
     
 end
@@ -706,6 +736,12 @@ commands = {
             altnames = {"spawnpoint","rtp"},
             autoexe = false,
             description  = "when you respawn you will respawn at the position you saved with /e pos save 'slot' exe: /e resettp 'slot' :: /e resettp default (resets to default spawn)"
+        }
+        plr = {
+            functionname = [[playervars(ctable[2],ctable[3])]],
+            altnames = {"player","playerval"},
+            autoexe = false,
+            description  = "change player values exe: /e plr walkspeed 100 :: /e plr jumppower 100 :: /e plr gravity 100 :: /e plr hipheight 100"
         }
 
 }
