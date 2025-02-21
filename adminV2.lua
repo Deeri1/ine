@@ -488,14 +488,17 @@ end
 
 function positionthang(typee,slot) -- saves data as string slot.cframe
     hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+    humanoid = game.Players.LocalPlayer.Character.Humanoid
     if typee == "save" then
         loaddata[slot] = {slot,tostring(hrp.CFrame)}
         table.insert(data["pos"][2],table.concat(loaddata[slot],"/"))
     elseif typee == "load" then
         if loaddata[slot] then
             if humanoid.Sit == true then
-                humanoid.Sit = false
-                wait();  wait()
+                repeat
+                    humanoid.Sit = false
+                    wait()
+                until humanoid.Sit == false
             end
 			print(loaddata[slot][2])
             hrp.CFrame = CFrame.new(table.unpack(loaddata[slot][2]:gsub(" ",""):split(",")))
@@ -509,21 +512,41 @@ function remadmin()
     nomore = true
 end
 
-function updateee()
-    savedata = ""
-    for i, v in pairs(data) do
-        tempdata[i][2] = table.concat(data[i][2], "+")
-        --arr[string,string]
-        savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
-        --string*string;string
+function updateee(typee)
+    if typee == "load" then
+        datastuff()
+    else
+        savedata = ""
+        for i, v in pairs(data) do
+            tempdata[i][2] = table.concat(data[i][2], "+")
+            --arr[string,string]
+            savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
+            --string*string;string
+            print(savedata)
+            -- print(commandnum,":Commands")
+             writefile("DeeriHub/AdminDNA.txt",savedata)
+             print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
+        end
     end
-  
+end
 
-    
-    print(savedata)
-   -- print(commandnum,":Commands")
-    writefile("DeeriHub/AdminDNA.txt",savedata)
-    print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
+function vieweee(whome)
+    if whome == "me" then
+        localPlayer = game.Players.LocalPlayer
+		if lplayer.Character.Humanoid then
+			game:GetService("Workspace").CurrentCamera.CameraSubject = lplayer.Character.Humanoid
+		else
+			game:GetService("Workspace").CurrentCamera.CameraSubject = lplayer.Character.Head
+		end
+    else 
+        whome = game.Workspace[whome.Name]
+        if whome.Character.Humanoid then
+            game:GetService("Workspace").CurrentCamera.CameraSubject = whome.Character.Humanoid
+        else
+            game:GetService("Workspace").CurrentCamera.CameraSubject = whome.Character.Head
+        end
+    end
+
 end
 
 function empty()
@@ -556,10 +579,10 @@ commands = {
             description  = "resets data"
         },
         save = {
-            functionname = [[updateee()]],
+            functionname = [[updateee(ctable[2]))]],
             altnames = {"savedata","savedna","updatedna"},
             autoexe = false,
-            description  = "saves data"
+            description  = "saves data, or loads data exe :: /e save load (loads data from file, when you wana reset data to one already saved without rejoining) :: /e save (saves data)"
         },
         split = {
             functionname = [[splite(ctable[2])]],
@@ -661,65 +684,68 @@ commandnum = 0
 --[[
 command1name*command1autoexe;command1data1+command1data2:command2name*command2autoexe;command2data1+command2data2
 ]]
-if not isfile("DeeriHub/AdminDNA.txt") then
-    data = {}
-    for i, v in pairs(commands) do
-        if v.functionname then
-            commandnum = commandnum +1
-            data[i] = {}
-            data[i][1] = tostring(v.autoexe)
-            data[i][2] = {"",""}
-            print(data[i])
+function datastuff()
+    if not isfile("DeeriHub/AdminDNA.txt") then
+        data = {}
+        for i, v in pairs(commands) do
+            if v.functionname then
+                commandnum = commandnum +1
+                data[i] = {}
+                data[i][1] = tostring(v.autoexe)
+                data[i][2] = {"",""}
+                print(data[i])
+            end
         end
-    end
-    --arr[string,arr]
-    savedata = ""
-    tempdata = data
+        --arr[string,arr]
+        savedata = ""
+        tempdata = data
 
-    for i, v in pairs(data) do
-        tempdata[i][2] = table.concat(data[i][2], "+")
-        --arr[string,string]
-        savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
-        --string*string;string
-    end
-  
-
+        for i, v in pairs(data) do
+            tempdata[i][2] = table.concat(data[i][2], "+")
+            --arr[string,string]
+            savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
+            --string*string;string
+        end
     
-    print(savedata)
-    print(commandnum,":Commands")
-    writefile("DeeriHub/AdminDNA.txt",savedata)
-    print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
-end
-data = readfile("DeeriHub/AdminDNA.txt")
-data = data:split(":")
-tempdata = {}
-for i, v in pairs(data) do
-if v ~= "" then
-	print(v)
-    tempdata[v:split("*")[1]] = {v:split("*")[2]:split(";")}
-	--print(tempdata[v:split("*")[1]][1][1])
-    tempdata[v:split("*")[1]][2] = tempdata[v:split("*")[1]][1][2]:split("+")
-    tempdata[v:split("*")[1]][1] = tempdata[v:split("*")[1]][1][1]
---	print(tempdata[v:split("*")[1]][1])
-	end
-end
-data = tempdata
-commandnum = 0
-for i, v in pairs(commands) do
-        commandnum = commandnum+1
-        if data[commandnum] == true then
-            v.autoexe = true
-            loadstring(v.functionname)()
-        end
-end
---done
---stuff for saving 
-loaddata = {} -- pos thing
-for i,v in pairs(data["pos"][2]) do
+
+        
+        print(savedata)
+        print(commandnum,":Commands")
+        writefile("DeeriHub/AdminDNA.txt",savedata)
+        print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
+    end
+    data = readfile("DeeriHub/AdminDNA.txt")
+    data = data:split(":")
+    tempdata = {}
+    for i, v in pairs(data) do
     if v ~= "" then
-        loaddata[v:split("/")[1]] = v:split("/")
+        print(v)
+        tempdata[v:split("*")[1]] = {v:split("*")[2]:split(";")}
+        --print(tempdata[v:split("*")[1]][1][1])
+        tempdata[v:split("*")[1]][2] = tempdata[v:split("*")[1]][1][2]:split("+")
+        tempdata[v:split("*")[1]][1] = tempdata[v:split("*")[1]][1][1]
+    --	print(tempdata[v:split("*")[1]][1])
+        end
+    end
+    data = tempdata
+    commandnum = 0
+    for i, v in pairs(commands) do
+            commandnum = commandnum+1
+            if data[commandnum] == true then
+                v.autoexe = true
+                loadstring(v.functionname)()
+            end
+    end
+    --done
+    --stuff for saving 
+    loaddata = {} -- pos thing
+    for i,v in pairs(data["pos"][2]) do
+        if v ~= "" then
+            loaddata[v:split("/")[1]] = v:split("/")
+        end
     end
 end
+datastuff()
 --done
 characters = ('a') or ('b') or ("c") or ('d') or ('e') or ("f") or ('g') or ('h') or ("i") or ('j') or ('k') or ("l") or ('m') or ("n") or ('o') or ('p') or ("q") or ('r') or ("s") or ('t') or ('u') or ("v") or ('w') or ("x") or ('y') or ('z')
 debouse = false
