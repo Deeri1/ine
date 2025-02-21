@@ -600,7 +600,7 @@ commands = {
             description  = "resets data"
         },
         save = {
-            functionname = [[updateee(ctable[2]))]],
+            functionname = [[updateee(ctable[2])]],
             altnames = {"savedata","savedna","updatedna"},
             autoexe = false,
             description  = "saves data, or loads data exe :: /e save load (loads data from file, when you wana reset data to one already saved without rejoining) :: /e save (saves data)"
@@ -694,13 +694,13 @@ commands = {
             altnames = {"explorer"},
             autoexe = false,
             description  = "Opens up the Dex Explorer you can add extra permitters exe: '/e dex (v2/v3/v4/v4/frosty)' can be left as just '/e dex' "
-        }
+        },
         view = {
             functionname = [[viewee(ctable[2])]],
             altnames = {},
             autoexe = false,
             description  = "view a player exe :: /e view me (views yourself) :: /e view 'playername' (views a player)"
-        }
+        },
         resettp = {
             functionname = [[dexf(ctable[2])]],
             altnames = {"spawnpoint","rtp"},
