@@ -556,6 +556,7 @@ activerespawn = "" -- positionslot
 localPlayer.CharacterAdded:Connect(function()
     character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
     if respawnchanged then
+        repeat wait() until character:FindFirstChild("HumanoidRootPart")
         localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(table.unpack(loaddata[activerespawn][2]:gsub(" ",""):split(",")))
     end
 end)
