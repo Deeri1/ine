@@ -639,15 +639,16 @@ function flyee(typee,key)
     if typee == "off" then
         flying = false
     else
+        flyspeed = 1
         lplayer = game.Players.LocalPlayer
         Players = game:GetService("Players")
-	local T = getRoot(Players.LocalPlayer.Character)
+	local T = Players.LocalPlayer.Character.HumanoidRootPart
 	local CONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
 	local lCONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
 	local SPEED = 0
 	mouse = lplayer:GetMouse()
 	local function FLY()
-		FLYING = true
+		flying = true
 		local BG = Instance.new('BodyGyro')
 		local BV = Instance.new('BodyVelocity')
 		BG.P = 9e4
@@ -676,7 +677,7 @@ function flyee(typee,key)
 					BV.velocity = Vector3.new(0, 0, 0)
 				end
 				BG.cframe = workspace.CurrentCamera.CoordinateFrame
-			until not FLYING
+			until not flying
 			CONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
 			lCONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
 			SPEED = 0
