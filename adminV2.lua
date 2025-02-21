@@ -618,7 +618,7 @@ function atachee(typee,whom)
             lol = Instance.new("Weld")
             lol.Parent = hrp
             lol.Part0 = hrp
-            lol.Part1 = whom.HumanoidRootPart
+            lol.Part1 = whom.Character.HumanoidRootPart
             lol.Name = "atachweld"
         end
 
@@ -768,7 +768,7 @@ commands = {
             description  = "when you respawn you will respawn at the position you saved with /e pos save 'slot' exe: /e resettp 'slot' :: /e resettp default (resets to default spawn)"
         },
         attach = {
-            functionname = [[respawntp(ctable[2],ctable[3])]],
+            functionname = [[atachee(ctable[2],ctable[3])]],
             altnames = {"atc"},
             autoexe = false,
             description  = "attaches you to a player exe: /e attach weld 'playername' :: /e attach stop (stops the attachment)"
