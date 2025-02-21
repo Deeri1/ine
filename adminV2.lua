@@ -548,6 +548,27 @@ function vieweee(whome)
     end
 
 end
+localPlayer = game.Players.LocalPlayer
+activerespawn = "" -- positionslot
+localPlayer.CharacterAdded:Connect(function()
+    character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
+    if respawnchanged then
+        localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(table.unpack(loaddata[activerespawn][2]:gsub(" ",""):split(",")))
+    end
+end)
+respawnchanged = false
+function respawntp(slot)
+    if slot == "default" or slot == "none" or slot == "" then
+        respawnchanged = false
+    else
+        respawnchanged = true
+        if loaddata[slot] then
+            if activerespawn then
+                activerespawn = slot
+            end
+        end
+    end
+end
 
 function empty()
     
@@ -673,6 +694,18 @@ commands = {
             altnames = {"explorer"},
             autoexe = false,
             description  = "Opens up the Dex Explorer you can add extra permitters exe: '/e dex (v2/v3/v4/v4/frosty)' can be left as just '/e dex' "
+        }
+        view = {
+            functionname = [[viewee(ctable[2])]],
+            altnames = {},
+            autoexe = false,
+            description  = "view a player exe :: /e view me (views yourself) :: /e view 'playername' (views a player)"
+        }
+        resettp = {
+            functionname = [[dexf(ctable[2])]],
+            altnames = {"spawnpoint","rtp"},
+            autoexe = false,
+            description  = "when you respawn you will respawn at the position you saved with /e pos save 'slot' exe: /e resettp 'slot' :: /e resettp default (resets to default spawn)"
         }
 
 }
