@@ -100,6 +100,7 @@ repeat wait() until isfolder("DeeriHub")
             
     end
     function goto(target)
+        target = GetPlayer(target)[1]
         target2 = game:GetService("Players")[target.Name].Character
         hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
         hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
@@ -113,6 +114,7 @@ repeat wait() until isfolder("DeeriHub")
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/chat%20spy"))()
     end
     function sflinge(target)
+        target = GetPlayer(target)[1]
         if target ~= "stop" and target ~= plrname and game.Workspace:FindFirstChild(target.Name) then
                 coroutine.wrap(nolcipf)()
                 target = game.Workspace[target.Name]
@@ -531,6 +533,7 @@ function updateee(typee)
 end
 
 function vieweee(whome)
+    whom = GetPlayer(whom)[1]
     if whome == "me" then
         localPlayer = game.Players.LocalPlayer
 		if lplayer.Character.Humanoid then
@@ -604,6 +607,7 @@ function playervars(typee,num)
 end
 attachgone = true
 function atachee(typee,whom)
+    whom = GetPlayer(whom)[1]
     if typee == "stop" then
         attachgone = true
         if lol then
@@ -913,7 +917,7 @@ plr.Chatted:Connect(function(msg)
            -- print(ctable[i])
             if GetPlayer(v)[1] ~= nil  and ctable[i] ~= ctable[1] then
               --  print(i,v,"lolidk")
-                ctable[i] = GetPlayer(v)[1]
+                --ctable[i] = GetPlayer(v)[1]
                -- print(ctable[i])
             end
         end
