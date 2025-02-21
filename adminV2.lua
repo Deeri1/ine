@@ -678,7 +678,7 @@ function flyee(typee,key)
 					BV.velocity = Vector3.new(0, 0, 0)
 				end
 				BG.cframe = workspace.CurrentCamera.CoordinateFrame
-			until not flying
+			until not flying or nomore
 			CONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
 			lCONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
 			SPEED = 0
@@ -690,6 +690,12 @@ function flyee(typee,key)
 		end)
 	end
 	flyKeyDown = mouse.KeyDown:Connect(function(KEY)
+        if nomore then
+            flying = false
+            flyKeyDown:Disconnect()
+            flyKeyUp:Disconnect()
+            return
+        end
 		if KEY:lower() == 'w' then
 			CONTROL.F = (flyspeed)
 		elseif KEY:lower() == 's' then
@@ -725,6 +731,11 @@ function flyee(typee,key)
 
 
     
+end
+
+function reloadee()
+    remadmin()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/adminV2.lua"))()
 end
 
 
@@ -876,6 +887,12 @@ commands = {
             altnames = {},
             autoexe = false,
             description  = "fly exe: /e fly off (stops flying) :: /e fly (starts flying)"
+        },
+        reload = {
+            functionname = [[reloadee(]],
+            altnames = {"reloadadmin","readmin"},
+            autoexe = false,
+            description  = "reloads the admin"
         },
         plr = {
             functionname = [[playervars(ctable[2],ctable[3])]],
