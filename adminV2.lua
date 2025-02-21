@@ -569,36 +569,66 @@ function respawntp(slot)
         end
     end
 end
-
+local defaultws = humanoid.WalkSpeed
+local defaultjp = humanoid.JumpPower
+local defaultgrav = workspace.Gravity
+local defaulthh = humanoid.HipHeight
 function playervars(typee,num)
     humanoid = game.Players.LocalPlayer.Character.Humanoid
     if typee == "walkspeed" or typee == "ws" then
         if num then
             humanoid.WalkSpeed = num
         else
-            print(humanoid.WalkSpeed)
+            humanoid.WalkSpeed = defaultws
         end
     elseif typee == "jumppower" or typee == "jp" then
         if num then
             humanoid.JumpPower = num
         else
-            print(humanoid.JumpPower)
+           humanoid.JumpPower= defaultjp
         end
     elseif typee == "gravity" or typee == "grav" then
         if num then
             workspace.Gravity = num
         else
-            print(workspace.Gravity)
+            workspace.Gravity = defaultgrav
         end
     elseif typee == "hipheight" or typee == "hh" then
         if num then
             humanoid.HipHeight = num
         else
-            print(humanoid.HipHeight)
+            humanoid.HipHeight = defaulthh
         end     
     end
 
 end
+attachgone = true
+function atachee(typee,whom)
+    if typee == "stop" then
+        attachgone = true
+        if lol then
+            lol:Destroy()
+        end
+    else
+
+        if typee == "cframe" then
+
+        elseif typee == "weld" then
+            attachgone = false
+            lol = Instance.new("Weld")
+            lol.Parent = hrp
+            lol.Part0 = hrp
+            lol.Part1 = whom.HumanoidRootPart
+            lol.Name = "atachweld"
+        end
+
+
+
+    end
+
+    
+end
+
 
 function empty()
     
@@ -732,16 +762,16 @@ commands = {
             description  = "view a player exe :: /e view me (views yourself) :: /e view 'playername' (views a player)"
         },
         resettp = {
-            functionname = [[dexf(ctable[2])]],
+            functionname = [[respawntp(ctable[2])]],
             altnames = {"spawnpoint","rtp"},
             autoexe = false,
             description  = "when you respawn you will respawn at the position you saved with /e pos save 'slot' exe: /e resettp 'slot' :: /e resettp default (resets to default spawn)"
-        }
+        },
         plr = {
             functionname = [[playervars(ctable[2],ctable[3])]],
             altnames = {"player","playerval"},
             autoexe = false,
-            description  = "change player values exe: /e plr walkspeed 100 :: /e plr jumppower 100 :: /e plr gravity 100 :: /e plr hipheight 100"
+            description  = "change player values exe: /e plr walkspeed 100 :: /e plr jumppower 100 :: /e plr gravity 100 :: /e plr hipheight 100 (dont add a number to reset to default)"
         }
 
 }
