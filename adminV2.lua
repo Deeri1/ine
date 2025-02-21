@@ -637,22 +637,72 @@ end
 
 function flyee(typee,key)
     if typee == "off" then
-        flygone = true
-        if lol then
-            lol:Destroy()
-        end
+        flying = false
     else
-        flygone = false
-        lol = Instance.new("BodyVelocity")
-        lol.Parent = hrp
-        lol.MaxForce = Vector3.new(0,0,0)
-        lol.Velocity = Vector3.new(0,0,0)
-        lol.P = 0
-        lol = Instance.new("BodyGyro")
-        lol.Parent = hrp
-        lol.MaxTorque = Vector3.new(0,0,0)
-        lol.CFrame = hrp.CFrame
-        lol.P = 0
+        lplayer = game.Players.LocalPlayer
+		local T = lplayer.Character.HumanoidRootPart
+		local CONTROL = {F = 0, B = 0, L = 0, R = 0}
+		local lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+		local SPEED = 1
+
+		local function fly()
+			flying = true
+			local BG = Instance.new('BodyGyro', T)
+			local BV = Instance.new('BodyVelocity', T)
+			BG.P = 9e4
+			BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+			BG.cframe = T.CFrame
+			BV.velocity = Vector3.new(0, 0.1, 0)
+			BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
+			spawn(function()
+				repeat wait()
+					lplayer.Character.Humanoid.PlatformStand = true
+					if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 then
+						SPEED = 50
+					elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0) and SPEED ~= 0 then
+						SPEED = 0
+					end
+					if (CONTROL.L + CONTROL.R) ~= 0 or (CONTROL.F + CONTROL.B) ~= 0 then
+						BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (CONTROL.F + CONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(CONTROL.L + CONTROL.R, (CONTROL.F + CONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+						lCONTROL = {F = CONTROL.F, B = CONTROL.B, L = CONTROL.L, R = CONTROL.R}
+					elseif (CONTROL.L + CONTROL.R) == 0 and (CONTROL.F + CONTROL.B) == 0 and SPEED ~= 0 then
+						BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (lCONTROL.F + lCONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(lCONTROL.L + lCONTROL.R, (lCONTROL.F + lCONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+					else
+						BV.velocity = Vector3.new(0, 0.1, 0)
+					end
+					BG.cframe = workspace.CurrentCamera.CoordinateFrame
+				until not flying
+				CONTROL = {F = 0, B = 0, L = 0, R = 0}
+				lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+				SPEED = 0
+				BG:destroy()
+				BV:destroy()
+				lplayer.Character.Humanoid.PlatformStand = false
+			end)
+		end
+		Mouse.KeyDown:connect(function(KEY)
+			if KEY:lower() == 'w' then
+				CONTROL.F = speedfly
+			elseif KEY:lower() == 's' then
+				CONTROL.B = -speedfly
+			elseif KEY:lower() == 'a' then
+				CONTROL.L = -speedfly 
+			elseif KEY:lower() == 'd' then 
+				CONTROL.R = speedfly
+			end
+		end)
+		Mouse.KeyUp:connect(function(KEY)
+			if KEY:lower() == 'w' then
+				CONTROL.F = 0
+			elseif KEY:lower() == 's' then
+				CONTROL.B = 0
+			elseif KEY:lower() == 'a' then
+				CONTROL.L = 0
+			elseif KEY:lower() == 'd' then
+				CONTROL.R = 0
+			end
+		end)
+		fly()
     end
 
 
