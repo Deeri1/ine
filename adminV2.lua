@@ -635,6 +635,30 @@ function atachee(typee,whom)
     
 end
 
+function flyee(typee,key)
+    if typee == "off" then
+        flygone = true
+        if lol then
+            lol:Destroy()
+        end
+    else
+        flygone = false
+        lol = Instance.new("BodyVelocity")
+        lol.Parent = hrp
+        lol.MaxForce = Vector3.new(0,0,0)
+        lol.Velocity = Vector3.new(0,0,0)
+        lol.P = 0
+        lol = Instance.new("BodyGyro")
+        lol.Parent = hrp
+        lol.MaxTorque = Vector3.new(0,0,0)
+        lol.CFrame = hrp.CFrame
+        lol.P = 0
+    end
+
+
+    
+end
+
 
 function empty()
     
@@ -778,6 +802,12 @@ commands = {
             altnames = {"atc"},
             autoexe = false,
             description  = "attaches you to a player exe: /e attach weld 'playername' :: /e attach stop (stops the attachment)"
+        },
+        fly = {
+            functionname = [[flyee(ctable[2],ctable[3])]],
+            altnames = {},
+            autoexe = false,
+            description  = "fly exe: /e fly off (stops flying) :: /e fly (starts flying)"
         },
         plr = {
             functionname = [[playervars(ctable[2],ctable[3])]],
