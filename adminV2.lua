@@ -740,7 +740,7 @@ end
 
 
 function adminee(typee)
-    if typee == "no" or typee == "off" or typee = "stop" or typee == "remove" then
+    if typee == "no" or typee == "off" or typee == "stop" or typee == "remove" then
         remadmin()
     elseif typee == "reload" or typee == "re" or typee == "refresh" then
         reloadee()
