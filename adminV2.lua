@@ -739,6 +739,16 @@ function reloadee()
 end
 
 
+function adminee(typee)
+    if typee == "no" or typee == "off" or typee = "stop" or typee == "remove" then
+        remadmin()
+    elseif typee == "reload" or typee == "re" or typee == "refresh" then
+        reloadee()
+    end
+
+
+end
+
 function empty()
     
 end
@@ -834,11 +844,11 @@ commands = {
             autoexe = false,
             description  = "press crtl and click to tp to your mouses location"
         },
-        removeadmin = {
-            functionname = [[remadmin()]],
-            altnames = {"closeadmin","endadmin","noadmin"},
+        admin = {
+            functionname = [[adminee()]],
+            altnames = {},
             autoexe = false,
-            description  = "removes the admin"
+            description  = "remove/reload admin exe: '/e admin no' (removes admin) :: '/e admin reload' (reloads admin)"
         },
         spy = {
             functionname = [[cspye(ctable[2])]],
@@ -887,12 +897,6 @@ commands = {
             altnames = {},
             autoexe = false,
             description  = "fly exe: /e fly off (stops flying) :: /e fly (starts flying)"
-        },
-        reload = {
-            functionname = [[reloadee(]],
-            altnames = {"reloadadmin","readmin"},
-            autoexe = false,
-            description  = "reloads the admin"
         },
         plr = {
             functionname = [[playervars(ctable[2],ctable[3])]],
