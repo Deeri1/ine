@@ -520,7 +520,7 @@ function updateee(typee)
     else
         savedata = ""
         for i, v in pairs(data) do
-            if type(value) == "table" then 
+            if type(data[i][2]) == "table" then 
                 tempdata[i][2] = table.concat(data[i][2], "+")
                 --arr[string,string]
                 savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
