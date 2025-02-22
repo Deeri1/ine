@@ -525,13 +525,14 @@ function updateee(typee)
                 --arr[string,string]
                 savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
                 --string*string;string
-                print(savedata)
+              --  print(savedata)
                 -- print(commandnum,":Commands")
                 writefile("DeeriHub/AdminDNA.txt",savedata)
-                print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
+               -- print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
             
             end
         end
+        print(savedata.." \n has been saved")
     end
 end
 
@@ -947,10 +948,12 @@ function datastuff()
         tempdata = data
 
         for i, v in pairs(data) do
-            tempdata[i][2] = table.concat(data[i][2], "+")
-            --arr[string,string]
-            savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
-            --string*string;string
+            if type(data[i][2]) == "table" then 
+                tempdata[i][2] = table.concat(data[i][2], "+")
+                --arr[string,string]
+                savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
+                --string*string;string
+            end
         end
     
 
