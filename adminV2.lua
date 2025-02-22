@@ -532,8 +532,8 @@ function updateee(typee)
     end
 end
 
-function vieweee(whome)
-    print(whome.." trying to view")
+function viewee(whome)
+    --print(whome.." trying to view")
     whom = GetPlayer(whom)[1]
     if whome == "me" then
         localPlayer = game.Players.LocalPlayer
