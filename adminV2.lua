@@ -520,14 +520,17 @@ function updateee(typee)
     else
         savedata = ""
         for i, v in pairs(data) do
-            tempdata[i][2] = table.concat(data[i][2], "+")
-            --arr[string,string]
-            savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
-            --string*string;string
-            print(savedata)
-            -- print(commandnum,":Commands")
-             writefile("DeeriHub/AdminDNA.txt",savedata)
-             print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
+            if type(value) == "table" then 
+                tempdata[i][2] = table.concat(data[i][2], "+")
+                --arr[string,string]
+                savedata = savedata..i.."*"..v[1]..";"..tempdata[i][2]..":"
+                --string*string;string
+                print(savedata)
+                -- print(commandnum,":Commands")
+                writefile("DeeriHub/AdminDNA.txt",savedata)
+                print(readfile("DeeriHub/AdminDNA.txt"),"lol2")
+            
+            end
         end
     end
 end
@@ -542,9 +545,8 @@ function viewee(whome)
 			game:GetService("Workspace").CurrentCamera.CameraSubject = lplayer.Character.Head
 		end
     else 
-        whome = GetPlayer(whome)[1]
-        whome = game.Workspace[whome.Name]
-        if whome.Character.Humanoid then
+        whome = GetPlayer(whome)[1].Character
+        if whome.Humanoid then
             game:GetService("Workspace").CurrentCamera.CameraSubject = whome.Humanoid
         else
             game:GetService("Workspace").CurrentCamera.CameraSubject = whome.Head
