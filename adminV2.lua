@@ -534,7 +534,7 @@ end
 
 function viewee(whome)
     --print(whome.." trying to view")
-    whom = GetPlayer(whom)[1]
+    whom = GetPlayer(whome)[1]
     if whome == "me" then
         localPlayer = game.Players.LocalPlayer
 		if lplayer.Character.Humanoid then
