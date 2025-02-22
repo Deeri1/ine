@@ -534,7 +534,7 @@ end
 
 function viewee(whome)
     --print(whome.." trying to view")
-    if whome == "me" then
+    if whome == "me" or not whome then
         localPlayer = game.Players.LocalPlayer
 		if lplayer.Character.Humanoid then
 			game:GetService("Workspace").CurrentCamera.CameraSubject = lplayer.Character.Humanoid
@@ -545,9 +545,9 @@ function viewee(whome)
         whome = GetPlayer(whome)[1]
         whome = game.Workspace[whome.Name]
         if whome.Character.Humanoid then
-            game:GetService("Workspace").CurrentCamera.CameraSubject = whome.Character.Humanoid
+            game:GetService("Workspace").CurrentCamera.CameraSubject = whome.Humanoid
         else
-            game:GetService("Workspace").CurrentCamera.CameraSubject = whome.Character.Head
+            game:GetService("Workspace").CurrentCamera.CameraSubject = whome.Head
         end
     end
 
