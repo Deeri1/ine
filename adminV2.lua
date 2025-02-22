@@ -750,6 +750,13 @@ function adminee(typee)
 
 end
 
+LogService = game:GetService("LogService")
+function consolee(typee)
+    if typee == "clear" then
+        LogService:ClearOutput()
+    end
+end
+
 function empty()
     
 end
@@ -898,6 +905,12 @@ commands = {
             altnames = {},
             autoexe = false,
             description  = "fly exe: /e fly off (stops flying) :: /e fly (starts flying)"
+        },
+        console = {
+            functionname = [[console(ctable[2])]],
+            altnames = {},
+            autoexe = false,
+            description  = "console exe: /e console clear (clears console)"
         },
         plr = {
             functionname = [[playervars(ctable[2],ctable[3])]],
