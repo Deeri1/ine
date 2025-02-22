@@ -845,8 +845,8 @@ commands = {
             description  = "press crtl and click to tp to your mouses location"
         },
         admin = {
-            functionname = [[adminee()]],
-            altnames = {},
+            functionname = [[adminee(ctable[2])]],
+            altnames = {"adm"},
             autoexe = false,
             description  = "remove/reload admin exe: '/e admin no' (removes admin) :: '/e admin reload' (reloads admin)"
         },
