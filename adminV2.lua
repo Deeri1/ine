@@ -86,6 +86,7 @@ repeat wait() until isfolder("DeeriHub")
                     end
                 end
             end
+            noltable = {}
     else
         tempncend = false
         while wait() and tempncend == false do
