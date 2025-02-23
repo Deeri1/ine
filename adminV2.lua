@@ -92,7 +92,7 @@ repeat wait() until isfolder("DeeriHub")
         while wait() and tempncend == false do
                 for i, v in pairs(workspace:GetDescendants()) do
                     if v:IsA("Part") then
-                        if v.Parent~=workspace then
+                        if v.Parent~=workspace and v.CanCollide == true then
                             v.CanCollide = false
                             noltable[#noltable+1] = v
                         end
