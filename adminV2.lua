@@ -583,6 +583,7 @@ local defaultws = humanoid.WalkSpeed
 local defaultjp = humanoid.JumpPower
 local defaultgrav = workspace.Gravity
 local defaulthh = humanoid.HipHeight
+local swimming = false
 function playervars(typee,num)
     humanoid = game.Players.LocalPlayer.Character.Humanoid
     if typee == "walkspeed" or typee == "ws" then
@@ -608,8 +609,56 @@ function playervars(typee,num)
             humanoid.HipHeight = num
         else
             humanoid.HipHeight = defaulthh
-        end     
-    end
+        end
+    elseif typee == "reset" then
+        humanoid.WalkSpeed = defaultws
+        humanoid.JumpPower = defaultjp
+        workspace.Gravity = defaultgrav
+        humanoid.HipHeight = defaulthh
+        playervars("swim","off")
+    elseif typee == "sit" then
+        humanoid.Sit = true
+    elseif typee == "swim"    
+        if not swimming and not num == "off" then
+            oldgrav = workspace.Gravity
+            workspace.Gravity = 0
+            local swimDied = function()
+                workspace.Gravity = oldgrav
+                swimming = false
+            end
+            local Humanoid = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid")
+            gravReset = Humanoid.Died:Connect(swimDied)
+            local enums = Enum.HumanoidStateType:GetEnumItems()
+            table.remove(enums, table.find(enums, Enum.HumanoidStateType.None))
+            for i, v in pairs(enums) do
+                Humanoid:SetStateEnabled(v, false)
+            end
+            Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+            swimbeat = RunService.Heartbeat:Connect(function()
+                pcall(function()
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = ((Humanoid.MoveDirection ~= Vector3.new() or UserInputService:IsKeyDown(Enum.KeyCode.Space)) and speaker.Character.HumanoidRootPart.Velocity or Vector3.new())
+                end)
+            end)
+            swimming = true
+            end
+        else
+            workspace.Gravity = oldgrav
+            swimming = false
+            if gravReset then
+                gravReset:Disconnect()
+            end
+            if swimbeat ~= nil then
+                swimbeat:Disconnect()
+                swimbeat = nil
+            end
+            local Humanoid = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid")
+            local enums = Enum.HumanoidStateType:GetEnumItems()
+            table.remove(enums, table.find(enums, Enum.HumanoidStateType.None))
+            for i, v in pairs(enums) do
+                Humanoid:SetStateEnabled(v, true)
+            end
+
+        end
 
 end
 attachgone = true
@@ -908,7 +957,7 @@ commands = {
             functionname = [[playervars(ctable[2],ctable[3])]],
             altnames = {"player","playerval"},
             autoexe = false,
-            description  = "change player values exe: /e plr walkspeed 100 :: /e plr jumppower 100 :: /e plr gravity 100 :: /e plr hipheight 100 (dont add a number to reset to default)"
+            description  = "change player values exe: /e plr walkspeed 100 :: /e plr jumppower 100 :: /e plr gravity 100 :: /e plr hipheight 100 :: /e plr swim :: /e plr sit (dont add a number to reset to default)"
         }
 
 }
