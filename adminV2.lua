@@ -75,10 +75,11 @@ repeat wait() until isfolder("DeeriHub")
         return Found    
     end
     tempncend = true
+    noltable = {}
     function nolcipf(version)
         if version == "off" then
             tempncend = true
-            for i, v in pairs(workspace:GetDescendants()) do
+            for i, v in pairs(noltable) do
                 if v:IsA("Part") then
                     if v.Parent~=workspace then
                         v.CanCollide = true
@@ -92,6 +93,7 @@ repeat wait() until isfolder("DeeriHub")
                     if v:IsA("Part") then
                         if v.Parent~=workspace then
                             v.CanCollide = false
+                            noltable[#noltable+1] = v
                         end
                     end
                 end
@@ -611,15 +613,15 @@ function playervars(typee,num)
             humanoid.HipHeight = defaulthh
         end
     elseif typee == "reset" then
+        playervars("swim","off")
         humanoid.WalkSpeed = defaultws
         humanoid.JumpPower = defaultjp
         workspace.Gravity = defaultgrav
         humanoid.HipHeight = defaulthh
-        playervars("swim","off")
     elseif typee == "sit" then
         humanoid.Sit = true
-    elseif typee == "swim"    
-        if not swimming and not num == "off" then
+    elseif typee == "swim" then 
+        if !swimming and num ~= "off" then
             oldgrav = workspace.Gravity
             workspace.Gravity = 0
             local swimDied = function()
@@ -640,7 +642,6 @@ function playervars(typee,num)
                 end)
             end)
             swimming = true
-            end
         else
             workspace.Gravity = oldgrav
             swimming = false
@@ -659,7 +660,7 @@ function playervars(typee,num)
             end
 
         end
-
+    end
 end
 attachgone = true
 function atachee(typee,whom)
@@ -1036,8 +1037,11 @@ datastuff()
 --done
 characters = ('a') or ('b') or ("c") or ('d') or ('e') or ("f") or ('g') or ('h') or ("i") or ('j') or ('k') or ("l") or ('m') or ("n") or ('o') or ('p') or ("q") or ('r') or ("s") or ('t') or ('u') or ("v") or ('w') or ("x") or ('y') or ('z')
 debouse = false
-plr.Chatted:Connect(function(msg)
+func = plr.Chatted:Connect(function(msg)
         if debouse or nomore then
+            if nomore then
+                func:Disconnect()
+            end
             return
         end
         debouse = true
@@ -1098,8 +1102,10 @@ plr.Chatted:Connect(function(msg)
             end
         end
         print("total: ",total)
+        found = false
         if commands[ctable[1]] then
             print("cmd "..ctable[1].." found nosearch")
+            found = true
             debouse = false
             v = commands[ctable[1]]
             if total == 1 then
@@ -1116,7 +1122,6 @@ plr.Chatted:Connect(function(msg)
             end
 
         else
-            print("cmd "..ctable[1].." found search")
             debouse = false
             y = ctable[1]
             for i, v in pairs(commands) do
@@ -1124,8 +1129,10 @@ plr.Chatted:Connect(function(msg)
                 v = v["altnames"]
                -- print('lol',v[1])
                 for i, v in pairs(v) do
-                    print(v,y)
+                   -- print(v,y)
                     if v == y then
+                        found = true
+                        print("cmd "..ctable[1].." found search")
                        i = commands[e]
                        if total == 1 then
                        -- print("total 1")
@@ -1145,6 +1152,10 @@ plr.Chatted:Connect(function(msg)
                 end
             end
 
+        end
+        if found == false then
+            print("Command not found")
+            debouse = false
         end
     end
     debouse = false
