@@ -622,7 +622,7 @@ function playervars(typee,num)
     elseif typee == "sit" then
         humanoid.Sit = true
     elseif typee == "swim" then 
-        if !swimming and num ~= "off" then
+        if not swimming and num ~= "off" then
             oldgrav = workspace.Gravity
             workspace.Gravity = 0
             local swimDied = function()
