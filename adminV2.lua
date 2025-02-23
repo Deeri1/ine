@@ -517,6 +517,8 @@ end
 function updateee(typee)
     if typee == "load" then
         datastuff()
+    elseif typee == "del"  or typee == "delete" then
+        cleardata()
     else
         savedata = ""
         for i, v in pairs(data) do
@@ -708,9 +710,9 @@ function flyee(typee,key)
 			CONTROL.L = - (flyspeed)
 		elseif KEY:lower() == 'd' then 
 			CONTROL.R = (flyspeed)
-		elseif QEfly and KEY:lower() == 'e' then
+		elseif KEY:lower() == 'e' then
 			CONTROL.Q = (flyspeed)*2
-		elseif QEfly and KEY:lower() == 'q' then
+		elseif KEY:lower() == 'q' then
 			CONTROL.E = -(flyspeed)*2
 		end
 		pcall(function() workspace.CurrentCamera.CameraType = Enum.CameraType.Track end)
@@ -786,7 +788,7 @@ commands = {
             functionname = [[updateee(ctable[2])]],
             altnames = {"savedata","savedna","updatedna"},
             autoexe = false,
-            description  = "saves data, or loads data exe :: /e save load (loads data from file, when you wana reset data to one already saved without rejoining) :: /e save (saves data)"
+            description  = "saves data, loads, or deletes data exe :: /e save load (loads data from file, when you wana reset data to one already saved without rejoining) :: /e save del (deletes data) :: /e save (saves data)"
         },
         split = {
             functionname = [[splite(ctable[2])]],
