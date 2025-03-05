@@ -42,7 +42,7 @@ local DetailedCredits = Config.DetailedCredits or false -- Detailed Credits lol
 
 -- [[ Rig Settings ]] --
 local AreAnimationsDisabled = Config.AnimationsDisabled or false -- Disable Anims
-local IsPermaDeath = Config.PermanentDeath or false -- Permanent Death
+local IsPermaDeath = Config.PermanentDeath or true -- Permanent Death
 
 -- [[ R15 Stuff ]] --
 local R15ToR6 = Config.R15ToR6 or false -- Convert R15 To R6
@@ -51,14 +51,6 @@ local R15ToR6 = Config.R15ToR6 or false -- Convert R15 To R6
 local AlignReanimate = Config.AlignReanimate or false -- Align Reanimate
 local MaxAlignReanimate = Config.FullForceAlign or false -- Maximazes Align Position Force by making another one, might be less stable but no longer wacky
 
--- [[ Optimizer ]] --
-local OptimizeGame = Config.OptimizeGame or false -- Runs Game Optimizer.
-if OptimizeGame == true and (not TestService:FindFirstChild("Check")) then
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/L8X/GameOptimizer/main/src.lua", true))()
-	local Part = Instance.new("Part")
-	Part.Name = "Check"
-	Part.Parent = TestService
-end
 local FasterHeartbeat = Config.FasterHeartbeat or false
 -- Uses Newer Runservices, which makes artifical event x2 times faster than heartbeat, can affect fps. 
 
