@@ -816,7 +816,7 @@ end))
 end)
 warn("Reanimated in " .. string.sub(tostring(tick()-Speed),1,string.find(tostring(tick()-Speed),".")+5))
 
-wait(math.random() * 2)
+wait(10)
 
 print("UwU moment")
 
@@ -1611,7 +1611,16 @@ function sphereMK(bonuspeed, FastSpeed, type, pos, x1, y1, z1, value, color, out
 end
 
 workspace.ChildAdded:connect(function(instance)
-	
+	for BANISH = 1, #TOBANISH do
+		if TOBANISH[BANISH] ~= nil then
+			if instance.Name == TOBANISH[BANISH] then
+				coroutine.resume(coroutine.create(function()
+					instance:ClearAllChildren()
+					game.Debris:AddItem(instance, 0.0005)
+				end))
+			end
+		end
+	end
 end)
 
 function SpawnTrail(FROM, TO, BIG)
@@ -2704,7 +2713,7 @@ spawn(function()
 					clne.Transparency = .8
 					clne.Material = "Neon"
 					clne:BreakJoints()
-				--	clne.CanCollide = false
+					clne.CanCollide = false
 					clne.Anchored = true
 					clne.Parent = effects
 					clne.Name = "glitch"
@@ -2729,7 +2738,7 @@ spawn(function()
 							clne.Transparency = .8
 							clne.Material = "Neon"
 							clne:BreakJoints()
-						--	clne.CanCollide = false
+							clne.CanCollide = false
 							clne.Anchored = true
 							clne.Parent = effects
 							clne.Name = "glitch"
