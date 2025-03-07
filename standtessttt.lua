@@ -1,6 +1,6 @@
 --gh 8918826107,6201747264,4735551808,62724852,48474294,48474313,63690008,3662265036,451220849
 game:GetService("Players").LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
-game:GetService("Players").LocalPlayer.Character["Hat1"].Handle.Mesh:Destroy()
+game:GetService("Players").LocalPlayer.Character["International Fedora"].Handle.SpecialMesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Pal Hair"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Robloxclassicred"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
@@ -8,7 +8,7 @@ game:GetService("Players").LocalPlayer.Character["Kate Hair"].Handle.Mesh:Destro
 
 
 game:GetService("Players").LocalPlayer.Character["LavanderHair"].Name     = "gamer1"
-game:GetService("Players").LocalPlayer.Character["Hat1"].Name             = "gamer2"
+game:GetService("Players").LocalPlayer.Character["International Fedora"].Name             = "gamer2"
 game:GetService("Players").LocalPlayer.Character["Pal Hair"].Name         = "gamer3"
 game:GetService("Players").LocalPlayer.Character["Robloxclassicred"].Name = "gamer4"
 game:GetService("Players").LocalPlayer.Character["Pink Hair"].Name        = "gamer5"
@@ -1078,7 +1078,7 @@ local function align(part0, part1)
 	part0.AccessoryWeld:Destroy()
 	local attachment0 = Instance.new("Attachment", part0)
 	attachment0.Position = Vector3.new(.5, -0, 0) --Custom Positioning Values Here
-	attachment0.Orientation = Vector3.new(90, 0, 0) --Custom Rotationing Values here
+	attachment0.Orientation = Vector3.new(0, 0, 0) --Custom Rotationing Values here
 	local attachment1 = Instance.new("Attachment", part1)
 	local weldpos = Instance.new("AlignPosition", part0)
 	weldpos.Attachment0 = attachment0
@@ -1383,6 +1383,11 @@ mouse.KeyUp:connect(function(k)
 		candobarrage = true
 	end
 end)
+for i,v in game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+    if v:IsA("BasePart") then
+        v.CanCollide = false
+    end
+end
 inpose = false
 local kan = Instance.new("Sound", char)
 kan.Volume = 0
@@ -1861,15 +1866,14 @@ spawn(function()
 		local para = RaycastParams.new()
 		para.FilterType = Enum.RaycastFilterType.Blacklist
 		para.FilterDescendantsInstances = { char }
-		result = workspace:Raycast(root.CFrame.p,
-			((CFrame.new(root.Position, root.Position - Vector3.new(0, 1, 0))).lookVector).unit * (4), para)
+		result = workspace:Raycast(root.CFrame.p,((CFrame.new(root.Position, root.Position - Vector3.new(0, 1, 0))).lookVector).unit * (4), para)
 		result2 = workspace:Raycast(root.CFrame.p, root.Position - Vector3.new(0, 9999999999999999, 0), para)
 
 		if result then
-			hitpos, hitfloor = result.Position, result.Instance
+			hitpos, hitfloor = result, result.Instance
 		else
 			if result2 then
-				hitpos, hitfloor = result2.Position, nil
+				hitpos, hitfloor = result2, nil
 			end
 		end
 		hum.DisplayDistanceType = "None"
