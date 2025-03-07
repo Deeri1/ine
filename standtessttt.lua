@@ -1,6 +1,6 @@
---gh 8918826107,6201747264,4735551808,62724852,48474294,48474313,63690008,3662265036,451220849
+--gh 8918826107,6201747264,4735551808,62724852,48474294,48474313,63690008,62234425,451220849
 game:GetService("Players").LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
-game:GetService("Players").LocalPlayer.Character["International Fedora"].Handle.SpecialMesh:Destroy()
+game:GetService("Players").LocalPlayer.Character["Hat1"].Handle.SpecialMesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Pal Hair"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Robloxclassicred"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
@@ -8,7 +8,7 @@ game:GetService("Players").LocalPlayer.Character["Kate Hair"].Handle.Mesh:Destro
 
 
 game:GetService("Players").LocalPlayer.Character["LavanderHair"].Name     = "gamer1"
-game:GetService("Players").LocalPlayer.Character["International Fedora"].Name             = "gamer2"
+game:GetService("Players").LocalPlayer.Character["Hat1"].Name             = "gamer2"
 game:GetService("Players").LocalPlayer.Character["Pal Hair"].Name         = "gamer3"
 game:GetService("Players").LocalPlayer.Character["Robloxclassicred"].Name = "gamer4"
 game:GetService("Players").LocalPlayer.Character["Pink Hair"].Name        = "gamer5"
