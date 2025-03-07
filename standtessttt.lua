@@ -1,3 +1,4 @@
+--gh 8918826107,6201747264,4735551808,62724852,48474294,48474313,63690008,3662265036,451220849
 game:GetService("Players").LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Hat1"].Handle.Mesh:Destroy()
 game:GetService("Players").LocalPlayer.Character["Pal Hair"].Handle.Mesh:Destroy()
