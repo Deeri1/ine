@@ -1078,7 +1078,7 @@ local function align(part0, part1)
 	part0.AccessoryWeld:Destroy()
 	local attachment0 = Instance.new("Attachment", part0)
 	attachment0.Position = Vector3.new(.5, -0, 0) --Custom Positioning Values Here
-	attachment0.Orientation = Vector3.new(0, 0, 0) --Custom Rotationing Values here
+	attachment0.Orientation = Vector3.new(90, 0, 0) --Custom Rotationing Values here
 	local attachment1 = Instance.new("Attachment", part1)
 	local weldpos = Instance.new("AlignPosition", part0)
 	weldpos.Attachment0 = attachment0

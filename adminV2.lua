@@ -620,7 +620,7 @@ function playervars(typee,num)
         workspace.Gravity = defaultgrav
         humanoid.HipHeight = defaulthh
     elseif typee == "sit" then
-        humanoid.Sit = true
+        humanoid.Sit = not humanoid.Sit
     elseif typee == "swim" then 
         if not swimming and num ~= "off" then
             oldgrav = workspace.Gravity
@@ -839,7 +839,7 @@ commands = {
             functionname = [[updateee(ctable[2])]],
             altnames = {"savedata","savedna","updatedna"},
             autoexe = false,
-            description  = "saves data, loads, or deletes data exe :: /e save load (loads data from file, when you wana reset data to one already saved without rejoining) :: /e save del (deletes data) :: /e save (saves data)"
+            description  = "saves, loads, or deletes data exe :: /e save load (loads data from file, when you wana reset data to one already saved without rejoining) :: /e save del (deletes data) :: /e save (saves data)"
         },
         split = {
             functionname = [[splite(ctable[2])]],
