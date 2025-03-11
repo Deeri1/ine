@@ -243,8 +243,10 @@ function pdeathbaseplategame(nh)
     ABV.Parent = char.HumanoidRootPart
     char.HumanoidRootPart.Transparency = .5
     char.HumanoidRootPart.AngularVelocity.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
+    scripthere = _G.scripthere
+    coroutine.wrap(scripthere)()
 
-end
+end--end of baseplate
 
 function botbasic(nh)
 
