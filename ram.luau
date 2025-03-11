@@ -136,9 +136,15 @@ RunService.PreSimulation:Connect(function()
         if v:IsA("BasePart") then
 		v.CanCollide = false
             if v and v.Parent then
-              --  v.AssemblyLinearVelocity = Velocity
+                v.AssemblyLinearVelocity = Velocity
             end
         end
     end
 end)
-game.Players.LocalPlayer.Character = dummy
+local CurCameraOffset = workspace.CurrentCamera.CFrame
+workspace.CurrentCamera.CFrame = CurCameraOffset
+Player.Character = dummy
+workspace.CurrentCamera.CFrame = CurCameraOffset
+workspace.CurrentCamera.CameraSubject = FakeHum
+workspace.CurrentCamera.CFrame = CurCameraOffset
+
