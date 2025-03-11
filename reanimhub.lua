@@ -32,6 +32,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reani
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimsafekeeping.txt"))() -- game setup lol
 
 warn("made by deeri btw")
+StarterGui:SetCore("SendNotification", {
+    Title = "Thanks"
+    Text = Text or "Your A Wizard "..Player.Name,
+    Duration = 3
+})
 
 function pdeathbaseplategame(nh)
     --G.neededhats = {}
@@ -95,70 +100,71 @@ function pdeathbaseplategame(nh)
         AlignOrientation.Attachment0 = Attachment1
         AlignOrientation.Attachment1 = Attachment2
     end
-        --hat stuff
-        --finds the hats your missing and sets them as a hat in tempart
+    --hat stuff
+    --finds the hats your missing and sets them as a hat in tempart
 
-        
+    
 
-        totalmh = 0
-        hataray = {}
-        idlist = {}
-        function fmissinghats(nh)
-            for i,v in pairs(nh) do
-                for i,h in pairs(workspace.tempart:GetDescendants()) do
-                    if h:FindFirstChild("Mesh") then
-                        if h.Mesh.TextureId == v then
-                            totalmh = totalmh + 1
-                            table.insert(idlist,h.Parent:GetAttribute("id"))
-                            table.insert(hataray,h)
-                        end
-                    elseif h:FindFirstChild("SpecialMesh") then
-                        if h.SpecialMesh.TextureId == v then
-                            totalmh = totalmh + 1
-							print(h.Parent:GetAttribute("id"))
-                            table.insert(idlist,h.Parent:GetAttribute("id"))
-                            table.insert(hataray,h)
-                        end
+    totalmh = 0
+    hataray = {}
+    idlist = {}
+    function fmissinghats(nh)
+        for i,v in pairs(nh) do
+            for i,h in pairs(workspace.tempart:GetDescendants()) do
+                if h:FindFirstChild("Mesh") then
+                    if h.Mesh.TextureId == v then
+                        totalmh = totalmh + 1
+                        table.insert(idlist,h.Parent:GetAttribute("id"))
+                        table.insert(hataray,h)
+                    end
+                elseif h:FindFirstChild("SpecialMesh") then
+                    if h.SpecialMesh.TextureId == v then
+                        totalmh = totalmh + 1
+                        print(h.Parent:GetAttribute("id"))
+                        table.insert(idlist,h.Parent:GetAttribute("id"))
+                        table.insert(hataray,h)
                     end
                 end
             end
         end
-    
-    
-        ----------------------------------------------------------------
-        --putting on missing hats :)
-		function testgh(ha)
-            --testing if can -gh command :)
-            local strangofhats = "-gh "
-            for i,v in ha do
-                strangofhats = strangofhats..v..", "
-            end
-            string.sub(strangofhats,1,string.len(strangofhats)-1)
---	print("here")
-		    print(strangofhats)
-            local chatEvent = Instance.new("BindableEvent")
+    end
 
-            game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
-            -- Line above may error. Make sure to use pcall when using it and retry
 
-            chatEvent:Fire(strangofhats)
-            chatEvent:Destroy()
-		end
-        function putonmhats(ha)
-            for i,v in pairs(ha) do
-                tmph = v.Parent:Clone()
-                --print("cloned"..v.Parent.Name.."")
-                tmph.Parent = workspace[plrname]
-            end
-            task.wait()
-            tempart:Destroy()
+    ----------------------------------------------------------------
+    --putting on missing hats :)
+    --testing if can -gh command :)
+    function testgh(ha)
+        local strangofhats = "-gh "
+        for i,v in ha do
+            strangofhats = strangofhats..v..", "
         end
-        fmissinghats(nh)
-		testgh(idlist)
-		wait(.5)
-		fmissinghats(nh)
-        putonmhats(hataray)
-        wait()
+        string.sub(strangofhats,1,string.len(strangofhats)-1)
+        --	print("here")
+        print(strangofhats)
+        local chatEvent = Instance.new("BindableEvent")
+        game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
+        -- Line above may error. Make sure to use pcall when using it and retry
+
+        chatEvent:Fire(strangofhats)
+        chatEvent:Destroy()
+    end
+    function putonmhats(ha)
+        for i,v in pairs(ha) do
+            tmph = v.Parent:Clone()
+            --print("cloned"..v.Parent.Name.."")
+            tmph.Parent = workspace[plrname]
+        end
+        task.wait()
+        tempart:Destroy()
+    end
+
+    fmissinghats(nh)
+    testgh(idlist)
+    wait(.5)
+    fmissinghats(nh)
+    putonmhats(hataray)
+    wait()
+
     --dummy stuff
     --dummy clone
     for i, v in pairs(workspace:GetDescendants()) do
@@ -197,7 +203,7 @@ function pdeathbaseplategame(nh)
     task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
     local Head = Character:FindFirstChild("Head")
     Head:BreakJoints() 
-    print("huh")
+    print("dead")
     game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
 
     for i,v in pairs(char:GetChildren()) do
@@ -629,3 +635,8 @@ if _G.type == "bot" then
 elseif _G.type == "baseplate" then
     pdeathbaseplategame(neededhats)
 end
+StarterGui:SetCore("SendNotification", {
+	Title = "Status"
+	Text = Text or "Reanimated",
+	Duration = 3
+})
