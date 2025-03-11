@@ -1,4 +1,4 @@
-game.Loaded:Wait()
+--game.Loaded:Wait()
 --vars
 local Players = game:FindFirstChildOfClass("Players")
 local RunService = game:FindFirstChildOfClass("RunService")
@@ -14,8 +14,9 @@ local LeftArm = Character:WaitForChild("Left Arm")
 local RightLeg = Character:WaitForChild("Right Leg")
 local LeftLeg = Character:WaitForChild("Left Leg")
 local Torso = Character:WaitForChild("Torso")
-Local Camera = workspace.CurrentCamera
+local Camera = workspace.CurrentCamera
 local Mouse = Player:GetMouse()
+workspace.FallenPartsDestroyHeight = 0/0
 
 --functions
 function cfmove(p0,p1)
@@ -62,7 +63,9 @@ for i, v in pairs(workspace:GetDescendants()) do
     v:Destroy()
     end
 end
-for i, v in pairs(char:GetDescendants()) do
+char = game.Players.LocalPlayer.Character
+char.Archivable = true
+for i, v in char:GetDescendants() do
     v.Archivable = true
     if v:IsA("BasePart") then
         v.CanCollide = false
@@ -70,30 +73,32 @@ for i, v in pairs(char:GetDescendants()) do
 end
 
 dummy = char:Clone()
+wait(1)
 dummy.Name = "Dummylolxdnoo"
 dummy.Parent = workspace
 
 dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
 
-game.Players.LocalPlayer.ReplicationFocus = workspace[plrname]
+game.Players.LocalPlayer.ReplicationFocus = workspace[Player.Name]
 for i, v in pairs(dummy:GetDescendants()) do
     v.Archivable = true
     if v:IsA("BasePart") then
     v.Transparency = 1
-   -- v.CanCollide = false
+    v.CanCollide = false
     end
 end
-dummy.breakJointsOnDeath = false
+--dummy.breakJointsOnDeath = false
 ---reanim main
 
 game:GetService("StarterGui"):SetCore("ResetButtonCallback", false)
 task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
 local Head = Character:FindFirstChild("Head")
 Head:BreakJoints() 
+print("huh")
 game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
 
 for i,v in pairs(char:GetChildren()) do
-    if v:IsA("BasePart") then
+    if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
         if dummy:FindFirstChild(v.Name) then
             move(v,dummy[v.Name])
         end
@@ -101,14 +106,14 @@ for i,v in pairs(char:GetChildren()) do
         for i2,v2 in pairs(dummy:GetChildren()) do
             if v2:IsA("Accessory") and v2.Name ~= "used" then -- a bunch of checks lol
                 if v.Handle.Size == v2.Handle.Size then
-                    if (v.Mesh and v2.Mesh) or (v.SpecialMesh and v2.SpecialMesh) then
-                        if v.Mesh then
-                            if v.Mesh.MeshId == v2.Mesh.MeshId and v.Mesh.TextureId == v2.Mesh.TextureId then
+                    if (v.Handle:findFirstChild("Mesh") and v2.Handle:findFirstChild("Mesh")) or (v.Handle:findFirstChild("SpecialMesh") and v2.Handle:findFirstChild("SpecialMesh")) then
+                        if v.Handle:findFirstChild("Mesh") then
+                            if v.Handle.Mesh.MeshId == v2.Handle.Mesh.MeshId and v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId then
                                 move(v.Handle,v2.Handle)
                                 v2.Name = "used"
                             end
                         else
-                            if v.SpecialMesh.MeshId == v2.SpecialMesh.MeshId and v.SpecialMesh.TextureId == v2.SpecialMesh.TextureId then
+                            if v.Handle.SpecialMesh.MeshId == v2.Handle.SpecialMesh.MeshId and v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId then
                                 move(v.Handle,v2.Handle)
                                 v2.Name = "used"
                             end
@@ -123,12 +128,17 @@ char.Parent = dummy
 
 --velocity loop
 RunService.PreSimulation:Connect(function()
+	if not dummy:FindFirstChild("HumanoidRootPart") then
+		return
+	end
     Velocity = Vector3.new(dummy["HumanoidRootPart"].CFrame.LookVector.X * 85, dummy["Head"].Velocity.Y * 4, dummy["HumanoidRootPart"].CFrame.LookVector.Z * 85)
     for i,v in char:GetDescendants() do
         if v:IsA("BasePart") then
+		v.CanCollide = false
             if v and v.Parent then
-                v.AssemblyLinearVelocity = Velocity
+              --  v.AssemblyLinearVelocity = Velocity
             end
         end
     end
 end)
+game.Players.LocalPlayer.Character = dummy
