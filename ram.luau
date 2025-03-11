@@ -147,3 +147,28 @@ Player.Character = dummy
 workspace.CurrentCamera.CFrame = CurCameraOffset
 workspace.CurrentCamera.CameraSubject = dummy.Humanoid
 workspace.CurrentCamera.CFrame = CurCameraOffset
+
+p0 = char.HumanoidRootPart
+p1 = dummy["Right Arm"]
+local AlignPosition = Instance.new("AlignPosition"); do
+    AlignPosition.MaxForce = 66666666666
+    AlignPosition.RigidityEnabled = true
+    AlignPosition.Responsiveness = 200
+    AlignPosition.Name = "AlignPosition1"
+    AlignPosition.Parent = p0
+end
+local Attachment1 = Instance.new("Attachment"); do
+    Attachment1.Position = Vector3.new(0,0,0)
+    Attachment1.Orientation = Vector3.new(0,0,0)
+    Attachment1.Name = "Attachment1"
+    Attachment1.Parent = p0
+end
+
+local Attachment2 = Instance.new("Attachment"); do
+    Attachment2.Parent = p1
+end
+
+AlignPosition.Attachment0 = Attachment1
+AlignPosition.Attachment1 = Attachment2
+char.HumanoidRootPart.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
+char.HumanoidRootPart.AssemblyAngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
