@@ -9,6 +9,8 @@ end
 _G.neededhats = {} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869}
 _G.type = "bot" --bot, baseplate
 _G.bottype = "OG" -- OG, Freehat
+_G.huboveride = nil -- if you have a hub and use this reanim you can overide type choice if loading scripts that already have this reanim built in (prob usefull only to me lol)
+_G.huboveridebt = nil -- if you have a hub and use this reanim you can overide bot type choice if loading scripts that already have this reanim built in (prob usefull only to me lol)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
 
 --lol my code not that good looking --deeri]]
@@ -109,7 +111,22 @@ function pdeathbaseplategame(nh)
     
         ----------------------------------------------------------------
         --putting on missing hats :)
-    
+        --testing if can -gh command :)
+        local strangofhats = "-gh "
+        for i,v in pairs(ha) do
+            strangofhats = strangofhats..v..","
+        end
+        string.sub(strangofhats,1,string.len(strangofhats)-1)
+        print(strangofhats)
+        local chatEvent = Instance.new("BindableEvent")
+
+        game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
+        -- Line above may error. Make sure to use pcall when using it and retry
+
+        chatEvent:Fire(strangofhats)
+        chatEvent:Destroy()
+        wait()
+
         function putonmhats(ha)
             for i,v in pairs(ha) do
                 tmph = v.Parent:Clone()
@@ -579,9 +596,14 @@ end
 
 ----------------------------------------------------------------
 
-if _G.type == "bot" then
-    botbasic(neededhats)
+if _G.huboveride != nil then
+    _G.type = _G.huboveride
 end
-if _G.type == "baseplate" then
+if _G.type == "bot" then
+    if _G.huboveridebt != nil then
+        _G.bottype = _G.huboveridebt
+    end
+    botbasic(neededhats)
+elseif _G.type == "baseplate" then
     pdeathbaseplategame(neededhats)
 end
