@@ -91,18 +91,20 @@ function pdeathbaseplategame(nh)
 
         totalmh = 0
         hataray = {}
-		mhid = {}
+        idlist = {}
         function fmissinghats(nh)
             for i,v in pairs(nh) do
                 for i,h in pairs(workspace.tempart:GetDescendants()) do
                     if h:FindFirstChild("Mesh") then
                         if h.Mesh.TextureId == v then
                             totalmh = totalmh + 1
+                            table.insert(idlist,h:GetAttribute("id"))
                             table.insert(hataray,h)
                         end
                     elseif h:FindFirstChild("SpecialMesh") then
                         if h.SpecialMesh.TextureId == v then
                             totalmh = totalmh + 1
+                            table.insert(idlist,h:GetAttribute("id"))
                             table.insert(hataray,h)
                         end
                     end
@@ -114,21 +116,20 @@ function pdeathbaseplategame(nh)
         ----------------------------------------------------------------
         --putting on missing hats :)
 		function testgh(ha)
-        --testing if can -gh command :)
-        local strangofhats = "-gh "
-        for i,v in ha do
-            strangofhats = strangofhats..v..","
-        end
-        string.sub(strangofhats,1,string.len(strangofhats)-1)
-        print(strangofhats)
-        local chatEvent = Instance.new("BindableEvent")
+            --testing if can -gh command :)
+            local strangofhats = "-gh "
+            for i,v in ha do
+                strangofhats = strangofhats..v..","
+            end
+            string.sub(strangofhats,1,string.len(strangofhats)-1)
+            print(strangofhats)
+            local chatEvent = Instance.new("BindableEvent")
 
-        game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
-        -- Line above may error. Make sure to use pcall when using it and retry
+            game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
+            -- Line above may error. Make sure to use pcall when using it and retry
 
-        chatEvent:Fire(strangofhats)
-        --chatEvent:Destroy()
-        wait()
+            chatEvent:Fire(strangofhats)
+            chatEvent:Destroy()
 		end
         function putonmhats(ha)
             for i,v in pairs(ha) do
@@ -137,8 +138,9 @@ function pdeathbaseplategame(nh)
                 tmph.Parent = workspace[plrname]
             end
             task.wait()
+            tempart:Destroy()
         end
-		testgh(_G.neededhats)
+		testgh(idlist)
 		wait(.5)
         fmissinghats(nh)
         putonmhats(hataray)
@@ -552,6 +554,7 @@ for i,v in pairs(_G.neededhats) do
 print(v)
 	pcall(function()
 		lol = game:GetObjects("rbxassetid://"..v.."")[1]
+        lol:SetAttribute("id", v)
    		lol.Parent = tempart
 	end)
 end
