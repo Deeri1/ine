@@ -170,5 +170,10 @@ end
 
 AlignPosition.Attachment0 = Attachment1
 AlignPosition.Attachment1 = Attachment2
-char.HumanoidRootPart.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
-char.HumanoidRootPart.AssemblyAngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
+local ABV = Instance.new("BodyAngularVelocity")
+ABV.P = 1/0
+ABV.MaxTorque = Vector3.new(1/0,1/0,1/0)
+ABV.AngularVelocity = Vector3.new(0,0,0)
+ABV.Name = "AngularVelocity"
+ABV.Parent = char.HumanoidRootPart
+char.HumanoidRootPart.AngularVelocity.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
