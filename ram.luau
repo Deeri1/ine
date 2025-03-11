@@ -1,3 +1,6 @@
+--G.neededhats = {}
+
+
 --game.Loaded:Wait()
 --vars
 local Players = game:FindFirstChildOfClass("Players")
@@ -55,7 +58,47 @@ function move(p0,p1) --thanks daddy Gelatek
 	AlignOrientation.Attachment0 = Attachment1
 	AlignOrientation.Attachment1 = Attachment2
 end
+--hat stuff
+     --finds the hats your missing and sets them as a hat in tempart
 
+    
+
+     totalmh = 0
+     hataray = {}
+     function fmissinghats(nh)
+         for i,v in pairs(nh) do
+             for i,h in pairs(workspace.tempart:GetDescendants()) do
+                 if h:FindFirstChild("Mesh") then
+                     if h.Mesh.TextureId == v then
+                         totalmh = totalmh + 1
+                         table.insert(hataray,h)
+                     end
+                 elseif h:FindFirstChild("SpecialMesh") then
+                     if h.SpecialMesh.TextureId == v then
+                         totalmh = totalmh + 1
+                         table.insert(hataray,h)
+                     end
+                 end
+             end
+         end
+     end
+ 
+ 
+     ----------------------------------------------------------------
+     --putting on missing hats :)
+ 
+     function putonmhats(ha)
+         for i,v in pairs(ha) do
+             tmph = v.Parent:Clone()
+             --print("cloned"..v.Parent.Name.."")
+             tmph.Parent = workspace[plrname]
+         end
+         task.wait()
+     end
+
+     fmissinghats(nh)
+     putonmhats(hataray)
+     wait()
 --dummy stuff
 --dummy clone
 for i, v in pairs(workspace:GetDescendants()) do
@@ -172,8 +215,8 @@ AlignPosition.Attachment0 = Attachment1
 AlignPosition.Attachment1 = Attachment2
 local ABV = Instance.new("BodyAngularVelocity")
 ABV.P = 1/0
-ABV.MaxTorque = Vector3.new(1/0,1/0,1/0)
 ABV.AngularVelocity = Vector3.new(0,0,0)
 ABV.Name = "AngularVelocity"
 ABV.Parent = char.HumanoidRootPart
+char.HumanoidRootPart.Transparency = .5
 char.HumanoidRootPart.AngularVelocity.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
