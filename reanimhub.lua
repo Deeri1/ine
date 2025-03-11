@@ -85,6 +85,7 @@ function pdeathbaseplategame(nh)
         AlignOrientation.Attachment0 = Attachment1
         AlignOrientation.Attachment1 = Attachment2
     end
+    
     --hat stuff
     --finds the hats your missing and sets them as a hat in tempart
 
