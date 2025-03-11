@@ -21,9 +21,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reani
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimsafekeeping.txt"))() -- game setup lol
 
 warn("made by deeri btw")
-StarterGui:SetCore("SendNotification", {
+game.StarterGui:SetCore("SendNotification", {
     Title = "Thanks"
-    Text = Text or "Your A Wizard "..game.Players.LocalPlayer.Name,
+    Text = "Your A Wizard "..game.Players.LocalPlayer.Name,
     Duration = 3
 })
 
@@ -625,8 +625,8 @@ if _G.type == "bot" then
 elseif _G.type == "baseplate" then
     pdeathbaseplategame(neededhats)
 end
-StarterGui:SetCore("SendNotification", {
+game.StarterGui:SetCore("SendNotification", {
 	Title = "Status"
-	Text = Text or "Reanimated",
+	Text = "Reanimated",
 	Duration = 3
 })
