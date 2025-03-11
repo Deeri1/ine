@@ -14,7 +14,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reani
 --lol my code not that good looking --deeri]]
 ----------------------------------------------------------------
 
---functions for the different reanims
+--functions for the different reanims 
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimsafekeeping.txt"))() -- game setup lol
 
