@@ -1,14 +1,3 @@
---launcher
---hats needed for bot 14768693948,11159410305,11263254795,14768678294,14768701869 -- put in needed hats to test out without buying hats
-_G.scripthere = function()
-    game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
-    
-end
-_G.neededhats = {4524991457,4820152700,4315489767,4794315940,4458601937,4506945409} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869}
-_G.type = "baseplate" --bot, baseplate
-_G.bottype = "OG" -- OG, Freehat
-_G.huboveride = nil -- if you have a hub and use this reanim you can overide type choice if loading scripts that already have this reanim built in (prob usefull only to me lol)
-_G.huboveridebt = nil -- if you have a hub and use this reanim you can overide bot type choice if loading scripts that already have this reanim built in (prob usefull only to me lol)
 --hub for my reanims and its settings // stuff
 ----------------------------------------------------------------
 --launcher
@@ -20,8 +9,8 @@ end
 _G.neededhats = {} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869}
 _G.type = "bot" --bot, baseplate
 _G.bottype = "OG" -- OG, Freehat
-_G.huboveride = nil -- if you have a hub and use this reanim you can overide type choice if loading scripts that already have this reanim built in (prob usefull only to me lol)
-_G.huboveridebt = nil -- if you have a hub and use this reanim you can overide bot type choice if loading scripts that already have this reanim built in (prob usefull only to me lol)
+_G.huboveride = nil -- if you have a hub and use this reanim you can overide type choice if loading scripts that already have this reanim built in (prob usefull only to me lol) (when releasing scripts with this reanim this line should be removed)
+_G.huboveridebt = nil -- if you have a hub and use this reanim you can overide bot type choice if loading scripts that already have this reanim built in (prob usefull only to me lol) (when releasing scripts with this reanim this line should be removed)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
 
 --lol my code not that good looking --deeri]]
@@ -34,7 +23,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reani
 warn("made by deeri btw")
 StarterGui:SetCore("SendNotification", {
     Title = "Thanks"
-    Text = Text or "Your A Wizard "..Player.Name,
+    Text = Text or "Your A Wizard "..game.Players.LocalPlayer.Name,
     Duration = 3
 })
 
