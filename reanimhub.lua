@@ -1,3 +1,14 @@
+--launcher
+--hats needed for bot 14768693948,11159410305,11263254795,14768678294,14768701869 -- put in needed hats to test out without buying hats
+_G.scripthere = function()
+    game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
+    
+end
+_G.neededhats = {4524991457,4820152700,4315489767,4794315940,4458601937,4506945409} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869}
+_G.type = "baseplate" --bot, baseplate
+_G.bottype = "OG" -- OG, Freehat
+_G.huboveride = nil -- if you have a hub and use this reanim you can overide type choice if loading scripts that already have this reanim built in (prob usefull only to me lol)
+_G.huboveridebt = nil -- if you have a hub and use this reanim you can overide bot type choice if loading scripts that already have this reanim built in (prob usefull only to me lol)
 --hub for my reanims and its settings // stuff
 ----------------------------------------------------------------
 --launcher
@@ -98,13 +109,14 @@ function pdeathbaseplategame(nh)
                     if h:FindFirstChild("Mesh") then
                         if h.Mesh.TextureId == v then
                             totalmh = totalmh + 1
-                            table.insert(idlist,h:GetAttribute("id"))
+                            table.insert(idlist,h.Parent:GetAttribute("id"))
                             table.insert(hataray,h)
                         end
                     elseif h:FindFirstChild("SpecialMesh") then
                         if h.SpecialMesh.TextureId == v then
                             totalmh = totalmh + 1
-                            table.insert(idlist,h:GetAttribute("id"))
+							print(h.Parent:GetAttribute("id"))
+                            table.insert(idlist,h.Parent:GetAttribute("id"))
                             table.insert(hataray,h)
                         end
                     end
@@ -119,10 +131,11 @@ function pdeathbaseplategame(nh)
             --testing if can -gh command :)
             local strangofhats = "-gh "
             for i,v in ha do
-                strangofhats = strangofhats..v..","
+                strangofhats = strangofhats..v..", "
             end
             string.sub(strangofhats,1,string.len(strangofhats)-1)
-            print(strangofhats)
+--	print("here")
+		    print(strangofhats)
             local chatEvent = Instance.new("BindableEvent")
 
             game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
@@ -140,9 +153,10 @@ function pdeathbaseplategame(nh)
             task.wait()
             tempart:Destroy()
         end
+        fmissinghats(nh)
 		testgh(idlist)
 		wait(.5)
-        fmissinghats(nh)
+		fmissinghats(nh)
         putonmhats(hataray)
         wait()
     --dummy stuff
@@ -551,11 +565,12 @@ if _G.type == "bot" then
 end
 
 for i,v in pairs(_G.neededhats) do
-print(v)
+--print(v)
 	pcall(function()
 		lol = game:GetObjects("rbxassetid://"..v.."")[1]
-        lol:SetAttribute("id", v)
    		lol.Parent = tempart
+		lol:SetAttribute("id", v)
+		print(lol:GetAttribute("id"))
 	end)
 end
 
