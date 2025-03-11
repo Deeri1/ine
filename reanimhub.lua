@@ -32,6 +32,7 @@ function pdeathbaseplategame(nh)
     local RunService = game:FindFirstChildOfClass("RunService")
     --plr vars
     local Player = Players.LocalPlayer
+	local plrname = Player.Name
     local Character = Player["Character"] or Player.CharacterAdded:Wait()
     local char = Character
     local Humanoid = Character:FindFirstChildWhichIsA("Humanoid")
@@ -90,6 +91,7 @@ function pdeathbaseplategame(nh)
 
         totalmh = 0
         hataray = {}
+		mhid = {}
         function fmissinghats(nh)
             for i,v in pairs(nh) do
                 for i,h in pairs(workspace.tempart:GetDescendants()) do
@@ -111,9 +113,10 @@ function pdeathbaseplategame(nh)
     
         ----------------------------------------------------------------
         --putting on missing hats :)
+		function testgh(ha)
         --testing if can -gh command :)
         local strangofhats = "-gh "
-        for i,v in pairs(ha) do
+        for i,v in ha do
             strangofhats = strangofhats..v..","
         end
         string.sub(strangofhats,1,string.len(strangofhats)-1)
@@ -124,9 +127,9 @@ function pdeathbaseplategame(nh)
         -- Line above may error. Make sure to use pcall when using it and retry
 
         chatEvent:Fire(strangofhats)
-        chatEvent:Destroy()
+        --chatEvent:Destroy()
         wait()
-
+		end
         function putonmhats(ha)
             for i,v in pairs(ha) do
                 tmph = v.Parent:Clone()
@@ -135,7 +138,8 @@ function pdeathbaseplategame(nh)
             end
             task.wait()
         end
-
+		testgh(_G.neededhats)
+		wait(.5)
         fmissinghats(nh)
         putonmhats(hataray)
         wait()
@@ -596,11 +600,11 @@ end
 
 ----------------------------------------------------------------
 
-if _G.huboveride != nil then
+if _G.huboveride ~= nil then
     _G.type = _G.huboveride
 end
 if _G.type == "bot" then
-    if _G.huboveridebt != nil then
+    if _G.huboveridebt ~= nil then
         _G.bottype = _G.huboveridebt
     end
     botbasic(neededhats)
