@@ -39,10 +39,6 @@ StarterGui:SetCore("SendNotification", {
 })
 
 function pdeathbaseplategame(nh)
-    --G.neededhats = {}
-
-
-    --game.Loaded:Wait()
     --vars
     local Players = game:FindFirstChildOfClass("Players")
     local RunService = game:FindFirstChildOfClass("RunService")
@@ -68,7 +64,7 @@ function pdeathbaseplategame(nh)
         p0.Cframe = p1.CFrame
     end
 
-    function move(p0,p1) --thanks daddy Gelatek
+    function move(p0,p1) --thanks Gelatek san
         local AlignPosition = Instance.new("AlignPosition"); do
             AlignPosition.MaxForce = 66666666666
             AlignPosition.RigidityEnabled = true
@@ -103,11 +99,9 @@ function pdeathbaseplategame(nh)
     --hat stuff
     --finds the hats your missing and sets them as a hat in tempart
 
-    
-
     totalmh = 0
     hataray = {}
-    idlist = {}
+    idlist = {} -- holds the id of the hats that are needed 
     function fmissinghats(nh)
         for i,v in pairs(nh) do
             for i,h in pairs(workspace.tempart:GetDescendants()) do
@@ -158,6 +152,8 @@ function pdeathbaseplategame(nh)
         tempart:Destroy()
     end
 
+    --running the functions now
+
     fmissinghats(nh)
     testgh(idlist)
     wait(.5)
@@ -182,7 +178,7 @@ function pdeathbaseplategame(nh)
     end
 
     dummy = char:Clone()
-    wait(1)
+    wait(1) -- :( makes sure hats load
     dummy.Name = "Dummylolxdnoo"
     dummy.Parent = workspace
 
@@ -196,17 +192,17 @@ function pdeathbaseplategame(nh)
         v.CanCollide = false
         end
     end
-    --dummy.breakJointsOnDeath = false
+
     ---reanim main
 
-    game:GetService("StarterGui"):SetCore("ResetButtonCallback", false)
+    game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
     task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
     local Head = Character:FindFirstChild("Head")
     Head:BreakJoints() 
     print("dead")
     game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
 
-    for i,v in pairs(char:GetChildren()) do
+    for i,v in pairs(char:GetChildren()) do -- making sure hats line up
         if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
             if dummy:FindFirstChild(v.Name) then
                 move(v,dummy[v.Name])
@@ -250,6 +246,8 @@ function pdeathbaseplategame(nh)
             end
         end
     end)
+
+    --camera stuff
     local CurCameraOffset = workspace.CurrentCamera.CFrame
     workspace.CurrentCamera.CFrame = CurCameraOffset
     Player.Character = dummy
@@ -257,6 +255,7 @@ function pdeathbaseplategame(nh)
     workspace.CurrentCamera.CameraSubject = dummy.Humanoid
     workspace.CurrentCamera.CFrame = CurCameraOffset
 
+    --fling stuff
     p0 = char.HumanoidRootPart
     p1 = dummy["Right Arm"]
     local AlignPosition = Instance.new("AlignPosition"); do
@@ -286,10 +285,12 @@ function pdeathbaseplategame(nh)
     ABV.Parent = char.HumanoidRootPart
     char.HumanoidRootPart.Transparency = .5
     char.HumanoidRootPart.AngularVelocity.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
+
+    --runs the script
     scripthere = _G.scripthere
     coroutine.wrap(scripthere)()
 
-end--end of baseplate
+end--end of baseplate reanim
 
 function botbasic(nh)
 
