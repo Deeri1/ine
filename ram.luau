@@ -145,6 +145,5 @@ local CurCameraOffset = workspace.CurrentCamera.CFrame
 workspace.CurrentCamera.CFrame = CurCameraOffset
 Player.Character = dummy
 workspace.CurrentCamera.CFrame = CurCameraOffset
-workspace.CurrentCamera.CameraSubject = FakeHum
+workspace.CurrentCamera.CameraSubject = dummy.Humanoid
 workspace.CurrentCamera.CFrame = CurCameraOffset
-
