@@ -12,7 +12,10 @@ _G.bottype = "OG" -- OG, Freehat
 _G.huboveride = nil -- if you have a hub and use this reanim you can overide type choice if loading scripts that already have this reanim built in (prob usefull only to me lol) (when releasing scripts with this reanim this line should be removed)
 _G.huboveridebt = nil -- if you have a hub and use this reanim you can overide bot type choice if loading scripts that already have this reanim built in (prob usefull only to me lol) (when releasing scripts with this reanim this line should be removed)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
-
+--costom functions[[
+_G.fling(instance,duration) -- teleports hrp to instance for duration time. defualt duration is 2
+_G.noclip(false) -- can be set as true or false. true is noclip false is clip
+]]
 --lol my code not that good looking --deeri]]
 ----------------------------------------------------------------
 
@@ -262,12 +265,12 @@ function pdeathbaseplategame(nh)
         Attachment1.Parent = p0
     end
 
-    local Attachment2 = Instance.new("Attachment"); do
-        Attachment2.Parent = p1
+    local flingatch = Instance.new("Attachment"); do
+        flingatch.Parent = p1
     end
 
     AlignPosition.Attachment0 = Attachment1
-    AlignPosition.Attachment1 = Attachment2
+    AlignPosition.Attachment1 = flingatch
     local ABV = Instance.new("BodyAngularVelocity")
     ABV.P = 1/0
     ABV.AngularVelocity = Vector3.new(0,0,0)
@@ -275,6 +278,20 @@ function pdeathbaseplategame(nh)
     ABV.Parent = char.HumanoidRootPart
     char.HumanoidRootPart.Transparency = .5
     char.HumanoidRootPart.AngularVelocity.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
+
+    _G.fling = function(instance,duration)
+        if duration == nil then
+            duration = 3
+        end
+        local flingatch2 = Instance.new("Attachment"); do
+            flingatch2.Parent = instance
+        end
+        AlignPosition.Attachment1 = flingatch2
+        char.HumanoidRootPart.AngularVelocity.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
+        wait(duration)
+        flingatch2:Destroy()
+        AlignPosition.Attachment1 = flingatch
+    end
 
     --runs the script
     scripthere = _G.scripthere
