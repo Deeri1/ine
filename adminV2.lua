@@ -241,9 +241,8 @@ repeat wait() until isfolder("DeeriHub")
         else
             donetk = false
            thing =  RunService.RenderStepped:Connect(function()
-                if donetk == false then
-    
-                        hum:UnequipTools()
+                if donetk == false and nomore == false then
+                    hum:UnequipTools()
                 else
                     thing:Disconnect()
                 end
@@ -253,19 +252,22 @@ repeat wait() until isfolder("DeeriHub")
     function clicktpe()
         local UserInputService = game:GetService("UserInputService")
         if doingclick2 == false then
-        while wait() and doingclick2 == false  do
-            if doingclick== false then
-                doingclick = true
-                doingclick2 = true
-                thing2 = mouse.Button1Down:Connect(function() 
-                            if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) and mouse.Target then
-                                hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-                                hrp.RotVelocity = Vector3.new(0, 0, 0)
-                            hrp.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
-                            end
-                        end)
-        end
-        end
+            while wait() and doingclick2 == false and nomore == false  do
+                if doingclick== false then
+                    doingclick = true
+                    doingclick2 = true
+                    thing2 = mouse.Button1Down:Connect(function() 
+                        if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) and mouse.Target then
+                            hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+                            hrp.RotVelocity = Vector3.new(0, 0, 0)
+                        h   rp.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+                        end
+                    end)
+                end
+            end
+            if nomore == true then
+                thing2:Disconnect()
+            end
         else
             thing2:Disconnect()
             wait()
@@ -344,32 +346,31 @@ function ghlol(hats)
             print("nextnum")
             --hats[] = {}
         elseif string.sub(hats,endh,endh) == "," then
-        print(string.sub(hats,starth,endh-1),"a")
-        lol = game:GetObjects("rbxassetid://"..string.sub(hats,starth,endh-1).."")[1]
-        humanoid:AddAccessory(lol)
-           nweld = Instance.new("WeldConstraint",lol.Handle)
+            print(string.sub(hats,starth,endh-1),"a")
+            lol = game:GetObjects("rbxassetid://"..string.sub(hats,starth,endh-1).."")[1]
+            humanoid:AddAccessory(lol)
+            nweld = Instance.new("WeldConstraint",lol.Handle)
             nweld.Name = "AccessoryWeld"
             lol.Handle.CFrame = hrp.CFrame
             nweld.Part0 = lol.Handle
             nweld.Part1 = hrp
-       -- loadxd(string.sub(hats,starth,endh-1),game.Players.LocalPlayer.Name)
-        starth = endh+1
-        endh = endh + 1
-
+        -- loadxd(string.sub(hats,starth,endh-1),game.Players.LocalPlayer.Name)
+            starth = endh+1
+            endh = endh + 1
         elseif string.sub(hats,endh,endh) == " " or string.sub(hats,endh,endh) == ""   then
-        print(string.sub(hats,starth,endh-1),"a")
-        lol = game:GetObjects("rbxassetid://"..string.sub(hats,starth,endh-1).."")[1]
-        humanoid:AddAccessory(lol)
-           nweld = Instance.new("WeldConstraint",lol.Handle)
+            print(string.sub(hats,starth,endh-1),"a")
+            lol = game:GetObjects("rbxassetid://"..string.sub(hats,starth,endh-1).."")[1]
+            humanoid:AddAccessory(lol)
+            nweld = Instance.new("WeldConstraint",lol.Handle)
             nweld.Name = "AccessoryWeld"
             lol.Handle.CFrame = hrp.CFrame
             nweld.Part0 = lol.Handle
             nweld.Part1 = hrp
-           -- nweld.Active = true
-           -- nweld.Part0 = lol.Handle
-       --    lol.Handle.CFrame = char.HumanoidRootPart.CFrame
-       -- lol.Parent = char
-           return
+            -- nweld.Active = true
+            -- nweld.Part0 = lol.Handle
+            --    lol.Handle.CFrame = char.HumanoidRootPart.CFrame
+            -- lol.Parent = char
+            return
         end
     end
 end
@@ -388,7 +389,6 @@ function printxd(subcmd)
         print("________________________________________________________________")
 
     end
-
     if subcmd == "cmds" or subcmd == "commands" then
         print("________________________________________________________________")
         print("list of commands")
@@ -441,14 +441,11 @@ function printxd(subcmd)
         end
         print("________________________________________________________________")
     end
-
-
 end
 
 function glitchskidxd()
     workspace.FallenPartsDestroyHeight = 0/0
     local savpos = hrp.CFrame
-
     hrp.CFrame = CFrame.new(math.huge,-math.huge,math.huge)
     wait(.1)
     hrp.CFrame = savpos
@@ -460,20 +457,14 @@ end
 
 function splite(endcmd)
     local foundend = false
-        for i, v in pairs(ctable) do
-            if i ~= 1 and i ~= 2 and not foundend then
-                
-                if v == endcmd then
-                    print("found end at phrase",i,"end is",v)
-                    foundend = true
-                end
-
-
-
+    for i, v in pairs(ctable) do
+        if i ~= 1 and i ~= 2 and not foundend then      
+            if v == endcmd then
+                print("found end at phrase",i,"end is",v)
+                foundend = true
             end
         end
-
-
+    end
 end
 
 
@@ -485,10 +476,6 @@ function cleardata()
     for i,v in pairs(commands) do -- clearing autoexe
         v.autoexe = false
     end
-    
-
-
-
 end
 
 function positionthang(typee,slot) -- saves data as string slot.cframe
@@ -560,6 +547,7 @@ function viewee(whome)
     end
 
 end
+
 localPlayer = game.Players.LocalPlayer
 activerespawn = "" -- positionslot
 localPlayer.CharacterAdded:Connect(function()
@@ -582,12 +570,13 @@ function respawntp(slot)
         end
     end
 end
+
 local defaultws = humanoid.WalkSpeed
 local defaultjp = humanoid.JumpPower
 local defaultgrav = workspace.Gravity
 local defaulthh = humanoid.HipHeight
 local swimming = false
-function playervars(typee,num)
+function playervars(typee,num,num2)
     humanoid = game.Players.LocalPlayer.Character.Humanoid
     if typee == "walkspeed" or typee == "ws" then
         if num then
@@ -659,9 +648,15 @@ function playervars(typee,num)
             for i, v in pairs(enums) do
                 Humanoid:SetStateEnabled(v, true)
             end
-
         end
+    elseif typee == "velocity" or typee == "vel" then
+        if num == "max" or "MAX" or "Max" or "Huge" or "huge" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(math.huge,math.huge,math.huge)
+        end
+        if num and not num2 then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(num,num,num)
     end
+
 end
 attachgone = true
 function atachee(typee,whom)
@@ -672,7 +667,6 @@ function atachee(typee,whom)
             lol:Destroy()
         end
     else
-
         if typee == "cframe" then
 
         elseif typee == "weld" then
@@ -685,12 +679,7 @@ function atachee(typee,whom)
             lol.C0 = vector3(0,0,0)
             lol.C1 = vector3(0,0,0)
         end
-
-
-
-    end
-
-    
+    end 
 end
 
 function flyee(typee,key)
@@ -700,94 +689,91 @@ function flyee(typee,key)
         flyspeed = 1
         lplayer = game.Players.LocalPlayer
         Players = game:GetService("Players")
-	local T = Players.LocalPlayer.Character.HumanoidRootPart
-	local CONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
-	local lCONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
-	local SPEED = 0
-	mouse = lplayer:GetMouse()
-	local function FLY()
-		flying = true
-		local BG = Instance.new('BodyGyro')
-		local BV = Instance.new('BodyVelocity')
-		BG.P = 9e4
-		BG.Parent = T
-		BV.Parent = T
-		BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
-		BG.cframe = T.CFrame
-		BV.velocity = Vector3.new(0, 0, 0)
-		BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
-		task.spawn(function()
-			repeat wait()
-				if Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
-					Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
-				end
-				if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0 then
-					SPEED = 50
-				elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0) and SPEED ~= 0 then
-					SPEED = 0
-				end
-				if (CONTROL.L + CONTROL.R) ~= 0 or (CONTROL.F + CONTROL.B) ~= 0 or (CONTROL.Q + CONTROL.E) ~= 0 then
-					BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (CONTROL.F + CONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(CONTROL.L + CONTROL.R, (CONTROL.F + CONTROL.B + CONTROL.Q + CONTROL.E) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
-					lCONTROL = {F = CONTROL.F, B = CONTROL.B, L = CONTROL.L, R = CONTROL.R}
-				elseif (CONTROL.L + CONTROL.R) == 0 and (CONTROL.F + CONTROL.B) == 0 and (CONTROL.Q + CONTROL.E) == 0 and SPEED ~= 0 then
-					BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (lCONTROL.F + lCONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(lCONTROL.L + lCONTROL.R, (lCONTROL.F + lCONTROL.B + CONTROL.Q + CONTROL.E) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
-				else
-					BV.velocity = Vector3.new(0, 0, 0)
-				end
-				BG.cframe = workspace.CurrentCamera.CoordinateFrame
-			until not flying or nomore
-			CONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
-			lCONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
-			SPEED = 0
-			BG:Destroy()
-			BV:Destroy()
-			if Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
-				Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
-			end
-		end)
-	end
-	flyKeyDown = mouse.KeyDown:Connect(function(KEY)
-        if nomore then
-            flying = false
-            flyKeyDown:Disconnect()
-            flyKeyUp:Disconnect()
-            return
-        end
-		if KEY:lower() == 'w' then
-			CONTROL.F = (flyspeed)
-		elseif KEY:lower() == 's' then
-			CONTROL.B = - (flyspeed)
-		elseif KEY:lower() == 'a' then
-			CONTROL.L = - (flyspeed)
-		elseif KEY:lower() == 'd' then 
-			CONTROL.R = (flyspeed)
-		elseif KEY:lower() == 'e' then
-			CONTROL.Q = (flyspeed)*2
-		elseif KEY:lower() == 'q' then
-			CONTROL.E = -(flyspeed)*2
-		end
-		pcall(function() workspace.CurrentCamera.CameraType = Enum.CameraType.Track end)
-	end)
-	flyKeyUp = mouse.KeyUp:Connect(function(KEY)
-		if KEY:lower() == 'w' then
-			CONTROL.F = 0
-		elseif KEY:lower() == 's' then
-			CONTROL.B = 0
-		elseif KEY:lower() == 'a' then
-			CONTROL.L = 0
-		elseif KEY:lower() == 'd' then
-			CONTROL.R = 0
-		elseif KEY:lower() == 'e' then
-			CONTROL.Q = 0
-		elseif KEY:lower() == 'q' then
-			CONTROL.E = 0
-		end
-	end)
-	FLY()
-    end
-
-
-    
+        local T = Players.LocalPlayer.Character.HumanoidRootPart
+        local CONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
+        local lCONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
+        local SPEED = 0
+        mouse = lplayer:GetMouse()
+        local function FLY()
+            flying = true
+            local BG = Instance.new('BodyGyro')
+            local BV = Instance.new('BodyVelocity')
+            BG.P = 9e4
+            BG.Parent = T
+            BV.Parent = T
+            BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+            BG.cframe = T.CFrame
+            BV.velocity = Vector3.new(0, 0, 0)
+            BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
+            task.spawn(function()
+                repeat wait()
+                    if Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
+                        Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
+                    end
+                    if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0 then
+                        SPEED = 50
+                    elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0) and SPEED ~= 0 then
+                        SPEED = 0
+                    end
+                    if (CONTROL.L + CONTROL.R) ~= 0 or (CONTROL.F + CONTROL.B) ~= 0 or (CONTROL.Q + CONTROL.E) ~= 0 then
+                        BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (CONTROL.F + CONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(CONTROL.L + CONTROL.R, (CONTROL.F + CONTROL.B + CONTROL.Q + CONTROL.E) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+                        lCONTROL = {F = CONTROL.F, B = CONTROL.B, L = CONTROL.L, R = CONTROL.R}
+                    elseif (CONTROL.L + CONTROL.R) == 0 and (CONTROL.F + CONTROL.B) == 0 and (CONTROL.Q + CONTROL.E) == 0 and SPEED ~= 0 then
+                        BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (lCONTROL.F + lCONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(lCONTROL.L + lCONTROL.R, (lCONTROL.F + lCONTROL.B + CONTROL.Q + CONTROL.E) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+                    else
+                        BV.velocity = Vector3.new(0, 0, 0)
+                    end
+                    BG.cframe = workspace.CurrentCamera.CoordinateFrame
+                until not flying or nomore
+                CONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
+                lCONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
+                SPEED = 0
+                BG:Destroy()
+                BV:Destroy()
+                if Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
+                    Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
+                end
+            end)
+	    end
+        flyKeyDown = mouse.KeyDown:Connect(function(KEY)
+            if nomore then
+                flying = false
+                flyKeyDown:Disconnect()
+                flyKeyUp:Disconnect()
+                return
+            end
+            if KEY:lower() == 'w' then
+                CONTROL.F = (flyspeed)
+            elseif KEY:lower() == 's' then
+                CONTROL.B = - (flyspeed)
+            elseif KEY:lower() == 'a' then
+                CONTROL.L = - (flyspeed)
+            elseif KEY:lower() == 'd' then 
+                CONTROL.R = (flyspeed)
+            elseif KEY:lower() == 'e' then
+                CONTROL.Q = (flyspeed)*2
+            elseif KEY:lower() == 'q' then
+                CONTROL.E = -(flyspeed)*2
+            end
+            pcall(function() workspace.CurrentCamera.CameraType = Enum.CameraType.Track end)
+        end)
+        flyKeyUp = mouse.KeyUp:Connect(function(KEY)
+            if KEY:lower() == 'w' then
+                CONTROL.F = 0
+            elseif KEY:lower() == 's' then
+                CONTROL.B = 0
+            elseif KEY:lower() == 'a' then
+                CONTROL.L = 0
+            elseif KEY:lower() == 'd' then
+                CONTROL.R = 0
+            elseif KEY:lower() == 'e' then
+                CONTROL.Q = 0
+            elseif KEY:lower() == 'q' then
+                CONTROL.E = 0
+            end
+        end)
+        FLY()
+    end 
 end
 
 function reloadee()
@@ -802,8 +788,6 @@ function adminee(typee)
     elseif typee == "reload" or typee == "re" or typee == "refresh" then
         reloadee()
     end
-
-
 end
 
 function empty()
@@ -956,7 +940,7 @@ commands = {
             description  = "fly exe: /e fly off (stops flying) :: /e fly (starts flying)"
         },
         plr = {
-            functionname = [[playervars(ctable[2],ctable[3])]],
+            functionname = [[playervars(ctable[2],ctable[3],ctable[4])]],
             altnames = {"player","playerval"},
             autoexe = false,
             description  = "change player values exe: /e plr walkspeed 100 :: /e plr jumppower 100 :: /e plr gravity 100 :: /e plr hipheight 100 :: /e plr swim :: /e plr sit (dont add a number to reset to default)"
@@ -1089,7 +1073,7 @@ func = plr.Chatted:Connect(function(msg)
         for i, v in pairs(ctable) do -- fix them idk why
             print(i,v,"i,v",ctable[i],",",ctable[v],"ctable[i],ctable[v]")
             if i~= 1 then
-            ctable[i] = v
+                ctable[i] = v
             end
         end
 
@@ -1120,6 +1104,10 @@ func = plr.Chatted:Connect(function(msg)
              --   print("total 3")
                 print(ctable[2],ctable[3],"ctable[2],ctable[3]")
                 loadstring(v.functionname)(ctable[2],ctable[3])
+            elseif total == 4 then
+            --   print("total 4")
+                print(ctable[2],ctable[3],ctable[4],"ctable[2],ctable[3],ctable[4]")
+                loadstring(v.functionname)(ctable[2],ctable[3],ctable[4])
             end
 
         else
@@ -1146,6 +1134,10 @@ func = plr.Chatted:Connect(function(msg)
                        -- print("total 3")
                         print(ctable[2],ctable[3],"ctable[2],ctable[3]")
                         loadstring(i.functionname)(ctable[2],ctable[3])
+                    elseif total == 4 then
+                    --   print("total 4")
+                        print(ctable[2],ctable[3],ctable[4],"ctable[2],ctable[3],ctable[4]")
+                        loadstring(v.functionname)(ctable[2],ctable[3],ctable[4])
                     end
                         debouse = false
                        return

@@ -9,7 +9,8 @@ warn([[E - Hug
 Q - Throw snowbal
 F - Place a gift
 C - TP
-Z - Sit]])
+Z - Sit
+P - Swap furmode]])
 local plr = game:GetService("Players").LocalPlayer
 local plrg = plr.PlayerGui
 local mouse = plr:GetMouse()
@@ -777,6 +778,9 @@ pcall(function()
     end
     if key == "r"and not using then
         --candybag()
+    end
+    if key == "p"and not using then
+        furmode = not furmode
     end
 end)
 end)

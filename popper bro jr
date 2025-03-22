@@ -1,10 +1,6 @@
-_G.r6reanim  = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/lolshows.txt"))()
-repeat wait() until _G.reanimatedended == true
-
-print("converted by work#0450")
-print("popper bro jr.")
-
+_G.scripthere = function()
+    game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
+    
 --// SHORTCUTS \\--
 local RNG = (function()
     local RNG = Random.new();
@@ -1452,3 +1448,13 @@ while true do
 	end
 
 end
+
+end
+print("converted by work#0450")
+print("popper bro jr.")
+_G.neededhats = {} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869}
+_G.type = "baseplate" --bot, baseplate
+_G.bottype = "OG" -- OG, Freehat
+_G.huboveride = nil -- if you have a hub and use this reanim you can overide type choice if loading scripts that already have this reanim built in (prob usefull only to me lol) (when releasing scripts with this reanim this line should be removed)
+_G.huboveridebt = nil -- if you have a hub and use this reanim you can overide bot type choice if loading scripts that already have this reanim built in (prob usefull only to me lol) (when releasing scripts with this reanim this line should be removed)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
