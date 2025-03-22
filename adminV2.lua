@@ -650,12 +650,12 @@ function playervars(typee,num,num2)
             end
         end
     elseif typee == "velocity" or typee == "vel" then
-        if num == "max" or "MAX" or "Max" or "Huge" or "huge" then
+        if num == "max" or num ==  "MAX" or num == "Max" or num == "Huge" or num == "huge" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(math.huge,math.huge,math.huge)
         end
         if num and not num2 then
             game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(num,num,num)
-    end
+        end
 
 end
 attachgone = true
