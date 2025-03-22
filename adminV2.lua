@@ -260,7 +260,7 @@ repeat wait() until isfolder("DeeriHub")
                         if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) and mouse.Target then
                             hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
                             hrp.RotVelocity = Vector3.new(0, 0, 0)
-                        h   rp.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+                            hrp.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
                         end
                     end)
                 end
@@ -329,9 +329,9 @@ repeat wait() until isfolder("DeeriHub")
                 writefile("DeeriHub/AdminDNA.txt",savedata)
 
             
+            end
+        end
     end
-    end
-end
 
 
 function ghlol(hats)
@@ -651,12 +651,23 @@ function playervars(typee,num,num2)
         end
     elseif typee == "velocity" or typee == "vel" then
         if num == "max" or num ==  "MAX" or num == "Max" or num == "Huge" or num == "huge" then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(math.huge,math.huge,math.huge)
+            playervars("velocity")
+            velloop = RunService.RenderStepped:Connect(function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(math.huge,math.huge,math.huge)
+            end)
+        elseif num and not num2 then
+            playervars("velocity")
+            velloop = RunService.RenderStepped:Connect(function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(num,num,num)
+            end)
         end
-        if num and not num2 then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(num,num,num)
+        if not num and not num2 then
+            if velloop then
+                velloop:Disconnect()
+                velloop = nil
+            end
         end
-
+    end
 end
 attachgone = true
 function atachee(typee,whom)
