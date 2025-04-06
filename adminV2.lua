@@ -804,16 +804,10 @@ function adminee(typee)
         reloadee()
     end
 end
-playerswithcontrol = {game.Players.LocalPlayer}
-function contreee(pname)
-    table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
-    resetcontrol()
-end
-
 function resetcontrol()
-    func:Disconnect()
     for i,v in pairs(playerswithcontrol) do
         func = v.Chatted:Connect(function(msg)
+            print(msg)
             if debouse or nomore then
                 if nomore then
                     func:Disconnect()
@@ -946,6 +940,13 @@ function resetcontrol()
     end)
     end
 end
+
+playerswithcontrol = {game.Players.LocalPlayer}
+function contreee(pname)
+    table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
+    resetcontrol()
+end
+
 
 
 function empty()
@@ -1098,7 +1099,7 @@ commands = {
             description  = "fly exe: /e fly off (stops flying) :: /e fly (starts flying)"
         },
         giveadmin = {
-            functionname = [[contreee(ctable[2],ctable[3])]],
+            functionname = [[contreee(ctable[2])]],
             altnames = {"givecontrol"},
             autoexe = false,
             description  = "allows someone to control you with admin commands"
