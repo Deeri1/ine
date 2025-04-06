@@ -965,7 +965,7 @@ function sillyee(cmd, whom)
             while insilly do 
                 wait()
                 local root = playeer.Character.HumanoidRootPart
-                root.CFrame = Lerp(root.CFrame, CFrame.new(root.Position, root.Position + math.cos(Vector3.new(0, 0, -1))), 0.5)
+                root.CFrame = Lerp(root.CFrame, CFrame.new(root.Position, root.Position Vector3.new(0, 0, -1)), 0.5)
             -- CFrame.new(root.Position, root.Position + Vector3.new(0, 0, -1))
             end
         end
