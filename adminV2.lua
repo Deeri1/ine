@@ -983,7 +983,7 @@ function sillyee(cmd, whom, erm)
                 wait()
                 local roote = playeer.Character.HumanoidRootPart
                 hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-                hrp.CFrame = Lerp(roote.CFrame+ Vector3.new(0, 0, -1), CFrame.new(roote.Position + Vector3.new(0, 0, -1)), nums)
+                hrp.CFrame = Lerp(roote.CFrame + Vector3.new(0, 0, -.5), CFrame.new(roote.CFrame + Vector3.new(0, 0, -1)), nums)
             -- CFrame.new(root.Position, root.Position + Vector3.new(0, 0, -1))
             end
         end
