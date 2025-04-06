@@ -1130,7 +1130,7 @@ commands = {
             description  = "allows someone to control you with admin commands"
         },
         silly = {
-            functionname = [[contreee(ctable[2],ctable[3])]],
+            functionname = [[sillyee(ctable[2],ctable[3])]],
             altnames = {"stuff"},
             autoexe = false,
             description  = "silly commands"
