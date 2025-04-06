@@ -950,7 +950,9 @@ function contreee(pname)
     table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
     resetcontrol()
 end
-function Lerp(a, b, i)
+Lerp = function(a, b, t)
+    return a + (b - a) * t
+end
 insilly = false
 function sillyee(cmd, whom)
     if insilly then
