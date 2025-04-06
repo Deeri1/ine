@@ -806,10 +806,11 @@ function adminee(typee)
 end
 playerswithcontrol = {game.Players.LocalPlayer}
 function contreee(pname)
-    table.insert(playerswithcontrol,game.Players[GetPlayer(whom)[1].Name])
+    table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
 end
 
 function resetcontrol()
+    func:Disconnect()
     for i,v in pairs(playerswithcontrol) do
         func = v.Chatted:Connect(function(msg)
             if debouse or nomore then
