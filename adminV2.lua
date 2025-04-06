@@ -807,6 +807,7 @@ end
 playerswithcontrol = {game.Players.LocalPlayer}
 function contreee(pname)
     table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
+    resetcontrol()
 end
 
 function resetcontrol()
