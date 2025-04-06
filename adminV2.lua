@@ -814,7 +814,7 @@ function resetcontrol()
         v:Disconnect()
     end
     for i,v in pairs(playerswithcontrol) do
-        functable[#functable] = v.Chatted:Connect(function(msg)
+        functable[#functable+1] = v.Chatted:Connect(function(msg)
            -- print(msg)
             if debouse or nomore then
                 if nomore then
