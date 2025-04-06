@@ -966,19 +966,24 @@ function Lerp(a, b, i)
     return CFrame.new(calx, caly, calz) * CFrame.Angles(cala, calb, calc)
 end
 insilly = false
-function sillyee(cmd, whom)
+function sillyee(cmd, whom, erm)
     if insilly then
         insilly = false
+    end
+    if erm then 
+        local nums = erm
+    else
+        local nums = .5
     end
     if cmd == "backshot" or cmd == "bs" then
         local playeer = GetPlayer(whom)[1]
         if playeer.Character:FindFirstChild("HumanoidRootPart") then
             insilly = true
-            while insilly do 
+            while insilly and not nomore do 
                 wait()
                 local roote = playeer.Character.HumanoidRootPart
                 hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-                hrp.CFrame = Lerp(roote.CFrame, CFrame.new(roote.Position + Vector3.new(0, 0, -1), roote.Position + Vector3.new(0, 0, -1)), 1)
+                hrp.CFrame = Lerp(roote.CFrame, CFrame.new(roote.Position + Vector3.new(0, 0, -1), roote.Position + Vector3.new(0, 0, -1)), nums)
             -- CFrame.new(root.Position, root.Position + Vector3.new(0, 0, -1))
             end
         end
