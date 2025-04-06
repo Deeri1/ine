@@ -972,8 +972,9 @@ function sillyee(cmd, whom)
             insilly = true
             while insilly do 
                 wait()
-                local root = playeer.Character.HumanoidRootPart
-                root.CFrame = Lerp(root.CFrame, CFrame.new(root.Position, root.Position + Vector3.new(0, 0, -1)), 0.5)
+                local roote = playeer.Character.HumanoidRootPart
+                hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+                hrp.CFrame = Lerp(roote.CFrame, CFrame.new(roote.Position, roote.Position + Vector3.new(0, 0, -1)), 0.5)
             -- CFrame.new(root.Position, root.Position + Vector3.new(0, 0, -1))
             end
         end
