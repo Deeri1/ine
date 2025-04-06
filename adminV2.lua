@@ -501,6 +501,10 @@ end
 nomore = false
 function remadmin()
     print("removing admin")
+    for i,v in pairs(functable) do
+        print("disconnecting",i)
+        v:Disconnect()
+    end
     nomore = true
 end
 
