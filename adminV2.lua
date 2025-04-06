@@ -970,10 +970,11 @@ function sillyee(cmd, whom, erm)
     if insilly then
         insilly = false
     end
-    if erm then 
-        local nums = erm
+    if erm ~= nil then 
+		print(erm)
+     nums = tonumber(erm)
     else
-        local nums = .5
+     nums = .5
     end
     if cmd == "backshot" or cmd == "bs" then
         local playeer = GetPlayer(whom)[1]
@@ -983,7 +984,7 @@ function sillyee(cmd, whom, erm)
                 wait()
                 local roote = playeer.Character.HumanoidRootPart
                 hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-                hrp.CFrame = Lerp(roote.CFrame + Vector3.new(0, 0, -.5), CFrame.new(roote.CFrame + Vector3.new(0, 0, -1)), nums)
+                hrp.CFrame = Lerp(roote.CFrame, CFrame.new(roote.Position, roote.Position + Vector3.new(0, 0, -2)), nums)
             -- CFrame.new(root.Position, root.Position + Vector3.new(0, 0, -1))
             end
         end
@@ -1148,7 +1149,7 @@ commands = {
             description  = "allows someone to control you with admin commands"
         },
         silly = {
-            functionname = [[sillyee(ctable[2],ctable[3])]],
+            functionname = [[sillyee(ctable[2],ctable[3]),ctable[4])]],
             altnames = {"stuff"},
             autoexe = false,
             description  = "silly commands"
