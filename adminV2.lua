@@ -804,10 +804,14 @@ function adminee(typee)
         reloadee()
     end
 end
+functable = {}
 function resetcontrol()
+    for i,v in pairs(functable) do
+        v:Disconnect()
+    end
     for i,v in pairs(playerswithcontrol) do
-        func = v.Chatted:Connect(function(msg)
-            print(msg)
+        functable[#functable] = v.Chatted:Connect(function(msg)
+           -- print(msg)
             if debouse or nomore then
                 if nomore then
                     func:Disconnect()
@@ -938,6 +942,11 @@ function resetcontrol()
         end
         debouse = false
     end)
+    for i,v in pairs (playerswithcontrol) do
+        if v.Name ~= game.Players.LocalPlayer.Name then
+            table.remove(playerswithcontrol,i)
+        end
+    end
     end
 end
 
