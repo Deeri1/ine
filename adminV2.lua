@@ -942,11 +942,6 @@ function resetcontrol()
         end
         debouse = false
     end)
-    for i,v in pairs (playerswithcontrol) do
-        if v.Name ~= game.Players.LocalPlayer.Name then
-            table.remove(playerswithcontrol,i)
-        end
-    end
     end
 end
 
@@ -955,8 +950,27 @@ function contreee(pname)
     table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
     resetcontrol()
 end
+function Lerp(a, b, i)
+insilly = false
+function sillyee(cmd, whom)
+    if insilly then
+        insilly = false
+    end
+    if cmd == "backshot" or cmd == "bs" then
+        local playeer = GetPlayer(whom)[1]
+        if playeer.Character:FindFirstChild("HumanoidRootPart") then
+            insilly = true
+            while insilly do 
+                wait()
+                local root = playeer.Character.HumanoidRootPart
+                root.CFrame = Lerp(root.CFrame, CFrame.new(root.Position, root.Position + math.cos(Vector3.new(0, 0, -1))), 0.5)
+            -- CFrame.new(root.Position, root.Position + Vector3.new(0, 0, -1))
+            end
+        end
 
 
+    end
+end
 
 function empty()
     
@@ -1112,6 +1126,12 @@ commands = {
             altnames = {"givecontrol"},
             autoexe = false,
             description  = "allows someone to control you with admin commands"
+        },
+        silly = {
+            functionname = [[contreee(ctable[2],ctable[3])]],
+            altnames = {"stuff"},
+            autoexe = false,
+            description  = "silly commands"
         },
         plr = {
             functionname = [[playervars(ctable[2],ctable[3],ctable[4])]],
