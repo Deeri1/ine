@@ -1002,7 +1002,7 @@ function scriptee(scrim,ex1,ex2)
     if scrim == "dex" or scrim == "explorer" then
         dexf(ex1)
     elseif scrim == "hub" or scrim == "deerihub" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/deerihub.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DeeriHub/Deeri-Hub/main/LoadString"))()
     elseif scrim == "spy" or scrim == "chatspy" or scrim == "cspy" then
         cspye(ex1)
     elseif scrim == "rspy" or scrim == "remotespy" or scrim == "simplespy" or scrim = "sspy" then
