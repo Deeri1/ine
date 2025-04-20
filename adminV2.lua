@@ -1005,7 +1005,7 @@ function scriptee(scrim,ex1,ex2)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/DeeriHub/Deeri-Hub/main/LoadString"))()
     elseif scrim == "spy" or scrim == "chatspy" or scrim == "cspy" then
         cspye(ex1)
-    elseif scrim == "rspy" or scrim == "remotespy" or scrim == "simplespy" or scrim = "sspy" then
+    elseif scrim == "rspy" or scrim == "remotespy" or scrim == "simplespy" or scrim == "sspy" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/refs/heads/main/sspy.lua"))()
     end
 end
@@ -1264,6 +1264,7 @@ debouse = false
 
 coroutine.wrap(function() -- if admin is loaded ontop of other admin
 while true do
+    wait()
    if _G.AdminLoaded == false then
         nomore = true
         remadmin()
