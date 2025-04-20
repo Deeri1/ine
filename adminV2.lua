@@ -956,46 +956,46 @@ end
 
 playerswithcontrol = {game.Players.LocalPlayer}
 function contreee(pname)
-table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
-resetcontrol()
-end
-function Lerp(a, b, i)
-local com1 = {a.X, a.Y, a.Z, a:toEulerAnglesXYZ()}
-local com2 = {b.X, b.Y, b.Z, b:toEulerAnglesXYZ()}
-local calx = com1[1] + (com2[1] - com1[1]) * i
-local caly = com1[2] + (com2[2] - com1[2]) * i
-local calz = com1[3] + (com2[3] - com1[3]) * i
-local cala = com1[4] + (com2[4] - com1[4]) * i
-local calb = com1[5] + (com2[5] - com1[5]) * i
-local calc = com1[6] + (com2[6] - com1[6]) * i
-return CFrame.new(calx, caly, calz) * CFrame.Angles(cala, calb, calc)
-end
-insilly = false
-function sillyee(cmd, whom, erm)
-if insilly then
-    insilly = false
-end
-if erm ~= nil then 
-    print(erm)
- nums = tonumber(erm)
-else
- nums = .5
-end
-if cmd == "backshot" or cmd == "bs" then
-    local playeer = GetPlayer(whom)[1]
-    if playeer.Character:FindFirstChild("HumanoidRootPart") then
-        insilly = true
-        while insilly and not nomore do 
-            wait()
-            local roote = playeer.Character.HumanoidRootPart
-            hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-            hrp.CFrame = Lerp(roote.CFrame, CFrame.new(roote.Position, roote.Position + Vector3.new(0, 0, -2)), nums)
-        -- CFrame.new(root.Position, root.Position + Vector3.new(0, 0, -1))
-        end
+    table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
+    resetcontrol()
     end
+    function Lerp(a, b, i)
+    local com1 = {a.X, a.Y, a.Z, a:toEulerAnglesXYZ()}
+    local com2 = {b.X, b.Y, b.Z, b:toEulerAnglesXYZ()}
+    local calx = com1[1] + (com2[1] - com1[1]) * i
+    local caly = com1[2] + (com2[2] - com1[2]) * i
+    local calz = com1[3] + (com2[3] - com1[3]) * i
+    local cala = com1[4] + (com2[4] - com1[4]) * i
+    local calb = com1[5] + (com2[5] - com1[5]) * i
+    local calc = com1[6] + (com2[6] - com1[6]) * i
+    return CFrame.new(calx, caly, calz) * CFrame.Angles(cala, calb, calc)
+    end
+    insilly = false
+    function sillyee(cmd, whom, erm)
+    if insilly then
+        insilly = false
+    end
+    if erm ~= nil then 
+        print(erm)
+    nums = tonumber(erm)
+    else
+    nums = .5
+    end
+    if cmd == "backshot" or cmd == "bs" then
+        local playeer = GetPlayer(whom)[1]
+        if playeer.Character:FindFirstChild("HumanoidRootPart") then
+            insilly = true
+            while insilly and not nomore do 
+                wait()
+                local roote = playeer.Character.HumanoidRootPart
+                hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+                hrp.CFrame = Lerp(roote.CFrame, CFrame.new(roote.Position, roote.Position + Vector3.new(0, 0, -2)), nums)
+            -- CFrame.new(root.Position, root.Position + Vector3.new(0, 0, -1))
+            end
+        end
 
 
-end
+    end
 end
 
 function scriptee(scrim,ex1,ex2)
@@ -1166,14 +1166,14 @@ commands = {
         description  = "allows someone to control you with admin commands"
     },
     silly = {
-        functionname = [[sillyee(ctable[2],ctable[3]),ctable[4])]],
+        functionname = [[sillyee(ctable[2],ctable[3],ctable[4])]],
         altnames = {"stuff"},
         autoexe = false,
         description  = "silly commands"
     },
-    script = {
-        functionname = [[scriptee(ctable[2],ctable[3]),ctable[4])]],
-        altnames = {"scripts"},
+    scripts = {
+        functionname = [[scriptee(ctable[2],ctable[3],ctable[4])]],
+        altnames = {"script"},
         autoexe = false,
         description  = "can load in some scripts"
     },
