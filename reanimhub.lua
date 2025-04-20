@@ -25,9 +25,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reani
 
 warn("made by deeri btw")
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Thanks"
-    Text = "Your A Wizard "..game.Players.LocalPlayer.Name,
-    Duration = 3
+    Title = "Thanks";
+    Text = "Your A Wizard "..game.Players.LocalPlayer.Name;
+    Duration = 3;
 })
 
 function pdeathbaseplategame(nh)
@@ -644,7 +644,7 @@ elseif _G.type == "baseplate" then
     pdeathbaseplategame(neededhats)
 end
 game.StarterGui:SetCore("SendNotification", {
-	Title = "Status"
-	Text = "Reanimated",
-	Duration = 3
+	Title = "Status";
+	Text = "Reanimated";
+	Duration = 3;
 })
