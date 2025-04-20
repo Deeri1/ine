@@ -158,7 +158,7 @@ function pdeathbaseplategame(nh)
     --dummy clone
     for i, v in pairs(workspace:GetDescendants()) do
         if v.Name == "Dummylolxdnoo" then
-        v:Destroy()
+            v:Destroy()
         end
     end
     char = game.Players.LocalPlayer.Character
@@ -181,8 +181,8 @@ function pdeathbaseplategame(nh)
     for i, v in pairs(dummy:GetDescendants()) do
         v.Archivable = true
         if v:IsA("BasePart") then
-        v.Transparency = 1
-        v.CanCollide = false
+            v.Transparency = 1
+            v.CanCollide = false
         end
     end
 

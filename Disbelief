@@ -1251,20 +1251,20 @@ AnimatorModule[Rig][KeyFrameS.Name] = AnimatorModule:LoadAnimation(Rig, KeyFrame
 end
 
 function PlayAnim(Rig, Animation, AnimFade, AnimSpeed)
-if not AnimatorModule[Rig] then
-AnimatorModule[Rig] = {}
-end
-if not AnimatorModule[Rig][Animation.Name] then
-AnimatorModule[Rig][Animation.Name] = AnimatorModule:LoadAnimation(Rig, Animation)
-end
-for Animation, Track in next, AnimatorModule[Rig] do
-if Animation ~= Animation.Name then
-Track:Stop()
-end
-end
-if not AnimatorModule[Rig][Animation.Name].IsPlaying then
-AnimatorModule[Rig][Animation.Name]:Play(AnimFade or 1, AnimSpeed or 1)
-end
+    if not AnimatorModule[Rig] then
+    AnimatorModule[Rig] = {}
+    end
+    if not AnimatorModule[Rig][Animation.Name] then
+    AnimatorModule[Rig][Animation.Name] = AnimatorModule:LoadAnimation(Rig, Animation)
+    end
+    for Animation, Track in next, AnimatorModule[Rig] do
+    if Animation ~= Animation.Name then
+    Track:Stop()
+    end
+    end
+    if not AnimatorModule[Rig][Animation.Name].IsPlaying then
+    AnimatorModule[Rig][Animation.Name]:Play(AnimFade or 1, AnimSpeed or 1)
+    end
 end
 
 function StopAnim(Rig, Anim)
