@@ -958,8 +958,9 @@ playerswithcontrol = {game.Players.LocalPlayer}
 function contreee(pname)
     table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
     resetcontrol()
-    end
-    function Lerp(a, b, i)
+end
+
+function Lerp(a, b, i)
     local com1 = {a.X, a.Y, a.Z, a:toEulerAnglesXYZ()}
     local com2 = {b.X, b.Y, b.Z, b:toEulerAnglesXYZ()}
     local calx = com1[1] + (com2[1] - com1[1]) * i
@@ -969,9 +970,9 @@ function contreee(pname)
     local calb = com1[5] + (com2[5] - com1[5]) * i
     local calc = com1[6] + (com2[6] - com1[6]) * i
     return CFrame.new(calx, caly, calz) * CFrame.Angles(cala, calb, calc)
-    end
-    insilly = false
 end
+
+insilly = false
 function sillyee(cmd, whom, erm)
     if insilly then
         insilly = false
@@ -996,7 +997,9 @@ function sillyee(cmd, whom, erm)
         end
 
 
+    end
 end
+
 function scriptee(scrim,ex1,ex2)
     if scrim == "dex" or scrim == "explorer" then
         dexf(ex1)
