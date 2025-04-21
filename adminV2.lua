@@ -201,10 +201,16 @@ function sflinge(target)
         --hrp.AssemblyAngularVelocity
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
         hrp.Velocity = Vector3.new(0,0,0)
+        hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+        hrp.RotVelocity = Vector3.new(0, 0, 0)
         coroutine.wrap(nolcipf)()
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
         hrp.Velocity = Vector3.new(0,0,0)
+        hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+        hrp.RotVelocity = Vector3.new(0, 0, 0)
         wait(1)
+        hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+        hrp.RotVelocity = Vector3.new(0, 0, 0)
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
         hrp.Velocity = Vector3.new(0,0,0)
     end
@@ -850,7 +856,6 @@ for i,v in pairs(playerswithcontrol) do
 end
 print(#playerswithcontrol)
 for i,v in pairs(playerswithcontrol) do
-print("um")
     functable[#functable+1] = v.Chatted:Connect(function(msg)
        -- print(msg)
         if debouse or nomore then
