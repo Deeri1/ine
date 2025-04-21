@@ -3,7 +3,7 @@ if _G.Adminloaded == true then
     repeat wait() until _G.AdminLoaded == true
 end
 if _G.playerswithcontrol then
-    playerswithcontrol = {_G.playerswithcontrol}
+    playerswithcontrol = _G.playerswithcontrol
 	print("this")
 	for i,v in pairs(playerswithcontrol) do
         print("checking",v)
