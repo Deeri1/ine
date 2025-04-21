@@ -971,7 +971,8 @@ function contreee(pname)
     return CFrame.new(calx, caly, calz) * CFrame.Angles(cala, calb, calc)
     end
     insilly = false
-    function sillyee(cmd, whom, erm)
+end
+function sillyee(cmd, whom, erm)
     if insilly then
         insilly = false
     end
@@ -995,9 +996,7 @@ function contreee(pname)
         end
 
 
-    end
 end
-
 function scriptee(scrim,ex1,ex2)
     if scrim == "dex" or scrim == "explorer" then
         dexf(ex1)
