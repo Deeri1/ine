@@ -2,6 +2,11 @@ if _G.Adminloaded == true then
     _G.AdminLoaded = false
     repeat wait() until _G.AdminLoaded == true
 end
+if _G.playerswithcontrol then
+    playerswithcontrol = _G.playerswithcontrol
+else
+    playerswithcontrol = {game.Players.LocalPlayer}
+end
 _G.AdminLoaded = true
 if not isfolder("DeeriHub") then
     makefolder("DeeriHub")
@@ -624,7 +629,7 @@ elseif typee == "reset" then
 elseif typee == "sit" then
     humanoid.Sit = not humanoid.Sit
 elseif typee == "jump" then
-        humanoid.Jump = not humanoid.Jump
+        humanoid.Jump = true
 elseif typee == "swim" then 
     if not swimming and num ~= "off" then
         oldgrav = workspace.Gravity
@@ -803,8 +808,8 @@ end
 end
 
 function reloadee()
-remadmin()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/adminV2.lua"))()
+    remadmin()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/adminV2.lua"))()
 end
 
 
@@ -956,7 +961,6 @@ end)
 end
 end
 
-playerswithcontrol = {game.Players.LocalPlayer}
 function contreee(pname)
     table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
     resetcontrol()
