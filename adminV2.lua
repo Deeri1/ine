@@ -642,6 +642,8 @@ elseif typee == "reset" then
     humanoid.HipHeight = defaulthh
 elseif typee == "sit" then
     humanoid.Sit = not humanoid.Sit
+elseif typee == "walkto" then
+        humanoid:MoveTo(GetPlayer(num)[1].Character.HumanoidRootPart.Position)
 elseif typee == "chat" or typee == "say" then
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(num, "All")
 elseif typee == "jump" then
