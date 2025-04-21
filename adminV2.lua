@@ -808,6 +808,7 @@ end
 end
 
 function reloadee()
+    _G.playerswithcontrol = playerswithcontrol
     remadmin()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/adminV2.lua"))()
 end
