@@ -6,6 +6,7 @@ if _G.playerswithcontrol then
     playerswithcontrol = {_G.playerswithcontrol}
 	--print("this")
 	for i,v in pairs(playerswithcontrol) do
+        print("checking",v)
 		if v.Name == nil then
             table.remove(playerswithcontrol,i)
         end
