@@ -192,13 +192,13 @@ function sflinge(target)
         hrp.RotVelocity = Vector3.new(0, 0, 0)
         --hrp.AssemblyAngularVelocity
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
+        hrp.Velocity = Vector3.new(0,0,0)
         coroutine.wrap(nolcipf)()
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
-
+        hrp.Velocity = Vector3.new(0,0,0)
         wait(1)
-
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
-
+        hrp.Velocity = Vector3.new(0,0,0)
     end
 end
 function loadxd(id1,id2)
