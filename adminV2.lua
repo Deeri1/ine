@@ -345,44 +345,44 @@ end
 
 
 function ghlol(hats)
-print(hats)
-val = string.sub(hats,1,1)
-print(val,"startnumlol")
-starth = 1
-endh = 1    
-while wait() do
-    if  string.sub(hats,endh,endh) ~="," and tonumber(string.sub(hats,endh,endh)) then
-        endh = endh + 1
-        print("nextnum")
-        --hats[] = {}
-    elseif string.sub(hats,endh,endh) == "," then
-        print(string.sub(hats,starth,endh-1),"a")
-        lol = game:GetObjects("rbxassetid://"..string.sub(hats,starth,endh-1).."")[1]
-        humanoid:AddAccessory(lol)
-        nweld = Instance.new("WeldConstraint",lol.Handle)
-        nweld.Name = "AccessoryWeld"
-        lol.Handle.CFrame = hrp.CFrame
-        nweld.Part0 = lol.Handle
-        nweld.Part1 = hrp
-    -- loadxd(string.sub(hats,starth,endh-1),game.Players.LocalPlayer.Name)
-        starth = endh+1
-        endh = endh + 1
-    elseif string.sub(hats,endh,endh) == " " or string.sub(hats,endh,endh) == ""   then
-        print(string.sub(hats,starth,endh-1),"a")
-        lol = game:GetObjects("rbxassetid://"..string.sub(hats,starth,endh-1).."")[1]
-        humanoid:AddAccessory(lol)
-        nweld = Instance.new("WeldConstraint",lol.Handle)
-        nweld.Name = "AccessoryWeld"
-        lol.Handle.CFrame = hrp.CFrame
-        nweld.Part0 = lol.Handle
-        nweld.Part1 = hrp
-        -- nweld.Active = true
-        -- nweld.Part0 = lol.Handle
-        --    lol.Handle.CFrame = char.HumanoidRootPart.CFrame
-        -- lol.Parent = char
-        return
+    print(hats)
+    val = string.sub(hats,1,1)
+    print(val,"startnumlol")
+    starth = 1
+    endh = 1    
+    while wait() do
+        if  string.sub(hats,endh,endh) ~="," and tonumber(string.sub(hats,endh,endh)) then
+            endh = endh + 1
+            print("nextnum")
+            --hats[] = {}
+        elseif string.sub(hats,endh,endh) == "," then
+            print(string.sub(hats,starth,endh-1),"a")
+            lol = game:GetObjects("rbxassetid://"..string.sub(hats,starth,endh-1).."")[1]
+            humanoid:AddAccessory(lol)
+            nweld = Instance.new("WeldConstraint",lol.Handle)
+            nweld.Name = "AccessoryWeld"
+            lol.Handle.CFrame = hrp.CFrame
+            nweld.Part0 = lol.Handle
+            nweld.Part1 = hrp
+        -- loadxd(string.sub(hats,starth,endh-1),game.Players.LocalPlayer.Name)
+            starth = endh+1
+            endh = endh + 1
+        elseif string.sub(hats,endh,endh) == " " or string.sub(hats,endh,endh) == ""   then
+            print(string.sub(hats,starth,endh-1),"a")
+            lol = game:GetObjects("rbxassetid://"..string.sub(hats,starth,endh-1).."")[1]
+            humanoid:AddAccessory(lol)
+            nweld = Instance.new("WeldConstraint",lol.Handle)
+            nweld.Name = "AccessoryWeld"
+            lol.Handle.CFrame = hrp.CFrame
+            nweld.Part0 = lol.Handle
+            nweld.Part1 = hrp
+            -- nweld.Active = true
+            -- nweld.Part0 = lol.Handle
+            --    lol.Handle.CFrame = char.HumanoidRootPart.CFrame
+            -- lol.Parent = char
+            return
+        end
     end
-end
 end
 
 function printxd(subcmd)
@@ -454,15 +454,15 @@ end
 end
 
 function glitchskidxd()
-workspace.FallenPartsDestroyHeight = 0/0
-local savpos = hrp.CFrame
-hrp.CFrame = CFrame.new(math.huge,-math.huge,math.huge)
-wait(.1)
-hrp.CFrame = savpos
+    workspace.FallenPartsDestroyHeight = 0/0
+    local savpos = hrp.CFrame
+    hrp.CFrame = CFrame.new(math.huge,-math.huge,math.huge)
+    wait(.1)
+    hrp.CFrame = savpos
 end
 
 function setclock(var)
-game.Lighting.ClockTime = var
+    game.Lighting.ClockTime = var
 end
 
 function splite(endcmd)
@@ -830,6 +830,17 @@ function resetcontrol()
 for i,v in pairs(functable) do
     v:Disconnect()
 end
+
+--checks players with control
+for i,v in pairs(playerswithcontrol) do
+    for i2,v2 in pairs(functable) do
+        if v == v2 and i ~= i2 then
+            print("found same player",i,v2)
+            table.remove(functable,i2)
+        end
+    end
+end
+
 for i,v in pairs(playerswithcontrol) do
     functable[#functable+1] = v.Chatted:Connect(function(msg)
        -- print(msg)
@@ -1122,7 +1133,7 @@ commands = {
         functionname = [[adminee(ctable[2],ctable[3])]],
         altnames = {"adm"},
         autoexe = false,
-        description  = "remove/reload admin exe: '/e admin no' (removes admin) :: '/e admin reload' (reloads admin)"
+        description  = "remove/reload admin exe: '/e admin no' (removes admin) :: '/e admin reload' (reloads admin) or /e admin give 'playername' (gives control to a player)"
     },
     spy = {
         functionname = [[cspye(ctable[2])]],
