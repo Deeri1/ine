@@ -3,10 +3,16 @@ if _G.Adminloaded == true then
     repeat wait() until _G.AdminLoaded == true
 end
 if _G.playerswithcontrol then
-    playerswithcontrol = _G.playerswithcontrol
+    playerswithcontrol = {_G.playerswithcontrol}
+	--print("this")
+	for i,v in pairs(playerswithcontrol) do
+		--print(v.Name)
+	end
 else
-    playerswithcontrol = {game.Players.LocalPlayer}
+    playerswithcontrol = {}
+	playerswithcontrol[1] = game.Players.LocalPlayer
 end
+--print(#playerswithcontrol)
 _G.AdminLoaded = true
 if not isfolder("DeeriHub") then
     makefolder("DeeriHub")
@@ -840,8 +846,9 @@ for i,v in pairs(playerswithcontrol) do
         end
     end
 end
-
+print(#playerswithcontrol)
 for i,v in pairs(playerswithcontrol) do
+print("um")
     functable[#functable+1] = v.Chatted:Connect(function(msg)
        -- print(msg)
         if debouse or nomore then
@@ -978,6 +985,7 @@ end
 end
 
 function contreee(pname)
+	print("added",game.Players[GetPlayer(pname)[1].Name])
     table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
     resetcontrol()
 end
