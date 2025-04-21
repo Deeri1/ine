@@ -12,6 +12,7 @@ if _G.playerswithcontrol then
         end
 	end
 else
+    print("else")
     playerswithcontrol = {}
 end
 playerswithcontrol[#playerswithcontrol+1] = game.Players.LocalPlayer
