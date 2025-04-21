@@ -623,6 +623,8 @@ elseif typee == "reset" then
     humanoid.HipHeight = defaulthh
 elseif typee == "sit" then
     humanoid.Sit = not humanoid.Sit
+elseif typee == "jump" then
+        humanoid.Jump = not humanoid.Jump
 elseif typee == "swim" then 
     if not swimming and num ~= "off" then
         oldgrav = workspace.Gravity
