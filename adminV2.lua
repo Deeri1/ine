@@ -628,8 +628,10 @@ elseif typee == "reset" then
     humanoid.HipHeight = defaulthh
 elseif typee == "sit" then
     humanoid.Sit = not humanoid.Sit
+elseif typee == "chat" or typee == "say" then
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(num, "All")
 elseif typee == "jump" then
-        humanoid.Jump = true
+        humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 elseif typee == "swim" then 
     if not swimming and num ~= "off" then
         oldgrav = workspace.Gravity
@@ -814,11 +816,13 @@ function reloadee()
 end
 
 
-function adminee(typee)
+function adminee(typee,extra)
 if typee == "no" or typee == "off" or typee == "stop" or typee == "remove" then
     remadmin()
 elseif typee == "reload" or typee == "re" or typee == "refresh" then
     reloadee()
+elseif typee == "give" then
+    contreee(extra)
 end
 end
 functable = {}
@@ -1115,7 +1119,7 @@ commands = {
         description  = "press crtl and click to tp to your mouses location"
     },
     admin = {
-        functionname = [[adminee(ctable[2])]],
+        functionname = [[adminee(ctable[2],ctable[3])]],
         altnames = {"adm"},
         autoexe = false,
         description  = "remove/reload admin exe: '/e admin no' (removes admin) :: '/e admin reload' (reloads admin)"
