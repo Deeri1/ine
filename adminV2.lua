@@ -6,12 +6,14 @@ if _G.playerswithcontrol then
     playerswithcontrol = {_G.playerswithcontrol}
 	--print("this")
 	for i,v in pairs(playerswithcontrol) do
-		--print(v.Name)
+		if v.Name == nil then
+            table.remove(playerswithcontrol,i)
+        end
 	end
 else
     playerswithcontrol = {}
-	playerswithcontrol[1] = game.Players.LocalPlayer
 end
+playerswithcontrol[#playerswithcontrol+1] = game.Players.LocalPlayer
 --print(#playerswithcontrol)
 _G.AdminLoaded = true
 if not isfolder("DeeriHub") then
@@ -839,10 +841,10 @@ end
 
 --checks players with control
 for i,v in pairs(playerswithcontrol) do
-    for i2,v2 in pairs(functable) do
+    for i2,v2 in pairs(playerswithcontrol) do
         if v == v2 and i ~= i2 then
             print("found same player",i,v2)
-            table.remove(functable,i2)
+            table.remove(playerswithcontrol,i2)
         end
     end
 end
@@ -852,6 +854,7 @@ print("um")
     functable[#functable+1] = v.Chatted:Connect(function(msg)
        -- print(msg)
         if debouse or nomore then
+            print("debouseed")
             if nomore then
                 func:Disconnect()
             end
