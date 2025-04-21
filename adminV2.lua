@@ -8,6 +8,7 @@ if _G.playerswithcontrol then
 	for i,v in pairs(playerswithcontrol) do
         print("checking",v)
 		if v.Name == nil then
+            print("removing",v)
             table.remove(playerswithcontrol,i)
         end
 	end
