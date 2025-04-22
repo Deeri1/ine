@@ -215,19 +215,34 @@ function sflinge(target)
         hrp.RotVelocity = Vector3.new(0, 0, 0)
         --hrp.AssemblyAngularVelocity
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
-        hrp.Velocity = Vector3.new(0,0,0)
-        hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-        hrp.RotVelocity = Vector3.new(0, 0, 0)
+		for i,v in pairs(speaker.Character:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+				v.RotVelocity = Vector3.new(0, 0, 0)
+			end
+		end
         coroutine.wrap(nolcipf)()
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
         hrp.Velocity = Vector3.new(0,0,0)
         hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
         hrp.RotVelocity = Vector3.new(0, 0, 0)
+		for i,v in pairs(speaker.Character:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+				v.RotVelocity = Vector3.new(0, 0, 0)
+			end
+		end
         wait(1)
         hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
         hrp.RotVelocity = Vector3.new(0, 0, 0)
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
         hrp.Velocity = Vector3.new(0,0,0)
+		for i,v in pairs(speaker.Character:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+				v.RotVelocity = Vector3.new(0, 0, 0)
+			end
+		end
     end
 end
 function loadxd(id1,id2)
@@ -1074,6 +1089,10 @@ function scriptee(scrim,ex1,ex2)
     end
 end
 
+function lsee(line)
+	loadstring(line)()
+end
+
 function empty()
 
 end
@@ -1240,6 +1259,12 @@ commands = {
         altnames = {"script"},
         autoexe = false,
         description  = "can load in some scripts"
+    },
+	ls = {
+        functionname = [[lsee(ctable[2])]],
+        altnames = {"loadstring"},
+        autoexe = false,
+        description  = "can use to run code / loadstring"
     },
     plr = {
         functionname = [[playervars(ctable[2],ctable[3],ctable[4])]],
