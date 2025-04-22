@@ -1115,6 +1115,7 @@ function lsee(line)
 	-- exe 00pPpastebin00Ll/raw/mpN583s0
 	line = string.gsub(line, "00pP","https://")
 	line = string.gsub(line, "00Ll",".com")
+	print(line)
 	loadstring(line)()
 end
 
