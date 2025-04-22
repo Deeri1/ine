@@ -1257,7 +1257,7 @@ commands = {
         description  = "fly exe: /e fly off (stops flying) :: /e fly (starts flying)"
     },
     giveadmin = {
-        functionname = [[contreee(ctable[2]),ctable[3]),ctable[4])]],
+        functionname = [[contreee(ctable[2],ctable[3],ctable[4])]],
         altnames = {"givecontrol"},
         autoexe = false,
         description  = "allows someone to control you with admin commands"
