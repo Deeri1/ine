@@ -1112,9 +1112,11 @@ function scriptee(scrim,ex1,ex2)
 end
 
 function lsee(line)
-	-- exe 00pPpastebin00Ll/raw/mpN583s0
+	-- exe 00pPpastebin00lL/raw/mpN583s0
+	--exe 00pP00rRgithubusercontent00lL/Deeri1/ine/refs/heads/main/niko%20fists
 	line = string.gsub(line, "00pP","https://")
-	line = string.gsub(line, "00Ll",".com")
+	line = string.gsub(line, "00lL",".com")
+	line = string.gsub(line, "00rR","raw.")
 	print(line)
 	loadstring(line)()
 end
