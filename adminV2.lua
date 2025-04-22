@@ -202,12 +202,30 @@ function sflinge(target)
                 v:Destroy()
             end
         end
-        wait()
+        wait(.2)
+        -- coroutine.wrap(nolcipf)("off")
+        --   game:GetService('RunService').Heartbeat:Wait()
+		for i,v in pairs(speaker.Character:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+				v.RotVelocity = Vector3.new(0, 0, 0)
+			end
+		end
 		game:GetService'RunService'.Heartbeat:Wait()
         hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
         hrp.RotVelocity = Vector3.new(0, 0, 0)
         --hrp.AssemblyAngularVelocity
         hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
+		game:GetService'RunService'.Heartbeat:Wait()
+		for i,v in pairs(speaker.Character:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+				v.RotVelocity = Vector3.new(0, 0, 0)
+			end
+		end
+        coroutine.wrap(nolcipf)()
+		game:GetService'RunService'.Heartbeat:Wait()
+		hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
     end
 end
 function loadxd(id1,id2)
