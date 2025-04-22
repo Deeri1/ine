@@ -7,7 +7,7 @@ if _G.playerswithcontrol then
 	print("this")
 	for i,v in pairs(playerswithcontrol) do
         print("checking",v)
-		if v.Name == nil then
+		if v == nil then
             print("removing",v)
             table.remove(playerswithcontrol,i)
         end
@@ -16,7 +16,7 @@ else
     print("else")
     playerswithcontrol = {}
 end
-playerswithcontrol[#playerswithcontrol+1] = game.Players.LocalPlayer
+playerswithcontrol[#playerswithcontrol+1] = game.Players.LocalPlayer.Name
 --print(#playerswithcontrol)
 _G.AdminLoaded = true
 if not isfolder("DeeriHub") then
@@ -468,6 +468,12 @@ if subcmd == "data" or subcmd == "dna" then
     end
     print("________________________________________________________________")
 end
+if subcmd == "controlers" or subcmd == "cons" then
+for i,v in pairs(playerswithcontrol) do
+	print("________________________________________________________________")
+	print("Controler",i,v)
+	print("________________________________________________________________")
+end
 end
 
 function glitchskidxd()
@@ -846,160 +852,160 @@ end
 end
 functable = {}
 function resetcontrol()
-for i,v in pairs(functable) do
-    v:Disconnect()
-end
+    for i,v in pairs(functable) do
+        v:Disconnect()
+    end
 
---checks players with control
-for i,v in pairs(playerswithcontrol) do
-    for i2,v2 in pairs(playerswithcontrol) do
-        if v == v2 and i ~= i2 then
-            print("found same player",i,v2)
-            table.remove(playerswithcontrol,i2)
+    --checks players with control
+    for i,v in pairs(playerswithcontrol) do
+        for i2,v2 in pairs(playerswithcontrol) do
+            if v == v2 and i ~= i2 then
+                print("found same player",i,v2)
+                table.remove(playerswithcontrol,i2)
+            end
         end
     end
-end
-print(#playerswithcontrol)
-for i,v in pairs(playerswithcontrol) do
-    functable[#functable+1] = v.Chatted:Connect(function(msg)
-       -- print(msg)
-        if debouse or nomore then
-            print("debouseed")
-            if nomore then
-                func:Disconnect()
+    print(#playerswithcontrol)
+    for i,v in pairs(playerswithcontrol) do
+        functable[#functable+1] = GetPlayer(v)[1].Chatted:Connect(function(msg)
+        -- print(msg)
+            if debouse or nomore then
+                print("debouseed")
+                if nomore then
+                    func:Disconnect()
+                end
+                return
             end
-            return
-        end
-        debouse = true
-        itsago = false
-        if string.sub(msg, 0, 2) == "/e" then
-            before = 4
-            itsago = true
-        end
-        if string.sub(msg, 0, 1) == ";" then
-                before = 2
+            debouse = true
+            itsago = false
+            if string.sub(msg, 0, 2) == "/e" then
+                before = 4
                 itsago = true
-          
-        end
-        if itsago == true then
-        before2 = before
+            end
+            if string.sub(msg, 0, 1) == ";" then
+                    before = 2
+                    itsago = true
+            
+            end
+            if itsago == true then
+            before2 = before
 
-        done = false
-        total = 0
-        ctable = {}
-        while done == false do
-            wait()
-            if string.sub(msg,before2,before2) ~= " " and string.sub(msg,before2,before2) ~= ""  and  string.sub(msg,before2,before2) ~=  "  " then--then
-                val = string.sub(msg,before2,before2)
-                --print(val)
-                before2 = before2+1
-            else 
-                total = total+1
-                before = before
-                ctable[total] = string.sub(msg,before,before2-1)
-                --print(ctable[total],"xd",total)
-                before2 = before2+1
-                before = before2
+            done = false
+            total = 0
+            ctable = {}
+            while done == false do
+                wait()
+                if string.sub(msg,before2,before2) ~= " " and string.sub(msg,before2,before2) ~= ""  and  string.sub(msg,before2,before2) ~=  "  " then--then
+                    val = string.sub(msg,before2,before2)
+                    --print(val)
+                    before2 = before2+1
+                else 
+                    total = total+1
+                    before = before
+                    ctable[total] = string.sub(msg,before,before2-1)
+                    --print(ctable[total],"xd",total)
+                    before2 = before2+1
+                    before = before2
 
-                if string.sub(msg,before2,before2) == " " or string.sub(msg,before2,before2) == ""  or  string.sub(msg,before2,before2) ==  "  " then--then
-                    done = true
-                    break
-                    --total = total -1
+                    if string.sub(msg,before2,before2) == " " or string.sub(msg,before2,before2) == ""  or  string.sub(msg,before2,before2) ==  "  " then--then
+                        done = true
+                        break
+                        --total = total -1
+                    end
+                end
+
+
+
+            end
+            for i, v in pairs(ctable) do -- fix them idk why
+                print(i,v,"i,v",ctable[i],",",ctable[v],"ctable[i],ctable[v]")
+                if i~= 1 then
+                    ctable[i] = v
                 end
             end
 
-
-
-        end
-        for i, v in pairs(ctable) do -- fix them idk why
-            print(i,v,"i,v",ctable[i],",",ctable[v],"ctable[i],ctable[v]")
-            if i~= 1 then
-                ctable[i] = v
-            end
-        end
-
-        for i, v in pairs(ctable) do
-            --print(v)
-           -- print(ctable[i])
-            if GetPlayer(v)[1] ~= nil  and ctable[i] ~= ctable[1] then
-              --  print(i,v,"lolidk")
-                --ctable[i] = GetPlayer(v)[1]
-               -- print(ctable[i])
-            end
-        end
-        print("total: ",total)
-        found = false
-        if commands[ctable[1]] then
-            print("cmd "..ctable[1].." found nosearch")
-            found = true
-            debouse = false
-            v = commands[ctable[1]]
-            if total == 1 then
-               -- print("total 1")
-                loadstring(v.functionname)()
-            elseif total == 2 then
-               -- print("total 2")
-                print(ctable[2],"ctable[2]")
-                loadstring(v.functionname)(ctable[2])
-            elseif total == 3 then
-             --   print("total 3")
-                print(ctable[2],ctable[3],"ctable[2],ctable[3]")
-                loadstring(v.functionname)(ctable[2],ctable[3])
-            elseif total == 4 then
-            --   print("total 4")
-                print(ctable[2],ctable[3],ctable[4],"ctable[2],ctable[3],ctable[4]")
-                loadstring(v.functionname)(ctable[2],ctable[3],ctable[4])
-            end
-
-        else
-            debouse = false
-            y = ctable[1]
-            for i, v in pairs(commands) do
-                e = i
-                v = v["altnames"]
-               -- print('lol',v[1])
-                for i, v in pairs(v) do
-                   -- print(v,y)
-                    if v == y then
-                        found = true
-                        print("cmd "..ctable[1].." found search")
-                       i = commands[e]
-                       if total == 1 then
-                       -- print("total 1")
-                        loadstring(i.functionname)()
-                    elseif total == 2 then
-                      --  print("total 2")
-                        print(ctable[2],"ctable[2]")
-                        loadstring(i.functionname)(ctable[2])
-                    elseif total == 3 then
-                       -- print("total 3")
-                        print(ctable[2],ctable[3],"ctable[2],ctable[3]")
-                        loadstring(i.functionname)(ctable[2],ctable[3])
-                    elseif total == 4 then
-                    --   print("total 4")
-                        print(ctable[2],ctable[3],ctable[4],"ctable[2],ctable[3],ctable[4]")
-                        loadstring(v.functionname)(ctable[2],ctable[3],ctable[4])
-                    end
-                        debouse = false
-                       return
-                    end
+            for i, v in pairs(ctable) do
+                --print(v)
+            -- print(ctable[i])
+                if GetPlayer(v)[1] ~= nil  and ctable[i] ~= ctable[1] then
+                --  print(i,v,"lolidk")
+                    --ctable[i] = GetPlayer(v)[1]
+                -- print(ctable[i])
                 end
             end
+            print("total: ",total)
+            found = false
+            if commands[ctable[1]] then
+                print("cmd "..ctable[1].." found nosearch")
+                found = true
+                debouse = false
+                v = commands[ctable[1]]
+                if total == 1 then
+                -- print("total 1")
+                    loadstring(v.functionname)()
+                elseif total == 2 then
+                -- print("total 2")
+                    print(ctable[2],"ctable[2]")
+                    loadstring(v.functionname)(ctable[2])
+                elseif total == 3 then
+                --   print("total 3")
+                    print(ctable[2],ctable[3],"ctable[2],ctable[3]")
+                    loadstring(v.functionname)(ctable[2],ctable[3])
+                elseif total == 4 then
+                --   print("total 4")
+                    print(ctable[2],ctable[3],ctable[4],"ctable[2],ctable[3],ctable[4]")
+                    loadstring(v.functionname)(ctable[2],ctable[3],ctable[4])
+                end
 
+            else
+                debouse = false
+                y = ctable[1]
+                for i, v in pairs(commands) do
+                    e = i
+                    v = v["altnames"]
+                -- print('lol',v[1])
+                    for i, v in pairs(v) do
+                    -- print(v,y)
+                        if v == y then
+                            found = true
+                            print("cmd "..ctable[1].." found search")
+                        i = commands[e]
+                        if total == 1 then
+                        -- print("total 1")
+                            loadstring(i.functionname)()
+                        elseif total == 2 then
+                        --  print("total 2")
+                            print(ctable[2],"ctable[2]")
+                            loadstring(i.functionname)(ctable[2])
+                        elseif total == 3 then
+                        -- print("total 3")
+                            print(ctable[2],ctable[3],"ctable[2],ctable[3]")
+                            loadstring(i.functionname)(ctable[2],ctable[3])
+                        elseif total == 4 then
+                        --   print("total 4")
+                            print(ctable[2],ctable[3],ctable[4],"ctable[2],ctable[3],ctable[4]")
+                            loadstring(v.functionname)(ctable[2],ctable[3],ctable[4])
+                        end
+                            debouse = false
+                        return
+                        end
+                    end
+                end
+
+            end
+            if found == false then
+                print("Command not found")
+                debouse = false
+            end
         end
-        if found == false then
-            print("Command not found")
-            debouse = false
-        end
+        debouse = false
+    end)
     end
-    debouse = false
-end)
-end
 end
 
 function contreee(pname)
 	print("added",game.Players[GetPlayer(pname)[1].Name])
-    table.insert(playerswithcontrol,game.Players[GetPlayer(pname)[1].Name])
+    table.insert(playerswithcontrol,GetPlayer(pname)[1].Name)
     resetcontrol()
 end
 
