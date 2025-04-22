@@ -127,6 +127,12 @@ function goto(target)
     target = GetPlayer(target)[1]
     target2 = game:GetService("Players")[target.Name].Character
     hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+	for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+		if v:IsA("BasePart") then
+			v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+			v.RotVelocity = Vector3.new(0, 0, 0)
+		end
+	end
     hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
     hrp.RotVelocity = Vector3.new(0, 0, 0)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = GetRoot(target2).CFrame
@@ -191,7 +197,7 @@ function sflinge(target)
         bambam.P = math.huge
         wait(2)
         endedskid = true
-        for i,v in pairs(speaker.Character.HumanoidRootPart:GetChildren()) do
+        for i,v in pairs(game.Players.LocalPlayer.Character.HumanoidRootPart:GetChildren()) do
             if v.ClassName == 'BodyAngularVelocity'or v.ClassName == 'BodyVelocity' then
                 v:Destroy()
             end
@@ -199,6 +205,12 @@ function sflinge(target)
         wait(.2)
         -- coroutine.wrap(nolcipf)("off")
         --   game:GetService('RunService').Heartbeat:Wait()
+		for i,v in pairs(speaker.Character:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+				v.RotVelocity = Vector3.new(0, 0, 0)
+			end
+		end
         hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
         hrp.RotVelocity = Vector3.new(0, 0, 0)
         --hrp.AssemblyAngularVelocity
@@ -473,6 +485,7 @@ for i,v in pairs(playerswithcontrol) do
 	print("________________________________________________________________")
 	print("Controler",i,v)
 	print("________________________________________________________________")
+end
 end
 end
 
