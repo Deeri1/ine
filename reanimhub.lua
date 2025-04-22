@@ -590,7 +590,7 @@ for i,v in pairs(_G.neededhats) do
 		print(lol:GetAttribute("id"))
 	end)
 end
-
+wait(.5)
 ----------------------------------------------------------------
 
 for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
