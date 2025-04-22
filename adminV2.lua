@@ -1044,6 +1044,14 @@ function contreee(pname,e1,e2)
 				end
 			end
 		end
+		if e1 == "print" then
+			printxd("cons")
+		end
+		if e1 == "reset" then
+			playerswithcontrol = {}
+			playerswithcontrol[#playerswithcontrol+1] = game.Players.LocalPlayer.Name
+			resetcontrol()
+		end
 	else
 		print("added",game.Players[GetPlayer(pname)[1].Name])
 		table.insert(playerswithcontrol,GetPlayer(pname)[1].Name)
@@ -1104,6 +1112,9 @@ function scriptee(scrim,ex1,ex2)
 end
 
 function lsee(line)
+	-- exe 00pPpastebin00Ll/raw/mpN583s0
+	line = string.gsub(line, "00pP","https://")
+	line = string.gsub(line, "00Ll",".com")
 	loadstring(line)()
 end
 
