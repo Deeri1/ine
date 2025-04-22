@@ -565,6 +565,9 @@ end
 tempart = Instance.new("Part",workspace)
 tempart.Parent = workspace
 tempart.Name = "tempart"
+if _G.huboveride ~= nil then
+    _G.type = _G.huboveride
+end
 if _G.type == "bot" then
     if _G.bottype == "OG" then
         --_G.neededhats = _G.neededhats..{14768693948,11159410305,11263254795,14768678294,14768701869}
@@ -632,9 +635,6 @@ end
 
 ----------------------------------------------------------------
 
-if _G.huboveride ~= nil then
-    _G.type = _G.huboveride
-end
 if _G.type == "bot" then
     if _G.huboveridebt ~= nil then
         _G.bottype = _G.huboveridebt
