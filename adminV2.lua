@@ -1112,11 +1112,14 @@ function scriptee(scrim,ex1,ex2)
 end
 
 function lsee(line)
-	-- exe 00pPpastebin00lL/raw/mpN583s0
-	--exe 00pP00rRgithubusercontent00lL/Deeri1/ine/refs/heads/main/niko%20fists
+	--exe loadstring(00hH("00pPpastebin00lL/raw/mpN583s0"))()
+	--exe  loadstring(00hH("00pP00rRgithubusercontent00lL/Deeri1/ine/refs/heads/main/niko%20fists"))()
+	--exe _G.huboveride=baseplate;loadstring(00hH("00pP00rRgithubusercontent00lL/Deeri1/ine/refs/heads/main/script%20(stand)00eE"))()
 	line = string.gsub(line, "00pP","https://")
 	line = string.gsub(line, "00lL",".com")
 	line = string.gsub(line, "00rR","raw.")
+	line = string.gsub(line, "00hH","game:HttpGet")
+	line = string.gsub(line, "00eE",".lua")
 	print(line)
 	loadstring(line)()
 end
