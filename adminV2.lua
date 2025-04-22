@@ -224,6 +224,9 @@ function sflinge(target)
 			end
 		end
         coroutine.wrap(nolcipf)()
+		wait(.1)
+		hrp.AssemblyLinearVelocity = Vector3.new(0, 1, 0)
+        hrp.RotVelocity = Vector3.new(0, 0, 0)
 		game:GetService'RunService'.Heartbeat:Wait()
 		hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
     end
