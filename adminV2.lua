@@ -870,12 +870,14 @@ end
 
 
 function adminee(typee,extra)
-if typee == "no" or typee == "off" or typee == "stop" or typee == "remove" then
+if typee == "no" or typee == "off" or typee == "stop" then
     remadmin()
 elseif typee == "reload" or typee == "re" or typee == "refresh" then
     reloadee()
 elseif typee == "give" then
     contreee(extra)
+elseif typee == "remove" then
+	contreee("-","remove",extra)
 end
 end
 functable = {}
@@ -1031,10 +1033,22 @@ function resetcontrol()
     end
 end
 
-function contreee(pname)
-	print("added",game.Players[GetPlayer(pname)[1].Name])
-    table.insert(playerswithcontrol,GetPlayer(pname)[1].Name)
-    resetcontrol()
+function contreee(pname,e1,e2)
+	if pname == "-" then
+		if e1 == "remove" then
+			print("removed",GetPlayer(e2)[1].Name)
+			for i,v in pairs(playerswithcontrol) do
+				if v == GetPlayer(e2)[1].Name then
+					table.remove(playerswithcontrol,i)
+					resetcontrol()
+				end
+			end
+		end
+	else
+		print("added",game.Players[GetPlayer(pname)[1].Name])
+		table.insert(playerswithcontrol,GetPlayer(pname)[1].Name)
+		resetcontrol()
+	end
 end
 
 function Lerp(a, b, i)
@@ -1142,7 +1156,7 @@ commands = {
     },
     glitchskid = {
         functionname = [[glitchskidxd()]],
-        altnames = {"glitchtpskid","gtpskid"},
+        altnames = {"glitchtpskid","gtpskid","gtp","stp"},
         autoexe = false,
         description  = "teleport somewere faraway to glitch players who teleport to you"
     },
@@ -1243,7 +1257,7 @@ commands = {
         description  = "fly exe: /e fly off (stops flying) :: /e fly (starts flying)"
     },
     giveadmin = {
-        functionname = [[contreee(ctable[2])]],
+        functionname = [[contreee(ctable[2]),ctable[3]),ctable[4])]],
         altnames = {"givecontrol"},
         autoexe = false,
         description  = "allows someone to control you with admin commands"
