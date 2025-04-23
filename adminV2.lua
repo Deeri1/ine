@@ -123,8 +123,8 @@ else
     end     
         
 end
-looptp = false
 function gotoe(target,ex1,ex2)
+	looptp = false
 	if target == "-" then
 		if ex1 == "loop" then
 			if looptp == false and ex2 ~= "off" then
@@ -1154,7 +1154,7 @@ function antiafkee(erm)
 		afkt = true
 		anti = game.Players.LocalPlayer.Idled:connect(function()
 			print("anti afk")
-			mouse2click()
+			mouse1click()
 		end)
 	end
 end
@@ -1330,7 +1330,7 @@ commands = {
         functionname = [[lsee(ctable[2])]],
         altnames = {"loadstring"},
         autoexe = false,
-        description  = "can use to run code / loadstring"
+        description  = "can use to run code / loadstrings"
     },
 	antiafk = {
         functionname = [[antiafkee(ctable[2])]],
