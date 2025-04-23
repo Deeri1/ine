@@ -302,6 +302,7 @@ end
 function rejoin()
     local ts = game:GetService("TeleportService")
     local p = game:GetService("Players").LocalPlayer
+	queue_on_teleport("loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/adminV2.lua"))()")
     ts:Teleport(game.PlaceId, p)
 end
 function notoolkill(version)
@@ -1173,6 +1174,7 @@ function toolsee(typee)
 		if gtoolsf then
 			gtoolsf:Disconnect()
 			gtoolsf = nil
+			return
 		end
 		gtoolsf = game:GetService("Workspace").ChildAdded:connect(function(part)
 			if nomore then
@@ -1182,9 +1184,22 @@ function toolsee(typee)
 			if part:IsA("Tool") then
 				game:GetService'RunService'.Heartbeat:Wait()
 				game:GetService'RunService'.RenderStepped:Wait()
+				local tpos = lplayer.Character.HumanoidRootPart.CFrame
 				part.Handle.CFrame = lplayer.Character.HumanoidRootPart.CFrame
+				game:GetService'RunService'.Heartbeat:Wait()
+				game:GetService'RunService'.RenderStepped:Wait()
+				game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Backpack
+				lplayer.Character.HumanoidRootPart.CFrame = tpos
 			end
 		end)
+	elseif typee == "unequip" then
+		lplayer = game.Players.LocalPlayer
+		for i,v in pairs(lplayer.Character:GetChildren()) do
+			if v:IsA("Tool") then
+				v.Parent = lplayer.Backpack
+			end
+		end
+
 	end
 end
 
