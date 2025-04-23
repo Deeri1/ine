@@ -235,7 +235,7 @@ function sflinge(target)
 		game:GetService'RunService'.Heartbeat:Wait()
 		game:GetService'RunService'.RenderStepped:Wait()
 		game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
-		nolcipf()
+		coroutine.wrap(nolcipf)()
 		game:GetService'RunService'.Heartbeat:Wait()
 		game:GetService'RunService'.RenderStepped:Wait()
 		game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
