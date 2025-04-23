@@ -1188,7 +1188,7 @@ function toolsee(typee)
 				part.Handle.CFrame = lplayer.Character.HumanoidRootPart.CFrame
 				game:GetService'RunService'.Heartbeat:Wait()
 				game:GetService'RunService'.RenderStepped:Wait()
-				game.Players.LocalPlayer.Character:WaitForChildOfClass("Tool").Parent = game.Players.LocalPlayer.Backpack
+				game.Players.LocalPlayer.Character:WaitForChild(part.Name).Parent = game.Players.LocalPlayer.Backpack
 				game:GetService'RunService'.Heartbeat:Wait()
 				game:GetService'RunService'.RenderStepped:Wait()
 				lplayer.Character.HumanoidRootPart.CFrame = tpos
