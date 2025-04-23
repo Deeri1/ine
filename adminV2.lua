@@ -1180,6 +1180,8 @@ function toolsee(typee)
 				gtoolsf = nil
 			end
 			if part:IsA("Tool") then
+				game:GetService'RunService'.Heartbeat:Wait()
+				game:GetService'RunService'.RenderStepped:Wait()
 				part.Handle.CFrame = lplayer.Character.HumanoidRootPart.CFrame
 			end
 		end)
