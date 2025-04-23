@@ -1184,11 +1184,12 @@ function toolsee(typee)
 			if part:IsA("Tool") then
 				game:GetService'RunService'.Heartbeat:Wait()
 				game:GetService'RunService'.RenderStepped:Wait()
+				local pname = part.Name
 				local tpos = lplayer.Character.HumanoidRootPart.CFrame
 				part.Handle.CFrame = lplayer.Character.HumanoidRootPart.CFrame
 				game:GetService'RunService'.Heartbeat:Wait()
 				game:GetService'RunService'.RenderStepped:Wait()
-				game.Players.LocalPlayer.Character:WaitForChild(part.Name).Parent = game.Players.LocalPlayer.Backpack
+				game.Players.LocalPlayer.Character:WaitForChild(pname).Parent = game.Players.LocalPlayer.Backpack
 				game:GetService'RunService'.Heartbeat:Wait()
 				game:GetService'RunService'.RenderStepped:Wait()
 				lplayer.Character.HumanoidRootPart.CFrame = tpos
