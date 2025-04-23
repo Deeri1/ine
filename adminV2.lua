@@ -1164,6 +1164,28 @@ function antiafkee(erm)
 	end
 end
 
+function clipbordee(erm)
+	setclipboard(erm)
+end
+
+function toolsee(typee)
+	if typee == "get" or typee == "grab" then 
+		if gtoolsf then
+			gtoolsf:Disconnect()
+			gtoolsf = nil
+		end
+		gtoolsf = game:GetService("Workspace").ChildAdded:connect(function(part)
+			if nomore then
+				gtoolsf:Disconnect()
+				gtoolsf = nil
+			end
+			if part:IsA("Tool") then
+				part.Handle.CFrame = lplayer.Character.HumanoidRootPart.CFrame
+			end
+		end)
+	end
+end
+
 function empty()
 
 end
@@ -1342,6 +1364,18 @@ commands = {
         altnames = {"antiafkkick"},
         autoexe = false,
         description  = "anti afk"
+    },
+	copy = {
+        functionname = [[clipbordee(ctable[2])]],
+        altnames = {"setclipboard"},
+        autoexe = false,
+        description  = "copys a string to clipboard"
+    },
+	tool = {
+        functionname = [[toolsee(ctable[2])]],
+        altnames = {"tools"},
+        autoexe = false,
+        description  = "tool stuff"
     },
     plr = {
         functionname = [[playervars(ctable[2],ctable[3],ctable[4])]],
