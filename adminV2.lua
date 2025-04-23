@@ -1231,7 +1231,7 @@ commands = {
         description  = "sets the time with number"
     },
     goto = {
-        functionname = [[goto(ctable[2])]],
+        functionname = [[goto(ctable[2],ctable[3],ctable[4])]],
         altnames = {"to","tpto"},
         autoexe = false,
         description  = "go to a player"
