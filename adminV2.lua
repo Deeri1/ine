@@ -1153,7 +1153,12 @@ function antiafkee(erm)
 	else
 		afkt = true
 		anti = game.Players.LocalPlayer.Idled:connect(function()
+			if nomore then
+				anti:Disconnect()
+				anti = nil
+			end
 			print("anti afk")
+			mousemoveabs(0,2)
 			mouse1click()
 		end)
 	end
