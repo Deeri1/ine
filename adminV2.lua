@@ -123,7 +123,25 @@ else
     end     
         
 end
-function goto(target)
+looptp = false
+function goto(target,ex1,ex2)
+	if target == "-" then
+		if ex1 == "loop" then
+			if looptp == false and ex2 ~= "off" then
+				looptp = true
+				while looptp == true and nomore == false  do
+					wait()
+					target = GetPlayer(ex2)[1]
+					target2 = game:GetService("Players")[target.Name].Character
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = GetRoot(target2).CFrame
+				end
+			else
+				looptp = false
+			end
+
+
+		end
+	else
     target = GetPlayer(target)[1]
     target2 = game:GetService("Players")[target.Name].Character
     hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -136,6 +154,7 @@ function goto(target)
     hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
     hrp.RotVelocity = Vector3.new(0, 0, 0)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = GetRoot(target2).CFrame
+end
 end
 function test(traget)
     print(traget)
@@ -1134,6 +1153,7 @@ function antiafkee(erm)
 	else
 		afkt = true
 		anti = game.Players.LocalPlayer.Idled:connect(function()
+			print("anti afk")
 			mouse2click()
 		end)
 	end
