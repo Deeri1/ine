@@ -232,6 +232,8 @@ function sflinge(target)
 		game:GetService'RunService'.RenderStepped:Wait()
 		hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
 		wait(.1)
+		game:GetService'RunService'.Heartbeat:Wait()
+		game:GetService'RunService'.RenderStepped:Wait()
 		coroutine.wrap(nolcipf)()
     end
 end
