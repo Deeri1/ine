@@ -1112,6 +1112,7 @@ function lsee(line)
 	--exe  loadstring(00hH("00pP00rRgithubusercontent00lL/Deeri1/ine/refs/heads/main/niko%20fists"))()
 	--exe _G.huboveride="baseplate";loadstring(00hH("00pP00rRgithubusercontent00lL/Deeri1/ine/refs/heads/main/script%20(stand)00eE"))()
 	--exe _G.huboveride="baseplate";loadstring(00hH("00pP00rRgithubusercontent00lL/Deeri1/ine/refs/heads/main/legake%20glove00tT"))()
+	--exe  loadstring(00hH("00pP00rRgithubusercontent00lL/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main00tT"))()
 	line = string.gsub(line, "00pP","https://")
 	line = string.gsub(line, "00lL",".com")
 	line = string.gsub(line, "00rR","raw.")
@@ -1120,6 +1121,22 @@ function lsee(line)
 	line = string.gsub(line, "00tT",".txt")
 	print(line)
 	loadstring(line)()
+end
+
+afkt = false
+function antiafkee(erm)
+	if afkt or erm == "off" or erm == "no" then
+		afkt = false
+		if anti then
+			anti:Disconnect()
+			anti = nil
+		end
+	else
+		afkt = true
+		anti = game.Players.LocalPlayer.Idled:connect(function()
+			mouse2click()
+		end)
+	end
 end
 
 function empty()
@@ -1294,6 +1311,12 @@ commands = {
         altnames = {"loadstring"},
         autoexe = false,
         description  = "can use to run code / loadstring"
+    },
+	antiafk = {
+        functionname = [[antiafkee(ctable[2])]],
+        altnames = {"antiafkkick"},
+        autoexe = false,
+        description  = "anti afk"
     },
     plr = {
         functionname = [[playervars(ctable[2],ctable[3],ctable[4])]],
