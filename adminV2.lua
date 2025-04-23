@@ -124,7 +124,7 @@ else
         
 end
 looptp = false
-function goto(target,ex1,ex2)
+function gotoe(target,ex1,ex2)
 	if target == "-" then
 		if ex1 == "loop" then
 			if looptp == false and ex2 ~= "off" then
@@ -142,19 +142,19 @@ function goto(target,ex1,ex2)
 
 		end
 	else
-    target = GetPlayer(target)[1]
-    target2 = game:GetService("Players")[target.Name].Character
-    hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-	for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-		if v:IsA("BasePart") then
-			v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-			v.RotVelocity = Vector3.new(0, 0, 0)
+		target = GetPlayer(target)[1]
+		target2 = game:GetService("Players")[target.Name].Character
+		hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+				v.RotVelocity = Vector3.new(0, 0, 0)
+			end
 		end
+		hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+		hrp.RotVelocity = Vector3.new(0, 0, 0)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = GetRoot(target2).CFrame
 	end
-    hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-    hrp.RotVelocity = Vector3.new(0, 0, 0)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = GetRoot(target2).CFrame
-end
 end
 function test(traget)
     print(traget)
@@ -1231,7 +1231,7 @@ commands = {
         description  = "sets the time with number"
     },
     goto = {
-        functionname = [[goto(ctable[2],ctable[3],ctable[4])]],
+        functionname = [[gotoe(ctable[2],ctable[3],ctable[4])]],
         altnames = {"to","tpto"},
         autoexe = false,
         description  = "go to a player"
