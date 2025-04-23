@@ -302,7 +302,7 @@ end
 function rejoin()
     local ts = game:GetService("TeleportService")
     local p = game:GetService("Players").LocalPlayer
-	queue_on_teleport("loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/adminV2.lua"))()")
+	queue_on_teleport("loadstring(game:HttpGet(\"https://raw.githubusercontent.com/Deeri1/ine/main/adminV2.lua\"))()")
     ts:Teleport(game.PlaceId, p)
 end
 function notoolkill(version)
@@ -1188,7 +1188,9 @@ function toolsee(typee)
 				part.Handle.CFrame = lplayer.Character.HumanoidRootPart.CFrame
 				game:GetService'RunService'.Heartbeat:Wait()
 				game:GetService'RunService'.RenderStepped:Wait()
-				game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Backpack
+				game.Players.LocalPlayer.Character:WaitForChildOfClass("Tool").Parent = game.Players.LocalPlayer.Backpack
+				game:GetService'RunService'.Heartbeat:Wait()
+				game:GetService'RunService'.RenderStepped:Wait()
 				lplayer.Character.HumanoidRootPart.CFrame = tpos
 			end
 		end)
