@@ -234,7 +234,11 @@ function sflinge(target)
 		wait(.1)
 		game:GetService'RunService'.Heartbeat:Wait()
 		game:GetService'RunService'.RenderStepped:Wait()
-		coroutine.wrap(nolcipf)()
+		game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+		nolcipf()
+		game:GetService'RunService'.Heartbeat:Wait()
+		game:GetService'RunService'.RenderStepped:Wait()
+		game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
     end
 end
 function loadxd(id1,id2)
