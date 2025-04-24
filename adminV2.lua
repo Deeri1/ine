@@ -159,15 +159,15 @@ function gotoe(target,ex1,ex2)
 end
 function test(traget)
 	if traget == "1" then
-	tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool")
-    local grip = function(tool, cf)
-		local origin = CFrame.new(cf.p)
-		local x, y, z = cf:toEulerAnglesXYZ()
-		local new = CFrame.Angles(x, y, z)
-		local grip = (origin * new):inverse()
-		tool.Grip = grip
-	end
-	grip(tool, CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)))
+		tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool")
+		local grip = function(tool, cf)
+			local origin = CFrame.new(cf.p)
+			local x, y, z = cf:toEulerAnglesXYZ()
+			local new = CFrame.Angles(x, y, z)
+			local grip = (origin * new):inverse()
+			tool.Grip = grip
+		end
+		grip(tool, CFrame.new(-1, 0, 0) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(0)))
 	elseif traget == "2" then
 		tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
 		local grip = function(tool, cf)
