@@ -158,7 +158,16 @@ function gotoe(target,ex1,ex2)
 	end
 end
 function test(traget)
-    print(traget)
+
+	tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool")
+    local grip = function(tool, cf)
+		local origin = CFrame.new(cf.p)
+		local x, y, z = cf:toEulerAnglesXYZ()
+		local new = CFrame.Angles(x, y, z)
+		local grip = (origin * new):inverse()
+		tool.Grip = grip
+	end
+	grip(tool, CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)))
 end
 function cspye(traget)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/chat%20spy"))()
