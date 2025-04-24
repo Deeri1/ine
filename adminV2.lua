@@ -1227,6 +1227,7 @@ function resetee(method)
 	if method == "re" then
 		local dp = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		resetee()
+		character = games.Players.LocalPlayer.Character
 		repeat wait() until character:FindFirstChild("HumanoidRootPart")
 		wait()
 		localPlayer.Character.HumanoidRootPart.CFrame = dp
