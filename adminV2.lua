@@ -157,38 +157,11 @@ function gotoe(target,ex1,ex2)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = GetRoot(target2).CFrame
 	end
 end
-function test(traget)
-	if traget == "1" then
-		tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool")
-		local grip = function(tool, cf)
-			local origin = CFrame.new(cf.p)
-			local x, y, z = cf:toEulerAnglesXYZ()
-			local new = CFrame.Angles(x, y, z)
-			local grip = (origin * new):inverse()
-			tool.Grip = grip
-		end
-		local pnum = 0
-		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-			if v:IsA("Tool") then
-				grip(tool, CFrame.new(pnum, 0, 0) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(0)))
-				pnum = pnum-1
-			end
-		end
-	elseif traget == "2" then
-		tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
-		local grip = function(tool, cf)
-			local origin = CFrame.new(cf.p)
-			local x, y, z = cf:toEulerAnglesXYZ()
-			local new = CFrame.Angles(x, y, z)
-			local grip = (origin * new):inverse()
-			tool.Grip = grip
-		end
-		grip(tool, CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(60), math.rad(0), math.rad(60)))
-	end
-end
+
 function cspye(traget)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/chat%20spy"))()
 end
+
 function sflinge(target)
     target = GetPlayer(target)[1]
     if target ~= "stop" and target ~= plrname and game.Workspace:FindFirstChild(target.Name) then
@@ -1261,6 +1234,35 @@ function resetee(method)
 		game.Players.LocalPlayer.Character:BreakJoints()
 	else
 		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	end
+end
+
+function test(traget)
+	if traget == "1" then
+		local pnum = 0
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			local grip = function(tool, cf)
+				local origin = CFrame.new(cf.p)
+				local x, y, z = cf:toEulerAnglesXYZ()
+				local new = CFrame.Angles(x, y, z)
+				local grip = (origin * new):inverse()
+				tool.Grip = grip
+			end
+			if v:IsA("Tool") then
+				grip(v, CFrame.new(pnum, 0, 0) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(0)))
+				pnum = pnum-1
+			end
+		end
+	elseif traget == "2" then
+		tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+		local grip = function(tool, cf)
+			local origin = CFrame.new(cf.p)
+			local x, y, z = cf:toEulerAnglesXYZ()
+			local new = CFrame.Angles(x, y, z)
+			local grip = (origin * new):inverse()
+			tool.Grip = grip
+		end
+		grip(tool, CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(60), math.rad(0), math.rad(60)))
 	end
 end
 
