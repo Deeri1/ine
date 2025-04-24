@@ -699,7 +699,7 @@ elseif typee == "sit" then
 elseif typee == "walkto" then
     humanoid:MoveTo(GetPlayer(num)[1].Character.HumanoidRootPart.Position)
 elseif typee == "chat" or typee == "say" then
-	num = string.gsub(line, "-"," ")
+	num = string.gsub(num, "-"," ")
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(num, "All")
 elseif typee == "jump" then
         humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
