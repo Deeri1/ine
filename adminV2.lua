@@ -1176,6 +1176,7 @@ function toolsee(typee)
 		if gtoolsf then
 			gtoolsf:Disconnect()
 			gtoolsf = nil
+			print("tools discconected")
 			return
 		end
 		gtoolsf = game:GetService("Workspace").ChildAdded:connect(function(part)
@@ -1204,7 +1205,20 @@ function toolsee(typee)
 				v.Parent = lplayer.Backpack
 			end
 		end
-
+	elseif typee == "equipall" then
+		lplayer = game.Players.LocalPlayer
+		for i,v in pairs(lplayer.Backpack:GetChildren()) do
+			if v:IsA("Tool") then
+				v.Parent = lplayer.Character
+			end
+		end
+	elseif typee == "drop" then
+		lplayer = game.Players.LocalPlayer
+		for i,v in pairs(lplayer.Backpack:GetChildren()) do
+			if v:IsA("Tool") then
+				v.Parent = game.workspace
+			end
+		end
 	end
 end
 
