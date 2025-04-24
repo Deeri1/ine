@@ -1268,12 +1268,12 @@ function dupeee(typee,amount)
 	if typee == "spray" or typee == "cans" or typee == "spraycans" then
 		local thing = game.workspace.Handle
 		for i = 1, amount do
-			firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v.Parent, 0) --0 is touch
+			firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 0) --0 is touch
 			wait()
-			firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v.Parent, 1) -- 1 is untouch
+			firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 1) -- 1 is untouch
 			game:GetService'RunService'.Heartbeat:Wait()
 			game:GetService'RunService'.RenderStepped:Wait()
-			game.Players.LocalPlayer.Character:WaitForChildOfClass("Tool").Parent = game.workspace
+			game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.workspace
 		end
 
 
