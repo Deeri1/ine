@@ -1228,7 +1228,7 @@ function resetee(method)
 		local dp = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		resetee()
 		character = game.Players.LocalPlayer.Character
-		repeat wait() until character:FindFirstChild("HumanoidRootPart")
+		wait(5)
 		wait()
 		localPlayer.Character.HumanoidRootPart.CFrame = dp
 	elseif method == "joints" then
