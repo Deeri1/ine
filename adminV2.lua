@@ -1428,6 +1428,12 @@ commands = {
         autoexe = false,
         description  = "tool stuff"
     },
+	re = {
+        functionname = [[resetee(ctable[2])]],
+        altnames = {"reset"},
+        autoexe = false,
+        description  = "reset stuff"
+    },
     plr = {
         functionname = [[playervars(ctable[2],ctable[3],ctable[4])]],
         altnames = {"player","playerval"},
