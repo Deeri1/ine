@@ -645,16 +645,16 @@ end
 end)
 respawnchanged = false
 function respawntp(slot)
-if slot == "default" or slot == "none" or slot == "" then
-    respawnchanged = false
-else
-    respawnchanged = true
-    if loaddata[slot] then
-        if activerespawn then
-            activerespawn = slot
-        end
-    end
-end
+	if slot == "default" or slot == "none" or slot == "" then
+		respawnchanged = false
+	else
+		respawnchanged = true
+		if loaddata[slot] then
+			if activerespawn then
+				activerespawn = slot
+			end
+		end
+	end
 end
 
 local defaultws = humanoid.WalkSpeed
@@ -1220,6 +1220,20 @@ function toolsee(typee)
 				v.Parent = game.workspace
 			end
 		end
+	end
+end
+
+function resetee(method)
+	if method == "re" then
+		local dp = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		resetee()
+		repeat wait() until character:FindFirstChild("HumanoidRootPart")
+		wait()
+		localPlayer.Character.HumanoidRootPart.CFrame = dp
+	elseif method == "joints" then
+		game.Players.LocalPlayer.Character:BreakJoints()
+	else
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0
 	end
 end
 
