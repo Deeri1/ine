@@ -145,14 +145,15 @@ function gotoe(target,ex1,ex2)
 		target = GetPlayer(target)[1]
 		target2 = game:GetService("Players")[target.Name].Character
 		hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-		for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-			if v:IsA("BasePart") then
-				v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-				v.RotVelocity = Vector3.new(0, 0, 0)
-			end
-		end
+		game:GetService'RunService'.Heartbeat:Wait()
+		game:GetService'RunService'.RenderStepped:Wait()
 		hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
 		hrp.RotVelocity = Vector3.new(0, 0, 0)
+		if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+			game:GetService'RunService'.Heartbeat:Wait()
+			game:GetService'RunService'.RenderStepped:Wait()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = GetRoot(target2).CFrame
 	end
 end
