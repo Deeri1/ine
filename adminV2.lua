@@ -1275,7 +1275,8 @@ function dupeee(typee,amount)
 			firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 1) -- 1 is untouch
 			game:GetService'RunService'.Heartbeat:Wait()
 			game:GetService'RunService'.RenderStepped:Wait()
-			game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.workspace
+			tool = game.Players.LocalPlayer.Character:WaitForChild("Spray")
+			tool.Parent = game.workspace
 		end
 
 
