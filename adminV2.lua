@@ -1216,6 +1216,7 @@ function toolsee(typee)
 		lplayer = game.Players.LocalPlayer
 		for i,v in pairs(lplayer.Backpack:GetChildren()) do
 			if v:IsA("Tool") then
+				v.Parent = lplr.Character
 				v.Parent = game.workspace
 			end
 		end
