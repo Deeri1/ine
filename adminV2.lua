@@ -168,7 +168,7 @@ function test(traget)
 		tool.Grip = grip
 	end
 	grip(tool, CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)))
-	elseif traget == 2 then
+	elseif traget == "2" then
 		tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
 		local grip = function(tool, cf)
 			local origin = CFrame.new(cf.p)
@@ -177,7 +177,7 @@ function test(traget)
 			local grip = (origin * new):inverse()
 			tool.Grip = grip
 		end
-		grip(tool, CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)))
+		grip(tool, CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(60), math.rad(0), math.rad(60)))
 	end
 end
 function cspye(traget)
