@@ -167,7 +167,13 @@ function test(traget)
 			local grip = (origin * new):inverse()
 			tool.Grip = grip
 		end
-		grip(tool, CFrame.new(-1, 0, 0) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(0)))
+		local pnum = 0
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v:IsA("Tool") then
+				grip(tool, CFrame.new(pnum, 0, 0) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(0)))
+				pnum = pnum-1
+			end
+		end
 	elseif traget == "2" then
 		tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
 		local grip = function(tool, cf)
@@ -1258,6 +1264,26 @@ function resetee(method)
 	end
 end
 
+function dupeee(typee,amount)
+	if typee == "spray" or typee == "cans" or typee == "spraycans" then
+		local thing = game.workspace.Handle
+		for i = 1, amount do
+			firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v.Parent, 0) --0 is touch
+			wait()
+			firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v.Parent, 1) -- 1 is untouch
+			game:GetService'RunService'.Heartbeat:Wait()
+			game:GetService'RunService'.RenderStepped:Wait()
+			game.Players.LocalPlayer.Character:WaitForChildOfClass("Tool").Parent = game.workspace
+		end
+		firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v.Parent, 0) --0 is touch
+		wait()
+		firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v.Parent, 1) -- 1 is untouch
+
+	end
+
+
+end
+
 function empty()
 
 end
@@ -1454,6 +1480,12 @@ commands = {
         altnames = {"reset"},
         autoexe = false,
         description  = "reset stuff"
+    },
+	dupe = {
+        functionname = [[dupeee(ctable[2],ctable[3])]],
+        altnames = {"tooldupe"},
+        autoexe = false,
+        description  = "tool dupe stuff type,amount"
     },
     plr = {
         functionname = [[playervars(ctable[2],ctable[3],ctable[4])]],
