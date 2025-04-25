@@ -986,7 +986,10 @@ function resetcontrol()
             if commands[ctable[1]] then
                 print("cmd "..ctable[1].." found nosearch")
                 if announcewrod then
-                    playervars("chat","/w "..pnamee.." "..ctable[1].." ran")
+                    a = "chat"
+                    print(pnamee)
+                    b = "/w "..pnamee.." "..ctable[1].." ran"
+                    playervars(a,b)
                 end
                 found = true
                 debouse = false
@@ -1022,6 +1025,7 @@ function resetcontrol()
                             print("cmd "..ctable[1].." found search")
                             if announcewrod then
                                 a = "chat"
+                                print(pnamee)
                                 b = "/w "..pnamee.." "..ctable[1].." ran"
                                 playervars(a,b)
                             end
@@ -1052,7 +1056,10 @@ function resetcontrol()
             if found == false then
                 print("Command not found")
                 if announcewrod then
-                    playervars("chat","/w "..pnamee.." command not found")
+                    a = "chat"
+                    print(pnamee)
+                    b = "/w "..pnamee.."Command not found"
+                    playervars(a,b)
                 end
                 debouse = false
             end
