@@ -916,7 +916,7 @@ function resetcontrol()
     for i,v in pairs(playerswithcontrol) do
         functable[#functable+1] = GetPlayer(v)[1].Chatted:Connect(function(msg)
         -- print(msg)
-            local pnamee = v
+            local pnamee = cloneref(v)
             if debouse or nomore then
                 print("debouseed")
                 if nomore then
