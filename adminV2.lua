@@ -1031,7 +1031,7 @@ function resetcontrol()
                         elseif total == 4 then
                         --   print("total 4")
                             print(ctable[2],ctable[3],ctable[4],"ctable[2],ctable[3],ctable[4]")
-                            loadstring(v.functionname)(ctable[2],ctable[3],ctable[4])
+                            loadstring(i.functionname)(ctable[2],ctable[3],ctable[4])
                         end
                             debouse = false
                         return
