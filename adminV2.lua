@@ -1275,7 +1275,7 @@ function test(traget)
             if nomore then
                erd:Disconnect()
             end
-        end
+        end)
 		
 	end
 end
