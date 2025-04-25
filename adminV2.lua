@@ -1264,13 +1264,13 @@ function test(traget)
 		end
 		grip(tool, CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(60), math.rad(0), math.rad(60)))
 	elseif traget == "3" then
-		tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Handle
+		tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool")
 		tool.Parent = game.Players.LocalPlayer.Character
-		tool.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+		tool.Parent = game.Players.LocalPlayer.Backpack
 		tool.Parent = game.Players.LocalPlayer.Character.Humanoid
 		tool.Parent = game.Players.LocalPlayer.Character
         while wait() do
-            tool.CFrame = game.Players.LocalPlayer.Character["Left Arm"].CFrame * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(60), math.rad(0), math.rad(60))
+            tool.Handle.CFrame = game.Players.LocalPlayer.Character["Left Arm"].CFrame * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(60), math.rad(0), math.rad(60))
             if nomore then
                 break
             end
