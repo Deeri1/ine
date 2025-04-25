@@ -1228,7 +1228,7 @@ function resetee(method)
 		resetee()
 		character = game.Players.LocalPlayer.Character
 		wait(game.Players.RespawnTime)
-		wait(.1)
+		wait(1)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = dp
 	elseif method == "joints" then
 		game.Players.LocalPlayer.Character:BreakJoints()
@@ -1269,12 +1269,12 @@ function test(traget)
 		tool.Parent = game.Players.LocalPlayer.Backpack
 		tool.Parent = game.Players.LocalPlayer.Character.Humanoid
 		tool.Parent = game.Players.LocalPlayer.Character
-        while wait() do
-            tool.Handle.CFrame = game.Players.LocalPlayer.Character["Left Arm"].CFrame * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(60), math.rad(0), math.rad(60))
+       --[[ while wait() do
+            --tool.Handle.CFrame = game.Players.LocalPlayer.Character["Left Arm"].CFrame * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(60), math.rad(0), math.rad(60))
             if nomore then
                 break
             end
-        end
+        end]]
 		
 	end
 end
