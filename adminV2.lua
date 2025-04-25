@@ -916,7 +916,7 @@ function resetcontrol()
     for i,v in pairs(playerswithcontrol) do
         functable[#functable+1] = GetPlayer(v)[1].Chatted:Connect(function(msg)
         -- print(msg)
-            local pname = v
+            local pnamee = v
             if debouse or nomore then
                 print("debouseed")
                 if nomore then
@@ -986,7 +986,7 @@ function resetcontrol()
             if commands[ctable[1]] then
                 print("cmd "..ctable[1].." found nosearch")
                 if announcewrod then
-                    playervars("chat","/w "..pname.." "..ctable[1].." ran")
+                    playervars("chat","/w "..pnamee.." "..ctable[1].." ran")
                 end
                 found = true
                 debouse = false
@@ -1021,7 +1021,7 @@ function resetcontrol()
                             found = true
                             print("cmd "..ctable[1].." found search")
                             if announcewrod then
-                                playervars("chat","/w "..pname.." "..ctable[1].." ran")
+                                playervars("chat","/w "..pnamee.." "..ctable[1].." ran")
                             end
                         i = commands[e]
                         if total == 1 then
@@ -1050,7 +1050,7 @@ function resetcontrol()
             if found == false then
                 print("Command not found")
                 if announcewrod then
-                    playervars("chat","/w "..pname.." command not found")
+                    playervars("chat","/w "..pnamee.." command not found")
                 end
                 debouse = false
             end
@@ -1174,9 +1174,6 @@ function antiafkee(erm)
 				anti = nil
 			end
 			print("anti afk")
-            for _, idle in ipairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do 
-                idle:Disable() 
-            end
 			mousemoveabs(0,2)
 			mouse1click()
 		end)
