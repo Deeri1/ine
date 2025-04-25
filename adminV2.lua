@@ -916,6 +916,7 @@ function resetcontrol()
     for i,v in pairs(playerswithcontrol) do
         functable[#functable+1] = GetPlayer(v)[1].Chatted:Connect(function(msg)
         -- print(msg)
+            local pname = v
             if debouse or nomore then
                 print("debouseed")
                 if nomore then
@@ -984,6 +985,9 @@ function resetcontrol()
             found = false
             if commands[ctable[1]] then
                 print("cmd "..ctable[1].." found nosearch")
+                if announcewrod then
+                    playervars("chat","/w "..pname.." "..ctable[1].." ran")
+                end
                 found = true
                 debouse = false
                 v = commands[ctable[1]]
@@ -1016,6 +1020,9 @@ function resetcontrol()
                         if v == y then
                             found = true
                             print("cmd "..ctable[1].." found search")
+                            if announcewrod then
+                                playervars("chat","/w "..pname.." "..ctable[1].." ran")
+                            end
                         i = commands[e]
                         if total == 1 then
                         -- print("total 1")
@@ -1042,6 +1049,9 @@ function resetcontrol()
             end
             if found == false then
                 print("Command not found")
+                if announcewrod then
+                    playervars("chat","/w "..pname.." command not found")
+                end
                 debouse = false
             end
         end
@@ -1299,6 +1309,17 @@ function dupeee(typee,amount)
 
 end
 
+announcewrod = false
+function sayittttt()
+    if announcewrod then
+        print("announce word off")
+        announcewrod = false
+    else
+        print("announce word on")
+        announcewrod = true
+    end
+end
+
 function empty()
 
 end
@@ -1499,6 +1520,12 @@ commands = {
 	dupe = {
         functionname = [[dupeee(ctable[2],ctable[3])]],
         altnames = {"tooldupe"},
+        autoexe = false,
+        description  = "tool dupe stuff type,amount"
+    },
+    announce = {
+        functionname = [[sayittttt()]],
+        altnames = {"announcecmd","outloud"},
         autoexe = false,
         description  = "tool dupe stuff type,amount"
     },
