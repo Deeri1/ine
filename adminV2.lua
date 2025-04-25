@@ -1266,7 +1266,7 @@ function test(traget)
 	elseif traget == "3" then
 		tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool")
 		tool.Parent = game.Players.LocalPlayer.Character
-		tool.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+		tool.Parent = game.Players.LocalPlayer.Character["Left Arm"]
 		tool.Parent = game.Players.LocalPlayer.Character.Humanoid
 		tool.Parent = game.Players.LocalPlayer.Character
 		
