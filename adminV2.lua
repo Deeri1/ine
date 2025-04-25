@@ -914,9 +914,10 @@ function resetcontrol()
     end
     print(#playerswithcontrol)
     for i,v in pairs(playerswithcontrol) do
-        functable[#functable+1] = GetPlayer(v)[1].Chatted:Connect(function(msg)
+        functable[#functable+1] = GetPlayer(v)[1].Chatted:Connect(function(msg,idk)
         -- print(msg)
-            local pnamee = cloneref(v)
+            local pnamee = v
+            print(idk)
             if debouse or nomore then
                 print("debouseed")
                 if nomore then
@@ -929,8 +930,7 @@ function resetcontrol()
             if string.sub(msg, 0, 2) == "/e" then
                 before = 4
                 itsago = true
-            end
-            if string.sub(msg, 0, 1) == ";" then
+            elseif string.sub(msg, 0, 1) == ";" then
                     before = 2
                     itsago = true
             
