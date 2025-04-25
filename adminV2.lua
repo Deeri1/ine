@@ -1348,13 +1348,13 @@ function dupeee(mode,typee,amount)
                 end
                 game:GetService'RunService'.Heartbeat:Wait()
                 game:GetService'RunService'.RenderStepped:Wait()
-                for e,v in game.Players.LocalPlayer.Backpack:GetChildren() do
-                    if v:IsA("Tool") then
+                for e,v in pairs(livetools) do
+                    if v and v:IsA("Tool") then
                         v.Parent = game.Players.LocalPlayer.Character
                     end
                 end
-                for e,v in game.Players.LocalPlayer.Character:GetChildren() do
-                    if v:IsA("Tool") then
+                for e,v in pairs(livetools) do
+                    if v and v:IsA("Tool") then
                         v.Parent = game.workspace
                     end
                 end
