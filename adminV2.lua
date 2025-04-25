@@ -1337,21 +1337,29 @@ function dupeee(mode,typee,amount)
                     tool = game.Players.LocalPlayer.Character:WaitForChild("Spray")
                     tool.Parent = game.workspace
                     table.insert(livetools,tool)
-                    wait()
+                    amountc = amountc + 1
+                    i= i + 1
+                    game:GetService'RunService'.RenderStepped:Wait()
                 end
-                for i,v in pairs(livetools) do
+                for e,v in pairs(livetools) do
                     if v then
                         v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                     end
                 end
-                for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
+                game:GetService'RunService'.Heartbeat:Wait()
+                game:GetService'RunService'.RenderStepped:Wait()
+                for e,v in game.Players.LocalPlayer.Backpack:GetChildren() do
                     if v:IsA("Tool") then
                         v.Parent = game.Players.LocalPlayer.Character
+                    end
+                end
+                for e,v in game.Players.LocalPlayer.Character:GetChildren() do
+                    if v:IsA("Tool") then
                         v.Parent = game.workspace
                     end
                 end
-           end
-           for i,v in pairs(livetools) do
+            end
+        for e,v in pairs(livetools) do
             if v then
                 v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
             end
