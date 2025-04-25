@@ -1163,6 +1163,10 @@ function antiafkee(erm)
 			anti = nil
 		end
 	else
+        if afkt then
+            anti:Disconnect()
+            anti = nil
+        end
 		afkt = true
 		anti = game.Players.LocalPlayer.Idled:connect(function()
 			if nomore then
