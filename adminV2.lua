@@ -1571,10 +1571,10 @@ commands = {
         description  = "reset stuff"
     },
 	dupe = {
-        functionname = [[dupeee(ctable[2],ctable[3])]],
+        functionname = [[dupeee(ctable[2],ctable[3],ctable[4])]],
         altnames = {"tooldupe"},
         autoexe = false,
-        description  = "tool dupe stuff type,amount"
+        description  = "tool dupe stuff type,grabmode,amount"
     },
     announce = {
         functionname = [[sayittttt()]],
