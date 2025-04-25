@@ -1303,22 +1303,62 @@ function test(traget)
 	end
 end
 
-function dupeee(typee,amount)
-	if typee == "spray" or typee == "cans" or typee == "spraycans" then
-		local thing = game.workspace.Handle
-		for i = 1, amount do
-			firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 0) --0 is touch
-			wait()
-			firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 1) -- 1 is untouch
-			game:GetService'RunService'.Heartbeat:Wait()
-			game:GetService'RunService'.RenderStepped:Wait()
-			tool = game.Players.LocalPlayer.Character:WaitForChild("Spray")
-			tool.Parent = game.workspace
-		end
 
 
-	end
+function dupeee(mode,typee,amount)
+	if mode == "drop" then
+        if typee == "spray" or typee == "cans" or typee == "spraycans" then
+            local thing = game.workspace.Handle
+            for i = 1, amount do
+                firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 0) --0 is touch
+                wait()
+                firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 1) -- 1 is untouch
+                game:GetService'RunService'.Heartbeat:Wait()
+                game:GetService'RunService'.RenderStepped:Wait()
+                tool = game.Players.LocalPlayer.Character:WaitForChild("Spray")
+                tool.Parent = game.workspace
+                wait()
+            end
 
+
+        end
+    elseif mode == "grab" or mode == "pickup" then
+        if typee == "spray" or typee == "cans" or typee == "spraycans" then
+            amountc = 0
+            livetools = {}
+            while amountc < amount do
+                local i = 0;
+                while i <10 and amountc < amount do
+                    firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 0) --0 is touch
+                    wait()
+                    firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 1) -- 1 is untouch
+                    game:GetService'RunService'.Heartbeat:Wait()
+                    game:GetService'RunService'.RenderStepped:Wait()
+                    tool = game.Players.LocalPlayer.Character:WaitForChild("Spray")
+                    tool.Parent = game.workspace
+                    table.insert(livetools,tool)
+                    wait()
+                end
+                for i,v in pairs(livetools) do
+                    if v then
+                        v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                    end
+                end
+                for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
+                    if v:IsA("Tool") then
+                        v.Parent = game.Players.LocalPlayer.Character
+                        v.Parent = game.workspace
+                    end
+                end
+           end
+           for i,v in pairs(livetools) do
+            if v then
+                v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            end
+        end
+        end
+
+    end
 
 end
 
