@@ -1269,12 +1269,13 @@ function test(traget)
 		tool.Parent = game.Players.LocalPlayer.Backpack
 		tool.Parent = game.Players.LocalPlayer.Character.Humanoid
 		tool.Parent = game.Players.LocalPlayer.Character
-       --[[ while wait() do
-            --tool.Handle.CFrame = game.Players.LocalPlayer.Character["Left Arm"].CFrame * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(60), math.rad(0), math.rad(60))
+        while wait() do
+            tool.Handle.CFrame = game.Players.LocalPlayer.Character["Left Arm"].CFrame * CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(60), math.rad(0), math.rad(60))
+            tool.Handle.Velocity = Vector3.new(0, 20, 0)
             if nomore then
                 break
             end
-        end]]
+        end
 		
 	end
 end
