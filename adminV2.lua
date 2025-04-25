@@ -1170,6 +1170,9 @@ function antiafkee(erm)
 				anti = nil
 			end
 			print("anti afk")
+            for _, idle in ipairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do 
+                idle:Disable() 
+            end
 			mousemoveabs(0,2)
 			mouse1click()
 		end)
