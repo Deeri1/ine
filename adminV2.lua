@@ -1021,7 +1021,9 @@ function resetcontrol()
                             found = true
                             print("cmd "..ctable[1].." found search")
                             if announcewrod then
-                                playervars("chat","/w "..pnamee.." "..ctable[1].." ran")
+                                a = "chat"
+                                b = "/w "..pnamee.." "..ctable[1].." ran"
+                                playervars(a,b)
                             end
                         i = commands[e]
                         if total == 1 then
