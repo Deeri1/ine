@@ -1366,18 +1366,18 @@ function dupeee(mode,typee,amount)
             end
             game:GetService'RunService'.Heartbeat:Wait()
             game:GetService'RunService'.RenderStepped:Wait()
-        for e,v in pairs(livetools) do
-            if v then
-                v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            for e,v in pairs(livetools) do
+                if v then
+                    v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                end
             end
-        end
-        game:GetService'RunService'.Heartbeat:Wait()
-        game:GetService'RunService'.RenderStepped:Wait()
-        for e,v in pairs(livetools) do
-            if v and v:IsA("Tool") then
-                v.Parent = game.Players.LocalPlayer.Backpack
+            game:GetService'RunService'.Heartbeat:Wait()
+            game:GetService'RunService'.RenderStepped:Wait()
+            for e,v in pairs(livetools) do
+                if v and v:IsA("Tool") then
+                    v.Parent = game.Players.LocalPlayer.Backpack
+                end
             end
-        end
         end
 
     end
