@@ -1334,6 +1334,7 @@ function dupeee(mode,typee,amount)
                     firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 0) --0 is touch
                     wait()
                     firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 1) -- 1 is untouch
+                    game:GetService'RunService'.Heartbeat:Wait()
                     game:GetService'RunService'.RenderStepped:Wait()
                     tool = game.Players.LocalPlayer.Character:WaitForChild("Spray")
                     game:GetService'RunService'.Heartbeat:Wait()
