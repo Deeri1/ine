@@ -1341,8 +1341,6 @@ function dupeee(mode,typee,amount)
                     table.insert(livetools,tool)
                     amountc = amountc + 1
                     i= i + 1
-                    game:GetService'RunService'.Heartbeat:Wait()
-                    game:GetService'RunService'.RenderStepped:Wait()
                 end
                 game:GetService'RunService'.Heartbeat:Wait()
                 game:GetService'RunService'.RenderStepped:Wait()
@@ -1364,7 +1362,7 @@ function dupeee(mode,typee,amount)
                     end
                 end
             end
-            print("done")
+            print("done2")
             game:GetService'RunService'.Heartbeat:Wait()
             game:GetService'RunService'.RenderStepped:Wait()
             for e,v in pairs(livetools) do
