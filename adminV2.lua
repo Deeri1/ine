@@ -1329,7 +1329,7 @@ function dupeee(mode,typee,amount)
             livetools = {}
             while amountc < amount do
                 local i = 0;
-                while i <10 and amountc < amount do
+                while i <7 and amountc < amount do
                     local thing = game.workspace.Handle
                     firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 0) --0 is touch
                     wait()
@@ -1369,7 +1369,7 @@ function dupeee(mode,typee,amount)
                 game:GetService'RunService'.Heartbeat:Wait()
                 game:GetService'RunService'.RenderStepped:Wait()
             end
-            print("done8")
+            print("done9")
             game:GetService'RunService'.Heartbeat:Wait()
             game:GetService'RunService'.RenderStepped:Wait()
             for e,v in pairs(livetools) do
