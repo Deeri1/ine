@@ -1327,9 +1327,9 @@ function dupeee(mode,typee,amount)
             amountc = 0
             amount = tonumber(amount)
             livetools = {}
-            while amountc < amount do
+            while amountc <= amount do
                 local i = 0;
-                while i <10 and amountc < amount do
+                while i <10 and amountc <= amount do
                     local thing = game.workspace.Handle
                     firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 0) --0 is touch
                     wait()
