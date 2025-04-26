@@ -1352,7 +1352,7 @@ function dupeee(mode,typee,amount)
                         v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                     end
                 end
-                for e,v in pairs(livetools) do
+                for e,v in ame.Players.LocalPlayer.Backpack:GetChildren() do
                     if v and v:IsA("Tool") then
                         game:GetService'RunService'.Heartbeat:Wait()
                         game:GetService'RunService'.RenderStepped:Wait()
