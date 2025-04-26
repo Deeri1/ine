@@ -1252,6 +1252,7 @@ function resetee(method)
 		character = game.Players.LocalPlayer.Character
 		wait(game.Players.RespawnTime)
 		wait(1)
+        game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = dp
 	elseif method == "joints" then
 		game.Players.LocalPlayer.Character:BreakJoints()
