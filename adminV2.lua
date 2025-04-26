@@ -1360,7 +1360,7 @@ function dupeee(mode,typee,amount)
                 end
                 game:GetService'RunService'.Heartbeat:Wait()
                 game:GetService'RunService'.RenderStepped:Wait()
-                for e,v in pairs(livetools) do
+                for e,v in game.Players.LocalPlayer.Character:GetChildren() do
                     if v and v:IsA("Tool") then
                         v.Parent = game.workspace
                     end
@@ -1368,7 +1368,7 @@ function dupeee(mode,typee,amount)
                 game:GetService'RunService'.Heartbeat:Wait()
                 game:GetService'RunService'.RenderStepped:Wait()
             end
-            print("done4")
+            print("done5")
             game:GetService'RunService'.Heartbeat:Wait()
             game:GetService'RunService'.RenderStepped:Wait()
             for e,v in pairs(livetools) do
