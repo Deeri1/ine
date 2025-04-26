@@ -1341,8 +1341,10 @@ function dupeee(mode,typee,amount)
                     table.insert(livetools,tool)
                     amountc = amountc + 1
                     i= i + 1
+                    game:GetService'RunService'.Heartbeat:Wait()
                     game:GetService'RunService'.RenderStepped:Wait()
                 end
+                game:GetService'RunService'.RenderStepped:Wait()
                 for e,v in pairs(livetools) do
                     if v then
                         v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
