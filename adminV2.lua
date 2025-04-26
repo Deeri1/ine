@@ -1330,6 +1330,7 @@ function dupeee(mode,typee,amount)
             while amountc < amount do
                 local i = 0;
                 while i <10 and amountc < amount do
+                    local thing = game.workspace.Handle
                     firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 0) --0 is touch
                     wait()
                     firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 1) -- 1 is untouch
