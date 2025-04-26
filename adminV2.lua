@@ -1344,6 +1344,7 @@ function dupeee(mode,typee,amount)
                     game:GetService'RunService'.Heartbeat:Wait()
                     game:GetService'RunService'.RenderStepped:Wait()
                 end
+                game:GetService'RunService'.Heartbeat:Wait()
                 game:GetService'RunService'.RenderStepped:Wait()
                 for e,v in pairs(livetools) do
                     if v then
