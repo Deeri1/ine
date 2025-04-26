@@ -1325,6 +1325,7 @@ function dupeee(mode,typee,amount)
     elseif mode == "grab" or mode == "pickup" then
         if typee == "spray" or typee == "cans" or typee == "spraycans" then
             amountc = 0
+            amount = tonumber(amount)
             livetools = {}
             while amountc < amount do
                 local i = 0;
