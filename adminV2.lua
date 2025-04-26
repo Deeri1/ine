@@ -1370,11 +1370,11 @@ function dupeee(mode,typee,amount)
                 game:GetService'RunService'.Heartbeat:Wait()
                 game:GetService'RunService'.RenderStepped:Wait()
             end
-            print("done9")
+            print("done10")
             game:GetService'RunService'.Heartbeat:Wait()
             game:GetService'RunService'.RenderStepped:Wait()
-            for e,v in pairs(livetools) do
-                if v then
+            for e,v in game.Workspace:GetChildren() do
+                if v:IsA("Tool") then
                     v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 end
             end
