@@ -12,6 +12,36 @@ _G.scripthere = function()
 	game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Name = "gamer5"
 	game:GetService("Players").LocalPlayer.Character["BladeMasterAccessory"].Name = "gamer6"
 
+    local Player = game.Players.LocalPlayer
+local Mouse,mouse,UserInputService,ContextActionService
+do
+	local CAS = {Actions={}}
+	local Event = Instance.new("RemoteEvent")
+	Event.Name = "UserInput_Event"
+	Event.Parent = Player.Character
+	local fakeEvent = function()
+		local t = {_fakeEvent=true}
+		t.Connect = function(self,f)self.Function=f end
+		t.connect = t.Connect
+		return t
+	end
+	local m = {Target=nil,Hit=CFrame.new(),KeyUp=fakeEvent(),KeyDown=fakeEvent(),Button1Up=fakeEvent(),Button1Down=fakeEvent()}
+	local UIS = {InputBegan=fakeEvent(),InputEnded=fakeEvent()}
+	function CAS:BindAction(name,fun,touch,...)
+		CAS.Actions[name] = {Name=name,Function=fun,Keys={...}}
+	end
+	function CAS:UnbindAction(name)
+		CAS.Actions[name] = nil
+	end
+	local function te(self,ev,...)
+		local t = m[ev]
+		if t and t._fakeEvent and t.Function then
+			t.Function(...)
+		end
+	end
+	m.TrigEvent = te
+	UIS.TrigEvent = te
+end
 wait(0.5)
 
 warn([[Concealed Tenebrosity
