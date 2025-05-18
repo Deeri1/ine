@@ -368,7 +368,6 @@ function botbasic(nh)
     dummy = char:Clone()
     dummy.Name = "Dummylolxdnoo"
     dummy.Parent = workspace
-
     dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
 
     settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
@@ -382,6 +381,11 @@ function botbasic(nh)
        -- v.CanCollide = false
         end
     end
+
+    replicatesignal(game.Players.LocalPlayer.ConnectDiedSignalBackend)
+    wait(game.Players.RespawnTime + .1)
+    game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState(15)
+
     game.Players.LocalPlayer.Character = dummy
 
     for i, v in pairs(workspace.tempart:GetDescendants()) do
@@ -397,6 +401,10 @@ function botbasic(nh)
 
     function goto()
        pcall(function()
+        dummy = game.Workspace:FindFirstChild("Dummylolxdnoo")
+        Workspace.CurrentCamera.CameraType = Enum.CameraType.Track
+        Workspace.CurrentCamera.CameraSubject  = dummy
+        game.Players.LocalPlayer.Character = dummy
 	    --repeat task.wait() until workspace[plrname]:FindFirstChild("Unloaded head") and workspace[plrname]:FindFirstChild("Black") and workspace[plrname]:FindFirstChild("MeshPartAccessory") 
         task.wait()
 		for i,v in pairs(workspace[plrname]:GetDescendants()) do
@@ -494,6 +502,7 @@ function botbasic(nh)
     ----------------------------------------------------------------
     --kill body
     function reanim() --- killing player and switching to fake char
+        dummy = game.Workspace:FindFirstChild("Dummylolxdnoo")
        pcall(function()
 	    if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
             if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
@@ -502,10 +511,6 @@ function botbasic(nh)
                 putonmhats(hataray)
                 
         --repeat wait() until workspace:FindFirstChild(plrname):FindFirstChild("Head")
-                if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-                    workspace:FindFirstChild(plrname):BreakJoints()
-                    workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
-                end
 				wait()
 
             end
