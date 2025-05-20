@@ -190,11 +190,11 @@ workspace.CurrentCamera.CFrame = CurCameraOffset
 workspace.CurrentCamera.CameraSubject = dummy.Humanoid
 workspace.CurrentCamera.CFrame = CurCameraOffset
 
-erd = game:GetService("RunService").Heartbeat:Connect(function()
+erd = game:GetService("RunService").PostSimulation:Connect(function()
     for i,v in pairs(livetools) do
         if v then
             v.CanCollide = false
-            v.Velocity = Vector3.new(dummy["HumanoidRootPart"].CFrame.LookVector.X * 85, dummy["Head"].Velocity.Y * 4, dummy["HumanoidRootPart"].CFrame.LookVector.Z * 85)
+            v.Velocity = Vector3.new(dummy["HumanoidRootPart"].CFrame.LookVector.X * 35, dummy["Head"].Velocity.Y * 4, dummy["HumanoidRootPart"].CFrame.LookVector.Z * -35)
         end
     end
   end)
