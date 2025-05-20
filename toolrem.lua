@@ -249,6 +249,7 @@ for i,v in game.Players[pname].Backpack:GetChildren() do
             end
 
            --move(v.Handle, hatar[1].Handle)
+           hatar[1]:Destroy()
            table.remove(hatar,1)
         end
         livetools[stubcount] = v.Handle
