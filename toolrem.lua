@@ -208,9 +208,6 @@ end
 game:GetService'RunService'.Heartbeat:Wait()
 game:GetService'RunService'.RenderStepped:Wait()
 
- scripthere = _G.scripthere
-coroutine.wrap(scripthere)()
-
 stubcount = 0
 livetools = {}
 for i,v in game.Players[pname].Backpack:GetChildren() do
@@ -271,8 +268,9 @@ workspace.CurrentCamera.CameraSubject = dummy.Humanoid
 workspace.CurrentCamera.CFrame = CurCameraOffset
 
 remon = true
-mouse.KeyDown:connect(function(k)
-    if k == Enum.KeyCode.BackSlash then
+Mouse.KeyDown:connect(function(k)
+    if k == "\\" then
+    print(pname)
         if remon then
             remon = false
             local CurCameraOffset = workspace.CurrentCamera.CFrame
@@ -282,15 +280,20 @@ mouse.KeyDown:connect(function(k)
             workspace.CurrentCamera.CameraSubject = game.Workspace[pname].Humanoid
             workspace.CurrentCamera.CFrame = CurCameraOffset
         else
+            remon = true
             local CurCameraOffset = workspace.CurrentCamera.CFrame
             workspace.CurrentCamera.CFrame = CurCameraOffset
             game.Players.LocalPlayer.Character = dummy
             workspace.CurrentCamera.CFrame = CurCameraOffset
-            workspace.CurrentCamera.CameraSubject = dummy.Humanoid
+            workspace.CurrentCamera.CameraSubject = dummy:FindFirstChildOfClass("Humanoid")
             workspace.CurrentCamera.CFrame = CurCameraOffset
         end
     end
 end)
+
+
+ scripthere = _G.scripthere
+coroutine.wrap(scripthere)()
 
 erd = game:GetService("RunService").PostSimulation:Connect(function()
     for i,v in pairs(livetools) do
