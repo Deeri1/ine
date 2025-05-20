@@ -1,4 +1,12 @@
 _G.neededhats = {4524991457,4820152700,4315489767,4794315940,4458601937,4506945409}
+_G.scripthere = function()
+    game.Players.LocalPlayer.Character = game.Workspace.Dummylolxdnoo -- ideky i need to say this but do not remove this line put your script under this but before the end
+    
+end
+
+
+
+
 nh = neededhats
 
 
@@ -101,7 +109,7 @@ game.Players.LocalPlayer.ReplicationFocus = workspace[Player.Name]
 for i, v in pairs(dummy:GetDescendants()) do
     v.Archivable = true
     if v:IsA("BasePart") then
-    v.Transparency = .25
+    v.Transparency = 1
     v.CanCollide = false
     end
 end
@@ -195,8 +203,13 @@ for e,v in game.Players.LocalPlayer.Character:GetChildren() do
         v.Parent = game.Players.LocalPlayer.Backpack
     end
 end
+
 game:GetService'RunService'.Heartbeat:Wait()
 game:GetService'RunService'.RenderStepped:Wait()
+
+ scripthere = _G.scripthere
+coroutine.wrap(scripthere)()
+
 stubcount = 0
 livetools = {}
 for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
