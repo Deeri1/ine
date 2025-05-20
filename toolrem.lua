@@ -222,21 +222,23 @@ for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
             move(v.Handle, dummy.Torso)
         elseif stubcount > 5 then -- if hats needed
         print("attached to "..hatar[1].Name)
-            for q,e in dummy:GetChildren() do
+            for q,e in game.workspace["Dummylolxdnoo"]:GetChildren() do
                 if e:IsA("Accessory") and e.Name == hatar[1].Name then
                     if e.Handle:FindFirstChild("Mesh") and hatar[1]:FindFirstChild("Mesh") then
                         if e.Handle.Mesh.MeshId == hatar[1].Handle.Mesh.MeshId and e.Handle.Mesh.TextureId == hatar[1].Handle.Mesh.TextureId then
+                           e.Handle.Velocity = Vector3.new(0,0,0)
                             move(v.Handle, e.Handle)
                         end
                     elseif e.Handle:FindFirstChild("SpecialMesh") and  hatar[1]:FindFirstChild("SpecialMesh") then
                         if e.Handle.SpecialMesh.MeshId == hatar[1].Handle.SpecialMesh.MeshId  and e.Handle.SpecialMesh.TextureId == hatar[1].Handle.SpecialMesh.TextureId then
+                             e.Handle.Velocity = Vector3.new(0,0,0)
                             move(v.Handle, e.Handle)
                         end
                     end
                 end
             end
 
-           move(v.Handle, hatar[1].Handle)
+           --move(v.Handle, hatar[1].Handle)
            table.remove(hatar,1)
         end
         livetools[stubcount] = v.Handle
