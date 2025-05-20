@@ -95,7 +95,6 @@ for i, v in pairs(dummy:GetDescendants()) do
     end
 end
 
-
 dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
 
 game.Players.LocalPlayer.ReplicationFocus = workspace[Player.Name]
@@ -224,12 +223,12 @@ for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
         print("attached to "..hatar[1].Name)
             for q,e in game.workspace["Dummylolxdnoo"]:GetChildren() do
                 if e:IsA("Accessory") and e.Name == hatar[1].Name then
-                    if e.Handle:FindFirstChild("Mesh") and hatar[1]:FindFirstChild("Mesh") then
+                    if e.Handle:FindFirstChild("Mesh") and hatar[1].Handle:FindFirstChild("Mesh") then
                         if e.Handle.Mesh.MeshId == hatar[1].Handle.Mesh.MeshId and e.Handle.Mesh.TextureId == hatar[1].Handle.Mesh.TextureId then
-                           e.Handle.Velocity = Vector3.new(0,0,0)
+                            e.Handle.Velocity = Vector3.new(0,0,0)
                             move(v.Handle, e.Handle)
                         end
-                    elseif e.Handle:FindFirstChild("SpecialMesh") and  hatar[1]:FindFirstChild("SpecialMesh") then
+                    elseif e.Handle:FindFirstChild("SpecialMesh") and  hatar[1].Handle:FindFirstChild("SpecialMesh") then
                         if e.Handle.SpecialMesh.MeshId == hatar[1].Handle.SpecialMesh.MeshId  and e.Handle.SpecialMesh.TextureId == hatar[1].Handle.SpecialMesh.TextureId then
                              e.Handle.Velocity = Vector3.new(0,0,0)
                             move(v.Handle, e.Handle)
