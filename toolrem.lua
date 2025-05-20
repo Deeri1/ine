@@ -26,6 +26,7 @@ local LeftLeg = Character:WaitForChild("Left Leg")
 local Torso = Character:WaitForChild("Torso")
 local Camera = workspace.CurrentCamera
 local Mouse = Player:GetMouse()
+local pname = game.Players.LocalPlayer.Name
 workspace.FallenPartsDestroyHeight = 0/0
 
 
@@ -212,12 +213,12 @@ coroutine.wrap(scripthere)()
 
 stubcount = 0
 livetools = {}
-for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
+for i,v in game.Players[pname].Backpack:GetChildren() do
     if v and v:IsA("Tool") and v.Name == "Spray" then
-        v.Parent = game.Players.LocalPlayer.Character
-		v.Parent = game.Players.LocalPlayer.Backpack
-		v.Parent = game.Players.LocalPlayer.Character.Humanoid
-		v.Parent = game.Players.LocalPlayer.Character
+        v.Parent = game.Players[pname].Character
+		v.Parent = game.Players[pname].Backpack
+		v.Parent = game.Players[pname].Character.Humanoid
+		v.Parent = game.Players[pname].Character
         wait()
         print(stubcount)
         if stubcount == 0 then
