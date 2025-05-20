@@ -115,6 +115,25 @@ while amountc < ecount do
     local i = 0;
     while i <7 and amountc < ecount do
         local thing = game.workspace.Handle
+        if game.Players.LocalPlayer.Backpack:FindFirstChild("Spray") then
+            for e,v in game.Players.LocalPlayer.Backpack:GetChildren() do
+                if v and v:IsA("Tool") and v.Name == "Spray" then
+                    game:GetService'RunService'.Heartbeat:Wait()
+                    game:GetService'RunService'.RenderStepped:Wait()
+                    v.Handle.Massless = true
+                    v.Parent = game.Players.LocalPlayer.Character
+                end
+            end
+            game:GetService'RunService'.Heartbeat:Wait()
+            game:GetService'RunService'.RenderStepped:Wait()
+            for e,v in game.Players.LocalPlayer.Character:GetChildren() do
+                if v and v:IsA("Tool") and v.Name == "Spray" then
+                    v.Parent = game.workspace
+                end
+            end
+        end
+        game:GetService'RunService'.Heartbeat:Wait()
+        game:GetService'RunService'.RenderStepped:Wait()
         firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 0) --0 is touch
         wait()
         firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 1) -- 1 is untouch
@@ -130,7 +149,7 @@ while amountc < ecount do
     game:GetService'RunService'.Heartbeat:Wait()
     game:GetService'RunService'.RenderStepped:Wait()
     for e,v in game.Workspace:GetChildren() do
-        if v:IsA("Tool") then
+        if v:IsA("Tool") and v.Name == "Spray" then
             game:GetService'RunService'.Heartbeat:Wait()
             game:GetService'RunService'.RenderStepped:Wait()
             v.Handle.Massless = true
@@ -138,7 +157,7 @@ while amountc < ecount do
         end
     end
     for e,v in game.Players.LocalPlayer.Backpack:GetChildren() do
-        if v and v:IsA("Tool") then
+        if v and v:IsA("Tool") and v.Name == "Spray" then
             game:GetService'RunService'.Heartbeat:Wait()
             game:GetService'RunService'.RenderStepped:Wait()
             v.Handle.Massless = true
@@ -148,7 +167,7 @@ while amountc < ecount do
     game:GetService'RunService'.Heartbeat:Wait()
     game:GetService'RunService'.RenderStepped:Wait()
     for e,v in game.Players.LocalPlayer.Character:GetChildren() do
-        if v and v:IsA("Tool") then
+        if v and v:IsA("Tool") and v.Name == "Spray" then
             v.Parent = game.workspace
         end
     end
@@ -198,6 +217,7 @@ for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
         elseif stubcount == 5 then
             move(v.Handle, dummy.Torso)
         elseif stubcount > 5 then -- if hats needed
+        print("attached to "..hatar[1].Name)
            move(v.Handle, hatar[1].Handle)
            table.remove(hatar,1)
         end
