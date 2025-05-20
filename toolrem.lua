@@ -111,6 +111,7 @@ while amountc < 6 do
         if v:IsA("Tool") then
             game:GetService'RunService'.Heartbeat:Wait()
             game:GetService'RunService'.RenderStepped:Wait()
+            v.Handle.Massless = true
             v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
         end
     end
@@ -118,6 +119,7 @@ while amountc < 6 do
         if v and v:IsA("Tool") then
             game:GetService'RunService'.Heartbeat:Wait()
             game:GetService'RunService'.RenderStepped:Wait()
+            v.Handle.Massless = true
             v.Parent = game.Players.LocalPlayer.Character
         end
     end
@@ -134,39 +136,45 @@ end
 print("done11")
 game:GetService'RunService'.Heartbeat:Wait()
 game:GetService'RunService'.RenderStepped:Wait()
+wait()
 for e,v in game.Workspace:GetChildren() do
     if v:IsA("Tool") then
+        v.Handle.Massless = true
         v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     end
 end
 game:GetService'RunService'.Heartbeat:Wait()
 game:GetService'RunService'.RenderStepped:Wait()
+wait(1)
 for e,v in game.Players.LocalPlayer.Character:GetChildren() do
     if v and v:IsA("Tool") then
         v.Parent = game.Players.LocalPlayer.Backpack
     end
 end
-
+game:GetService'RunService'.Heartbeat:Wait()
+game:GetService'RunService'.RenderStepped:Wait()
 stubcount = 0
 livetools = {}
 for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
     if v and v:IsA("Tool") and v.Name == "Spray" then
-        tool.Parent = game.Players.LocalPlayer.Character
-		tool.Parent = game.Players.LocalPlayer.Backpack
-		tool.Parent = game.Players.LocalPlayer.Character.Humanoid
-		tool.Parent = game.Players.LocalPlayer.Character
+        v.Parent = game.Players.LocalPlayer.Character
+		v.Parent = game.Players.LocalPlayer.Backpack
+		v.Parent = game.Players.LocalPlayer.Character.Humanoid
+		v.Parent = game.Players.LocalPlayer.Character
+        wait()
+        print(stubcount)
         if stubcount == 0 then
-            move(v.Handle, game.Players.LocalPlayer.Character.Head)
+            move(v.Handle, dummy.Head)
         elseif stubcount == 1 then
-            move(v.Handle, game.Players.LocalPlayer.Character.RightArm)
+            move(v.Handle, dummy["Right Arm"])
         elseif stubcount == 2 then
-            move(v.Handle, game.Players.LocalPlayer.Character.LeftArm)
+            move(v.Handle, dummy["Left Arm"])
         elseif stubcount == 3 then
-            move(v.Handle, game.Players.LocalPlayer.Character.RightLeg)
+            move(v.Handle, dummy["Right Leg"])
         elseif stubcount == 4 then
-            move(v.Handle, game.Players.LocalPlayer.Character.LeftLeg)
+            move(v.Handle, dummy["Left Leg"])
         elseif stubcount == 5 then
-            move(v.Handle, game.Players.LocalPlayer.Character.Torso)
+            move(v.Handle, dummy.Torso)
         end
         livetools[stubcount] = v.Handle
         stubcount = stubcount + 1
@@ -185,7 +193,7 @@ workspace.CurrentCamera.CFrame = CurCameraOffset
   erd = game:GetService("RunService").Heartbeat:Connect(function()
     for i,v in pairs(livetools) do
         if v then
-           v.Velocity = Vector3.new(0, 100, 0)
+           v.Velocity = Vector3.new(0, 50, 0)
         end
     end
   end)
