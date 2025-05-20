@@ -270,6 +270,28 @@ workspace.CurrentCamera.CFrame = CurCameraOffset
 workspace.CurrentCamera.CameraSubject = dummy.Humanoid
 workspace.CurrentCamera.CFrame = CurCameraOffset
 
+remon = true
+mouse.KeyDown:connect(function(k)
+    if k == Enum.KeyCode.BackSlash then
+        if remon then
+            remon = false
+            local CurCameraOffset = workspace.CurrentCamera.CFrame
+            workspace.CurrentCamera.CFrame = CurCameraOffset
+            game.Players.LocalPlayer.Character = game.Workspace[pname]
+            workspace.CurrentCamera.CFrame = CurCameraOffset
+            workspace.CurrentCamera.CameraSubject = game.Workspace[pname].Humanoid
+            workspace.CurrentCamera.CFrame = CurCameraOffset
+        else
+            local CurCameraOffset = workspace.CurrentCamera.CFrame
+            workspace.CurrentCamera.CFrame = CurCameraOffset
+            game.Players.LocalPlayer.Character = dummy
+            workspace.CurrentCamera.CFrame = CurCameraOffset
+            workspace.CurrentCamera.CameraSubject = dummy.Humanoid
+            workspace.CurrentCamera.CFrame = CurCameraOffset
+        end
+    end
+end)
+
 erd = game:GetService("RunService").PostSimulation:Connect(function()
     for i,v in pairs(livetools) do
         if v then
