@@ -132,11 +132,10 @@ for i, v in pairs(dummy:GetDescendants()) do
 end
 --dummy.breakJointsOnDeath = false
 ---reanim main
+    replicatesignal(game.Players.LocalPlayer.ConnectDiedSignalBackend)
+    task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
+    game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState(15)
 
-game:GetService("StarterGui"):SetCore("ResetButtonCallback", false)
-task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
-local Head = Character:FindFirstChild("Head")
-Head:BreakJoints() 
 print("huh")
 game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
 
