@@ -1,3 +1,7 @@
+_G.neededhats = {4524991457,4820152700,4315489767,4794315940,4458601937,4506945409}
+nh = neededhats
+
+
 local Players = game:FindFirstChildOfClass("Players")
 local RunService = game:FindFirstChildOfClass("RunService")
 --plr vars
@@ -75,6 +79,23 @@ wait(1)
 dummy.Name = "Dummylolxdnoo"
 dummy.Parent = workspace
 
+for i, v in pairs(dummy:GetDescendants()) do
+    if v:IsA("Accessory") then
+        v:Destroy()
+    end
+    if v:IsA("BasePart") then
+        v.CanCollide = false
+    end
+end
+ecount = 0
+hatar = {}
+for i,v in pairs(_G.neededhats) do
+    hat = game:GetObjects("rbxassetid://"..v.."")[1]
+    hat.Parent = dummy
+    hatar[i] = hat
+    ecount = ecount + 1
+end
+
 dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
 
 game.Players.LocalPlayer.ReplicationFocus = workspace[Player.Name]
@@ -89,9 +110,10 @@ end
 amountc = 0
 amount = tonumber(amount)
 livetools = {}
-while amountc < 6 do
+ecount = ecount + 6
+while amountc < ecount do
     local i = 0;
-    while i <7 and amountc < 6 do
+    while i <7 and amountc < ecount do
         local thing = game.workspace.Handle
         firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 0) --0 is touch
         wait()
@@ -175,11 +197,16 @@ for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
             move(v.Handle, dummy["Left Leg"])
         elseif stubcount == 5 then
             move(v.Handle, dummy.Torso)
+        elseif stubcount > 5 then -- if hats needed
+           move(v.Handle, hatar[1].Handle)
+           table.remove(hatar,1)
         end
         livetools[stubcount] = v.Handle
         stubcount = stubcount + 1
     end
 end
+
+
 
 
 
