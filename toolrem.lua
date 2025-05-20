@@ -145,6 +145,23 @@ while amountc < ecount do
         table.insert(livetools,tool)
         amountc = amountc + 1
         i= i + 1
+                if game.Players.LocalPlayer.Backpack:FindFirstChild("Spray") then
+            for e,v in game.Players.LocalPlayer.Backpack:GetChildren() do
+                if v and v:IsA("Tool") and v.Name == "Spray" then
+                    game:GetService'RunService'.Heartbeat:Wait()
+                    game:GetService'RunService'.RenderStepped:Wait()
+                    v.Handle.Massless = true
+                    v.Parent = game.Players.LocalPlayer.Character
+                end
+            end
+            game:GetService'RunService'.Heartbeat:Wait()
+            game:GetService'RunService'.RenderStepped:Wait()
+            for e,v in game.Players.LocalPlayer.Character:GetChildren() do
+                if v and v:IsA("Tool") and v.Name == "Spray" then
+                    v.Parent = game.workspace
+                end
+            end
+        end
     end
     game:GetService'RunService'.Heartbeat:Wait()
     game:GetService'RunService'.RenderStepped:Wait()
@@ -156,21 +173,6 @@ while amountc < ecount do
             v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
         end
     end
-    for e,v in game.Players.LocalPlayer.Backpack:GetChildren() do
-        if v and v:IsA("Tool") and v.Name == "Spray" then
-            game:GetService'RunService'.Heartbeat:Wait()
-            game:GetService'RunService'.RenderStepped:Wait()
-            v.Handle.Massless = true
-            v.Parent = game.Players.LocalPlayer.Character
-        end
-    end
-    game:GetService'RunService'.Heartbeat:Wait()
-    game:GetService'RunService'.RenderStepped:Wait()
-    for e,v in game.Players.LocalPlayer.Character:GetChildren() do
-        if v and v:IsA("Tool") and v.Name == "Spray" then
-            v.Parent = game.workspace
-        end
-    end
     game:GetService'RunService'.Heartbeat:Wait()
     game:GetService'RunService'.RenderStepped:Wait()
 end
@@ -179,7 +181,7 @@ game:GetService'RunService'.Heartbeat:Wait()
 game:GetService'RunService'.RenderStepped:Wait()
 wait()
 for e,v in game.Workspace:GetChildren() do
-    if v:IsA("Tool") then
+    if v:IsA("Tool") and v.Name == "Spray" then
         v.Handle.Massless = true
         v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     end
@@ -188,7 +190,7 @@ game:GetService'RunService'.Heartbeat:Wait()
 game:GetService'RunService'.RenderStepped:Wait()
 wait(1)
 for e,v in game.Players.LocalPlayer.Character:GetChildren() do
-    if v and v:IsA("Tool") then
+    if v and v:IsA("Tool") and v.Name == "Spray" then
         v.Parent = game.Players.LocalPlayer.Backpack
     end
 end
