@@ -91,7 +91,7 @@ ecount = 0
 hatar = {}
 for i,v in pairs(_G.neededhats) do
     hat = game:GetObjects("rbxassetid://"..v.."")[1]
-    hat.Parent = dummy
+    hat.Parent = game.workspace["Dummylolxdnoo"]
     hatar[i] = hat
     ecount = ecount + 1
 end
@@ -102,7 +102,7 @@ game.Players.LocalPlayer.ReplicationFocus = workspace[Player.Name]
 for i, v in pairs(dummy:GetDescendants()) do
     v.Archivable = true
     if v:IsA("BasePart") then
-    v.Transparency = 1
+    v.Transparency = .25
     v.CanCollide = false
     end
 end
@@ -139,12 +139,14 @@ while amountc < ecount do
         firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 1) -- 1 is untouch
         game:GetService'RunService'.Heartbeat:Wait()
         game:GetService'RunService'.RenderStepped:Wait()
-        tool = game.Players.LocalPlayer.Character:WaitForChild("Spray")
+        tool = game.Players.LocalPlayer.Character:FindFirstChild("Spray")
+        if tool then
         game:GetService'RunService'.Heartbeat:Wait()
         tool.Parent = game.workspace
         table.insert(livetools,tool)
         amountc = amountc + 1
         i= i + 1
+        end
                 if game.Players.LocalPlayer.Backpack:FindFirstChild("Spray") then
             for e,v in game.Players.LocalPlayer.Backpack:GetChildren() do
                 if v and v:IsA("Tool") and v.Name == "Spray" then
