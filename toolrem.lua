@@ -73,7 +73,14 @@ for i, v in char:GetDescendants() do
         v.CanCollide = false
     end
 end
-
+ecount = 0
+hatar = {}
+for i,v in pairs(_G.neededhats) do
+    hat = game:GetObjects("rbxassetid://"..v.."")[1]
+    hat.Parent = char
+    hatar[i] = hat
+    ecount = ecount + 1
+end
 dummy = char:Clone()
 wait(1)
 dummy.Name = "Dummylolxdnoo"
@@ -81,20 +88,13 @@ dummy.Parent = workspace
 
 for i, v in pairs(dummy:GetDescendants()) do
     if v:IsA("Accessory") then
-        v:Destroy()
+      --  v:Destroy()
     end
     if v:IsA("BasePart") then
         v.CanCollide = false
     end
 end
-ecount = 0
-hatar = {}
-for i,v in pairs(_G.neededhats) do
-    hat = game:GetObjects("rbxassetid://"..v.."")[1]
-    hat.Parent = game.workspace["Dummylolxdnoo"]
-    hatar[i] = hat
-    ecount = ecount + 1
-end
+
 
 dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
 
