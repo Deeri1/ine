@@ -1069,8 +1069,8 @@ function spraycanbot(nh)
         end
     end
     for i,v in game.workspace["Dummylolxdnoo"]:GetChildren() do -- removes uneccesary hats
-        if e:GetAttribute("Used") == nil then
-            e:Destroy()
+        if v:GetAttribute("Used") == nil then
+            v:Destroy()
         end
     end
 
