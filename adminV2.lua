@@ -162,103 +162,114 @@ function cspye(traget)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/chat%20spy"))()
 end
 
-function sflinge(target)
-    target = GetPlayer(target)[1]
-    if target ~= "stop" and target ~= plrname and game.Workspace:FindFirstChild(target.Name) then
+function sflinge(target,ex1,ex2)
+    if target == "-" then
+        if ex1 == "hat" then
+            target = GetPlayer(ex2)[1]
+            v = target:FindFirstChildOfClass("Accessory")
+            hrp.CFrame = v.Handle.CFrame
+        end
+
+    else
+        target = GetPlayer(target)[1]
+        if target ~= "stop" and target ~= plrname and game.Workspace:FindFirstChild(target.Name) then
+                coroutine.wrap(nolcipf)()
+                target = game.Workspace[target.Name]
+                speaker = game.Players.LocalPlayer
+            for _, child in pairs(speaker.Character:GetDescendants()) do
+                if child:IsA("BasePart") then
+                    child.CustomPhysicalProperties = PhysicalProperties.new(math.huge, 0.3, 0.5)
+                end
+            end
+            local Char = speaker.Character:GetChildren()
+            for i, v in next, Char do
+                if v:IsA("BasePart") then
+                    v.CanCollide = false
+                    v.Massless = true
+                    v.Velocity = Vector3.new(0, 0, 0)
+                end
+            end
+            wait(.1)
+            hrp = speaker.Character.HumanoidRootPart
+            oldcf = speaker.Character.HumanoidRootPart.CFrame
+            -- hrp.Parent.Humanoid.PlatformStand = true
+            endedskid = false
+            function gotoskid()
+                while wait() do
+                    if target:FindFirstChild("HumanoidRootPart") then
+                        v = target:FindFirstChild("HumanoidRootPart")
+                        hrp.CFrame = v.CFrame
+                    elseif  target:FindFirstChildOfClass("Accessory") then
+                        v = target:FindFirstChildOfClass("Accessory")
+                        hrp.CFrame = v.Handle.CFrame
+                    end
+                    if endedskid == true then
+                        break
+                    end
+                end
+            end
+            coroutine.wrap(gotoskid)()
+            wait(.1)
+            local bambam = Instance.new("BodyAngularVelocity")
+            bambam.Name = randomString()
+            bambam.Parent = speaker.Character.HumanoidRootPart
+            bambam.AngularVelocity = Vector3.new(0,99999,0)
+            bambam.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+            bambam.P = math.huge
+            local bambam = Instance.new("BodyVelocity")
+            bambam.Name = randomString()
+            bambam.Parent = speaker.Character.HumanoidRootPart
+            bambam.MaxForce = Vector3.new(0,99999,0)
+            bambam.Velocity = Vector3.new(math.huge,math.huge,math.huge)
+            bambam.P = math.huge
+            wait(2)
+            endedskid = true
+            for i,v in pairs(game.Players.LocalPlayer.Character.HumanoidRootPart:GetChildren()) do
+                if v.ClassName == 'BodyAngularVelocity'or v.ClassName == 'BodyVelocity' then
+                    v:Destroy()
+                end
+            end
+            wait(.2)
+            nolcipf("off")
+           game:GetService('RunService').Heartbeat:Wait()
+            for i,v in pairs(speaker.Character:GetDescendants()) do
+                if v:IsA("BasePart") then
+                    v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+                    v.RotVelocity = Vector3.new(0, 0, 0)
+                end
+            end
+            game:GetService'RunService'.Heartbeat:Wait()
+            hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+            hrp.RotVelocity = Vector3.new(0, 0, 0)
+            --hrp.AssemblyAngularVelocity
+            hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
+            game:GetService'RunService'.Heartbeat:Wait()
+            for i,v in pairs(speaker.Character:GetDescendants()) do
+                if v:IsA("BasePart") then
+                    v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+                    v.RotVelocity = Vector3.new(0, 0, 0)
+                end
+            end
+            wait(.1)
+            hrp.AssemblyLinearVelocity = Vector3.new(0, 2, 0)
+            hrp.RotVelocity = Vector3.new(0, 0, 0)
+            game:GetService'RunService'.Heartbeat:Wait()
+            hrp.AssemblyLinearVelocity = Vector3.new(0, 2, 0)
+            hrp.RotVelocity = Vector3.new(0, 0, 0)
+            game:GetService'RunService'.RenderStepped:Wait()
+            hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
+            wait(.1)
+            game:GetService'RunService'.Heartbeat:Wait()
+            game:GetService'RunService'.RenderStepped:Wait()
+            game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
             coroutine.wrap(nolcipf)()
-            target = game.Workspace[target.Name]
-            speaker = game.Players.LocalPlayer
-        for _, child in pairs(speaker.Character:GetDescendants()) do
-            if child:IsA("BasePart") then
-                child.CustomPhysicalProperties = PhysicalProperties.new(math.huge, 0.3, 0.5)
-            end
+            game:GetService'RunService'.Heartbeat:Wait()
+            game:GetService'RunService'.RenderStepped:Wait()
+            game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
         end
-        local Char = speaker.Character:GetChildren()
-        for i, v in next, Char do
-            if v:IsA("BasePart") then
-                v.CanCollide = false
-                v.Massless = true
-                v.Velocity = Vector3.new(0, 0, 0)
-            end
-        end
-        wait(.1)
-        hrp = speaker.Character.HumanoidRootPart
-        oldcf = speaker.Character.HumanoidRootPart.CFrame
-        -- hrp.Parent.Humanoid.PlatformStand = true
-        endedskid = false
-        function gotoskid()
-            while wait() do
-                if target:FindFirstChild("HumanoidRootPart") then
-                    v = target:FindFirstChild("HumanoidRootPart")
-                    hrp.CFrame = v.CFrame
-                elseif  target:FindFirstChildOfClass("Accessory") then
-                    v = target:FindFirstChildOfClass("Accessory")
-                    hrp.CFrame = v.Handle.CFrame
-                end
-                if endedskid == true then
-                    break
-                end
-            end
-        end
-        coroutine.wrap(gotoskid)()
-        wait(.1)
-        local bambam = Instance.new("BodyAngularVelocity")
-        bambam.Name = randomString()
-        bambam.Parent = speaker.Character.HumanoidRootPart
-        bambam.AngularVelocity = Vector3.new(0,99999,0)
-        bambam.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
-        bambam.P = math.huge
-        local bambam = Instance.new("BodyVelocity")
-        bambam.Name = randomString()
-        bambam.Parent = speaker.Character.HumanoidRootPart
-        bambam.MaxForce = Vector3.new(0,99999,0)
-        bambam.Velocity = Vector3.new(math.huge,math.huge,math.huge)
-        bambam.P = math.huge
-        wait(2)
-        endedskid = true
-        for i,v in pairs(game.Players.LocalPlayer.Character.HumanoidRootPart:GetChildren()) do
-            if v.ClassName == 'BodyAngularVelocity'or v.ClassName == 'BodyVelocity' then
-                v:Destroy()
-            end
-        end
-        wait(.2)
-		nolcipf("off")
-       game:GetService('RunService').Heartbeat:Wait()
-		for i,v in pairs(speaker.Character:GetDescendants()) do
-			if v:IsA("BasePart") then
-				v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-				v.RotVelocity = Vector3.new(0, 0, 0)
-			end
-		end
-		game:GetService'RunService'.Heartbeat:Wait()
-        hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-        hrp.RotVelocity = Vector3.new(0, 0, 0)
-        --hrp.AssemblyAngularVelocity
-        hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
-		game:GetService'RunService'.Heartbeat:Wait()
-		for i,v in pairs(speaker.Character:GetDescendants()) do
-			if v:IsA("BasePart") then
-				v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-				v.RotVelocity = Vector3.new(0, 0, 0)
-			end
-		end
-		wait(.1)
-		hrp.AssemblyLinearVelocity = Vector3.new(0, 2, 0)
-        hrp.RotVelocity = Vector3.new(0, 0, 0)
-		game:GetService'RunService'.Heartbeat:Wait()
-		hrp.AssemblyLinearVelocity = Vector3.new(0, 2, 0)
-        hrp.RotVelocity = Vector3.new(0, 0, 0)
-		game:GetService'RunService'.RenderStepped:Wait()
-		hrp.CFrame = CFrame.new(oldcf.X,oldcf.Y+3,oldcf.Z)
-		wait(.1)
-		game:GetService'RunService'.Heartbeat:Wait()
-		game:GetService'RunService'.RenderStepped:Wait()
-		game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
-		coroutine.wrap(nolcipf)()
-		game:GetService'RunService'.Heartbeat:Wait()
-		game:GetService'RunService'.RenderStepped:Wait()
-		game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+
     end
+
 end
 function loadxd(id1,id2)
     if id2 ~= "" and id2 ~= " " and id2 ~= nil then
@@ -1317,6 +1328,7 @@ function dupeee(mode,typee,amount)
                 game:GetService'RunService'.Heartbeat:Wait()
                 game:GetService'RunService'.RenderStepped:Wait()
                 tool = game.Players.LocalPlayer.Character:WaitForChild("Spray")
+                tool.Handle.Massless = true
                 tool.Parent = game.workspace
                 wait()
             end
@@ -1338,6 +1350,7 @@ function dupeee(mode,typee,amount)
                     game:GetService'RunService'.Heartbeat:Wait()
                     game:GetService'RunService'.RenderStepped:Wait()
                     tool = game.Players.LocalPlayer.Character:WaitForChild("Spray")
+                    tool.Handle.Massless = true
                     game:GetService'RunService'.Heartbeat:Wait()
                     tool.Parent = game.workspace
                     table.insert(livetools,tool)
@@ -1350,13 +1363,16 @@ function dupeee(mode,typee,amount)
                     if v:IsA("Tool") then
                         game:GetService'RunService'.Heartbeat:Wait()
                         game:GetService'RunService'.RenderStepped:Wait()
+                        v.Handle.Massless = true
                         v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                        
                     end
                 end
                 for e,v in game.Players.LocalPlayer.Backpack:GetChildren() do
                     if v and v:IsA("Tool") then
                         game:GetService'RunService'.Heartbeat:Wait()
                         game:GetService'RunService'.RenderStepped:Wait()
+                        v.Handle.Massless = true
                         v.Parent = game.Players.LocalPlayer.Character
                     end
                 end
@@ -1375,6 +1391,7 @@ function dupeee(mode,typee,amount)
             game:GetService'RunService'.RenderStepped:Wait()
             for e,v in game.Workspace:GetChildren() do
                 if v:IsA("Tool") then
+                    v.Handle.Massless = true
                     v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 end
             end
