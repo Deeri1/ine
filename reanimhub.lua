@@ -12,7 +12,7 @@ _G.bottype = "OG"     -- OG, Freehat
 _G.huboveride = nil   -- if you have a hub and use this reanim you can overide type choice if loading scripts that already have this reanim built in (prob usefull only to me lol) (when releasing scripts with this reanim this line should be removed)
 _G.huboveridebt = nil -- if you have a hub and use this reanim you can overide bot type choice if loading scripts that already have this reanim built in (prob usefull only to me lol) (when releasing scripts with this reanim this line should be removed)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
---costom functions[[
+--[[costom functions
 _G.fling(instance,duration) -- teleports hrp to instance for duration time. defualt duration is 2
 _G.noclip(false)            -- can be set as true or false. true is noclip false is clip
 ]]
