@@ -133,6 +133,7 @@ function pdeathbaseplategame(nh)
         -- Line above may error. Make sure to use pcall when using it and retry
 
         chatEvent:Fire(strangofhats)
+        chatEvent:Fire("-net")
         chatEvent:Destroy()
     end
     function putonmhats(ha)
@@ -151,7 +152,7 @@ function pdeathbaseplategame(nh)
     testgh(idlist)
     wait(.5)
     fmissinghats(nh)
-    putonmhats(hataray)
+   -- putonmhats(hataray)
     wait()
 
     --dummy stuff
@@ -187,6 +188,12 @@ function pdeathbaseplategame(nh)
     end
 
     ---reanim main
+    Player.ReplicationFocus = workspace
+	settings()["Physics"].PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
+	settings()["Physics"].AllowSleep = false
+	settings()["Physics"].ForceCSGv2 = false
+	settings()["Physics"].DisableCSGv2 = true
+	settings()["Physics"].UseCSGv2 = false
     task.spawn(function()
         dummy.Humanoid.BreakJointsOnDeath = false
         game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
@@ -226,21 +233,22 @@ function pdeathbaseplategame(nh)
     --char.Parent = dummy
 
     --velocity loop
-    RunService.PreSimulation:Connect(function()
-        if not dummy:FindFirstChild("HumanoidRootPart") then
-            return
-        end
-        Velocity = Vector3.new(dummy["HumanoidRootPart"].CFrame.LookVector.X * 85, dummy["Head"].Velocity.Y * 4, dummy["HumanoidRootPart"].CFrame.LookVector.Z * 85)
-        for i,v in char:GetDescendants() do
-            if v:IsA("BasePart") then
-            v.CanCollide = false
-                if v and v.Parent then
-                    v.AssemblyLinearVelocity = Velocity
+    task.spawn(function()
+        RunService.PreSimulation:Connect(function()
+            if not dummy:FindFirstChild("HumanoidRootPart") then
+                return
+            end
+            Velocity = Vector3.new(dummy["HumanoidRootPart"].CFrame.LookVector.X * 85, dummy["Head"].Velocity.Y * 4, dummy["HumanoidRootPart"].CFrame.LookVector.Z * 85)
+            for i,v in char:GetDescendants() do
+                if v:IsA("BasePart") then
+                v.CanCollide = false
+                    if v and v.Parent then
+                        v.AssemblyLinearVelocity = Velocity
+                    end
                 end
             end
-        end
+        end)
     end)
-
     --camera stuff
     local CurCameraOffset = workspace.CurrentCamera.CFrame
     workspace.CurrentCamera.CFrame = CurCameraOffset
