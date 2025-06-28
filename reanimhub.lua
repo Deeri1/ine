@@ -31,7 +31,7 @@ game.StarterGui:SetCore("SendNotification", {
 })
 
 function pdeathbaseplategame(nh)
-   --vars
+ --vars
 	local Players = game:FindFirstChildOfClass("Players")
 	local RunService = game:FindFirstChildOfClass("RunService")
 	--plr vars
@@ -137,12 +137,7 @@ function pdeathbaseplategame(nh)
 
 		chatEvent:Fire(strangofhats)
 		chatEvent:Destroy()
-        local chatEvent = Instance.new("BindableEvent")
-		game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
-		-- Line above may error. Make sure to use pcall when using it and retry
-
-		chatEvent:Fire("-net")
-		chatEvent:Destroy()
+		wait()
 	end
 	function putonmhats(ha)
 		for i,v in pairs(ha) do
@@ -211,7 +206,13 @@ function pdeathbaseplategame(nh)
 	Head:BreakJoints() 
 	print("dead")
 	game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
+wait(1)
+local chatEvent = Instance.new("BindableEvent")
+		game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
+		-- Line above may error. Make sure to use pcall when using it and retry
 
+		chatEvent:Fire("-net")
+		chatEvent:Destroy()
 	end)
 	
 	for i,v in pairs(char:GetChildren()) do -- making sure hats line up
