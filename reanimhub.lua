@@ -202,6 +202,14 @@ function pdeathbaseplategame(nh)
         Head:BreakJoints() 
         print("dead")
         game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
+        wait()
+        local chatEvent = Instance.new("BindableEvent")
+        game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
+        -- Line above may error. Make sure to use pcall when using it and retry
+
+       -- chatEvent:Fire(strangofhats)
+        chatEvent:Fire("-net")
+        chatEvent:Destroy()
     end)
     for i,v in pairs(char:GetChildren()) do -- making sure hats line up
         if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
