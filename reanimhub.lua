@@ -187,14 +187,15 @@ function pdeathbaseplategame(nh)
     end
 
     ---reanim main
-
-    game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
-    task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
-    local Head = Character:FindFirstChild("Head")
-    Head:BreakJoints() 
-    print("dead")
-    game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
-
+    task.spawn(function()
+        dummy.Humanoid.BreakJointsOnDeath = false
+        game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
+        task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
+        local Head = Character:FindFirstChild("Head")
+        Head:BreakJoints() 
+        print("dead")
+        game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
+    end)
     for i,v in pairs(char:GetChildren()) do -- making sure hats line up
         if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
             if dummy:FindFirstChild(v.Name) then
