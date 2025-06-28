@@ -202,7 +202,7 @@ function pdeathbaseplategame(nh)
         dummy.Humanoid.BreakJointsOnDeath = false
         game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
         task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
-        wait(1)
+        --wait(1)
         local Head = char:FindFirstChild("Head")
         Head:BreakJoints() 
         print("dead")
@@ -324,7 +324,6 @@ function pdeathbaseplategame(nh)
 
 	--runs the script
 	scripthere = _G.scripthere
-	--wait(6)
 	coroutine.wrap(scripthere)()
 end--end of baseplate reanim
 
