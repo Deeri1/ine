@@ -202,7 +202,7 @@ function pdeathbaseplategame(nh)
             end
         elseif v:IsA("Accessory") then
             for i2,v2 in pairs(dummy:GetChildren()) do
-                if v2:IsA("Accessory") and not v2:GetAttribute("used") then -- a bunch of checks lol
+                if v2:IsA("Accessory") and v2:GetAttribute("used") then -- a bunch of checks lol
                     if v.Handle.Size == v2.Handle.Size then
                         if (v.Handle:findFirstChild("Mesh") and v2.Handle:findFirstChild("Mesh")) or (v.Handle:findFirstChild("SpecialMesh") and v2.Handle:findFirstChild("SpecialMesh")) then
                             if v.Handle:findFirstChild("Mesh") then
@@ -222,7 +222,7 @@ function pdeathbaseplategame(nh)
             end
         end
     end
-    char.Parent = dummy
+    --char.Parent = dummy
 
     --velocity loop
     RunService.PreSimulation:Connect(function()
