@@ -157,6 +157,7 @@ function pdeathbaseplategame(nh)
 	fmissinghats(nh)
 	--putonmhats(hataray)
 	wait()
+    tempart:Destroy()
 
 	--dummy stuff
 	--dummy clone
@@ -198,21 +199,21 @@ function pdeathbaseplategame(nh)
 	settings()["Physics"].DisableCSGv2 = true
 	settings()["Physics"].UseCSGv2 = false
 	task.spawn(function()
-		dummy.Humanoid.BreakJointsOnDeath = false
-	game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
-	task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
-	wait(1)
-	local Head = char:FindFirstChild("Head")
-	Head:BreakJoints() 
-	print("dead")
-	game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
-wait(1)
-local chatEvent = Instance.new("BindableEvent")
-		game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
-		-- Line above may error. Make sure to use pcall when using it and retry
+        dummy.Humanoid.BreakJointsOnDeath = false
+        game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
+        task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
+        wait(1)
+        local Head = char:FindFirstChild("Head")
+        Head:BreakJoints() 
+        print("dead")
+        game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
+        wait(1)
+        local chatEvent = Instance.new("BindableEvent")
+        game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
+        -- Line above may error. Make sure to use pcall when using it and retry
 
-		chatEvent:Fire("-net")
-		chatEvent:Destroy()
+        chatEvent:Fire("-net")
+        chatEvent:Destroy()
 	end)
 	
 	for i,v in pairs(char:GetChildren()) do -- making sure hats line up
