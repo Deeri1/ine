@@ -200,6 +200,7 @@ function pdeathbaseplategame(nh)
 	settings()["Physics"].ForceCSGv2 = false
 	settings()["Physics"].DisableCSGv2 = true
 	settings()["Physics"].UseCSGv2 = false
+    local dead = false
 	task.spawn(function()
         dummy.Humanoid.BreakJointsOnDeath = false
         game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
@@ -210,6 +211,7 @@ function pdeathbaseplategame(nh)
         print("dead")
         game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
         wait(1)
+        dead = true
         local chatEvent = Instance.new("BindableEvent")
         game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
         -- Line above may error. Make sure to use pcall when using it and retry
@@ -278,49 +280,52 @@ function pdeathbaseplategame(nh)
 	workspace.CurrentCamera.CFrame = CurCameraOffset
 
 	--fling stuff
-	p0 = char.HumanoidRootPart
-	p1 = dummy["Right Arm"]
-	local AlignPosition = Instance.new("AlignPosition"); do
-		AlignPosition.MaxForce = 66666666666
-		AlignPosition.RigidityEnabled = true
-		AlignPosition.Responsiveness = 200
-		AlignPosition.Name = "AlignPosition1"
-		AlignPosition.Parent = p0
-	end
-	local Attachment1 = Instance.new("Attachment"); do
-		Attachment1.Position = Vector3.new(0,0,0)
-		Attachment1.Orientation = Vector3.new(0,0,0)
-		Attachment1.Name = "Attachment1"
-		Attachment1.Parent = p0
-	end
+    coroutine.wrap(function()
+        repeat wait() until dead
+        p0 = char.HumanoidRootPart
+        p1 = dummy["Right Arm"]
+        local AlignPosition = Instance.new("AlignPosition"); do
+            AlignPosition.MaxForce = 66666666666
+            AlignPosition.RigidityEnabled = true
+            AlignPosition.Responsiveness = 200
+            AlignPosition.Name = "AlignPosition1"
+            AlignPosition.Parent = p0
+        end
+        local Attachment1 = Instance.new("Attachment"); do
+            Attachment1.Position = Vector3.new(0,0,0)
+            Attachment1.Orientation = Vector3.new(0,0,0)
+            Attachment1.Name = "Attachment1"
+            Attachment1.Parent = p0
+        end
 
-	local flingatch = Instance.new("Attachment"); do
-		flingatch.Parent = p1
-	end
+        local flingatch = Instance.new("Attachment"); do
+            flingatch.Parent = p1
+        end
 
-	AlignPosition.Attachment0 = Attachment1
-	AlignPosition.Attachment1 = flingatch
-	local ABV = Instance.new("BodyAngularVelocity")
-	ABV.P = 1/0
-	ABV.AngularVelocity = Vector3.new(0,0,0)
-	ABV.Name = "AngularVelocity"
-	ABV.Parent = char.HumanoidRootPart
-	char.HumanoidRootPart.Transparency = .5
-	char.HumanoidRootPart.AngularVelocity.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
+        AlignPosition.Attachment0 = Attachment1
+        AlignPosition.Attachment1 = flingatch
+        local ABV = Instance.new("BodyAngularVelocity")
+        ABV.P = 1/0
+        ABV.AngularVelocity = Vector3.new(0,0,0)
+        ABV.Name = "AngularVelocity"
+        ABV.Parent = char.HumanoidRootPart
+        char.HumanoidRootPart.Transparency = .5
+        char.HumanoidRootPart.AngularVelocity.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
 
-	_G.fling = function(instance,duration)
-		if duration == nil then
-			duration = 3
-		end
-		local flingatch2 = Instance.new("Attachment"); do
-			flingatch2.Parent = instance
-		end
-		AlignPosition.Attachment1 = flingatch2
-		char.HumanoidRootPart.AngularVelocity.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
-		wait(duration)
-		flingatch2:Destroy()
-		AlignPosition.Attachment1 = flingatch
-	end
+        _G.fling = function(instance,duration)
+            if duration == nil then
+                duration = 3
+            end
+            local flingatch2 = Instance.new("Attachment"); do
+                flingatch2.Parent = instance
+            end
+            AlignPosition.Attachment1 = flingatch2
+            char.HumanoidRootPart.AngularVelocity.AngularVelocity = Vector3.new(math.huge,math.huge,math.huge)
+            wait(duration)
+            flingatch2:Destroy()
+            AlignPosition.Attachment1 = flingatch
+        end
+    end)()
 
 	--runs the script
 	scripthere = _G.scripthere
