@@ -264,7 +264,7 @@ function pdeathbaseplategame(nh)
 	while wait() do
 		for i,v in game.workspace[plrname]:GetChildren() do
 			if v:IsA("Accessory") then
-				v.Handle.Velocity = Vector3.new(300, 300, 300)
+				v.Handle.Velocity = Vector3.new(30, 0, 0)
 			end
 		end
 	end
