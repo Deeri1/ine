@@ -248,7 +248,7 @@ function pdeathbaseplategame(nh)
 	--char.Parent = dummy
 
 	--velocity loop
-	task.spawn(function()
+	--[[task.spawn(function()
 	RunService.PreSimulation:Connect(function()
 		if not dummy:FindFirstChild("HumanoidRootPart") then
 			return
@@ -268,7 +268,7 @@ function pdeathbaseplategame(nh)
 			end
 		end
 	end)
-	end)
+	end)]]
 	--camera stuff
 	local CurCameraOffset = workspace.CurrentCamera.CFrame
 	workspace.CurrentCamera.CFrame = CurCameraOffset
