@@ -194,6 +194,8 @@ function pdeathbaseplategame(nh)
 	---reanim main
 	Player.ReplicationFocus = workspace
 	settings()["Physics"].PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
+    settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
+    settings().Physics.AllowSleep = false
 	settings()["Physics"].AllowSleep = false
 	settings()["Physics"].ForceCSGv2 = false
 	settings()["Physics"].DisableCSGv2 = true
@@ -211,7 +213,7 @@ function pdeathbaseplategame(nh)
         local chatEvent = Instance.new("BindableEvent")
         game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
         -- Line above may error. Make sure to use pcall when using it and retry
-    wait(1)
+        wait(1)
         chatEvent:Fire("-net")
         chatEvent:Destroy()
 	end)
@@ -258,16 +260,14 @@ function pdeathbaseplategame(nh)
 				if v and v.Parent then
 					v.Velocity = Velocity
 				end
+            elseif v:IsA("Accessory") then
+                if v.Handle and v.Handle:IsA("BasePart") then
+                    v.Handle.CanCollide = false
+                    v.Handle.Velocity = Vector3.new(30, 0, 0)
+                end
 			end
 		end
 	end)
-	while wait() do
-		for i,v in game.workspace[plrname]:GetChildren() do
-			if v:IsA("Accessory") then
-				v.Handle.Velocity = Vector3.new(30, 0, 0)
-			end
-		end
-	end
 	end)
 	--camera stuff
 	local CurCameraOffset = workspace.CurrentCamera.CFrame
