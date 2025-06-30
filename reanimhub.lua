@@ -340,7 +340,7 @@ function pdeathbaseplategame(nh)
         end
 
         while wait(.5) do
-            for i,v dummy:GetChildren() do
+            for i,v in pairs(dummy:GetChildren()) do
                 if v:IsA("Accessory") then
                     if not v.Handle:FindFirstChild("Mesh") and not v.Handle:FindFirstChild("SpecialMesh") then
                         for i2,v2 in pairs(char:GetChildren()) do
