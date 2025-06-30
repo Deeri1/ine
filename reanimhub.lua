@@ -234,11 +234,17 @@ function pdeathbaseplategame(nh)
 								if v.Handle.Mesh.MeshId == v2.Handle.Mesh.MeshId and v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId then
 									move(v.Handle,v2.Handle)
 									v2:SetAttribute("used", true)
+                                    tnum = math.random(1,1000000)
+                                    v:SetAttribute("id",tnum)
+                                    v2:SetAttribute("id",tnum)
 								end
 							else
 								if v.Handle.SpecialMesh.MeshId == v2.Handle.SpecialMesh.MeshId and v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId then
 									move(v.Handle,v2.Handle)
 									v2:SetAttribute("used", true)
+                                    tnum = math.random(1,1000000)
+                                    v:SetAttribute("id",tnum)
+                                    v2:SetAttribute("id",tnum)
 								end
 							end
 						end
@@ -331,6 +337,25 @@ function pdeathbaseplategame(nh)
             wait(duration)
             flingatch2:Destroy()
             AlignPosition.Attachment1 = flingatch
+        end
+
+        while wait(.5) do
+            for i,v dummy:GetChildren() do
+                if v:IsA("Accessory") then
+                    if not v.Handle:FindFirstChild("Mesh") and not v.Handle:FindFirstChild("SpecialMesh") then
+                        for i2,v2 in pairs(char:GetChildren()) do
+                            if v2:IsA("Accessory") and v2:GetAttribute("id") == v:GetAttribute("id") then
+                                if v2.Handle:FindFirstChild("Mesh") then
+                                    v2.Handle.Mesh:Destroy()
+                                end
+                                if v2.Handle:FindFirstChild("SpecialMesh") then
+                                    v2.Handle.SpecialMesh:Destroy()
+                                end
+                            end
+                        end
+                    end
+                end
+            end
         end
     end)()
 
