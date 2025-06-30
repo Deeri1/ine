@@ -338,6 +338,7 @@ function pdeathbaseplategame(nh)
 	scripthere = _G.scripthere
 	--wait(6)
 	coroutine.wrap(scripthere)()
+    repeat wait() until dead
 end--end of baseplate reanim
 
 function botbasic(nh)
