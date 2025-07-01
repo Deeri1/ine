@@ -123,7 +123,7 @@ function pdeathbaseplategame(nh)
 	--putting on missing hats :)
 	--testing if can -gh command :)
 	function testgh(ha)
-	print("fired")
+	    print("fired")
 		local strangofhats = "-gh "
 		for i,v in ha do
 			strangofhats = strangofhats..v..", "
@@ -148,13 +148,32 @@ function pdeathbaseplategame(nh)
 		task.wait()
 		tempart:Destroy()
 	end
-
+    function removedupes()
+        for i,v in pairs(workspace[plrname]:GetChildren()) do
+            if v:IsA("Accessory") then
+                if v.Handle:FindFirstChild("Mesh") or v.Handle:FindFirstChild("SpecialMesh") then
+                    for i2,v2 in pairs(workspace[plrname]:GetChildren()) do
+                        if v2:IsA("Accessory") then
+                            if v2.Handle:FindFirstChild("Mesh") or v2.Handle:FindFirstChild("SpecialMesh") then
+                                if v.Handle.Mesh.MeshId == v2.Handle.Mesh.MeshId and v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId then
+                                    v2:Destroy()
+                                elseif v.Handle.SpecialMesh.MeshId == v2.Handle.SpecialMesh.MeshId and v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId then
+                                    v2:Destroy()
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
 	--running the functions now
 
 	fmissinghats(nh)
 	testgh(idlist)
 	wait(.5)
 	fmissinghats(nh)
+    removedupes()
 	--putonmhats(hataray)
 	wait()
     tempart:Destroy()
