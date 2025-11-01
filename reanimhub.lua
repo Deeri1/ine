@@ -1435,6 +1435,7 @@ function spraycanbotnorep(nh)
             elseif stubcount == 5 then
                 move(v.Handle, dummy.Torso)
             elseif stubcount > 5 then -- if hats needed
+            if(hatar[1]==nil)then break end
             print("attached to "..hatar[1].Name)
                 for q,e in game.workspace["Dummylolxdnoo"]:GetChildren() do
                     if e:IsA("Accessory") and e.Name == hatar[1].Name then
