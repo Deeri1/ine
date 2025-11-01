@@ -1209,6 +1209,314 @@ function spraycanbot(nh)
 
 
 end-- end of spraycan bot function
+
+function spraycanbotnorep(nh)
+    nh = _G.oldneededhats
+
+
+    local Players = game:FindFirstChildOfClass("Players")
+    local RunService = game:FindFirstChildOfClass("RunService")
+    --plr vars
+    local Player = Players.LocalPlayer
+    local Character = Player["Character"]
+    local char = Character
+    local Humanoid = Character:FindFirstChildWhichIsA("Humanoid")
+    local RootPart = Character:WaitForChild("HumanoidRootPart")
+    local Head = Character:WaitForChild("Head")
+    local RightArm = Character:WaitForChild("Right Arm")
+    local LeftArm = Character:WaitForChild("Left Arm")
+    local RightLeg = Character:WaitForChild("Right Leg")
+    local LeftLeg = Character:WaitForChild("Left Leg")
+    local Torso = Character:WaitForChild("Torso")
+    local Camera = workspace.CurrentCamera
+    local Mouse = Player:GetMouse()
+    local pname = game.Players.LocalPlayer.Name
+    workspace.FallenPartsDestroyHeight = 0/0
+
+
+    --functions
+    function cfmove(p0,p1)
+        p0.Cframe = p1.CFrame
+    end
+
+    function move(p0,p1) --thanks daddy Gelatek
+        local AlignPosition = Instance.new("AlignPosition"); do
+            AlignPosition.MaxForce = 66666666666
+            AlignPosition.RigidityEnabled = true
+            AlignPosition.Responsiveness = 200
+            AlignPosition.Name = "AlignPosition1"
+            AlignPosition.Parent = p0
+        end
+
+        local AlignOrientation = Instance.new("AlignOrientation"); do
+            AlignOrientation.MaxTorque = 9e9
+            AlignOrientation.Responsiveness = 200
+            AlignOrientation.Name = "AlignOrientation"
+            AlignOrientation.Parent = p0
+        end
+
+        local Attachment1 = Instance.new("Attachment"); do
+            Attachment1.Position = Vector3.new(0,0,0)
+            Attachment1.Orientation = Vector3.new(0,0,0)
+            Attachment1.Name = "Attachment1"
+            Attachment1.Parent = p0
+        end
+
+        local Attachment2 = Instance.new("Attachment"); do
+            Attachment2.Parent = p1
+        end
+
+        AlignPosition.Attachment0 = Attachment1
+        AlignPosition.Attachment1 = Attachment2
+        AlignOrientation.Attachment0 = Attachment1
+        AlignOrientation.Attachment1 = Attachment2
+    end
+
+    --dummy stuff
+    for i, v in pairs(workspace:GetDescendants()) do
+        if v.Name == "Dummylolxdnoo" then
+            v:Destroy()
+        end
+    end
+    char = game.Players.LocalPlayer.Character
+    char.Archivable = true
+    for i, v in char:GetDescendants() do
+        v.Archivable = true
+        if v:IsA("BasePart") then
+            v.CanCollide = false
+        end
+    end
+    ecount = 0
+    hatar = {}
+    for i,v in pairs(_G.neededhats) do
+        hat = game:GetObjects("rbxassetid://"..v.."")[1]
+        hat.Parent = char
+        hatar[i] = hat
+        ecount = ecount + 1
+    end
+    dummy = char:Clone()
+    wait(1)
+    dummy.Name = "Dummylolxdnoo"
+    dummy.Parent = workspace
+
+    for i, v in pairs(dummy:GetDescendants()) do
+        if v:IsA("Accessory") then
+        --  v:Destroy()
+        end
+        if v:IsA("BasePart") then
+            v.CanCollide = false
+        end
+    end
+
+    dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
+
+   -- game.Players.LocalPlayer.ReplicationFocus = workspace[Player.Name]
+    for i, v in pairs(dummy:GetDescendants()) do
+        v.Archivable = true
+        if v:IsA("BasePart") then
+        v.Transparency = 1
+        v.CanCollide = false
+        end
+    end
+
+    amountc = 0
+    amount = tonumber(amount)
+    livetools = {}
+    ecount = ecount + 6
+    while amountc < ecount do
+        local i = 0;
+        while i <7 and amountc < ecount do
+            local thing = game.workspace.Handle
+            if game.Players.LocalPlayer.Backpack:FindFirstChild("Spray") then
+                for e,v in game.Players.LocalPlayer.Backpack:GetChildren() do
+                    if v and v:IsA("Tool") and v.Name == "Spray" then
+                        game:GetService'RunService'.Heartbeat:Wait()
+                        game:GetService'RunService'.RenderStepped:Wait()
+                        v.Handle.Massless = true
+                        v.Parent = game.Players.LocalPlayer.Character
+                    end
+                end
+                game:GetService'RunService'.Heartbeat:Wait()
+                game:GetService'RunService'.RenderStepped:Wait()
+                for e,v in game.Players.LocalPlayer.Character:GetChildren() do
+                    if v and v:IsA("Tool") and v.Name == "Spray" then
+                        v.Parent = game.workspace
+                    end
+                end
+            end
+            game:GetService'RunService'.Heartbeat:Wait()
+            game:GetService'RunService'.RenderStepped:Wait()
+            firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 0) --0 is touch
+            wait()
+            firetouchinterest(game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart"), thing, 1) -- 1 is untouch
+            game:GetService'RunService'.Heartbeat:Wait()
+            game:GetService'RunService'.RenderStepped:Wait()
+            tool = game.Players.LocalPlayer.Character:FindFirstChild("Spray")
+            if tool then
+            game:GetService'RunService'.Heartbeat:Wait()
+            tool.Parent = game.workspace
+            table.insert(livetools,tool)
+            amountc = amountc + 1
+            i= i + 1
+            end
+                    if game.Players.LocalPlayer.Backpack:FindFirstChild("Spray") then
+                for e,v in game.Players.LocalPlayer.Backpack:GetChildren() do
+                    if v and v:IsA("Tool") and v.Name == "Spray" then
+                        game:GetService'RunService'.Heartbeat:Wait()
+                        game:GetService'RunService'.RenderStepped:Wait()
+                        v.Handle.Massless = true
+                        v.Parent = game.Players.LocalPlayer.Character
+                    end
+                end
+                game:GetService'RunService'.Heartbeat:Wait()
+                game:GetService'RunService'.RenderStepped:Wait()
+                for e,v in game.Players.LocalPlayer.Character:GetChildren() do
+                    if v and v:IsA("Tool") and v.Name == "Spray" then
+                        v.Parent = game.workspace
+                    end
+                end
+            end
+        end
+        game:GetService'RunService'.Heartbeat:Wait()
+        game:GetService'RunService'.RenderStepped:Wait()
+        for e,v in game.Workspace:GetChildren() do
+            if v:IsA("Tool") and v.Name == "Spray" then
+                game:GetService'RunService'.Heartbeat:Wait()
+                game:GetService'RunService'.RenderStepped:Wait()
+                v.Handle.Massless = true
+                v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            end
+        end
+        game:GetService'RunService'.Heartbeat:Wait()
+        game:GetService'RunService'.RenderStepped:Wait()
+    end
+    print("done11")
+    game:GetService'RunService'.Heartbeat:Wait()
+    game:GetService'RunService'.RenderStepped:Wait()
+    wait()
+    for e,v in game.Workspace:GetChildren() do
+        if v:IsA("Tool") and v.Name == "Spray" then
+            v.Handle.Massless = true
+            v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        end
+    end
+    game:GetService'RunService'.Heartbeat:Wait()
+    game:GetService'RunService'.RenderStepped:Wait()
+    wait(1)
+    for e,v in game.Players.LocalPlayer.Character:GetChildren() do
+        if v and v:IsA("Tool") and v.Name == "Spray" then
+            v.Parent = game.Players.LocalPlayer.Backpack
+        end
+    end
+
+    game:GetService'RunService'.Heartbeat:Wait()
+    game:GetService'RunService'.RenderStepped:Wait()
+
+    stubcount = 0
+    livetools = {}
+    for i,v in game.Players[pname].Backpack:GetChildren() do
+        if v and v:IsA("Tool") and v.Name == "Spray" then
+            v.Parent = game.Players[pname].Character
+            v.Parent = game.Players[pname].Backpack
+            v.Parent = game.Players[pname].Character.Humanoid
+            v.Parent = game.Players[pname].Character
+            wait()
+            print(stubcount)
+            if stubcount == 0 then
+                move(v.Handle, dummy.Head)
+            elseif stubcount == 1 then
+                move(v.Handle, dummy["Right Arm"])
+            elseif stubcount == 2 then
+                move(v.Handle, dummy["Left Arm"])
+            elseif stubcount == 3 then
+                move(v.Handle, dummy["Right Leg"])
+            elseif stubcount == 4 then
+                move(v.Handle, dummy["Left Leg"])
+            elseif stubcount == 5 then
+                move(v.Handle, dummy.Torso)
+            elseif stubcount > 5 then -- if hats needed
+            print("attached to "..hatar[1].Name)
+                for q,e in game.workspace["Dummylolxdnoo"]:GetChildren() do
+                    if e:IsA("Accessory") and e.Name == hatar[1].Name then
+                        if e.Handle:FindFirstChild("Mesh") and hatar[1].Handle:FindFirstChild("Mesh") then
+                            if e.Handle.Mesh.MeshId == hatar[1].Handle.Mesh.MeshId and e.Handle.Mesh.TextureId == hatar[1].Handle.Mesh.TextureId then
+                                e.Handle.Velocity = Vector3.new(0,0,0)
+                                e:SetAttribute("Used", true)
+                                move(v.Handle, e.Handle)
+                            end
+                        elseif e.Handle:FindFirstChild("SpecialMesh") and  hatar[1].Handle:FindFirstChild("SpecialMesh") then
+                            if e.Handle.SpecialMesh.MeshId == hatar[1].Handle.SpecialMesh.MeshId  and e.Handle.SpecialMesh.TextureId == hatar[1].Handle.SpecialMesh.TextureId then
+                                e.Handle.Velocity = Vector3.new(0,0,0)
+                                 e:SetAttribute("Used", true)
+                                move(v.Handle, e.Handle)
+                            end
+                        end
+                    end
+                end
+
+            --move(v.Handle, hatar[1].Handle)
+            hatar[1]:Destroy()
+            table.remove(hatar,1)
+            end
+            livetools[stubcount] = v.Handle
+            stubcount = stubcount + 1
+        end
+    end
+    for i,v in game.workspace["Dummylolxdnoo"]:GetChildren() do -- removes uneccesary hats
+        if v:IsA("Accessory") and v:GetAttribute("Used") == nil then
+            v:Destroy()
+        end
+    end
+
+
+
+
+    local CurCameraOffset = workspace.CurrentCamera.CFrame
+    workspace.CurrentCamera.CFrame = CurCameraOffset
+    game.Players.LocalPlayer.Character = dummy
+    workspace.CurrentCamera.CFrame = CurCameraOffset
+    workspace.CurrentCamera.CameraSubject = dummy.Humanoid
+    workspace.CurrentCamera.CFrame = CurCameraOffset
+
+    remon = true
+    Mouse.KeyDown:connect(function(k)
+        if k == "\\" then
+        print(pname)
+            if remon then
+                remon = false
+                local CurCameraOffset = workspace.CurrentCamera.CFrame
+                workspace.CurrentCamera.CFrame = CurCameraOffset
+                game.Players.LocalPlayer.Character = game.Workspace[pname]
+                workspace.CurrentCamera.CFrame = CurCameraOffset
+                workspace.CurrentCamera.CameraSubject = game.Workspace[pname].Humanoid
+                workspace.CurrentCamera.CFrame = CurCameraOffset
+            else
+                remon = true
+                local CurCameraOffset = workspace.CurrentCamera.CFrame
+                workspace.CurrentCamera.CFrame = CurCameraOffset
+                game.Players.LocalPlayer.Character = dummy
+                workspace.CurrentCamera.CFrame = CurCameraOffset
+                workspace.CurrentCamera.CameraSubject = dummy:FindFirstChildOfClass("Humanoid")
+                workspace.CurrentCamera.CFrame = CurCameraOffset
+            end
+        end
+    end)
+
+
+    scripthere = _G.scripthere
+    coroutine.wrap(scripthere)()
+
+    erd = game:GetService("RunService").PostSimulation:Connect(function()
+        for i,v in pairs(livetools) do
+            if v then
+                v.CanCollide = false
+                v.Velocity = Vector3.new(dummy["HumanoidRootPart"].CFrame.LookVector.X * 35, dummy["Head"].Velocity.Y * 4, dummy["HumanoidRootPart"].CFrame.LookVector.Z * -35)
+            end
+        end
+    end)
+
+
+end
 ----------------------------------------------------------------
 --tempart is used for holding hats to check
 
@@ -1302,6 +1610,8 @@ elseif _G.type == "baseplate" then
     pdeathbaseplategame(neededhats)
 elseif _G.type == "spraycanbot" then
     spraycanbot(neededhats)
+elseif _G.type == "spraycanbot2" then
+    spraycanbotnorep(neededhats)
 end
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Status";
