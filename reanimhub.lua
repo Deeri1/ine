@@ -755,7 +755,7 @@ function botold(nh)
                     vm = "Mesh"
                 end
                 if _G.bottype == "OG" then
-                    if v.Name ~= "LARM" and v.Name ~= "RARM" and v.Name ~= "used" and v.Name ~= "Unloaded head" and v.Name ~= "Black" and v.Handle[vm].MeshId ~= "rbxassetid://11263221350" then
+                    if v.Name ~= "Accessory (LARM)" and v.Name ~= "Accessory (RARM)" and v.Name ~= "used" and v.Name ~= "Unloaded head" and v.Name ~= "Black" and v.Handle[vm].MeshId ~= "rbxassetid://11263221350" then
                     
                         for i, e in pairs(dummy:GetDescendants()) do
                             if e:IsA("BasePart") then
@@ -777,10 +777,10 @@ function botold(nh)
                         end
 
                     elseif v.Name ~= "used" then
-                        if v.Name == "LARM" then
+                        if v.Name == "Accessory (LARM)" then
                             v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
                         end
-                        if v.Name == "RARM" then
+                        if v.Name == "Accessory (RARM)" then
                             v.Handle.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
                         end
                         if v.Name == "MeshPartAccessory" then
@@ -814,11 +814,11 @@ function botold(nh)
                             end 
                         end
                     elseif v.Name ~= "used" then
-                        if v.Handle[vm].TextureId == "rbxassetid://17374768001" then --leftleg
-                            v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
+                        if v.Handle[vm].TextureId == "rbxassetid://4324138210" then --leftleg
+                            v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
                         end
-                        if v.Handle[vm].TextureId == "rbxassetid://17374768001" then -- rightleg
-                            v.Handle.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
+                        if v.Handle[vm].TextureId == "rbxassetid://4246186778" then -- rightleg
+                            v.Handle.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(180),math.rad(90))
                         end
                         if v.Handle[vm].TextureId == "rbxassetid://4584026407" then -- leftarm
                             v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
@@ -1533,7 +1533,7 @@ end
 if _G.type == "bot" or _G.type == "noprembot" then
     if _G.bottype == "OG" then
         --_G.neededhats = _G.neededhats..{14768693948,11159410305,11263254795,14768678294,14768701869}
-        for i,v in pairs({14768693948,17374846953,17374851733,14768678294,14768701869}) do
+    for i,v in pairs({14768693948,17374846953,17374851733,14768678294,14768701869}) do
             table.insert(_G.neededhats,v)
         end
     elseif  _G.bottype == "Freehat" then
