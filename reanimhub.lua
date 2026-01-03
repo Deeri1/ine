@@ -1533,7 +1533,7 @@ end
 if _G.type == "bot" or _G.type == "noprembot" then
     if _G.bottype == "OG" then
         --_G.neededhats = _G.neededhats..{14768693948,11159410305,11263254795,14768678294,14768701869}
-        for i,v in pairs({14768693948,11159410305,11263254795,14768678294,14768701869}) do
+        for i,v in pairs({14768693948,17374846953,17374851733,14768678294,14768701869}) do
             table.insert(_G.neededhats,v)
         end
     elseif  _G.bottype == "Freehat" then
