@@ -815,10 +815,10 @@ function botold(nh)
                         end
                     elseif v.Name ~= "used" then
                         if v.Handle[vm].TextureId == "rbxassetid://17374768001" then --leftleg
-                            v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                            v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
                         end
                         if v.Handle[vm].TextureId == "rbxassetid://17374768001" then -- rightleg
-                            v.Handle.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(180),math.rad(90))
+                            v.Handle.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
                         end
                         if v.Handle[vm].TextureId == "rbxassetid://4584026407" then -- leftarm
                             v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
