@@ -777,16 +777,16 @@ function botold(nh)
                         end
 
                     elseif v.Name ~= "used" then
-                        if v.Name == "Accessory (LARM)" then
+                        if v.Name == "LARM" then
                             v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
                         end
-                        if v.Name == "Accessory (RARM)" then
+                        if v.Name == "RARM" then
                             v.Handle.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
                         end
-                        if v.Name == "MeshPartAccessory" then
+                        if v.Name == "Accessory (RARM)" then
                             v.Handle.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
                         end
-                        if v.Name == "Unloaded head" then
+                        if v.Name == "Accessory (LARM)" then
                             v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
                         end
                         if v.Name == "Black" then
