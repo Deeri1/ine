@@ -1684,74 +1684,74 @@ function new26(nh)
 	settings()["Physics"].ForceCSGv2 = false
 	settings()["Physics"].DisableCSGv2 = true
 	settings()["Physics"].UseCSGv2 = false
-vm = ""
-vm1 = ""
+    vm = ""
+    vm1 = ""
 
-function goto()
-    for i,v in pairs(charar) do
-        if not v then
-            return
-        end
-        if v:FindFirstChild("Handle") and v.Handle:FindFirstChild("SpecialMesh") then
-            vm = "SpecialMesh"
-        else
-            vm = "Mesh"
-        end
-        for i2,v2 in pairs(dumar) do
-            if not v or not v2 then
+    function goto()
+        for i,v in pairs(charar) do
+            if not v then
                 return
             end
-            if v.Name == "Handle"  and v2.Name == "Handle" then --hat
-                    if v2:FindFirstChild("SpecialMesh") then
-                        vm2 = "SpecialMesh"
-                    else
-                        vm2 = "Mesh"
-                    end
-                    if v.Name == "LARM" then
-                        v.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                    elseif v.Name == "RARM" then
-                        v.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                    elseif v.Name == "Accessory (RARM)" then
-                        v.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                    elseif v.Name == "Accessory (LARM)" then
-                        v.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                    elseif v.Name == "Black" then
-                        v.CFrame = dummy["Torso"].CFrame
-
-                    elseif v[vm].MeshId == v2[vm2].MeshId and v[vm].TextureID == v2[vm2].TextureId then --anyother hat  stuff above is bot hats
-                        v.CFrame = v2.CFrame
-                    end
-                end  --V wont need that bc bots dont have limbs
-           -- elseif v.Name == v2.Name and v.Parent == workspace[Player.Name] and v2.Parent == dummy then --body matching
-            --    v.CFrame = v2.CFrame
-           -- end
-        end
-    end
-end
-
-
-function reanim()
-       pcall(function()
-	    if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-            if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-                workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
-          --dummy.HumanoidRootPart.CFrame
-                putonmhats(hataray)
-                
-        --repeat wait() until workspace:FindFirstChild(plrname):FindFirstChild("Head")
-                if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-                    workspace:FindFirstChild(plrname):BreakJoints()
-                    workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
+            if v:FindFirstChild("Handle") and v.Handle:FindFirstChild("SpecialMesh") then
+                vm = "SpecialMesh"
+            else
+                vm = "Mesh"
+            end
+            for i2,v2 in pairs(dumar) do
+                if not v or not v2 then
+                    return
                 end
-				wait()
+                if v.Name == "Handle"  and v2.Name == "Handle" then --hat
+                        if v2:FindFirstChild("SpecialMesh") then
+                            vm2 = "SpecialMesh"
+                        else
+                            vm2 = "Mesh"
+                        end
+                        if v.Name == "LARM" then
+                            v.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        elseif v.Name == "RARM" then
+                            v.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        elseif v.Name == "Accessory (RARM)" then
+                            v.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        elseif v.Name == "Accessory (LARM)" then
+                            v.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                        elseif v.Name == "Black" then
+                            v.CFrame = dummy["Torso"].CFrame
+
+                        elseif v[vm].MeshId == v2[vm2].MeshId and v[vm].TextureID == v2[vm2].TextureId then --anyother hat  stuff above is bot hats
+                            v.CFrame = v2.CFrame
+                        end
+                    end  --V wont need that bc bots dont have limbs
+            -- elseif v.Name == v2.Name and v.Parent == workspace[Player.Name] and v2.Parent == dummy then --body matching
+                --    v.CFrame = v2.CFrame
+            -- end
             end
         end
-        Workspace.CurrentCamera.CameraType = Enum.CameraType.Track
-        Workspace.CurrentCamera.CameraSubject  = dummy
-        game.Players.LocalPlayer.Character = dummy
-    
-     end)
-end
+    end
+
+
+    function reanim()
+        pcall(function()
+            if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+                if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+                    workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
+            --dummy.HumanoidRootPart.CFrame
+                    putonmhats(hataray)
+                    
+            --repeat wait() until workspace:FindFirstChild(plrname):FindFirstChild("Head")
+                    if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+                        workspace:FindFirstChild(plrname):BreakJoints()
+                        workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
+                    end
+                    wait()
+                end
+            end
+            Workspace.CurrentCamera.CameraType = Enum.CameraType.Track
+            Workspace.CurrentCamera.CameraSubject  = dummy
+            game.Players.LocalPlayer.Character = dummy
+        
+        end)
+    end
 
 
  ----------------------------------------------------------------
