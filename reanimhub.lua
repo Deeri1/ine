@@ -222,9 +222,12 @@ function pdeathbaseplategame(nh)
     local dead = false
 	task.spawn(function()
         dummy.Humanoid.BreakJointsOnDeath = false
+        Players = game.Players
+        char = Players.LocalPlayer.Character
         game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
         task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
         wait(1)
+        char = Players.LocalPlayer.Character
         local Head = char:FindFirstChild("Head")
         Head:BreakJoints() 
         print("dead")
@@ -879,7 +882,7 @@ function botold(nh)
     runservice.Stepped:Connect(function()
         if not checked then
             checked = true
-            if !workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+            if not workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
                 goto()
             end
             pcall(function()
