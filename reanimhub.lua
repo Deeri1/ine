@@ -898,7 +898,7 @@ function botold(nh)
                 end
                 goto()
             -- sethiddenproperty(ogplr, "SimulationRadius", 10000000)
-                check = false
+            check = false
         end
         wait()
     end)
@@ -1527,7 +1527,193 @@ function spraycanbotnorep(nh)
     end)
 
 
+end -- end of spraycan bot no rep function
+
+function new26(nh)
+    local Players = game:FindFirstChildOfClass("Players")
+	local RunService = game:FindFirstChildOfClass("RunService")
+	--plr vars
+	local Player = Players.LocalPlayer
+	local plrname = Player.Name
+	local Character = Player["Character"] or Player.CharacterAdded:Wait()
+	local char = Character
+	local Humanoid = Character:FindFirstChildWhichIsA("Humanoid")
+	--Humanoid:ChangeState("Physics")
+	--Humanoid.PlatformStand = true
+	local RootPart = Character:WaitForChild("HumanoidRootPart")
+	local Head = Character:WaitForChild("Head")
+	local RightArm = Character:WaitForChild("Right Arm")
+	local LeftArm = Character:WaitForChild("Left Arm")
+	local RightLeg = Character:WaitForChild("Right Leg")
+	local LeftLeg = Character:WaitForChild("Left Leg")
+	local Torso = Character:WaitForChild("Torso")
+	local Camera = workspace.CurrentCamera
+	local Mouse = Player:GetMouse()
+	workspace.FallenPartsDestroyHeight = 0/0
+
+	--functions
+	--hat stuff
+	--finds the hats your missing and sets them as a hat in tempart
+
+	totalmh = 0
+	hataray = {}
+	idlist = {} -- holds the id of the hats that are needed 
+	function fmissinghats(nh)
+		for i,v in pairs(nh) do
+			for i,h in pairs(workspace.tempart:GetDescendants()) do
+				if h:FindFirstChild("Mesh") then
+					if h.Mesh.TextureId == v then
+						totalmh = totalmh + 1
+						table.insert(idlist,h.Parent:GetAttribute("id"))
+						table.insert(hataray,h)
+					end
+				elseif h:FindFirstChild("SpecialMesh") then
+					if h.SpecialMesh.TextureId == v then
+						totalmh = totalmh + 1
+						print(h.Parent:GetAttribute("id"))
+						table.insert(idlist,h.Parent:GetAttribute("id"))
+						table.insert(hataray,h)
+					end
+				end
+			end
+		end
+	end
+
+
+	----------------------------------------------------------------
+	--putting on missing hats :)
+	--testing if can -gh command :)
+	function testgh(ha)
+	    print("fired")
+		local strangofhats = "-gh "
+		for i,v in ha do
+			strangofhats = strangofhats..v..", "
+		end
+		string.sub(strangofhats,1,string.len(strangofhats)-1)
+		--	print("here")
+		print(strangofhats)
+		local chatEvent = Instance.new("BindableEvent")
+		game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
+		-- Line above may error. Make sure to use pcall when using it and retry
+
+		chatEvent:Fire(strangofhats)
+		chatEvent:Destroy()
+		wait()
+	end
+	function putonmhats(ha)
+		for i,v in pairs(ha) do
+			tmph = v.Parent:Clone()
+			--print("cloned"..v.Parent.Name.."")
+			tmph.Parent = workspace[plrname]
+		end
+		task.wait()
+		tempart:Destroy()
+	end
+    function removedupes()
+        for i,v in pairs(workspace[plrname]:GetChildren()) do
+            if v:IsA("Accessory") then
+                if v:WaitForChild("Handle"):FindFirstChild("Mesh") or v:WaitForChild("Handle"):FindFirstChild("SpecialMesh") then
+                    for i2,v2 in pairs(workspace[plrname]:GetChildren()) do
+                        if v2:IsA("Accessory") then
+                            if v2:WaitForChild("Handle"):FindFirstChild("Mesh") or v2.Handle:FindFirstChild("SpecialMesh") then
+                                if v.Handle.Mesh.MeshId == v2.Handle.Mesh.MeshId and v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId then
+                                    v2:Destroy()
+                                elseif v.Handle.SpecialMesh.MeshId == v2.Handle.SpecialMesh.MeshId and v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId then
+                                    v2:Destroy()
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+	--running the functions now
+
+	fmissinghats(nh)
+	testgh(idlist)
+	wait(.5)
+	fmissinghats(nh)
+   -- removedupes()
+	--putonmhats(hataray)
+	wait()
+    tempart:Destroy()
+
+	--dummy stuff
+	--dummy clone
+	for i, v in pairs(workspace:GetDescendants()) do
+		if v.Name == "Dummylolxdnoo" then
+			v:Destroy()
+		end
+	end
+	char = game.Players.LocalPlayer.Character
+	char.Archivable = true
+    charar = {}
+	for i, v in char:GetDescendants() do
+		v.Archivable = true
+		if v:IsA("BasePart") then
+            charar[#charar+1] = v
+			v.CanCollide = false
+		end
+	end
+
+	dummy = char:Clone()
+	wait(1) -- :( makes sure hats load
+	dummy.Name = "Dummylolxdnoo"
+	dummy.Parent = workspace
+
+	dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
+
+	game.Players.LocalPlayer.ReplicationFocus = workspace[Player.Name]
+    dumar = {}
+	for i, v in pairs(dummy:GetDescendants()) do
+		v.Archivable = true
+		if v:IsA("BasePart") then
+            dumar[#dumar+1] = v
+			v.Transparency = .75
+			v.CanCollide = false
+		end
+	end
+
+	---reanim main
+	Player.ReplicationFocus = workspace
+	settings()["Physics"].PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
+    settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
+    settings().Physics.AllowSleep = false
+	settings()["Physics"].AllowSleep = false
+	settings()["Physics"].ForceCSGv2 = false
+	settings()["Physics"].DisableCSGv2 = true
+	settings()["Physics"].UseCSGv2 = false
+
+function goto(){
+    for i,v in pairs(charar) do
+        for i2,v2 in pairs(dumar) do
+            if v.Name == "Handle"  and v2.Name == "Handle" then --hat
+                if v.MeshId == v2.MeshId and v.TextureID == v2.TextureId then
+                    v.CFrame = v2.CFrame
+                end
+            elseif v.Name == v2.Name and v.Parent = workspace[Player.Name] and v2.Parent = dummy then --body matching
+                v.CFrame = v2.CFrame
+            end
+        end
+    end
+end}
+
+
+
+
+
+
+
+
+
+
 end
+
+
+
+
+
 ----------------------------------------------------------------
 --tempart is used for holding hats to check
 
