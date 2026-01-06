@@ -880,11 +880,11 @@ function botold(nh)
     checked = false
 
     runservice.Stepped:Connect(function()
+        if not workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+            goto()
+        end
         if not checked then
             checked = true
-            if not workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-                goto()
-            end
             pcall(function()
                 if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
                     repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
