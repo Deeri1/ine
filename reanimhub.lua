@@ -1689,14 +1689,54 @@ function goto()
     for i,v in pairs(charar) do
         for i2,v2 in pairs(dumar) do
             if v.Name == "Handle"  and v2.Name == "Handle" then --hat
-                if v.MeshId == v2.MeshId and v.TextureID == v2.TextureId then
-                    v.CFrame = v2.CFrame
-                end
-            elseif v.Name == v2.Name and v.Parent == workspace[Player.Name] and v2.Parent == dummy then --body matching
-                v.CFrame = v2.CFrame
-            end
+
+                    if v.Name == "LARM" then
+                        v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                    elseif v.Name == "RARM" then
+                        v.Handle.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                    elseif v.Name == "Accessory (RARM)" then
+                        v.Handle.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                    elseif v.Name == "Accessory (LARM)" then
+                        v.Handle.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                    elseif v.Name == "Black" then
+                        v.Handle.CFrame = dummy["Torso"].CFrame
+
+                    elseif v.MeshId == v2.MeshId and v.TextureID == v2.TextureId then --anyother hat  stuff above is bot hats
+                        v.CFrame = v2.CFrame
+                    end
+                end  --V wont need that bc bots dont have limbs
+           -- elseif v.Name == v2.Name and v.Parent == workspace[Player.Name] and v2.Parent == dummy then --body matching
+            --    v.CFrame = v2.CFrame
+           -- end
         end
     end
+end
+
+
+function reanim()
+       pcall(function()
+	    if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+            if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+                workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
+          --dummy.HumanoidRootPart.CFrame
+                putonmhats(hataray)
+                
+        --repeat wait() until workspace:FindFirstChild(plrname):FindFirstChild("Head")
+                if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+                    workspace:FindFirstChild(plrname):BreakJoints()
+                    workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
+                end
+				wait()
+
+            end
+        end
+        Workspace.CurrentCamera.CameraType = Enum.CameraType.Track
+        Workspace.CurrentCamera.CameraSubject  = dummy
+        game.Players.LocalPlayer.Character = dummy
+    
+    
+    
+     end)
 end
 
 
