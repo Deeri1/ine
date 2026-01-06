@@ -1691,7 +1691,7 @@ function goto()
         if not v then
             return
         end
-        if v.Handle:FindFirstChild("SpecialMesh") then
+        if v.FindFirstChild("Handle") and v.Handle:FindFirstChild("SpecialMesh") then
             vm = "SpecialMesh"
         else
             vm = "Mesh"
