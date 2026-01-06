@@ -7,7 +7,7 @@ _G.scripthere = function()
     
 end
 _G.neededhats = {}    -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {4524991457,4820152700,4315489767,4794315940,4458601937,4506945409}
-_G.type = "bot"       -- bot, baseplate, noprembot, spraycanbot(always put all of hats needed in _G.neededhats, works only in fencing, \ to toggle character)
+_G.type = "noprembot"       -- bot, baseplate, noprembot, spraycanbot(always put all of hats needed in _G.neededhats, works only in fencing, \ to toggle character)
 _G.bottype = "OG"     -- OG, Freehat
 _G.huboveride = nil   -- if you have a hub and use this reanim you can overide type choice if loading scripts that already have this reanim built in (prob usefull only to me lol) (when releasing scripts with this reanim this line should be removed)
 _G.huboveridebt = nil -- if you have a hub and use this reanim you can overide bot type choice if loading scripts that already have this reanim built in (prob usefull only to me lol) (when releasing scripts with this reanim this line should be removed)
@@ -879,6 +879,9 @@ function botold(nh)
     runservice.Stepped:Connect(function()
         if not checked then
             checked = true
+            if !workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+                goto()
+            end
             pcall(function()
                 if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
                     repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
