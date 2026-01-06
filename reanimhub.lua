@@ -1727,28 +1727,43 @@ function reanim()
                     workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
                 end
 				wait()
-
             end
         end
         Workspace.CurrentCamera.CameraType = Enum.CameraType.Track
         Workspace.CurrentCamera.CameraSubject  = dummy
         game.Players.LocalPlayer.Character = dummy
     
-    
-    
      end)
 end
 
 
+ ----------------------------------------------------------------
+--final loop
 
+scripthere = _G.scripthere
+coroutine.wrap(scripthere)() -- runs script on bot :)
 
+local runservice = game:GetService("RunService")
 
+checked = false
 
+runservice.Stepped:Connect(function()
+    if not workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+        goto()
+    end
+    if not checked then
+        checked = true
+        if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+            repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
+            coroutine.wrap(reanim)()
+        end
+        goto()
+        check = false
+    end
+    wait()
+end)
 
-
-
-
-end
+end --newbot ermm
 
 
 
@@ -1849,6 +1864,8 @@ elseif _G.type == "spraycanbot" then
     spraycanbot(neededhats)
 elseif _G.type == "spraycanbot2" then
     spraycanbotnorep(neededhats)
+elseif _G.type == "beta" then
+    new26(neededhats)
 end
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Status";
