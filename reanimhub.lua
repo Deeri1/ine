@@ -1686,6 +1686,7 @@ function new26(nh)
 	settings()["Physics"].UseCSGv2 = false
 vm = ""
 vm1 = ""
+
 function goto()
     for i,v in pairs(charar) do
         if not v then
