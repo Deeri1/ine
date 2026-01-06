@@ -885,7 +885,6 @@ function botold(nh)
         end
         if not checked then
             checked = true
-            pcall(function()
                 if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
                     repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
                     for i, v in pairs(workspace:GetDescendants()) do
@@ -900,7 +899,6 @@ function botold(nh)
                 goto()
             -- sethiddenproperty(ogplr, "SimulationRadius", 10000000)
                 check = false
-            end)
         end
         wait()
     end)
