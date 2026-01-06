@@ -1685,19 +1685,19 @@ function new26(nh)
 	settings()["Physics"].DisableCSGv2 = true
 	settings()["Physics"].UseCSGv2 = false
 
-function goto(){
+function goto()
     for i,v in pairs(charar) do
         for i2,v2 in pairs(dumar) do
             if v.Name == "Handle"  and v2.Name == "Handle" then --hat
                 if v.MeshId == v2.MeshId and v.TextureID == v2.TextureId then
                     v.CFrame = v2.CFrame
                 end
-            elseif v.Name == v2.Name and v.Parent = workspace[Player.Name] and v2.Parent = dummy then --body matching
+            elseif v.Name == v2.Name and v.Parent == workspace[Player.Name] and v2.Parent == dummy then --body matching
                 v.CFrame = v2.CFrame
             end
         end
     end
-end}
+end
 
 
 
