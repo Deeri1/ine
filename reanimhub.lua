@@ -877,30 +877,23 @@ function botold(nh)
 
     local runservice = game:GetService("RunService")
 
-    checked = false
-
     runservice.Stepped:Connect(function()
-        if not workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-            goto()
+	pcall(function()
+        if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+            repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
+
+            coroutine.wrap(reanim)()
         end
-        if not checked then
-            checked = true
-                if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-                    repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
-                    for i, v in pairs(workspace:GetDescendants()) do
-                        if v:IsA("Part") then
-                            if v and v.Parent~=workspace then
-                                v.CanCollide = false
-                            end
-                        end
-                    end
-                    coroutine.wrap(reanim)()
+        goto()
+       -- sethiddenproperty(ogplr, "SimulationRadius", 10000000)
+        for i, v in pairs(workspace:GetDescendants()) do
+            if v:IsA("Part") then
+                if v and v.Parent~=workspace then
+                    v.CanCollide = false
                 end
-                goto()
-            -- sethiddenproperty(ogplr, "SimulationRadius", 10000000)
-            check = false
+            end
         end
-        wait()
+		end)
     end)
     i=0
     while i<50 do
@@ -1652,7 +1645,9 @@ function new26(nh)
 	for i, v in char:GetDescendants() do
 		v.Archivable = true
 		if v:IsA("BasePart") then
-            charar[#charar+1] = v
+            if v.Parent != workspace[plrname] then
+                charar[#charar+1] = v
+            end
 			v.CanCollide = false
 		end
 	end
@@ -1669,7 +1664,9 @@ function new26(nh)
 	for i, v in pairs(dummy:GetDescendants()) do
 		v.Archivable = true
 		if v:IsA("BasePart") then
-            dumar[#dumar+1] = v
+            if v.Parent != dummy then
+                dumar[#dumar+1] = v
+            end
 			v.Transparency = .75
 			v.CanCollide = false
 		end
@@ -1754,41 +1751,40 @@ function new26(nh)
     end
 
 
- ----------------------------------------------------------------
---final loop
+     ----------------------------------------------------------------
+    --final loop
 
-scripthere = _G.scripthere
-coroutine.wrap(scripthere)() -- runs script on bot :)
+    scripthere = _G.scripthere
+    coroutine.wrap(scripthere)() -- runs script on bot :)
 
-local runservice = game:GetService("RunService")
+    local runservice = game:GetService("RunService")
 
-checked = false
-
-runservice.Stepped:Connect(function()
-    if not workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-        goto()
-    end
-    if not checked then
-        checked = true
+    runservice.Stepped:Connect(function()
+	pcall(function()
         if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
             repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
-            reanim()
-            charar = {}
+            coroutine.wrap(reanim)()
+            charar= {}
             for i, v in char:GetDescendants() do
                 v.Archivable = true
                 if v:IsA("BasePart") then
-                    charar[#charar+1] = v
+                    if v.Parent != workspace[plrname] then
+                        charar[#charar+1] = v
+                    end
                     v.CanCollide = false
                 end
             end
-
         end
         goto()
-        check = false
+		end)
+    end)
+    i=0
+    while i<50 do
+        dummy.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+        dummy.HumanoidRootPart.RotVelocity = Vector3.new(0, 0, 0)
+        wait()
+        i=i+1
     end
-    wait()
-end)
-
 end --newbot ermm
 
 
