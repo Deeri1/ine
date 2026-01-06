@@ -1645,7 +1645,7 @@ function new26(nh)
 	for i, v in char:GetDescendants() do
 		v.Archivable = true
 		if v:IsA("BasePart") then
-            if v.Parent != workspace[plrname] then
+            if v.Parent ~= workspace[plrname] then
                 charar[#charar+1] = v
             end
 			v.CanCollide = false
@@ -1664,7 +1664,7 @@ function new26(nh)
 	for i, v in pairs(dummy:GetDescendants()) do
 		v.Archivable = true
 		if v:IsA("BasePart") then
-            if v.Parent != dummy then
+            if v.Parent ~= dummy then
                 dumar[#dumar+1] = v
             end
 			v.Transparency = .75
@@ -1768,7 +1768,7 @@ function new26(nh)
             for i, v in char:GetDescendants() do
                 v.Archivable = true
                 if v:IsA("BasePart") then
-                    if v.Parent != workspace[plrname] then
+                    if v.Parent ~= workspace[plrname] then
                         charar[#charar+1] = v
                     end
                     v.CanCollide = false
