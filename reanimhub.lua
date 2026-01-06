@@ -888,18 +888,17 @@ function botold(nh)
             pcall(function()
                 if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
                     repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
-
+                    for i, v in pairs(workspace:GetDescendants()) do
+                        if v:IsA("Part") then
+                            if v and v.Parent~=workspace then
+                                v.CanCollide = false
+                            end
+                        end
+                    end
                     coroutine.wrap(reanim)()
                 end
                 goto()
             -- sethiddenproperty(ogplr, "SimulationRadius", 10000000)
-                for i, v in pairs(workspace:GetDescendants()) do
-                    if v:IsA("Part") then
-                        if v and v.Parent~=workspace then
-                            v.CanCollide = false
-                        end
-                    end
-                end
                 check = false
             end)
         end
