@@ -1687,7 +1687,13 @@ function new26(nh)
 
 function goto()
     for i,v in pairs(charar) do
+        if not v then
+            return
+        end
         for i2,v2 in pairs(dumar) do
+            if not v or not v2 then
+                return
+            end
             if v.Name == "Handle"  and v2.Name == "Handle" then --hat
 
                     if v.Name == "LARM" then
@@ -1755,7 +1761,16 @@ runservice.Stepped:Connect(function()
         checked = true
         if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
             repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
-            coroutine.wrap(reanim)()
+            reanim()
+            charar = {}
+            for i, v in char:GetDescendants() do
+                v.Archivable = true
+                if v:IsA("BasePart") then
+                    charar[#charar+1] = v
+                    v.CanCollide = false
+                end
+            end
+
         end
         goto()
         check = false
