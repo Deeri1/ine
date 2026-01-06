@@ -1684,18 +1684,28 @@ function new26(nh)
 	settings()["Physics"].ForceCSGv2 = false
 	settings()["Physics"].DisableCSGv2 = true
 	settings()["Physics"].UseCSGv2 = false
-
+vm = ""
+vm1 = ""
 function goto()
     for i,v in pairs(charar) do
         if not v then
             return
+        end
+        if v.Handle:FindFirstChild("SpecialMesh") then
+            vm = "SpecialMesh"
+        else
+            vm = "Mesh"
         end
         for i2,v2 in pairs(dumar) do
             if not v or not v2 then
                 return
             end
             if v.Name == "Handle"  and v2.Name == "Handle" then --hat
-
+                    if v2.Handle:FindFirstChild("SpecialMesh") then
+                        vm2 = "SpecialMesh"
+                    else
+                        vm2 = "Mesh"
+                    end
                     if v.Name == "LARM" then
                         v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
                     elseif v.Name == "RARM" then
@@ -1707,7 +1717,7 @@ function goto()
                     elseif v.Name == "Black" then
                         v.Handle.CFrame = dummy["Torso"].CFrame
 
-                    elseif v.MeshId == v2.MeshId and v.TextureID == v2.TextureId then --anyother hat  stuff above is bot hats
+                    elseif v[vm].MeshId == v2[vm2].MeshId and v[vm].TextureID == v2[vm2].TextureId then --anyother hat  stuff above is bot hats
                         v.CFrame = v2.CFrame
                     end
                 end  --V wont need that bc bots dont have limbs
