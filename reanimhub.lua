@@ -872,31 +872,30 @@ function botold(nh)
     
     -- end)
     end
- 
+
     ----------------------------------------------------------------
     --final loop
 
     scripthere = _G.scripthere
     coroutine.wrap(scripthere)() -- runs script on bot :)
 
-    local runservice = game:GetService("RunService")
-    initee = false
+local runservice = game:GetService("RunService")
+	print("plrname is "..plrname)
     runservice.Stepped:Connect(function()
-	--pcall(function()
-        if not initee then
-        initee = true
-            if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-                if workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart") then
-					reanim()
-					initee = false
-				end
-            end
-			initee = false
-        end
-        goto()
-       -- sethiddenproperty(ogplr, "SimulationRadius", 10000000)
-        
-		--end)
+
+			if not initee then
+				initee = true
+				if workspace:FindFirstChild(plrname):FindFirstChild("Torso") and workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+					if workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart") then
+						reanim()
+						initee = false
+					end
+				else
+                    goto()
+                end
+				initee = false
+			end
+            wait()
     end)
     i=0
     while i<50 do
@@ -1551,89 +1550,45 @@ function new26(nh)
 	--hat stuff
 	--finds the hats your missing and sets them as a hat in tempart
 
-	totalmh = 0
-	hataray = {}
-	idlist = {} -- holds the id of the hats that are needed 
-	function fmissinghats(nh)
-		for i,v in pairs(nh) do
-			for i,h in pairs(workspace.tempart:GetDescendants()) do
-				if h:FindFirstChild("Mesh") then
-					if h.Mesh.TextureId == v then
-						totalmh = totalmh + 1
-						table.insert(idlist,h.Parent:GetAttribute("id"))
-						table.insert(hataray,h)
-					end
-				elseif h:FindFirstChild("SpecialMesh") then
-					if h.SpecialMesh.TextureId == v then
-						totalmh = totalmh + 1
-						print(h.Parent:GetAttribute("id"))
-						table.insert(idlist,h.Parent:GetAttribute("id"))
-						table.insert(hataray,h)
-					end
-				end
-			end
-		end
-	end
+       totalmh = 0
+       hataray = {}
+       function fmissinghats(nh)
+           for i,v in pairs(nh) do
+               for i,h in pairs(workspace.tempart:GetDescendants()) do
+                   if h:FindFirstChild("Mesh") then
+                       if h.Mesh.TextureId == v then
+                           totalmh = totalmh + 1
+                           table.insert(hataray,h)
+                       end
+                   elseif h:FindFirstChild("SpecialMesh") then
+                       if h.SpecialMesh.TextureId == v then
+                           totalmh = totalmh + 1
+                           table.insert(hataray,h)
+                       end
+                   end
+               end
+           end
+       end
+   
+   
+       ----------------------------------------------------------------
+       --putting on missing hats :)
+   
+       function putonmhats(ha)
+           for i,v in pairs(ha) do
+               tmph = v.Parent:Clone()
+               --print("cloned"..v.Parent.Name.."")
+               tmph.Parent = workspace[plrname]
+           end
+           task.wait()
+       end
 
+       fmissinghats(nh)
+       putonmhats(hataray)
+       wait()
 
-	----------------------------------------------------------------
-	--putting on missing hats :)
-	--testing if can -gh command :)
-	function testgh(ha)
-	    print("fired")
-		local strangofhats = "-gh "
-		for i,v in ha do
-			strangofhats = strangofhats..v..", "
-		end
-		string.sub(strangofhats,1,string.len(strangofhats)-1)
-		--	print("here")
-		print(strangofhats)
-		local chatEvent = Instance.new("BindableEvent")
-		game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
-		-- Line above may error. Make sure to use pcall when using it and retry
-
-		chatEvent:Fire(strangofhats)
-		chatEvent:Destroy()
-		wait()
-	end
-	function putonmhats(ha)
-		for i,v in pairs(ha) do
-			tmph = v.Parent:Clone()
-			--print("cloned"..v.Parent.Name.."")
-			tmph.Parent = workspace[plrname]
-		end
-		task.wait()
-		tempart:Destroy()
-	end
-    function removedupes()
-        for i,v in pairs(workspace[plrname]:GetChildren()) do
-            if v:IsA("Accessory") then
-                if v:WaitForChild("Handle"):FindFirstChild("Mesh") or v:WaitForChild("Handle"):FindFirstChild("SpecialMesh") then
-                    for i2,v2 in pairs(workspace[plrname]:GetChildren()) do
-                        if v2:IsA("Accessory") then
-                            if v2:WaitForChild("Handle"):FindFirstChild("Mesh") or v2.Handle:FindFirstChild("SpecialMesh") then
-                                if v.Handle.Mesh.MeshId == v2.Handle.Mesh.MeshId and v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId then
-                                    v2:Destroy()
-                                elseif v.Handle.SpecialMesh.MeshId == v2.Handle.SpecialMesh.MeshId and v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId then
-                                    v2:Destroy()
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end
 	--running the functions now
-
-	fmissinghats(nh)
-	testgh(idlist)
-	wait(.5)
-	fmissinghats(nh)
-   -- removedupes()
-	--putonmhats(hataray)
-	wait()
-    tempart:Destroy()
+    --tempart:Destroy()
 
 	--dummy stuff
 	--dummy clone
@@ -1660,9 +1615,13 @@ function new26(nh)
 	dummy.Name = "Dummylolxdnoo"
 	dummy.Parent = workspace
 
-	dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
 
-	game.Players.LocalPlayer.ReplicationFocus = workspace[Player.Name]
+    settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
+    settings().Physics.AllowSleep = false
+
+    game.Players.LocalPlayer.ReplicationFocus = workspace[plrname]
+
+    game.Players.LocalPlayer.Character = dummy
     dumar = {}
 	for i, v in pairs(dummy:GetDescendants()) do
 		v.Archivable = true
@@ -1676,20 +1635,23 @@ function new26(nh)
 	end
 
 	---reanim main
-	Player.ReplicationFocus = workspace
-	settings()["Physics"].PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
-    settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
-    settings().Physics.AllowSleep = false
-	settings()["Physics"].AllowSleep = false
-	settings()["Physics"].ForceCSGv2 = false
-	settings()["Physics"].DisableCSGv2 = true
-	settings()["Physics"].UseCSGv2 = false
+
     vm = ""
     vm1 = ""
 
     function goto()
         for i,v in pairs(charar) do
             if not v then
+                charar = {}
+                for i, v in char:GetDescendants() do
+                    v.Archivable = true
+                    if v:IsA("BasePart") then
+                        if v.Parent ~= workspace[plrname] then
+                            charar[#charar+1] = v
+                        end
+                        v.CanCollide = false
+                    end
+                end
                 return
             end
            -- print(v.Parent.Name)
@@ -1698,30 +1660,34 @@ function new26(nh)
             else
                 vm = "Mesh"
             end
+            if not v:FindFirstChild(vm) then
+                return
+            end
             for i2,v2 in pairs(dumar) do
                 if not v or not v2 then
                     return
                 end
                 if v.Name == "Handle"  and v2.Name == "Handle" then --hat
-                    print("hat",v.Parent.Name,v2.Parent.Name)
+                   -- print("hat",v.Parent.Name,v2.Parent.Name)
                         if v2:FindFirstChild("SpecialMesh") then
                             vm2 = "SpecialMesh"
                         else
                             vm2 = "Mesh"
                         end
-                        if v.Parent.Name == "LARM" then
+                        if v and v.Parent and v.Parent.Name == "LARM" then
                             v.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                        elseif v.Parent.Name == "RARM" then
+                        elseif v and v.Parent and v.Parent.Name == "RARM" then
                             v.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                        elseif v.Parent.Name == "Accessory (RARM)" then
+                        elseif v and v.Parent and  v.Parent.Name == "Accessory (RARM)" then
                             v.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                        elseif v.Parent.Name == "Accessory (LARM)" then
+                        elseif v and v.Parent and v.Parent.Name == "Accessory (LARM)" then
                             v.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                        elseif v.Parent.Name == "Black" then
+                        elseif v and v.Parent and v.Parent.Name == "Black" then
                             v.CFrame = dummy["Torso"].CFrame
-                        elseif v.Name == v2.Name then --anyother hat  stuff above is bot hats
+                        elseif v and v.Parent and v2[vm2] and v[vm] and v2[vm2].MeshId == v[vm].MeshId and v2[vm2].TextureId == v[vm].TextureId then --anyother hat  stuff above is bot hats
                             v.CFrame = v2.CFrame
-                            print("tped")
+                            v.Velocity = Vector3.new(10,10,10)
+                           -- print("tped ".. v.Parent.Name.." to ".. v2.Parent.Name.. " and from "..v.Parent.Parent.Name.." to "..v2.Parent.Parent.Name)
                         end
                 end  --V wont need that bc bots dont have limbs
             -- elseif v.Name == v2.Name and v.Parent == workspace[Player.Name] and v2.Parent == dummy then --body matching
@@ -1733,26 +1699,29 @@ function new26(nh)
 
 
     function reanim()
-        pcall(function()
+	  repeat wait() until workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D")
+	    if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
             if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+                workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
+          --dummy.HumanoidRootPart.CFrame
+                putonmhats(hataray)
+                
+        --repeat wait() until workspace:FindFirstChild(plrname):FindFirstChild("Head")
                 if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+                    workspace:FindFirstChild(plrname):BreakJoints()
                     workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
-            --dummy.HumanoidRootPart.CFrame
-                    putonmhats(hataray)
-                    
-            --repeat wait() until workspace:FindFirstChild(plrname):FindFirstChild("Head")
-                    if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-                        workspace:FindFirstChild(plrname):BreakJoints()
-                        workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
-                    end
-                    wait()
                 end
+				wait()
+
             end
-            Workspace.CurrentCamera.CameraType = Enum.CameraType.Track
-            Workspace.CurrentCamera.CameraSubject  = dummy
-            game.Players.LocalPlayer.Character = dummy
-        
-        end)
+        end
+        Workspace.CurrentCamera.CameraType = Enum.CameraType.Track
+        Workspace.CurrentCamera.CameraSubject  = dummy
+        game.Players.LocalPlayer.Character = dummy
+    
+    
+    
+    -- end)
     end
 
 
@@ -1763,26 +1732,22 @@ function new26(nh)
     coroutine.wrap(scripthere)() -- runs script on bot :)
 
     local runservice = game:GetService("RunService")
-
+	print("plrname is "..plrname)
     runservice.Stepped:Connect(function()
-	pcall(function()
-    
-        if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-            repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
-            coroutine.wrap(reanim)()
-            charar = {}
-            for i, v in char:GetDescendants() do
-                v.Archivable = true
-                if v:IsA("BasePart") then
-                    if v.Parent ~= workspace[plrname] then
-                        charar[#charar+1] = v
-                    end
-                    v.CanCollide = false
+
+			if not initee then
+				initee = true
+				if workspace:FindFirstChild(plrname):FindFirstChild("Torso") and workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+					if workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart") then
+						reanim()
+						initee = false
+					end
+				else
+                    goto()
                 end
-            end
-        end
-        goto()
-		end)
+				initee = false
+			end
+            wait()
     end)
     i=0
     while i<50 do
