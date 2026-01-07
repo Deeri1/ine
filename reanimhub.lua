@@ -841,10 +841,14 @@ function botold(nh)
     end
 
 
+
+
     ----------------------------------------------------------------
     --kill body
     function reanim() --- killing player and switching to fake char
-       pcall(function()
+      -- pcall(function()
+	   
+	   repeat wait() until workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D")
 	    if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
             if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
                 workspace:FindFirstChild(plrname).HumanoidRootPart.CFrame = CFrame.new(dummy.HumanoidRootPart.CFrame.X+6,dummy.HumanoidRootPart.CFrame.Y+6,dummy.HumanoidRootPart.CFrame.Z+6)
@@ -866,7 +870,7 @@ function botold(nh)
     
     
     
-     end)
+    -- end)
     end
 
     ----------------------------------------------------------------
@@ -876,24 +880,23 @@ function botold(nh)
     coroutine.wrap(scripthere)() -- runs script on bot :)
 
     local runservice = game:GetService("RunService")
-
+    initee = false
     runservice.Stepped:Connect(function()
-	pcall(function()
-        if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
-            repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
-
-            coroutine.wrap(reanim)()
+	--pcall(function()
+        if not initee then
+        initee = true
+            if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
+                if workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart") then
+					reanim()
+					initee = false
+				end
+            end
+			initee = false
         end
         goto()
        -- sethiddenproperty(ogplr, "SimulationRadius", 10000000)
-        for i, v in pairs(workspace:GetDescendants()) do
-            if v:IsA("Part") then
-                if v and v.Parent~=workspace then
-                    v.CanCollide = false
-                end
-            end
-        end
-		end)
+        
+		--end)
     end)
     i=0
     while i<50 do
@@ -1664,7 +1667,7 @@ function new26(nh)
 	for i, v in pairs(dummy:GetDescendants()) do
 		v.Archivable = true
 		if v:IsA("BasePart") then
-            if v.Parent ~= dummy then
+            if v.Parent ~= workspace["Dummylolxdnoo"] then
                 dumar[#dumar+1] = v
             end
 			v.Transparency = .75
@@ -1689,6 +1692,7 @@ function new26(nh)
             if not v then
                 return
             end
+           -- print(v.Parent.Name)
             if v:FindFirstChild("Handle") and v.Handle:FindFirstChild("SpecialMesh") then
                 vm = "SpecialMesh"
             else
@@ -1699,26 +1703,27 @@ function new26(nh)
                     return
                 end
                 if v.Name == "Handle"  and v2.Name == "Handle" then --hat
+                    print("hat",v.Parent.Name,v2.Parent.Name)
                         if v2:FindFirstChild("SpecialMesh") then
                             vm2 = "SpecialMesh"
                         else
                             vm2 = "Mesh"
                         end
-                        if v.Name == "LARM" then
+                        if v.Parent.Name == "LARM" then
                             v.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                        elseif v.Name == "RARM" then
+                        elseif v.Parent.Name == "RARM" then
                             v.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                        elseif v.Name == "Accessory (RARM)" then
+                        elseif v.Parent.Name == "Accessory (RARM)" then
                             v.CFrame = dummy["Right Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                        elseif v.Name == "Accessory (LARM)" then
+                        elseif v.Parent.Name == "Accessory (LARM)" then
                             v.CFrame = dummy["Left Leg"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                        elseif v.Name == "Black" then
+                        elseif v.Parent.Name == "Black" then
                             v.CFrame = dummy["Torso"].CFrame
-
-                        elseif v[vm].MeshId == v2[vm2].MeshId and v[vm].TextureID == v2[vm2].TextureId then --anyother hat  stuff above is bot hats
+                        elseif v.Name == v2.Name then --anyother hat  stuff above is bot hats
                             v.CFrame = v2.CFrame
+                            print("tped")
                         end
-                    end  --V wont need that bc bots dont have limbs
+                end  --V wont need that bc bots dont have limbs
             -- elseif v.Name == v2.Name and v.Parent == workspace[Player.Name] and v2.Parent == dummy then --body matching
                 --    v.CFrame = v2.CFrame
             -- end
@@ -1761,10 +1766,11 @@ function new26(nh)
 
     runservice.Stepped:Connect(function()
 	pcall(function()
+    
         if workspace:FindFirstChild(plrname).Torso:FindFirstChildOfClass("Motor6D") then
             repeat task.wait() until workspace:FindFirstChild(plrname):FindFirstChild("HumanoidRootPart")
             coroutine.wrap(reanim)()
-            charar= {}
+            charar = {}
             for i, v in char:GetDescendants() do
                 v.Archivable = true
                 if v:IsA("BasePart") then
