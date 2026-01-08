@@ -1236,6 +1236,7 @@ function spraycanbot(nh)
 
 end-- end of spraycan bot function
 
+
 function spraycanbotnorep(nh)
     nh = _G.oldneededhats
 
@@ -1332,6 +1333,25 @@ function spraycanbotnorep(nh)
         if v:IsA("BasePart") then
             v.CanCollide = false
         end
+    end
+
+    for i, v in pairs(dummy:GetChildren()) do
+        if v:IsA("Accessory") then
+                if not v:FindFirstChild("Handle") then
+                    v:Destroy()
+                    else
+                        for i2, v2 in pairs(dummy:GetChildren()) do
+                            if(v:IsA("Accessory") and v ~= v2 and v.Name == v2.Name and v.Handle.AccessoryWeld.C0 == v2.Handle.AccessoryWeld.C0) then
+                                if (v.Handle:FindFirstChild("Mesh") and v2.Handle:FindFirstChild("Mesh")) and (v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId) then
+                                    v2:Destroy()
+                                elseif(v.Handle:FindFirstChild("SpecialMesh") and v2.Handle:FindFirstChild("SpecialMesh")) and (v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId) then
+                                    v2:Destroy()
+                                end
+                            end
+                        end
+                end
+        end
+        wait()
     end
 
     dummy.HumanoidRootPart.Position = char.HumanoidRootPart.Position
@@ -1491,7 +1511,7 @@ function spraycanbotnorep(nh)
     end
     for i,v in game.workspace["Dummylolxdnoo"]:GetChildren() do -- removes uneccesary hats
         if v:IsA("Accessory") and v:GetAttribute("Used") == nil then
-            v:Destroy()
+           -- v:Destroy()
         end
     end
 
