@@ -741,11 +741,16 @@ function botold(nh)
                     else
                         for i2, v2 in pairs(dummy:GetChildren()) do
                             if(v:IsA("Accessory") and v ~= v2 and v.Name == v2.Name and v.Handle.AccessoryWeld.C0 == v2.Handle.AccessoryWeld.C0) then
-                                v2:Destroy()
+                                if (v.Handle:FindFirstChild("Mesh") and v2.Handle:FindFirstChild("Mesh")) and (v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId) then
+                                    v2:Destroy()
+                                elseif(v.Handle:FindFirstChild("SpecialMesh") and v2.Handle:FindFirstChild("SpecialMesh")) and (v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId) then
+                                    v2:Destroy()
+                                end
                             end
                         end
                 end
         end
+        wait()
     end
     game.Players.LocalPlayer.Character = dummy
 
@@ -797,7 +802,7 @@ function botold(nh)
                     elseif v.Name ~= "used" then
                         if v.Name == "LARM" then
                             v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-                            print("armed")
+                            --print("armed")
                         end
                         if v.Name == "RARM" then
                             v.Handle.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
