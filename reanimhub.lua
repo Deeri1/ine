@@ -715,6 +715,8 @@ function botold(nh)
         end
     end
 
+
+
     dummy = char:Clone()
     dummy.Name = "Dummylolxdnoo"
     dummy.Parent = workspace
@@ -730,6 +732,19 @@ function botold(nh)
         if v:IsA("BasePart") then
         v.Transparency = showfakechar
        -- v.CanCollide = false
+        end
+    end
+    for i, v in pairs(dummy:GetChildren()) do
+        if v:IsA("Accessory") then
+                if not v:FindFirstChild("Handle") then
+                    v:Destroy()
+                    else
+                        for i2, v2 in pairs(dummy:GetChildren()) do
+                            if(v:IsA("Accessory") and v ~= v2 and v.Name == v2.Name and v.Handle.AccessoryWeld.C0 == v2.Handle.AccessoryWeld.C0) then
+                                v2:Destroy()
+                            end
+                        end
+                end
         end
     end
     game.Players.LocalPlayer.Character = dummy
@@ -749,7 +764,7 @@ function botold(nh)
        pcall(function()
 	    --repeat task.wait() until workspace[plrname]:FindFirstChild("Unloaded head") and workspace[plrname]:FindFirstChild("Black") and workspace[plrname]:FindFirstChild("MeshPartAccessory") 
         task.wait()
-		for i,v in pairs(workspace[plrname]:GetDescendants()) do
+		for i,v in pairs(workspace[plrname]:GetChildren()) do
             if v:IsA("Accessory") then
                 v.Handle.CanCollide = false
                 if v.Handle:FindFirstChild("SpecialMesh") then
@@ -758,7 +773,7 @@ function botold(nh)
                     vm = "Mesh"
                 end
                 if _G.bottype == "OG" then
-                    if v.Name ~= "Accessory (LARM)" and v.Name ~= "Accessory (RARM)" and v.Name ~= "used" and v.Name ~= "Unloaded head" and v.Name ~= "Black" and v.Handle[vm].MeshId ~= "rbxassetid://11263221350" then
+                    if v.Name ~= "Accessory (LARM)" and v.Name ~= "Accessory (RARM)" and v.Name ~= "used" and v.Name ~= "LARM" and v.Name ~= "Black" and v.Name ~= "RARM" then
                     
                         for i, e in pairs(dummy:GetDescendants()) do
                             if e:IsA("BasePart") then
@@ -782,6 +797,7 @@ function botold(nh)
                     elseif v.Name ~= "used" then
                         if v.Name == "LARM" then
                             v.Handle.CFrame = dummy:WaitForChild("Left Arm").CFrame * CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
+                            print("armed")
                         end
                         if v.Name == "RARM" then
                             v.Handle.CFrame = dummy["Right Arm"].CFrame* CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
