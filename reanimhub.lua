@@ -206,7 +206,7 @@ function pdeathbaseplategame(nh)
 		v.Archivable = true
 		if v:IsA("BasePart") then
 			v.Transparency = .75
-			v.CanCollide = false
+			--v.CanCollide = false
 		end
 	end
 
