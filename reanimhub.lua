@@ -190,7 +190,7 @@ function pdeathbaseplategame(nh)
 	for i, v in char:GetDescendants() do
 		v.Archivable = true
 		if v:IsA("BasePart") then
-			v.CanCollide = false
+			--v.CanCollide = false
 		end
 	end
 
@@ -300,13 +300,14 @@ function pdeathbaseplategame(nh)
 	end)
 	end)]]
 	--camera stuff
-    RunService.PreSimulation:Connect(function()
+    --[[RunService.PreSimulation:Connect(function()
         for i,v in char:GetChildren() do
 			if v:IsA("BasePart") then
                 v.CanCollide = false
             end
         end
     end)
+    ]]
 	local CurCameraOffset = workspace.CurrentCamera.CFrame
 	workspace.CurrentCamera.CFrame = CurCameraOffset
 	Player.Character = dummy
