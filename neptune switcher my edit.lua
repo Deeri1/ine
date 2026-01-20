@@ -944,16 +944,10 @@ local NECKC0 = CF(0, 1, 0) * ANGLES(RAD(-90), RAD(0), RAD(180))
 local RIGHTSHOULDERC0 = CF(-0.5, 0, 0) * ANGLES(RAD(0), RAD(90), RAD(0))
 local LEFTSHOULDERC0 = CF(0.5, 0, 0) * ANGLES(RAD(0), RAD(-90), RAD(0))
 
-for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-	if v:IsA("BasePart") and v.Name ~="tors" then 
-		game:GetService("RunService").Heartbeat:connect(function()
-			v.Velocity = Vector3.new(20,15,10)
-		end)
-	end
-end
+
 
 Bypass = "death"
-loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
+
 -- Gui to Lua
 -- Version: 3.2
 
@@ -1038,7 +1032,7 @@ local OldModel = false ----- Use Old Model or your accessory
 local IsDead = false
 local StateMover = true
 
-local playerss = workspace.non
+local playerss = game.Players.LocalPlayer.Character
 RightArm = playerss["Right Arm"] 
 local maybe = playerss[ToolName].Handle
 if regplus == true then
@@ -1047,26 +1041,14 @@ if regplus == true then
 	maybe2:FindFirstChildOfClass("AlignOrientation").Name = "AlignOrientation22"
 end
 local bbv,bullet
-if Bypass == "death" then
-	bullet = game.Players.LocalPlayer.Character["HumanoidRootPart"]
-	bullet.Transparency = .25
-	bullet.Massless = true
-	if bullet:FindFirstChildOfClass("Attachment") then
-		for _,v in pairs(bullet:GetChildren()) do
-			if v:IsA("Attachment") then
-				v:Destroy()
-			end
-		end
-	end
-
-	bbv = Instance.new("BodyPosition",bullet)
-	bbv.Position = RightArm.CFrame.p
-end
 
 
+rad = math.rad
+game.Workspace["Dummylolxdnoo"].MeshPartAccessory.Handle.AccessoryWeld.C0 = CFrame.new(1,1,0)*CFrame.Angles(rad(0),rad(0),rad(65))
+game.Workspace["Dummylolxdnoo"].MeshPartAccessory.Handle.AccessoryWeld.C1 = CFrame.new(0,0,0)
 
-maybe:FindFirstChildOfClass("AlignPosition").Name = "AlignPosition2"
-maybe:FindFirstChildOfClass("AlignOrientation").Name = "AlignOrientation2"
+maybe["AccessoryWeld"].Name = "AlignPosition2"
+
 
 
 --gh 4623728953
@@ -1074,18 +1056,7 @@ maybe:FindFirstChildOfClass("AlignOrientation").Name = "AlignOrientation2"
 playerss.Torso.WaistBackAttachment.Position = Vector3.new(-0, 2, 0.6)
 playerss.Torso.WaistBackAttachment.Orientation = Vector3.new(-4.16, -190, 99.8)
 
-if Bypass == "death" then
-	coroutine.wrap(function()
-		while true do
-			if not playerss or not playerss:FindFirstChildOfClass("Humanoid") or playerss:FindFirstChildOfClass("Humanoid").Health <= 0 then IsDead = true; return end
-			if StateMover then
-				bbv.Position = RightArm.CFrame.p
-				bullet.Position = RightArm.CFrame.p
-			end
-			game:GetService("RunService").RenderStepped:wait()
-		end
-	end)()
-end
+
 
 local CDDF = {}
 local DamageFling = function(DmgPer)
@@ -8811,8 +8782,7 @@ mouse.KeyDown:connect(function(k)
 		weaponweld.Part0 = rarm
 	end
 	if k == "f" and attack == false and equipped == false then
-		maybe:FindFirstChildOfClass("AlignOrientation").Attachment1 = rarmor.Attachment
-		maybe:FindFirstChildOfClass("AlignPosition").Attachment1 = rarmor.Attachment2
+		maybe:FindFirstChildOfClass("Weld").Part1 = rarmor
 		if regplus == true then
 			maybe2:FindFirstChildOfClass("AlignOrientation").Attachment1 = rarmor2.Attachment
 			maybe2:FindFirstChildOfClass("AlignPosition").Attachment1 = rarmor2.Attachment22
@@ -8823,8 +8793,8 @@ mouse.KeyDown:connect(function(k)
 		rarmor.Attachment.Rotation = Vector3.new(-0, -0, 290)
 		equip()
 	elseif k == "f" and attack == false and equipped == true then
-		maybe:FindFirstChildOfClass("AlignOrientation").Attachment1 = playerss.Torso.WaistBackAttachment
-		maybe:FindFirstChildOfClass("AlignPosition").Attachment1 = playerss.Torso.WaistBackAttachment
+		maybe:FindFirstChildOfClass("Weld").Part1 = playerss.Torso
+		
 		if regplus == true then
 			maybe2:FindFirstChildOfClass("AlignOrientation").Attachment1 = rarmor2.Attachment
 			maybe2:FindFirstChildOfClass("AlignPosition").Attachment1 = rarmor2.Attachment22
@@ -8837,8 +8807,7 @@ mouse.KeyDown:connect(function(k)
 		unequip()
 	end
 	if k == "y" and attack == false and equipped == false then
-		maybe:FindFirstChildOfClass("AlignOrientation").Attachment1 = rarmor.Attachment
-		maybe:FindFirstChildOfClass("AlignPosition").Attachment1 = rarmor.Attachment2
+maybe:FindFirstChildOfClass("AlignPosition").Part1 = rarmor
 
 		rarmor.Attachment2.Position = Vector3.new(-1.25, 0.28, -0)
 		rarmor.Attachment.Rotation = Vector3.new(-0, -0, -290)
@@ -10165,6 +10134,6 @@ end
 ------lol
 end
 _G.neededhats = {4506945409} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869}
-_G.type = "bot"
+_G.type = "noprembot"
 _G.bottype = "OG" -- OG, Freehat
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
