@@ -225,22 +225,28 @@ function pdeathbaseplategame(nh)
 	settings()["Physics"].DisableCSGv2 = true
 	settings()["Physics"].UseCSGv2 = false
     local dead = false
-    pcall(function()
-            dummy.Humanoid.BreakJointsOnDeath = false
-            Players = game.Players
-            char = Players.LocalPlayer.Character
-            game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
-            --[[ task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
-            wait(1)
-            char = Players.LocalPlayer.Character
-            local Head = char:FindFirstChild("Head")
-            Head:BreakJoints() 
-            print("dead")
-            game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
-            wait(1)
-            dead = true
-            ]]
-    end)
+ pcall(function()
+        dummy.Humanoid.BreakJointsOnDeath = false
+        Players = game.Players
+        char = Players.LocalPlayer.Character
+        game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
+        task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
+        wait(1)
+        char = workspace[plrname]
+        local Head = char:FindFirstChild("Head")
+        Head:BreakJoints() 
+        print("dead")
+        game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
+        wait(1)
+        dead = true
+        local chatEvent = Instance.new("BindableEvent")
+        game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
+        -- Line above may error. Make sure to use pcall when using it and retry
+        wait(1)
+        chatEvent:Fire("-net")
+        chatEvent:Destroy()
+
+ end)
 	for i,v in pairs(char:GetChildren()) do -- making sure hats line up
 		if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
 			if dummy:FindFirstChild(v.Name) then
@@ -386,13 +392,6 @@ function pdeathbaseplategame(nh)
 	--wait(6)
 	coroutine.wrap(scripthere)()
     repeat wait() until dead
-        local chatEvent = Instance.new("BindableEvent")
-        game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
-        -- Line above may error. Make sure to use pcall when using it and retry
-        wait(1)
-        chatEvent:Fire("-net")
-        chatEvent:Destroy()
-
 end--end of baseplate reanim
 
 function botbasic(nh)
