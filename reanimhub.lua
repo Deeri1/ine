@@ -178,7 +178,7 @@ function pdeathbaseplategame(nh)
 	wait()
     tempart:Destroy()
 
-	--dummy stuff
+	--dummy stuff/what 
 	--dummy clone
 	for i, v in pairs(workspace:GetDescendants()) do
 		if v.Name == "Dummylolxdnoo" then
@@ -305,14 +305,14 @@ function pdeathbaseplategame(nh)
 	end)
 	end)]]
 	--camera stuff
-    --[[RunService.PreSimulation:Connect(function()
-        for i,v in char:GetChildren() do
+    RunService.PreSimulation:Connect(function()
+        for i,v in game.Workspace[plrname]:GetChildren() do
 			if v:IsA("BasePart") then
                 v.CanCollide = false
             end
         end
     end)
-    ]]
+    
 	local CurCameraOffset = workspace.CurrentCamera.CFrame
 	workspace.CurrentCamera.CFrame = CurCameraOffset
 	Player.Character = dummy
