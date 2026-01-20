@@ -225,7 +225,7 @@ function pdeathbaseplategame(nh)
 	settings()["Physics"].DisableCSGv2 = true
 	settings()["Physics"].UseCSGv2 = false
     local dead = false
-	task.spawn(function()
+ pcall(function()
         dummy.Humanoid.BreakJointsOnDeath = false
         Players = game.Players
         char = Players.LocalPlayer.Character
@@ -245,8 +245,8 @@ function pdeathbaseplategame(nh)
         wait(1)
         chatEvent:Fire("-net")
         chatEvent:Destroy()
-	end)
-	
+
+ end)
 	for i,v in pairs(char:GetChildren()) do -- making sure hats line up
 		if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
 			if dummy:FindFirstChild(v.Name) then
