@@ -118,7 +118,9 @@ function pdeathbaseplategame(nh)
 		end
 	end
 
-
+local TextChatService = game:GetService("TextChatService")
+local Channels = TextChatService:WaitForChild("TextChannels")
+local TextChannel = Channels:WaitForChild("RBXGeneral")
 	----------------------------------------------------------------
 	--putting on missing hats :)
 	--testing if can -gh command :)
