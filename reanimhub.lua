@@ -209,7 +209,12 @@ function pdeathbaseplategame(nh)
 			--v.CanCollide = false
 		end
 	end
-
+	for i, v in char:GetDescendants() do
+		v.Archivable = true
+		if v:IsA("BasePart") then
+			v.CanCollide = false
+		end
+	end
 	---reanim main
 	Player.ReplicationFocus = workspace
 	settings()["Physics"].PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
