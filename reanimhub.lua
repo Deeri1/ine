@@ -172,7 +172,7 @@ local TextChannel = Channels:WaitForChild("RBXGeneral")
 	fmissinghats(nh)
    -- removedupes()
 	--putonmhats(hataray)
-	wait()
+	wait(.5)
     tempart:Destroy()
 
 	--dummy stuff/what 
