@@ -134,7 +134,7 @@ local TextChannel = Channels:WaitForChild("RBXGeneral")
 		--	print("here")
 		print(strangofhats)
         TextChannel:SendAsync(strangofhats)
-		wait()
+		wait(.5)
 	end
 	function putonmhats(ha)
 		for i,v in pairs(ha) do
