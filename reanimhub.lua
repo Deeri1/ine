@@ -131,12 +131,7 @@ function pdeathbaseplategame(nh)
 		string.sub(strangofhats,1,string.len(strangofhats)-1)
 		--	print("here")
 		print(strangofhats)
-		local chatEvent = Instance.new("BindableEvent")
-		game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
-		-- Line above may error. Make sure to use pcall when using it and retry
-
-		chatEvent:Fire(strangofhats)
-		chatEvent:Destroy()
+        TextChannel:SendAsync(strangofhats)
 		wait()
 	end
 	function putonmhats(ha)
@@ -229,13 +224,11 @@ function pdeathbaseplategame(nh)
                 print("dead")
                 game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
                 wait(1)
+
                 _G.dead = true
-                local chatEvent = Instance.new("BindableEvent")
-                game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
-                -- Line above may error. Make sure to use pcall when using it and retry
+
                 wait(1)
-                chatEvent:Fire("-net")
-                chatEvent:Destroy()
+                TextChannel:SendAsync("-net")
 
         end)
     end)
