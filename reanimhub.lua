@@ -390,8 +390,8 @@ function pdeathbaseplategame(nh)
 	--runs the script
 	scripthere = _G.scripthere
 	--wait(6)
-	coroutine.wrap(scripthere)()
     repeat wait() until dead
+    	coroutine.wrap(scripthere)()
 end--end of baseplate reanim
 
 function botbasic(nh)
