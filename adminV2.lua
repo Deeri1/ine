@@ -26,6 +26,10 @@ if not isfolder("DeeriHub") then
 end
 plr = game.Players.LocalPlayer
 char = plr.Character
+repeat
+wait()
+char = plr.Character
+until char
 if char:FindFirstChild("Humanoid") then
     hum = char.Humanoid
     humanoid = hum
