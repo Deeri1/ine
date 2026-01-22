@@ -133,7 +133,7 @@ local TextChannel = Channels:WaitForChild("RBXGeneral")
 		string.sub(strangofhats,1,string.len(strangofhats)-1)
 		--	print("here")
 		print(strangofhats)
-        if strangofhats != "-gh " then
+        if strangofhats ~= "-gh " then
             TextChannel:SendAsync(strangofhats)
             wait(.5)
         end
