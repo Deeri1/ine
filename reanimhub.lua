@@ -221,6 +221,7 @@ local TextChannel = Channels:WaitForChild("RBXGeneral")
                 dummy.Humanoid.BreakJointsOnDeath = false
                 Players = game.Players
                 char = Players.LocalPlayer.Character
+                TextChannel:SendAsync("-net")
                 game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
                 task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
                 char = workspace[plrname]
@@ -229,11 +230,7 @@ local TextChannel = Channels:WaitForChild("RBXGeneral")
                 print("dead")
                 game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
                 wait(1)
-
                 _G.dead = true
-
-                wait(1)
-                TextChannel:SendAsync("-net")
 
         end)
     end)
