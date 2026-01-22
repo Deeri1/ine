@@ -3403,6 +3403,6 @@ end)
 
 -- Slay
 end
-_G.neededhats = {14768693948,11159410305,11263254795,14768678294,14768701869} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {}
+_G.neededhats = {} -- put hats needed for script will check if hats are equipted if not they will be added each reset. use ids. exe: _G.neededhats = {}
 _G.type = "bot"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deeri1/ine/main/reanimhub.lua"))()
