@@ -133,8 +133,10 @@ local TextChannel = Channels:WaitForChild("RBXGeneral")
 		string.sub(strangofhats,1,string.len(strangofhats)-1)
 		--	print("here")
 		print(strangofhats)
-        TextChannel:SendAsync(strangofhats)
-		wait(.5)
+        if strangofhats != "-gh " then
+            TextChannel:SendAsync(strangofhats)
+            wait(.5)
+        end
 	end
 	function putonmhats(ha)
 		for i,v in pairs(ha) do
@@ -167,6 +169,7 @@ local TextChannel = Channels:WaitForChild("RBXGeneral")
 	--running the functions now
 
 	fmissinghats(nh)
+    
 	testgh(idlist)
 	wait(.5)
 	fmissinghats(nh)
