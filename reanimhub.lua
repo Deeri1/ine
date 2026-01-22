@@ -136,6 +136,7 @@ local TextChannel = Channels:WaitForChild("RBXGeneral")
         if strangofhats ~= "-gh " then
             TextChannel:SendAsync(strangofhats)
             wait(.5)
+            TextChannel:SendAsync("-net")
         end
 	end
 	function putonmhats(ha)
@@ -221,7 +222,6 @@ local TextChannel = Channels:WaitForChild("RBXGeneral")
                 dummy.Humanoid.BreakJointsOnDeath = false
                 Players = game.Players
                 char = Players.LocalPlayer.Character
-                TextChannel:SendAsync("-net")
                 game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
                 task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
                 char = workspace[plrname]
