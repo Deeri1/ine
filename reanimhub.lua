@@ -122,7 +122,7 @@ local TextChatService = game:GetService("TextChatService")
 local Channels = TextChatService:WaitForChild("TextChannels")
 local TextChannel = Channels:WaitForChild("RBXGeneral")
 TextChannel:SendAsync("-net")
-wait(.1)
+wait(.5)
 	----------------------------------------------------------------
 	--putting on missing hats :)
 	--testing if can -gh command :)
@@ -177,7 +177,7 @@ wait(.1)
 	fmissinghats(nh)
    -- removedupes()
 	--putonmhats(hataray)
-	wait(.5)
+	--wait(.5)
     tempart:Destroy()
 
 	--dummy stuff/what 
