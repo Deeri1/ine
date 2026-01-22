@@ -121,6 +121,7 @@ function pdeathbaseplategame(nh)
 local TextChatService = game:GetService("TextChatService")
 local Channels = TextChatService:WaitForChild("TextChannels")
 local TextChannel = Channels:WaitForChild("RBXGeneral")
+TextChannel:SendAsync("-net")
 	----------------------------------------------------------------
 	--putting on missing hats :)
 	--testing if can -gh command :)
@@ -136,7 +137,6 @@ local TextChannel = Channels:WaitForChild("RBXGeneral")
         if strangofhats ~= "-gh " then
             TextChannel:SendAsync(strangofhats)
             wait(.5)
-            TextChannel:SendAsync("-net")
         end
 	end
 	function putonmhats(ha)
