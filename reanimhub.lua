@@ -31,8 +31,7 @@ game.StarterGui:SetCore("SendNotification", {
 })
 
 function pdeathbaseplategame(nh)
- --vars
-	local Players = game:FindFirstChildOfClass("Players")
+  local Players = game:FindFirstChildOfClass("Players")
 	local RunService = game:FindFirstChildOfClass("RunService")
 	--plr vars
 	local Player = Players.LocalPlayer
@@ -118,16 +117,12 @@ function pdeathbaseplategame(nh)
 		end
 	end
 
-    local TextChatService = game:GetService("TextChatService")
-    local Channels = TextChatService:WaitForChild("TextChannels")
-    local TextChannel = Channels:WaitForChild("RBXGeneral")
-   -- TextChannel:SendAsync("-net")
-   -- wait(.5)
+
 	----------------------------------------------------------------
 	--putting on missing hats :)
 	--testing if can -gh command :)
 	function testgh(ha)
-	    print("fired")
+	print("fired")
 		local strangofhats = "-gh "
 		for i,v in ha do
 			strangofhats = strangofhats..v..", "
@@ -135,10 +130,13 @@ function pdeathbaseplategame(nh)
 		string.sub(strangofhats,1,string.len(strangofhats)-1)
 		--	print("here")
 		print(strangofhats)
-        if strangofhats ~= "-gh " then
-            TextChannel:SendAsync(strangofhats)
-            wait(.5)
-        end
+		local chatEvent = Instance.new("BindableEvent")
+		game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
+		-- Line above may error. Make sure to use pcall when using it and retry
+
+		chatEvent:Fire(strangofhats)
+		chatEvent:Destroy()
+		wait()
 	end
 	function putonmhats(ha)
 		for i,v in pairs(ha) do
@@ -149,38 +147,18 @@ function pdeathbaseplategame(nh)
 		task.wait()
 		tempart:Destroy()
 	end
-    function removedupes()
-        for i,v in pairs(workspace[plrname]:GetChildren()) do
-            if v:IsA("Accessory") then
-                if v:WaitForChild("Handle"):FindFirstChild("Mesh") or v:WaitForChild("Handle"):FindFirstChild("SpecialMesh") then
-                    for i2,v2 in pairs(workspace[plrname]:GetChildren()) do
-                        if v2:IsA("Accessory") then
-                            if v2:WaitForChild("Handle"):FindFirstChild("Mesh") or v2.Handle:FindFirstChild("SpecialMesh") then
-                                if v.Handle.Mesh.MeshId == v2.Handle.Mesh.MeshId and v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId then
-                                    v2:Destroy()
-                                elseif v.Handle.SpecialMesh.MeshId == v2.Handle.SpecialMesh.MeshId and v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId then
-                                    v2:Destroy()
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end
+
 	--running the functions now
 
-	--fmissinghats(nh)
-    
-	--testgh(idlist)
+	fmissinghats(nh)
+	testgh(idlist)
 	wait(.5)
-	--fmissinghats(nh)
-   -- removedupes()
+	fmissinghats(nh)
 	--putonmhats(hataray)
-	wait(.5)
-   -- tempart:Destroy()
+	wait()
+    tempart:Destroy()
 
-	--dummy stuff/what 
+	--dummy stuff
 	--dummy clone
 	for i, v in pairs(workspace:GetDescendants()) do
 		if v.Name == "Dummylolxdnoo" then
@@ -192,7 +170,7 @@ function pdeathbaseplategame(nh)
 	for i, v in char:GetDescendants() do
 		v.Archivable = true
 		if v:IsA("BasePart") then
-			--v.CanCollide = false
+			v.CanCollide = false
 		end
 	end
 
@@ -208,33 +186,10 @@ function pdeathbaseplategame(nh)
 		v.Archivable = true
 		if v:IsA("BasePart") then
 			v.Transparency = .75
-			--v.CanCollide = false
-		end
-	end
-	for i, v in char:GetDescendants() do
-		v.Archivable = true
-		if v:IsA("BasePart") then
 			v.CanCollide = false
 		end
 	end
-    _G.dead = false
-    task.spawn(function()
-        pcall(function()
-                dummy.Humanoid.BreakJointsOnDeath = false
-                Players = game.Players
-                char = Players.LocalPlayer.Character
-                game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
-                task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
-                char = workspace[plrname]
-                local Head = char:FindFirstChild("Head")
-                Head:BreakJoints() 
-                print("dead")
-                game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
-                wait(1)
-                _G.dead = true
 
-        end)
-    end)
 	---reanim main
 	Player.ReplicationFocus = workspace
 	settings()["Physics"].PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
@@ -244,45 +199,63 @@ function pdeathbaseplategame(nh)
 	settings()["Physics"].ForceCSGv2 = false
 	settings()["Physics"].DisableCSGv2 = true
 	settings()["Physics"].UseCSGv2 = false
-    function renime()
-        for i,v in pairs(char:GetChildren()) do -- making sure hats line up
-            if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
-                if dummy:FindFirstChild(v.Name) then
-                    move(v,dummy[v.Name])
-                end
-            elseif v:IsA("Accessory") then
-                for i2,v2 in pairs(dummy:GetChildren()) do
-                    if v2:IsA("Accessory") and not v2:GetAttribute("used") then -- a bunch of checks lol
-                        if v.Handle.Size == v2.Handle.Size then
-                            if (v.Handle:findFirstChild("Mesh") and v2.Handle:findFirstChild("Mesh")) or (v.Handle:findFirstChild("SpecialMesh") and v2.Handle:findFirstChild("SpecialMesh")) then
-                                if v.Handle:findFirstChild("Mesh") then
-                                    if v.Handle.Mesh.MeshId == v2.Handle.Mesh.MeshId and v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId then
-                                        move(v.Handle,v2.Handle)
-                                        v2:SetAttribute("used", true)
-                                        tnum = math.random(1,1000000)
-                                        v:SetAttribute("id",tnum)
-                                        v2:SetAttribute("id",tnum)
-                                    end
-                                else
-                                    if v.Handle.SpecialMesh.MeshId == v2.Handle.SpecialMesh.MeshId and v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId then
-                                        move(v.Handle,v2.Handle)
-                                        v2:SetAttribute("used", true)
-                                        tnum = math.random(1,1000000)
-                                        v:SetAttribute("id",tnum)
-                                        v2:SetAttribute("id",tnum)
-                                    end
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end
-	--char.Parent = dummy
-    renime()
-	--velocity loop
+    local dead = false
 	task.spawn(function()
+        dummy.Humanoid.BreakJointsOnDeath = false
+        game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
+        task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
+        wait(1)
+        local Head = char:FindFirstChild("Head")
+        Head:BreakJoints() 
+        print("dead")
+        game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
+        wait(1)
+        dead = true
+        local chatEvent = Instance.new("BindableEvent")
+        game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
+        -- Line above may error. Make sure to use pcall when using it and retry
+        wait(1)
+        chatEvent:Fire("-net")
+        chatEvent:Destroy()
+	end)
+	
+	for i,v in pairs(char:GetChildren()) do -- making sure hats line up
+		if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
+			if dummy:FindFirstChild(v.Name) then
+				move(v,dummy[v.Name])
+			end
+		elseif v:IsA("Accessory") then
+			for i2,v2 in pairs(dummy:GetChildren()) do
+				if v2:IsA("Accessory") and not v2:GetAttribute("used") then -- a bunch of checks lol
+					if v.Handle.Size == v2.Handle.Size then
+						if (v.Handle:findFirstChild("Mesh") and v2.Handle:findFirstChild("Mesh")) or (v.Handle:findFirstChild("SpecialMesh") and v2.Handle:findFirstChild("SpecialMesh")) then
+							if v.Handle:findFirstChild("Mesh") then
+								if v.Handle.Mesh.MeshId == v2.Handle.Mesh.MeshId and v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId then
+									move(v.Handle,v2.Handle)
+									v2:SetAttribute("used", true)
+                                    tnum = math.random(1,1000000)
+                                    v:SetAttribute("id",tnum)
+                                    v2:SetAttribute("id",tnum)
+								end
+							else
+								if v.Handle.SpecialMesh.MeshId == v2.Handle.SpecialMesh.MeshId and v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId then
+									move(v.Handle,v2.Handle)
+									v2:SetAttribute("used", true)
+                                    tnum = math.random(1,1000000)
+                                    v:SetAttribute("id",tnum)
+                                    v2:SetAttribute("id",tnum)
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+	--char.Parent = dummy
+
+	--velocity loop
+	--[[task.spawn(function()
 	RunService.PreSimulation:Connect(function()
 		if not dummy:FindFirstChild("HumanoidRootPart") then
 			return
@@ -302,16 +275,15 @@ function pdeathbaseplategame(nh)
 			end
 		end
 	end)
-	end)
+	end)]]
 	--camera stuff
     RunService.PreSimulation:Connect(function()
-        for i,v in game.Workspace[plrname]:GetChildren() do
+        for i,v in char:GetChildren() do
 			if v:IsA("BasePart") then
                 v.CanCollide = false
             end
         end
     end)
-    
 	local CurCameraOffset = workspace.CurrentCamera.CFrame
 	workspace.CurrentCamera.CFrame = CurCameraOffset
 	Player.Character = dummy
@@ -322,7 +294,6 @@ function pdeathbaseplategame(nh)
 	--fling stuff
     coroutine.wrap(function()
         repeat wait() until dead
-        --[[
         p0 = char.HumanoidRootPart
         p1 = dummy["Right Arm"]
         local AlignPosition = Instance.new("AlignPosition"); do
@@ -366,7 +337,7 @@ function pdeathbaseplategame(nh)
             flingatch2:Destroy()
             AlignPosition.Attachment1 = flingatch
         end
-        ]]
+
         while wait(.5) do
             for i,v in pairs(dummy:GetChildren()) do
                 if v:IsA("Accessory") then
@@ -390,9 +361,9 @@ function pdeathbaseplategame(nh)
 	--runs the script
 	scripthere = _G.scripthere
 	--wait(6)
-    repeat wait() until _G.dead
-    coroutine.wrap(scripthere)()
-    renime()
+	coroutine.wrap(scripthere)()
+    repeat wait() until dead
+
 end--end of baseplate reanim
 
 function botbasic(nh)
