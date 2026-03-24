@@ -263,7 +263,7 @@ function pdeathbaseplategame(nh)
 		for i,v in workspace[plrname]:GetChildren() do
 			if v:IsA("BasePart") then
 				v.CanCollide = false
-				if v and v.Parent and v.name ~= "HumanoidRootPart" then
+				if v and v.Parent and v.Name ~= "HumanoidRootPart" then
 					v.Velocity = Velocity
 				end
             elseif v:IsA("Accessory") then
