@@ -211,12 +211,6 @@ function pdeathbaseplategame(nh)
         game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
         wait(1)
         dead = true
-        local chatEvent = Instance.new("BindableEvent")
-        game.StarterGui:SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = chatEvent}})
-        -- Line above may error. Make sure to use pcall when using it and retry
-        wait(1)
-        chatEvent:Fire("-net")
-        chatEvent:Destroy()
 	end)
 	
 	for i,v in pairs(char:GetChildren()) do -- making sure hats line up
@@ -293,7 +287,7 @@ function pdeathbaseplategame(nh)
 	workspace.CurrentCamera.CFrame = CurCameraOffset
 
 	--fling stuff
-    coroutine.wrap(function()
+    --[[coroutine.wrap(function()
         repeat wait() until dead
         p0 = char.HumanoidRootPart
         p1 = dummy["Right Arm"]
@@ -357,7 +351,7 @@ function pdeathbaseplategame(nh)
                 end
             end
         end
-    end)()
+    end)()]]
 
 	--runs the script
 	scripthere = _G.scripthere
