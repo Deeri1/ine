@@ -269,13 +269,12 @@ function pdeathbaseplategame(nh)
             elseif v:IsA("Accessory") then
                 if v.Handle and v.Handle:IsA("BasePart") then
                     v.Handle.CanCollide = false
-                    v.Handle.Velocity = Velocity
+                    v.Handle.Velocity = Vector3.new(0, 0, 0)
                 end
 			end
 		end
 	end)
 	end)--]]
-    
 	--camera stuff
     RunService.PreSimulation:Connect(function()
         for i,v in char:GetChildren() do
