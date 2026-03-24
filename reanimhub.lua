@@ -244,41 +244,43 @@ function pdeathbaseplategame(nh)
 	settings()["Physics"].ForceCSGv2 = false
 	settings()["Physics"].DisableCSGv2 = true
 	settings()["Physics"].UseCSGv2 = false
-	for i,v in pairs(char:GetChildren()) do -- making sure hats line up
-		if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
-			if dummy:FindFirstChild(v.Name) then
-				move(v,dummy[v.Name])
-			end
-		elseif v:IsA("Accessory") then
-			for i2,v2 in pairs(dummy:GetChildren()) do
-				if v2:IsA("Accessory") and not v2:GetAttribute("used") then -- a bunch of checks lol
-					if v.Handle.Size == v2.Handle.Size then
-						if (v.Handle:findFirstChild("Mesh") and v2.Handle:findFirstChild("Mesh")) or (v.Handle:findFirstChild("SpecialMesh") and v2.Handle:findFirstChild("SpecialMesh")) then
-							if v.Handle:findFirstChild("Mesh") then
-								if v.Handle.Mesh.MeshId == v2.Handle.Mesh.MeshId and v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId then
-									move(v.Handle,v2.Handle)
-									v2:SetAttribute("used", true)
-                                    tnum = math.random(1,1000000)
-                                    v:SetAttribute("id",tnum)
-                                    v2:SetAttribute("id",tnum)
-								end
-							else
-								if v.Handle.SpecialMesh.MeshId == v2.Handle.SpecialMesh.MeshId and v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId then
-									move(v.Handle,v2.Handle)
-									v2:SetAttribute("used", true)
-                                    tnum = math.random(1,1000000)
-                                    v:SetAttribute("id",tnum)
-                                    v2:SetAttribute("id",tnum)
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-	end
+    function renime()
+        for i,v in pairs(char:GetChildren()) do -- making sure hats line up
+            if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
+                if dummy:FindFirstChild(v.Name) then
+                    move(v,dummy[v.Name])
+                end
+            elseif v:IsA("Accessory") then
+                for i2,v2 in pairs(dummy:GetChildren()) do
+                    if v2:IsA("Accessory") and not v2:GetAttribute("used") then -- a bunch of checks lol
+                        if v.Handle.Size == v2.Handle.Size then
+                            if (v.Handle:findFirstChild("Mesh") and v2.Handle:findFirstChild("Mesh")) or (v.Handle:findFirstChild("SpecialMesh") and v2.Handle:findFirstChild("SpecialMesh")) then
+                                if v.Handle:findFirstChild("Mesh") then
+                                    if v.Handle.Mesh.MeshId == v2.Handle.Mesh.MeshId and v.Handle.Mesh.TextureId == v2.Handle.Mesh.TextureId then
+                                        move(v.Handle,v2.Handle)
+                                        v2:SetAttribute("used", true)
+                                        tnum = math.random(1,1000000)
+                                        v:SetAttribute("id",tnum)
+                                        v2:SetAttribute("id",tnum)
+                                    end
+                                else
+                                    if v.Handle.SpecialMesh.MeshId == v2.Handle.SpecialMesh.MeshId and v.Handle.SpecialMesh.TextureId == v2.Handle.SpecialMesh.TextureId then
+                                        move(v.Handle,v2.Handle)
+                                        v2:SetAttribute("used", true)
+                                        tnum = math.random(1,1000000)
+                                        v:SetAttribute("id",tnum)
+                                        v2:SetAttribute("id",tnum)
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
 	--char.Parent = dummy
-
+    renime()
 	--velocity loop
 	task.spawn(function()
 	RunService.PreSimulation:Connect(function()
@@ -320,6 +322,7 @@ function pdeathbaseplategame(nh)
 	--fling stuff
     coroutine.wrap(function()
         repeat wait() until dead
+        --[[
         p0 = char.HumanoidRootPart
         p1 = dummy["Right Arm"]
         local AlignPosition = Instance.new("AlignPosition"); do
@@ -363,7 +366,7 @@ function pdeathbaseplategame(nh)
             flingatch2:Destroy()
             AlignPosition.Attachment1 = flingatch
         end
-
+        ]]
         while wait(.5) do
             for i,v in pairs(dummy:GetChildren()) do
                 if v:IsA("Accessory") then
@@ -389,6 +392,7 @@ function pdeathbaseplategame(nh)
 	--wait(6)
     repeat wait() until _G.dead
     coroutine.wrap(scripthere)()
+    renime()
 end--end of baseplate reanim
 
 function botbasic(nh)
