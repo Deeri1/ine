@@ -275,6 +275,7 @@ function pdeathbaseplategame(nh)
 		end
 	end)
 	end)--]]
+    
 	--camera stuff
     RunService.PreSimulation:Connect(function()
         for i,v in char:GetChildren() do
