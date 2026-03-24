@@ -284,6 +284,7 @@ function pdeathbaseplategame(nh)
             end
         end
     end)
+    wait(.5)
 	local CurCameraOffset = workspace.CurrentCamera.CFrame
 	workspace.CurrentCamera.CFrame = CurCameraOffset
 	Player.Character = dummy
