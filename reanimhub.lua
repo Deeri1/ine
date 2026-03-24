@@ -170,15 +170,15 @@ function pdeathbaseplategame(nh)
     end
 	--running the functions now
 
-	fmissinghats(nh)
+	--fmissinghats(nh)
     
-	testgh(idlist)
+	--testgh(idlist)
 	wait(.5)
-	fmissinghats(nh)
+	--fmissinghats(nh)
    -- removedupes()
 	--putonmhats(hataray)
 	--wait(.5)
-    tempart:Destroy()
+   -- tempart:Destroy()
 
 	--dummy stuff/what 
 	--dummy clone
