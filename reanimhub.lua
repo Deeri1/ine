@@ -204,11 +204,14 @@ function pdeathbaseplategame(nh)
         dummy.Humanoid.BreakJointsOnDeath = false
         game:GetService("StarterGui"):SetCore("ResetButtonCallback", false) -- kills player
         task.wait(Players.RespawnTime + game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue() / 750)
+        print("now")
         wait(1)
+        
         local Head = char:FindFirstChild("Head")
         Head:BreakJoints() 
         print("dead")
         game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
+        print("after")
         wait(1)
         dead = true
 	end)
