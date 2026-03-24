@@ -177,7 +177,7 @@ function pdeathbaseplategame(nh)
 	--fmissinghats(nh)
    -- removedupes()
 	--putonmhats(hataray)
-	--wait(.5)
+	wait(.5)
    -- tempart:Destroy()
 
 	--dummy stuff/what 
@@ -280,7 +280,7 @@ function pdeathbaseplategame(nh)
 	--char.Parent = dummy
 
 	--velocity loop
-	--[[task.spawn(function()
+	task.spawn(function()
 	RunService.PreSimulation:Connect(function()
 		if not dummy:FindFirstChild("HumanoidRootPart") then
 			return
@@ -300,7 +300,7 @@ function pdeathbaseplategame(nh)
 			end
 		end
 	end)
-	end)]]
+	end)
 	--camera stuff
     RunService.PreSimulation:Connect(function()
         for i,v in game.Workspace[plrname]:GetChildren() do
