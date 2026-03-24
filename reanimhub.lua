@@ -136,7 +136,9 @@ function pdeathbaseplategame(nh)
 
 		chatEvent:Fire(strangofhats)
 		chatEvent:Destroy()
-		wait()
+        print("fr now")
+
+		wait(.5)
 	end
 	function putonmhats(ha)
 		for i,v in pairs(ha) do
