@@ -260,7 +260,7 @@ function pdeathbaseplategame(nh)
 			return
 		end
 		Velocity = Vector3.new(dummy["HumanoidRootPart"].CFrame.LookVector.X * 85, dummy["Head"].Velocity.Y * 4, dummy["HumanoidRootPart"].CFrame.LookVector.Z * 85)
-		for i,v in char:GetChildren() do
+		for i,v in workspace[plrname]:GetChildren() do
 			if v:IsA("BasePart") then
 				v.CanCollide = false
 				if v and v.Parent then
